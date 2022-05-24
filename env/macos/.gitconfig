@@ -1,0 +1,17 @@
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[user]
+  name = SlashNephy
+  email = slashnephy@hatena.ne.jp
+  signingkey = C08DF69DFADA9BFD
+
+[core]
+  excludesFile = ~/.gitignore
+  autocrlf = input
+
+[gpg]
+  program = /usr/local/MacGPG2/bin/gpg

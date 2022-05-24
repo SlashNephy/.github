@@ -1,0 +1,13 @@
+[user]
+  name = SlashNephy
+  email = spica@starry.blue
+  # signingkey = 4C01188D05550B59
+
+[commit]
+  # gpgsign = true
+
+[gpg]
+  # program = gpg2
+
+[init]
+  defaultBranch = master
