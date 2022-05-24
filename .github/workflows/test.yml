@@ -1,0 +1,32 @@
+name: Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test-arch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        uses: docker://archlinux:base-20220522.0.57327
+        with:
+          entrypoint: pacman -S zsh && zsh ./env/install.zsh
+
+  test-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        run: zsh ./env/install.zsh
+
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        run: .\env\install-windows.ps1
