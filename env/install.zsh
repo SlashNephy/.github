@@ -18,14 +18,9 @@ if read -r -q; then
   echo; ln -sf ./common/.gitignore ~/.gitignore
 fi
 
-OS="$(uname)"
-export OS
-
-if [ "$OS" = "Linux" ]; then
-  ./install-linux.zsh
-elif [ "$OS" = "Darwin" ]; then
-  ./install-macos.zsh
-else
-  echo "Unsupported OS: $OS"
-  exit 1
-fi
+case "$OSTYPE" in
+  darwin*) ./install-macos.zsh ;;
+  linux*)  ./install-linux.zsh ;;
+  *)       echo "Unsupported OSTYPE: $OSTYPE"
+           exit 1 ;;
+esac
