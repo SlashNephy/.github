@@ -22,7 +22,7 @@ OS="$(uname)"
 export OS
 
 if [ "$OS" = "Linux" ]; then
-  ./install-arch.zsh
+  ./install-linux.zsh
 elif [ "$OS" = "Darwin" ]; then
   ./install-macos.zsh
 else
