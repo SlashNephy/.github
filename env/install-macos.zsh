@@ -5,10 +5,10 @@ cd "$(dirname "$0")"
 
 printf "Install .ssh/config? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ./.ssh/config ~/.ssh/config
+  echo; ln -sf ./macos/.ssh/config ~/.ssh/config
 fi
 
 printf "Install .gitconfig? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ./.gitconfig ~/.gitconfig
+  echo; ln -sf ./macos/.gitconfig ~/.gitconfig
 fi
