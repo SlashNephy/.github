@@ -21,7 +21,8 @@ fi
 # check distribution
 DISTRIBUTION=$( (lsb_release -ds || cat /etc/*release || uname -om) 2>/dev/null | head -n1)
 case "$DISTRIBUTION" in
-  "*Arch Linux*") ./install-macos.zsh ;;
+  "*Arch Linux*") ./install-arch.zsh ;;
+  "Ubuntu*")      ./install-ubuntu.zsh ;;
   *)              echo "Unsupported DISTRIBUTION: $DISTRIBUTION"
                   exit 1 ;;
 esac

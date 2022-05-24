@@ -13,7 +13,7 @@ jobs:
       - name: Install zsh
         run: sudo apt update && sudo apt install -y zsh
       - name: Test
-        run: yes | zsh ./env/install.zsh
+        run: zsh ./env/install.zsh
 
   test-macos:
     runs-on: macos-latest
