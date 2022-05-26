@@ -11,7 +11,7 @@ Requirements:
   - zsh
 
 ```console
-$ git clone https://github.com/SlashNephy/.github ~/.github
+$ git clone git@github.com:SlashNephy/.github.git ~/.github
 $ zsh ~/.github/env/install.zsh
 ```
 
@@ -22,6 +22,6 @@ Requirements:
   - powershell
 
 ```console
-$ git clone https://github.com/SlashNephy/.github ~\.github
+$ git clone git@github.com:SlashNephy/.github.git ~\.github
 $ powershell ~\.github\env\install-windows.ps1
 ```
