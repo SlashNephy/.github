@@ -8,7 +8,7 @@ fi
 
 cd "$(dirname "$0")" || true
 
-for script in ./script/*.sh; do
+for script in ./scripts/*.sh; do
   # shellcheck disable=SC1090
   source "$script"
 done
