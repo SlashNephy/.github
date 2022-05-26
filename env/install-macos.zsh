@@ -22,5 +22,8 @@ fi
 
 printf "Install stubby.yml? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ~/.github/env/macos/stubby.yml $(brew --prefix)/etc/stubby/stubby.yml
+  echo
+  ln -sf ~/.github/env/macos/stubby.yml $(brew --prefix)/etc/stubby/stubby.yml
+  sudo brew services start stubby
+  sudo $(brew --prefix)/opt/stubby/sbin/stubby-setdns-macos.sh
 fi
