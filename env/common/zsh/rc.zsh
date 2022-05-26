@@ -6,15 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-cd "$(dirname "$0")" || true
-
-for script in ./scripts/*.sh; do
+for script in ~/.github/env/common/zsh/scripts/*.sh; do
   # shellcheck disable=SC1090
   source "$script"
 done
 
 if [ "$(uname)" = "Darwin" ]; then
-  for script in ./cellar/*.sh; do
+  for script in ~/.github/env/common/zsh/cellar/*.sh; do
     # shellcheck disable=SC1090
     source "$script"
   done

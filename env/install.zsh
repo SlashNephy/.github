@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
 set -eu
 
-cd "$(dirname "$0")"
-
 printf "Install .zshrc? [y/N]: "
 if read -r -q; then
   echo; ln -sf ~/.github/env/common/zsh/rc.zsh ~/.zshrc
@@ -19,8 +17,8 @@ if read -r -q; then
 fi
 
 case "$OSTYPE" in
-  darwin*) ./install-macos.zsh ;;
-  linux*)  ./install-linux.zsh ;;
-  *)       echo "Unsupported OSTYPE: $OSTYPE"
-           exit 1 ;;
+  darwin*) ~/.github/env/install-macos.zsh ;;
+  linux*)    ~/.github/env/install-linux.zsh ;;
+  *)           echo "Unsupported OSTYPE: $OSTYPE"
+               exit 1 ;;
 esac
