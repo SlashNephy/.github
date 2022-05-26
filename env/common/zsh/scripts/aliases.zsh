@@ -26,6 +26,11 @@ alias journalctl="sudo journalctl"
 alias ufw="sudo ufw"
 alias sano="sudo nano --rcfile=~/.nanorc"
 
+# macOS
+alias kill-mdns="sudo killall -HUP mDNSResponder"
+alias restart-stubby="sudo brew services restart stubby"
+alias refresh-dns="kill-mdns && restart-stubby"
+
 # funny
 alias erutaso="docker run --rm -it slashnephy/erutaso"
 alias cowsay="docker run --rm docker/whalesay cowsay"

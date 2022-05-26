@@ -1,3 +1,5 @@
+export PATH="$HOME/.bin:$PATH"
+
 # language
 export LANG="ja_JP.UTF-8"
 export LC_LANG="ja_JP.UTF-8"
