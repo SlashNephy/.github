@@ -19,3 +19,8 @@ printf "Install Homebrew? [y/N]: "
 if read -r -q; then
   echo; zsh ./macos/brew.zsh
 fi
+
+printf "Install stubby.yml? [y/N]: "
+if read -r -q; then
+  echo; ln -sf ~/.github/env/macos/stubby.yml $(brew --prefix)/etc/stubby/stubby.yml
+fi
