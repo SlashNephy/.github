@@ -5,17 +5,17 @@ cd "$(dirname "$0")"
 
 printf "Install .ssh/config? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ./linux/.ssh/config ~/.ssh/config
+  echo; ln -sf ~/.github/env/linux/.ssh/config ~/.ssh/config
 fi
 
 printf "Install .gitconfig? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ./linux/.gitconfig ~/.gitconfig
+  echo; ln -sf ~/.github/env/linux/.gitconfig ~/.gitconfig
 fi
 
 printf "Install .nanorc? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ./linux/.nanorc ~/.nanorc
+  echo; ln -sf ~/.github/env/linux/.nanorc ~/.nanorc
 fi
 
 # check distribution
