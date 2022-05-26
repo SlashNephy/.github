@@ -3,7 +3,7 @@ set -eu
 
 printf "Install .zshrc & .p10k.zsh? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ~/.github/env/common/zsh/rc.zsh ~/.zshrc; ln -sf ~/.github/env/common/zsh/.p10k.zsh ~/.p10k.zsh
+  echo; ln -sf ~/.github/env/common/zsh/rc.zsh ~/.zshrc; ln -sf ~/.github/env/common/.p10k.zsh ~/.p10k.zsh
 fi
 
 printf "Install .colorrc? [y/N]: "
