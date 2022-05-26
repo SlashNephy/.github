@@ -1,2 +1,2 @@
 # brew install coreutils
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
