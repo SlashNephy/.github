@@ -16,6 +16,11 @@ if read -r -q; then
   echo; ln -sf ~/.github/env/common/.gitignore ~/.gitignore
 fi
 
+printf "Install .config/htop/htoprc? [y/N]: "
+if read -r -q; then
+  echo; mkdir -p ~/.config/htop; ln -sf ~/.github/env/common/htoprc ~/.config/htop/htoprc
+fi
+
 case "$OSTYPE" in
   darwin*) ~/.github/env/install-macos.zsh ;;
   linux*)    ~/.github/env/install-linux.zsh ;;
