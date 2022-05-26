@@ -12,3 +12,6 @@ printf "Install .gitconfig? [y/N]: "
 if read -r -q; then
   echo; ln -sf ./macos/.gitconfig ~/.gitconfig
 fi
+
+zsh ./macos/show-dotfiles.zsh
+zsh ./macos/brew.zsh
