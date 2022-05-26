@@ -16,6 +16,11 @@ if [ "$(uname)" = "Darwin" ]; then
     # shellcheck disable=SC1090
     source "$script"
   done
+elif [ -f "/usr/bin/pacman" ]; then
+  for script in ~/.github/env/common/zsh/yay/*.zsh; do
+    # shellcheck disable=SC1090
+    source "$script"
+  done
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
