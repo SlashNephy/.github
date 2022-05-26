@@ -5,17 +5,17 @@ cd "$(dirname "$0")"
 
 printf "Install .zshrc? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ./common/zsh/rc.zsh ~/.zshrc
+  echo; ln -sf ~/.github/env/common/zsh/rc.zsh ~/.zshrc
 fi
 
 printf "Install .colorrc? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ./common/.colorrc ~/.colorrc
+  echo; ln -sf ~/.github/env/common/.colorrc ~/.colorrc
 fi
 
 printf "Install .gitignore? [y/N]: "
 if read -r -q; then
-  echo; ln -sf ./common/.gitignore ~/.gitignore
+  echo; ln -sf ~/.github/env/common/.gitignore ~/.gitignore
 fi
 
 case "$OSTYPE" in
