@@ -13,20 +13,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Link
-        run: ln -s . ~/.github
       - name: Test
         run: bash ~/.github/scripts/install.sh
+        env:
+          HOME: ${{ env.GITHUB_WORKSPACE }}
 
   test-macos:
     runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Link
-        run: ln -s . ~/.github
       - name: Test
         run: bash ~/.github/scripts/install.sh
+        env:
+          HOME: ${{ env.GITHUB_WORKSPACE }}
 
   test-windows:
     runs-on: windows-latest
