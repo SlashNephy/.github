@@ -17,7 +17,7 @@ zsh ./macos/show-dotfiles.zsh
 
 printf "Install Homebrew? [y/N]: "
 if read -r -q; then
-  echo; zsh ./macos/brew.zsh
+  echo; zsh ~/.github/env/macos/brew.zsh
 fi
 
 printf "Install stubby.yml? [y/N]: "
@@ -26,4 +26,9 @@ if read -r -q; then
   ln -sf ~/.github/env/macos/stubby.yml $(brew --prefix)/etc/stubby/stubby.yml
   sudo brew services start stubby
   sudo $(brew --prefix)/opt/stubby/sbin/stubby-setdns-macos.sh
+fi
+
+printf "Install amplify-cli? [y/N]: "
+if read -r -q; then
+  echo; zsh ~/.github/env/macos/amplify-cli.zsh
 fi
