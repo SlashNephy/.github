@@ -2,20 +2,26 @@
 
 My dotfiles and GitHub Action workflows collection
 
+## Contents
+
+- `env`
+  - My dotfiles and environments
+- `scripts/`
+  - All-in-one install scripts
+
 ## Get Started
 
 ### Arch Linux / macOS
 
 Requirements:
   - git
-  - zsh
 
 ```console
 $ git clone git@github.com:SlashNephy/.github.git ~/.github
-$ zsh ~/.github/env/install.zsh
+$ bash ~/.github/scripts/install.sh
 ```
 
-### Windows
+### Windows (Planned)
 
 Requirements:
   - git
@@ -23,5 +29,5 @@ Requirements:
 
 ```console
 $ git clone git@github.com:SlashNephy/.github.git ~\.github
-$ powershell ~\.github\env\install-windows.ps1
+$ powershell ~\.github\scripts\install-windows.ps1
 ```
