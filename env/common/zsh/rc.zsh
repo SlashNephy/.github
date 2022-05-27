@@ -12,7 +12,8 @@ for script in ~/.github/env/common/zsh/scripts/*.zsh; do
 done
 
 if [ "$(uname)" = "Darwin" ]; then
-  export HOMEBREW_PREFIX=$(brew --prefix)
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  export HOMEBREW_PREFIX
 
   for script in ~/.github/env/common/zsh/cellar/*.zsh; do
     # shellcheck disable=SC1090
