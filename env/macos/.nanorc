@@ -1,0 +1,15 @@
+set tabsize 4
+set autoindent
+set nohelp
+set tabstospaces
+set mouse
+set linenumbers
+set casesensitive
+set nonewlines
+
+# brew install nano
+include "/opt/homebrew/Cellar/nano/*/share/nano/*.nanorc"
+include "/opt/homebrew/Cellar/nano/*/share/nano/extra/*.nanorc"
+
+# brew install nanorc
+include "/opt/homebrew/Cellar/nanorc/*/share/nanorc/*.nanorc"
