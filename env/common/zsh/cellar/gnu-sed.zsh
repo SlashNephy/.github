@@ -1,2 +1,2 @@
 # brew install gnu-sed
-PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"

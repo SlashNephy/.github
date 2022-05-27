@@ -1,2 +1,2 @@
 # brew install gnu-which
-PATH="$(brew --prefix)/opt/gnu-which/libexec/gnubin:$PATH"
+PATH="$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnubin:$PATH"

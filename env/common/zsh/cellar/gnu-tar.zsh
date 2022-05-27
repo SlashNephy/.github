@@ -1,2 +1,2 @@
 # brew install gnu-tar
-PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
+PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
