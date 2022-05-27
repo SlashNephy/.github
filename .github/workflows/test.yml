@@ -16,7 +16,7 @@ jobs:
       - name: Test
         run: bash ~/.github/scripts/install.sh
         env:
-          HOME: ${{ env.GITHUB_WORKSPACE }}
+          HOME: .
 
   test-macos:
     runs-on: macos-latest
@@ -26,7 +26,7 @@ jobs:
       - name: Test
         run: bash ~/.github/scripts/install.sh
         env:
-          HOME: ${{ env.GITHUB_WORKSPACE }}
+          HOME: .
 
   test-windows:
     runs-on: windows-latest
