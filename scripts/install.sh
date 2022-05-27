@@ -11,17 +11,20 @@ SCRIPTS_LINUX_DIR="$SCRIPTS_DIR/install-linux"
 SCRIPTS_MACOS_DIR="$SCRIPTS_DIR/install-macos"
 SCRIPTS_UBUNTU_DIR="$SCRIPTS_DIR/install-ubuntu"
 
+CI="${CI:-"false"}"
+
 TARGET_NAME="common"
 function prompt() {
-  set +u
-  if [[ -n "${SKIP_PROMPT}" ]]; then
-    set -u
+  prompt_text="$TARGET_NAME: $1 [Y/n]:"
+
+  if [ "$CI" = "true" ]; then
+    echo "$prompt_text y"
     return 0
   fi
 
   while true
   do
-    read -r -p "$TARGET_NAME: $1 [Y/n]: " result
+    read -r -p "$prompt_text " result
     case $result in
       [Yy]*) return 0;;
           *) return 1;;
