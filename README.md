@@ -13,21 +13,14 @@ My dotfiles and GitHub Action workflows collection
 
 ### Arch Linux / macOS
 
-Requirements:
-  - git
-
 ```console
 $ git clone git@github.com:SlashNephy/.github.git ~/.github
 $ bash ~/.github/scripts/install.sh
 ```
 
-### Windows (Planned)
-
-Requirements:
-  - git
-  - powershell
+### Windows
 
 ```console
 $ git clone git@github.com:SlashNephy/.github.git ~\.github
-$ powershell ~\.github\scripts\install-windows.ps1
+$ powershell ~\.github\scripts\install.ps1
 ```
