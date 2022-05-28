@@ -1,0 +1,8 @@
+[include]
+  path = ~/.github/env/common/.gitconfig
+
+[user]
+  signingkey = 4C01188D05550B59
+
+[gpg]
+  program = gpg2

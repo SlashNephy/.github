@@ -7,7 +7,6 @@ source "$HOME/.github/scripts/paths.sh"
 SCRIPTS_DIR="$ROOT_DIR/scripts"
 SCRIPTS_ARCH_DIR="$SCRIPTS_DIR/backup-arch"
 SCRIPTS_COMMON_DIR="$SCRIPTS_DIR/backup-common"
-SCRIPTS_LINUX_DIR="$SCRIPTS_DIR/backup-linux"
 SCRIPTS_MACOS_DIR="$SCRIPTS_DIR/backup-macos"
 SCRIPTS_UBUNTU_DIR="$SCRIPTS_DIR/backup-ubuntu"
 
@@ -20,14 +19,9 @@ case "$OSTYPE" in
   darwin*) for script in "$SCRIPTS_MACOS_DIR"/*.sh; do
              # shellcheck disable=SC1090
              source "$script"
-           done;;
+           done ;;
 
-  linux*)  for script in "$SCRIPTS_LINUX_DIR"/*.sh; do
-             # shellcheck disable=SC1090
-             source "$script"
-           done
-
-           if [ -f "/usr/bin/pacman" ]; then
+  linux*)  if [ -f "/usr/bin/pacman" ]; then
              for script in "$SCRIPTS_ARCH_DIR"/*.sh; do
                # shellcheck disable=SC1090
                source "$script"
