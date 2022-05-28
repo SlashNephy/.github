@@ -1,0 +1,15 @@
+[init]
+  defaultBranch = master
+
+[core]
+  excludesFile = ~/.gitignore
+  autocrlf = input
+
+[commit]
+  gpgsign = true
+
+[tag]
+  gpgsign = true
+
+[include]
+  path = ~/.github/env/common/user.gitconfig

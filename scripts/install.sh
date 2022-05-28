@@ -7,7 +7,6 @@ source "$HOME/.github/scripts/paths.sh"
 SCRIPTS_DIR="$ROOT_DIR/scripts"
 SCRIPTS_ARCH_DIR="$SCRIPTS_DIR/install-arch"
 SCRIPTS_COMMON_DIR="$SCRIPTS_DIR/install-common"
-SCRIPTS_LINUX_DIR="$SCRIPTS_DIR/install-linux"
 SCRIPTS_MACOS_DIR="$SCRIPTS_DIR/install-macos"
 SCRIPTS_UBUNTU_DIR="$SCRIPTS_DIR/install-ubuntu"
 
@@ -42,15 +41,9 @@ case "$OSTYPE" in
            for script in "$SCRIPTS_MACOS_DIR"/*.sh; do
              # shellcheck disable=SC1090
              source "$script"
-           done;;
+           done ;;
 
-  linux*)  TARGET_NAME="linux"
-           for script in "$SCRIPTS_LINUX_DIR"/*.sh; do
-             # shellcheck disable=SC1090
-             source "$script"
-           done
-
-           if [ -f "/usr/bin/pacman" ]; then
+  linux*)  if [ -f "/usr/bin/pacman" ]; then
              TARGET_NAME="arch"
              for script in "$SCRIPTS_ARCH_DIR"/*.sh; do
                # shellcheck disable=SC1090
