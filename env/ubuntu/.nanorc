@@ -1,0 +1,11 @@
+set tabsize 4
+set autoindent
+set nohelp
+set tabstospaces
+set mouse
+set linenumbers
+set casesensitive
+set nonewlines
+
+# apt install nano
+include "/usr/share/nano/*.nanorc"
