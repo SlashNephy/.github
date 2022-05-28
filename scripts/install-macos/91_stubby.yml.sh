@@ -1,4 +1,5 @@
 if prompt "Install stubby.yml?"; then
+  mkdir -p "$(brew --prefix)/etc/stubby"
   ln -sf ~/.github/env/macos/stubby.yml "$(brew --prefix)/etc/stubby/stubby.yml"
 fi
 
