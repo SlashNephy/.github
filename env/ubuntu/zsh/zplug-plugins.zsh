@@ -1,3 +1,4 @@
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "zsh-users/zsh-history-substring-search"
 zplug "chrissicool/zsh-256color"
 zplug "mrowa44/emojify", as:command
