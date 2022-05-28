@@ -4,7 +4,7 @@ fi
 
 if [ "$CI" = "true" ]; then
   echo "Skipping start stubby on CI..."
-  exit 0
+  return
 fi
 
 if prompt "Start stubby now?"; then

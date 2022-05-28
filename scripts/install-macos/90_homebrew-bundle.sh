@@ -1,6 +1,6 @@
 if [ "$CI" = "true" ]; then
   echo "Skipping Homebrew bundle on CI..."
-  exit 0
+  return
 fi
 
 if prompt "Install Homebrew dependencies?"; then
