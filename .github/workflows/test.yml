@@ -33,3 +33,5 @@ jobs:
       - name: Test
         shell: powershell
         run: .\scripts\install-windows.ps1
+        env:
+          USERPROFILE: ..
