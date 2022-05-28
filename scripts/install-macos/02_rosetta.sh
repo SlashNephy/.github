@@ -1,6 +1,6 @@
 if [ "$CI" = "true" ]; then
   echo "Skipping rosetta install on CI..."
-  exit 0
+  return
 fi
 
 if prompt "Install rosetta?"; then
