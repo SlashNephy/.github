@@ -1,3 +1,4 @@
+tap "gcenx/wine"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -45,6 +46,8 @@ brew "gawk"
 brew "gcc"
 # GitHub command-line tool
 brew "gh"
+# Remote repository management made easy
+brew "ghq"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # GNU version of the tar archiving utility
@@ -59,6 +62,8 @@ brew "grep"
 brew "gzip"
 # Improved top (interactive process viewer)
 brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # GNU utilities for networking
@@ -131,6 +136,8 @@ brew "tmux"
 brew "tree"
 # Pager/text based browser
 brew "w3m"
+# Automatic workarounds for problems in Wine
+brew "winetricks"
 # JavaScript package manager
 brew "yarn"
 # Next-generation plugin manager for zsh
@@ -147,19 +154,27 @@ brew "zsh-fast-syntax-highlighting"
 brew "romkatv/powerlevel10k/powerlevel10k"
 # Password manager that keeps all passwords secure behind one password
 cask "1password-beta"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
 # Application launcher and productivity software
 cask "alfred"
+# Distribution of the Python and R programming languages for scientific computing
+cask "anaconda"
 # Transfer files from and to an Android smartphone
 cask "android-file-transfer"
 # Android SDK component
 cask "android-platform-tools"
 cask "android-sdk"
+# Inspect application bundles
+cask "apparency"
 # Application uninstaller
 cask "appcleaner"
 # Multi-track audio editor and recorder
 cask "audacity"
 # Installer for BetterDiscord
 cask "betterdiscord-installer"
+# Virtual Audio Driver
+cask "blackhole-2ch"
 # Remotely access another computer through the Google Chrome browser
 cask "chrome-remote-desktop-host"
 # Clipboard extension app
@@ -189,6 +204,8 @@ cask "google-cloud-sdk"
 cask "google-drive"
 # Tools to protect your emails and files
 cask "gpg-suite"
+# Free and open-source media player
+cask "iina"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -201,6 +218,8 @@ cask "keka"
 cask "keybase"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
+# Create digital art and comics
+cask "medibangpaintpro"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
@@ -219,10 +238,16 @@ cask "postman"
 cask "powershell"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
+# Control your tools with a few keystrokes
+cask "raycast"
+# MySQL/MariaDB database management
+cask "sequel-ace"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
 cask "spotify"
+# System monitor for the menu bar
+cask "stats"
 # Video game digital distribution service
 cask "steam"
 # Management tool for Unity
@@ -233,6 +258,8 @@ cask "visual-studio"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Compatibility layer to run Windows applications
+cask "wine-crossover"
 # Network protocol analyzer
 cask "wireshark"
 # Video communication and virtual meeting platform
@@ -242,6 +269,7 @@ mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "LadioCast", id: 411213048
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Playgrounds", id: 1496833156
