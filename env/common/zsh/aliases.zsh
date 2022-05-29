@@ -33,3 +33,5 @@ alias refresh-dns="kill-mdns && restart-stubby"
 alias erutaso="docker run --rm -it slashnephy/erutaso"
 alias cowsay="docker run --rm docker/whalesay cowsay"
 alias ojichat="docker run --rm -i greymd/ojichat"
+
+alias hadolintd="docker run --rm -i ghcr.io/hadolint/hadolint"

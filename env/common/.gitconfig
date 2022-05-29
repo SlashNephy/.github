@@ -3,7 +3,7 @@
 
 [core]
   excludesFile = ~/.gitignore
-  autocrlf = input
+  autocrlf = false
 
 [commit]
   gpgsign = true
