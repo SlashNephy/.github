@@ -4,7 +4,7 @@
 [user]
   signingkey = 5786E1A202608DD4
 
-[includeif "gitdir:~/ghq/github.com/hatena"]
+[includeIf "gitdir:~/ghq/github.com/hatena/"]
   path = ~/.github/env/macos/user.gitconfig
 
 [gpg]
