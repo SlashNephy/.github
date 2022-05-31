@@ -1,0 +1,227 @@
+/**
+ * @name My Custom Theme
+ * @author AsteriaNocturna#1234
+ * @version 0.0.1
+ * @description @SlashNephy's custom theme.
+*/
+
+/* フォント置換 */
+@charset "UTF-8";
+
+/* MS Pゴシック */
+@font-face {
+    font-family: "MS PGothic";
+    font-weight: normal;
+    src: local("Noto Sans CJK JP Regular");
+}
+@font-face {
+    font-family: "MS PGothic";
+    font-weight: bold;
+    src: local("Noto Sans CJK JP Medium");
+}
+@font-face {
+    font-family: "ＭＳ Ｐゴシック";
+    font-weight: normal;
+    src: local("Noto Sans CJK JP Regular");
+}
+@font-face {
+    font-family: "ＭＳ Ｐゴシック";
+    font-weight: bold;
+    src: local("Noto Sans CJK JP Medium");
+}
+@font-face {
+    font-family: "MS Pゴシック";
+    font-weight: normal;
+    src: local("Noto Sans CJK JP Regular");
+}
+@font-face {
+    font-family: "MS Pゴシック";
+    font-weight: bold;
+    src: local("Noto Sans CJK JP Medium");
+}
+
+/* MS UI Gothic */
+@font-face {
+    font-family: "MS UI Gothic";
+    font-weight: normal;
+    src: local("Noto Sans Mono CJK JP Regular");
+}
+@font-face {
+    font-family: "MS UI Gothic";
+    font-weight: bold;
+    src: local("Noto Sans Mono CJK JP Medium");
+}
+
+/* MS ゴシック */
+@font-face {
+    font-family: "ＭＳ ゴシック";
+    font-weight: normal;
+    src: local("Noto Sans CJK JP Regular");
+}
+@font-face {
+    font-family: "ＭＳ ゴシック";
+    font-weight: bold;
+    src: local("Noto Sans CJK JP Medium");
+}
+@font-face {
+    font-family: "MS ゴシック";
+    font-weight: normal;
+    src: local("Noto Sans CJK JP Regular");
+}
+@font-face {
+    font-family: "MS ゴシック";
+    font-weight: bold;
+    src: local("Noto Sans CJK JP Medium");
+}
+@font-face {
+    font-family: "MS Gothic";
+    font-weight: normal;
+    src: local("Noto Sans CJK JP Regular");
+}
+@font-face {
+    font-family: "MS Gothic";
+    font-weight: bold;
+    src: local("Noto Sans CJK JP Medium");
+}
+
+/* MS P明朝 */
+@font-face {
+    font-family: "MS PMincho";
+    font-weight: normal;
+    src: local("Noto Serif CJK JP Regular");
+}
+@font-face {
+    font-family: "MS PMincho";
+    font-weight: bold;
+    src: local("Noto Serif CJK JP Medium");
+}
+@font-face {
+    font-family: "ＭＳ Ｐ明朝";
+    font-weight: normal;
+    src: local("Noto Serif CJK JP Regular");
+}
+@font-face {
+    font-family: "ＭＳ Ｐ明朝";
+    font-weight: bold;
+    src: local("Noto Serif CJK JP Medium");
+}
+@font-face {
+    font-family: "MS P明朝";
+    font-weight: normal;
+    src: local("Noto Serif CJK JP Regular");
+}
+@font-face {
+    font-family: "MS P明朝";
+    font-weight: bold;
+    src: local("Noto Serif CJK JP Medium");
+}
+
+/* MS 明朝 */
+@font-face {
+    font-family: "MS Mincho";
+    font-weight: normal;
+    src: local("Noto Serif CJK JP Regular");
+}
+@font-face {
+    font-family: "MS Mincho";
+    font-weight: bold;
+    src: local("Noto Serif CJK JP Medium");
+}
+@font-face {
+    font-family: "ＭＳ 明朝";
+    font-weight: normal;
+    src: local("Noto Serif CJK JP Regular");
+}
+@font-face {
+    font-family: "ＭＳ 明朝";
+    font-weight: bold;
+    src: local("Noto Serif CJK JP Medium");
+}
+@font-face {
+    font-family: "MS 明朝";
+    font-weight: normal;
+    src: local("Noto Serif CJK JP Regular");
+}
+@font-face {
+    font-family: "MS 明朝";
+    font-weight: bold;
+    src: local("Noto Serif CJK JP Medium");
+}
+
+/* メイリオ */
+@font-face {
+    font-family: Meiryo;
+    font-weight: normal;
+    src: local("Noto Sans CJK JP Regular");
+}
+@font-face {
+    font-family: Meiryo;
+    font-weight: bold;
+    src: local("Noto Sans CJK JP Medium");
+}
+@font-face {
+    font-family: "メイリオ";
+    font-weight: normal;
+    src: local("Noto Sans CJK JP Regular");
+}
+@font-face {
+    font-family: "メイリオ";
+    font-weight: bold;
+    src: local("Noto Sans CJK JP Medium");
+}
+
+/* Meiryo UI */
+@font-face {
+    font-family: "Meiryo UI";
+    font-weight: normal;
+    src: local("Noto Sans Mono CJK JP Regular");
+}
+@font-face {
+    font-family: "Meiryo UI";
+    font-weight: bold;
+    src: local("Noto Sans Mono CJK JP Medium");
+}
+
+/* Consolas */
+@font-face {
+    font-family: Consolas;
+    src: local("Cascadia Mono");
+}
+
+code, .codeLine-14BKbG, .inlineCode-2ngu6Y {
+    font-family: "Cascadia Mono", monospace !important;
+}
+
+/* ユーザポップアップの幅を広くする */
+.da-userPopout, .userPopout-2j1gM4 {
+    width: 340px !important;
+}
+
+/* ロール名、カテゴリ名など大文字にしないようにする */
+.da-members .da-membersGroup, .da-name {
+    text-transform: none;
+}
+
+/* メンバーをホバー時に拡大 */
+.da-member, .member-2gU6Ar {
+    transition: transform 0.3s;
+}
+
+.da-member:hover, .member-2gU6Ar:hover {
+    transform: scale(1.05);
+}
+
+/* 編集時の入力スペースを広げる */
+.da-contents div .da-channelTextArea .da-webkit .da-inner .da-slateContainer, .scrollableContainer-15eg7h {
+    max-height: 600px !important;
+}
+
+/* チャンネルバーを狭める */
+.sidebar-1tnWFu {
+    width: 210px !important;
+}
+
+/* チャンネルバーのフォントを小さくする */
+.channelName-3KPsGw {
+    font-size: 90% !important;
+}

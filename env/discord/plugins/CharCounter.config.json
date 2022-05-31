@@ -1,0 +1,10 @@
+{
+	"all": {
+		"changelog": {
+			"currentversion": "1.4.6"
+		},
+		"sliders": {
+			"showPercentage": 0
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+    "currentVersionInfo": {
+        "version": "1.2.2",
+        "hasShownChangelog": true
+    },
+    "settings": {
+        "showInMemberList": true,
+        "showOnMessages": true,
+        "showInDmsList": true,
+        "showOnTags": true,
+        "ignoreBots": true,
+        "icons": {
+            "web": true,
+            "desktop": false,
+            "mobile": true
+        }
+    }
+}

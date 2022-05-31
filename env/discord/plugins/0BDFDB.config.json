@@ -1,0 +1,28 @@
+{
+	"all": {
+		"changeLogs": {
+			"BDFDB": "2.3.2",
+			"CharCounter": "1.5.7",
+			"CreationDate": "1.4.6",
+			"FriendNotifications": "1.8.1",
+			"GameActivityToggle": "1.1.3",
+			"HideMutedCategories": "1.0.6",
+			"OpenSteamLinksInApp": "1.1.4",
+			"ShowHiddenChannels": "3.0.6",
+			"SpotifyControls": "1.2.5"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"shareData": true,
+			"showSupportBadges": false,
+			"showToasts": true,
+			"useChromium": false
+		},
+		"hashes": {
+			"0BDFDB.data.json": "dc33a52a1b7ffcc8533e7ffb020183b69212fedd",
+			"0BDFDB.raw.css": "e8d30d44e567f6a77ef4e90734c27c2b47306d20"
+		}
+	}
+}

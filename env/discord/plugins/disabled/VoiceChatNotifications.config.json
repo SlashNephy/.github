@@ -1,0 +1,26 @@
+{
+    "settings": {
+        "watchConnections": true,
+        "watchMutes": true,
+        "watchDeafens": true,
+        "watchGuildMutesOrDeafens": true,
+        "useToastNotification": false,
+        "useVoiceroid2Proxy": true,
+        "watchOnlyConnectedGuild": false,
+        "watchOnlyWhileConnected": false,
+        "suppressInDnd": true,
+        "watchOnlyConnected": false,
+        "logConnections": true,
+        "logMutes": true,
+        "logDeafens": true,
+        "logMoves": true,
+        "logServerMuteDeaf": true,
+        "displayWhileFocused": true,
+        "displayUpdateNotes": true,
+        "inappPosition": "topRight"
+    },
+    "currentVersionInfo": {
+        "version": "1.2.1",
+        "hasShownChangelog": true
+    }
+}
