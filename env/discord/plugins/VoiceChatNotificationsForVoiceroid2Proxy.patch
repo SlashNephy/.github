@@ -1,0 +1,129 @@
+--- VoiceChatNotifications.plugin.js	2022-06-02 10:08:15.162709702 +0900
++++ VoiceChatNotificationsForVoiceroid2Proxy.plugin.js	2022-06-03 19:08:44.411694721 +0900
+@@ -1,14 +1,14 @@
+ /**
+- * @name VoiceChatNotifications
++ * @name VoiceChatNotificationsForVoiceroid2Proxy
+  * @version 1.2.2
+- * @description Shows you certain events from voicechats in a logs panel or as desktop notification.
+- * @author Strencher
+- * @source https://github.com/Strencher/BetterDiscordStuff/tree/master/VoiceChatNotifications
+- * @updateUrl https://raw.githubusercontent.com/Strencher/BetterDiscordStuff/master/VoiceChatNotifications/VoiceChatNotifications.plugin.js
++ * @description Modified version of Strencher's VoiceChatNotifications: Supports Voiceroid2Proxy to speak messages via VOICEROID2.
++ * @author AsteriaNocturna
++ * @source https://github.com/SlashNephy/.github
++ * @updateUrl https://raw.githubusercontent.com/SlashNephy/.github/master/env/discord/plugins/VoiceChatNotificationsForVoiceroid2Proxy.plugin.js
+  */
+ /*@cc_on
+ @if (@_jscript)
+-    
++
+     // Offer to self-install for clueless users that try to run this directly.
+     var shell = WScript.CreateObject("WScript.Shell");
+     var fs = new ActiveXObject("Scripting.FileSystemObject");
+@@ -31,16 +31,16 @@
+ /* Generated Code */
+ const config = {
+ 	"info": {
+-		"name": "VoiceChatNotifications",
++		"name": "VoiceChatNotificationsForVoiceroid2Proxy",
+ 		"version": "1.2.2",
+-		"description": "Shows you certain events from voicechats in a logs panel or as desktop notification.",
++		"description": "Modified version of Strencher's VoiceChatNotifications: Supports Voiceroid2Proxy to speak messages via VOICEROID2.",
+ 		"authors": [{
+-			"name": "Strencher",
+-			"discord_id": "415849376598982656",
+-			"github_username": "Strencher"
++			"name": "AsteriaNocturna",
++			"discord_id": "187577389419724800",
++			"github_username": "SlashNephy"
+ 		}],
+-		"github": "https://github.com/Strencher/BetterDiscordStuff/tree/master/VoiceChatNotifications",
+-		"github_raw": "https://raw.githubusercontent.com/Strencher/BetterDiscordStuff/master/VoiceChatNotifications/VoiceChatNotifications.plugin.js"
++		"github": "https://github.com/SlashNephy/.github",
++		"github_raw": "https://raw.githubusercontent.com/SlashNephy/.github/master/env/discord/plugins/VoiceChatNotificationsForVoiceroid2Proxy.plugin.js"
+ 	},
+ 	"changelog": [{
+ 		"type": "fixed",
+@@ -518,7 +518,7 @@
+ 					this.settings = external_PluginApi_namespaceObject.PluginUtilities.loadSettings(pluginName, defaultSettings);
+ 				}
+ 			}
+-			const package_namespaceObject = JSON.parse('{"um":{"u2":"VoiceChatNotifications"}}');
++			const package_namespaceObject = JSON.parse('{"um":{"u2":"VoiceChatNotificationsForVoiceroid2Proxy"}}');
+ 			const Settings = new SettingsManager(package_namespaceObject.um.u2, {});
+ 			const settings = Settings;
+ 			var notification = __webpack_require__(713);
+@@ -611,32 +611,32 @@
+ 				VOICE_STATES: {
+ 					deaf: {
+ 						setting: "serverDeaf",
+-						strings: ["Got Server undeafened", "Got Server deafened"],
++						strings: ["サーバースピーカーミュートを解除されました。", "サーバースピーカーミュートされました。"],
+ 						description: "Fires if someone got server deafened/undeafened."
+ 					},
+ 					mute: {
+ 						setting: "serverMute",
+-						strings: ["Got Server unmuted", "Got Server muted"],
++						strings: ["サーバーミュートを解除されました。", "サーバーミュートされました。"],
+ 						description: "Fires if someone got server muted/unmuted."
+ 					},
+ 					selfDeaf: {
+ 						setting: "selfDeaf",
+-						strings: ["Undeafened", "Deafened"],
++						strings: ["スピーカーミュートを解除しました。", "スピーカーミュートしました。"],
+ 						description: "Fires if someone deafen/undeafen oneself."
+ 					},
+ 					selfMute: {
+ 						setting: "selfMute",
+-						strings: ["Unmuted self.", "Muted self."],
++						strings: ["マイクミュートを解除しました。", "マイクミュートしました。"],
+ 						description: "Fires if someone mutes/unmutes oneself."
+ 					},
+ 					selfStream: {
+ 						setting: "selfStream",
+-						strings: ["Stopped streaming.", "Started streaming."],
++						strings: ["配信を停止しました。", "配信を開始しました。"],
+ 						description: "Fires if someone stopps/startes streaming."
+ 					},
+ 					selfVideo: {
+ 						setting: "selfVideo",
+-						strings: ["Stopped screenshare.", "Started screenshare."],
++						strings: ["画面共有を停止しました。", "画面共有を開始しました。"],
+ 						description: "Fires if someone stopps/starts screensharing."
+ 					}
+ 				}
+@@ -999,6 +999,11 @@
+ 							let user = stores_namespaceObject.Users.getUser(update.userId) || {};
+ 							if (settings.get("ignoreSelf", false) && user.id === stores_namespaceObject.Users.getCurrentUser().id) return;
+ 							const pushToLog = message => {
++								fetch("http://localhost:4532/talk", {
++									method: "POST",
++									body: JSON.stringify({text: `${user}が${message}`})
++								}).then(() => console.log(`Sent request: ${message}`));
++
+ 								const timestamp = new classes_namespaceObject.Timestamp(new Date);
+ 								const log = {
+ 									user,
+@@ -1015,12 +1020,12 @@
+ 								}));
+ 							};
+ 							if (this.lastStates[update.userId] && !update.channelId && settings.get("leave", true)) {
+-								pushToLog("Left the call.");
++								pushToLog("退出しました。");
+ 								delete this.lastStates[update.userId];
+ 							}
+ 							if (!update.channelId || update.channelId !== this.currentVoiceChannelId) return;
+ 							if (!this.lastStates[update.userId]) {
+-								if (settings.get("join", true)) pushToLog("Joined the call.");
++								if (settings.get("join", true)) pushToLog("参加しました。");
+ 								this.lastStates[update.userId] = update;
+ 							} else {
+ 								if (_.isEqual(this.lastStates[update.userId], update)) return;
+@@ -1197,4 +1202,4 @@
+ 		start() {}
+ 		stop() {}
+ 	};
+-/*@end@*/
+\ No newline at end of file
++/*@end@*/
