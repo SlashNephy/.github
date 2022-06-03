@@ -37,7 +37,7 @@
 			"addBy": true
 		},
 		"playerState": {
-			"maximized": false
+			"maximized": true
 		}
 	}
 }
