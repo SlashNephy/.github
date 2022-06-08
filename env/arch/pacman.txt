@@ -1,9 +1,9 @@
+1password-cli
 base
 clamav
 clamav-unofficial-sigs
 cloudflared
 dkms
-dnslookup
 docker
 docker-compose
 ethtool
@@ -16,7 +16,6 @@ intel-media-driver
 intel-ucode
 irqbalance
 jq
-keybase
 libpam-google-authenticator
 libva-utils
 linux-firmware
@@ -41,6 +40,7 @@ systemd-boot-pacman-hook
 systemd-resolvconf
 tlp
 tmux
+tree
 ufw
 ufw-docker
 unhide
