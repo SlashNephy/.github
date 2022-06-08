@@ -5,7 +5,7 @@
     },
     "settings": {
         "notifications": {
-            "position": "topMiddle",
+            "position": "topRight",
             "backdrop": true,
             "backdropColor": "#3e4346",
             "timeoutReset": true
@@ -16,7 +16,7 @@
         "userCounter": {
             "enabled": true,
             "enableTime": 1644678625180,
-            "lastSubmission": 1654248435136
+            "lastSubmission": 1654566241253
         }
     }
 }
