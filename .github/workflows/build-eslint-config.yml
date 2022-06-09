@@ -1,0 +1,12 @@
+name: 'Build eslint-config'
+
+on:
+  push:
+    paths:
+      - 'env/eslint/**'
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-yarn-project.yml
+    with:
+      working-directory: env/eslint

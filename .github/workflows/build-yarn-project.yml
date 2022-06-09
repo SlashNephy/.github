@@ -1,9 +1,12 @@
-name: 'Build prettier-config'
+name: 'Build yarn project'
 
 on:
-  push:
-    paths:
-      - 'env/prettier/**'
+  workflow_call:
+    inputs:
+      working-directory:
+        required: false
+        type: string
+        default: .
 
 jobs:
   build:
@@ -17,10 +20,10 @@ jobs:
         with:
           node-version: 18
           cache: 'yarn'
-          cache-dependency-path: 'env/prettier/yarn.lock'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
 
       - name: Install Dependencies
-        working-directory: 'env/prettier'
+        working-directory: ${{ inputs.working-directory }}
         run: yarn install
 
       - name: Build
