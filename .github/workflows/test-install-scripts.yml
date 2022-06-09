@@ -1,7 +1,10 @@
-name: Test
+name: Test Install Scripts
 
 on:
   push:
+    paths:
+      - scripts/**/*.sh
+
   workflow_dispatch:
 
 jobs:
