@@ -5,6 +5,8 @@ on:
     paths:
       - 'env/prettier/**'
 
+  workflow_dispatch:
+
 jobs:
   build:
     uses: ./.github/workflows/build-yarn-project.yml
