@@ -27,4 +27,5 @@ jobs:
         run: yarn install
 
       - name: Build
+        working-directory: ${{ inputs.working-directory }}
         run: yarn build
