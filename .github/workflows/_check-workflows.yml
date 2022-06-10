@@ -15,8 +15,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
+  actionlint:
     uses: ./.github/workflows/actionlint.yml
+    permissions:
+      contents: 'read'
+      pull-requests: 'write'
+
+  yamllint:
+    uses: ./.github/workflows/yamllint.yml
     permissions:
       contents: 'read'
       pull-requests: 'write'
