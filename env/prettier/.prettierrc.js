@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@slashnephy/prettier-config'),
+  ...require('./dist/index'),
 }
