@@ -1,0 +1,64 @@
+name: 'gradle run'
+
+on:
+  workflow_call:
+    inputs:
+      java-version:
+        required: false
+        type: string
+        default: 17
+      java-distribution:
+        required: false
+        type: string
+        default: 'corretto'
+      working-directory:
+        required: false
+        type: string
+        default: '.'
+      pre-task:
+        required: false
+        type: string
+        default: ''
+      task:
+        required: true
+        type: string
+      post-task:
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: 'read'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: '${{ inputs.java-distribution }}'
+          java-version: '${{ inputs.java-version }}'
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Run Pre-Task
+        if: inputs.pre-task != ''
+        with:
+          arguments: '${{ inputs.pre-task }}'
+          build-root-directory: '${{ inputs.working-directory }}'
+
+      - name: Run Task
+        with:
+          arguments: '${{ inputs.task }}'
+          build-root-directory: '${{ inputs.working-directory }}'
+
+      - name: Run Post-Task
+        if: inputs.post-task != ''
+        with:
+          arguments: '${{ inputs.post-task }}'
+          build-root-directory: '${{ inputs.working-directory }}'
