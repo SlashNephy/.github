@@ -1,5 +1,7 @@
+---
 name: 'Check env/renovate'
 
+# yamllint disable-line rule:truthy
 on:
   push:
     branches:
