@@ -2,6 +2,8 @@ name: 'Check env/renovate'
 
 on:
   push:
+    branches:
+      - 'master'
     paths:
       - 'renovate.json'
       - 'renovate-config.json'

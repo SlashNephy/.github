@@ -2,6 +2,8 @@ name: 'Check env/prettier'
 
 on:
   push:
+    branches:
+      - 'master'
     paths:
       - 'env/prettier/**'
       - '.github/workflows/_check-prettier.yml'
