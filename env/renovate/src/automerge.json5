@@ -1,6 +1,6 @@
-// 特定のパッケージを Automerge する
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  description: '特定のパッケージを Automerge する',
   packageRules: [
     {
       matchPackagePatterns: ['@kawaiioverflow/arm'],
