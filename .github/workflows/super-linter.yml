@@ -1,5 +1,7 @@
+---
 name: 'Super Linter'
 
+# yamllint disable-line rule:truthy
 on:
   workflow_call:
 

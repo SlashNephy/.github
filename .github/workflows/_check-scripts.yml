@@ -1,5 +1,7 @@
+---
 name: 'Check scripts'
 
+# yamllint disable-line rule:truthy
 on:
   push:
     paths:
