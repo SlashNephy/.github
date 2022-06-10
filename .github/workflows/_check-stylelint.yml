@@ -23,10 +23,9 @@ jobs:
       script: 'build'
 
   lint:
-    uses: ./.github/workflows/run-yarn.yml
+    uses: ./.github/workflows/lint-node.yml
     with:
       working-directory: 'env/stylelint'
-      script: 'lint'
 
   format:
     if: github.event_name == 'push'

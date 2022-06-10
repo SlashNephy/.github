@@ -25,10 +25,9 @@ jobs:
       script: 'test'
 
   lint:
-    uses: ./.github/workflows/run-yarn.yml
+    uses: ./.github/workflows/lint-node.yml
     with:
       working-directory: 'env/renovate'
-      script: 'lint'
 
   format:
     if: github.event_name == 'push'
