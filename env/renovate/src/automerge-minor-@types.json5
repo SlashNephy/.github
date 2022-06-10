@@ -1,6 +1,6 @@
-// マイナーな @types/* の更新を Automerge する
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  description: 'マイナーな @types/* の更新を Automerge する',
   packageRules: [
     {
       matchDepTypes: ['devDependencies'],
