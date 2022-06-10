@@ -2,6 +2,8 @@ name: 'Check env/stylelint'
 
 on:
   push:
+    branches:
+      - 'master'
     paths:
       - 'env/stylelint/**'
       - '.github/workflows/_check-stylelint.yml'

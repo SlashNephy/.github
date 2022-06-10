@@ -2,6 +2,8 @@ name: 'Check env/eslint'
 
 on:
   push:
+    branches:
+      - 'master'
     paths:
       - 'env/eslint/**'
       - '.github/workflows/_check-eslint.yml'
