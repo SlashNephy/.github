@@ -6,12 +6,24 @@ on:
       - 'scripts/**/*.sh'
       - '.github/workflows/_check-scripts.yml'
 
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
   workflow_dispatch:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
+  lint:
+    uses: ./.github/workflows/shellcheck.yml
+    permissions:
+      contents: 'read'
+      pull-requests: 'write'
+
   test-install-ubuntu:
     runs-on: ubuntu-latest
     steps:
