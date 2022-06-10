@@ -9,6 +9,7 @@
   "scripts": {
     "test": "concurrently -n test: 'yarn:test:*'",
     "test:project": "RENOVATE_CONFIG_FILE=src/index.json5 renovate-config-validator",
+    "test:repo": "RENOVATE_CONFIG_FILE=../../renovate.json renovate-config-validator",
     "test:share": "RENOVATE_CONFIG_FILE=../../renovate-config.json renovate-config-validator",
     "lint": "prettier --check .",
     "format": "yarn lint --write"
