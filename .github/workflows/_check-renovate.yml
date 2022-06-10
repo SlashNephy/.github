@@ -1,0 +1,36 @@
+name: 'Check env/renovate'
+
+on:
+  push:
+    paths:
+      - 'renovate.json'
+      - 'renovate-config.json'
+      - 'env/renovate/**'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.event == 'pull_request' || github.event == 'workflow_dispatch'
+    uses: ./.github/workflows/run-yarn.yml
+    with:
+      working-directory: 'env/renovate'
+      script: 'build'
+
+  lint:
+    if: github.event == 'pull_request' || github.event == 'workflow_dispatch'
+    uses: ./.github/workflows/run-yarn.yml
+    with:
+      working-directory: 'env/renovate'
+      script: 'lint'
+
+  format:
+    if: github.event == 'push'
+    uses: ./.github/workflows/format-node.yml
+    with:
+      working-directory: 'env/renovate'

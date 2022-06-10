@@ -1,0 +1,62 @@
+name: 'Format Node Project'
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        default: 18
+      working-directory:
+        required: false
+        type: string
+        default: .
+      pre-format:
+        required: false
+        type: string
+        default: ''
+      post-format:
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: 'write'
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ inputs.node-version }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+
+      - name: Install
+        run: 'yarn install --immutable'
+
+      - name: Pre-Format
+        if: inputs.pre-format != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.pre-format }}'
+
+      - name: Format
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn format'
+
+      - name: Post-Format
+        if: inputs.post-format != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.post-format }}'
+
+      - name: Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: '🧹 yarn format'

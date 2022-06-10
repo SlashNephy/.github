@@ -1,0 +1,6 @@
+// 特定のパッケージを Automerge する
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  additionalReviewers: ['SlashNephy', 'StarryBlueSky-bot'],
+  reviewersFromCodeOwners: true,
+}

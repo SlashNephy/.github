@@ -1,0 +1,11 @@
+// CI Pass したマイナー以下の更新を Automerge する
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  packageRules: [
+    {
+      matchUpdateTypes: ['minor', 'patch', 'pin', 'digest'],
+      automerge: true,
+      ignoreTests: false,
+    },
+  ],
+}

@@ -1,0 +1,17 @@
+// マイナーな @types/* の更新を Automerge する
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  packageRules: [
+    {
+      matchDepTypes: ['devDependencies'],
+      matchPackagePatterns: ['^@types/'],
+      automerge: true,
+      ignoreTests: true,
+
+      // メジャーな更新は Automerge 対象外とする
+      major: {
+        automerge: false,
+      },
+    },
+  ],
+}

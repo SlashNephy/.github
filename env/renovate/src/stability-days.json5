@@ -1,0 +1,5 @@
+// リリースから1週間以上経ったパッケージのみ適用する
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  stabilityDays: 7,
+}

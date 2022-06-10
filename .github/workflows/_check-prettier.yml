@@ -1,0 +1,34 @@
+name: 'Check env/prettier'
+
+on:
+  push:
+    paths:
+      - 'env/prettier/**'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.event == 'pull_request' || github.event == 'workflow_dispatch'
+    uses: ./.github/workflows/run-yarn.yml
+    with:
+      working-directory: 'env/prettier'
+      script: 'build'
+
+  lint:
+    if: github.event == 'pull_request' || github.event == 'workflow_dispatch'
+    uses: ./.github/workflows/run-yarn.yml
+    with:
+      working-directory: 'env/prettier'
+      script: 'lint'
+
+  format:
+    if: github.event == 'push'
+    uses: ./.github/workflows/format-node.yml
+    with:
+      working-directory: 'env/prettier'

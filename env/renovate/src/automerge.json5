@@ -1,0 +1,11 @@
+// 特定のパッケージを Automerge する
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  packageRules: [
+    {
+      matchPackagePatterns: ['@kawaiioverflow/arm'],
+      automerge: true,
+      ignoreTests: true,
+    },
+  ],
+}
