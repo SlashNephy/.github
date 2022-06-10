@@ -8,6 +8,9 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   test-install-ubuntu:
     runs-on: ubuntu-latest
