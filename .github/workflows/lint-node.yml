@@ -1,0 +1,108 @@
+name: Lint Node Project
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        default: 18
+      working-directory:
+        required: false
+        type: string
+        default: .
+      pre-script:
+        required: false
+        type: string
+        default: ''
+      post-script:
+        required: false
+        type: string
+        default: ''
+      reporter:
+        required: false
+        type: string
+        default: 'github-pr-review'
+      enable-eslint-on-pr:
+        required: false
+        type: boolean
+        default: true
+      enable-prettier-on-pr:
+        required: false
+        type: boolean
+        default: true
+      enable-stylelint-on-pr:
+        required: false
+        type: boolean
+        default: false
+      stylelint-input:
+        required: false
+        type: string
+        default: '**/*.{css,scss,sass,less,styl}'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ inputs.node-version }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+
+      - name: Install
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn install --immutable'
+
+      - name: Run Pre-Script
+        if: inputs.pre-script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.pre-script }}'
+
+      - name: Lint
+        if: github.event_name != 'pull_request'
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn lint'
+
+      - name: eslint
+        if: inputs.enable-eslint-on-pr && github.event_name == 'pull_request'
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: '${{ inputs.reporter }}'
+
+      - name: prettier
+        if: inputs.enable-prettier-on-pr && github.event_name == 'pull_request'
+        # prettier errorformat は reviewdog にはないので一旦 format したものの diff を渡す
+        # https://github.com/reviewdog/reviewdog#diff
+        run: |
+          yarn format:prettier
+          TMPFILE=$(mktemp)
+          git diff > "${TMPFILE}"
+          git stash -u \
+            && git stash drop \
+            && reviewdog -name=prettier -f=diff -f.diff.strip=1 -reporter=${{ inputs.reporter }} < "${TMPFILE}" \
+            || true
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: stylelint
+        if: inputs.enable-stylelint-on-pr && github.event_name == 'pull_request'
+        uses: reviewdog/action-stylelint@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: '${{ inputs.reporter }}'
+          stylelint_input: ${{ inputs.stylelint-input }}
+
+      - name: Run Post-Script
+        if: inputs.post-script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.post-script }}'

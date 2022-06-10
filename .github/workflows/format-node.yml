@@ -43,7 +43,7 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn install --immutable'
 
-      - name: Pre-Format
+      - name: Run Pre-Script
         if: inputs.pre-script != ''
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.pre-script }}'
@@ -52,7 +52,7 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn format'
 
-      - name: Post-Format
+      - name: Run Post-Script
         if: inputs.post-script != ''
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.post-script }}'
