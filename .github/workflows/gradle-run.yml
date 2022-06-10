@@ -48,17 +48,20 @@ jobs:
 
       - name: Run Pre-Task
         if: inputs.pre-task != ''
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: '${{ inputs.pre-task }}'
           build-root-directory: '${{ inputs.working-directory }}'
 
       - name: Run Task
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: '${{ inputs.task }}'
           build-root-directory: '${{ inputs.working-directory }}'
 
       - name: Run Post-Task
         if: inputs.post-task != ''
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: '${{ inputs.post-task }}'
           build-root-directory: '${{ inputs.working-directory }}'

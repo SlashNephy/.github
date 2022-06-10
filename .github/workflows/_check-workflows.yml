@@ -11,3 +11,6 @@ on:
 jobs:
   lint:
     uses: ./.github/workflows/actionlint.yml
+    permissions:
+      contents: 'read'
+      pull-requests: 'write'
