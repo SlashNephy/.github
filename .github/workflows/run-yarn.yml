@@ -1,0 +1,58 @@
+name: Run Yarn Script
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        default: 18
+      working-directory:
+        required: false
+        type: string
+        default: .
+      pre-script:
+        required: false
+        type: string
+        default: ''
+      script:
+        required: true
+        type: string
+      post-script:
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ inputs.node-version }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+
+      - name: Install
+        run: 'yarn install --immutable'
+
+      - name: Run Pre-Script
+        if: inputs.pre-script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.pre-script }}'
+
+      - name: Run Script
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.script }}'
+
+      - name: Run Post-Script
+        if: inputs.post-script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.post-script }}'

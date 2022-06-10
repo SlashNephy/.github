@@ -1,0 +1,8 @@
+// 依存関係を Pin する PR を Automerge する
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  pin: {
+    automerge: true,
+    ignoreTests: true,
+  },
+}

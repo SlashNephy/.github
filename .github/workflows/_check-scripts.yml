@@ -1,14 +1,14 @@
-name: Test Install Scripts
+name: 'Check scripts'
 
 on:
   push:
     paths:
-      - scripts/**/*.sh
+      - 'scripts/**/*.sh'
 
   workflow_dispatch:
 
 jobs:
-  test-ubuntu:
+  test-install-ubuntu:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,7 +18,7 @@ jobs:
         env:
           HOME: ..
 
-  test-macos:
+  test-install-macos:
     runs-on: macos-12
     steps:
       - name: Checkout
@@ -28,7 +28,7 @@ jobs:
         env:
           HOME: ..
 
-  test-windows:
+  test-install-windows:
     runs-on: windows-latest
     steps:
       - name: Checkout

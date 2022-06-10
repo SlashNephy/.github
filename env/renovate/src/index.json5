@@ -1,0 +1,17 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:base',
+    ':prConcurrentLimit20',
+    ':separateMultipleMajorReleases',
+    'github>SlashNephy/.github:env/renovate/src/labels.json5',
+    'github>SlashNephy/.github:env/renovate/src/reviewers.json5',
+    'github>SlashNephy/.github:env/renovate/src/schedule.json5',
+    'github>SlashNephy/.github:env/renovate/src/stability-days.json5',
+    'group:recommended',
+    'github>SlashNephy/.github:env/renovate/src/automerge.json5',
+    'github>SlashNephy/.github:env/renovate/src/automerge-dev-dependencies.json5',
+    'github>SlashNephy/.github:env/renovate/src/automerge-pin.json5',
+    'github>SlashNephy/.github:env/renovate/src/automerge-minor-@types.json5',
+  ],
+}
