@@ -7,20 +7,36 @@
   },
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "test": "concurrently -n test: 'yarn:test:*'",
     "test:project": "RENOVATE_CONFIG_FILE=src/index.json5 renovate-config-validator",
     "test:repo": "RENOVATE_CONFIG_FILE=../../renovate.json renovate-config-validator",
     "test:share": "RENOVATE_CONFIG_FILE=../../renovate-config.json renovate-config-validator",
-    "lint": "yarn lint:prettier",
+    "lint": "concurrently -n lint: 'yarn:lint:*'",
+    "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "format": "yarn format:prettier",
-    "format:prettier": "yarn lint --write"
+    "format": "concurrently -n format: 'yarn:format:*'",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "yarn lint:prettier --write"
+  },
+  "dependencies": {
+    "@octokit/rest": "18.12.0"
   },
   "devDependencies": {
+    "@slashnephy/eslint-config": "0.1.0",
     "@slashnephy/prettier-config": "0.1.0",
+    "@types/node": "17.0.41",
     "concurrently": "7.2.1",
+    "eslint": "8.17.0",
     "prettier": "2.6.2",
-    "renovate": "32.80.0"
+    "renovate": "32.80.0",
+    "ts-node": "10.8.1",
+    "typescript": "4.7.3"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "eslintConfig": {
+    "extends": [
+      "@slashnephy/eslint-config"
+    ]
+  }
 }
