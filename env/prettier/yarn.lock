@@ -125,12 +125,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/prettier-config@0.1.0, @slashnephy/prettier-config@workspace:.":
+"@slashnephy/prettier-config@workspace:.":
   version: 0.0.0-use.local
   resolution: "@slashnephy/prettier-config@workspace:."
   dependencies:
     "@slashnephy/eslint-config": 0.1.0
-    "@slashnephy/prettier-config": 0.1.0
     "@types/node": 17.0.41
     "@types/prettier": 2.6.3
     concurrently: 7.2.1
