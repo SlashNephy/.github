@@ -12,7 +12,7 @@ on:
       working-directory:
         required: false
         type: string
-        default: .
+        default: '.'
       pre-script:
         required: false
         type: string
@@ -76,11 +76,13 @@ jobs:
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
+          workdir: '${{ inputs.working-directory }}'
 
       - name: prettier
         if: inputs.enable-prettier
         # prettier errorformat は reviewdog にはないので一旦 format したものの diff を渡す
         # https://github.com/reviewdog/reviewdog#diff
+        working-directory: '${{ inputs.working-directory }}'
         run: |
           yarn format:prettier
           TMPFILE=$(mktemp)
@@ -104,6 +106,7 @@ jobs:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
           stylelint_input: ${{ inputs.stylelint-input }}
+          workdir: '${{ inputs.working-directory }}'
 
       - name: Run Post-Script
         if: inputs.post-script != ''
@@ -139,11 +142,13 @@ jobs:
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
+          workdir: '${{ inputs.working-directory }}'
 
       - name: prettier
         if: inputs.enable-prettier
         # prettier errorformat は reviewdog にはないので一旦 format したものの diff を渡す
         # https://github.com/reviewdog/reviewdog#diff
+        working-directory: '${{ inputs.working-directory }}'
         run: |
           yarn format:prettier
           TMPFILE=$(mktemp)
@@ -167,6 +172,7 @@ jobs:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
           stylelint_input: ${{ inputs.stylelint-input }}
+          workdir: '${{ inputs.working-directory }}'
 
       - name: Run Post-Script
         if: inputs.post-script != ''
