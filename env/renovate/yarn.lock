@@ -1668,7 +1668,7 @@ __metadata:
     "@slashnephy/prettier-config": 0.1.0
     concurrently: 7.2.1
     prettier: 2.6.2
-    renovate: 32.80.0
+    renovate: 32.82.2
   languageName: unknown
   linkType: soft
 
@@ -2301,9 +2301,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cacache@npm:16.1.0":
-  version: 16.1.0
-  resolution: "cacache@npm:16.1.0"
+"cacache@npm:16.1.1, cacache@npm:^16.1.0":
+  version: 16.1.1
+  resolution: "cacache@npm:16.1.1"
   dependencies:
     "@npmcli/fs": ^2.1.0
     "@npmcli/move-file": ^2.0.0
@@ -2323,7 +2323,7 @@ __metadata:
     ssri: ^9.0.0
     tar: ^6.1.11
     unique-filename: ^1.1.1
-  checksum: ddfcf92f079f24ccecef4e2ca1e4428443787b61429b921803b020fd0f33d9ac829ac47837b74b40868d8ae4f1b2ed82e164cdaa5508fbd790eee005a9d88469
+  checksum: 488524617008b793f0249b0c4ea2c330c710ca997921376e15650cc2415a8054491ae2dee9f01382c2015602c0641f3f977faf2fa7361aa33d2637dcfb03907a
   languageName: node
   linkType: hard
 
@@ -2350,32 +2350,6 @@ __metadata:
     tar: ^6.0.2
     unique-filename: ^1.1.1
   checksum: a07327c27a4152c04eb0a831c63c00390d90f94d51bb80624a66f4e14a6b6360bbf02a84421267bd4d00ca73ac9773287d8d7169e8d2eafe378d2ce140579db8
-  languageName: node
-  linkType: hard
-
-"cacache@npm:^16.1.0":
-  version: 16.1.1
-  resolution: "cacache@npm:16.1.1"
-  dependencies:
-    "@npmcli/fs": ^2.1.0
-    "@npmcli/move-file": ^2.0.0
-    chownr: ^2.0.0
-    fs-minipass: ^2.1.0
-    glob: ^8.0.1
-    infer-owner: ^1.0.4
-    lru-cache: ^7.7.1
-    minipass: ^3.1.6
-    minipass-collect: ^1.0.2
-    minipass-flush: ^1.0.5
-    minipass-pipeline: ^1.2.4
-    mkdirp: ^1.0.4
-    p-map: ^4.0.0
-    promise-inflight: ^1.0.1
-    rimraf: ^3.0.2
-    ssri: ^9.0.0
-    tar: ^6.1.11
-    unique-filename: ^1.1.1
-  checksum: 488524617008b793f0249b0c4ea2c330c710ca997921376e15650cc2415a8054491ae2dee9f01382c2015602c0641f3f977faf2fa7361aa33d2637dcfb03907a
   languageName: node
   linkType: hard
 
@@ -5559,9 +5533,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.80.0":
-  version: 32.80.0
-  resolution: "renovate@npm:32.80.0"
+"renovate@npm:32.82.2":
+  version: 32.82.2
+  resolution: "renovate@npm:32.82.2"
   dependencies:
     "@aws-sdk/client-ec2": 3.72.0
     "@aws-sdk/client-ecr": 3.72.0
@@ -5578,7 +5552,7 @@ __metadata:
     auth-header: 1.0.0
     azure-devops-node-api: 11.1.1
     bunyan: 1.8.15
-    cacache: 16.1.0
+    cacache: 16.1.1
     chalk: 4.1.2
     changelog-filename-regex: 2.0.1
     clean-git-ref: 2.0.1
@@ -5648,7 +5622,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: ff04b278ed310866bbd014c914e6a1e1178e6b03ebcbded09518cde4400bd9e4765029903e8d834b231b65a77f8c403c69888a7f1d53ff78033aa5eb5c5ca38f
+  checksum: e5955964e74726d051051ad8151719a7b4f97609c42f663bd18e2fa8840104d65928d3341bfaa5aa963b772d22a7a83f80c89543574703b2fe87f417ed1169c1
   languageName: node
   linkType: hard
 
