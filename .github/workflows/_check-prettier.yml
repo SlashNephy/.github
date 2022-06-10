@@ -24,7 +24,6 @@ jobs:
     uses: ./.github/workflows/run-yarn.yml
     with:
       working-directory: 'env/prettier'
-      pre-script: 'build'
       script: 'lint'
 
   format:
