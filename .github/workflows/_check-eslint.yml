@@ -14,12 +14,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    uses: ./.github/workflows/run-yarn.yml
-    with:
-      working-directory: 'env/eslint'
-      script: 'build'
-
   lint:
     uses: ./.github/workflows/run-yarn.yml
     with:
@@ -32,3 +26,4 @@ jobs:
     uses: ./.github/workflows/format-node.yml
     with:
       working-directory: 'env/eslint'
+      pre-script: 'build'
