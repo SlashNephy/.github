@@ -17,14 +17,14 @@ on:
 
 jobs:
   lint:
-    uses: ./.github/workflows/lint-node.yml
+    uses: ./.github/workflows/yarn-lint.yml
     with:
       working-directory: 'env/prettier'
       pre-script: 'build'
 
   format:
     if: github.event_name == 'push'
-    uses: ./.github/workflows/format-node.yml
+    uses: ./.github/workflows/yarn-format.yml
     with:
       working-directory: 'env/prettier'
       pre-script: 'build'

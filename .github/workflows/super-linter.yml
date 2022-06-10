@@ -1,4 +1,4 @@
-name: Lint with Super-Linter
+name: 'Super Linter'
 
 on:
   workflow_call:
@@ -17,5 +17,5 @@ jobs:
         uses: github/super-linter/slim@v4
         env:
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: master
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BRANCH: 'master'
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'

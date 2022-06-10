@@ -17,19 +17,19 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/run-yarn.yml
+    uses: ./.github/workflows/yarn-run.yml
     with:
       working-directory: 'env/stylelint'
       script: 'build'
 
   lint:
-    uses: ./.github/workflows/lint-node.yml
+    uses: ./.github/workflows/yarn-lint.yml
     with:
       working-directory: 'env/stylelint'
 
   format:
     if: github.event_name == 'push'
-    uses: ./.github/workflows/format-node.yml
+    uses: ./.github/workflows/yarn-format.yml
     with:
       working-directory: 'env/stylelint'
       pre-script: 'build'
