@@ -1,4 +1,4 @@
-name: Lint Node Project
+name: 'yarn lint'
 
 on:
   workflow_call:

@@ -1,4 +1,4 @@
-name: Run Yarn Script
+name: 'yarn run'
 
 on:
   workflow_call:

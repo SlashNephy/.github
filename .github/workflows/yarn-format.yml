@@ -1,4 +1,4 @@
-name: 'Format Node Project'
+name: 'yarn format'
 
 on:
   workflow_call:
