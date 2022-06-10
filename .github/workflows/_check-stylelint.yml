@@ -1,0 +1,34 @@
+name: 'Check env/stylelint'
+
+on:
+  push:
+    paths:
+      - 'env/stylelint/**'
+      - '.github/workflows/_check-stylelint.yml'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/run-yarn.yml
+    with:
+      working-directory: 'env/stylelint'
+      script: 'build'
+
+  lint:
+    uses: ./.github/workflows/run-yarn.yml
+    with:
+      working-directory: 'env/stylelint'
+      script: 'lint'
+
+  format:
+    if: github.event_name == 'push'
+    uses: ./.github/workflows/format-node.yml
+    with:
+      working-directory: 'env/stylelint'
+      pre-script: 'build'
