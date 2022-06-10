@@ -20,7 +20,7 @@
     "@slashnephy/prettier-config": "0.1.0",
     "concurrently": "7.2.1",
     "prettier": "2.6.2",
-    "renovate": "32.80.0"
+    "renovate": "32.82.2"
   },
   "packageManager": "yarn@3.2.1"
 }
