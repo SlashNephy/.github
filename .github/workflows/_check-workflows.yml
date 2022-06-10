@@ -1,0 +1,13 @@
+name: 'Check .github/workflows'
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  lint:
+    uses: ./.github/workflows/actionlint.yml
