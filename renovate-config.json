@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>SlashNephy/.github:env/renovate/src/index.json5"
+    "github>SlashNephy/.github//env/renovate/src/index.json5"
   ]
 }
