@@ -12,6 +12,6 @@
     'github>SlashNephy/.github//env/renovate/src/automerge.json5',
     'github>SlashNephy/.github//env/renovate/src/automerge-dev-dependencies.json5',
     'github>SlashNephy/.github//env/renovate/src/automerge-pin.json5',
-    'github>SlashNephy/.github//env/renovate/src/automerge-minor-@types.json5',
+    'github>SlashNephy/.github//env/renovate/src/automerge-minor-types.json5',
   ],
 }
