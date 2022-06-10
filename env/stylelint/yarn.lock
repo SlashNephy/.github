@@ -184,6 +184,7 @@ __metadata:
     prettier: 2.6.2
     stylelint: 14.9.0
     stylelint-config-property-sort-order-smacss: 9.0.0
+    stylelint-config-recommended: 8.0.0
     typescript: 4.7.3
   peerDependencies:
     stylelint: ^14
@@ -2958,6 +2959,15 @@ __metadata:
   peerDependencies:
     stylelint: ^14.0.0
   checksum: 31581e51351c51464849ca1597872028be3c9c98c7b3ebd027a83dd1a71e920602969e66c093da6d63a1e2645e647be310ce2c9497882121f039b5c6673a6379
+  languageName: node
+  linkType: hard
+
+"stylelint-config-recommended@npm:8.0.0":
+  version: 8.0.0
+  resolution: "stylelint-config-recommended@npm:8.0.0"
+  peerDependencies:
+    stylelint: ^14.8.0
+  checksum: 0c5ca94625e5308a7afb8315bb350a2b48f46fdd8d8922dd9a8c2e37b3407f2294794d930726ad6bf2007abcde1abd34084808cf83adf150efe3a643e0eb5ac4
   languageName: node
   linkType: hard
 

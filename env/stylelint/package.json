@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/stylelint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/stylelint"
@@ -26,7 +26,8 @@
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
   "dependencies": {
-    "stylelint-config-property-sort-order-smacss": "9.0.0"
+    "stylelint-config-property-sort-order-smacss": "9.0.0",
+    "stylelint-config-recommended": "8.0.0"
   },
   "peerDependencies": {
     "stylelint": "^14"
