@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'scripts/**/*.sh'
+      - '.github/workflows/_check-scripts.yml'
 
   workflow_dispatch:
 

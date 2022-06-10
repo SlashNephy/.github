@@ -6,6 +6,7 @@ on:
       - 'renovate.json'
       - 'renovate-config.json'
       - 'env/renovate/**'
+      - '.github/workflows/_check-renovate.yml'
 
   pull_request:
     types:
@@ -15,15 +16,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+  test:
     uses: ./.github/workflows/run-yarn.yml
     with:
       working-directory: 'env/renovate'
-      script: 'build'
+      script: 'test'
 
   lint:
-    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     uses: ./.github/workflows/run-yarn.yml
     with:
       working-directory: 'env/renovate'
