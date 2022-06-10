@@ -40,6 +40,7 @@ jobs:
           cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
 
       - name: Install
+        working-directory: '${{ inputs.working-directory }}'
         run: 'yarn install --immutable'
 
       - name: Pre-Format
