@@ -8,7 +8,7 @@
 			"GameActivityToggle": "1.1.3",
 			"HideMutedCategories": "1.0.6",
 			"OpenSteamLinksInApp": "1.1.4",
-			"ShowHiddenChannels": "3.0.6",
+			"ShowHiddenChannels": "3.1.3",
 			"SpotifyControls": "1.2.5"
 		},
 		"choices": {
@@ -21,7 +21,7 @@
 			"useChromium": false
 		},
 		"hashes": {
-			"0BDFDB.data.json": "930b55e34f0edf04c4eed26431597e92228fd91d",
+			"0BDFDB.data.json": "3a8cbb0b9a26e61d8cd3715040cd5651b14dc88a",
 			"0BDFDB.raw.css": "e8d30d44e567f6a77ef4e90734c27c2b47306d20"
 		}
 	}
