@@ -1,0 +1,42 @@
+---
+name: 'hadolint'
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_call:
+    inputs:
+      reporter:
+        required: false
+        type: string
+        default: 'github-pr-review'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lint-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: hadolint
+        uses: reviewdog/action-hadolint@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: '${{ inputs.reporter }}'
+
+  lint-non-pr:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: hadolint
+        uses: reviewdog/action-hadolint@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: 'github-check'
