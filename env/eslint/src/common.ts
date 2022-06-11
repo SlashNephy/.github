@@ -5,6 +5,7 @@ import type { Linter } from 'eslint'
  */
 const common: Linter.Config = {
   extends: ['eslint:recommended'],
+
   // 不要なルール無効化コメントを報告
   reportUnusedDisableDirectives: true,
 }
