@@ -1,4 +1,3 @@
-
 import type { Options } from 'prettier'
 
 const prettier: Options = {
