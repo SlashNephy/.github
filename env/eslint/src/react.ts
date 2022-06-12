@@ -39,7 +39,7 @@ const react: Linter.Config = {
   overrides: [
     {
       // Next.js に必要な default export を許可
-      files: ['pages/**/*.{ts,tsx}'],
+      files: ['**/pages/**/*.{ts,tsx}'],
       rules: {
         'import/no-default-export': 'off',
       },
