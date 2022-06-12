@@ -17,6 +17,18 @@ const typescript: Linter.Config = {
     project: './tsconfig.json',
   },
   rules: {
+    // 不要な変数を禁止
+    '@typescript-eslint/no-unused-vars': 'off',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      // '_' で始まる変数を許可
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],
     // import type を優先
     '@typescript-eslint/consistent-type-imports': [
       'error',
