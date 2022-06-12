@@ -8,9 +8,12 @@ import type { Linter } from 'eslint'
 const prettier: Linter.Config = {
   extends: ['prettier'],
   rules: {
-    // 基本インデントを 2 にする
-    // switch-case でインデントを許可
-    indent: ['error', 2, { SwitchCase: 1 }],
+    // インデント
+    // - 基本インデントを 2 にする
+    // - switch-case でインデントを許可
+    // indent: ['error', 2, { SwitchCase: 1 }],
+    // 詳細なインデントは競合するので無効にして prettier に任せる
+
     // 改行コードを LF に
     'linebreak-style': ['error', 'unix'],
     // ダブルクォーテーションを禁止
