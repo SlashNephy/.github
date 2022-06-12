@@ -60,18 +60,6 @@ const javascript: Linter.Config = {
     ],
     // 不要 import 文を禁止
     'unused-imports/no-unused-imports': 'error',
-    // 不要な変数を禁止
-    '@typescript-eslint/no-unused-vars': 'off',
-    'unused-imports/no-unused-vars': [
-      'warn',
-      // '_' で始まる変数を許可
-      {
-        vars: 'all',
-        varsIgnorePattern: '^_',
-        args: 'after-used',
-        argsIgnorePattern: '^_',
-      },
-    ],
   },
 }
 
