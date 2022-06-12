@@ -1706,19 +1706,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/pep440@npm:2.1.1":
-  version: 2.1.1
-  resolution: "@renovatebot/pep440@npm:2.1.1"
-  checksum: d478d296662977ea920b04ff74d43a31a07ffb3c8cde6bf6c2e58a302c51f8cc2269c9c076ffe5d6bf47a264c21ba6a310de9743f32c9dc6d083a7ccb673617d
+"@renovatebot/pep440@npm:2.1.2":
+  version: 2.1.2
+  resolution: "@renovatebot/pep440@npm:2.1.2"
+  checksum: 30679bd1276be28e44dd4b36aa761eded88171047a6b367e8205e643af28a9e289bd6ebe05a86fb517b7ee4e740a25ed533d4a927574c306434b1c3581d62687
   languageName: node
   linkType: hard
 
-"@renovatebot/ruby-semver@npm:1.1.3":
-  version: 1.1.3
-  resolution: "@renovatebot/ruby-semver@npm:1.1.3"
+"@renovatebot/ruby-semver@npm:1.1.4":
+  version: 1.1.4
+  resolution: "@renovatebot/ruby-semver@npm:1.1.4"
   dependencies:
     tslib: 2.4.0
-  checksum: 4e1a30bd9418b4a217fd90859b948feca8ce72bf54e5dc9cb813e9cc0a0117a992a62a7e768942daa0f7beb3c93763c42ecf9a161a9e988648fc6264ab5f8f34
+  checksum: 31d24cdefe797202282d94eb86727f49b74636d0b817eb47bfab065633a4f26702b5d6a70201d68d416e9a608c236e6783632e4e78817fc06b813c117596f88c
   languageName: node
   linkType: hard
 
@@ -1798,7 +1798,7 @@ __metadata:
     concurrently: 7.2.1
     eslint: 8.17.0
     prettier: 2.6.2
-    renovate: 32.83.0
+    renovate: 32.83.2
     ts-node: 10.8.1
     typescript: 4.7.3
   languageName: unknown
@@ -6711,9 +6711,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.83.0":
-  version: 32.83.0
-  resolution: "renovate@npm:32.83.0"
+"renovate@npm:32.83.2":
+  version: 32.83.2
+  resolution: "renovate@npm:32.83.2"
   dependencies:
     "@aws-sdk/client-ec2": 3.72.0
     "@aws-sdk/client-ecr": 3.72.0
@@ -6722,8 +6722,8 @@ __metadata:
     "@cheap-glitch/mi-cron": 1.0.1
     "@iarna/toml": 2.2.5
     "@jamiemagee/osv-offline": 1.2.7
-    "@renovatebot/pep440": 2.1.1
-    "@renovatebot/ruby-semver": 1.1.3
+    "@renovatebot/pep440": 2.1.2
+    "@renovatebot/ruby-semver": 1.1.4
     "@sindresorhus/is": 4.6.0
     "@yarnpkg/core": 3.1.0
     "@yarnpkg/parsers": 2.5.1
@@ -6800,7 +6800,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 65f034591b9c8b7e4a1186886c858214127bb7bad960d0327b2a9a84fc826e49db0bb1aba1f1053b1ca97c5e35b28eff9d82cacc45bf3fe53f9d6dec1d578245
+  checksum: 620103cd1ab7feccbe9fd900daad2e082b7865d35ea6cafd2e3dfe58904c51cf91436de4e47c8d7579a4dc69b5d5d97c3264db9ba8afd3bac226239bfc201a98
   languageName: node
   linkType: hard
 
