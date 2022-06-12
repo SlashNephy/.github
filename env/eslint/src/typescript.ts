@@ -56,6 +56,7 @@ const typescript: Linter.Config = {
     '@typescript-eslint/unbound-method': 'off',
     // 暗黙の any からのキャストを許可
     '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     // return の返り値チェック厳格化を解除
     '@typescript-eslint/no-unsafe-return': 'off',
     // Promise の返り値チェック厳格化を解除
