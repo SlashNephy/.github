@@ -60,6 +60,18 @@ const javascript: Linter.Config = {
     ],
     // 不要 import 文を禁止
     'unused-imports/no-unused-imports': 'error',
+    // 特定の構文を禁止
+    'no-restricted-syntax': [
+      'error',
+      // 数値リテラル以外での Array#at() の使用を禁止
+      // https://qiita.com/printf_moriken/items/da03f55cb626617c1958
+      {
+        selector:
+          // eslint-disable-next-line quotes
+          "CallExpression[callee.property.name='at']:not([arguments.0.type='Literal'],[arguments.0.type='UnaryExpression'][arguments.0.argument.type='Literal'])",
+        message: 'at method accepts only a literal argument',
+      },
+    ],
   },
 }
 
