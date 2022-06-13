@@ -1,0 +1,27 @@
+---
+name: 'Check env/gradle'
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'env/gradle/**'
+      - '.github/workflows/_check-gradle.yml'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/gradle-run.yml
+    with:
+      working-directory: 'env/gradle'
+      task: 'build'
+    permissions:
+      contents: 'read'
