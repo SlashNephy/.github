@@ -1,5 +1,7 @@
+---
 name: 'Build Image'
 
+# yamllint disable-line rule:truthy
 on:
   push:
     paths-ignore:
@@ -22,4 +24,5 @@ jobs:
     uses: SlashNephy/.github/.github/workflows/docker-build.yml@master
     with:
       image-name: ghcr.io/slashnephy/xxx
-      image-platforms: linux/amd64 # ,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
+      # linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
+      image-platforms: linux/amd64
