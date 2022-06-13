@@ -4,7 +4,7 @@ import type { Linter } from 'eslint'
  * JavaScript 関連の eslint プリセット
  */
 const javascript: Linter.Config = {
-  extends: ['plugin:import/recommended'],
+  extends: ['plugin:node/recommended', 'plugin:import/recommended'],
   plugins: ['promise', 'unused-imports'],
   env: {
     node: true,
@@ -72,6 +72,11 @@ const javascript: Linter.Config = {
         message: 'at method accepts only a literal argument',
       },
     ],
+    // 非同期メソッドを優先
+    'node/prefer-promises/dns': 'error',
+    'node/prefer-promises/fs': 'error',
+    // 構文のバージョンチェックを無効化
+    'node/no-unsupported-features/es-syntax': 'off',
   },
 }
 

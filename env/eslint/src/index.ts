@@ -23,6 +23,10 @@ const config: Linter.Config = {
       ],
     },
     {
+      files: ['**/*.test.ts', '**/test/**/*.ts'],
+      extends: [resolve(__dirname, 'jest.js')],
+    },
+    {
       files: ['**/*.tsx'],
       extends: [
         resolve(__dirname, 'common.js'),
