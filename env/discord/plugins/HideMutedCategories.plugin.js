@@ -2,14 +2,14 @@
  * @name HideMutedCategories
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.0.6
+ * @version 1.0.7
  * @description Hides muted Categories, if muted Channels are hidden
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
  * @patreon https://www.patreon.com/MircoWittrien
- * @website https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/HideMutedCategories
- * @source https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/master/Plugins/HideMutedCategories/HideMutedCategories.plugin.js
- * @updateUrl https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/master/Plugins/HideMutedCategories/HideMutedCategories.plugin.js
+ * @website https://mwittrien.github.io/
+ * @source https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/HideMutedCategories/
+ * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Plugins/HideMutedCategories/HideMutedCategories.plugin.js
  */
 
 module.exports = (_ => {
@@ -17,13 +17,8 @@ module.exports = (_ => {
 		"info": {
 			"name": "HideMutedCategories",
 			"author": "DevilBro",
-			"version": "1.0.6",
+			"version": "1.0.7",
 			"description": "Hides muted Categories, if muted Channels are hidden"
-		},
-		"changeLog": {
-			"fixed": {
-				"Unread Bar": "Unread Badge no longer shows in the channel list when an unmuted channel inside a hidden muted category has unread messages"
-			}
 		}
 	};
 
@@ -36,7 +31,7 @@ module.exports = (_ => {
 		downloadLibrary () {
 			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
 				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Finished downloading BDFDB Library", {type: "success"}));
-				else BdApi.alert("Error", "Could not download BDFDB Library Plugin, try again later or download it manually from GitHub: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Library/");
+				else BdApi.alert("Error", "Could not download BDFDB Library Plugin. Try again later or download it manually from GitHub: https://mwittrien.github.io/downloader/?library");
 			});
 		}
 		
@@ -65,6 +60,13 @@ module.exports = (_ => {
 			return template.content.firstElementChild;
 		}
 	} : (([Plugin, BDFDB]) => {
+		const renderLevels = {
+			CAN_NOT_SHOW: 1,
+			DO_NOT_SHOW: 2,
+			WOULD_SHOW_IF_UNCOLLAPSED: 3,
+			SHOW: 4
+		};
+		
 		return class HideMutedCategories extends Plugin {
 			onLoad () {
 				this.patchedModules = {
@@ -76,7 +78,7 @@ module.exports = (_ => {
 					}
 				};
 				
-				this.patchPriority = 10;
+				this.patchPriority = 9;
 			}
 			
 			onStart () {
@@ -88,12 +90,14 @@ module.exports = (_ => {
 			}
 
 			processChannels (e) {
-				if (!e.instance.props.guild || !e.instance.props.collapseMuted) return;
+				if (!e.instance.props.guild || !e.instance.props.guildChannels.hideMutedChannels) return;
 				
 				if (!e.returnvalue) {
-					e.instance.props.categories = Object.assign({}, e.instance.props.categories);
-					
-					for (let catId in e.instance.props.categories) if (BDFDB.LibraryModules.MutedUtils.isChannelMuted(e.instance.props.guild.id, catId)) e.instance.props.categories[catId] = [];
+					e.instance.props.guildChannels.categories = Object.assign({}, e.instance.props.guildChannels.categories);
+					for (let id in e.instance.props.guildChannels.categories) if (e.instance.props.guildChannels.categories[id].isMuted) {
+						let channelArray = BDFDB.ObjectUtils.toArray(e.instance.props.guildChannels.categories[id].channels);
+						for (let n of channelArray) if (n.renderLevel > renderLevels.DO_NOT_SHOW) n.renderLevel = renderLevels.DO_NOT_SHOW;
+					}
 				}
 				else {
 					let topBar = BDFDB.ReactUtils.findChild(e.returnvalue, {props: [["className", BDFDB.disCN.channelsunreadbartop]]});
@@ -115,11 +119,11 @@ module.exports = (_ => {
 					let tree = BDFDB.ReactUtils.findChild(e.returnvalue, {filter: n => n && n.props && typeof n.props.children == "function"});
 					if (tree) {
 						let childrenRender = tree.props.children;
-						tree.props.children = (...args) => {
+						tree.props.children = BDFDB.TimeUtils.suppress((...args) => {
 							let children = childrenRender(...args);
 							this.patchList(e.instance.props.guild.id, children);
 							return children;
-						};
+						}, "", this);
 					}
 					else this.patchList(e.instance.props.guild.id, e.returnvalue);
 				}
