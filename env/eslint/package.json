@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": {
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/eslint"
@@ -33,7 +33,11 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "2.7.1",
     "eslint-plugin-css-import-order": "1.1.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "26.5.3",
+    "eslint-plugin-jest-formatting": "3.1.0",
+    "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.5.0",
