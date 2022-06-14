@@ -54,10 +54,11 @@ const typescript: Linter.Config = {
     '@typescript-eslint/restrict-template-expressions': 'off',
     // スコープ厳格化を解除
     '@typescript-eslint/unbound-method': 'off',
-    // 暗黙の any からのキャストを許可
+    // unsafe 系を緩める
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-unsafe-argument': 'off',
-    // return の返り値チェック厳格化を解除
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     // Promise の返り値チェック厳格化を解除
     '@typescript-eslint/no-misused-promises': 'off',

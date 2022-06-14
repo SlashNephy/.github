@@ -1,11 +1,11 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "repository": {
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/eslint"
   },
-  "author": "SlashNephy <spica@starry.blue>",
+  "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
