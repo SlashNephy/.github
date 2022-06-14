@@ -77,6 +77,8 @@ const javascript: Linter.Config = {
     'node/prefer-promises/fs': 'error',
     // 構文のバージョンチェックを無効化
     'node/no-unsupported-features/es-syntax': 'off',
+    // 不正確な import チェックを無効化
+    'node/no-missing-import': 'off',
   },
 }
 
