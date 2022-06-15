@@ -64,7 +64,7 @@ const main = async () => {
           .trim()
         if (previousContentData === encodedContent) {
           console.info(
-            `[${owner}/${repo}] There is already the latest renovate.config. Skipping...`
+            `[${owner}/${repo}] There is already the latest renovate.json. Skipping...`
           )
           return
         }
