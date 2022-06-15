@@ -8,6 +8,6 @@ declare global {
   }
 }
 
-defineProperty(Array.prototype, 'lastIndex', function (array) {
+defineProperty(Array.prototype, 'lastIndex', (array) => {
   return array.length - 1
 })
