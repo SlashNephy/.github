@@ -5,6 +5,7 @@
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/prettier"
   },
+  "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
