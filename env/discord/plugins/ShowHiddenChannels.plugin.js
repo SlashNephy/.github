@@ -2,7 +2,7 @@
  * @name ShowHiddenChannels
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 3.1.5
+ * @version 3.1.8
  * @description Displays all hidden Channels, which can't be accessed due to Role Restrictions, this won't allow you to read them (impossible)
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -17,14 +17,16 @@ module.exports = (_ => {
 		"info": {
 			"name": "ShowHiddenChannels",
 			"author": "DevilBro",
-			"version": "3.1.5",
+			"version": "3.1.8",
 			"description": "Displays all hidden Channels, which can't be accessed due to Role Restrictions, this won't allow you to read them (impossible)"
 		},
 		"changeLog": {
 			"fixed": {
-				"Lags": "No longer lags Discord",
-				"Vanishing Categories": "Categories that only contain hidden channels no longer vanish if collapsed",
-				"Works again": "Plugin itself works again, had to remove the option for the separate category 'hidden', since Discord completely remodeled how they structure the channel list internally and i have yet to find an easy way to insert custom categories"
+				"Hides some visible Channels": "No longer hides some visible Channels in some weird cases for real now",
+				"Connected Voice Channel": "No longer marks a voice channel as hidden if someone dragged you into it"
+			},
+			"progress": {
+				"'Hidden' Category": "<strong style='color: var(--bdfdb-red);'>For the last time the 'hidden' category at the bottom of the list is dead for now, until I find a way to fix it, which can take weeks, stop asking me about it</strong>"
 			}
 		}
 	};
@@ -400,26 +402,38 @@ module.exports = (_ => {
 			}
 			
 			processChannels (e) {
-				if (!e.instance.props.guild || blackList.includes(e.instance.props.guild.id)) return;
+				if (!e.instance.props.guild) return;
+				let show = !blackList.includes(e.instance.props.guild.id), sortAtBottom = this.settings.sortOrder.hidden == sortOrders.BOTTOM.value;
+				e.instance.props.guildChannels = new e.instance.props.guildChannels.constructor(e.instance.props.guildChannels.id);
 				e.instance.props.guildChannels.categories = Object.assign({}, e.instance.props.guildChannels.categories);
-				let sortAtBottom = this.settings.sortOrder.hidden == sortOrders.BOTTOM.value;
 				hiddenChannelCache[e.instance.props.guild.id] = [];
-				for (let id in e.instance.props.guildChannels.categories) {
-					let channelArray = BDFDB.ObjectUtils.toArray(e.instance.props.guildChannels.categories[id].channels);
-					for (let n of channelArray) if (n.renderLevel == renderLevels.CAN_NOT_SHOW || n._hidden) {
-						n._hidden = true;
-						if (e.instance.props.guildChannels.hideMutedChannels && e.instance.props.guildChannels.mutedChannelIds.has(n.record.id)) n.renderLevel = renderLevels.DO_NOT_SHOW;
-						else if (e.instance.props.guildChannels.categories[id].isCollapsed) n.renderLevel = renderLevels.WOULD_SHOW_IF_UNCOLLAPSED;
-						else n.renderLevel = renderLevels.SHOW;
+				let processCategory = category => {
+					if (!category) return;
+					let channelArray = BDFDB.ObjectUtils.toArray(category.channels);
+					for (let n of channelArray) if ((n.renderLevel == renderLevels.CAN_NOT_SHOW || n._hidden) && e.instance.props.selectedVoiceChannelId != n.record.id) {
+						if (show && (this.settings.channels[BDFDB.DiscordConstants.ChannelTypes[n.record.type]] || this.settings.channels[BDFDB.DiscordConstants.ChannelTypes[n.record.type]] === undefined)) {
+							n._hidden = true;
+							if (e.instance.props.guildChannels.hideMutedChannels && e.instance.props.guildChannels.mutedChannelIds.has(n.record.id)) n.renderLevel = renderLevels.DO_NOT_SHOW;
+							else if (category.isCollapsed) n.renderLevel = renderLevels.WOULD_SHOW_IF_UNCOLLAPSED;
+							else n.renderLevel = renderLevels.SHOW;
+						}
+						else {
+							delete n._hidden;
+							n.renderLevel = renderLevels.CAN_NOT_SHOW;
+						}
 						
 						if (hiddenChannelCache[e.instance.props.guild.id].indexOf(n.record.id) == -1) hiddenChannelCache[e.instance.props.guild.id].push(n.record.id);
 					}
-					e.instance.props.guildChannels.categories[id].shownChannelIds = channelArray.filter(n => n.renderLevel == renderLevels.SHOW).sort((x, y) => {
+					category.shownChannelIds = channelArray.filter(n => n.renderLevel == renderLevels.SHOW).sort((x, y) => {
 						let xPos = x.record.position + (x.record.isVocal() ? 1e4 : 0) + (sortAtBottom && x._hidden ? 1e5 : 0);
 						let yPos = y.record.position + (y.record.isVocal() ? 1e4 : 0) + (sortAtBottom && y._hidden ? 1e5 : 0);
 						return xPos < yPos ? -1 : xPos > yPos ? 1 : 0;
 					}).map(n => n.id);
-				}
+				};
+				processCategory(e.instance.props.guildChannels.favoritesCategory);
+				processCategory(e.instance.props.guildChannels.noParentCategory);
+				processCategory(e.instance.props.guildChannels.recentsCategory);
+				for (let id in e.instance.props.guildChannels.categories) processCategory(e.instance.props.guildChannels.categories[id]);
 			}
 			
 			processChannelItem (e) {

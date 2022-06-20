@@ -2,7 +2,7 @@
  * @name Translator
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.3.8
+ * @version 2.3.9
  * @description Allows you to translate Messages and your outgoing Messages within Discord
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -17,8 +17,13 @@ module.exports = (_ => {
 		"info": {
 			"name": "Translator",
 			"author": "DevilBro",
-			"version": "2.3.8",
+			"version": "2.3.9",
 			"description": "Allows you to translate Messages and your outgoing Messages within Discord"
+		},
+		"changeLog": {
+			"fixed": {
+				"Replies": "Previews in Replies are now translated again"
+			}
 		}
 	};
 	
@@ -385,6 +390,7 @@ module.exports = (_ => {
 					after: {
 						ChannelTextAreaButtons: "type",
 						Messages: "type",
+						MessageReply: "default",
 						MessageContent: "type",
 						Embed: "render"
 					}
@@ -657,8 +663,6 @@ module.exports = (_ => {
 			}
 			
 			processChannelTextAreaButtons (e) {
-				console.log(e);
-				console.log(this.settings.general.addTranslateButton && (e.instance.props.type == BDFDB.LibraryComponents.ChannelTextAreaTypes.NORMAL || e.instance.props.type == BDFDB.LibraryComponents.ChannelTextAreaTypes.NORMAL_WITH_ACTIVITY || e.instance.props.type == BDFDB.LibraryComponents.ChannelTextAreaTypes.SIDEBAR) && !e.instance.props.disabled);
 				if (this.settings.general.addTranslateButton && (e.instance.props.type == BDFDB.LibraryComponents.ChannelTextAreaTypes.NORMAL || e.instance.props.type == BDFDB.LibraryComponents.ChannelTextAreaTypes.NORMAL_WITH_ACTIVITY || e.instance.props.type == BDFDB.LibraryComponents.ChannelTextAreaTypes.SIDEBAR) && !e.instance.props.disabled) {
 					e.returnvalue.props.children.unshift(BDFDB.ReactUtils.createElement(TranslateButtonComponent, {
 						channelId: e.instance.props.channel.id
@@ -686,6 +690,17 @@ module.exports = (_ => {
 				else if (oldMessages[message.id] && Object.keys(message).some(key => !BDFDB.equals(oldMessages[message.id][key], message[key]))) {
 					stream.content.content = oldMessages[message.id].content;
 					delete oldMessages[message.id];
+				}
+			}
+
+			processMessageReply (e) {
+				if (e.returnvalue && e.returnvalue.props && e.returnvalue.props.children) {
+					let referencedMessage = BDFDB.ObjectUtils.get(e, "returnvalue.props.children.props.referencedMessage.message");
+					if (referencedMessage && translatedMessages[referencedMessage.id]) {
+						e.returnvalue.props.children.props.referencedMessage = Object.assign({}, e.returnvalue.props.children.props.referencedMessage);
+						e.returnvalue.props.children.props.referencedMessage.message = new BDFDB.DiscordObjects.Message(e.returnvalue.props.children.props.referencedMessage.message);
+						e.returnvalue.props.children.props.referencedMessage.message.content = translatedMessages[referencedMessage.id].content;
+					}
 				}
 			}
 
@@ -929,7 +944,7 @@ module.exports = (_ => {
 						catch (err) {callback("");}
 					}
 					else {
-						if (response.statusCode == 429) BDFDB.NotificationUtils.toast(`${this.labels.toast_translating_failed}. ${this.labels.toast_translating_tryanother}. Request Limit per Hour reached.`, {
+						if (response.statusCode == 429) BDFDB.NotificationUtils.toast(`${this.labels.toast_translating_failed}. ${this.labels.toast_translating_tryanother}. Hourly Request Limit reached.`, {
 							type: "danger",
 							position: "center"
 						});
@@ -956,7 +971,7 @@ module.exports = (_ => {
 						catch (err) {callback("");}
 					}
 					else {
-						if (response.statusCode == 429 || response.statusCode == 456) BDFDB.NotificationUtils.toast(`${this.labels.toast_translating_failed}. ${this.labels.toast_translating_tryanother}. Request Limit reached.`, {
+						if (response.statusCode == 429 || response.statusCode == 456) BDFDB.NotificationUtils.toast(`${this.labels.toast_translating_failed}. ${this.labels.toast_translating_tryanother}. Daily Request Limit reached.`, {
 							type: "danger",
 							position: "center"
 						});
@@ -1002,7 +1017,7 @@ module.exports = (_ => {
 							catch (err) {callback("");}
 						}
 						else {
-							if (response.statusCode == 429) BDFDB.NotificationUtils.toast(`${this.labels.toast_translating_failed}. ${this.labels.toast_translating_tryanother}. Request Limit reached.`, {
+							if (response.statusCode == 429) BDFDB.NotificationUtils.toast(`${this.labels.toast_translating_failed}. ${this.labels.toast_translating_tryanother}. Daily Request Limit reached.`, {
 								type: "danger",
 								position: "center"
 							});
@@ -1092,7 +1107,7 @@ module.exports = (_ => {
 						catch (err) {callback("");}
 					}
 					else {
-						if (response.statusCode == 429) BDFDB.NotificationUtils.toast(`${this.labels.toast_translating_failed}. ${this.labels.toast_translating_tryanother}. Request Limit per Hour is reached.`, {
+						if (response.statusCode == 429) BDFDB.NotificationUtils.toast(`${this.labels.toast_translating_failed}. ${this.labels.toast_translating_tryanother}. Hourly Request Limit reached.`, {
 							type: "danger",
 							position: "center"
 						});
