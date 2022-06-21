@@ -1,3 +1,3 @@
 if prompt "Install .gitconfig?"; then
-  ln -sf "$ENV_ARCH_DIR/.gitconfig" ~/.gitconfig
+  ln -sf "$ENV_DIR/git/arch.gitconfig" ~/.gitconfig
 fi

@@ -1,11 +1,11 @@
 [include]
-  path = ~/.github/env/common/.gitconfig
+  path = ~/.github/env/git/.gitconfig
 
 [user]
   signingkey = 5786E1A202608DD4
 
 [includeIf "gitdir:~/ghq/github.com/hatena/"]
-  path = ~/.github/env/macos/user.gitconfig
+  path = ~/.github/env/git/user/hatena.gitconfig
 
 [gpg]
   program = /usr/local/MacGPG2/bin/gpg2

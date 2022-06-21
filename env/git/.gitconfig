@@ -12,4 +12,4 @@
   gpgsign = true
 
 [include]
-  path = ~/.github/env/common/user.gitconfig
+  path = ~/.github/env/git/user/default.gitconfig
