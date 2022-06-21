@@ -1,3 +1,3 @@
 if prompt "Install .nanorc?"; then
-  ln -sf "$ENV_UBUNTU_DIR/.nanorc" ~/.nanorc
+  ln -sf "$ENV_DIR/nano/ubuntu.nanorc" ~/.nanorc
 fi
