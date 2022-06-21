@@ -1,3 +1,3 @@
 if prompt "Install .gitignore?"; then
-  ln -sf "$ENV_COMMON_DIR/.gitignore" ~/.gitignore
+  ln -sf "$ENV_DIR/git/.gitignore" ~/.gitignore
 fi

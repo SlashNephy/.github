@@ -1,5 +1,5 @@
 [include]
-  path = ~/.github/env/common/.gitconfig
+  path = ~/.github/env/git/.gitconfig
 
 [user]
   signingkey = BCA28552511519D3
