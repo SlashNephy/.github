@@ -1,1 +1,1 @@
-pacman -Qqe > "$ENV_ARCH_DIR/pacman.txt"
+pacman -Qqe > "$ENV_DIR/pacman/pacman.txt"
