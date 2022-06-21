@@ -1,3 +1,3 @@
 if prompt "Install .zshrc?"; then
-  ln -sf "$ENV_MACOS_DIR/rc.zsh" ~/.zshrc
+  ln -sf "$ENV_DIR/zsh/macos.zsh" ~/.zshrc
 fi

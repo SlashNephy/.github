@@ -1,3 +1,3 @@
 if prompt "Install .zshrc?"; then
-  ln -sf "$ENV_UBUNTU_DIR/rc.zsh" ~/.zshrc
+  ln -sf "$ENV_DIR/zsh/ubuntu.zsh" ~/.zshrc
 fi
