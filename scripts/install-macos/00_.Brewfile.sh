@@ -1,3 +1,3 @@
 if prompt "Install .Brewfile?"; then
-  ln -sf "$ENV_MACOS_DIR/.Brewfile" ~/.Brewfile
+  ln -sf "$ENV_DIR/homebrew/.Brewfile" ~/.Brewfile
 fi
