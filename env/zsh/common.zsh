@@ -8,7 +8,7 @@ fi
 
 source "$HOME/.github/scripts/paths.sh"
 
-for script in "$ENV_DIR"/common/*.zsh; do
+for script in "$ENV_DIR"/zsh/common/*.zsh; do
   # shellcheck disable=SC1090
   source "$script"
 done
