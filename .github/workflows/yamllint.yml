@@ -22,7 +22,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: actionlint
+      - name: yamllint
         uses: reviewdog/action-yamllint@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
@@ -35,7 +35,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: actionlint
+      - name: yamllint
         uses: reviewdog/action-yamllint@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
