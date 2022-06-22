@@ -20,10 +20,24 @@ on:
         required: false
         type: string
         default: 'linux/amd64'
+      cache-from:
+        required: false
+        type: string
+        default: 'type=gha'
+      cache-to:
+        required: false
+        type: string
+        default: 'type=gha,mode=max'
+      scan-image:
+        required: false
+        type: boolean
+        default: true
 
 permissions:
   contents: read
   packages: write
+  actions: read
+  security-events: write
 
 jobs:
   build:
@@ -56,7 +70,7 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=sha
 
-      - name: Build & Push
+      - name: Build Image & Push
         uses: docker/build-push-action@v3
         with:
           push: true
@@ -65,12 +79,19 @@ jobs:
           tags: '${{ steps.metadata.outputs.tags }}'
           labels: '${{ steps.metadata.outputs.labels }}'
           platforms: '${{ inputs.image-platforms }}'
-          cache-from: 'type=gha'
-          cache-to: 'type=gha,mode=max'
+          cache-from: '${{ inputs.cache-from }}'
+          cache-to: '${{ inputs.cache-to }}'
 
-      - name: Scan for vulnerabilities
+      - name: Scan Image
+        if: inputs.scan-image
         uses: crazy-max/ghaction-container-scan@v1
         with:
-          image: '${{ steps.metadata.outputs.tags }}'
+          image: '${{ fromJSON(steps.meta.outputs.json).tags[0] }}'
           dockerfile: '${{ inputs.context }}/${{ inputs.dockerfile }}'
           annotations: true
+
+      - name: Upload SARIF file
+        if: inputs.scan-image && steps.scan.outputs.sarif != '' && github.event.repository.private == false
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: '${{ steps.scan.outputs.sarif }}'
