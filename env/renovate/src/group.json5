@@ -1,0 +1,14 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+    description: '特定パッケージをグループ化する',
+  packageRules: [
+    {
+      groupName: 'Mantine',
+      matchPackagePrefixes: ['@mantine/'],
+    },
+    {
+      groupName: 'Ktor',
+      matchPackagePrefixes: ['io.ktor:'],
+    }
+  ],
+}
