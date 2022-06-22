@@ -704,6 +704,17 @@ module.exports = (_ => {
 				}
 			}
 
+			processMessageReply (e) {
+				if (e.returnvalue && e.returnvalue.props && e.returnvalue.props.children) {
+					let referencedMessage = BDFDB.ObjectUtils.get(e, "returnvalue.props.children.props.referencedMessage.message");
+					if (referencedMessage && translatedMessages[referencedMessage.id]) {
+						e.returnvalue.props.children.props.referencedMessage = Object.assign({}, e.returnvalue.props.children.props.referencedMessage);
+						e.returnvalue.props.children.props.referencedMessage.message = new BDFDB.DiscordObjects.Message(e.returnvalue.props.children.props.referencedMessage.message);
+						e.returnvalue.props.children.props.referencedMessage.message.content = translatedMessages[referencedMessage.id].content;
+					}
+				}
+			}
+
 			processMessageContent (e) {
 				if (e.instance.props.message) {
 					let translation = translatedMessages[e.instance.props.message.id];
