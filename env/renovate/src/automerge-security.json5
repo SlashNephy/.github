@@ -1,0 +1,10 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  description: 'セキュリティー関連の PR を Automerge する',
+  vulnerabilityAlerts: {
+    labels: ['renovate', 'security'],
+    automerge: true,
+    stabilityDays: 0,
+    ignoreTests: true,
+  },
+}
