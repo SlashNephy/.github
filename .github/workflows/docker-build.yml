@@ -86,7 +86,7 @@ jobs:
         if: inputs.scan-image
         uses: crazy-max/ghaction-container-scan@v1
         with:
-          image: '${{ fromJSON(steps.meta.outputs.json).tags[0] }}'
+          image: '${{ fromJSON(steps.metadata.outputs.json).tags[0] }}'
           dockerfile: '${{ inputs.context }}/${{ inputs.dockerfile }}'
           annotations: true
 
