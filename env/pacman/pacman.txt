@@ -2,7 +2,7 @@
 base
 clamav
 clamav-unofficial-sigs
-cloudflared
+cloudflared-bin
 dkms
 docker
 docker-compose
@@ -45,7 +45,7 @@ ufw
 ufw-docker
 unhide
 which
-yay
+yay-bin
 zplug
 zram-generator
 zsh
