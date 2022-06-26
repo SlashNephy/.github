@@ -1,7 +1,5 @@
----
 name: 'Lint Dockerfile'
 
-# yamllint disable-line rule:truthy
 on:
   push:
     branches:

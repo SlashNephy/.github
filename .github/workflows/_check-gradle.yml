@@ -1,7 +1,5 @@
----
 name: 'Check env/gradle'
 
-# yamllint disable-line rule:truthy
 on:
   push:
     branches:

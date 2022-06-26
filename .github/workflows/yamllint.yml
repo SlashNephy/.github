@@ -1,7 +1,5 @@
----
 name: 'yamllint'
 
-# yamllint disable-line rule:truthy
 on:
   workflow_call:
     inputs:
@@ -47,10 +45,10 @@ jobs:
         with:
           repository: 'SlashNephy/.github'
           path: '_github'
-          yamllint_flags: '-c _github/env/yamllint/.yamllint.yml .'
 
       - name: yamllint
         uses: reviewdog/action-yamllint@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
+          yamllint_flags: '-c _github/env/yamllint/.yamllint.yml .'

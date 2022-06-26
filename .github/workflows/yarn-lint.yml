@@ -1,7 +1,5 @@
----
 name: 'yarn lint'
 
-# yamllint disable-line rule:truthy
 on:
   workflow_call:
     inputs:
