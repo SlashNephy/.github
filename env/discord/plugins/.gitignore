@@ -1,2 +1,4 @@
 FriendNotifications.config.json
 GuildAndFriendRemovalAlerts.config.json
+GameActivityToggle.config.json
+AutoIdleOnAFK.config.json
