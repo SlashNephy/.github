@@ -47,8 +47,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  lint-pr:
-    if: github.event_name == 'pull_request'
+  lint-on-pull-request:
+    if: github.event_name == 'pull_request' && !contains(github.ref, 'renovate')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -113,8 +113,8 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.post-script }}'
 
-  lint-non-pr:
-    if: github.event_name != 'pull_request'
+  lint-on-push:
+    if: github.event_name != 'pull_request' && !contains(github.ref, 'renovate')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository

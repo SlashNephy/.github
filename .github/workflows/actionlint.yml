@@ -15,8 +15,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  lint-pr:
-    if: github.event_name == 'pull_request'
+  lint-on-pull-request:
+    if: github.event_name == 'pull_request' && !contains(github.ref, 'renovate')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -29,8 +29,8 @@ jobs:
           reporter: '${{ inputs.reporter }}'
           actionlint_flags: -ignore '"description" is missing'
 
-  lint-non-pr:
-    if: github.event_name != 'pull_request'
+  lint-on-push:
+    if: github.event_name != 'pull_request' && !contains(github.ref, 'renovate')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository

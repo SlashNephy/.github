@@ -1,0 +1,28 @@
+---
+name: 'Lint Dockerfile'
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - '**/Dockerfile'
+      - '**/*.Dockerfile'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    paths:
+      - '**/Dockerfile'
+      - '**/*.Dockerfile'
+
+  workflow_dispatch:
+
+jobs:
+  lint:
+    uses: SlashNephy/.github/.github/workflows/hadolint.yml@master
+    permissions:
+      contents: 'read'
+      pull-requests: 'write'
