@@ -1,16 +1,22 @@
 ---
-name: 'Check'
+name: 'Lint *.yml'
 
 # yamllint disable-line rule:truthy
 on:
   push:
     branches:
       - 'master'
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
 
   pull_request:
     types:
       - opened
       - synchronize
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
 
   workflow_dispatch:
 

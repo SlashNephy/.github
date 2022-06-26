@@ -27,6 +27,7 @@ permissions:
 
 jobs:
   format:
+    if:  !contains(github.ref, 'renovate')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository

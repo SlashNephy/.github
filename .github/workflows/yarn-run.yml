@@ -8,11 +8,11 @@ on:
       node-version:
         required: false
         type: string
-        default: 18
+        default: '18'
       working-directory:
         required: false
         type: string
-        default: .
+        default: '.'
       pre-script:
         required: false
         type: string
