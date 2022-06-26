@@ -22,11 +22,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Checkout .github
+        uses: actions/checkout@v3
+        with:
+          repository: 'SlashNephy/.github'
+          path: '_github'
+
       - name: yamllint
         uses: reviewdog/action-yamllint@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
+          yamllint_flags: '-c _github/env/yamllint/.yamllint.yml .'
 
   lint-on-push:
     if: github.event_name != 'pull_request' && !contains(github.ref, 'renovate')
@@ -34,6 +41,13 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
+      - name: Checkout .github
+        uses: actions/checkout@v3
+        with:
+          repository: 'SlashNephy/.github'
+          path: '_github'
+          yamllint_flags: '-c _github/env/yamllint/.yamllint.yml .'
 
       - name: yamllint
         uses: reviewdog/action-yamllint@v1
