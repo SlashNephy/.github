@@ -1,7 +1,5 @@
----
 name: 'Check env/typescript'
 
-# yamllint disable-line rule:truthy
 on:
   push:
     branches:

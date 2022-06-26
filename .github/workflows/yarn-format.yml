@@ -1,7 +1,5 @@
----
 name: 'yarn format'
 
-# yamllint disable-line rule:truthy
 on:
   workflow_call:
     inputs:

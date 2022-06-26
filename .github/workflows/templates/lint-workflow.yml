@@ -1,7 +1,5 @@
----
 name: 'Lint .github/workflows/*.yml'
 
-# yamllint disable-line rule:truthy
 on:
   push:
     branches:

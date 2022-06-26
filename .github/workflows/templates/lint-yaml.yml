@@ -1,7 +1,5 @@
----
 name: 'Lint *.yml'
 
-# yamllint disable-line rule:truthy
 on:
   push:
     branches:
