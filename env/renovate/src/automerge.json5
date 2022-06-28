@@ -3,9 +3,9 @@
   description: '特定のパッケージを Automerge する',
   packageRules: [
     {
-      matchPackagePatterns: ['@kawaiioverflow/arm'],
+      matchPackageNames: ['@kawaiioverflow/arm', 'renovate', '@slashnephy/eslint-config', '@slashnephy/prettier-config'],
       automerge: true,
       ignoreTests: true,
-    },
+    }
   ],
 }
