@@ -79,6 +79,8 @@ const javascript: Linter.Config = {
     'node/no-unsupported-features/es-syntax': 'off',
     // 不正確な import チェックを無効化
     'node/no-missing-import': 'off',
+    'node/no-extraneous-import': 'off',
+    'node/no-unpublished-import': 'off',
   },
 }
 
