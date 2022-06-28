@@ -1,0 +1,22 @@
+name: 'Check'
+
+on:
+  push:
+    branches:
+      - 'master'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.event_name != 'push'
+    uses: SlashNephy/.github/.github/workflows/gradle-run.yml@master
+    permissions:
+      contents: 'read'
+    with:
+      task: 'build'
