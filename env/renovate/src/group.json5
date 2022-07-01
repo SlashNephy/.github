@@ -10,5 +10,9 @@
       groupName: 'Ktor',
       matchPackagePrefixes: ['io.ktor:'],
     },
+    {
+      groupName: 'Kotlin',
+      matchPackagePrefixes: ['org.jetbrains.kotlin.'],
+    }
   ],
 }
