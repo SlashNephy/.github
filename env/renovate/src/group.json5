@@ -13,6 +13,6 @@
     {
       groupName: 'Kotlin',
       matchPackagePrefixes: ['org.jetbrains.kotlin.'],
-    }
+    },
   ],
 }
