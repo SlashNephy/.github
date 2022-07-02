@@ -9,6 +9,7 @@
         '@slashnephy/eslint-config',
         '@slashnephy/prettier-config',
         '@slashnephy/typescript-extension',
+        'discord-api-types',
       ],
       automerge: true,
       ignoreTests: true,
