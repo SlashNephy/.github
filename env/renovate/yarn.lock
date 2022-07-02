@@ -1619,14 +1619,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnpm/read-project-manifest@npm:3.0.5":
-  version: 3.0.5
-  resolution: "@pnpm/read-project-manifest@npm:3.0.5"
+"@pnpm/read-project-manifest@npm:3.0.6":
+  version: 3.0.6
+  resolution: "@pnpm/read-project-manifest@npm:3.0.6"
   dependencies:
     "@pnpm/error": 3.0.1
     "@pnpm/graceful-fs": 2.0.0
-    "@pnpm/types": 8.3.0
-    "@pnpm/write-project-manifest": 3.0.4
+    "@pnpm/types": 8.4.0
+    "@pnpm/write-project-manifest": 3.0.5
     detect-indent: ^6.0.0
     fast-deep-equal: ^3.1.3
     is-windows: ^1.0.2
@@ -1635,26 +1635,26 @@ __metadata:
     read-yaml-file: ^2.1.0
     sort-keys: ^4.2.0
     strip-bom: ^4.0.0
-  checksum: ff4f921cae18a4b3d1ba1f23510cab41e340f0300a425f84d80db3076d275ed7187f8955ebc2bdcd83881992d98afefafaa30c53ccb38cb8f8c72e842b054ddf
+  checksum: 56d2f7c1bba0a23e4c745f99f7be368db4bce5bade6b0650cd1ba34429455537d17491950e07ff82150f6487c5d77e4dd744fdb4071e3aafe06106bce2d1d723
   languageName: node
   linkType: hard
 
-"@pnpm/types@npm:8.3.0":
-  version: 8.3.0
-  resolution: "@pnpm/types@npm:8.3.0"
-  checksum: ebd4ad243e593abd9223581564716aa9364748552807959adba2c23b28cdfbc0ccad8ecd2a93ffaf557680be406f50a2b23c4f083690570f131505f0395f86b9
+"@pnpm/types@npm:8.4.0":
+  version: 8.4.0
+  resolution: "@pnpm/types@npm:8.4.0"
+  checksum: f25663279299fef2718e73f2c859488c0e310d67aeebe925edb65642ba53e64d9a65c7980e60b7445e409928bf0544aa3bdcb6540b25f1d045ae11f969fe3977
   languageName: node
   linkType: hard
 
-"@pnpm/write-project-manifest@npm:3.0.4":
-  version: 3.0.4
-  resolution: "@pnpm/write-project-manifest@npm:3.0.4"
+"@pnpm/write-project-manifest@npm:3.0.5":
+  version: 3.0.5
+  resolution: "@pnpm/write-project-manifest@npm:3.0.5"
   dependencies:
-    "@pnpm/types": 8.3.0
+    "@pnpm/types": 8.4.0
     json5: ^2.1.3
     write-file-atomic: ^3.0.3
     write-yaml-file: ^4.2.0
-  checksum: 4963db88548c4e4a0ce3933babada51d8c72274032588583b256d8dc84a015ff7118a7e306853b7c48f81fde6938592454f0fe01c4e97d30be1649b4552c8a23
+  checksum: 74f83b6229567ad3121e75769eaa041ec17eb4eeb8e148c559c1914b619a9b4a1543a7a00358206ddb92996903ac33bb86b16898d1739adef05f162685e5dc37
   languageName: node
   linkType: hard
 
@@ -1809,7 +1809,7 @@ __metadata:
     concurrently: 7.2.2
     eslint: 8.19.0
     prettier: 2.7.1
-    renovate: 32.102.2
+    renovate: 32.103.0
     ts-node: 10.8.1
     typescript: 4.7.4
   languageName: unknown
@@ -4311,15 +4311,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-packages@npm:9.0.5":
-  version: 9.0.5
-  resolution: "find-packages@npm:9.0.5"
+"find-packages@npm:9.0.6":
+  version: 9.0.6
+  resolution: "find-packages@npm:9.0.6"
   dependencies:
-    "@pnpm/read-project-manifest": 3.0.5
-    "@pnpm/types": 8.3.0
+    "@pnpm/read-project-manifest": 3.0.6
+    "@pnpm/types": 8.4.0
     fast-glob: ^3.2.4
     p-filter: ^2.1.0
-  checksum: 74c0b22bde3a56456658af35239ec6189d3b9eef8911207ff05d674b473ece22f0b75c2a8d15b7b9e8ae8774bb2544e1b99569c7bbf84ae93c462db5610f8b18
+  checksum: 242396708da938cd1ff773d562c74584855ac1a69c6e513e5293bf41b563cc11d56ef749977a62fc7343c0f92f30f4b223920e8868cec8fe3fd582a980910983
   languageName: node
   linkType: hard
 
@@ -6969,9 +6969,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.102.2":
-  version: 32.102.2
-  resolution: "renovate@npm:32.102.2"
+"renovate@npm:32.103.0":
+  version: 32.103.0
+  resolution: "renovate@npm:32.103.0"
   dependencies:
     "@aws-sdk/client-ec2": 3.112.0
     "@aws-sdk/client-ecr": 3.112.0
@@ -7007,7 +7007,7 @@ __metadata:
     emojibase-regex: 6.0.1
     extract-zip: 2.0.1
     fast-safe-stringify: 2.1.1
-    find-packages: 9.0.5
+    find-packages: 9.0.6
     find-up: 5.0.0
     fs-extra: 10.1.0
     git-url-parse: 11.6.0
@@ -7044,7 +7044,7 @@ __metadata:
     semver: 7.3.7
     semver-stable: 3.0.0
     semver-utils: 1.1.4
-    shlex: 2.1.0
+    shlex: 2.1.2
     simple-git: 3.9.0
     slugify: 1.6.5
     traverse: 0.6.6
@@ -7059,7 +7059,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 46b9e9262287dedb5bf69d3f5155febb1078e0f7eb6b3195c6a635472fe2b33e1d965aead6a758fd6c0e13fbdc4a0246c021487ccfa0269c1d721dd6d751a5fb
+  checksum: 9c431e7acbcdc289850765a1197ff50976913b153cc3c8f781835a5e92c3133cae6f9ff254e554808e255eebf2613bd3d254b22416019a8cdd36f4a6f2a17149
   languageName: node
   linkType: hard
 
@@ -7340,10 +7340,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shlex@npm:2.1.0":
-  version: 2.1.0
-  resolution: "shlex@npm:2.1.0"
-  checksum: 9fc018f86d650e386e94d855ac039a9c8eac19403045d300d8298b16e26b5cb2e8bb8755873019cedf1427f76fa04be3ec04e891113f5fcf543d88f8339943ae
+"shlex@npm:2.1.2":
+  version: 2.1.2
+  resolution: "shlex@npm:2.1.2"
+  checksum: a8f228409d78e2811103ba8cf5de43f9b4b5f20f620af04aba1d934a32b8ebd975c334a4ead37d1533dae7d058dfdb352bb494f8e1b8d6ed10ecd9d8f8799bde
   languageName: node
   linkType: hard
 
