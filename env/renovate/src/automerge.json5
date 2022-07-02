@@ -8,6 +8,7 @@
         'renovate',
         '@slashnephy/eslint-config',
         '@slashnephy/prettier-config',
+        '@slashnephy/typescript-extension',
       ],
       automerge: true,
       ignoreTests: true,
