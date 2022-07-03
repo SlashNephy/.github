@@ -3,7 +3,7 @@
  * @description Simple library to complement plugins with shared code without lowering performance. Also adds needed buttons to some plugins.
  * @author 1Lighty
  * @authorId 239513071272329217
- * @version 1.4.7
+ * @version 1.4.9
  * @invite NYvWdN5
  * @donate https://paypal.me/lighty13
  * @source https://github.com/1Lighty/BetterDiscordPlugins/blob/master/Plugins/1XenoLib.plugin.js
@@ -91,8 +91,8 @@ function _parseNewMeta(code/* : string */)/* : BDPluginManifest */ {
 
 module.exports = (() => {
   const canUseAstraNotifAPI = !!(global.Astra && Astra.n11s && Astra.n11s.n11sApi);
-  // 3 day interval in milliseconds
-  const USER_COUNTER_INTERVAL = 1000 * 60 * 60 * 24 * 3;
+  // 1 day interval in milliseconds
+  const USER_COUNTER_INTERVAL = 1000 * 60 * 60 * 24 * 1;
   /* Setup */
   const config = {
     main: 'index.js',
@@ -106,7 +106,7 @@ module.exports = (() => {
           twitter_username: ''
         }
       ],
-      version: '1.4.7',
+      version: '1.4.9',
       description: 'Simple library to complement plugins with shared code without lowering performance. Also adds needed buttons to some plugins.',
       github: 'https://github.com/1Lighty',
       github_raw: 'https://raw.githubusercontent.com/1Lighty/BetterDiscordPlugins/master/Plugins/1XenoLib.plugin.js'
@@ -366,7 +366,7 @@ module.exports = (() => {
 
     try {
       // 1 week before the API will be enabled.
-      if (LibrarySettings.userCounter.enabled && Date.now() - 1644577200000 > 0) {
+      if (LibrarySettings.userCounter.enabled) {
         const { enableTime } = LibrarySettings.userCounter;
         let changed = false;
         if (enableTime) {
@@ -837,16 +837,21 @@ module.exports = (() => {
             if (typeof ret === 'function') try {
               const ctxEl = ret();
               let { type } = ctxEl;
-              if (type.toString().includes('objectType')) fakeRenderHook(() => {
+              let typeOverriden = false;
+              const analyticsWrapper = type.toString().includes('.CONTEXT_MENU).AnalyticsLocationProvider');
+              if (type.toString().includes('objectType') || analyticsWrapper) fakeRenderHook(() => {
                 const ret = type();
-                if (ret.type.displayName !== 'AnalyticsContext') return;
+                if (ret.type.displayName !== 'AnalyticsContext' && !analyticsWrapper) return;
                 ({ type } = ret.props.children);
+                typeOverriden = true;
+              }, {
+                useState: () => [[], () => {}]
               });
 
               let changed = false;
               for (const { menuNameOrFilter, callback, multi, patchedModules } of [...XenoLib._lazyContextMenuListeners]) {
-                if (typeof menuNameOrFilter === 'string' && menuNameOrFilter !== type.displayName) continue;
-                if (typeof menuNameOrFilter === 'function' && !menuNameOrFilter(type)) continue;
+                if (typeof menuNameOrFilter === 'string' && menuNameOrFilter !== type.displayName && (!typeOverriden || menuNameOrFilter !== ctxEl.type.displayName)) continue;
+                if (typeof menuNameOrFilter === 'function' && !menuNameOrFilter(type) && (!typeOverriden || !menuNameOrFilter(ctxEl.type))) continue;
                 if (multi && patchedModules.indexOf(type) !== -1) continue;
                 changed = callback(ctxEl.type) || changed;
                 if (multi) {
@@ -2471,7 +2476,7 @@ module.exports = (() => {
     const a = (c, a) => ((c = c.split('.').map(b => parseInt(b))), (a = a.split('.').map(b => parseInt(b))), !!(a[0] > c[0])) || !!(a[0] == c[0] && a[1] > c[1]) || !!(a[0] == c[0] && a[1] == c[1] && a[2] > c[2]);
     let b = BdApi.Plugins.get('ZeresPluginLibrary');
     if (b && b.instance) b = b.instance;
-    ((b, c) => b && b._config && b._config.info && b._config.info.version && a(b._config.info.version, c))(b, '2.0.2') && (ZeresPluginLibraryOutdated = !0);
+    ((b, c) => b && b._config && b._config.info && b._config.info.version && a(b._config.info.version, c))(b, '2.0.3') && (ZeresPluginLibraryOutdated = !0);
   } catch (e) {
     console.error('Error checking if ZeresPluginLibrary is out of date', e);
   }
