@@ -14,14 +14,3 @@ export const defineProperty = <T, R>(
     },
   })
 }
-
-export const defineConstant = <T, R>(object: T, name: string, value: R) => {
-  if (name in object) {
-    return
-  }
-
-  Object.defineProperty(object, name, {
-    writable: false,
-    value,
-  })
-}
