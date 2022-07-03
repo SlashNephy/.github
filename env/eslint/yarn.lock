@@ -130,7 +130,7 @@ __metadata:
     eslint: 8.19.0
     eslint-config-next: 12.1.6
     eslint-config-prettier: 8.5.0
-    eslint-import-resolver-typescript: 3.1.0
+    eslint-import-resolver-typescript: 3.1.5
     eslint-plugin-css-import-order: 1.1.0
     eslint-plugin-eslint-comments: 3.2.0
     eslint-plugin-import: 2.26.0
@@ -760,13 +760,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.9.3":
-  version: 5.9.3
-  resolution: "enhanced-resolve@npm:5.9.3"
+"enhanced-resolve@npm:^5.10.0":
+  version: 5.10.0
+  resolution: "enhanced-resolve@npm:5.10.0"
   dependencies:
     graceful-fs: ^4.2.4
     tapable: ^2.2.0
-  checksum: 64c2dbbdd608d1a4df93b6e60786c603a1faf3b2e66dfd051d62cf4cfaeeb5e800166183685587208d62e9f7afff3f78f3d5978e32cd80125ba0c83b59a79d78
+  checksum: 0bb9830704db271610f900e8d79d70a740ea16f251263362b0c91af545576d09fe50103496606c1300a05e588372d6f9780a9bc2e30ce8ef9b827ec8f44687ff
   languageName: node
   linkType: hard
 
@@ -887,13 +887,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:3.1.0":
-  version: 3.1.0
-  resolution: "eslint-import-resolver-typescript@npm:3.1.0"
+"eslint-import-resolver-typescript@npm:3.1.5":
+  version: 3.1.5
+  resolution: "eslint-import-resolver-typescript@npm:3.1.5"
   dependencies:
     debug: ^4.3.4
-    enhanced-resolve: ^5.9.3
-    get-tsconfig: ^4.0.6
+    enhanced-resolve: ^5.10.0
+    get-tsconfig: ^4.1.0
     globby: ^13.1.2
     is-core-module: ^2.9.0
     is-glob: ^4.0.3
@@ -901,7 +901,7 @@ __metadata:
   peerDependencies:
     eslint: "*"
     eslint-plugin-import: "*"
-  checksum: 95fec6f747e5de16739e50f7cc51f7a5ee865647175f0abe7edd04bf6fbe04b8452c0a716a82a15422f73a710b3cad1a1b8fab45c9a81c24f6e0bca861584a31
+  checksum: 078cf0c0fc87031c440a551a9ccb842ed51f88ed5bdc5bd855ec717b582c17716193ade753fffa9b281f1d4fece73f8b574989acef5923fd29e93cc5b2f924de
   languageName: node
   linkType: hard
 
@@ -1459,10 +1459,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:^4.0.6":
-  version: 4.0.6
-  resolution: "get-tsconfig@npm:4.0.6"
-  checksum: f4b2779748c04725c91ac4af96ec6d0a358aecce4704977cefcb7e994d98b004d041169cbcca9954e4cf319dc0c26e82ea331051f5dd449b1b5b93862e3dbf89
+"get-tsconfig@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "get-tsconfig@npm:4.1.0"
+  checksum: a1a29cdf53609a1e9e111bf863ea209494c03e425964ed2603e3a2657ed1d38213d4a8e3efbfd945f2ec908fe99b76d3ee87422fac5d8ec4fdd858bbb502efbf
   languageName: node
   linkType: hard
 
