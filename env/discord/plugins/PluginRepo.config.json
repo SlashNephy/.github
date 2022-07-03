@@ -9,7 +9,8 @@
 		"general": {
 			"notifyOutdated": true,
 			"notifyNewEntries": true,
-			"rnmStart": true
+			"startDownloaded": false,
+			"startUpdated": false
 		}
 	}
 }
