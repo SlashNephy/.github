@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/typescript-extension",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "repository": {
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/typescript"
@@ -37,6 +37,7 @@
     "concurrently": "7.2.2",
     "eslint": "8.19.0",
     "prettier": "2.7.1",
+    "ts-node": "10.8.2",
     "typescript": "4.7.4"
   },
   "packageManager": "yarn@3.2.1",
