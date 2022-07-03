@@ -8,7 +8,6 @@ export const defineProperty = <T, R>(
   }
 
   Object.defineProperty(object, name, {
-    writable: false,
     get() {
       return value(this)
     },
