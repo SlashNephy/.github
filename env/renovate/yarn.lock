@@ -1667,14 +1667,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redis/client@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@redis/client@npm:1.1.0"
+"@redis/client@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@redis/client@npm:1.1.1"
   dependencies:
     cluster-key-slot: 1.1.0
     generic-pool: 3.8.2
     yallist: 4.0.0
-  checksum: 4f1f4a079eeb49e29e381f00be7da6ca606e8b744878e9b2e90a5800b902cdba6a631b10a7be4ed6a740d6fa4282f055c0d6d89e44eea5cbcaa8e2da10b397fc
+  checksum: a96fa8e6125b006b3b027fb42354cfc3fc056f0225160d0b4b60808a23659002cfde39eedf648c94208cefa788a71fb8b3107c6d2a1ff2bede97213e4e07b34e
   languageName: node
   linkType: hard
 
@@ -1809,7 +1809,7 @@ __metadata:
     concurrently: 7.2.2
     eslint: 8.19.0
     prettier: 2.7.1
-    renovate: 32.103.3
+    renovate: 32.107.2
     ts-node: 10.8.2
     typescript: 4.7.4
   languageName: unknown
@@ -6341,12 +6341,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"openpgp@npm:5.3.0":
-  version: 5.3.0
-  resolution: "openpgp@npm:5.3.0"
+"openpgp@npm:5.3.1":
+  version: 5.3.1
+  resolution: "openpgp@npm:5.3.1"
   dependencies:
     asn1.js: ^5.0.0
-  checksum: 7f3b605556120e1547ee756a9a868533ec7eba9b1bf3e2b17ff7d4318bc487d7085078264dfc8e92bf32caa9a5351130318c38b25c1f80370c223d0a097f73f5
+  checksum: b149af872b8b4f829dec7ae0158e753f9768f3fe5aa5d43ad6206f397671e7d7e0939183cc5a8e4db858bbdc9aa226dc0db85e20b1b2c7d0db770ed31197d575
   languageName: node
   linkType: hard
 
@@ -6883,17 +6883,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redis@npm:4.1.0":
-  version: 4.1.0
-  resolution: "redis@npm:4.1.0"
+"redis@npm:4.1.1":
+  version: 4.1.1
+  resolution: "redis@npm:4.1.1"
   dependencies:
     "@redis/bloom": 1.0.2
-    "@redis/client": 1.1.0
+    "@redis/client": 1.1.1
     "@redis/graph": 1.0.1
     "@redis/json": 1.0.3
     "@redis/search": 1.0.6
     "@redis/time-series": 1.0.3
-  checksum: e3cc90a05a3ea9ada3d771145a0865cd85340a9b54cbeda768f127d86df13beb56ec505b978c464a092ad33ff39b1850101c102842d51b84a1ff6b1f9790901b
+  checksum: 8c9b4e068edb6cd64c0379bed9e0822e2b8e7ee3f25cb63eb5e758fbc4bfc8eba8e88d6a0288dee84a1e6a9450850ba26c235afacdbd87969e645361e483f536
   languageName: node
   linkType: hard
 
@@ -6969,9 +6969,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.103.3":
-  version: 32.103.3
-  resolution: "renovate@npm:32.103.3"
+"renovate@npm:32.107.2":
+  version: 32.107.2
+  resolution: "renovate@npm:32.107.2"
   dependencies:
     "@aws-sdk/client-ec2": 3.112.0
     "@aws-sdk/client-ecr": 3.112.0
@@ -7032,13 +7032,13 @@ __metadata:
     moo: 0.5.1
     nanoid: 3.3.4
     node-html-parser: 5.3.3
-    openpgp: 5.3.0
+    openpgp: 5.3.1
     p-all: 3.0.0
     p-map: 4.0.0
     p-queue: 6.6.2
     parse-link-header: 2.0.0
     re2: 1.17.7
-    redis: 4.1.0
+    redis: 4.1.1
     remark: 13.0.0
     remark-github: 10.1.0
     semver: 7.3.7
@@ -7052,14 +7052,14 @@ __metadata:
     upath: 2.0.1
     url-join: 4.0.1
     validate-npm-package-name: 4.0.0
-    xmldoc: 1.1.3
+    xmldoc: 1.1.4
   dependenciesMeta:
     re2:
       optional: true
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 3a9b0e60ffe0fe13924a9f9d0996f5b7b22076fb2f3f327138b4395e9c26fb0fa4d36c14dcc66ea78b50559556d5d757ca6e1b8ee79962e6df523f7484a8de25
+  checksum: 14e5f8679f3558497e002aaaa4fef17d2cd3aad9d74706c86d6b1f992c85e74ca5f722e388cd43bc5bbe2eea4c6377180f6a866ad7dfd8acceccd86fa248794c
   languageName: node
   linkType: hard
 
@@ -8357,12 +8357,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmldoc@npm:1.1.3":
-  version: 1.1.3
-  resolution: "xmldoc@npm:1.1.3"
+"xmldoc@npm:1.1.4":
+  version: 1.1.4
+  resolution: "xmldoc@npm:1.1.4"
   dependencies:
     sax: ^1.2.4
-  checksum: ce5b26ed3f974024bf360e57bbbf5fa779dc46d35fa1579d2770f2f497abce594ee888e61d4d2136cfd9a8907bf0a083a7a6b0a5d4ab11debeae29686e36e500
+  checksum: 794c4afabd1c9c718dee9e2859439aa0c6c4e701ce689c5194255ce9447a631e6206af01fbd65864c1986d60663b990c33d60cab4c8c3989f31c3ff0c0fe2b21
   languageName: node
   linkType: hard
 
