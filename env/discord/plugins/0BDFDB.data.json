@@ -187,9 +187,14 @@
 			"Channel"
 		],
 		"ContextMenuTypesMap": {
-			"GroupDMUserContextMenu": "UserContextMenu"
+			"GroupDMUserContextMenu": "UserContextMenu",
+			"GroupDMContextMenu": "ChannelContextMenu"
 		},
 		"ContextMenuSubItemsMap": {
+			"ChannelContextMenu": {
+				"keys": ["channel"],
+				"items": ["useChannelLeaveItem", "useChannelDeleteItem", "useChannelFavoriteSetNickname", "useChannelGoToOriginalGuildItem", "useChannelCloneItem", "useChannelCopyLinkItem", "useChannelEditItem", "useChannelMarkAsReadItem"]
+			},
 			"UserContextMenu": {
 				"keys": ["user", "channel"],
 				"items": ["useHideNoVideoParticipantsItem", "useHideSelfVideoItem", "usePreviewVideoItem", "useChangeIdentityItem", "useMoveToAudienceItem", "useAddFriendNicknameItem", "useAddNoteItem", "useBlockUserItem", "useUserRelationshipItems", "useUserManagementItems", "useMoveUserVoiceItems", "useCallUserItem", "useFocusVideoItem", "useInviteUserToGuildItems", "useMentionUserItem", "useMessageUserItem", "useUserProfileItem", "useUserRolesItems", "useUserVolumeItem", "useWatchStreamItem", "useCloseDMItem", "useMuteChannelItem"]
@@ -220,6 +225,7 @@
 			"useMuteChannelItem": {"strings": ["DM", "MenuItem", "Messages.MUTE_CHANNEL"], "lazyLoaded": true},
 			"useUserManagementItems": {"strings": ["canManageUser", "MenuItem", "Messages.BAN_USER"], "lazyLoaded": true},
 			"useUserRelationshipItems": {"strings": ["ContextMenu", "isFriend", "addRelationship", "Messages.REMOVE_FRIEND"], "lazyLoaded": true},
+			"useInviteItem": {"strings": ["CREATE_INSTANT_INVITE", "invite-people"], "lazyLoaded": true},
 			"Account": {"class": "accountinfo"},
 			"App": {"class": "app"},
 			"AppSkeleton": {"class": "app"},
@@ -5375,6 +5381,8 @@
 		}
 	},
 	"BDFDB_Patrons": {
+		"797199624992849960": 	{"active": true,	"tier": "t3",	"text": "",											"color": "",			"id": "blink (AhBo)"},
+		"384941155558752258": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "jack (j.bev)"},
 		"935758254858973224": 	{"active": true,	"tier": "t3",	"text": "",											"color": "",			"id": "SaneVR (rukin)"},
 		"870962330417102919": 	{"active": false,	"tier": "t2",	"text": "",											"color": "",			"id": "gobber (pobge)"},
 		"335997977938100226": 	{"active": true,	"tier": "t3",	"text": "Cloudy Hub Owner",							"color": "",			"id": "Synax (DaBa)"},
