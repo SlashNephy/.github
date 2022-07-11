@@ -1,6 +1,6 @@
 source "$HOME/.github/env/zsh/common.zsh"
 
-for script in "$ENV_DIR"/zsh/arch/*.zsh; do
+for script in "$ENV_DIR"/zsh/arch/**/*.zsh; do
   # shellcheck disable=SC1090
   source "$script"
 done
