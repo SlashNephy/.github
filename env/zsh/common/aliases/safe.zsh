@@ -1,0 +1,5 @@
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -v"
+alias chmod="chmod --preserve-root"
+alias chown="chown --preserve-root"
