@@ -11,7 +11,7 @@ fi
 HOMEBREW_PREFIX=$(brew --prefix)
 export HOMEBREW_PREFIX
 
-for script in "$ENV_DIR"/zsh/macos/*.zsh; do
+for script in "$ENV_DIR"/zsh/macos/**/*.zsh; do
   # shellcheck disable=SC1090
   source "$script"
 done
