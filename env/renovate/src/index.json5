@@ -2,7 +2,7 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
     'config:base',
-    ':prConcurrentLimit20',
+    ':disableRateLimiting',
     ':separateMultipleMajorReleases',
     'github>SlashNephy/.github//env/renovate/src/labels.json5',
     'github>SlashNephy/.github//env/renovate/src/include-forks.json5',
