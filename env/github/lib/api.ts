@@ -1,5 +1,8 @@
-import { Octokit, RestEndpointMethodTypes } from '@octokit/rest'
+import { Octokit } from '@octokit/rest'
+
 import { env } from './env'
+
+import type { RestEndpointMethodTypes } from '@octokit/rest'
 
 type ListUserReposResponseData =
   RestEndpointMethodTypes['repos']['listForUser']['response']['data'][0]
