@@ -15,8 +15,12 @@ on:
 
   workflow_dispatch:
 
+  schedule:
+    - cron: '0 0 * * *'
+
 jobs:
   build:
+    if: github.event_name != 'schedule'
     uses: ./.github/workflows/yarn-run.yml
     with:
       working-directory: 'env/github'
@@ -25,6 +29,7 @@ jobs:
       contents: 'read'
 
   lint:
+    if: github.event_name != 'schedule'
     uses: ./.github/workflows/yarn-lint.yml
     with:
       working-directory: 'env/github'
@@ -39,3 +44,12 @@ jobs:
       working-directory: 'env/github'
     permissions:
       contents: 'write'
+
+  update:
+    if: github.event_name != 'pull_request'
+    uses: ./.github/workflows/yarn-run.yml
+    with:
+      working-directory: 'env/github'
+      command: 'GITHUB_TOKEN=${{ secrets.GH_PAT }} USER_WEBHOOK_URL=${{ secrets.USER_WEBHOOK_URL }} ORG_WEBHOOK_URL=${{ secrets.ORG_WEBHOOK_URL }} yarn start'
+    permissions:
+      contents: 'read'
