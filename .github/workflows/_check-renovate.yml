@@ -17,19 +17,14 @@ on:
 
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 0 * * *'
-
 jobs:
   test:
-    if: github.event_name != 'schedule'
     uses: ./.github/workflows/yarn-run.yml
     with:
       working-directory: 'env/renovate'
       script: 'test'
 
   build:
-    if: github.event_name != 'schedule'
     uses: ./.github/workflows/yarn-run.yml
     with:
       working-directory: 'env/renovate'
@@ -38,7 +33,6 @@ jobs:
       contents: 'read'
 
   lint:
-    if: github.event_name != 'schedule'
     uses: ./.github/workflows/yarn-lint.yml
     with:
       working-directory: 'env/renovate'
@@ -53,12 +47,3 @@ jobs:
       working-directory: 'env/renovate'
     permissions:
       contents: 'write'
-
-  update:
-    if: github.event_name != 'pull_request'
-    uses: ./.github/workflows/yarn-run.yml
-    with:
-      working-directory: 'env/renovate'
-      command: 'GITHUB_TOKEN=${{ secrets.GH_PAT }} yarn start'
-    permissions:
-      contents: 'read'
