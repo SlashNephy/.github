@@ -1,0 +1,41 @@
+name: 'Check env/github'
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'env/github/**'
+      - '.github/workflows/_check-github.yml'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/yarn-run.yml
+    with:
+      working-directory: 'env/github'
+      script: 'build'
+    permissions:
+      contents: 'read'
+
+  lint:
+    uses: ./.github/workflows/yarn-lint.yml
+    with:
+      working-directory: 'env/github'
+    permissions:
+      contents: 'read'
+      pull-requests: 'write'
+
+  format:
+    if: github.event_name == 'push'
+    uses: ./.github/workflows/yarn-format.yml
+    with:
+      working-directory: 'env/github'
+    permissions:
+      contents: 'write'
