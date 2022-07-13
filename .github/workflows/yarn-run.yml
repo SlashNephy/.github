@@ -16,9 +16,22 @@ on:
         type: string
         default: ''
       script:
-        required: true
+        required: false
         type: string
+        default: ''
       post-script:
+        required: false
+        type: string
+        default: ''
+      pre-command:
+        required: false
+        type: string
+        default: ''
+      command:
+        required: false
+        type: string
+        default: ''
+      post-command:
         required: false
         type: string
         default: ''
@@ -49,11 +62,27 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.pre-script }}'
 
+      - name: Run Pre-Command
+        if: inputs.pre-command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.pre-command }}'
+
       - name: Run Script
+        if: inputs.script != ''
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.script }}'
+
+      - name: Run Command
+        if: inputs.command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.command }}'
 
       - name: Run Post-Script
         if: inputs.post-script != ''
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.post-script }}'
+
+      - name: Run Post-Command
+        if: inputs.post-command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.post-command }}'
