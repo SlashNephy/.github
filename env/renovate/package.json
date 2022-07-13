@@ -5,9 +5,11 @@
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/renovate"
   },
+  "private": true,
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "start": "ts-node bin/update-config.ts",
     "test": "concurrently -n test: 'yarn:test:*'",
     "test:project": "RENOVATE_CONFIG_FILE=src/index.json5 renovate-config-validator",
     "test:repo": "RENOVATE_CONFIG_FILE=../../renovate.json renovate-config-validator",
@@ -20,7 +22,9 @@
     "format:prettier": "yarn lint:prettier --write"
   },
   "dependencies": {
-    "@octokit/rest": "19.0.3"
+    "@octokit/rest": "19.0.3",
+    "dotenv": "^16.0.1",
+    "fast-deep-equal": "^3.1.3"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.1.7",
