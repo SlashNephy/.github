@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node bin/main.ts",
+    "start": "ts-node bin/update-webhooks.ts",
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
