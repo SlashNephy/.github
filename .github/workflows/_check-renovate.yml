@@ -59,6 +59,7 @@ jobs:
     uses: ./.github/workflows/yarn-run.yml
     with:
       working-directory: 'env/renovate'
-      command: 'GITHUB_TOKEN=${{ secrets.GH_PAT }} yarn start'
+      script: 'start'
+      env: GITHUB_TOKEN=${{ secrets.GH_PAT }}
     permissions:
       contents: 'read'

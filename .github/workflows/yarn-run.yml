@@ -35,6 +35,10 @@ on:
         required: false
         type: string
         default: ''
+      env:
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -45,6 +49,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
+      - name: Setup .env
+        if: inputs.env != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'echo "${{ inputs.env }}" > .env'
 
       - name: Setup Node
         uses: actions/setup-node@v3
