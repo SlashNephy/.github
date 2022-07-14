@@ -1,12 +1,12 @@
 import { execSync } from 'child_process'
 
-import { env } from '../lib/env'
 import {
   listOrgRepos,
   listRepoWebhooks,
   listUserRepos,
   octokit,
 } from '../lib/api'
+import { env } from '../lib/env'
 
 const main = async () => {
   const repos = await Promise.all([
