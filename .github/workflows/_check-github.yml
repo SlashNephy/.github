@@ -50,7 +50,11 @@ jobs:
     uses: ./.github/workflows/yarn-run.yml
     with:
       working-directory: 'env/github'
-      command: 'GITHUB_TOKEN=${{ secrets.GH_PAT }} USER_WEBHOOK_URL=${{ secrets.USER_WEBHOOK_URL }} ORG_WEBHOOK_URL=${{ secrets.ORG_WEBHOOK_URL }} yarn start'
+      script: 'start'
+      env: |
+        GITHUB_TOKEN=${{ secrets.GH_PAT }}
+        USER_WEBHOOK_URL=${{ secrets.USER_WEBHOOK_URL }}
+        ORG_WEBHOOK_URL=${{ secrets.ORG_WEBHOOK_URL }}
     secrets: inherit
     permissions:
       contents: 'read'
