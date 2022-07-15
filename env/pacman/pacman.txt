@@ -11,6 +11,7 @@ fakeroot
 fuse2
 git
 github-cli
+groff
 htop
 intel-media-driver
 intel-ucode
@@ -22,6 +23,7 @@ linux-firmware
 linux-lts
 linux-lts-headers
 lsof
+m4
 mackerel-agent
 mergerfs
 nano
