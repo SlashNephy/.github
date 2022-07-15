@@ -1933,7 +1933,7 @@ __metadata:
     eslint: 8.19.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.117.0
+    renovate: 32.117.1
     ts-node: 10.9.1
     typescript: 4.7.4
   languageName: unknown
@@ -2829,13 +2829,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-devops-node-api@npm:11.1.1":
-  version: 11.1.1
-  resolution: "azure-devops-node-api@npm:11.1.1"
+"azure-devops-node-api@npm:11.2.0":
+  version: 11.2.0
+  resolution: "azure-devops-node-api@npm:11.2.0"
   dependencies:
     tunnel: 0.0.6
     typed-rest-client: ^1.8.4
-  checksum: 4a62262c9e1e2153f8cb926103b730edad3a3d252ae5acb681d217018a315baa7b863eadde4db5a042139eafe841e7f4d2defa83e286aed267611c0e8083080a
+  checksum: 52e84379b4ce71ad8a79470ba89e1d1217b28ee3670c7e484e1b1d9c210acf406ab09132c241cb481f78354df701dae7752ba3c4e3d28b2b6c0b0ff2d9eb7199
   languageName: node
   linkType: hard
 
@@ -7071,9 +7071,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.117.0":
-  version: 32.117.0
-  resolution: "renovate@npm:32.117.0"
+"renovate@npm:32.117.1":
+  version: 32.117.1
+  resolution: "renovate@npm:32.117.1"
   dependencies:
     "@aws-sdk/client-ec2": 3.112.0
     "@aws-sdk/client-ecr": 3.112.0
@@ -7089,7 +7089,7 @@ __metadata:
     "@yarnpkg/core": 3.1.0
     "@yarnpkg/parsers": 2.5.1
     auth-header: 1.0.0
-    azure-devops-node-api: 11.1.1
+    azure-devops-node-api: 11.2.0
     bunyan: 1.8.15
     cacache: 16.1.1
     chalk: 4.1.2
@@ -7162,7 +7162,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: b21476e70f903908c55679fbe955df105e929ef5197f82b5a8ea6a85252661d9881fd28df9eb498035d3ec4f8be816e0045d5743811cdf938b96051bfaddb7d9
+  checksum: 6d7a9fb18e17c11a31e38c63b18750c6eed7e3eb25bce4a7c9773ebccf1eb1a39874d21c7d1aeb3cdca0e43be4fa58919aa16c890e1b3a939f5b5ec16e95d124
   languageName: node
   linkType: hard
 
