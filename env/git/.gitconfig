@@ -13,3 +13,7 @@
 
 [include]
   path = ~/.github/env/git/user/default.gitconfig
+
+[alias]
+  current-branch-name = !git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'
+  force-pull = !git fetch && git reset --hard origin/$(git current-branch)
