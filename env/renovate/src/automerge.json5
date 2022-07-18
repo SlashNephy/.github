@@ -1,7 +1,8 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  description: '特定のパッケージを Automerge する',
+  description: '特定条件下で Automerge する',
   packageRules: [
+    // 特定パッケージは常に Automerge
     {
       matchPackageNames: [
         '@kawaiioverflow/arm',
@@ -13,6 +14,32 @@
       ],
       automerge: true,
       ignoreTests: true,
+      stabilityDays: 0,
+    },
+    // 特定パッケージは CI Pass 後 Automerge
+    {
+      matchPackageNames: [
+        'node',
+        'gradle',
+      ],
+      automerge: true,
+      stabilityDays: 0,
+    },
+    // devDependencies は常に Automerge
+    {
+      matchDepTypes: ['devDependencies'],
+      automerge: true,
+      ignoreTests: true,
+      stabilityDays: 0,
+    },
+    // マイナーな @types/* の更新は常に Automerge
+    {
+      matchDepTypes: ['devDependencies'],
+      matchPackagePatterns: ['^@types/'],
+      matchUpdateTypes: ["minor", "patch"],
+      automerge: true,
+      ignoreTests: true,
+      stabilityDays: 0,
     },
   ],
 }
