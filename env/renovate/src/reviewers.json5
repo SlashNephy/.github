@@ -1,6 +1,5 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'レビュワーを割り当てる',
-  additionalReviewers: ['SlashNephy', 'StarryBlueSky-bot'],
   reviewersFromCodeOwners: true,
 }

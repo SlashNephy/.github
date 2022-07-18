@@ -4,7 +4,7 @@
   vulnerabilityAlerts: {
     labels: ['renovate', 'security'],
     automerge: true,
-    stabilityDays: 0,
     ignoreTests: true,
+    stabilityDays: 0,
   },
 }
