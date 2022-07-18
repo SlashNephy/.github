@@ -17,8 +17,8 @@ on:
 
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 0 * * *'
+  #  schedule:
+  #    - cron: '0 0 * * *'
 
 jobs:
   test:
@@ -54,12 +54,12 @@ jobs:
     permissions:
       contents: 'write'
 
-  update:
-    if: github.event_name != 'pull_request'
-    uses: ./.github/workflows/yarn-run.yml
-    with:
-      working-directory: 'env/renovate'
-      script: 'start'
-      env: GITHUB_TOKEN=${{ secrets.GH_PAT }}
-    permissions:
-      contents: 'read'
+  #  update:
+  #    if: github.event_name != 'pull_request'
+  #    uses: ./.github/workflows/yarn-run.yml
+  #    with:
+  #      working-directory: 'env/renovate'
+  #      script: 'start'
+  #      env: GITHUB_TOKEN=${{ secrets.GH_PAT }}
+  #    permissions:
+  #      contents: 'read'

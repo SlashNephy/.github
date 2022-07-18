@@ -15,8 +15,8 @@ on:
 
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 0 * * *'
+  #  schedule:
+  #    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -45,16 +45,17 @@ jobs:
     permissions:
       contents: 'write'
 
-  update:
-    if: github.event_name != 'pull_request'
-    uses: ./.github/workflows/yarn-run.yml
-    with:
-      working-directory: 'env/github'
-      script: 'start'
-      env: |
-        GITHUB_TOKEN=${{ secrets.GH_PAT }}
-        USER_WEBHOOK_URL=${{ secrets.USER_WEBHOOK_URL }}
-        ORG_WEBHOOK_URL=${{ secrets.ORG_WEBHOOK_URL }}
-    secrets: inherit
-    permissions:
-      contents: 'read'
+  # Reusable workflow に secrets を渡すには事前に渡すキーをワークフロー側で定義しておく必要があり面倒
+  #  update:
+  #    if: github.event_name != 'pull_request'
+  #    uses: ./.github/workflows/yarn-run.yml
+  #    with:
+  #      working-directory: 'env/github'
+  #      script: 'start'
+  #      env: |
+  #        GITHUB_TOKEN=${{ secrets.GH_PAT }}
+  #        USER_WEBHOOK_URL=${{ secrets.USER_WEBHOOK_URL }}
+  #        ORG_WEBHOOK_URL=${{ secrets.ORG_WEBHOOK_URL }}
+  #    secrets: inherit
+  #    permissions:
+  #      contents: 'read'
