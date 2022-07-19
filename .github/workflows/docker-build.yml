@@ -81,7 +81,7 @@ jobs:
           cache-from: '${{ inputs.cache-from }}'
           cache-to: '${{ inputs.cache-to }}'
           build-args: |
-            IMAGE_TAG=${{ fromJSON(steps.metadata.outputs.json).labels["org.opencontainers.image.version"] }}
+            IMAGE_TAG=${{ steps.metadata.outputs.version }}
             COMMIT_ID=${{ github.sha }}
 
       - name: Scan Image
