@@ -9,6 +9,7 @@
 // @connect      raw.githubusercontent.com
 // ==/UserScript==
 const ANNICT_WORK_PAGE_URL_PATTERN = /^https:\/\/annict\.com\/works\/(\d+)/;
+let cachedEntries = null;
 const fetchArmEntries = async () => {
     return new Promise((resolve, reject) => {
         GM_xmlhttpRequest({
@@ -37,27 +38,28 @@ const main = async () => {
     if (!links || links.childNodes.length === 0) {
         throw new Error('Failed to find target container');
     }
-    const entries = await fetchArmEntries();
+    const entries = cachedEntries ?? (await fetchArmEntries());
+    cachedEntries = entries;
     const entry = entries.find((x) => x.annict_id === annictId);
     if (!entry) {
         console.warn(`arm entry not found: annict_id=${annictId}`);
         return;
     }
-    if (entry.syobocal_tid) {
+    if (entry.syobocal_tid && links.firstChild) {
         const link = links.firstChild.cloneNode(true);
         const a = link.firstChild;
         a.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`;
         a.childNodes[0].textContent = 'しょぼいカレンダー';
         links.appendChild(link);
     }
-    if (entry.mal_id) {
+    if (entry.mal_id && links.firstChild) {
         const link = links.firstChild.cloneNode(true);
         const a = link.firstChild;
         a.href = `https://myanimelist.net/anime/${entry.mal_id}`;
         a.childNodes[0].textContent = 'MyAnimeList';
         links.appendChild(link);
     }
-    if (entry.anilist_id) {
+    if (entry.anilist_id && links.firstChild) {
         const link = links.firstChild.cloneNode(true);
         const a = link.firstChild;
         a.href = `https://anilist.co/anime/${entry.anilist_id}`;

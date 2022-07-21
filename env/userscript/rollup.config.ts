@@ -28,6 +28,7 @@ type Banner = {
   match: string
   connect?: string
   grant?: string
+  runAt?: string
 }
 
 const buildBanner = (banner: Banner): string => {
@@ -44,6 +45,10 @@ const buildBanner = (banner: Banner): string => {
 
   if (banner.connect) {
     lines.push(`// @connect      ${banner.connect}`)
+  }
+
+  if (banner.runAt) {
+    lines.push(`// @run-at       ${banner.runAt}`)
   }
 
   lines.push('// ==/UserScript==')
@@ -68,6 +73,15 @@ const config: RollupOptions[] = [
     description: 'Automatically sets up dominion.games table config.',
     author: 'SlashNephy <spica@starry.blue>',
     match: 'https://dominion.games/',
+  }),
+  buildOptions('ff14angler-bypass-adblock-check', {
+    name: 'FF14Angler Bypass AdBlock Check',
+    namespace: 'https://ff14angler.com/',
+    version: '0.1',
+    description: 'FF14Angler の AdBlock チェックを無効にします。',
+    author: 'SlashNephy <spica@starry.blue>',
+    match: 'https://*.ff14angler.com/*',
+    runAt: 'document-body',
   }),
 ]
 
