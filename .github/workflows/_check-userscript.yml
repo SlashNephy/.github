@@ -1,0 +1,57 @@
+name: 'Check env/userscript'
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'env/userscript/**'
+      - '.github/workflows/_check-userscript.yml'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: ./.github/workflows/yarn-run.yml
+    with:
+      working-directory: 'env/userscript'
+      script: 'test'
+
+  build:
+    uses: ./.github/workflows/yarn-run.yml
+    with:
+      working-directory: 'env/userscript'
+      script: 'build'
+    permissions:
+      contents: 'read'
+
+  lint:
+    uses: ./.github/workflows/yarn-lint.yml
+    with:
+      working-directory: 'env/userscript'
+    permissions:
+      contents: 'read'
+      pull-requests: 'write'
+
+  format:
+    if: github.event_name == 'push'
+    uses: ./.github/workflows/yarn-format.yml
+    with:
+      working-directory: 'env/userscript'
+    permissions:
+      contents: 'write'
+
+  bundle:
+    if: github.event_name == 'push'
+    uses: ./.github/workflows/yarn-run.yml
+    with:
+      working-directory: 'env/userscript'
+      script: 'bundle'
+      commit-message: '⚙️ Build (env/userscript)'
+    permissions:
+      contents: 'read'
