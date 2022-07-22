@@ -16,12 +16,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    uses: ./.github/workflows/yarn-run.yml
-    with:
-      working-directory: 'env/userscript'
-      script: 'test'
-
   build:
     uses: ./.github/workflows/yarn-run.yml
     with:
