@@ -7,7 +7,7 @@
 // @match        https://feedly.com/i/collection/*
 // @grant        none
 // ==/UserScript==
-setInterval(function () {
+setInterval(() => {
     const element = document.querySelector('button.icon-toolbar-refresh-secondary');
     if (!element) {
         return;
