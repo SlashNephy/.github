@@ -1,4 +1,4 @@
-setInterval(function () {
+setInterval(() => {
   const element = document.querySelector<HTMLButtonElement>('button.icon-toolbar-refresh-secondary')
   if (!element) {
     return

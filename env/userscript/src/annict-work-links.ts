@@ -36,9 +36,7 @@ const main = async () => {
     throw new Error('Failed to extract Annict work id')
   }
 
-  const links = document.querySelector(
-    'div.c-work-header.pt-3 > div.container > div > div.col.mt-3.mt-sm-0 > ul.list-inline.mb-0'
-  )
+  const links = document.querySelector('div.c-work-header.pt-3 > div.container > div > div.col.mt-3.mt-sm-0 > ul.list-inline.mb-0')
   if (!links || links.childNodes.length === 0) {
     throw new Error('Failed to find target container')
   }
