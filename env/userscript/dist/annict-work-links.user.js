@@ -5,7 +5,7 @@
 // @description  しょぼいカレンダー、MyAnimeList、AniList に対応しています。
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://annict.com/works/*
-// @grant        raw.githubusercontent.com
+// @grant        GM_xmlhttpRequest
 // @connect      raw.githubusercontent.com
 // ==/UserScript==
 const ANNICT_WORK_PAGE_URL_PATTERN = /^https:\/\/annict\.com\/works\/(\d+)/;
