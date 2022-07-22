@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         dominion.games Auto Table Setter
 // @namespace    https://dominion.games/
-// @version      0.2
-// @description  Automatically sets up dominion.games table config.
+// @version      0.3.0
+// @description  dominion.games の卓設定を自動的に設定します。
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://dominion.games/
 // @grant        none

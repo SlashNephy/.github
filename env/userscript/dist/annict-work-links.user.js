@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Annict の作品ページに各種サイトへのリンクを表示する
+// @name         Annict Work Links
 // @namespace    https://annict.com/
-// @version      0.1
+// @version      0.2.0
 // @description  しょぼいカレンダー、MyAnimeList、AniList に対応しています。
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://annict.com/works/*
