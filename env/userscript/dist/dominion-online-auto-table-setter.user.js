@@ -49,7 +49,7 @@ const updateSettings = () => {
 const observe = () => {
     const target = document.querySelector('div.window-container > div');
     if (target === null) {
-        setTimeout(main, 1000);
+        setTimeout(observe, 1000);
         return;
     }
     let updated = false;

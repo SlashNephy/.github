@@ -1,0 +1,5 @@
+@document domain("lalachievements.com") {
+  #root > div > div.DataLoading, #badglobalerror {
+    display: none !important;
+  }
+}
