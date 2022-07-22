@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         FF14Angler Bypass AdBlock Check
 // @namespace    https://ff14angler.com/
-// @version      0.1
+// @version      0.2.0
 // @description  FF14Angler の AdBlock チェックを無効にします。
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://*.ff14angler.com/*
