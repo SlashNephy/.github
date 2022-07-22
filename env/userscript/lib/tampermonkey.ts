@@ -40,7 +40,7 @@ const buildBanner = (banner: Banner): string => {
     `// @description  ${banner.description}`,
     `// @author       ${banner.author}`,
     `// @match        ${banner.match}`,
-    `// @grant        ${banner.connect ?? 'none'}`,
+    `// @grant        ${banner.grant ?? 'none'}`,
   ]
 
   if (banner.connect) {
