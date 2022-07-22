@@ -6,12 +6,24 @@ on:
       node-version:
         required: false
         type: string
-        default: 18
+        default: '18'
       working-directory:
         required: false
         type: string
-        default: .
+        default: '.'
       pre-script:
+        required: false
+        type: string
+        default: ''
+      pre-command:
+        required: false
+        type: string
+        default: ''
+      script:
+        required: false
+        type: string
+        default: 'format'
+      command:
         required: false
         type: string
         default: ''
@@ -19,6 +31,14 @@ on:
         required: false
         type: string
         default: ''
+      post-command:
+        required: false
+        type: string
+        default: ''
+      commit-message:
+        required: false
+        type: string
+        default: '🧹 yarn format'
 
 permissions:
   contents: 'write'
@@ -49,16 +69,32 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.pre-script }}'
 
-      - name: Format
+      - name: Run Pre-Command
+        if: inputs.pre-command != ''
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn format'
+        run: '${{ inputs.pre-command }}'
+
+      - name: Run Script
+        if: inputs.script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.script }}'
+
+      - name: Run Command
+        if: inputs.command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.command }}'
 
       - name: Run Post-Script
         if: inputs.post-script != ''
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.post-script }}'
 
+      - name: Run Post-Command
+        if: inputs.post-command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.post-command }}'
+
       - name: Push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: '🧹 yarn format'
+          commit_message: '${{ inputs.commit-message }}'

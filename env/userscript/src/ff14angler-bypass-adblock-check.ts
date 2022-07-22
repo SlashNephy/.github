@@ -1,3 +1,3 @@
 document.head.className = 'adsbygoogle'
-;(unsafeWindow as any).$.prototype.remove = () => null
-console.info('injected.')
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+;(unsafeWindow as any).$.prototype.remove = () => void 0

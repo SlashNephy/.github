@@ -39,10 +39,6 @@ on:
         required: false
         type: string
         default: ''
-      commit-message:
-        required: false
-        type: string
-        default: ''
 
 permissions:
   contents: read
@@ -53,8 +49,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup .env
         if: inputs.env != ''
@@ -101,11 +95,3 @@ jobs:
         if: inputs.post-command != ''
         working-directory: '${{ inputs.working-directory }}'
         run: '${{ inputs.post-command }}'
-
-      - name: Push & Push
-        uses: EndBug/add-and-commit@v9
-        with:
-          cwd: '${{ inputs.working-directory }}'
-          message: '${{ inputs.commit-message }}'
-          committer_name: 'GitHub Actions'
-          committer_email: '41898282+github-actions[bot]@users.noreply.github.com'
