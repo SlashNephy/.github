@@ -39,7 +39,7 @@ jobs:
       pull-requests: 'write'
 
   format:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
       working-directory: 'env/userscript'
@@ -47,11 +47,11 @@ jobs:
       contents: 'write'
 
   bundle:
-    if: github.event_name == 'push'
-    uses: ./.github/workflows/yarn-run.yml
+    if: github.event_name != 'pull_request'
+    uses: ./.github/workflows/yarn-format.yml
     with:
       working-directory: 'env/userscript'
       script: 'bundle'
       commit-message: '⚙️ Build (env/userscript)'
     permissions:
-      contents: 'read'
+      contents: 'write'

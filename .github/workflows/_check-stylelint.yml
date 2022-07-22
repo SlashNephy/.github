@@ -33,7 +33,7 @@ jobs:
       pull-requests: 'write'
 
   format:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
       working-directory: 'env/stylelint'
