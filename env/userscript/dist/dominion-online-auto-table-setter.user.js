@@ -8,42 +8,26 @@
 // @grant        none
 // ==/UserScript==
 const updateSettings = () => {
-    document
-        .querySelector('button[ng-click="$ctrl.switchView()"]')
-        ?.click();
-    document
-        .querySelector('input[ng-model="$ctrl.tableRules.useVPCounter"]')
-        ?.click();
-    document
-        .querySelector('button[ng-click="$ctrl.showKingdomSelection()"]')
-        ?.click();
+    document.querySelector('button[ng-click="$ctrl.switchView()"]')?.click();
+    document.querySelector('input[ng-model="$ctrl.tableRules.useVPCounter"]')?.click();
+    document.querySelector('button[ng-click="$ctrl.showKingdomSelection()"]')?.click();
     for (const element of document.querySelectorAll('input.expansion-checkbox')) {
         element.click();
     }
     for (let i = 0; i < 2; i++) {
-        document
-            .querySelector('three-valued-button[ng-model="kc.kingdom.colonies"] button')
-            ?.click();
-        document
-            .querySelector('three-valued-button[ng-model="kc.kingdom.shelters"] button')
-            ?.click();
+        document.querySelector('three-valued-button[ng-model="kc.kingdom.colonies"] button')?.click();
+        document.querySelector('three-valued-button[ng-model="kc.kingdom.shelters"] button')?.click();
     }
     for (let i = 0; i < 2; i++) {
-        document
-            .querySelector('div[ng-click="$ctrl.addNewSlot()"]')
-            ?.click();
+        document.querySelector('div[ng-click="$ctrl.addNewSlot()"]')?.click();
     }
     for (let i = 0; i < 2; i++) {
-        document
-            .querySelector('div[ng-if="$ctrl.canBeNothing()"]')
-            ?.click();
+        document.querySelector('div[ng-if="$ctrl.canBeNothing()"]')?.click();
     }
     for (const element of document.querySelectorAll('div.landscape-type-text.type-W')) {
         element.click();
     }
-    document
-        .querySelector('input[ng-click="kc.close()"]')
-        ?.click();
+    document.querySelector('input[ng-click="kc.close()"]')?.click();
     alert('Table settings applied!');
 };
 const observe = () => {
@@ -56,17 +40,11 @@ const observe = () => {
     const observer = new MutationObserver((records) => {
         const r = records[0];
         console.log(r);
-        if (r.target &&
-            r.target instanceof Element &&
-            r.target.classList.contains('my-table') &&
-            !updated) {
+        if (r.target && r.target instanceof Element && r.target.classList.contains('my-table') && !updated) {
             updateSettings();
             updated = true;
         }
-        else if (r.target &&
-            r.target instanceof Element &&
-            r.target.classList.contains('new-table') &&
-            updated) {
+        else if (r.target && r.target instanceof Element && r.target.classList.contains('new-table') && updated) {
             updated = false;
         }
     });
