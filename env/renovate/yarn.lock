@@ -1933,7 +1933,7 @@ __metadata:
     eslint: 8.20.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.118.0
+    renovate: 32.123.0
     ts-node: 10.9.1
     typescript: 4.7.4
   languageName: unknown
@@ -3233,10 +3233,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:9.3.0":
-  version: 9.3.0
-  resolution: "commander@npm:9.3.0"
-  checksum: d421ce66fee25792a1470c69aa8d1b86434bf873a96483aa92c8267f81a6f20c6f7c426f5e82f88ac50a8ec4855d3f2787aebcdef8aa559e1080a2337a95a217
+"commander@npm:9.4.0":
+  version: 9.4.0
+  resolution: "commander@npm:9.4.0"
+  checksum: a322de584a6ccd1ea83c24f6a660e52d16ffbe2613fcfbb8d2cc68bc9dec637492456d754fe8bb5b039ad843ed8e04fb0b107e581a75f62cde9e1a0ab1546e09
   languageName: node
   linkType: hard
 
@@ -3520,10 +3520,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dequal@npm:2.0.2":
-  version: 2.0.2
-  resolution: "dequal@npm:2.0.2"
-  checksum: 86c7a2c59f7b0797ed397c74b5fcdb744e48fc19440b70ad6ac59f57550a96b0faef3f1cfd5760ec5e6d3f7cb101f634f1f80db4e727b1dc8389bf62d977c0a0
+"dequal@npm:2.0.3":
+  version: 2.0.3
+  resolution: "dequal@npm:2.0.3"
+  checksum: 8679b850e1a3d0ebbc46ee780d5df7b478c23f335887464023a631d1b9af051ad4a6595a44220f9ff8ff95a8ddccf019b5ad778a976fd7bbf77383d36f412f90
   languageName: node
   linkType: hard
 
@@ -7071,9 +7071,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.118.0":
-  version: 32.118.0
-  resolution: "renovate@npm:32.118.0"
+"renovate@npm:32.123.0":
+  version: 32.123.0
+  resolution: "renovate@npm:32.123.0"
   dependencies:
     "@aws-sdk/client-ec2": 3.112.0
     "@aws-sdk/client-ecr": 3.112.0
@@ -7095,12 +7095,12 @@ __metadata:
     chalk: 4.1.2
     changelog-filename-regex: 2.0.1
     clean-git-ref: 2.0.1
-    commander: 9.3.0
+    commander: 9.4.0
     conventional-commits-detector: 1.0.3
     crypto-random-string: 3.3.1
     deepmerge: 4.2.2
     delay: 5.0.0
-    dequal: 2.0.2
+    dequal: 2.0.3
     detect-indent: 6.1.0
     editorconfig: 0.15.3
     email-addresses: 5.0.0
@@ -7155,14 +7155,14 @@ __metadata:
     upath: 2.0.1
     url-join: 4.0.1
     validate-npm-package-name: 4.0.0
-    xmldoc: 1.1.4
+    xmldoc: 1.2.0
   dependenciesMeta:
     re2:
       optional: true
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 4c5566c28a9e29a6517bfe988df4d6c0364b6ba9df983d398fe0019f99ef42e19bb4e79739024cc43c004019de4f09c883428d3777efc7a6309316dc8884bf87
+  checksum: a6495974668ed7efb7cf43f6bafd56f7a81582557658ec906af99d56375a3ad4fce640b9c9f19eb6ca53bcbe688d7593ba6d2a6f2e26e37de19f4a486a155464
   languageName: node
   linkType: hard
 
@@ -8446,12 +8446,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmldoc@npm:1.1.4":
-  version: 1.1.4
-  resolution: "xmldoc@npm:1.1.4"
+"xmldoc@npm:1.2.0":
+  version: 1.2.0
+  resolution: "xmldoc@npm:1.2.0"
   dependencies:
     sax: ^1.2.4
-  checksum: 794c4afabd1c9c718dee9e2859439aa0c6c4e701ce689c5194255ce9447a631e6206af01fbd65864c1986d60663b990c33d60cab4c8c3989f31c3ff0c0fe2b21
+  checksum: df42d06cf42bad47189f0d11d402de8da42652f1d96ee20586f906a3db72c6a0efbabc04d1a97cec7fe235fde55ff7e601c9dc4fdf31b9ef3ce30bd7836b4b08
   languageName: node
   linkType: hard
 
