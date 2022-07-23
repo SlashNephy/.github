@@ -18,7 +18,7 @@
     },
     // 特定パッケージは CI Pass 後 Automerge
     {
-      matchPackageNames: ['node', 'gradle'],
+      matchPackageNames: ['node', 'gradle', 'yarn'],
       automerge: true,
       stabilityDays: 0,
     },
