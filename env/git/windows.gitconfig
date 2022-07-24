@@ -7,16 +7,11 @@
 [gpg]
   program = C:/Program FIles (x86)/GnuPG/bin/gpg.exe
 
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
-
 [core]
   sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
   editor = \"~/AppData/Local/Programs/Microsoft VS Code/Code.exe\" --wait
   pager = LESSCHARSET=utf-8 less
+  autocrlf = true
 
 [credential]
   helper = wincred

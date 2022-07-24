@@ -3,7 +3,7 @@
 
 [core]
   excludesFile = ~/.gitignore
-  autocrlf = input
+  autocrlf = false
 
 [commit]
   gpgsign = true
@@ -17,3 +17,9 @@
 [alias]
   current-branch-name = !git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'
   force-pull = !git fetch && git reset --hard origin/$(git current-branch)
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
