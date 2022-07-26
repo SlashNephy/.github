@@ -25,7 +25,6 @@ linux-lts-headers
 lsof
 m4
 mackerel-agent
-mergerfs
 nano
 nano-syntax-highlighting
 net-tools
