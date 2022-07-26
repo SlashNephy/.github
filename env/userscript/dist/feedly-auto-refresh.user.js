@@ -1,11 +1,14 @@
 // ==UserScript==
 // @name         Feedly Auto Refresh
-// @namespace    https://feedly.com/
+// @namespace    https://tampermonkey.net/
 // @version      0.2.0
 // @description  Feedly で未読記事がないとき、フィードを自動リフレッシュします。
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://feedly.com/i/collection/*
+// @license      MIT license
 // @grant        none
+// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js
+// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js
 // ==/UserScript==
 setInterval(() => {
     const element = document.querySelector('button.icon-toolbar-refresh-secondary');

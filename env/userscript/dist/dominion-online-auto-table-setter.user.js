@@ -1,11 +1,14 @@
 // ==UserScript==
 // @name         dominion.games Auto Table Setter
-// @namespace    https://dominion.games/
+// @namespace    https://tampermonkey.net/
 // @version      0.3.0
 // @description  dominion.games の卓設定を自動的に設定します。
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://dominion.games/
+// @license      MIT license
 // @grant        none
+// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js
+// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js
 // ==/UserScript==
 const updateSettings = () => {
     document.querySelector('button[ng-click="$ctrl.switchView()"]')?.click();
