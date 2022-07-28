@@ -35,7 +35,6 @@ parted
 preload
 progress
 rclone
-rkhunter
 sudo
 systemd-boot-pacman-hook
 systemd-resolvconf
