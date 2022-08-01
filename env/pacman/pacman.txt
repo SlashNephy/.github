@@ -1,4 +1,3 @@
-1password-cli
 base
 clamav
 clamav-unofficial-sigs
@@ -8,7 +7,6 @@ docker
 docker-compose
 ethtool
 fakeroot
-fuse2
 git
 github-cli
 groff
@@ -28,8 +26,6 @@ mackerel-agent
 nano
 nano-syntax-highlighting
 net-tools
-nvidia-470xx-dkms
-nvidia-container-toolkit
 openssh
 parted
 preload
