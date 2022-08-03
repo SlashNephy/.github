@@ -1,6 +1,6 @@
 {
     "currentVersionInfo": {
-        "version": "1.4.10",
+        "version": "1.4.11",
         "hasShownChangelog": true
     },
     "settings": {
@@ -16,7 +16,7 @@
         "userCounter": {
             "enabled": true,
             "enableTime": 1644678625180,
-            "lastSubmission": 1659455101346
+            "lastSubmission": 1659412072582
         }
     }
 }
