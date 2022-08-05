@@ -4,12 +4,31 @@ type Env = {
   GITHUB_TOKEN: string
   USER_WEBHOOK_URL: string
   ORG_WEBHOOK_URL: string
+  STAR_WEBHOOK_URL: string
+  ISSUE_WEBHOOK_URL: string
 }
 
-dotenv.config()
+const loadConfig = (): Env => {
+  dotenv.config()
 
-export const env = process.env as Env
+  const {
+    GITHUB_TOKEN,
+    USER_WEBHOOK_URL,
+    ORG_WEBHOOK_URL,
+    STAR_WEBHOOK_URL,
+    ISSUE_WEBHOOK_URL,
+  } = process.env
+  if (
+    !GITHUB_TOKEN ||
+    !USER_WEBHOOK_URL ||
+    !ORG_WEBHOOK_URL ||
+    !STAR_WEBHOOK_URL ||
+    !ISSUE_WEBHOOK_URL
+  ) {
+    throw new Error('Some environment values are not set')
+  }
 
-if (!env.GITHUB_TOKEN || !env.USER_WEBHOOK_URL || !env.ORG_WEBHOOK_URL) {
-  throw new Error('Some environment values are not set')
+  return process.env as Env
 }
+
+export const env = loadConfig()
