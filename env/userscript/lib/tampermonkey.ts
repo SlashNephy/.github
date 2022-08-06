@@ -30,7 +30,7 @@ export type Banner = {
   includes?: string[]
   icon?: string
   license?: string
-  connect?: string
+  connect?: string[]
   grant?: string
   runAt?: string
   requires?: string[]
@@ -56,7 +56,9 @@ const buildBanner = (banner: Banner): string => {
   }
 
   if (banner.connect) {
-    lines.push(`// @connect      ${banner.connect}`)
+    for (const connect of banner.connect) {
+      lines.push(`// @connect      ${connect}`)
+    }
   }
 
   if (banner.runAt) {

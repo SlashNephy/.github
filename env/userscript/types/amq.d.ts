@@ -1,0 +1,111 @@
+declare global {
+  declare class Listener<T> {
+    public constructor(command: string, callback: (payload: T) => void)
+    public fire(payload: T): void
+    public bindListener(): void
+    public unbindListener(): void
+  }
+
+  declare const quiz: {
+    gameMode: string
+    players: Record<
+      number,
+      {
+        avatarInfo: {
+          avatar: unknown
+          background: unknown
+        }
+        avatarSlot: {
+          $answerContainerText: JQuery
+          _disabled: boolean
+        }
+        gamePlayerId: number
+        hidden: undefined
+        isSelf: boolean
+        level: number
+        lifeCountEnabled: boolean
+        particleAnimation: unknown
+        particleTrack: unknown
+        points: number
+        startPositionSlot: number
+        teamNumber: null
+        _groupNumber: number
+        _host: boolean
+        _inGame: boolean
+        _name: string
+      }
+    >
+  }
+
+  declare const quizVideoController: {
+    currentMoePlayerId: string
+    moePlayers: Record<
+      string,
+      {
+        $player: JQuery
+        startPoint: number
+      }
+    >
+  }
+
+  declare const options: {
+    $SETTING_TABS: JQuery
+    $SETTING_CONTAINERS: JQuery
+  }
+}
+
+export type AnswerResultsPayload = {
+  players: {
+    correctGuesses: number
+    answerNumber: number | undefined
+    gamePlayerId: number
+    pose: number
+    level: number
+    correct: boolean
+    score: number
+    listStatus: number
+    showScore: number
+    position: number
+    positionSlot: number
+  }[]
+  songInfo: {
+    animeNames: { english: string; romaji: string }
+    artist: string
+    songName: string
+    urlMap: {
+      catbox?: { 0?: string; 480?: string; 720?: string }
+      openingsmoe?: { 0?: string; 480?: string; 720?: string }
+    }
+    type: number
+    typeNumber: number
+    annId: number
+    highRisk: number
+    animeScore: number
+    animeType: string
+    vintage: string
+    animeDifficulty: number
+    animeTags: string[]
+    animeGenre: string[]
+    altAnimeNames: string[]
+    altAnimeNamesAnswers: string[]
+    siteIds: { annId: number; malId: number; kitsuId: number; aniListId: number }
+  }
+  progressBarState: { length: number; played: number }
+  groupMap: Record<string, number[]>
+  watched: boolean
+}
+
+// https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
+declare global {
+  declare function AMQ_createInstalledWindow(): void
+  declare function AMQ_addScriptData(metadata: { name: string; author: string; description: string }): void
+  declare function AMQ_addStyle(css: string): void
+}
+
+// https://github.com/amq-script-project/AMQ-Scripts/raw/master/gameplay/amqAnswerTimesUtility.user.js
+declare global {
+  declare const amqAnswerTimesUtility: {
+    songStartTime: number
+    playerTimes: number[]
+  }
+}

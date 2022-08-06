@@ -25,6 +25,7 @@
     "@slashnephy/prettier-config": "0.1.1",
     "@types/babel__core": "7.1.19",
     "@types/babel__preset-env": "7.9.2",
+    "@types/jquery": "^3.5.14",
     "@types/tampermonkey": "4.0.5",
     "concurrently": "7.3.0",
     "eslint": "8.21.0",
