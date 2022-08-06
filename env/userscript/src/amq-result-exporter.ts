@@ -88,6 +88,7 @@ const handle = (payload: AnswerResultsPayload) => {
           return p1name.localeCompare(p2name)
         })
         .map((p) => ({
+          status: p.listStatus,
           id: p.gamePlayerId,
           name: quiz.players[p.gamePlayerId]._name,
           score: p.score,
@@ -137,6 +138,11 @@ const handle = (payload: AnswerResultsPayload) => {
       .map((p) => p.name)
       .join('\n'),
     result.players.items.map((p) => p.name).join('\n'),
+    selfResult?.status ?? 0,
+    result.players.items
+      .filter((p) => p.status)
+      .map((p) => p.name)
+      .join('\n'),
   ]
   executeGas(row).catch(console.error)
 }

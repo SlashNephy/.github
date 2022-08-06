@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AMQ Result Exporter
 // @namespace    https://tampermonkey.net/
-// @version      0.1.0
+// @version      0.1.1
 // @description  Export song results to Google Spreadsheet!
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://animemusicquiz.com/
@@ -112,6 +112,7 @@ const handle = (payload) => {
                 return p1name.localeCompare(p2name);
             })
                 .map((p) => ({
+                status: p.listStatus,
                 id: p.gamePlayerId,
                 name: quiz.players[p.gamePlayerId]._name,
                 score: p.score,
@@ -159,6 +160,11 @@ const handle = (payload) => {
             .map((p) => p.name)
             .join('\n'),
         result.players.items.map((p) => p.name).join('\n'),
+        selfResult?.status ?? 0,
+        result.players.items
+            .filter((p) => p.status)
+            .map((p) => p.name)
+            .join('\n'),
     ];
     executeGas(row).catch(console.error);
 };

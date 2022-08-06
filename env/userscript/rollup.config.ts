@@ -51,7 +51,7 @@ const config: RollupOptions[] = [
   buildOptions({
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.1.0',
+    version: '0.1.1',
     description: 'Export song results to Google Spreadsheet!',
     author: 'SlashNephy <spica@starry.blue>',
     match: 'https://animemusicquiz.com/',
