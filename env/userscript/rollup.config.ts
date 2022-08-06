@@ -10,7 +10,7 @@ const config: RollupOptions[] = [
     description: 'しょぼいカレンダー、MyAnimeList、AniList に対応しています。',
     author: 'SlashNephy <spica@starry.blue>',
     match: 'https://annict.com/works/*',
-    connect: 'raw.githubusercontent.com',
+    connect: ['raw.githubusercontent.com'],
     grant: 'GM_xmlhttpRequest',
   }),
   buildOptions({
@@ -47,6 +47,21 @@ const config: RollupOptions[] = [
     match: 'https://animemusicquiz.com/',
     requires: ['https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
+  }),
+  buildOptions({
+    id: 'amq-result-exporter',
+    name: 'AMQ Result Exporter',
+    version: '0.1.0',
+    description: 'Export song results to Google Spreadsheet!',
+    author: 'SlashNephy <spica@starry.blue>',
+    match: 'https://animemusicquiz.com/',
+    requires: [
+      'https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js',
+      'https://raw.githubusercontent.com/amq-script-project/AMQ-Scripts/master/gameplay/amqAnswerTimesUtility.user.js',
+    ],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    connect: ['script.google.com', 'raw.githubusercontent.com'],
+    grant: 'GM_xmlhttpRequest',
   }),
 ]
 
