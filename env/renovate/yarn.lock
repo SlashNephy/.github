@@ -1642,14 +1642,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnpm/read-project-manifest@npm:3.0.7":
-  version: 3.0.7
-  resolution: "@pnpm/read-project-manifest@npm:3.0.7"
+"@pnpm/read-project-manifest@npm:3.0.8":
+  version: 3.0.8
+  resolution: "@pnpm/read-project-manifest@npm:3.0.8"
   dependencies:
     "@pnpm/error": 3.0.1
     "@pnpm/graceful-fs": 2.0.0
-    "@pnpm/types": 8.4.0
-    "@pnpm/write-project-manifest": 3.0.5
+    "@pnpm/types": 8.5.0
+    "@pnpm/write-project-manifest": 3.0.6
     detect-indent: ^6.1.0
     fast-deep-equal: ^3.1.3
     is-windows: ^1.0.2
@@ -1658,26 +1658,26 @@ __metadata:
     read-yaml-file: ^2.1.0
     sort-keys: ^4.2.0
     strip-bom: ^4.0.0
-  checksum: 3c4565fb537c42f6801f6ee5caa56449489c78922f68badd613780e419f92a76f16ddbbc6aa85263f755c723959dcdd4b4564d39d7fe9625efc9006932e1fe16
+  checksum: f2d6726790fb27e64a021ab4d6a3eb420fed3494f8949bc08fbc1141be519bfa7a8f344b7903d9f724795e78d86c41020b13a0a4ae9da8e6cfa185bbbe18633d
   languageName: node
   linkType: hard
 
-"@pnpm/types@npm:8.4.0":
-  version: 8.4.0
-  resolution: "@pnpm/types@npm:8.4.0"
-  checksum: f25663279299fef2718e73f2c859488c0e310d67aeebe925edb65642ba53e64d9a65c7980e60b7445e409928bf0544aa3bdcb6540b25f1d045ae11f969fe3977
+"@pnpm/types@npm:8.5.0":
+  version: 8.5.0
+  resolution: "@pnpm/types@npm:8.5.0"
+  checksum: 53048f237711cd24e73dfe6b1d3e450b392c82e276ebfc240cdda42346fc607d11a1939fa60d0b65e3c0e0867a194fd3734b588ebd236424c46b272cbbea4fee
   languageName: node
   linkType: hard
 
-"@pnpm/write-project-manifest@npm:3.0.5":
-  version: 3.0.5
-  resolution: "@pnpm/write-project-manifest@npm:3.0.5"
+"@pnpm/write-project-manifest@npm:3.0.6":
+  version: 3.0.6
+  resolution: "@pnpm/write-project-manifest@npm:3.0.6"
   dependencies:
-    "@pnpm/types": 8.4.0
-    json5: ^2.1.3
+    "@pnpm/types": 8.5.0
+    json5: ^2.2.1
     write-file-atomic: ^3.0.3
     write-yaml-file: ^4.2.0
-  checksum: 74f83b6229567ad3121e75769eaa041ec17eb4eeb8e148c559c1914b619a9b4a1543a7a00358206ddb92996903ac33bb86b16898d1739adef05f162685e5dc37
+  checksum: dc757ea7738221750e76125e8268a416ff250ca7b65807de4ef4375c49f74742f771dcd838182196deb6a824609889d40421c5a1855047bf83dedd0e808b59c3
   languageName: node
   linkType: hard
 
@@ -1834,7 +1834,7 @@ __metadata:
     eslint: 8.21.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.151.1
+    renovate: 32.151.2
     ts-node: 10.9.1
     typescript: 4.7.4
   languageName: unknown
@@ -4353,15 +4353,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-packages@npm:9.0.7":
-  version: 9.0.7
-  resolution: "find-packages@npm:9.0.7"
+"find-packages@npm:9.0.8":
+  version: 9.0.8
+  resolution: "find-packages@npm:9.0.8"
   dependencies:
-    "@pnpm/read-project-manifest": 3.0.7
-    "@pnpm/types": 8.4.0
+    "@pnpm/read-project-manifest": 3.0.8
+    "@pnpm/types": 8.5.0
     fast-glob: ^3.2.11
     p-filter: ^2.1.0
-  checksum: 487826e0a2e5c1a8403c58f1b12d957855c504a17eed45a723235c8a85f5a6d03143d004e622c5c03605891e59a732fe3311ce66e9eada56d2f06639f3175656
+  checksum: 21b00d4efbc992dce43d0134e9eac208a3826b14aed75079ca45c0090bfc5d01d13563b607941238aafdda3949f4f8c308f5990bdbd1d2ee6e877016b7b2d9db
   languageName: node
   linkType: hard
 
@@ -5475,7 +5475,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:2.2.1, json5@npm:^2.1.3, json5@npm:^2.2.1":
+"json5@npm:2.2.1, json5@npm:^2.2.1":
   version: 2.2.1
   resolution: "json5@npm:2.2.1"
   bin:
@@ -7003,9 +7003,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.151.1":
-  version: 32.151.1
-  resolution: "renovate@npm:32.151.1"
+"renovate@npm:32.151.2":
+  version: 32.151.2
+  resolution: "renovate@npm:32.151.2"
   dependencies:
     "@aws-sdk/client-ec2": 3.112.0
     "@aws-sdk/client-ecr": 3.112.0
@@ -7041,7 +7041,7 @@ __metadata:
     emojibase-regex: 6.0.1
     extract-zip: 2.0.1
     fast-safe-stringify: 2.1.1
-    find-packages: 9.0.7
+    find-packages: 9.0.8
     find-up: 5.0.0
     fs-extra: 10.1.0
     git-url-parse: 12.0.0
@@ -7094,7 +7094,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 7d225e92cfd3ad7e6d70d4e2ca16f814be055e80de5962537d17e47e9179e9fbf03043bd4805e94d47f2dba6f6a96c21b61dc4a83ee6153c0ae236e765a42aea
+  checksum: 4f3923ff4f56988cd9f6366ae6eae15434888fe252bb611a5cd824b44588b2cc4008d1aca4b695bab5fb69540a9ed19f6414c4ae6eb5fec6a7878dcbb02cce37
   languageName: node
   linkType: hard
 
