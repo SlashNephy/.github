@@ -1834,7 +1834,7 @@ __metadata:
     eslint: 8.21.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.150.4
+    renovate: 32.151.0
     ts-node: 10.9.1
     typescript: 4.7.4
   languageName: unknown
@@ -4744,15 +4744,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"good-enough-parser@npm:1.1.10":
-  version: 1.1.10
-  resolution: "good-enough-parser@npm:1.1.10"
+"good-enough-parser@npm:1.1.14":
+  version: 1.1.14
+  resolution: "good-enough-parser@npm:1.1.14"
   dependencies:
     "@thi.ng/zipper": 1.0.3
     "@types/moo": 0.5.5
     klona: 2.0.5
     moo: 0.5.1
-  checksum: 181cf9daf25fa70735618bd03b634edcb1aa69da955aa1a810e6d215a537db636e3d89fb5743c5591f7f266427610ed1d5c44864a82767f8eed47498728d1540
+  checksum: bd3584b0fef2bc8617f2b22e357208457e6f028ce22ceba4f7b33481ba3a7ed148ade309b9d9a4f330511e58197f3645748318bb9312aae5d88e420af097de63
   languageName: node
   linkType: hard
 
@@ -7003,9 +7003,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.150.4":
-  version: 32.150.4
-  resolution: "renovate@npm:32.150.4"
+"renovate@npm:32.151.0":
+  version: 32.151.0
+  resolution: "renovate@npm:32.151.0"
   dependencies:
     "@aws-sdk/client-ec2": 3.112.0
     "@aws-sdk/client-ecr": 3.112.0
@@ -7047,7 +7047,7 @@ __metadata:
     git-url-parse: 12.0.0
     github-url-from-git: 1.5.0
     global-agent: 3.0.0
-    good-enough-parser: 1.1.10
+    good-enough-parser: 1.1.14
     got: 11.8.5
     graph-data-structure: 2.0.0
     handlebars: 4.7.7
@@ -7094,7 +7094,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 1cada0d6e4b1648dcd211368ff8a37c562c7c4abd5ca4cc576ea27207367951c320148de16d78cbb3e5198e7f871c2803b511e8b0a4c06302965e74002ab192c
+  checksum: b7ebfc77c3b229f7b70e18914daf2904bf0bd03004697634cdcc5f2c1c1bbec90ae8b9ffc3b085b555796966a97b60f262ec60a31381d44b15d43b25fc995509
   languageName: node
   linkType: hard
 
