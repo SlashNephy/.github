@@ -14,12 +14,6 @@ Host lily.starry.blue
   User spica
   Port 3340
 
-Host cattleya.starry.blue
-  User spica
-
-Host kalmia.starry.blue
-  User slashnephy
-
 Host ssh.starry.blue
   User spica
   ProxyCommand cloudflared access ssh --hostname %h
