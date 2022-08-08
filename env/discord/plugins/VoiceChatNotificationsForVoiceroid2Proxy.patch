@@ -1,10 +1,10 @@
---- VoiceChatNotifications.plugin.js	2022-06-02 10:08:15.162709702 +0900
-+++ VoiceChatNotificationsForVoiceroid2Proxy.plugin.js	2022-06-03 19:08:44.411694721 +0900
+--- VoiceChatNotifications.plugin.js	2022-08-08 15:47:00.593549539 +0900
++++ VoiceChatNotificationsForVoiceroid2Proxy.plugin.js	2022-08-08 19:27:24.372956632 +0900
 @@ -1,14 +1,14 @@
  /**
 - * @name VoiceChatNotifications
 + * @name VoiceChatNotificationsForVoiceroid2Proxy
-  * @version 1.2.2
+  * @version 1.2.3
 - * @description Shows you certain events from voicechats in a logs panel or as desktop notification.
 - * @author Strencher
 - * @source https://github.com/Strencher/BetterDiscordStuff/tree/master/VoiceChatNotifications
@@ -27,7 +27,7 @@
  	"info": {
 -		"name": "VoiceChatNotifications",
 +		"name": "VoiceChatNotificationsForVoiceroid2Proxy",
- 		"version": "1.2.2",
+ 		"version": "1.2.3",
 -		"description": "Shows you certain events from voicechats in a logs panel or as desktop notification.",
 +		"description": "Modified version of Strencher's VoiceChatNotifications: Supports Voiceroid2Proxy to speak messages via VOICEROID2.",
  		"authors": [{
@@ -45,7 +45,7 @@
  	},
  	"changelog": [{
  		"type": "fixed",
-@@ -518,7 +518,7 @@
+@@ -507,7 +507,7 @@
  					this.settings = external_PluginApi_namespaceObject.PluginUtilities.loadSettings(pluginName, defaultSettings);
  				}
  			}
@@ -54,7 +54,7 @@
  			const Settings = new SettingsManager(package_namespaceObject.um.u2, {});
  			const settings = Settings;
  			var notification = __webpack_require__(713);
-@@ -611,32 +611,32 @@
+@@ -600,32 +600,32 @@
  				VOICE_STATES: {
  					deaf: {
  						setting: "serverDeaf",
@@ -93,7 +93,7 @@
  						description: "Fires if someone stopps/starts screensharing."
  					}
  				}
-@@ -999,6 +999,11 @@
+@@ -944,6 +944,11 @@
  							let user = stores_namespaceObject.Users.getUser(update.userId) || {};
  							if (settings.get("ignoreSelf", false) && user.id === stores_namespaceObject.Users.getCurrentUser().id) return;
  							const pushToLog = message => {
@@ -105,7 +105,7 @@
  								const timestamp = new classes_namespaceObject.Timestamp(new Date);
  								const log = {
  									user,
-@@ -1015,12 +1020,12 @@
+@@ -960,12 +965,12 @@
  								}));
  							};
  							if (this.lastStates[update.userId] && !update.channelId && settings.get("leave", true)) {
@@ -120,10 +120,3 @@
  								this.lastStates[update.userId] = update;
  							} else {
  								if (_.isEqual(this.lastStates[update.userId], update)) return;
-@@ -1197,4 +1202,4 @@
- 		start() {}
- 		stop() {}
- 	};
--/*@end@*/
-\ No newline at end of file
-+/*@end@*/
