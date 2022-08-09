@@ -8,6 +8,7 @@
   "scripts": {
     "build": "tsc",
     "bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "watch": "yarn bundle -w",
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",

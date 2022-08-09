@@ -6,10 +6,10 @@ const config: RollupOptions[] = [
   buildOptions({
     id: 'annict-work-links',
     name: 'Annict Work Links',
-    version: '0.2.1',
-    description: 'しょぼいカレンダー、MyAnimeList、AniList に対応しています。',
+    version: '0.2.2',
+    description: 'Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。',
     author: 'SlashNephy <spica@starry.blue>',
-    match: 'https://annict.com/works/*',
+    match: 'https://annict.com/*',
     connect: ['raw.githubusercontent.com'],
     grant: 'GM_xmlhttpRequest',
     icon: 'https://www.google.com/s2/favicons?sz=64&domain=annict.com',
@@ -75,6 +75,15 @@ const config: RollupOptions[] = [
     author: 'SlashNephy <spica@starry.blue>',
     match: 'https://google.com/url?q=*',
     icon: 'https://www.google.com/s2/favicons?sz=64&domain=google.com',
+  }),
+  buildOptions({
+    id: 'annict-hide-future-programs',
+    name: 'Annict Hide Future Programs',
+    version: '0.1.0',
+    description: 'Annict の「記録するページ」で翌日以降の番組や放送予定が未記入の番組を非表示にします。',
+    author: 'SlashNephy <spica@starry.blue>',
+    match: 'https://annict.com/*',
+    icon: 'https://www.google.com/s2/favicons?sz=64&domain=annict.com',
   }),
 ]
 
