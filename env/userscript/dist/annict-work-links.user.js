@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Annict Work Links
 // @namespace    https://tampermonkey.net/
-// @version      0.2.1
-// @description  しょぼいカレンダー、MyAnimeList、AniList に対応しています。
+// @version      0.2.2
+// @description  Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。
 // @author       SlashNephy <spica@starry.blue>
-// @match        https://annict.com/works/*
+// @match        https://annict.com/*
 // @license      MIT license
 // @grant        GM_xmlhttpRequest
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js
@@ -78,6 +78,7 @@ const main = async () => {
         links.appendChild(link);
     }
 };
+main().catch(console.error);
 window.addEventListener('turbo:load', () => {
     main().catch(console.error);
 });
