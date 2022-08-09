@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         FF14Angler Bypass AdBlock Check
 // @namespace    https://tampermonkey.net/
-// @version      0.2.0
+// @version      0.2.1
 // @description  FF14Angler の AdBlock チェックを無効にします。
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://*.ff14angler.com/*
@@ -9,6 +9,7 @@
 // @grant        none
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=jp.ff14angler.com
 // @run-at       document-body
 // ==/UserScript==
 document.head.className = 'adsbygoogle';
