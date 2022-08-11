@@ -7,6 +7,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "k1low/tap"
 tap "minacle/chntpw"
 tap "reviewdog/tap"
 tap "romkatv/powerlevel10k"
@@ -32,10 +33,16 @@ brew "awscli"
 brew "awslogs"
 # Programmable completion for Bash 3.2
 brew "bash-completion"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # GNU binary tools for native development
 brew "binutils"
+# New way to see and navigate directory trees
+brew "broot"
 # Extract files from Microsoft cabinet files
 brew "cabextract"
+# Core application library for C
+brew "glib"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # CD/DVD/Blu-ray premastering and recording software
@@ -48,6 +55,8 @@ brew "cloudflared"
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Open source suite of directory software
+brew "openldap"
 # Tool for downloading RTMP streaming media
 brew "rtmpdump"
 # File comparison utilities
@@ -58,6 +67,10 @@ brew "docker-completion", link: false
 brew "docker-compose"
 # Command-line DNS client
 brew "dog"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Collection of GNU find, xargs, and locate
@@ -84,6 +97,8 @@ brew "openjdk"
 brew "gradle"
 # GNU grep, egrep and fgrep
 brew "grep"
+# Next generation open source RPC library and framework
+brew "grpc"
 # Popular GNU data compression program
 brew "gzip"
 # Smarter Dockerfile linter to validate best practices
@@ -140,6 +155,10 @@ brew "nvm"
 brew "oauth2_proxy"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
+# Command-line tool to generate, analyze, convert and manipulate colors
+brew "pastel"
+# Command-line tools for MySQL, MariaDB and system tasks
+brew "percona-toolkit"
 # Highly capable, feature-rich programming language
 brew "perl"
 # General-purpose scripting language
@@ -152,6 +171,8 @@ brew "progress"
 brew "rbenv"
 # Rsync for cloud storage
 brew "rclone"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
 # Display and control your Android device
@@ -188,6 +209,8 @@ brew "winetricks"
 brew "yamllint"
 # JavaScript package manager
 brew "yarn"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
 # Next-generation plugin manager for zsh
 brew "zplug"
 # UNIX shell (command interpreter)
@@ -200,6 +223,8 @@ brew "zsh-completions"
 brew "zsh-fast-syntax-highlighting"
 # TUI Twitter client 🐈
 brew "arrow2nd/tap/nekome"
+# tbls is a CI-Friendly tool for document a database, written in Go.
+brew "k1low/tap/tbls"
 # The Offline NT Password Editor
 brew "minacle/chntpw/chntpw"
 # Automated code review tool integrated with any code analysis tools regardless of programming language.
@@ -249,6 +274,8 @@ cask "discord-canary"
 cask "discord-ptb"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Launcher for *Epic Games* games
+cask "epic-games"
 # Web browser
 cask "firefox"
 cask "font-source-code-pro"
@@ -304,6 +331,8 @@ cask "microsoft-office"
 cask "miraktest"
 # Open source implementation of Microsoft's .NET Framework
 cask "mono-mdk-for-visual-studio"
+# Visual tool to design, develop and administer MySQL servers
+cask "mysqlworkbench"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Desktop virtualization software

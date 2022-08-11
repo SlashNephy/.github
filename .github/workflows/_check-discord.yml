@@ -6,10 +6,9 @@ on:
       - 'master'
     paths:
       - 'env/discord/**'
+      - '!env/discord/plugins/**'
+      - '!env/discord/themes/**'
       - '.github/workflows/_check-discord.yml'
-    paths-ignore:
-      - 'env/discord/plugins/**'
-      - 'env/discord/themes/**'
 
   pull_request:
     types:
