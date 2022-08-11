@@ -7,10 +7,10 @@
 // @match        https://animemusicquiz.com/
 // @license      MIT license
 // @grant        none
-// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js
-// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js
 // @icon         https://animemusicquiz.com/favicon-32x32.png
 // @require      https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
+// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js
+// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js
 // ==/UserScript==
 document.addEventListener('DOMNodeInserted', () => {
     for (const element of document.querySelectorAll('video')) {

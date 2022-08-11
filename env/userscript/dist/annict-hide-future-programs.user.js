@@ -7,9 +7,9 @@
 // @match        https://annict.com/*
 // @license      MIT license
 // @grant        none
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=annict.com
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=annict.com
 // ==/UserScript==
 const main = () => {
     if (!location.href.startsWith('https://annict.com/track')) {

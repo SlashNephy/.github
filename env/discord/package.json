@@ -1,0 +1,53 @@
+{
+  "name": "@slashnephy/discord",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/SlashNephy/.github",
+    "directory": "env/discord"
+  },
+  "scripts": {
+    "build": "tsc",
+    "bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "watch": "yarn bundle -w",
+    "lint": "concurrently -n lint: 'yarn:lint:*'",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "format": "concurrently -n format: 'yarn:format:*'",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "yarn lint:prettier --write"
+  },
+  "devDependencies": {
+    "@babel/core": "7.18.10",
+    "@babel/preset-env": "7.18.10",
+    "@babel/preset-typescript": "7.18.6",
+    "@rollup/plugin-babel": "5.3.1",
+    "@rollup/plugin-typescript": "8.3.4",
+    "@slashnephy/eslint-config": "0.1.7",
+    "@slashnephy/prettier-config": "0.1.1",
+    "@types/babel__core": "7.1.19",
+    "@types/babel__preset-env": "7.9.2",
+    "concurrently": "7.3.0",
+    "eslint": "8.21.0",
+    "prettier": "2.7.1",
+    "rollup": "2.77.2",
+    "typescript": "4.7.4"
+  },
+  "packageManager": "yarn@3.2.2",
+  "eslintConfig": {
+    "extends": [
+      "@slashnephy/eslint-config"
+    ],
+    "overrides": [
+      {
+        "files": "rollup.config.ts",
+        "rules": {
+          "import/no-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "Chrome 91.0.4472.164",
+    "Electron 13.6.6"
+  ]
+}
