@@ -7,9 +7,9 @@
 // @match        https://google.com/url?q=*
 // @license      MIT license
 // @grant        none
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=google.com
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=google.com
 // ==/UserScript==
 const anchor = document.querySelector('body > div > a');
 if (anchor) {

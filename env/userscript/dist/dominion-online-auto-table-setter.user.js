@@ -7,9 +7,9 @@
 // @match        https://dominion.games/
 // @license      MIT license
 // @grant        none
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=dominion.games
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=dominion.games
 // ==/UserScript==
 const updateSettings = () => {
     document.querySelector('button[ng-click="$ctrl.switchView()"]')?.click();

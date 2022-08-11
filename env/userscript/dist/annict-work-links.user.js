@@ -7,10 +7,10 @@
 // @match        https://annict.com/*
 // @license      MIT license
 // @grant        GM_xmlhttpRequest
-// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js
-// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=annict.com
 // @connect      raw.githubusercontent.com
+// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js
+// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js
 // ==/UserScript==
 const executeXhr = async (request) => {
     return new Promise((resolve, reject) => {

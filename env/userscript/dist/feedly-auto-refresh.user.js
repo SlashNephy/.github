@@ -7,9 +7,9 @@
 // @match        https://feedly.com/i/collection/*
 // @license      MIT license
 // @grant        none
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=feedly.com
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=feedly.com
 // ==/UserScript==
 setInterval(() => {
     const element = document.querySelector('button.icon-toolbar-refresh-secondary');

@@ -7,13 +7,13 @@
 // @match        https://animemusicquiz.com/
 // @license      MIT license
 // @grant        GM_xmlhttpRequest
-// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js
-// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js
 // @icon         https://animemusicquiz.com/favicon-32x32.png
 // @connect      script.google.com
 // @connect      raw.githubusercontent.com
 // @require      https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
 // @require      https://raw.githubusercontent.com/amq-script-project/AMQ-Scripts/master/gameplay/amqAnswerTimesUtility.user.js
+// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js
+// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js
 // ==/UserScript==
 const executeXhr = async (request) => {
     return new Promise((resolve, reject) => {

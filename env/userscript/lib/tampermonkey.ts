@@ -37,7 +37,7 @@ export type Banner = {
 }
 
 const buildBanner = (banner: Banner): string => {
-  const lines: string[] = [
+  const lines: (string | string[] | undefined)[] = [
     '// ==UserScript==',
     `// @name         ${banner.name}`,
     `// @namespace    ${banner.namespace ?? 'https://tampermonkey.net/'}`,
@@ -47,36 +47,24 @@ const buildBanner = (banner: Banner): string => {
     `// @match        ${banner.match}`,
     `// @license      ${banner.license ?? 'MIT license'}`,
     `// @grant        ${banner.grant ?? 'none'}`,
+    banner.icon && `// @icon         ${banner.icon}`,
+    banner.connect?.map((x) => `// @connect      ${x}`),
+    banner.runAt && `// @run-at       ${banner.runAt}`,
+    banner.includes?.map((x) => `// @include      ${x}`),
+    banner.requires?.map((x) => `// @require      ${x}`),
     `// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${banner.id}.user.js`,
     `// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${banner.id}.user.js`,
+    '// ==/UserScript==',
   ]
 
-  if (banner.icon) {
-    lines.push(`// @icon         ${banner.icon}`)
-  }
-
-  if (banner.connect) {
-    for (const connect of banner.connect) {
-      lines.push(`// @connect      ${connect}`)
-    }
-  }
-
-  if (banner.runAt) {
-    lines.push(`// @run-at       ${banner.runAt}`)
-  }
-
-  if (banner.includes) {
-    for (const include of banner.includes) {
-      lines.push(`// @include      ${include}`)
-    }
-  }
-
-  if (banner.requires) {
-    for (const require of banner.requires) {
-      lines.push(`// @require      ${require}`)
-    }
-  }
-
-  lines.push('// ==/UserScript==')
-  return lines.join('\n')
+  return lines
+    .filter((line) => line)
+    .map((line) => {
+      if (Array.isArray(line)) {
+        return line.join('\n')
+      } else {
+        return line
+      }
+    })
+    .join('\n')
 }

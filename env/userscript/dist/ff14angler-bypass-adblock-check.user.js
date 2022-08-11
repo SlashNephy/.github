@@ -7,10 +7,10 @@
 // @match        https://*.ff14angler.com/*
 // @license      MIT license
 // @grant        none
-// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js
-// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=jp.ff14angler.com
 // @run-at       document-body
+// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js
+// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js
 // ==/UserScript==
 document.head.className = 'adsbygoogle';
 unsafeWindow.$.prototype.remove = () => void 0;
