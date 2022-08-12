@@ -1642,14 +1642,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnpm/read-project-manifest@npm:3.0.8":
-  version: 3.0.8
-  resolution: "@pnpm/read-project-manifest@npm:3.0.8"
+"@pnpm/read-project-manifest@npm:3.0.9":
+  version: 3.0.9
+  resolution: "@pnpm/read-project-manifest@npm:3.0.9"
   dependencies:
     "@pnpm/error": 3.0.1
     "@pnpm/graceful-fs": 2.0.0
     "@pnpm/types": 8.5.0
-    "@pnpm/write-project-manifest": 3.0.6
+    "@pnpm/write-project-manifest": 3.0.7
     detect-indent: ^6.1.0
     fast-deep-equal: ^3.1.3
     is-windows: ^1.0.2
@@ -1658,7 +1658,7 @@ __metadata:
     read-yaml-file: ^2.1.0
     sort-keys: ^4.2.0
     strip-bom: ^4.0.0
-  checksum: f2d6726790fb27e64a021ab4d6a3eb420fed3494f8949bc08fbc1141be519bfa7a8f344b7903d9f724795e78d86c41020b13a0a4ae9da8e6cfa185bbbe18633d
+  checksum: eadf56956a48e67b9603a056169437d689d752a1c901096016102721f2ff428bfee60c71b2ad6c0814388807e2e76463a37c4d2831c2b1377a1fcf2b85589955
   languageName: node
   linkType: hard
 
@@ -1669,15 +1669,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnpm/write-project-manifest@npm:3.0.6":
-  version: 3.0.6
-  resolution: "@pnpm/write-project-manifest@npm:3.0.6"
+"@pnpm/write-project-manifest@npm:3.0.7":
+  version: 3.0.7
+  resolution: "@pnpm/write-project-manifest@npm:3.0.7"
   dependencies:
     "@pnpm/types": 8.5.0
     json5: ^2.2.1
     write-file-atomic: ^3.0.3
     write-yaml-file: ^4.2.0
-  checksum: dc757ea7738221750e76125e8268a416ff250ca7b65807de4ef4375c49f74742f771dcd838182196deb6a824609889d40421c5a1855047bf83dedd0e808b59c3
+  checksum: 2893e1a701735a6bf257fe2617ecc6a0b0915f105a59682464b74b3f1044c909236d79ca5852ede5fb2489cc94f237a8535b0c3097e955497f0fde4208defe93
   languageName: node
   linkType: hard
 
@@ -1834,7 +1834,7 @@ __metadata:
     eslint: 8.21.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.151.2
+    renovate: 32.159.0
     ts-node: 10.9.1
     typescript: 4.7.4
   languageName: unknown
@@ -4353,15 +4353,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-packages@npm:9.0.8":
-  version: 9.0.8
-  resolution: "find-packages@npm:9.0.8"
+"find-packages@npm:9.0.9":
+  version: 9.0.9
+  resolution: "find-packages@npm:9.0.9"
   dependencies:
-    "@pnpm/read-project-manifest": 3.0.8
+    "@pnpm/read-project-manifest": 3.0.9
     "@pnpm/types": 8.5.0
     fast-glob: ^3.2.11
     p-filter: ^2.1.0
-  checksum: 21b00d4efbc992dce43d0134e9eac208a3826b14aed75079ca45c0090bfc5d01d13563b607941238aafdda3949f4f8c308f5990bdbd1d2ee6e877016b7b2d9db
+  checksum: e392c6d929a3f6b45d0513d5dc8085fa8dd6b3910b11cdcbf275218e820d333ec303d59dd6597d9d53eed079289a88935811bda7226188a0a3616f0dcd1af9e8
   languageName: node
   linkType: hard
 
@@ -4744,15 +4744,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"good-enough-parser@npm:1.1.14":
-  version: 1.1.14
-  resolution: "good-enough-parser@npm:1.1.14"
+"good-enough-parser@npm:1.1.18":
+  version: 1.1.18
+  resolution: "good-enough-parser@npm:1.1.18"
   dependencies:
     "@thi.ng/zipper": 1.0.3
     "@types/moo": 0.5.5
     klona: 2.0.5
     moo: 0.5.1
-  checksum: bd3584b0fef2bc8617f2b22e357208457e6f028ce22ceba4f7b33481ba3a7ed148ade309b9d9a4f330511e58197f3645748318bb9312aae5d88e420af097de63
+  checksum: f08083913824ade622a4e2e3420895beed741a47cb3cbdfdb15ae5719d0e5141fea83b7fe74744b0cdee009487ec6b742e17124d5ecfac2e1c31cd6edb37b1d2
   languageName: node
   linkType: hard
 
@@ -7003,9 +7003,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.151.2":
-  version: 32.151.2
-  resolution: "renovate@npm:32.151.2"
+"renovate@npm:32.159.0":
+  version: 32.159.0
+  resolution: "renovate@npm:32.159.0"
   dependencies:
     "@aws-sdk/client-ec2": 3.112.0
     "@aws-sdk/client-ecr": 3.112.0
@@ -7041,13 +7041,13 @@ __metadata:
     emojibase-regex: 6.0.1
     extract-zip: 2.0.1
     fast-safe-stringify: 2.1.1
-    find-packages: 9.0.8
+    find-packages: 9.0.9
     find-up: 5.0.0
     fs-extra: 10.1.0
     git-url-parse: 12.0.0
     github-url-from-git: 1.5.0
     global-agent: 3.0.0
-    good-enough-parser: 1.1.14
+    good-enough-parser: 1.1.18
     got: 11.8.5
     graph-data-structure: 2.0.0
     handlebars: 4.7.7
@@ -7094,7 +7094,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 4f3923ff4f56988cd9f6366ae6eae15434888fe252bb611a5cd824b44588b2cc4008d1aca4b695bab5fb69540a9ed19f6414c4ae6eb5fec6a7878dcbb02cce37
+  checksum: c8262ec4484c7b48ae9fd8b1828e236b044137e32940f4b697dd8a2ec9b3cad93e71894813c732ac68510c567af7cbe3d7b9be10efae1ccc9bc7444f54a2dbe2
   languageName: node
   linkType: hard
 
