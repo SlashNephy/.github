@@ -10,8 +10,9 @@ on:
 
 jobs:
   build:
-    uses: SlashNephy/.github/.github/workflows/gradle-run.yml@master
+    uses: SlashNephy/.github/.github/workflows/cargo-run.yml@master
     permissions:
       contents: 'read'
     with:
-      task: 'build'
+      command: 'build'
+      args: '--release'
