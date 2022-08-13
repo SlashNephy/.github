@@ -1,0 +1,71 @@
+name: 'cargo run'
+
+on:
+  workflow_call:
+    inputs:
+      toolchain-version:
+        required: false
+        type: string
+        default: stable
+      working-directory:
+        required: false
+        type: string
+        default: '.'
+      pre-command:
+        required: false
+        type: string
+        default: ''
+      pre-args:
+        required: false
+        type: string
+        default: ''
+      command:
+        required: true
+        type: string
+      args:
+        required: false
+        type: string
+        default: ''
+      post-command:
+        required: false
+        type: string
+        default: ''
+      post-args:
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: 'read'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: '${{ inputs.toolchain-version }}'
+
+      - name: Run Pre-Command
+        if: inputs.pre-command != ''
+        uses: actions-rs/cargo@v1
+        with:
+          command: '${{ inputs.pre-command }}'
+          args: '${{ inputs.pre-args }}'
+
+      - name: Run Command
+        uses: actions-rs/cargo@v1
+        with:
+          command: '${{ inputs.command }}'
+          args: '${{ inputs.args }}'
+
+      - name: Run Post-Command
+        if: inputs.post-command != ''
+        uses: actions-rs/cargo@v1
+        with:
+          command: '${{ inputs.post-command }}'
+          args: '${{ inputs.post-args }}'
