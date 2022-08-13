@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "stylelint-config-property-sort-order-smacss": "9.0.0",
-    "stylelint-config-recommended": "8.0.0"
+    "stylelint-config-recommended": "9.0.0"
   },
   "peerDependencies": {
     "stylelint": "^14"
