@@ -1,7 +1,6 @@
 {
 	"all": {
 		"blacklist": [],
-		"categorydata": [],
 		"channels": {
 			"GUILD_CATEGORY": true,
 			"GUILD_TEXT": true,
