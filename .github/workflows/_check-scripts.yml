@@ -1,10 +1,10 @@
-name: 'Check scripts'
+name: 'Check script'
 
 on:
   push:
     paths:
-      - 'scripts/**/*.sh'
-      - '.github/workflows/_check-scripts.yml'
+      - 'script/**/*.sh'
+      - '.github/workflows/_check-script.yml'
 
   pull_request:
     types:
@@ -30,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Test
-        run: bash ~/.github/scripts/install.sh
+        run: bash ~/.github/script/install.sh
         env:
           HOME: ..
 
@@ -40,7 +40,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Test
-        run: bash ~/.github/scripts/install.sh
+        run: bash ~/.github/script/install.sh
         env:
           HOME: ..
 
@@ -51,6 +51,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Test
         shell: powershell
-        run: .\scripts\install.ps1
+        run: .\script\install.ps1
         env:
           USERPROFILE: ..
