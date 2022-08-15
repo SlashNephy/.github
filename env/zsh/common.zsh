@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source "$HOME/.github/scripts/paths.sh"
+source "$HOME/.github/script/paths.sh"
 
 for script in "$ENV_DIR"/zsh/common/**/*.zsh; do
   # shellcheck disable=SC1090

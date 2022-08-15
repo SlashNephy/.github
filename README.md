@@ -6,8 +6,8 @@ My dotfiles and GitHub Action workflows collection
 
 - `env`
   - My dotfiles and environments
-- `scripts/`
-  - All-in-one install scripts
+- `script/`
+  - All-in-one installation/backup scripts
 
 ## Get Started
 
@@ -15,12 +15,12 @@ My dotfiles and GitHub Action workflows collection
 
 ```console
 $ git clone git@github.com:SlashNephy/.github.git ~/.github
-$ bash ~/.github/scripts/install.sh
+$ bash ~/.github/script/install.sh
 ```
 
 ### Windows
 
 ```console
 $ git clone git@github.com:SlashNephy/.github.git ~\.github
-$ powershell ~\.github\scripts\install.ps1
+$ powershell ~\.github\script\install.ps1
 ```
