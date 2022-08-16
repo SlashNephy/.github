@@ -1,3 +1,5 @@
+import { AMQ_addScriptData } from '../lib/thirdparty/amqScriptInfo'
+
 const INVISIBLE_STATUS = 4
 
 document.addEventListener('DOMNodeInserted', () => {

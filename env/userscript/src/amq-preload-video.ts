@@ -1,3 +1,5 @@
+import { AMQ_addScriptData } from '../lib/thirdparty/amqScriptInfo'
+
 document.addEventListener('DOMNodeInserted', () => {
   for (const element of document.querySelectorAll<HTMLVideoElement>('video')) {
     element.preload = 'auto'

@@ -1,5 +1,7 @@
 import { executeXhr } from '../lib/api'
 import { fetchArmEntries } from '../lib/arm'
+import { amqAnswerTimesUtility } from '../lib/thirdparty/amqAnswerTimesUtility'
+import { AMQ_addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { ArmEntry } from '../lib/arm'
 import type { AnswerResultsPayload } from '../types/amq'
