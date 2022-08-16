@@ -85,6 +85,16 @@ const config: RollupOptions[] = [
     match: 'https://annict.com/*',
     icon: 'https://www.google.com/s2/favicons?sz=64&domain=annict.com',
   }),
+  buildOptions({
+    id: 'amq-private-session',
+    name: 'AMQ Private Session',
+    version: '0.1.0',
+    description: 'Set invisible status automatically.',
+    author: 'SlashNephy <spica@starry.blue>',
+    match: 'https://animemusicquiz.com/',
+    requires: ['https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js'],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+  }),
 ]
 
 export default config
