@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -eu
+shopt -s nullglob dotglob
+
+# GitHub Codespaces 内で自動実行される dotfiles のインストールスクリプト
+
+ROOT_DIR="/workspaces/.codespaces/.persistedshare/dotfiles"
+ENV_DIR="$ROOT_DIR/env"
+export ENV_DIR
+
+SCRIPTS_DIR="$ROOT_DIR/script"
+SCRIPTS_COMMON_DIR="$SCRIPTS_DIR/install-common"
+SCRIPTS_UBUNTU_DIR="$SCRIPTS_DIR/install-ubuntu"
+
+# プロンプトが発生しないようにする
+function prompt() {
+  return 0
+}
+
+rm -rf ~/.github
+ln -sf "$ROOT_DIR" ~/.github
+
+for script in "$SCRIPTS_COMMON_DIR"/*.sh; do
+  # shellcheck disable=SC1090
+  source "$script"
+done
+
+for script in "$SCRIPTS_UBUNTU_DIR"/*.sh; do
+  # shellcheck disable=SC1090
+  source "$script"
+done
