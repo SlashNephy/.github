@@ -103,18 +103,3 @@ export type AnswerResultsPayload = {
   groupMap: Record<string, number[]>
   watched: boolean
 }
-
-// https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
-declare global {
-  declare function AMQ_createInstalledWindow(): void
-  declare function AMQ_addScriptData(metadata: { name: string; author: string; description: string }): void
-  declare function AMQ_addStyle(css: string): void
-}
-
-// https://github.com/amq-script-project/AMQ-Scripts/raw/master/gameplay/amqAnswerTimesUtility.user.js
-declare global {
-  declare const amqAnswerTimesUtility: {
-    songStartTime: number
-    playerTimes: number[]
-  }
-}

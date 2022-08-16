@@ -8,9 +8,11 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "k1low/tap"
+tap "ktr0731/evans"
 tap "minacle/chntpw"
 tap "reviewdog/tap"
 tap "romkatv/powerlevel10k"
+tap "yudai/gotty"
 # Run your GitHub Actions locally 🚀
 brew "act"
 # Static checker for GitHub Actions workflow files
@@ -27,6 +29,8 @@ brew "automake"
 brew "node"
 # AWS Cloud Development Kit - framework for defining AWS infra as code
 brew "aws-cdk"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Simple command-line tool to read AWS CloudWatch logs
@@ -53,6 +57,8 @@ brew "cloudflare-wrangler"
 brew "cloudflared"
 # Cross-platform make
 brew "cmake"
+# Color-highlighted diff(1) output
+brew "colordiff"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Open source suite of directory software
@@ -104,7 +110,7 @@ brew "gzip"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
 # Kubernetes package manager
-brew "helm"
+brew "helm", link: false
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -225,6 +231,8 @@ brew "zsh-fast-syntax-highlighting"
 brew "arrow2nd/tap/nekome"
 # tbls is a CI-Friendly tool for document a database, written in Go.
 brew "k1low/tap/tbls"
+# Evans: more expressive universal gRPC client
+brew "ktr0731/evans/evans"
 # The Offline NT Password Editor
 brew "minacle/chntpw/chntpw"
 # Automated code review tool integrated with any code analysis tools regardless of programming language.
@@ -289,10 +297,6 @@ cask "gimp"
 cask "github"
 # Web browser
 cask "google-chrome"
-# Web browser
-cask "google-chrome-beta"
-# Web browser
-cask "google-chrome-canary"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # Client for the Google Drive storage service
@@ -325,6 +329,8 @@ cask "lens"
 cask "medibangpaintpro"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
+# Web browser
+cask "microsoft-edge"
 # Office suite
 cask "microsoft-office"
 # Implementation study of digital television viewing application for Mirakurun

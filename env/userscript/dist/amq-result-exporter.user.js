@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AMQ Result Exporter
 // @namespace    https://tampermonkey.net/
-// @version      0.1.1
+// @version      0.2.0
 // @description  Export song results to Google Spreadsheet!
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://animemusicquiz.com/
@@ -10,8 +10,6 @@
 // @icon         https://animemusicquiz.com/favicon-32x32.png
 // @connect      script.google.com
 // @connect      raw.githubusercontent.com
-// @require      https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
-// @require      https://raw.githubusercontent.com/amq-script-project/AMQ-Scripts/master/gameplay/amqAnswerTimesUtility.user.js
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js
 // ==/UserScript==
@@ -35,6 +33,110 @@ const fetchArmEntries = async () => {
         url: 'https://raw.githubusercontent.com/kawaiioverflow/arm/master/arm.json',
     });
     return JSON.parse(response.responseText);
+};
+
+class AmqAnswerTimesUtility {
+    songStartTime = 0;
+    playerTimes = [];
+    constructor() {
+        if (typeof Listener === 'undefined') {
+            return;
+        }
+        new Listener('play next song', () => {
+            this.songStartTime = Date.now();
+            this.playerTimes = [];
+        }).bindListener();
+        new Listener('player answered', (data) => {
+            const time = Date.now() - this.songStartTime;
+            data.forEach((gamePlayerId) => {
+                this.playerTimes[gamePlayerId] = time;
+            });
+        }).bindListener();
+        new Listener('Join Game', (data) => {
+            const quizState = data.quizState;
+            if (quizState) {
+                this.songStartTime = Date.now() - quizState.songTimer * 1000;
+            }
+        }).bindListener();
+    }
+}
+const amqAnswerTimesUtility = new AmqAnswerTimesUtility();
+
+const AMQ_createInstalledWindow = () => {
+    if (!window.setupDocumentDone)
+        return;
+    if ($('#installedModal').length === 0) {
+        $('#gameContainer').append($(`
+            <div class="modal fade" id="installedModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h2 class="modal-title">Installed Userscripts</h2>
+                        </div>
+                        <div class="modal-body" style="overflow-y: auto;max-height: calc(100vh - 150px);">
+                            <div id="installedContainer">
+                                You have the following scripts installed (click on each of them to learn more)<br>
+                                This window can also be opened by going to AMQ settings (the gear icon on bottom right) and clicking "Installed Userscripts"
+                                <div id="installedListContainer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `));
+        $('#mainMenu')
+            .prepend($(`
+            <div class="button floatingContainer mainMenuButton" id="mpInstalled" data-toggle="modal" data-target="#installedModal">
+                <h1>Installed Userscripts</h1>
+            </div>
+        `))
+            .css('margin-top', '20vh');
+        $('#optionsContainer > ul').prepend($(`
+            <li class="clickAble" data-toggle="modal" data-target="#installedModal">Installed Userscripts</li>
+        `));
+        AMQ_addStyle(`
+            .descriptionContainer {
+                width: 95%;
+                margin: auto;
+            }
+            .descriptionContainer img {
+                width: 80%;
+                margin: 10px 10%;
+            }
+        `);
+    }
+};
+const AMQ_addScriptData = (metadata) => {
+    AMQ_createInstalledWindow();
+    $('#installedListContainer').append($('<div></div>')
+        .append($('<h4></h4>')
+        .html(`<i class="fa fa-caret-right"></i> ${metadata.name !== undefined ? metadata.name : 'Unknown'} by ${metadata.author !== undefined ? metadata.author : 'Unknown'}`)
+        .css('font-weight', 'bold')
+        .css('cursor', 'pointer')
+        .click(function () {
+        const selector = $(this).next();
+        if (selector.is(':visible')) {
+            selector.slideUp();
+            $(this).find('.fa-caret-down').addClass('fa-caret-right').removeClass('fa-caret-down');
+        }
+        else {
+            selector.slideDown();
+            $(this).find('.fa-caret-right').addClass('fa-caret-down').removeClass('fa-caret-right');
+        }
+    }))
+        .append($('<div></div>')
+        .addClass('descriptionContainer')
+        .html(metadata.description !== undefined ? metadata.description : 'No description provided')
+        .hide()));
+};
+const AMQ_addStyle = (css) => {
+    const head = document.head;
+    const style = document.createElement('style');
+    head.appendChild(style);
+    style.appendChild(document.createTextNode(css));
 };
 
 const GAS_URL = 'https://script.google.com/macros/s/xxx/exec';

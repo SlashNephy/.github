@@ -1,6 +1,5 @@
 import {
   createWebhook,
-  deleteWebhook,
   listOrgRepos,
   listRepoWebhooks,
   listUserRepos,
@@ -38,12 +37,12 @@ const main = async () => {
           continue
         case env.ISSUE_WEBHOOK_URL:
           issue = true
-          continue
-        default:
-          await deleteWebhook(repo.owner.login, repo.name, webhook.id)
-          console.info(
-            `[${repo.owner.login}/${repo.name}] Deleted webhook: ${webhook.id}`
-          )
+        //   continue
+        // default:
+        //   await deleteWebhook(repo.owner.login, repo.name, webhook.id)
+        //   console.info(
+        //     `[${repo.owner.login}/${repo.name}] Deleted webhook: ${webhook.id}`
+        //   )
       }
     }
 
