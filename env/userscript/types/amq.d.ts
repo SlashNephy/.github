@@ -52,6 +52,15 @@ declare global {
     $SETTING_TABS: JQuery
     $SETTING_CONTAINERS: JQuery
   }
+
+  declare const socialTab:
+    | {
+        socialStatus?: {
+          currentStatus: number
+          changeSocialStatus: (status: number) => void
+        }
+      }
+    | undefined
 }
 
 export type AnswerResultsPayload = {
