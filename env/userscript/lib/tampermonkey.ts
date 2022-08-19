@@ -26,7 +26,7 @@ export type Banner = {
   version: string
   description: string
   author: string
-  match: string
+  match: string[]
   includes?: string[]
   icon?: string
   license?: string
@@ -44,7 +44,7 @@ const buildBanner = (banner: Banner): string => {
     `// @version      ${banner.version}`,
     `// @description  ${banner.description}`,
     `// @author       ${banner.author}`,
-    `// @match        ${banner.match}`,
+    banner.match?.map((x) => `// @match        ${x}`),
     `// @license      ${banner.license ?? 'MIT license'}`,
     `// @grant        ${banner.grant ?? 'none'}`,
     banner.icon && `// @icon         ${banner.icon}`,
