@@ -22,7 +22,7 @@
     "format:prettier": "yarn lint:prettier --write"
   },
   "dependencies": {
-    "@octokit/rest": "19.0.3",
+    "@octokit/rest": "19.0.4",
     "dotenv": "16.0.1",
     "fast-deep-equal": "3.1.3"
   },
