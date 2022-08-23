@@ -1,0 +1,28 @@
+name: 'Add to Project'
+
+on:
+  workflow_call:
+    inputs:
+      labeled:
+        required: false
+        type: string
+      label-operator:
+        required: false
+        type: string
+    secrets:
+      PROJECT_GITHUB_TOKEN:
+        required: true
+
+permissions: {}
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add to Project
+        uses: actions/add-to-project@v0.3.0
+        with:
+          project-url: 'https://github.com/users/SlashNephy/projects/1'
+          github-token: '${{ secrets.PROJECT_GITHUB_TOKEN }}'
+          labeled: '${{ inputs.labeled }}'
+          label-operator: '${{ inputs.label-operator }}'

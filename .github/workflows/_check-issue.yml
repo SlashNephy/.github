@@ -1,0 +1,21 @@
+name: 'Add Issue/PR to Project'
+
+on:
+  issues:
+    types:
+      - opened
+      - transferred
+      - labeled
+
+  pull_request:
+    types:
+      - opened
+      - labeled
+
+jobs:
+  add:
+    uses: ./.github/workflows/add-to-project.yml
+    secrets: inherit
+    with:
+      labeled: 'renovate'
+      label-operator: 'NOT'
