@@ -7,6 +7,10 @@ on:
         required: false
         type: string
         default: '18'
+      node-version-file:
+        required: false
+        type: string
+        default: ''
       working-directory:
         required: false
         type: string
@@ -53,7 +57,15 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node
+      - name: Setup Node (via node-version-file)
+        if: inputs.node-version-file != ''
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '${{ inputs.node-version-file }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+      - name: Setup Node (via node-version)
+        if: inputs.node-version-file == ''
         uses: actions/setup-node@v3
         with:
           node-version: '${{ inputs.node-version }}'

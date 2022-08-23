@@ -6,7 +6,11 @@ on:
       node-version:
         required: false
         type: string
-        default: 18
+        default: '18'
+      node-version-file:
+        required: false
+        type: string
+        default: ''
       working-directory:
         required: false
         type: string
@@ -52,7 +56,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node (via node-version-file)
+        if: inputs.node-version-file != ''
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '${{ inputs.node-version-file }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+      - name: Setup Node (via node-version)
+        if: inputs.node-version-file == ''
         uses: actions/setup-node@v3
         with:
           node-version: '${{ inputs.node-version }}'
