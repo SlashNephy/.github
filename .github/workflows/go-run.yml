@@ -1,29 +1,29 @@
-name: 'yarn run'
+name: 'go run'
 
 on:
   workflow_call:
     inputs:
-      node-version:
-        required: false
-        type: string
-        default: '18'
-      node-version-file:
+      go-version:
         required: false
         type: string
         default: ''
+      go-version-file:
+        required: false
+        type: string
+        default: 'go.mod'
       working-directory:
         required: false
         type: string
         default: '.'
-      pre-script:
+      pre-task:
         required: false
         type: string
         default: ''
-      script:
+      task:
         required: false
         type: string
         default: ''
-      post-script:
+      post-task:
         required: false
         type: string
         default: ''
@@ -59,49 +59,45 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'echo "${{ inputs.env }}" > .env'
 
-      - name: Setup Node (via node-version-file)
-        if: inputs.node-version-file != ''
-        uses: actions/setup-node@v3
+      - name: Setup Go (via go-version-file)
+        if: inputs.go-version == ''
+        uses: actions/setup-go@v3
         with:
-          node-version-file: '${{ inputs.node-version-file }}'
-          cache: 'yarn'
-          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
-      - name: Setup Node (via node-version)
-        if: inputs.node-version-file == ''
-        uses: actions/setup-node@v3
+          go-version-file: '${{ inputs.go-version-file }}'
+          cache: true
+          cache-dependency-path: '${{ inputs.working-directory }}/go.sum'
+      - name: Setup Go (via go-version)
+        if: inputs.go-version != ''
+        uses: actions/setup-go@v3
         with:
-          node-version: '${{ inputs.node-version }}'
-          cache: 'yarn'
-          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+          go-version: '${{ inputs.go-version }}'
+          cache: true
+          cache-dependency-path: '${{ inputs.working-directory }}/go.sum'
 
-      - name: Install
+      - name: Run Pre-Task
+        if: inputs.pre-task != ''
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn install --immutable'
-
-      - name: Run Pre-Script
-        if: inputs.pre-script != ''
-        working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn ${{ inputs.pre-script }}'
+        run: 'go ${{ inputs.pre-task }}'
 
       - name: Run Pre-Command
         if: inputs.pre-command != ''
         working-directory: '${{ inputs.working-directory }}'
         run: '${{ inputs.pre-command }}'
 
-      - name: Run Script
-        if: inputs.script != ''
+      - name: Run Task
+        if: inputs.task != ''
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn ${{ inputs.script }}'
+        run: 'go ${{ inputs.task }}'
 
       - name: Run Command
         if: inputs.command != ''
         working-directory: '${{ inputs.working-directory }}'
         run: '${{ inputs.command }}'
 
-      - name: Run Post-Script
-        if: inputs.post-script != ''
+      - name: Run Post-Task
+        if: inputs.post-task != ''
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn ${{ inputs.post-script }}'
+        run: 'go ${{ inputs.post-task }}'
 
       - name: Run Post-Command
         if: inputs.post-command != ''
