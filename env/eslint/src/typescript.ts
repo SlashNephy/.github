@@ -64,6 +64,7 @@ const typescript: Linter.Config = {
     '@typescript-eslint/no-misused-promises': 'off',
     // アクセス修飾子を強制
     '@typescript-eslint/explicit-member-accessibility': 'error',
+    // {[key: string]: any} 👉 Record<string, any>
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
   },
   overrides: [
