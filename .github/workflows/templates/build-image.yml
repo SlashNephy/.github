@@ -24,5 +24,4 @@ jobs:
     uses: SlashNephy/.github/.github/workflows/docker-build.yml@master
     with:
       image-name: ghcr.io/slashnephy/xxx
-      # linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
-      image-platforms: linux/amd64
+      image-platforms: linux/amd64 # linux/arm64

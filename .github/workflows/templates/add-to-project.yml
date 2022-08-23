@@ -1,0 +1,22 @@
+name: 'Add Issue/PR to Project'
+
+on:
+  issues:
+    types:
+      - opened
+      - transferred
+      - labeled
+
+  pull_request:
+    types:
+      - opened
+      - labeled
+
+jobs:
+  add:
+    uses: SlashNephy/.github/.github/workflows/add-to-project.yml@master
+    with:
+      labeled: 'renovate'
+      label-operator: 'NOT'
+    secrets:
+      PROJECT_GITHUB_TOKEN: '${{ secrets.PROJECT_GITHUB_TOKEN }}'
