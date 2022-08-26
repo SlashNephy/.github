@@ -236,6 +236,52 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@aws-sdk/client-rds@npm:3.112.0":
+  version: 3.112.0
+  resolution: "@aws-sdk/client-rds@npm:3.112.0"
+  dependencies:
+    "@aws-crypto/sha256-browser": 2.0.0
+    "@aws-crypto/sha256-js": 2.0.0
+    "@aws-sdk/client-sts": 3.112.0
+    "@aws-sdk/config-resolver": 3.110.0
+    "@aws-sdk/credential-provider-node": 3.112.0
+    "@aws-sdk/fetch-http-handler": 3.110.0
+    "@aws-sdk/hash-node": 3.110.0
+    "@aws-sdk/invalid-dependency": 3.110.0
+    "@aws-sdk/middleware-content-length": 3.110.0
+    "@aws-sdk/middleware-host-header": 3.110.0
+    "@aws-sdk/middleware-logger": 3.110.0
+    "@aws-sdk/middleware-recursion-detection": 3.110.0
+    "@aws-sdk/middleware-retry": 3.110.0
+    "@aws-sdk/middleware-sdk-rds": 3.110.0
+    "@aws-sdk/middleware-serde": 3.110.0
+    "@aws-sdk/middleware-signing": 3.110.0
+    "@aws-sdk/middleware-stack": 3.110.0
+    "@aws-sdk/middleware-user-agent": 3.110.0
+    "@aws-sdk/node-config-provider": 3.110.0
+    "@aws-sdk/node-http-handler": 3.110.0
+    "@aws-sdk/protocol-http": 3.110.0
+    "@aws-sdk/smithy-client": 3.110.0
+    "@aws-sdk/types": 3.110.0
+    "@aws-sdk/url-parser": 3.110.0
+    "@aws-sdk/util-base64-browser": 3.109.0
+    "@aws-sdk/util-base64-node": 3.55.0
+    "@aws-sdk/util-body-length-browser": 3.55.0
+    "@aws-sdk/util-body-length-node": 3.55.0
+    "@aws-sdk/util-defaults-mode-browser": 3.110.0
+    "@aws-sdk/util-defaults-mode-node": 3.110.0
+    "@aws-sdk/util-user-agent-browser": 3.110.0
+    "@aws-sdk/util-user-agent-node": 3.110.0
+    "@aws-sdk/util-utf8-browser": 3.109.0
+    "@aws-sdk/util-utf8-node": 3.109.0
+    "@aws-sdk/util-waiter": 3.110.0
+    entities: 2.2.0
+    fast-xml-parser: 3.19.0
+    tslib: ^2.3.1
+  checksum: a7e77ecd24b2f1f535b134b84136036f05d1b06d6b6d905a497b50412806973009da92698c3fc6026635ef707acb683e5731233a60b5e5120be07d144dfccc1d
+  languageName: node
+  linkType: hard
+
 "@aws-sdk/client-s3@npm:3.113.0":
   version: 3.113.0
   resolution: "@aws-sdk/client-s3@npm:3.113.0"
@@ -737,6 +783,19 @@ __metadata:
     "@aws-sdk/util-format-url": 3.110.0
     tslib: ^2.3.1
   checksum: f408c01273f0aa14f8385482bb847353d70c60d7b2f14be05ae42552154f5ed7e09d6a533e371856ac403e11fa366d9acb90853fb2943a3098f02fc668c47858
+  languageName: node
+  linkType: hard
+
+"@aws-sdk/middleware-sdk-rds@npm:3.110.0":
+  version: 3.110.0
+  resolution: "@aws-sdk/middleware-sdk-rds@npm:3.110.0"
+  dependencies:
+    "@aws-sdk/protocol-http": 3.110.0
+    "@aws-sdk/signature-v4": 3.110.0
+    "@aws-sdk/types": 3.110.0
+    "@aws-sdk/util-format-url": 3.110.0
+    tslib: ^2.3.1
+  checksum: e0caa487c309ab72708821e885e326471e27342e23a62ae65cd050f9b86afed5937ff7db8815817a1189676eee596e290a854d45f1c6f6ce113392aceb293679
   languageName: node
   linkType: hard
 
@@ -1346,17 +1405,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jamiemagee/osv-offline@npm:1.2.10":
-  version: 1.2.10
-  resolution: "@jamiemagee/osv-offline@npm:1.2.10"
+"@jamiemagee/osv-offline@npm:1.2.11":
+  version: 1.2.11
+  resolution: "@jamiemagee/osv-offline@npm:1.2.11"
   dependencies:
     "@jamiemagee/osv-offline-db": 1.1.4
-    "@octokit/rest": 19.0.3
+    "@octokit/rest": 19.0.4
     adm-zip: ^0.5.9
     fs-extra: 10.0.0
     got: 11.8.5
     luxon: 3.0.1
-  checksum: 731e4b034d8c9d481a8d1d335f119669c48f54689840340be2b6af409fe6604324fc4007bbd9ea3fd0eb0af34231fc73e928ea1738ccfb7091eba7b944308bab
+  checksum: 0447ae5304a75e59d747f381395c08029884408f16981e165fc198a34b23771ff172af6e2a7229295d634852d9876420104daf9271570291b0d074cd960229aa
   languageName: node
   linkType: hard
 
@@ -1523,17 +1582,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/plugin-paginate-rest@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@octokit/plugin-paginate-rest@npm:3.0.0"
-  dependencies:
-    "@octokit/types": ^6.39.0
-  peerDependencies:
-    "@octokit/core": ">=4"
-  checksum: 1d2c900254f3dcd43f7ba69dfd12ff63f93a0d39a1bf542b1d0f006e95da4924ae0a26044c864ad7fb0309047f44becaf76293aae334d14c946910d65edd2523
-  languageName: node
-  linkType: hard
-
 "@octokit/plugin-paginate-rest@npm:^4.0.0":
   version: 4.1.0
   resolution: "@octokit/plugin-paginate-rest@npm:4.1.0"
@@ -1588,18 +1636,6 @@ __metadata:
     node-fetch: ^2.6.7
     universal-user-agent: ^6.0.0
   checksum: 877cc9f4da3f23b9f3f91dcc7b4e7e73e3ee71afd39461bfb7460eeafe656340c6f21515efb09f13e4cf5546f27bcf04bd8ff5dbbb44955fcf0d430e2297ee9d
-  languageName: node
-  linkType: hard
-
-"@octokit/rest@npm:19.0.3":
-  version: 19.0.3
-  resolution: "@octokit/rest@npm:19.0.3"
-  dependencies:
-    "@octokit/core": ^4.0.0
-    "@octokit/plugin-paginate-rest": ^3.0.0
-    "@octokit/plugin-request-log": ^1.0.4
-    "@octokit/plugin-rest-endpoint-methods": ^6.0.0
-  checksum: 9ee96976c4c22dab11b3dacd541e694f3ad9bb1d44243985dc90ce6e8a42c3e3176a206e8d3a883b63b517fc15af8c8c88d8d0ecd9bac2b86a635a9667fc6ff4
   languageName: node
   linkType: hard
 
@@ -1873,7 +1909,7 @@ __metadata:
     eslint: 8.22.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.169.1
+    renovate: 32.179.1
     ts-node: 10.9.1
     typescript: 4.7.4
   languageName: unknown
@@ -2920,7 +2956,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cacache@npm:16.1.1, cacache@npm:^16.1.0":
+"cacache@npm:16.1.2":
+  version: 16.1.2
+  resolution: "cacache@npm:16.1.2"
+  dependencies:
+    "@npmcli/fs": ^2.1.0
+    "@npmcli/move-file": ^2.0.0
+    chownr: ^2.0.0
+    fs-minipass: ^2.1.0
+    glob: ^8.0.1
+    infer-owner: ^1.0.4
+    lru-cache: ^7.7.1
+    minipass: ^3.1.6
+    minipass-collect: ^1.0.2
+    minipass-flush: ^1.0.5
+    minipass-pipeline: ^1.2.4
+    mkdirp: ^1.0.4
+    p-map: ^4.0.0
+    promise-inflight: ^1.0.1
+    rimraf: ^3.0.2
+    ssri: ^9.0.0
+    tar: ^6.1.11
+    unique-filename: ^1.1.1
+  checksum: defe1d6f557ddda178204cac111990da27e8a60ed276fcd608dad7109cc1936e7dcd57d7263d22cdb06a80e7ceb76ab5eb05133c7c7f886abf1d870d722abd6c
+  languageName: node
+  linkType: hard
+
+"cacache@npm:^16.1.0":
   version: 16.1.1
   resolution: "cacache@npm:16.1.1"
   dependencies:
@@ -7032,17 +7094,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.169.1":
-  version: 32.169.1
-  resolution: "renovate@npm:32.169.1"
+"renovate@npm:32.179.1":
+  version: 32.179.1
+  resolution: "renovate@npm:32.179.1"
   dependencies:
     "@aws-sdk/client-ec2": 3.112.0
     "@aws-sdk/client-ecr": 3.112.0
+    "@aws-sdk/client-rds": 3.112.0
     "@aws-sdk/client-s3": 3.113.0
     "@breejs/later": 4.1.0
     "@cheap-glitch/mi-cron": 1.0.1
     "@iarna/toml": 2.2.5
-    "@jamiemagee/osv-offline": 1.2.10
+    "@jamiemagee/osv-offline": 1.2.11
     "@renovatebot/pep440": 2.1.3
     "@renovatebot/ruby-semver": 1.1.4
     "@sindresorhus/is": 4.6.0
@@ -7052,7 +7115,7 @@ __metadata:
     auth-header: 1.0.0
     azure-devops-node-api: 11.2.0
     bunyan: 1.8.15
-    cacache: 16.1.1
+    cacache: 16.1.2
     chalk: 4.1.2
     changelog-filename-regex: 2.0.1
     clean-git-ref: 2.0.1
@@ -7123,7 +7186,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: ad4092e5f33db81f89c98a708a3ef06142f90c0f04388aa5313f8ce5247763f6f1374936c0a319600361879f059e4e02d0d948cd03d909558a130fe8cbc0931d
+  checksum: d82258cc11914db6aa54d8fa025fa7ea51efa7010749c678efef199008a92095b6ad5ec64c67be7bf96270882d04da4991cb215f0488c2cae853019844273ce7
   languageName: node
   linkType: hard
 
