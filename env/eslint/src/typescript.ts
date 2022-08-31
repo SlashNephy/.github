@@ -14,7 +14,9 @@ const typescript: Linter.Config = {
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 'latest',
+    lib: ['esnext'],
     project: './tsconfig.json',
+    warnOnUnsupportedTypeScriptVersion: true,
   },
   rules: {
     // 不要な変数を禁止

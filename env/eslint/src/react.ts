@@ -14,6 +14,8 @@ const react: Linter.Config = {
     ecmaFeatures: {
       jsx: true,
     },
+    jsxPragma: 'React',
+    lib: ['dom'],
   },
   settings: {
     react: {
