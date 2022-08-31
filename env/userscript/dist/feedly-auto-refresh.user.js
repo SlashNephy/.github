@@ -11,12 +11,13 @@
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js
 // ==/UserScript==
+
 setInterval(() => {
-    const element = document.querySelector('button.icon-toolbar-refresh-secondary');
-    if (!element) {
-        return;
-    }
-    if (element.classList.contains('update-available') && document.querySelector('.empty-state') !== null) {
-        element.click();
-    }
-}, 30000);
+  const element = document.querySelector('button.icon-toolbar-refresh-secondary')
+  if (!element) {
+    return
+  }
+  if (element.classList.contains('update-available') && document.querySelector('.empty-state') !== null) {
+    element.click()
+  }
+}, 30000)

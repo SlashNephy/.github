@@ -12,7 +12,8 @@
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js
 // ==/UserScript==
-const anchor = document.querySelector('body > div > a');
+
+const anchor = document.querySelector('body > div > a')
 if (anchor) {
-    location.href = anchor.href;
+  location.href = anchor.href
 }

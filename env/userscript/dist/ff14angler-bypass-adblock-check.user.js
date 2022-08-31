@@ -12,5 +12,6 @@
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js
 // ==/UserScript==
-document.head.className = 'adsbygoogle';
-unsafeWindow.$.prototype.remove = () => void 0;
+
+document.head.className = 'adsbygoogle'
+unsafeWindow.$.prototype.remove = () => void 0

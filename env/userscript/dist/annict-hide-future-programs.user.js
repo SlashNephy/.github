@@ -11,28 +11,29 @@
 // @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js
 // @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js
 // ==/UserScript==
+
 const main = () => {
-    if (!location.href.startsWith('https://annict.com/track')) {
-        return;
+  if (!location.href.startsWith('https://annict.com/track')) {
+    return
+  }
+  for (const card of document.querySelectorAll('div.card.u-card-flat')) {
+    const iconElement = card.querySelector('.fa-check-circle')
+    if (iconElement) {
+      card.style.display = 'none'
+      continue
     }
-    for (const card of document.querySelectorAll('div.card.u-card-flat')) {
-        const iconElement = card.querySelector('.fa-check-circle');
-        if (iconElement) {
-            card.style.display = 'none';
-            continue;
-        }
-        const dateElement = card.querySelector('div.col div[class="small"] span.text-muted');
-        if (!dateElement?.textContent) {
-            continue;
-        }
-        const datetime = Date.parse(dateElement.textContent);
-        const today = Date.now();
-        if (datetime > today + 24 * 60 * 60 * 1000) {
-            card.style.display = 'none';
-        }
+    const dateElement = card.querySelector('div.col div[class="small"] span.text-muted')
+    if (!dateElement?.textContent) {
+      continue
     }
-};
-main();
+    const datetime = Date.parse(dateElement.textContent)
+    const today = Date.now()
+    if (datetime > today + 24 * 60 * 60 * 1000) {
+      card.style.display = 'none'
+    }
+  }
+}
+main()
 window.addEventListener('turbo:load', () => {
-    main();
-});
+  main()
+})
