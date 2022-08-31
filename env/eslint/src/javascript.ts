@@ -11,6 +11,9 @@ const javascript: Linter.Config = {
     es2022: true,
     browser: true,
   },
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
   rules: {
     // default export を禁止
     'import/no-default-export': 'error',
