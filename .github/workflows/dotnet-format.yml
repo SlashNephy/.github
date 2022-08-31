@@ -1,0 +1,93 @@
+name: 'dotnet format'
+
+on:
+  workflow_call:
+    inputs:
+      dotnet-version:
+        required: false
+        type: string
+        default: '6.0.x'
+      working-directory:
+        required: false
+        type: string
+        default: '.'
+      pre-task:
+        required: false
+        type: string
+        default: ''
+      pre-command:
+        required: false
+        type: string
+        default: ''
+      task:
+        required: false
+        type: string
+        default: 'format'
+      command:
+        required: false
+        type: string
+        default: ''
+      post-task:
+        required: false
+        type: string
+        default: ''
+      post-command:
+        required: false
+        type: string
+        default: ''
+      commit-message:
+        required: false
+        type: string
+        default: '🧹 dotnet format'
+
+permissions:
+  contents: 'write'
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '${{ inputs.dotnet-version }}'
+
+      - name: Run Pre-Task
+        if: inputs.pre-task != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'dotnet ${{ inputs.pre-task }}'
+
+      - name: Run Pre-Command
+        if: inputs.pre-command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.pre-command }}'
+
+      - name: Run Task
+        if: inputs.task != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'dotnet ${{ inputs.task }}'
+
+      - name: Run Command
+        if: inputs.command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.command }}'
+
+      - name: Run Post-Task
+        if: inputs.post-task != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'dotnet ${{ inputs.post-task }}'
+
+      - name: Run Post-Command
+        if: inputs.post-command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.post-command }}'
+
+      - name: Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: '${{ inputs.commit-message }}'
