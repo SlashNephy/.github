@@ -4,6 +4,12 @@ const main = () => {
   }
 
   for (const card of document.querySelectorAll<HTMLDivElement>('div.card.u-card-flat')) {
+    const iconElement = card.querySelector('.fa-check-circle')
+    if (iconElement) {
+      card.style.display = 'none'
+      continue
+    }
+
     const dateElement = card.querySelector<HTMLSpanElement>('div.col div[class="small"] span.text-muted')
 
     // 放送日時が存在しない場合は無視
