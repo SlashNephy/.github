@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript && yarn format",
     "watch": "yarn bundle -w",
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "eslint .",
@@ -22,14 +22,15 @@
     "@babel/preset-typescript": "7.18.6",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-typescript": "8.4.0",
-    "@slashnephy/eslint-config": "0.1.8",
+    "@slashnephy/eslint-config": "0.1.9",
     "@slashnephy/prettier-config": "0.1.1",
     "@types/babel__core": "7.1.19",
     "@types/babel__preset-env": "7.9.2",
     "@types/jquery": "3.5.14",
     "@types/tampermonkey": "4.0.5",
     "concurrently": "7.3.0",
-    "eslint": "8.23.0",
+    "eslint": "8.22.0",
+    "eslint-plugin-userscripts": "0.2.9",
     "prettier": "2.7.1",
     "rollup": "2.78.1",
     "typescript": "4.8.2"
@@ -41,9 +42,24 @@
     ],
     "overrides": [
       {
-        "files": "rollup.config.ts",
+        "files": "dist/*.user.js",
+        "extends": [
+          "plugin:userscripts/recommended"
+        ],
         "rules": {
-          "import/no-default-export": "off"
+          "no-undef": "off",
+          "userscripts/compat-grant": [
+            "error",
+            {
+              "requireAllCompatible": true
+            }
+          ],
+          "userscripts/compat-headers": [
+            "error",
+            {
+              "requireAllCompatible": true
+            }
+          ]
         }
       }
     ]
@@ -51,5 +67,8 @@
   "browserslist": [
     "> 0.25%",
     "not dead"
-  ]
+  ],
+  "userscriptVersions": {
+    "tampermonkey": ">4"
+  }
 }
