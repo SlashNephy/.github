@@ -23,7 +23,7 @@ export type Banner = {
   id: string
 } & TampermonkeyHeader
 
-type InternationalizationStrings = { en: string; ja?: string } & Record<string, string>
+type InternationalizationStrings = Record<string, string> & { en: string; ja?: string }
 
 // https://www.tampermonkey.net/documentation.php
 type TampermonkeyHeader = {
@@ -210,10 +210,10 @@ const buildBanner = (banner: Banner): string => {
         const label = `// @${key}${' '.repeat(maxKeyLength - key.length)}  `
 
         if (Array.isArray(value)) {
-          return value.map((v) => `${label}${v}`).join('\n')
+          return value.map((v) => `${label}${v}`.trimEnd()).join('\n')
         }
-        if (value) {
-          return `${label}${value}`
+        if (value !== undefined) {
+          return `${label}${value}`.trimEnd()
         }
       })
       .filter((x): x is Exclude<typeof x, undefined> => !!x),

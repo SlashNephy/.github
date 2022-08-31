@@ -40,12 +40,12 @@ jobs:
     permissions:
       contents: 'write'
 
-  bundle:
+  build-ci:
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
       working-directory: 'env/userscript'
-      script: 'bundle'
+      script: 'ci'
       commit-message: '⚙️ Build (env/userscript)'
     permissions:
       contents: 'write'
