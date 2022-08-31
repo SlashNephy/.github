@@ -1,18 +1,23 @@
 // ==UserScript==
-// @name         Google Remove Redirection Warning
-// @namespace    https://tampermonkey.net/
-// @version      0.1.1
-// @description  Remove redirection warning from https://google.com/url
-// @author       SlashNephy <spica@starry.blue>
-// @match        https://google.com/url?q=*
-// @match        https://www.google.com/url?q=*
-// @license      MIT license
-// @grant        none
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=google.com
-// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js
-// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js
+// @name            Google Remove Redirection Warning
+// @namespace       https://spica.starry.blue/
+// @version         0.1.2
+// @author          SlashNephy <spica@starry.blue>
+// @description     Remove redirection warning from https://google.com/url
+// @description:ja  https://google.com/url のリダイレクト警告をスキップします。
+// @homepage        https://scrapbox.io/slashnephy/Google_%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88%E5%86%85%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%B8%8F%E3%82%93%E3%81%A0%E9%9A%9B%E3%81%AE%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E8%AD%A6%E5%91%8A%E3%82%92%E3%82%B9%E3%82%AD%E3%83%83%E3%83%97%E3%81%99%E3%82%8B_UserScript
+// @homepageURL     https://scrapbox.io/slashnephy/Google_%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88%E5%86%85%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%B8%8F%E3%82%93%E3%81%A0%E9%9A%9B%E3%81%AE%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E8%AD%A6%E5%91%8A%E3%82%92%E3%82%B9%E3%82%AD%E3%83%83%E3%83%97%E3%81%99%E3%82%8B_UserScript
+// @icon            https://www.google.com/s2/favicons?sz=64&domain=google.com
+// @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js
+// @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js
+// @supportURL      https://github.com/SlashNephy/.github/issues
+// @match           https://google.com/url?q=*
+// @match           https://www.google.com/url?q=*
+// @grant           none
+// @license         MIT license
 // ==/UserScript==
-const anchor = document.querySelector('body > div > a');
+
+const anchor = document.querySelector('body > div > a')
 if (anchor) {
-    location.href = anchor.href;
+  location.href = anchor.href
 }

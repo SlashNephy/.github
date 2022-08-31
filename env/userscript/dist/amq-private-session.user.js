@@ -1,21 +1,26 @@
 // ==UserScript==
-// @name         AMQ Private Session
-// @namespace    https://tampermonkey.net/
-// @version      0.2.0
-// @description  Set invisible status automatically.
-// @author       SlashNephy <spica@starry.blue>
-// @match        https://animemusicquiz.com/
-// @license      MIT license
-// @grant        none
-// @icon         https://animemusicquiz.com/favicon-32x32.png
-// @downloadURL  https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js
-// @updateURL    https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js
+// @name            AMQ Private Session
+// @namespace       https://spica.starry.blue/
+// @version         0.2.1
+// @author          SlashNephy <spica@starry.blue>
+// @description     Set invisible status automatically on login.
+// @description:ja  ログイン時に Invisible ステータスを設定します。
+// @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E7%8A%B6%E6%B3%81%E3%82%92%E9%9A%A0%E3%81%99_UserScript
+// @homepageURL     https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E7%8A%B6%E6%B3%81%E3%82%92%E9%9A%A0%E3%81%99_UserScript
+// @icon            https://animemusicquiz.com/favicon-32x32.png
+// @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js
+// @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js
+// @supportURL      https://github.com/SlashNephy/.github/issues
+// @match           https://animemusicquiz.com/
+// @grant           none
+// @license         MIT license
 // ==/UserScript==
+
 const AMQ_createInstalledWindow = () => {
-    if (!window.setupDocumentDone)
-        return;
-    if ($('#installedModal').length === 0) {
-        $('#gameContainer').append($(`
+  if (!window.setupDocumentDone) return
+  if ($('#installedModal').length === 0) {
+    $('#gameContainer').append(
+      $(`
             <div class="modal fade" id="installedModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -35,18 +40,23 @@ const AMQ_createInstalledWindow = () => {
                     </div>
                 </div>
             </div>
-        `));
-        $('#mainMenu')
-            .prepend($(`
+        `)
+    )
+    $('#mainMenu')
+      .prepend(
+        $(`
             <div class="button floatingContainer mainMenuButton" id="mpInstalled" data-toggle="modal" data-target="#installedModal">
                 <h1>Installed Userscripts</h1>
             </div>
-        `))
-            .css('margin-top', '20vh');
-        $('#optionsContainer > ul').prepend($(`
+        `)
+      )
+      .css('margin-top', '20vh')
+    $('#optionsContainer > ul').prepend(
+      $(`
             <li class="clickAble" data-toggle="modal" data-target="#installedModal">Installed Userscripts</li>
-        `));
-        AMQ_addStyle(`
+        `)
+    )
+    AMQ_addStyle(`
             .descriptionContainer {
                 width: 95%;
                 margin: auto;
@@ -55,51 +65,60 @@ const AMQ_createInstalledWindow = () => {
                 width: 80%;
                 margin: 10px 10%;
             }
-        `);
-    }
-};
+        `)
+  }
+}
 const AMQ_addScriptData = (metadata) => {
-    AMQ_createInstalledWindow();
-    $('#installedListContainer').append($('<div></div>')
-        .append($('<h4></h4>')
-        .html(`<i class="fa fa-caret-right"></i> ${metadata.name !== undefined ? metadata.name : 'Unknown'} by ${metadata.author !== undefined ? metadata.author : 'Unknown'}`)
-        .css('font-weight', 'bold')
-        .css('cursor', 'pointer')
-        .click(function () {
-        const selector = $(this).next();
-        if (selector.is(':visible')) {
-            selector.slideUp();
-            $(this).find('.fa-caret-down').addClass('fa-caret-right').removeClass('fa-caret-down');
-        }
-        else {
-            selector.slideDown();
-            $(this).find('.fa-caret-right').addClass('fa-caret-down').removeClass('fa-caret-right');
-        }
-    }))
-        .append($('<div></div>')
-        .addClass('descriptionContainer')
-        .html(metadata.description !== undefined ? metadata.description : 'No description provided')
-        .hide()));
-};
+  AMQ_createInstalledWindow()
+  $('#installedListContainer').append(
+    $('<div></div>')
+      .append(
+        $('<h4></h4>')
+          .html(
+            `<i class="fa fa-caret-right"></i> ${metadata.name !== undefined ? metadata.name : 'Unknown'} by ${
+              metadata.author !== undefined ? metadata.author : 'Unknown'
+            }`
+          )
+          .css('font-weight', 'bold')
+          .css('cursor', 'pointer')
+          .click(function () {
+            const selector = $(this).next()
+            if (selector.is(':visible')) {
+              selector.slideUp()
+              $(this).find('.fa-caret-down').addClass('fa-caret-right').removeClass('fa-caret-down')
+            } else {
+              selector.slideDown()
+              $(this).find('.fa-caret-right').addClass('fa-caret-down').removeClass('fa-caret-right')
+            }
+          })
+      )
+      .append(
+        $('<div></div>')
+          .addClass('descriptionContainer')
+          .html(metadata.description !== undefined ? metadata.description : 'No description provided')
+          .hide()
+      )
+  )
+}
 const AMQ_addStyle = (css) => {
-    const head = document.head;
-    const style = document.createElement('style');
-    head.appendChild(style);
-    style.appendChild(document.createTextNode(css));
-};
+  const head = document.head
+  const style = document.createElement('style')
+  head.appendChild(style)
+  style.appendChild(document.createTextNode(css))
+}
 
-const INVISIBLE_STATUS = 4;
+const INVISIBLE_STATUS = 4
 document.addEventListener('DOMNodeInserted', () => {
-    switch (socialTab?.socialStatus?.currentStatus) {
-        case INVISIBLE_STATUS:
-        case undefined:
-            return;
-        default:
-            socialTab?.socialStatus?.changeSocialStatus(INVISIBLE_STATUS);
-    }
-});
+  switch (socialTab?.socialStatus?.currentStatus) {
+    case INVISIBLE_STATUS:
+    case undefined:
+      return
+    default:
+      socialTab?.socialStatus?.changeSocialStatus(INVISIBLE_STATUS)
+  }
+})
 AMQ_addScriptData({
-    name: 'Private Session',
-    author: 'SlashNephy &lt;spica@starry.blue&gt;',
-    description: '<p>Set invisible status automatically.</p>',
-});
+  name: 'Private Session',
+  author: 'SlashNephy &lt;spica@starry.blue&gt;',
+  description: '<p>Set invisible status automatically.</p>',
+})
