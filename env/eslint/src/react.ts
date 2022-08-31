@@ -36,15 +36,6 @@ const react: Linter.Config = {
     // コンポーネント名を PascalCase に強制
     'react/jsx-pascal-case': 'error',
   },
-  overrides: [
-    {
-      // Next.js に必要な default export を許可
-      files: ['**/pages/**/*.{ts,tsx}'],
-      rules: {
-        'import/no-default-export': 'off',
-      },
-    },
-  ],
 }
 
 module.exports = react
