@@ -74,8 +74,9 @@ const config: RollupOptions[] = [
   buildOptions({
     id: 'annict-hide-future-programs',
     name: 'Annict Hide Future Programs',
-    version: '0.1.1',
-    description: 'Annict の「記録するページ」で翌日以降の番組を非表示にします。',
+    version: '0.1.2',
+    description:
+      'Annict の「記録するページ」で翌日以降の番組を非表示にします。さらに未視聴エピソードがない作品を非表示にします。',
     author: 'SlashNephy <spica@starry.blue>',
     match: ['https://annict.com/*'],
     icon: 'https://www.google.com/s2/favicons?sz=64&domain=annict.com',
