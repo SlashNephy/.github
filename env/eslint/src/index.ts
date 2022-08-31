@@ -36,6 +36,20 @@ const config: Linter.Config = {
         resolve(__dirname, 'prettier.js'),
       ],
     },
+    // default export を許可
+    {
+      files: [
+        // Webpack
+        '**/webpack.config.ts',
+        // rollup
+        '**/rollup.config.ts',
+        // Next.js
+        '**/pages/**/*.{ts,tsx}',
+      ],
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
   ],
 }
 

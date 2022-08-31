@@ -67,15 +67,6 @@ const typescript: Linter.Config = {
     // {[key: string]: any} 👉 Record<string, any>
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
   },
-  overrides: [
-    {
-      // webpack.config.ts に必要な default export を許可
-      files: ['**/webpack.config.ts'],
-      rules: {
-        'import/no-default-export': 'off',
-      },
-    },
-  ],
 }
 
 module.exports = typescript
