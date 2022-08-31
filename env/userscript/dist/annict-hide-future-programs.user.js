@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Annict Hide Future Programs
 // @namespace    https://tampermonkey.net/
-// @version      0.1.1
-// @description  Annict の「記録するページ」で翌日以降の番組を非表示にします。
+// @version      0.1.2
+// @description  Annict の「記録するページ」で翌日以降の番組を非表示にします。さらに未視聴エピソードがない作品を非表示にします。
 // @author       SlashNephy <spica@starry.blue>
 // @match        https://annict.com/*
 // @license      MIT license
@@ -16,6 +16,11 @@ const main = () => {
         return;
     }
     for (const card of document.querySelectorAll('div.card.u-card-flat')) {
+        const iconElement = card.querySelector('.fa-check-circle');
+        if (iconElement) {
+            card.style.display = 'none';
+            continue;
+        }
         const dateElement = card.querySelector('div.col div[class="small"] span.text-muted');
         if (!dateElement?.textContent) {
             continue;
