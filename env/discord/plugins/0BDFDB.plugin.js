@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.5.5
+ * @version 2.5.7
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -962,6 +962,15 @@ module.exports = (_ => {
 					}
 				}
 			};
+
+			window.BDFDB_Global = Object.assign({
+				started: true,
+				loading: true,
+				PluginUtils: {
+					buildPlugin: BDFDB.PluginUtils.buildPlugin,
+					cleanUp: BDFDB.PluginUtils.cleanUp
+				}
+			}, window.BDFDB_Global);
 			
 			const request = require("request"), fs = require("fs"), path = require("path");
 			
