@@ -4,7 +4,11 @@ import type { Linter } from 'eslint'
  * JavaScript 関連の eslint プリセット
  */
 const javascript: Linter.Config = {
-  extends: ['plugin:node/recommended', 'plugin:import/recommended'],
+  extends: [
+    'plugin:node/recommended',
+    'plugin:import/recommended',
+    'plugin:xss/recommended',
+  ],
   plugins: ['promise', 'unused-imports'],
   env: {
     node: true,
