@@ -6,7 +6,8 @@ import type { Linter } from 'eslint'
  * - prettier と eslint は競合するので最後に読み込む
  */
 const prettier: Linter.Config = {
-  extends: ['prettier'],
+  extends: ['plugin:editorconfig/noconflict', 'prettier'],
+  plugins: ['editorconfig'],
   rules: {
     // インデント
     // - 基本インデントを 2 にする
@@ -20,6 +21,12 @@ const prettier: Linter.Config = {
     quotes: ['error', 'single'],
     // セミコロンを禁止
     semi: ['error', 'never'],
+    // UTF-8 BOM を禁止
+    'unicode-bom': ['error', 'never'],
+    // 最終行に改行を挿入
+    'eol-last': ['error', 'always'],
+    // 行末のスペースを禁止
+    'no-trailing-spaces': ['error'],
   },
 }
 
