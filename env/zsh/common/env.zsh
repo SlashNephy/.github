@@ -1,6 +1,3 @@
-export PATH="$HOME/.bin:$PATH"
-mkdir -p "$HOME/.bin"
-
 # language
 export LANG="ja_JP.UTF-8"
 export LC_LANG="ja_JP.UTF-8"
@@ -14,4 +11,3 @@ export LESS="-g -i -M -R -S -W -z-4 -x4"
 
 # development
 export DOCKER_BUILDKIT=1
-export AWS_PROFILE="hatena"
