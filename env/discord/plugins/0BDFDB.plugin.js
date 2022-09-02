@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.5.7
+ * @version 2.5.8
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -15,7 +15,9 @@
 module.exports = (_ => {
 	if (window.BDFDB_Global && window.BDFDB_Global.PluginUtils && typeof window.BDFDB_Global.PluginUtils.cleanUp == "function") window.BDFDB_Global.PluginUtils.cleanUp(window.BDFDB_Global);
 	
-	const BDFDB = {
+	var BDFDB, Internal, LibraryConstants, LibraryModules, LibraryRequires, DiscordObjects, PluginStores;
+	
+	BDFDB = {
 		started: true
 	};
 	
@@ -36,7 +38,7 @@ module.exports = (_ => {
 			
 			var changeLogs = {};
 			
-			const Internal = Object.assign({}, BDFDB, {
+			Internal = Object.assign({}, BDFDB, {
 				patchPriority: 0,
 				forceSyncData: true,
 				settings: {},
@@ -70,7 +72,7 @@ module.exports = (_ => {
 			});
 			for (let key in Internal.defaults) Internal.settings[key] = {};
 			
-			const LibraryConstants = {
+			LibraryConstants = {
 				ToastIcons: {
 					info: "INFO",
 					danger: "CLOSE_CIRCLE",
@@ -84,7 +86,7 @@ module.exports = (_ => {
 				}
 			};
 			
-			const PluginStores = {
+			PluginStores = {
 				loaded: {},
 				delayed: {
 					loads: [],
@@ -100,6 +102,7 @@ module.exports = (_ => {
 				chunkObserver: {},
 				contextChunkObserver: {}
 			};
+			
 			const Plugin = function (changeLog) {
 				return class Plugin {
 					constructor (meta) {for (let key in meta) if (!this[key]) this[key] = meta[key];}
@@ -565,6 +568,13 @@ module.exports = (_ => {
 					PluginStores.updateData.plugins[url] = {name: plugin.name, raw: url, version: plugin.version};
 					
 					BDFDB.PluginUtils.checkUpdate(plugin.name, url);
+					
+					if (plugin.changeLog && typeof plugin.getSettingsPanel != "function") plugin.getSettingsPanel = _ => BDFDB.PluginUtils.createSettingsPanel(plugin, {
+						children: BDFDB.ReactUtils.createElement(Internal.LibraryComponents.MessagesPopoutComponents.EmptyStateBottom, {
+							msg: "No Settings available for this Plugin",
+							image: BDFDB.DiscordUtils.getTheme() == BDFDB.disCN.themelight ? "/assets/9b0d90147f7fab54f00dd193fe7f85cd.svg" : "/assets/308e587f3a68412f137f7317206e92c2.svg"
+						})
+					});
 					
 					if (!PluginStores.updateData.interval) PluginStores.updateData.interval = BDFDB.TimeUtils.interval(_ => {
 						BDFDB.PluginUtils.checkAllUpdates();
@@ -2545,7 +2555,7 @@ module.exports = (_ => {
 
 				BDFDB.DiscordConstants = BDFDB.ModuleUtils.findByProperties("Permissions", "ActivityTypes");
 				
-				const DiscordObjects = {};
+				DiscordObjects = {};
 				Internal.DiscordObjects = new Proxy(DiscordObjects, {
 					get: function (_, item) {
 						if (DiscordObjects[item]) return DiscordObjects[item];
@@ -2558,7 +2568,7 @@ module.exports = (_ => {
 				});
 				BDFDB.DiscordObjects = Internal.DiscordObjects;
 				
-				const LibraryRequires = {};
+				LibraryRequires = {};
 				Internal.LibraryRequires = new Proxy(LibraryRequires, {
 					get: function (_, item) {
 						if (LibraryRequires[item]) return LibraryRequires[item];
@@ -2570,7 +2580,7 @@ module.exports = (_ => {
 				});
 				BDFDB.LibraryRequires = Internal.LibraryRequires;
 				
-				const LibraryModules = {};
+				LibraryModules = {};
 				LibraryModules.LanguageStore = BDFDB.ModuleUtils.find(m => m.Messages && m.Messages.IMAGE && m);
 				LibraryModules.React = BDFDB.ModuleUtils.findByProperties("createElement", "cloneElement");
 				LibraryModules.ReactDOM = BDFDB.ModuleUtils.findByProperties("render", "findDOMNode");
@@ -7093,7 +7103,21 @@ module.exports = (_ => {
 								key: this.props.addon && this.props.addon.name && `${this.props.addon.name}-settingsPanel`,
 								id: this.props.addon && this.props.addon.name && `${this.props.addon.name}-settings`,
 								className: BDFDB.disCN.settingspanel,
-								children: panelItems
+								children: [
+									this.props.addon.changeLog && !BDFDB.ObjectUtils.isEmpty(this.props.addon.changeLog) && BDFDB.ReactUtils.createElement(Internal.LibraryComponents.TooltipContainer, {
+										text: BDFDB.LanguageUtils.LanguageStrings.CHANGE_LOG,
+										children: BDFDB.ReactUtils.createElement(Internal.LibraryComponents.Clickable, {
+											className: BDFDB.disCN._repochangelogbutton,
+											children: BDFDB.ReactUtils.createElement(Internal.LibraryComponents.SvgIcon, {
+												name: Internal.LibraryComponents.SvgIcon.Names.CHANGELOG,
+												onClick: _ => BDFDB.PluginUtils.openChangeLog(this.props.addon),
+												width: 24,
+												height: 24
+											})
+										})
+									}),
+									panelItems
+								]
 							});
 						}
 					};
@@ -8057,52 +8081,6 @@ module.exports = (_ => {
 					});
 					
 					BDFDB.LibraryComponents = Internal.LibraryComponents;
-					
-					Internal.createCustomControl = function (data) {
-						let controlButton = BDFDB.DOMUtils.create(`<button class="${BDFDB.DOMUtils.formatClassName(BDFDB.disCN._repobutton, BDFDB.disCN._repocontrolsbutton, BDFDB.disCN._repocontrolscustom)}"></button>`);
-						BDFDB.ReactUtils.render(BDFDB.ReactUtils.createElement(Internal.LibraryComponents.SvgIcon, {
-							nativeClass: true,
-							name: data.svgName,
-							width: 20,
-							height: 20
-						}), controlButton);
-						controlButton.addEventListener("click", _ => {if (typeof data.onClick == "function") data.onClick();});
-						if (data.tooltipText) controlButton.addEventListener("mouseenter", _ => {BDFDB.TooltipUtils.create(controlButton, data.tooltipText);});
-						return controlButton;
-					};
-					Internal.appendCustomControls = function (card) {
-						if (!card || card.querySelector(BDFDB.dotCN._repocontrolscustom)) return;
-						let checkbox = card.querySelector(BDFDB.dotCN._reposwitch);
-						if (!checkbox) return;
-						let props = BDFDB.ObjectUtils.get(BDFDB.ReactUtils.getInstance(card), "return.stateNode.props");
-						let plugin = props && props.addon && (props.addon.plugin || props.addon.instance);
-						if (plugin && (plugin == this || plugin.name && plugin.name && PluginStores.loaded[plugin.name] && PluginStores.loaded[plugin.name] == plugin)) {
-							let url = Internal.getPluginURL(plugin);
-							let controls = [];
-							let footerControls = card.querySelector(BDFDB.dotCNS._repofooter + BDFDB.dotCN._repocontrols);
-							if (plugin.changeLog) controls.push(Internal.createCustomControl({
-								tooltipText: BDFDB.LanguageUtils.LanguageStrings.CHANGE_LOG,
-								svgName: Internal.LibraryComponents.SvgIcon.Names.CHANGELOG,
-								onClick: _ => {BDFDB.PluginUtils.openChangeLog(plugin);}
-							}));
-							if (PluginStores.updateData.plugins[url] && PluginStores.updateData.plugins[url].outdated) controls.push(Internal.createCustomControl({
-								tooltipText: BDFDB.LanguageUtils.LanguageStrings.UPDATE_MANUALLY,
-								svgName: Internal.LibraryComponents.SvgIcon.Names.DOWNLOAD,
-								onClick: _ => {BDFDB.PluginUtils.downloadUpdate(plugin.name, url);}
-							}));
-							if (footerControls) for (let control of controls) footerControls.insertBefore(control, footerControls.firstElementChild);
-							else for (let control of controls) checkbox.parentElement.insertBefore(control, checkbox.parentElement.firstElementChild);
-						}
-					};
-					Internal.addListObserver = function (layer) {
-						if (!layer) return;
-						BDFDB.ObserverUtils.connect(BDFDB, layer, {name: "cardObserver", instance: new MutationObserver(changes => {changes.forEach(change => {if (change.addedNodes) {change.addedNodes.forEach(n => {
-							if (BDFDB.DOMUtils.containsClass(n, BDFDB.disCN._repocard)) Internal.appendCustomControls(n);
-							if (n.nodeType != Node.TEXT_NODE) for (let c of n.querySelectorAll(BDFDB.dotCN._repocard)) Internal.appendCustomControls(c);
-							Internal.appendCustomControls(BDFDB.DOMUtils.getParent(BDFDB.dotCN._repocard, n));
-						});}});})}, {childList: true, subtree: true});
-						for (let c of layer.querySelectorAll(BDFDB.dotCN._repocard)) Internal.appendCustomControls(c);
-					};
 
 					const keyDownTimeouts = {};
 					BDFDB.ListenerUtils.add(BDFDB, document, "keydown.BDFDBPressedKeys", e => {
@@ -8133,7 +8111,6 @@ module.exports = (_ => {
 						after: {
 							useCopyIdItem: "default",
 							Menu: "default",
-							SettingsView: "componentDidMount",
 							Shakeable: "render",
 							Account: ["componentDidMount", "componentDidUpdate"],
 							MessageToolbar: "type",
@@ -8179,10 +8156,6 @@ module.exports = (_ => {
 					
 					Internal.processSearchBar = function (e) {
 						if (typeof e.instance.props.query != "string") e.instance.props.query = "";
-					};
-					
-					Internal.processSettingsView = function (e) {
-						if (e.node && e.node.parentElement && e.node.parentElement) Internal.addListObserver(e.node.parentElement);
 					};
 					
 					let AppViewExport = InternalData.ModuleUtilsConfig.Finder.AppView && BDFDB.ModuleUtils.findByString(InternalData.ModuleUtilsConfig.Finder.AppView.strings, false);
