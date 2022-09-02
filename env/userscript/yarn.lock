@@ -1678,7 +1678,7 @@ __metadata:
     concurrently: 7.3.0
     eslint: 8.22.0
     eslint-plugin-userscripts: 0.2.9
-    markdown-doc-builder: ^1.3.0
+    markdown-doc-builder: 1.3.0
     prettier: 2.7.1
     rollup: 2.78.1
     ts-node: 10.9.1
@@ -4144,7 +4144,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-doc-builder@npm:^1.3.0":
+"markdown-doc-builder@npm:1.3.0":
   version: 1.3.0
   resolution: "markdown-doc-builder@npm:1.3.0"
   dependencies:
