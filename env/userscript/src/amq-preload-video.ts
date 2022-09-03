@@ -10,5 +10,5 @@ AMQ_addScriptData({
   name: 'Preload Video',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description:
-    '<p>Just enable media preloading. Speed up buffering.</p><p>Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!</p>',
+    'Just enable media preloading. Speed up buffering. Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!',
 })
