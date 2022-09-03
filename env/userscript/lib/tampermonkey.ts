@@ -120,7 +120,17 @@ const headers: {
   },
   {
     key: 'icon',
-    render: (b) => b.icon,
+    render: (b) => {
+      if (b.icon) {
+        return b.icon
+      }
+
+      const url = Array.isArray(b.match) ? b.match[0] : b.match
+      if (url) {
+        const domain = new URL(url).hostname
+        return `https://www.google.com/s2/favicons?sz=64&domain=${domain}`
+      }
+    },
   },
   {
     key: 'updateURL',
