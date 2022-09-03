@@ -15,5 +15,5 @@ document.addEventListener('DOMNodeInserted', () => {
 AMQ_addScriptData({
   name: 'Private Session',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: '<p>Set invisible status automatically.</p>',
+  description: 'Set invisible status automatically.',
 })

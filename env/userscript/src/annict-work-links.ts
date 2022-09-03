@@ -35,25 +35,25 @@ const main = async () => {
 
   if (entry.syobocal_tid && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
-    const a = link.firstChild as HTMLAnchorElement
-    a.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`
-    a.childNodes[0].textContent = 'しょぼいカレンダー'
-    links.appendChild(link)
-  }
-
-  if (entry.mal_id && links.firstChild) {
-    const link = links.firstChild.cloneNode(true)
-    const a = link.firstChild as HTMLAnchorElement
-    a.href = `https://myanimelist.net/anime/${entry.mal_id}`
-    a.childNodes[0].textContent = 'MyAnimeList'
+    const aHtml = link.firstChild as HTMLAnchorElement
+    aHtml.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`
+    aHtml.childNodes[0].textContent = 'しょぼいカレンダー'
     links.appendChild(link)
   }
 
   if (entry.anilist_id && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
-    const a = link.firstChild as HTMLAnchorElement
-    a.href = `https://anilist.co/anime/${entry.anilist_id}`
-    a.childNodes[0].textContent = 'AniList'
+    const aHtml = link.firstChild as HTMLAnchorElement
+    aHtml.href = `https://anilist.co/anime/${entry.anilist_id}`
+    aHtml.childNodes[0].textContent = 'AniList'
+    links.appendChild(link)
+  }
+
+  if (entry.mal_id && links.firstChild) {
+    const link = links.firstChild.cloneNode(true)
+    const aHtml = link.firstChild as HTMLAnchorElement
+    aHtml.href = `https://myanimelist.net/anime/${entry.mal_id}`
+    aHtml.childNodes[0].textContent = 'MyAnimeList'
     links.appendChild(link)
   }
 }

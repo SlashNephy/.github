@@ -1,3 +1,6 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable xss/no-mixed-html */
+
 // from: https://github.com/TheJoseph98/AMQ-Scripts/blob/master/common/amqScriptInfo.js (MIT License)
 
 declare global {

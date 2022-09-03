@@ -207,5 +207,5 @@ listener.bindListener()
 AMQ_addScriptData({
   name: 'Result Exporter',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: '<p>Export song results to Google Spreadsheet!</p>',
+  description: 'Export song results to Google Spreadsheet!',
 })
