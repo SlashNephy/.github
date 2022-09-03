@@ -82,9 +82,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:29.0.1":
-  version: 29.0.1
-  resolution: "@jest/types@npm:29.0.1"
+"@jest/types@npm:29.0.2":
+  version: 29.0.2
+  resolution: "@jest/types@npm:29.0.2"
   dependencies:
     "@jest/schemas": ^29.0.0
     "@types/istanbul-lib-coverage": ^2.0.0
@@ -92,7 +92,7 @@ __metadata:
     "@types/node": "*"
     "@types/yargs": ^17.0.8
     chalk: ^4.0.0
-  checksum: 50a3658d69cad32fe270ef22e9a21cbad38c387d0b17cb1f23b144f9c9081e81623feda940b6b23459df656f88153ffe7765f36cd3bc3f3b2d8cd0ca246d75b2
+  checksum: f093f4548f8022f5ac9d1edf712edbb5c8edb101017f4afd95b9f9eb978328d099dcb77e2f1893a6dfeb9a7dfdd6cc589b2d83829490cee7e9afa9166c2945bd
   languageName: node
   linkType: hard
 
@@ -193,7 +193,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/jest-config@workspace:."
   dependencies:
-    "@jest/types": 29.0.1
+    "@jest/types": 29.0.2
     "@slashnephy/eslint-config": 0.1.12
     "@slashnephy/prettier-config": 0.1.1
     "@types/node": 17.0.41
