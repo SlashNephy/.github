@@ -5,50 +5,52 @@ import type { Linter } from 'eslint'
 const config: Linter.Config = {
   root: true,
   overrides: [
+    // JavaScript / TypeScript 共通ルール
     {
-      files: ['**/*.js'],
+      files: '**/*.{js,jsx,ts,tsx}',
       extends: [
         resolve(__dirname, 'common.js'),
         resolve(__dirname, 'javascript.js'),
-        resolve(__dirname, 'prettier.js'),
       ],
     },
+    // TypeScript 共通ルール
     {
-      files: ['**/*.ts'],
-      extends: [
-        resolve(__dirname, 'common.js'),
-        resolve(__dirname, 'javascript.js'),
-        resolve(__dirname, 'typescript.js'),
-        resolve(__dirname, 'prettier.js'),
-      ],
+      files: '**/*.{ts,tsx}',
+      extends: resolve(__dirname, 'typescript.js'),
     },
+    // jest 共通ルール
     {
-      files: ['**/*.test.ts', '**/test/**/*.ts'],
-      extends: [resolve(__dirname, 'jest.js')],
+      files: ['**/*.test.{js,ts}', '**/test/**/*.{js,ts}'],
+      extends: resolve(__dirname, 'jest.js'),
     },
+    // React 共通ルール
     {
-      files: ['**/*.tsx'],
-      extends: [
-        resolve(__dirname, 'common.js'),
-        resolve(__dirname, 'javascript.js'),
-        resolve(__dirname, 'typescript.js'),
-        resolve(__dirname, 'react.js'),
-        resolve(__dirname, 'prettier.js'),
-      ],
+      files: ['**/*.{j,t}sx'],
+      extends: resolve(__dirname, 'react.js'),
     },
-    // default export を許可
+    // UserScript
+    {
+      files: ['**/*.user.js'],
+      extends: resolve(__dirname, 'userscript.js'),
+    },
+    // default export を例外的に許可
     {
       files: [
         // Webpack
-        '**/webpack.config.ts',
+        '**/webpack.config.{js,ts}',
         // rollup
-        '**/rollup.config.ts',
+        '**/rollup.config.{js,ts}',
         // Next.js
-        '**/pages/**/*.{ts,tsx}',
+        '**/pages/**/*.{js,jsx,ts,tsx}',
       ],
       rules: {
         'import/no-default-export': 'off',
       },
+    },
+    // 最後に prettier を適用
+    {
+      files: '**/*.{js,jsx,ts,tsx}',
+      extends: resolve(__dirname, 'prettier.js'),
     },
   ],
 }
