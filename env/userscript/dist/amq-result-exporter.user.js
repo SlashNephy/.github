@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
-// @namespace       https://spica.starry.blue/
-// @version         0.2.1
-// @author          SlashNephy <spica@starry.blue>
+// @namespace       https://github.com/SlashNephy
+// @version         0.3.0
+// @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
 // @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88%E3%82%92_Google_%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AB%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B_UserScript
@@ -15,6 +15,8 @@
 // @connect         script.google.com
 // @connect         raw.githubusercontent.com
 // @grant           GM_xmlhttpRequest
+// @grant           GM_getValue
+// @grant           GM_setValue
 // @license         MIT license
 // ==/UserScript==
 
@@ -158,14 +160,23 @@ const AMQ_addStyle = (css) => {
   style.appendChild(document.createTextNode(css))
 }
 
-const GAS_URL = 'https://script.google.com/macros/s/xxx/exec'
+const loadGasUrl = () => {
+  const url = GM_getValue('GAS_URL', '')
+  if (url) {
+    return url
+  }
+  GM_setValue('GAS_URL', '')
+  throw new Error('Please set GAS_URL from the Storage tab in Tampermonkey dashboard.')
+}
+loadGasUrl()
 const armEntries = []
 fetchArmEntries()
   .then((entries) => armEntries.push(...entries))
   .catch(console.error)
 const executeGas = async (row) => {
+  const url = loadGasUrl()
   await executeXhr({
-    url: GAS_URL,
+    url,
     method: 'POST',
     data: JSON.stringify(row),
   })
@@ -297,5 +308,5 @@ listener.bindListener()
 AMQ_addScriptData({
   name: 'Result Exporter',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: '<p>Export song results to Google Spreadsheet!</p>',
+  description: 'Export song results to Google Spreadsheet!',
 })

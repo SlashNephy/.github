@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            AMQ Private Session
-// @namespace       https://spica.starry.blue/
-// @version         0.2.1
-// @author          SlashNephy <spica@starry.blue>
+// @namespace       https://github.com/SlashNephy
+// @version         0.2.2
+// @author          SlashNephy
 // @description     Set invisible status automatically on login.
 // @description:ja  ログイン時に Invisible ステータスを設定します。
 // @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E7%8A%B6%E6%B3%81%E3%82%92%E9%9A%A0%E3%81%99_UserScript
@@ -120,5 +120,5 @@ document.addEventListener('DOMNodeInserted', () => {
 AMQ_addScriptData({
   name: 'Private Session',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: '<p>Set invisible status automatically.</p>',
+  description: 'Set invisible status automatically.',
 })
