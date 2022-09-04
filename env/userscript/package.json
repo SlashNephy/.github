@@ -55,6 +55,6 @@
     "tampermonkey": ">4"
   },
   "engines": {
-    "node": ">18"
+    "node": "18.8.0"
   }
 }
