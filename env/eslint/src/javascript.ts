@@ -90,6 +90,8 @@ const javascript: Linter.Config = {
     'node/no-unpublished-import': 'off',
     // foo["bar"] 👉 foo.bar
     'dot-notation': 'error',
+    // {x: x} 👉 {x}
+    'object-shorthand': ['error', 'always'],
   },
 }
 
