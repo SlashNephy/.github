@@ -77,7 +77,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.2.2',
+    version: '0.3.0',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',
@@ -88,7 +88,7 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     connect: ['script.google.com', 'raw.githubusercontent.com'],
-    grant: 'GM_xmlhttpRequest',
+    grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue'],
   },
   {
     id: 'google-remove-redirection-warning',
