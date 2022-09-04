@@ -6,7 +6,17 @@ import { AMQ_addScriptData } from '../lib/thirdparty/amqScriptInfo'
 import type { ArmEntry } from '../lib/arm'
 import type { AnswerResultsPayload } from '../types/amq'
 
-const GAS_URL = 'https://script.google.com/macros/s/xxx/exec'
+const loadGasUrl = (): string => {
+  const url = GM_getValue('GAS_URL', '')
+  if (url) {
+    return url
+  }
+
+  GM_setValue('GAS_URL', '')
+  throw new Error('Please set GAS_URL from the Storage tab in Tampermonkey dashboard.')
+}
+
+loadGasUrl()
 
 const armEntries: ArmEntry[] = []
 fetchArmEntries()
@@ -14,8 +24,9 @@ fetchArmEntries()
   .catch(console.error)
 
 const executeGas = async (row: (string | number | boolean)[]) => {
+  const url = loadGasUrl()
   await executeXhr({
-    url: GAS_URL,
+    url,
     method: 'POST',
     data: JSON.stringify(row),
   })
@@ -149,60 +160,8 @@ const handle = (payload: AnswerResultsPayload) => {
   executeGas(row).catch(console.error)
 }
 
-// const createSettingTab = () => {
-//   $('#settingModal .tabContainer').append(
-//     $('<div></div>')
-//       .addClass('tab leftRightButtonTop clickAble')
-//       .attr('onClick', "options.selectTab('result-exporter-setting-container', this)")
-//       .append($('<h5></h5>').text('Exporter'))
-//   )
-//   $('#settingModal .modal-body').append(
-//     $('<div></div>')
-//       .attr('id', 'result-exporter-setting-container')
-//       .addClass('result-exporter-setting-container hide')
-//       .append($('<div></div>').addClass('row'))
-//   )
-//
-//   $('#result-exporter-setting-container > .row').append(
-//     $('<div></div>')
-//       .addClass('col-xs-6')
-//       .attr('id', 'gas-url-container')
-//       .append($('<div></div>').attr('style', 'text-align: center'))
-//   )
-//   $('#gas-url-container').append(
-//     $('<div></div>')
-//       .append($('<label></label>').text('GAS URL'))
-//       .append(
-//         $('<div></div>').append(
-//           $("<input id='result-exporter-gas-url' class='form-control' type='text'>").prop('value', '')
-//         )
-//       )
-//   )
-// }
-
 const listener = new Listener<AnswerResultsPayload>('answer results', handle)
 listener.bindListener()
-
-// createSettingTab()
-//
-// const initialize = setInterval(() => {
-//   if (document.getElementById('loadingScreen')?.classList.contains('hidden')) {
-//     options.$SETTING_TABS = $('#settingModal .tab')
-//     options.$SETTING_CONTAINERS = $('.settingContentContainer')
-//
-//     AMQ_addStyle(`
-//       .result-exporter-setting-container {
-//           display: flex;
-//       }
-//       .result-exporter-setting-container > div {
-//           display: inline-block;
-//           margin: 5px 0px;
-//       }
-//     `)
-//
-//     clearInterval(initialize)
-//   }
-// }, 500)
 
 AMQ_addScriptData({
   name: 'Result Exporter',

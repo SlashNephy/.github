@@ -25,7 +25,31 @@ export type Banner = {
 
 type InternationalizationStrings = Record<string, string> & { en: string; ja?: string }
 
-type TampermonkeyGrant = ''
+type TampermonkeyGrant =
+  | 'GM_setValue'
+  | 'GM_getValue'
+  | 'GM_setClipboard'
+  | 'unsafeWindow'
+  | 'window.close'
+  | 'window.focus'
+  | 'window.onurlchange'
+  | 'GM_log'
+  | 'GM_download'
+  | 'GM_xmlhttpRequest'
+  | 'GM_addStyle'
+  | 'GM_addValueChangeListener'
+  | 'GM_deleteValue'
+  | 'GM_getResourceText'
+  | 'GM_getResourceURL'
+  | 'GM_getTab'
+  | 'GM_getTabs'
+  | 'GM_listValues'
+  | 'GM_notification'
+  | 'GM_openInTab'
+  | 'GM_registerMenuCommand'
+  | 'GM_removeValueChangeListener'
+  | 'GM_saveTab'
+  | 'GM_unregisterMenuCommand'
 
 // https://www.tampermonkey.net/documentation.php
 type TampermonkeyHeader = {
@@ -53,7 +77,7 @@ type TampermonkeyHeader = {
   resource?: string | string[]
   connect?: string | string[]
   runAt?: 'document-start' | 'document-body' | 'document-end' | 'document-idle' | 'context-menu'
-  grant?: string | string[] | 'none'
+  grant?: TampermonkeyGrant | TampermonkeyGrant[] | 'none'
   antiFeature?: string | string[]
   noFrames?: boolean
   unwrap?: boolean
