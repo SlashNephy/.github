@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            Google Remove Redirection Warning
-// @namespace       https://spica.starry.blue/
-// @version         0.1.2
-// @author          SlashNephy <spica@starry.blue>
+// @namespace       https://github.com/SlashNephy
+// @version         0.1.3
+// @author          SlashNephy
 // @description     Remove redirection warning from https://google.com/url
 // @description:ja  https://google.com/url のリダイレクト警告をスキップします。
 // @homepage        https://scrapbox.io/slashnephy/Google_%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88%E5%86%85%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%B8%8F%E3%82%93%E3%81%A0%E9%9A%9B%E3%81%AE%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E8%AD%A6%E5%91%8A%E3%82%92%E3%82%B9%E3%82%AD%E3%83%83%E3%83%97%E3%81%99%E3%82%8B_UserScript

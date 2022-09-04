@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            Annict Work Links
-// @namespace       https://spica.starry.blue/
-// @version         0.2.3
-// @author          SlashNephy <spica@starry.blue>
+// @namespace       https://github.com/SlashNephy
+// @version         0.2.4
+// @author          SlashNephy
 // @description     Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.
 // @description:ja  Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。
 // @homepage        https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%90%84%E7%A8%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
@@ -65,23 +65,23 @@ const main = async () => {
   }
   if (entry.syobocal_tid && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
-    const a = link.firstChild
-    a.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`
-    a.childNodes[0].textContent = 'しょぼいカレンダー'
-    links.appendChild(link)
-  }
-  if (entry.mal_id && links.firstChild) {
-    const link = links.firstChild.cloneNode(true)
-    const a = link.firstChild
-    a.href = `https://myanimelist.net/anime/${entry.mal_id}`
-    a.childNodes[0].textContent = 'MyAnimeList'
+    const aHtml = link.firstChild
+    aHtml.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`
+    aHtml.childNodes[0].textContent = 'しょぼいカレンダー'
     links.appendChild(link)
   }
   if (entry.anilist_id && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
-    const a = link.firstChild
-    a.href = `https://anilist.co/anime/${entry.anilist_id}`
-    a.childNodes[0].textContent = 'AniList'
+    const aHtml = link.firstChild
+    aHtml.href = `https://anilist.co/anime/${entry.anilist_id}`
+    aHtml.childNodes[0].textContent = 'AniList'
+    links.appendChild(link)
+  }
+  if (entry.mal_id && links.firstChild) {
+    const link = links.firstChild.cloneNode(true)
+    const aHtml = link.firstChild
+    aHtml.href = `https://myanimelist.net/anime/${entry.mal_id}`
+    aHtml.childNodes[0].textContent = 'MyAnimeList'
     links.appendChild(link)
   }
 }

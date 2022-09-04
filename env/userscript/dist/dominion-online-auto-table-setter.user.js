@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            dominion.games Auto Table Setter
-// @namespace       https://spica.starry.blue/
-// @version         0.3.2
-// @author          SlashNephy <spica@starry.blue>
+// @namespace       https://github.com/SlashNephy
+// @version         0.3.3
+// @author          SlashNephy
 // @description     Automatically configures the table settings in dominion.games.
 // @description:ja  dominion.games の卓設定を自動的に設定します。
 // @homepage        https://scrapbox.io/slashnephy/Dominion_Online_%E3%81%AE%E5%8D%93%E3%82%92%E8%87%AA%E5%8B%95%E3%81%A7%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B_UserScript

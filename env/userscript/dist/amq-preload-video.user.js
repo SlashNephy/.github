@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            AMQ Preload Video
-// @namespace       https://spica.starry.blue/
-// @version         0.2.1
-// @author          SlashNephy <spica@starry.blue>
+// @namespace       https://github.com/SlashNephy
+// @version         0.2.2
+// @author          SlashNephy
 // @description     Just enable media preloading. Buffering may be faster.
 // @description:ja  プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。
 // @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E3%83%97%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%81%9B%E3%82%8B_UserScript
@@ -116,5 +116,5 @@ AMQ_addScriptData({
   name: 'Preload Video',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description:
-    '<p>Just enable media preloading. Speed up buffering.</p><p>Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!</p>',
+    'Just enable media preloading. Speed up buffering. Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!',
 })
