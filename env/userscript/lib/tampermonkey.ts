@@ -25,6 +25,8 @@ export type Banner = {
 
 type InternationalizationStrings = Record<string, string> & { en: string; ja?: string }
 
+type TampermonkeyGrant = ''
+
 // https://www.tampermonkey.net/documentation.php
 type TampermonkeyHeader = {
   name: string | InternationalizationStrings
@@ -82,7 +84,7 @@ const headers: {
   },
   {
     key: 'namespace',
-    render: (b) => b.namespace ?? 'https://spica.starry.blue/',
+    render: (b) => b.namespace ?? 'https://github.com/SlashNephy',
   },
   {
     key: 'version',
