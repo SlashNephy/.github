@@ -36,7 +36,7 @@
     "eslint-plugin-editorconfig": "4.0.2",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jest": "26.8.2",
+    "eslint-plugin-jest": "26.9.0",
     "eslint-plugin-jest-formatting": "3.1.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.0.1",
