@@ -3,7 +3,7 @@
  * @source https://github.com/QWERTxD/BetterDiscordPlugins/blob/main/InAppNotifications/InAppNotifications.plugin.js
  * @updateUrl https://raw.githubusercontent.com/QWERTxD/BetterDiscordPlugins/main/InAppNotifications/InAppNotifications.plugin.js
  * @website https://github.com/QWERTxD/BetterDiscordPlugins/tree/main/InAppNotifications
- * @version 1.0.4
+ * @version 1.0.7
 */
 const request = require("request");
 const fs = require("fs");
@@ -21,15 +21,15 @@ const config = {
         ],
     github_raw:
       "https://raw.githubusercontent.com/QWERTxD/BetterDiscordPlugins/main/InAppNotifications/InAppNotifications.plugin.js",
-    version: "1.0.6",
+    version: "1.0.7",
     description:
       "Displays notifications such as new messages, friends added in Discord.",
 	},
   changelog: [
     {
-      title: "Fix error spam",
-      type: "Fix error spam",
-      items: ["Updated version of SmolAlli's fix to the constant spam of error messages (Credits to her). Should work for both the people that were previously having the issue and the the people that weren't."],
+      title: "Fixed notificaitons from threads",
+      type: "fixed",
+      items: ["Stopped notifications from threads you haven't joined from showing."],
     }
   ],
   defaultConfig: [
@@ -509,7 +509,7 @@ module.exports = !global.ZeresPluginLibrary
             );
             BdApi.alert(
               "InAppNotifications",
-              "There was an error while trying to start the plugin.\n Try checking the console for any erros from this plugin.\nFor any further support, join my support server (https://discord.gg/zMnHFAKsu3)"
+              "There was an error while trying to start the plugin.\n Try checking the console for any erros from this plugin.\nFor any further support, join my support server (https://discord.gg/zJbXFXNAhJ)"
             );
           }
 
@@ -547,7 +547,7 @@ module.exports = !global.ZeresPluginLibrary
               } catch {
                 BdApi.alert(
                   "InAppNotifications",
-                  "There was an error while trying to start the plugin.\n Try checking the console for any erros from this plugin.\nFor any further support, join my support server (https://discord.gg/zMnHFAKsu3)"
+                  "There was an error while trying to start the plugin.\n Try checking the console for any erros from this plugin.\nFor any further support, join my support server (https://discord.gg/zJbXFXNAhJ)"
                 );
               }
             }
@@ -585,7 +585,7 @@ module.exports = !global.ZeresPluginLibrary
               } catch {
                 BdApi.alert(
                   "InAppNotifications",
-                  "There was an error while trying to start the plugin.\n Try checking the console for any erros from this plugin.\nFor any further support, join my support server (https://discord.gg/zMnHFAKsu3)"
+                  "There was an error while trying to start the plugin.\n Try checking the console for any erros from this plugin.\nFor any further support, join my support server (https://discord.gg/zJbXFXNAhJ)"
                 );
               }
             }
@@ -902,6 +902,7 @@ module.exports = !global.ZeresPluginLibrary
 
         supposedToNotify(message, channel) {
           if (message.author.id === UserStore.getCurrentUser().id) return false;
+          if (channel.type === ChannelTypes["PUBLIC_THREAD"] && !channel.member) return false;
           const isSuppressEveryone = MuteStore.isSuppressEveryoneEnabled(
             message.guild_id || "@me"
           );
