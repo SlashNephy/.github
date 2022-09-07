@@ -10,7 +10,7 @@
 			"OpenSteamLinksInApp": "1.1.4",
 			"ShowHiddenChannels": "9.9.9",
 			"SpotifyControls": "1.2.5",
-			"Translator": "2.3.9"
+			"Translator": "2.4.1"
 		},
 		"choices": {
 			"toastPosition": "right"
@@ -22,7 +22,7 @@
 			"useChromium": false
 		},
 		"hashes": {
-			"0BDFDB.data.json": "ab73f458c535e804b3efc1a7fc7449ac6576d5f8",
+			"0BDFDB.data.json": "8c6e067c8a590a3f0f0d9bed68f93be18ddfe6c7",
 			"0BDFDB.raw.css": "98e9c027ef6e97326ac142859216e2f96c20ac4d"
 		}
 	}
