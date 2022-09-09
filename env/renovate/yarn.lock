@@ -1928,7 +1928,7 @@ __metadata:
     eslint: 8.23.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.190.2
+    renovate: 32.194.3
     ts-node: 10.9.1
     typescript: 4.8.3
   languageName: unknown
@@ -2679,7 +2679,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aggregate-error@npm:^3.0.0":
+"aggregate-error@npm:3.1.0, aggregate-error@npm:^3.0.0":
   version: 3.1.0
   resolution: "aggregate-error@npm:3.1.0"
   dependencies:
@@ -5896,6 +5896,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:3.0.3":
+  version: 3.0.3
+  resolution: "luxon@npm:3.0.3"
+  checksum: 67d143f102f520761c4202086579a5cf30b230ea299da27cacb31e9f9d372cadef90f14cbe7e2621b70825b267fe00128b8176ed8b7172b48f77a403a662d5aa
+  languageName: node
+  linkType: hard
+
 "make-error@npm:^1.1.1":
   version: 1.3.6
   resolution: "make-error@npm:1.3.6"
@@ -6389,13 +6396,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-html-parser@npm:5.4.1":
-  version: 5.4.1
-  resolution: "node-html-parser@npm:5.4.1"
+"node-html-parser@npm:5.4.2":
+  version: 5.4.2
+  resolution: "node-html-parser@npm:5.4.2"
   dependencies:
     css-select: ^4.2.1
     he: 1.2.0
-  checksum: 7067e2de97a10c0e6e63d6e4c039ddc682027b80c821a3a812ed11bfadd0433324cccb2f6955a30b174e35993fd8be2ce642b8ed6eed5ca9c6ab36a5d5ce0612
+  checksum: 2d2391147c83b402786eeab95d23ea4e24ca8608e0e70a2823bfd4f2a248be13a8cc31acfd55a0109e051131e4f0c17d7ada8d999ce70ff2e342ab0110f5da59
   languageName: node
   linkType: hard
 
@@ -6577,12 +6584,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"openpgp@npm:5.4.0":
-  version: 5.4.0
-  resolution: "openpgp@npm:5.4.0"
+"openpgp@npm:5.5.0":
+  version: 5.5.0
+  resolution: "openpgp@npm:5.5.0"
   dependencies:
     asn1.js: ^5.0.0
-  checksum: 7e7d049d0b500163b2e89286a622ae47a4bd54a8f2b34cb4868b29d60dc4f24fdc166cd92d641b383e2477916d12911e1b594bb8716481b20f7d88af53578587
+  checksum: 65ff3f47089449ce16b41929570487c682d114464d44965b50da7fbd7ae8681e4a8b3c0ba3abc7cbfcbe31d0c3b1d4e3a4b5efc743d217ffff122a19c296bc74
   languageName: node
   linkType: hard
 
@@ -7190,9 +7197,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.190.2":
-  version: 32.190.2
-  resolution: "renovate@npm:32.190.2"
+"renovate@npm:32.194.3":
+  version: 32.194.3
+  resolution: "renovate@npm:32.194.3"
   dependencies:
     "@aws-sdk/client-ec2": 3.155.0
     "@aws-sdk/client-ecr": 3.154.0
@@ -7209,6 +7216,7 @@ __metadata:
     "@yarnpkg/core": 3.2.4
     "@yarnpkg/parsers": 2.5.1
     agentkeepalive: 4.2.1
+    aggregate-error: 3.1.0
     auth-header: 1.0.0
     azure-devops-node-api: 11.2.0
     bunyan: 1.8.15
@@ -7247,15 +7255,15 @@ __metadata:
     json-dup-key-validator: 1.0.3
     json-stringify-pretty-compact: 3.0.0
     json5: 2.2.1
-    luxon: 3.0.1
+    luxon: 3.0.3
     markdown-it: 13.0.1
     markdown-table: 2.0.0
     marshal: 0.5.4
     minimatch: 5.1.0
     moo: 0.5.1
     nanoid: 3.3.4
-    node-html-parser: 5.4.1
-    openpgp: 5.4.0
+    node-html-parser: 5.4.2
+    openpgp: 5.5.0
     p-all: 3.0.0
     p-map: 4.0.0
     p-queue: 6.6.2
@@ -7285,7 +7293,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: d2242f1dc0545fae05e3c6cf4a10cd22f19f2996f8c6f40dc4ac4d8476ac8e1f8e557f4af6bb7cd9578fb76126e08ee0268b31fbd9957835ccd60d8663265508
+  checksum: 95e0e4ef84877218e7523cd8907e98e26446860c3e628d32bcc88016ef2329e496934d1ee33e8682e583871ed71ae172d4ddeb6281756c6f775fe409f0db6ef5
   languageName: node
   linkType: hard
 
