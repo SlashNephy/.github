@@ -43,6 +43,10 @@ on:
         required: false
         type: string
         default: '**/*.{css,scss,sass,less,styl}'
+      eslint-flags:
+        required: false
+        type: string
+        default: '--max-warnings=0'
 
 permissions:
   contents: read
@@ -87,6 +91,7 @@ jobs:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
           workdir: '${{ inputs.working-directory }}'
+          eslint_flags: '${{ inputs.eslint-flags }} .'
 
       - name: prettier
         if: inputs.enable-prettier
