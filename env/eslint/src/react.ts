@@ -7,6 +7,8 @@ const react: Linter.Config = {
   extends: [
     // https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js
     'next/core-web-vitals',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:css-import-order/recommended',
   ],
   plugins: ['css-import-order'],

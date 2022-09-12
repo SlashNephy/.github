@@ -28,6 +28,17 @@ const prettier: Linter.Config = {
     // 行末のスペースを禁止
     'no-trailing-spaces': ['error'],
   },
+  overrides: [
+    // JSON ではダブルクォーテーションを使う
+    {
+      files: '**/*.json',
+      rules: {
+        quotes: ['error', 'double'],
+        semi: 'off',
+        'eol-last': 'off',
+      },
+    },
+  ],
 }
 
 module.exports = prettier
