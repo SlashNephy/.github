@@ -1,11 +1,12 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "0.1.14",
+  "version": "0.2.0",
+  "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
+    "type": "git",
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/eslint"
   },
-  "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -17,13 +18,13 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "concurrently -n lint: 'yarn:lint:*'",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
-    "format": "concurrently -n format: 'yarn:format:*'",
-    "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "yarn lint:prettier --write",
     "clean": "rm -rf dist/*",
+    "format": "concurrently -n format: 'yarn:format:*'",
+    "format:eslint": "yarn build && yarn lint:eslint --fix",
+    "format:prettier": "yarn lint:prettier --write",
+    "lint": "concurrently -n lint: 'yarn:lint:*'",
+    "lint:eslint": "yarn build && eslint .",
+    "lint:prettier": "prettier --check .",
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
   "dependencies": {
@@ -38,13 +39,16 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jest": "27.0.1",
     "eslint-plugin-jest-formatting": "3.1.0",
+    "eslint-plugin-json": "3.1.0",
     "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-package-json": "0.1.4",
     "eslint-plugin-promise": "6.0.1",
     "eslint-plugin-react": "7.31.5",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-unused-imports": "2.0.0",
     "eslint-plugin-userscripts": "0.2.9",
-    "eslint-plugin-xss": "0.1.12"
+    "eslint-plugin-xss": "0.1.12",
+    "eslint-plugin-yml": "1.2.0"
   },
   "peerDependencies": {
     "eslint": "^8",

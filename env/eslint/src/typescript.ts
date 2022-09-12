@@ -7,6 +7,7 @@ const typescript: Linter.Config = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/strict',
     'plugin:import/typescript',
   ],
   plugins: ['@typescript-eslint'],
@@ -19,6 +20,133 @@ const typescript: Linter.Config = {
     warnOnUnsupportedTypeScriptVersion: true,
   },
   rules: {
+    /**
+     * Automatically fixable は error にする
+     */
+    // export type を優先
+    '@typescript-eslint/consistent-type-exports': [
+      'error',
+      {
+        fixMixedExportsWithInlineTypeSpecifier: true,
+      },
+    ],
+    // import type を優先
+    '@typescript-eslint/consistent-type-imports': 'error',
+    // 関数の返り値の型を明示させる
+    '@typescript-eslint/explicit-function-return-type': 'warn',
+    // クラスのアクセス修飾子を強制
+    '@typescript-eslint/explicit-member-accessibility': 'error',
+    // export されているメンバーや public メンバーは型を明示させる
+    '@typescript-eslint/explicit-module-boundary-types': 'warn',
+    '@typescript-eslint/member-delimiter-style': 'error',
+    '@typescript-eslint/member-ordering': 'warn',
+    '@typescript-eslint/method-signature-style': 'warn',
+    // 命名規則を強制
+    '@typescript-eslint/naming-convention': [
+      'warn',
+      // デフォルトは camelCase
+      {
+        selector: ['default'],
+        format: ['camelCase'],
+      },
+      // 変数名は camelCase
+      {
+        selector: ['variableLike'],
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+      },
+      // グローバルな export されている定数は UPPER_CASE
+      {
+        selector: ['variable'],
+        modifiers: ['const', 'global', 'exported'],
+        format: ['UPPER_CASE'],
+      },
+      // Boolean は特定のプレフィックスを強制
+      {
+        selector: ['variableLike'],
+        types: ['boolean'],
+        format: ['PascalCase'],
+        prefix: ['is', 'should', 'has', 'can', 'did', 'will', 'contains'],
+      },
+      // 型名は PascalCase
+      {
+        selector: ['typeLike'],
+        format: ['PascalCase'],
+      },
+      // プライベートメンバーは _ で始める
+      {
+        selector: ['memberLike'],
+        modifiers: ['private'],
+        format: ['camelCase'],
+        leadingUnderscore: 'require',
+      },
+      // オブジェクトのキーなど '' 付きの宣言は許容
+      {
+        selector: ['memberLike'],
+        modifiers: ['requiresQuotes'],
+        format: null,
+      },
+      // deconstruct で宣言された変数は許容
+      {
+        selector: ['variableLike'],
+        modifiers: ['destructured'],
+        format: null,
+      },
+    ],
+    // void を式の値として禁止
+    '@typescript-eslint/no-confusing-void-expression': 'error',
+    // DEPRECATED: 代わりに tsconfig.json で "useUnknownInCatchVariables": true を使用
+    '@typescript-eslint/no-implicit-any-catch': 'error',
+    // 重複した型定義を禁止
+    // boolean | false 👉 boolean
+    '@typescript-eslint/no-redundant-type-constituents': 'warn',
+    // require() を禁止
+    '@typescript-eslint/no-require-imports': 'warn',
+    '@typescript-eslint/no-type-alias': 'warn',
+    '@typescript-eslint/no-unnecessary-qualifier': 'error',
+    '@typescript-eslint/no-useless-empty-export': 'error',
+    // パラメーターでのプロパティ宣言を強制
+    '@typescript-eslint/parameter-properties': [
+      'warn',
+      {
+        allow: [
+          'readonly',
+          'private',
+          'protected',
+          'public',
+          'private readonly',
+          'protected readonly',
+          'public readonly',
+        ],
+        prefer: 'parameter-property',
+      },
+    ],
+    '@typescript-eslint/prefer-enum-initializers': 'warn',
+    '@typescript-eslint/prefer-readonly': 'error',
+    '@typescript-eslint/prefer-readonly-parameter-types': 'warn',
+    '@typescript-eslint/prefer-regexp-exec': 'error',
+    // Promise<T> を返す関数では async のマークを強制
+    '@typescript-eslint/promise-function-async': 'error',
+    '@typescript-eslint/require-array-sort-compare': 'off',
+    '@typescript-eslint/sort-type-union-intersection-members': 'error',
+    '@typescript-eslint/strict-boolean-expressions': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': 'error',
+    '@typescript-eslint/type-annotation-spacing': 'error',
+    // テンプレート文字列で number | boolean | undefined | null を許可
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      {
+        allowNumber: true,
+        allowBoolean: true,
+        allowNullish: true,
+      },
+    ],
+    // unsafe 系を緩める
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
     // 不要な変数を禁止
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-vars': [
@@ -31,43 +159,6 @@ const typescript: Linter.Config = {
         argsIgnorePattern: '^_',
       },
     ],
-    // import type を優先
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      {
-        prefer: 'type-imports',
-      },
-    ],
-    // Array<T> 👉 T[]
-    '@typescript-eslint/array-type': 'error',
-    // (T) expr 👉 expr as T
-    '@typescript-eslint/consistent-type-assertions': 'error',
-    // 未ハンドルの Promise を警告
-    '@typescript-eslint/no-floating-promises': 'warn',
-    // require() を禁止
-    '@typescript-eslint/no-require-imports': 'error',
-    // Promise<T> を返す関数では async のマークを強制
-    '@typescript-eslint/promise-function-async': 'error',
-    // eval() を禁止
-    '@typescript-eslint/no-implied-eval': 'error',
-    // *.jsx 内で React の import がなくても OK
-    'react/react-in-jsx-scope': 'off',
-    // テンプレート文字列で undefined | null を許可
-    '@typescript-eslint/restrict-template-expressions': 'off',
-    // スコープ厳格化を解除
-    '@typescript-eslint/unbound-method': 'off',
-    // unsafe 系を緩める
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-argument': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-unsafe-call': 'off',
-    '@typescript-eslint/no-unsafe-return': 'off',
-    // Promise の返り値チェック厳格化を解除
-    '@typescript-eslint/no-misused-promises': 'off',
-    // アクセス修飾子を強制
-    '@typescript-eslint/explicit-member-accessibility': 'error',
-    // {[key: string]: any} 👉 Record<string, any>
-    '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
   },
 }
 

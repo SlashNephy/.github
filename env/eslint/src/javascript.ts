@@ -5,6 +5,7 @@ import type { Linter } from 'eslint'
  */
 const javascript: Linter.Config = {
   extends: [
+    'plugin:eslint-comments/recommended',
     'plugin:node/recommended',
     'plugin:import/recommended',
     'plugin:xss/recommended',
@@ -19,12 +20,14 @@ const javascript: Linter.Config = {
     ecmaVersion: 'latest',
   },
   rules: {
+    // 不要なルール無効化コメントを報告
+    'eslint-comments/no-unused-disable': 'error',
     // default export を禁止
     'import/no-default-export': 'error',
     // アロー関数を優先
     'prefer-arrow-callback': 'error',
     // const a = function () { ... } を禁止
-    'func-style': [2, 'declaration', { allowArrowFunctions: true }],
+    'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
     // 中括弧の省略を禁止
     curly: 'error',
     // テンプレート文字列を優先
@@ -37,7 +40,7 @@ const javascript: Linter.Config = {
     'import/order': [
       'warn',
       {
-        // 組み込み ← 外部依存 ← 内部依存 ← import type の順にする
+        // 組み込み → 外部依存 → 内部依存 → object → type の順にする
         groups: [
           'builtin',
           'external',
@@ -90,8 +93,39 @@ const javascript: Linter.Config = {
     'node/no-unpublished-import': 'off',
     // foo["bar"] 👉 foo.bar
     'dot-notation': 'error',
-    // {x: x} 👉 {x}
+    // {foo: foo} 👉 {foo}
     'object-shorthand': ['error', 'always'],
+    // Array 系メソッドで return を強制
+    'array-callback-return': ['error'],
+    // ループ内では await を禁止
+    'no-await-in-loop': 'error',
+    // 操作が値に影響しない式を禁止
+    'no-constant-binary-expression': 'error',
+    // コンストラクター内で return を禁止
+    'no-constructor-return': 'error',
+    // 重複した import/export 文を禁止
+    'no-duplicate-imports': ['error', { includeExports: true }],
+    // 関数の返り値としての Promise executor を禁止
+    'no-promise-executor-return': 'error',
+    // 自身との比較 (e.g. foo === foo) を禁止
+    'no-self-compare': 'error',
+    // 非テンプレート文字列で ${foo} を禁止
+    // "Hello, ${name}" 👉 `Hello, ${name}`
+    'no-template-curly-in-string': 'error',
+    // 更新されないループ条件を禁止
+    'no-unmodified-loop-condition': 'error',
+    // 到達できないループを禁止
+    'no-unreachable-loop': 'error',
+    // 未使用の private メンバーを禁止
+    'no-unused-private-class-members': 'error',
+    // 定義前の使用を禁止
+    'no-use-before-define': 'error',
+    // スレッドセーフで安全に更新されないコードを禁止
+    'require-atomic-updates': 'error',
+    // func () 👉 func()
+    'func-call-spacing': ['error', 'never'],
+    // ペアになっていない setter を禁止
+    'accessor-pairs': 'error',
   },
 }
 
