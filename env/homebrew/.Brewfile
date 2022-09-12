@@ -12,6 +12,7 @@ tap "ktr0731/evans"
 tap "minacle/chntpw"
 tap "reviewdog/tap"
 tap "romkatv/powerlevel10k"
+tap "teamookla/speedtest"
 tap "yudai/gotty"
 # Run your GitHub Actions locally 🚀
 brew "act"
@@ -25,6 +26,10 @@ brew "aria2"
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
 # Platform built on V8 to build network applications
 brew "node"
 # AWS Cloud Development Kit - framework for defining AWS infra as code
@@ -59,8 +64,6 @@ brew "cloudflared"
 brew "cmake"
 # Color-highlighted diff(1) output
 brew "colordiff"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
 # Open source suite of directory software
 brew "openldap"
 # Tool for downloading RTMP streaming media
@@ -110,7 +113,7 @@ brew "gzip"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
 # Kubernetes package manager
-brew "helm", link: false
+brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -151,6 +154,8 @@ brew "mysql-client"
 brew "nano"
 # Improved Nano Syntax Highlighting Files
 brew "nanorc"
+# Netlify command-line tool
+brew "netlify-cli"
 # Network Kanji code conversion Filter (NKF)
 brew "nkf"
 # Port scanning utility for large networks
@@ -239,6 +244,8 @@ brew "minacle/chntpw/chntpw"
 brew "reviewdog/tap/reviewdog"
 # A Zsh Theme
 brew "romkatv/powerlevel10k/powerlevel10k"
+# Ookla Speedtest
+brew "teamookla/speedtest/speedtest"
 # Password manager that keeps all passwords secure behind one password
 cask "1password-beta"
 # Command-line helper for the 1Password password manager
@@ -260,6 +267,8 @@ cask "apparency"
 cask "appcleaner"
 # Multi-track audio editor and recorder
 cask "audacity"
+# Securely stores and accesses AWS credentials in a development environment
+cask "aws-vault"
 # Installer for BetterDiscord
 cask "betterdiscord-installer"
 # Virtual Audio Driver
@@ -274,6 +283,7 @@ cask "chrome-remote-desktop-host"
 cask "clipy"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
+cask "deckset"
 # Voice and text chat software
 cask "discord"
 # Voice and text chat software
@@ -282,6 +292,8 @@ cask "discord-canary"
 cask "discord-ptb"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Developer platform
+cask "dotnet-sdk"
 # Launcher for *Epic Games* games
 cask "epic-games"
 # Web browser
