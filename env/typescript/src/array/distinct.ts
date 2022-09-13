@@ -15,7 +15,7 @@ Array.prototype.distinct = function <T>(): T[] {
 Array.prototype.distinctBy = function <T, V>(key: (item: T) => V): T[] {
   const array = this as T[]
 
-  const map = new Map<any, T>()
+  const map = new Map<V, T>()
   for (const item of array) {
     const keyValue = key(item)
     if (!map.has(keyValue)) {

@@ -3,7 +3,7 @@ import { defineProperty } from '../property'
 export {}
 
 declare global {
-  interface Array<T> {
+  interface Array {
     readonly lastIndex: number
   }
 }

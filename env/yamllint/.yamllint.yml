@@ -5,3 +5,6 @@ rules:
   truthy: disable
   line-length: disable
   comments-indentation: disable
+
+ignore: |
+  **/node_modules/**
