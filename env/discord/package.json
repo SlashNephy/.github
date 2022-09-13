@@ -27,7 +27,7 @@
     "@types/babel__core": "7.1.19",
     "@types/babel__preset-env": "7.9.2",
     "concurrently": "7.4.0",
-    "eslint": "8.22.0",
+    "eslint": "8.23.1",
     "prettier": "2.7.1",
     "rollup": "2.79.0",
     "typescript": "4.8.3"
