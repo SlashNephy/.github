@@ -10,17 +10,18 @@
         '@slashnephy/eslint-config',
         '@slashnephy/prettier-config',
         '@slashnephy/typescript-extension',
-        'discord-api-types',
       ],
       automerge: true,
       ignoreTests: true,
       stabilityDays: 0,
+      schedule: ['at any time'],
     },
     // 特定パッケージは CI Pass 後 Automerge
     {
-      matchPackageNames: ['node', 'gradle', 'yarn'],
+      matchPackageNames: ['node', 'gradle', 'yarn', 'discord-api-types'],
       automerge: true,
       stabilityDays: 0,
+      schedule: ['at any time'],
     },
     // devDependencies は常に Automerge
     {
@@ -28,6 +29,7 @@
       automerge: true,
       ignoreTests: true,
       stabilityDays: 0,
+      schedule: ['at any time'],
     },
     // マイナーな @types/* の更新は常に Automerge
     {
@@ -37,6 +39,7 @@
       automerge: true,
       ignoreTests: true,
       stabilityDays: 0,
+      schedule: ['at any time'],
     },
   ],
 }
