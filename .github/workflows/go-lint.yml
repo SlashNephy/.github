@@ -27,12 +27,33 @@ on:
         required: false
         type: string
         default: ''
+      reporter:
+        required: false
+        type: string
+        default: 'github-pr-review'
+      enable-golangci-lint:
+        required: false
+        type: boolean
+        default: true
+      enable-staticcheck:
+        required: false
+        type: boolean
+        default: false
+      golangci-lint-flags:
+        required: false
+        type: string
+        default: ''
+      staticcheck-flags:
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: read
 
 jobs:
-  run:
+  lint-on-pull-request:
+    if: github.event_name == 'pull_request' && !contains(github.ref, 'renovate')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -63,10 +84,78 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'go ${{ inputs.pre-task }}'
 
-      - name: Lint
-        uses: golangci/golangci-lint-action@v3
+      - name: golangci-lint
+        if: inputs.enable-golangci-lint
+        uses: reviewdog/action-golangci-lint@v1
         with:
-          working-directory: '${{ inputs.working-directory }}'
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: '${{ inputs.reporter }}'
+          workdir: '${{ inputs.working-directory }}'
+          golangci_lint_flags: '${{ inputs.golangci_lint_flags }} .'
+
+      - name: staticcheck
+        if: inputs.enable-staticcheck
+        uses: reviewdog/action-staticcheck@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: '${{ inputs.reporter }}'
+          workdir: '${{ inputs.working-directory }}'
+          staticcheck_flags: '${{ inputs.staticcheck-flags }} .'
+
+      - name: Run Post-Task
+        if: inputs.post-task != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'go ${{ inputs.post-task }}'
+
+  lint-on-push:
+    if: github.event_name != 'pull_request' && !contains(github.ref, 'renovate')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup .env
+        if: inputs.env != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'echo "${{ inputs.env }}" > .env'
+
+      - name: Setup Go (via go-version-file)
+        if: inputs.go-version == ''
+        uses: actions/setup-go@v3
+        with:
+          go-version-file: '${{ inputs.go-version-file }}'
+          cache: true
+          cache-dependency-path: '${{ inputs.working-directory }}/go.sum'
+      - name: Setup Go (via go-version)
+        if: inputs.go-version != ''
+        uses: actions/setup-go@v3
+        with:
+          go-version: '${{ inputs.go-version }}'
+          cache: true
+          cache-dependency-path: '${{ inputs.working-directory }}/go.sum'
+
+      - name: Run Pre-Task
+        if: inputs.pre-task != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'go ${{ inputs.pre-task }}'
+
+      - name: golangci-lint
+        if: inputs.enable-golangci-lint
+        uses: reviewdog/action-golangci-lint@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: 'github-check'
+          workdir: '${{ inputs.working-directory }}'
+          golangci_lint_flags: '${{ inputs.golangci_lint_flags }} .'
+
+      - name: staticcheck
+        if: inputs.enable-staticcheck
+        uses: reviewdog/action-staticcheck@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: 'github-check'
+          workdir: '${{ inputs.working-directory }}'
+          staticcheck_flags: '${{ inputs.staticcheck-flags }} .'
 
       - name: Run Post-Task
         if: inputs.post-task != ''
