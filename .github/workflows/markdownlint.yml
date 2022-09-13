@@ -1,0 +1,46 @@
+name: 'markdownlint'
+
+on:
+  workflow_call:
+    inputs:
+      reporter:
+        required: false
+        type: string
+        default: 'github-pr-review'
+      markdownlint-flags:
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lint-on-pull-request:
+    if: github.event_name == 'pull_request' && !contains(github.ref, 'renovate')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: markdownlint
+        uses: reviewdog/action-markdownlint@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: '${{ inputs.reporter }}'
+          markdownlint_flags: '${{ inputs.markdownlint-flags}} .'
+
+  lint-on-push:
+    if: github.event_name != 'pull_request' && !contains(github.ref, 'renovate')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: markdownlint
+        uses: reviewdog/action-markdownlint@v1
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          reporter: 'github-check'
+          markdownlint_flags: '${{ inputs.markdownlint-flags}} .'

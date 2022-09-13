@@ -1,4 +1,4 @@
-name: 'yarn lint'
+name: 'textlint'
 
 on:
   workflow_call:
@@ -27,27 +27,7 @@ on:
         required: false
         type: string
         default: 'github-pr-review'
-      enable-eslint:
-        required: false
-        type: boolean
-        default: true
-      enable-prettier:
-        required: false
-        type: boolean
-        default: true
-      enable-stylelint:
-        required: false
-        type: boolean
-        default: false
-      stylelint-input:
-        required: false
-        type: string
-        default: '**/*.{css,scss,sass,less,styl}'
-      eslint-flags:
-        required: false
-        type: string
-        default: '--max-warnings=0'
-      prettier-flags:
+      textlint-flags:
         required: false
         type: string
         default: ''
@@ -88,32 +68,13 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.pre-script }}'
 
-      - name: eslint
-        if: inputs.enable-eslint
-        uses: reviewdog/action-eslint@v1
+      - name: textlint
+        uses: tsuyoshicho/action-textlint@v3
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
           workdir: '${{ inputs.working-directory }}'
-          eslint_flags: '${{ inputs.eslint-flags }} .'
-
-      - name: prettier
-        if: inputs.enable-prettier
-        uses: EPMatt/reviewdog-action-prettier@v1
-        with:
-          github_token: '${{ secrets.GITHUB_TOKEN }}'
-          reporter: '${{ inputs.reporter }}'
-          workdir: '${{ inputs.working-directory }}'
-          prettier_flags: '${{ inputs.prettier-flags }} .'
-
-      - name: stylelint
-        if: inputs.enable-stylelint
-        uses: reviewdog/action-stylelint@v1
-        with:
-          github_token: '${{ secrets.GITHUB_TOKEN }}'
-          reporter: '${{ inputs.reporter }}'
-          workdir: '${{ inputs.working-directory }}'
-          stylelint_input: "${{ inputs.stylelint-input }}"
+          textlint_flags: '${{ inputs.textlint-flags }} .'
 
       - name: Run Post-Script
         if: inputs.post-script != ''
@@ -151,31 +112,13 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.pre-script }}'
 
-      - name: eslint
-        if: inputs.enable-eslint
-        uses: reviewdog/action-eslint@v1
+      - name: textlint
+        uses: tsuyoshicho/action-textlint@v3
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
           workdir: '${{ inputs.working-directory }}'
-
-      - name: prettier
-        if: inputs.enable-prettier
-        uses: EPMatt/reviewdog-action-prettier@v1
-        with:
-          github_token: '${{ secrets.GITHUB_TOKEN }}'
-          reporter: 'github-check'
-          workdir: '${{ inputs.working-directory }}'
-          prettier_flags: '${{ inputs.prettier-flags }} .'
-
-      - name: stylelint
-        if: inputs.enable-stylelint
-        uses: reviewdog/action-stylelint@v1
-        with:
-          github_token: '${{ secrets.GITHUB_TOKEN }}'
-          reporter: 'github-check'
-          stylelint_input: ${{ inputs.stylelint-input }}
-          workdir: '${{ inputs.working-directory }}'
+          textlint_flags: '${{ inputs.textlint-flags }} .'
 
       - name: Run Post-Script
         if: inputs.post-script != ''
