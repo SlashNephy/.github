@@ -2,7 +2,7 @@ export {}
 
 declare global {
   interface Array<T = number> {
-    sum(): number
+    sum(): T
   }
 
   interface Array<T> {
