@@ -1,0 +1,65 @@
+name: 'yarn publish'
+
+on:
+  workflow_call:
+    inputs:
+      registry-url:
+        required: false
+        type: string
+        default: 'https://registry.npmjs.org'
+      node-version:
+        required: false
+        type: string
+        default: '18'
+      node-version-file:
+        required: false
+        type: string
+        default: ''
+      working-directory:
+        required: false
+        type: string
+        default: '.'
+      script:
+        required: false
+        type: string
+        default: 'publish'
+    secrets:
+      NODE_AUTH_TOKEN:
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node (via node-version-file)
+        if: inputs.node-version-file != ''
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '${{ inputs.node-version-file }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+          registry-url: '${{ inputs.registry-url }}'
+      - name: Setup Node (via node-version)
+        if: inputs.node-version-file == ''
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ inputs.node-version }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+          registry-url: '${{ inputs.registry-url }}'
+
+      - name: Install
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn install --immutable'
+
+      - name: Publish
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.script }}'
+        env:
+          NODE_AUTH_TOKEN: "${{ secrets.NODE_AUTH_TOKEN }}"

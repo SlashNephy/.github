@@ -33,3 +33,14 @@ jobs:
       pre-script: 'build'
     permissions:
       contents: 'write'
+
+  publish:
+    if: github.event_name == 'push'
+    needs: lint
+    uses: ./.github/workflows/yarn-publish.yml
+    with:
+      working-directory: 'env/prettier'
+    permissions:
+      contents: 'read'
+    secrets:
+      NODE_AUTH_TOKEN: '${{ secrets.NPM_ACCESS_TOKEN }}'
