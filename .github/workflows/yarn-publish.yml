@@ -60,7 +60,7 @@ jobs:
 
       - name: Publish
         working-directory: '${{ inputs.working-directory }}'
-        shell: 'bash {0}'
+        shell: 'bash -c {0}'
         run: 'yarn ${{ inputs.script }}'
         env:
           NODE_AUTH_TOKEN: "${{ secrets.NODE_AUTH_TOKEN }}"
