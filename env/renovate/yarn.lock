@@ -1948,7 +1948,7 @@ __metadata:
     eslint: 8.23.1
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.194.4
+    renovate: 32.195.1
     ts-node: 10.9.1
     typescript: 4.8.3
   languageName: unknown
@@ -7312,9 +7312,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.194.4":
-  version: 32.194.4
-  resolution: "renovate@npm:32.194.4"
+"renovate@npm:32.195.1":
+  version: 32.195.1
+  resolution: "renovate@npm:32.195.1"
   dependencies:
     "@aws-sdk/client-ec2": 3.155.0
     "@aws-sdk/client-ecr": 3.154.0
@@ -7394,7 +7394,7 @@ __metadata:
     semver-stable: 3.0.0
     semver-utils: 1.1.4
     shlex: 2.1.2
-    simple-git: 3.13.0
+    simple-git: 3.14.0
     slugify: 1.6.5
     traverse: 0.6.6
     tslib: 2.4.0
@@ -7408,7 +7408,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 4345411be5689cc7436fc70e9bf02bd9cc940be9319c8d0bbdd06ba814bd447d8eeb5dade79cc0e7a524fdabe6b0d35e5b20af58b59615c20388cd97fb53fb88
+  checksum: 77186345e998dd2757ac98ea89347842160376570c55bb80e0d3d7669e4df40566582699b9c47178f6f105c3a9608dbbfda56dfc4099d0d7c94836087dff14af
   languageName: node
   linkType: hard
 
@@ -7742,14 +7742,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-git@npm:3.13.0":
-  version: 3.13.0
-  resolution: "simple-git@npm:3.13.0"
+"simple-git@npm:3.14.0":
+  version: 3.14.0
+  resolution: "simple-git@npm:3.14.0"
   dependencies:
     "@kwsites/file-exists": ^1.1.1
     "@kwsites/promise-deferred": ^1.1.1
     debug: ^4.3.4
-  checksum: 6f36a451d4614838026caebdb54ecfc74889939603c74245293afc33f0d8bca34b77a0f54e10504b94a0dfe6726cc0eda7016fa416e6316b1e6b7cfca467b350
+  checksum: 08cadd414ae0bbfcf3cfd91b19126a4fb09a4b6df49b6f8a107a57ec401a808f6067f28916b4eb4bb1a75ebdb9f0a96f0280da20d5cb4fba47bcac1766f81f70
   languageName: node
   linkType: hard
 
