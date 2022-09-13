@@ -1818,12 +1818,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redis/json@npm:1.0.3":
-  version: 1.0.3
-  resolution: "@redis/json@npm:1.0.3"
+"@redis/json@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@redis/json@npm:1.0.4"
   peerDependencies:
     "@redis/client": ^1.0.0
-  checksum: 26a7003c2fbacfa5998671e3a301cb2285432bf90f237adedcf76c0be0d379528e6710d469a8ea93c04bbd22951f9c2f41d460dbd79e85856f199248c4a250d5
+  checksum: de07f9c37abed603dec352593eb69fc8a94475e7f86b4f65b9805394492d448a1e4181db74269d80eb9dba6f3ae8a41804204821db36bb801cd7c1e30ac7ec80
   languageName: node
   linkType: hard
 
@@ -1948,7 +1948,7 @@ __metadata:
     eslint: 8.23.1
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.195.1
+    renovate: 32.195.2
     ts-node: 10.9.1
     typescript: 4.8.3
   languageName: unknown
@@ -7226,17 +7226,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redis@npm:4.3.0":
-  version: 4.3.0
-  resolution: "redis@npm:4.3.0"
+"redis@npm:4.3.1":
+  version: 4.3.1
+  resolution: "redis@npm:4.3.1"
   dependencies:
     "@redis/bloom": 1.0.2
     "@redis/client": 1.3.0
     "@redis/graph": 1.0.1
-    "@redis/json": 1.0.3
+    "@redis/json": 1.0.4
     "@redis/search": 1.1.0
     "@redis/time-series": 1.0.3
-  checksum: f5da538cbd79e864e2df7197c9fda1a2d8d4df3be1bdfd3a62a80c0be19b30616f366587e92cdb94b5c027cef4640ff1fc2f1d98873792545ef5f9b1ca53513f
+  checksum: fe20b548f80b55abb50e552c63a39e8e1bed1f48de0eaa87ed14b44b1168916a5ad4f51a766994f15fc2df7d5abc45123a97c3a3fa73da42492419978762244d
   languageName: node
   linkType: hard
 
@@ -7312,9 +7312,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.195.1":
-  version: 32.195.1
-  resolution: "renovate@npm:32.195.1"
+"renovate@npm:32.195.2":
+  version: 32.195.2
+  resolution: "renovate@npm:32.195.2"
   dependencies:
     "@aws-sdk/client-ec2": 3.155.0
     "@aws-sdk/client-ecr": 3.154.0
@@ -7386,7 +7386,7 @@ __metadata:
     prettier: 2.7.1
     quick-lru: 5.1.1
     re2: 1.17.7
-    redis: 4.3.0
+    redis: 4.3.1
     remark: 13.0.0
     remark-github: 10.1.0
     safe-stable-stringify: 2.3.1
@@ -7408,7 +7408,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 77186345e998dd2757ac98ea89347842160376570c55bb80e0d3d7669e4df40566582699b9c47178f6f105c3a9608dbbfda56dfc4099d0d7c94836087dff14af
+  checksum: 5a23ea42951b78a8c0757faa52630d12d64280bc16b1cc66819e46568ccdccbc6a8301b2f7767fdbb5da94bb5344a60574e6425afc412a7a2b28ca5010125f06
   languageName: node
   linkType: hard
 
