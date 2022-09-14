@@ -34,15 +34,13 @@ const typescript: Linter.Config = {
     ],
     // import type を優先
     '@typescript-eslint/consistent-type-imports': 'error',
-    // 関数の返り値の型を明示させる
-    '@typescript-eslint/explicit-function-return-type': 'warn',
     // クラスのアクセス修飾子を強制
     '@typescript-eslint/explicit-member-accessibility': 'error',
     // export されているメンバーや public メンバーは型を明示させる
     '@typescript-eslint/explicit-module-boundary-types': 'warn',
     '@typescript-eslint/member-delimiter-style': 'error',
     '@typescript-eslint/member-ordering': 'warn',
-    '@typescript-eslint/method-signature-style': 'warn',
+    '@typescript-eslint/method-signature-style': ['warn', 'method'],
     // 命名規則を強制
     '@typescript-eslint/naming-convention': [
       'warn',
@@ -51,25 +49,34 @@ const typescript: Linter.Config = {
         selector: ['default'],
         format: ['camelCase'],
       },
-      // 変数名は camelCase
+      // 変数名は camelCase / UPPER_CASE
       {
         selector: ['variableLike'],
-        format: ['camelCase'],
+        format: ['camelCase', 'UPPER_CASE'],
         leadingUnderscore: 'allow',
       },
-      // グローバルな export されているプリミティブな定数は UPPER_CASE
+      // プロパティーに snake_case を許容
       {
-        selector: ['variable'],
-        modifiers: ['const', 'global', 'exported'],
-        types: ['boolean', 'string', 'number'],
-        format: ['UPPER_CASE'],
+        selector: ['property'],
+        format: ['camelCase', 'snake_case'],
       },
       // Boolean は特定のプレフィックスを強制
       {
         selector: ['variableLike'],
         types: ['boolean'],
         format: ['PascalCase'],
-        prefix: ['is', 'should', 'has', 'can', 'did', 'will', 'contains'],
+        prefix: [
+          'is',
+          'are',
+          'was',
+          'were',
+          'should',
+          'has',
+          'can',
+          'did',
+          'will',
+          'contains',
+        ],
       },
       // 型名は PascalCase
       {
@@ -83,16 +90,16 @@ const typescript: Linter.Config = {
         format: ['camelCase'],
         leadingUnderscore: 'require',
       },
-      // オブジェクトのキーなど '' 付きの宣言は許容
-      {
-        selector: ['memberLike'],
-        modifiers: ['requiresQuotes'],
-        format: null,
-      },
       // deconstruct で宣言された変数は許容
       {
         selector: ['variableLike'],
         modifiers: ['destructured'],
+        format: null,
+      },
+      // オブジェクトのキーなど '' 付きの宣言は許容
+      {
+        selector: ['memberLike'],
+        modifiers: ['requiresQuotes'],
         format: null,
       },
     ],
@@ -141,12 +148,6 @@ const typescript: Linter.Config = {
         allowNullish: true,
       },
     ],
-    // unsafe 系を緩める
-    '@typescript-eslint/no-unsafe-argument': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-call': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-unsafe-return': 'off',
     // 不要な変数を禁止
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-vars': [
