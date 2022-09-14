@@ -63,7 +63,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-preload-video',
     name: 'AMQ Preload Video',
-    version: '0.2.2',
+    version: '0.2.3',
     description: {
       en: 'Just enable media preloading. Buffering may be faster.',
       ja: 'プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。',
@@ -71,13 +71,13 @@ export const banners: Banner[] = [
     homepage:
       'https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E3%83%97%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%81%9B%E3%82%8B_UserScript',
     author: 'SlashNephy',
-    match: ['https://animemusicquiz.com/'],
+    match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
   },
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.3.0',
+    version: '0.3.1',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',
@@ -85,7 +85,7 @@ export const banners: Banner[] = [
     homepage:
       'https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88%E3%82%92_Google_%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AB%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B_UserScript',
     author: 'SlashNephy',
-    match: ['https://animemusicquiz.com/'],
+    match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     connect: ['script.google.com', 'raw.githubusercontent.com'],
     grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue'],
@@ -119,7 +119,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-private-session',
     name: 'AMQ Private Session',
-    version: '0.2.2',
+    version: '0.2.3',
     description: {
       en: 'Set invisible status automatically on login.',
       ja: 'ログイン時に Invisible ステータスを設定します。',
@@ -127,7 +127,7 @@ export const banners: Banner[] = [
     homepage:
       'https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E7%8A%B6%E6%B3%81%E3%82%92%E9%9A%A0%E3%81%99_UserScript',
     author: 'SlashNephy',
-    match: ['https://animemusicquiz.com/'],
+    match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
   },
 ]
