@@ -58,7 +58,7 @@ jobs:
 
       - name: Setup $NODE_AUTH_TOKEN
         working-directory: '${{ inputs.working-directory }}'
-        run: 'echo $CONTENT >> .yarnrc.yml'
+        run: 'echo -e "$CONTENT" >> .yarnrc.yml'
         env:
           CONTENT: |
             npmRegistries:
