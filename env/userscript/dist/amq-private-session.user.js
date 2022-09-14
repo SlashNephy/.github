@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Private Session
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.2
+// @version         0.2.3
 // @author          SlashNephy
 // @description     Set invisible status automatically on login.
 // @description:ja  ログイン時に Invisible ステータスを設定します。
@@ -11,12 +11,12 @@
 // @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
-// @match           https://animemusicquiz.com/
+// @match           https://animemusicquiz.com/*
 // @grant           none
 // @license         MIT license
 // ==/UserScript==
 
-const AMQ_createInstalledWindow = () => {
+const createInstalledWindow = () => {
   if (!window.setupDocumentDone) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
@@ -56,7 +56,7 @@ const AMQ_createInstalledWindow = () => {
             <li class="clickAble" data-toggle="modal" data-target="#installedModal">Installed Userscripts</li>
         `)
     )
-    AMQ_addStyle(`
+    addStyle(`
             .descriptionContainer {
                 width: 95%;
                 margin: auto;
@@ -68,8 +68,8 @@ const AMQ_createInstalledWindow = () => {
         `)
   }
 }
-const AMQ_addScriptData = (metadata) => {
-  AMQ_createInstalledWindow()
+const addScriptData = (metadata) => {
+  createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
       .append(
@@ -100,24 +100,30 @@ const AMQ_addScriptData = (metadata) => {
       )
   )
 }
-const AMQ_addStyle = (css) => {
+const addStyle = (css) => {
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
   style.appendChild(document.createTextNode(css))
 }
 
-const INVISIBLE_STATUS = 4
+var SocialStatus
+;(function (SocialStatus) {
+  SocialStatus[(SocialStatus.Invisible = 4)] = 'Invisible'
+})(SocialStatus || (SocialStatus = {}))
 document.addEventListener('DOMNodeInserted', () => {
+  if (!('socialTab' in window)) {
+    return
+  }
   switch (socialTab?.socialStatus?.currentStatus) {
-    case INVISIBLE_STATUS:
+    case SocialStatus.Invisible:
     case undefined:
       return
     default:
-      socialTab?.socialStatus?.changeSocialStatus(INVISIBLE_STATUS)
+      socialTab?.socialStatus?.changeSocialStatus(SocialStatus.Invisible)
   }
 })
-AMQ_addScriptData({
+addScriptData({
   name: 'Private Session',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description: 'Set invisible status automatically.',

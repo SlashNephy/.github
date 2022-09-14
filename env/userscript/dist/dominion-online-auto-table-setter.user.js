@@ -45,15 +45,15 @@ const observe = () => {
     setTimeout(observe, 1000)
     return
   }
-  let updated = false
+  let hasUpdated = false
   const observer = new MutationObserver((records) => {
     const r = records[0]
     console.log(r)
-    if (r.target && r.target instanceof Element && r.target.classList.contains('my-table') && !updated) {
+    if (r.target instanceof Element && r.target.classList.contains('my-table') && !hasUpdated) {
       updateSettings()
-      updated = true
-    } else if (r.target && r.target instanceof Element && r.target.classList.contains('new-table') && updated) {
-      updated = false
+      hasUpdated = true
+    } else if (r.target instanceof Element && r.target.classList.contains('new-table') && hasUpdated) {
+      hasUpdated = false
     }
   })
   observer.observe(target, {

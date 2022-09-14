@@ -39,10 +39,10 @@ const fetchArmEntries = async () => {
   return JSON.parse(response.responseText)
 }
 
-const ANNICT_WORK_PAGE_URL_PATTERN = /^https:\/\/annict\.com\/works\/(\d+)/
-let cachedEntries = null
+const annictWorkPageUrlPattern = /^https:\/\/annict\.com\/works\/(\d+)/
+const cachedEntries = []
 const main = async () => {
-  const match = location.href.match(ANNICT_WORK_PAGE_URL_PATTERN)
+  const match = annictWorkPageUrlPattern.exec(location.href)
   if (!match) {
     return
   }
@@ -56,28 +56,30 @@ const main = async () => {
   if (!links || links.childNodes.length === 0) {
     throw new Error('Failed to find target container')
   }
-  const entries = cachedEntries ?? (await fetchArmEntries())
-  cachedEntries = entries
-  const entry = entries.find((x) => x.annict_id === annictId)
+  if (cachedEntries.length === 0) {
+    const entries = await fetchArmEntries()
+    cachedEntries.push(...entries)
+  }
+  const entry = cachedEntries.find((x) => x.annict_id === annictId)
   if (!entry) {
     console.warn(`arm entry not found: annict_id=${annictId}`)
     return
   }
-  if (entry.syobocal_tid && links.firstChild) {
+  if (entry.syobocal_tid !== undefined && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
     const aHtml = link.firstChild
     aHtml.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`
     aHtml.childNodes[0].textContent = 'しょぼいカレンダー'
     links.appendChild(link)
   }
-  if (entry.anilist_id && links.firstChild) {
+  if (entry.anilist_id !== undefined && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
     const aHtml = link.firstChild
     aHtml.href = `https://anilist.co/anime/${entry.anilist_id}`
     aHtml.childNodes[0].textContent = 'AniList'
     links.appendChild(link)
   }
-  if (entry.mal_id && links.firstChild) {
+  if (entry.mal_id !== undefined && links.firstChild) {
     const link = links.firstChild.cloneNode(true)
     const aHtml = link.firstChild
     aHtml.href = `https://myanimelist.net/anime/${entry.mal_id}`

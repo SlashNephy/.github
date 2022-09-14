@@ -12,11 +12,12 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | dominion.games Auto Table Setter  | 0.3.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js |
 | FF14Angler Bypass AdBlocker Check | 0.2.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js   |
 | Feedly Auto Refresh               | 0.2.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js               |
-| AMQ Preload Video                 | 0.2.2          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js                 |
-| AMQ Result Exporter               | 0.3.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js               |
+| AMQ Preload Video                 | 0.2.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js                 |
+| AMQ Result Exporter               | 0.3.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js               |
 | Google Remove Redirection Warning | 0.1.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js |
 | Annict Hide Future Programs       | 0.1.4          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js       |
-| AMQ Private Session               | 0.2.2          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js               |
+| AMQ Private Session               | 0.2.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js               |
+| AMQ Detailed Song Info            | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js            |
 
 ### Annict Work Links (v0.2.4)
 
@@ -42,13 +43,13 @@ Disable AdBlocker check in FF14Angler.
 
 Auto refresh feeds when there are no unread articles in Feedly.
 
-### AMQ Preload Video (v0.2.2)
+### AMQ Preload Video (v0.2.3)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-preload-video.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E3%83%97%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%81%9B%E3%82%8B_UserScript)
 
 Just enable media preloading. Buffering may be faster.
 
-### AMQ Result Exporter (v0.3.0)
+### AMQ Result Exporter (v0.3.1)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-result-exporter.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88%E3%82%92_Google_%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AB%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B_UserScript)
 
@@ -66,8 +67,14 @@ Remove redirection warning from https://google.com/url
 
 Hide programs for the next day or later in Annict track page. In addition, it hides works that have no unwatched episodes.
 
-### AMQ Private Session (v0.2.2)
+### AMQ Private Session (v0.2.3)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-private-session.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E7%8A%B6%E6%B3%81%E3%82%92%E9%9A%A0%E3%81%99_UserScript)
 
 Set invisible status automatically on login.
+
+### AMQ Detailed Song Info (v0.1.0)
+
+[📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-detailed-song-info.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E6%9B%B2%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%AB%E8%A9%B3%E7%B4%B0%E6%83%85%E5%A0%B1%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
+
+Display detailed information on the side panel of the song.

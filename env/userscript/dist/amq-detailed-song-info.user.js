@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name            AMQ Preload Video
+// @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.3
+// @version         0.1.0
 // @author          SlashNephy
-// @description     Just enable media preloading. Buffering may be faster.
-// @description:ja  プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。
-// @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E3%83%97%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%81%9B%E3%82%8B_UserScript
-// @homepageURL     https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E3%83%97%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89%E3%81%95%E3%81%9B%E3%82%8B_UserScript
+// @description     Display detailed information on the side panel of the song.
+// @description:ja  曲のサイドパネルに詳細な情報を表示します。
+// @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E6%9B%B2%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%AB%E8%A9%B3%E7%B4%B0%E6%83%85%E5%A0%B1%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
+// @homepageURL     https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E6%9B%B2%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%AB%E8%A9%B3%E7%B4%B0%E6%83%85%E5%A0%B1%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
 // @icon            https://animemusicquiz.com/favicon-32x32.png
-// @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js
-// @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js
+// @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js
+// @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
 // @grant           none
@@ -107,14 +107,79 @@ const addStyle = (css) => {
   style.appendChild(document.createTextNode(css))
 }
 
-document.addEventListener('DOMNodeInserted', () => {
-  for (const element of document.querySelectorAll('video')) {
-    element.preload = 'auto'
+const rows = [
+  {
+    id: 'difficulty-row',
+    title: 'Difficulty',
+    content(payload) {
+      return `${payload.songInfo.animeDifficulty.toFixed(1)} / 100`
+    },
+  },
+  {
+    id: 'vintage-row',
+    title: 'Vintage',
+    content(payload) {
+      return payload.songInfo.vintage
+    },
+  },
+  {
+    id: 'format-row',
+    title: 'Format',
+    content(payload) {
+      return payload.songInfo.animeType
+    },
+  },
+  {
+    id: 'rating-row',
+    title: 'Rating',
+    content(payload) {
+      return `${payload.songInfo.animeScore.toFixed(2)} / 10`
+    },
+  },
+]
+const handle = (payload) => {
+  const container = document.querySelector('#qpAnimeContainer div.qpSideContainer:not([id])')
+  if (!container) {
+    throw new Error('container is not found.')
   }
-})
+  for (const row of rows) {
+    const element = document.getElementById(row.id) ?? createDivElementWithId(container, row.id)
+    const contentElement = element.querySelector('.row-content')
+    if (contentElement !== null) {
+      contentElement.textContent = row.content(payload)
+    } else {
+      renderRow(element, row.title, row.content(payload))
+    }
+  }
+}
+const createDivElementWithId = (container, id) => {
+  const element = document.createElement('div')
+  element.id = id
+  const targetElement = container.querySelector('div#qpInfoHider')
+  if (targetElement === null) {
+    throw new Error('div#qpInfoHider is not found.')
+  }
+  container.insertBefore(element, targetElement.previousElementSibling)
+  return element
+}
+const renderRow = (element, title, content) => {
+  const h5 = document.createElement('h5')
+  const b = document.createElement('b')
+  const p = document.createElement('p')
+  h5.appendChild(b)
+  element.appendChild(h5)
+  element.appendChild(p)
+  element.classList.add('row')
+  b.textContent = title
+  p.classList.add('row-content')
+  p.textContent = content
+}
+if ('Listener' in window) {
+  const listener = new Listener('answer results', handle)
+  listener.bindListener()
+}
 addScriptData({
-  name: 'Preload Video',
+  name: 'AMQ Detailed Song Info',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description:
-    'Just enable media preloading. Speed up buffering. Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!',
+  description: 'Display detailed information on the side panel of the song.',
 })
