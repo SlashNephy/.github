@@ -130,6 +130,20 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
   },
+  {
+    id: 'amq-detailed-song-info',
+    name: 'AMQ Detailed Song Info',
+    version: '0.1.0',
+    description: {
+      en: 'Display detailed information on the side panel of the song.',
+      ja: '曲のサイドパネルに詳細な情報を表示します。',
+    },
+    homepage:
+      'https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E6%9B%B2%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%AB%E8%A9%B3%E7%B4%B0%E6%83%85%E5%A0%B1%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript',
+    author: 'SlashNephy',
+    match: ['https://animemusicquiz.com/*'],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
