@@ -9,13 +9,13 @@
   "scripts": {
     "build": "tsc",
     "bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "watch": "yarn bundle -w",
+    "format": "concurrently -n format: 'yarn:format:*'",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "yarn lint:prettier --write",
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "format": "concurrently -n format: 'yarn:format:*'",
-    "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "yarn lint:prettier --write"
+    "watch": "yarn bundle -w"
   },
   "devDependencies": {
     "@babel/core": "7.19.1",
