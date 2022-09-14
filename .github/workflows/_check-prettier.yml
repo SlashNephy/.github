@@ -12,6 +12,9 @@ on:
     types:
       - opened
       - synchronize
+    paths:
+      - 'env/prettier/**'
+      - '.github/workflows/_check-prettier.yml'
 
   workflow_dispatch:
 

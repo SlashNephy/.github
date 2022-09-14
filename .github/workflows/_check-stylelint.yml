@@ -12,6 +12,9 @@ on:
     types:
       - opened
       - synchronize
+    paths:
+      - 'env/stylelint/**'
+      - '.github/workflows/_check-stylelint.yml'
 
   workflow_dispatch:
 

@@ -12,6 +12,9 @@ on:
     types:
       - opened
       - synchronize
+    paths:
+      - 'env/github/**'
+      - '.github/workflows/_check-github.yml'
 
   workflow_dispatch:
 

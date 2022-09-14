@@ -12,6 +12,9 @@ on:
     types:
       - opened
       - synchronize
+    paths:
+      - 'env/gradle/**'
+      - '.github/workflows/_check-gradle.yml'
 
   workflow_dispatch:
 

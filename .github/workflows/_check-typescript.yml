@@ -12,6 +12,9 @@ on:
     types:
       - opened
       - synchronize
+    paths:
+      - 'env/typescript/**'
+      - '.github/workflows/_check-typescript.yml'
 
   workflow_dispatch:
 

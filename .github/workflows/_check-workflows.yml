@@ -3,12 +3,14 @@ name: 'Check .github/workflows'
 on:
   push:
     paths:
-      - '.github/workflows/*.yml'
+      - '.github/workflows/**'
 
   pull_request:
     types:
       - opened
       - synchronize
+    paths:
+      - '.github/workflows/**'
 
   workflow_dispatch:
 
