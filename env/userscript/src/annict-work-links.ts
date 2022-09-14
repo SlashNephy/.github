@@ -2,12 +2,12 @@ import { fetchArmEntries } from '../lib/arm'
 
 import type { ArmEntry } from '../lib/arm'
 
-const ANNICT_WORK_PAGE_URL_PATTERN = /^https:\/\/annict\.com\/works\/(\d+)/
+const annictWorkPageUrlPattern = /^https:\/\/annict\.com\/works\/(\d+)/
 
 const cachedEntries: ArmEntry[] = []
 
 const main = async () => {
-  const match = ANNICT_WORK_PAGE_URL_PATTERN.exec(location.href)
+  const match = annictWorkPageUrlPattern.exec(location.href)
   if (!match) {
     return
   }

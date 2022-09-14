@@ -1,14 +1,16 @@
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
-const INVISIBLE_STATUS = 4
+enum SocialStatus {
+  Invisible = 4,
+}
 
 document.addEventListener('DOMNodeInserted', () => {
   switch (socialTab?.socialStatus?.currentStatus) {
-    case INVISIBLE_STATUS:
+    case SocialStatus.Invisible:
     case undefined:
       return
     default:
-      socialTab?.socialStatus?.changeSocialStatus(INVISIBLE_STATUS)
+      socialTab?.socialStatus?.changeSocialStatus(SocialStatus.Invisible)
   }
 })
 
