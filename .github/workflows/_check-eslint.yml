@@ -12,6 +12,9 @@ on:
     types:
       - opened
       - synchronize
+    paths:
+      - 'env/eslint/**'
+      - '.github/workflows/_check-eslint.yml'
 
   workflow_dispatch:
 

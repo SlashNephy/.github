@@ -2,14 +2,19 @@ name: 'Check script'
 
 on:
   push:
+    branches:
+      - master
     paths:
-      - 'script/**/*.sh'
+      - 'script/**'
       - '.github/workflows/_check-script.yml'
 
   pull_request:
     types:
       - opened
       - synchronize
+    paths:
+      - 'script/**'
+      - '.github/workflows/_check-script.yml'
 
   workflow_dispatch:
 

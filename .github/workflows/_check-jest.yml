@@ -12,6 +12,9 @@ on:
     types:
       - opened
       - synchronize
+    paths:
+      - 'env/jest/**'
+      - '.github/workflows/_check-jest.yml'
 
   workflow_dispatch:
 
