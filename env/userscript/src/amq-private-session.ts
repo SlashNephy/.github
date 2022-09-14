@@ -5,6 +5,10 @@ enum SocialStatus {
 }
 
 document.addEventListener('DOMNodeInserted', () => {
+  if (!('socialTab' in window)) {
+    return
+  }
+
   switch (socialTab?.socialStatus?.currentStatus) {
     case SocialStatus.Invisible:
     case undefined:

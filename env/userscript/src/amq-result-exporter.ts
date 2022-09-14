@@ -160,8 +160,10 @@ const handle = (payload: AnswerResultsPayload) => {
   executeGas(row).catch(console.error)
 }
 
-const listener = new Listener<AnswerResultsPayload>('answer results', handle)
-listener.bindListener()
+if ('Listener' in window) {
+  const listener = new Listener<AnswerResultsPayload>('answer results', handle)
+  listener.bindListener()
+}
 
 addScriptData({
   name: 'Result Exporter',
