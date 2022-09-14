@@ -1,11 +1,11 @@
 /**
  * @name Discord Experimental Settings
- * @author SlashNephy <spica@starry.blue>
+ * @author SlashNephy
  * @authorId 187577389419724800
- * @version 0.1.0
+ * @version 0.1.1
  * @description Enable hidden Discord Experimental Settings.
  * @source https://github.com/SlashNephy/.github/tree/master/env/discord/src/DiscordExperimentalSettings.ts
- * @updateUrl https://github.com/SlashNephy/.github/tree/raw/env/discord/src/DiscordExperimentalSettings.plugin.js
+ * @updateUrl https://github.com/SlashNephy/.github/tree/raw/env/discord/plugins/DiscordExperimentalSettings.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
@@ -33,16 +33,16 @@
 const main = () => {
     let wpRequire;
     window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => { wpRequire = req; }]);
-    mod = Object.values(wpRequire.c).find(x => typeof x?.exports?.default?.isDeveloper !== 'undefined');
-    usermod = Object.values(wpRequire.c).find(x => x?.exports?.default?.getUsers);
-    nodes = Object.values(mod.exports.default._dispatcher._actionHandlers._dependencyGraph.nodes);
+    const mod = Object.values(wpRequire.c).find((x) => typeof x?.exports?.default?.isDeveloper !== 'undefined');
+    const usermod = Object.values(wpRequire.c).find((x) => x?.exports?.default?.getUsers);
+    const nodes = Object.values(mod.exports.default._dispatcher._actionHandlers._dependencyGraph.nodes);
     try {
-        nodes.find(x => x.name == 'ExperimentStore').actionHandler['CONNECTION_OPEN']({ user: { flags: 1 }, type: 'CONNECTION_OPEN' });
+        nodes.find(x => x.name == 'ExperimentStore').actionHandler.CONNECTION_OPEN({ user: { flags: 1 }, type: 'CONNECTION_OPEN' });
     }
     catch (e) { }
-    oldGetUser = usermod.exports.default.__proto__.getCurrentUser;
+    const oldGetUser = usermod.exports.default.__proto__.getCurrentUser;
     usermod.exports.default.__proto__.getCurrentUser = () => ({ hasFlag: () => true });
-    nodes.find(x => x.name == 'DeveloperExperimentStore').actionHandler['CONNECTION_OPEN']();
+    nodes.find(x => x.name == 'DeveloperExperimentStore').actionHandler.CONNECTION_OPEN();
     usermod.exports.default.__proto__.getCurrentUser = oldGetUser;
 };
 module.exports = class {
