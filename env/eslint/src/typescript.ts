@@ -49,9 +49,9 @@ const typescript: Linter.Config = {
         selector: ['default'],
         format: ['strictCamelCase'],
       },
-      // 型名は PascalCase
+      // 型名 / 列挙型のメンバーは PascalCase
       {
-        selector: ['typeLike'],
+        selector: ['typeLike', 'enumMember'],
         format: ['StrictPascalCase'],
       },
       // 変数名は camelCase
@@ -89,7 +89,6 @@ const typescript: Linter.Config = {
           'contains',
         ],
       },
-
       // プライベートメンバーは _ で始める
       {
         selector: ['memberLike'],
