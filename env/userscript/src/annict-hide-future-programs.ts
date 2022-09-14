@@ -13,7 +13,7 @@ const main = () => {
     const dateElement = card.querySelector<HTMLSpanElement>('div.col div[class="small"] span.text-muted')
 
     // 放送日時が存在しない場合は無視
-    if (!dateElement?.textContent) {
+    if (dateElement === null || dateElement.textContent === null) {
       continue
     }
 

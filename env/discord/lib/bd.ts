@@ -35,19 +35,19 @@ export type Banner = {
 }
 
 const buildBanner = (banner: Banner): string => {
-  const lines: (string | undefined)[] = [
+  const lines: (string | null)[] = [
     '/**',
     ` * @name ${banner.name}`,
     ` * @author ${banner.author.name}`,
     ` * @authorId ${banner.author.id}`,
     ` * @version ${banner.version}`,
     ` * @description ${banner.description}`,
-    banner.invite && ` * @invite ${banner.invite}`,
-    banner.donate && ` * @donate ${banner.donate}`,
-    banner.patreon && ` * @patreon https://www.patreon.com/${banner.patreon}`,
-    banner.website && ` * @website ${banner.website}`,
+    banner.invite !== undefined ? ` * @invite ${banner.invite}` : null,
+    banner.donate !== undefined ? ` * @donate ${banner.donate}` : null,
+    banner.patreon !== undefined ? ` * @patreon https://www.patreon.com/${banner.patreon}` : null,
+    banner.website !== undefined ? ` * @website ${banner.website}` : null,
     ` * @source https://github.com/SlashNephy/.github/tree/master/env/discord/src/${banner.id}.ts`,
-    ` * @updateUrl https://github.com/SlashNephy/.github/tree/raw/env/discord/src/${banner.id}.plugin.js`,
+    ` * @updateUrl https://github.com/SlashNephy/.github/tree/raw/env/discord/plugins/${banner.id}.plugin.js`,
     ' */',
     `/*@cc_on
 @if (@_jscript)

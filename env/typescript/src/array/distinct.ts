@@ -1,6 +1,7 @@
 export {}
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Array<T> {
     distinct(): T[]
     distinctBy<V>(key: (item: T) => V): T[]

@@ -1,9 +1,9 @@
 export {}
 
 declare global {
-  // eslint-disable-next-line unused-imports/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Array<T = number> {
-    average(): number
+    average(): T
   }
 }
 

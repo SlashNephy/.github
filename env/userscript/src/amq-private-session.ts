@@ -1,4 +1,4 @@
-import { AMQ_addScriptData } from '../lib/thirdparty/amqScriptInfo'
+import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 const INVISIBLE_STATUS = 4
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMNodeInserted', () => {
   }
 })
 
-AMQ_addScriptData({
+addScriptData({
   name: 'Private Session',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description: 'Set invisible status automatically.',

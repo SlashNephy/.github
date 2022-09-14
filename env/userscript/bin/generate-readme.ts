@@ -10,11 +10,11 @@ const filenames = {
 }
 
 const localizedStrings = {
-  repository_description: {
+  repositoryDescription: {
     en: 'env/userscript is the directory that hosts UserScript sources and artifacts developed by [@SlashNephy](https://github.com/SlashNephy).',
     ja: 'env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した UserScript のソースと成果物をホストしているディレクトリです。',
   },
-  localized_markdown: {
+  localizedMarkdown: {
     en: `🇯🇵 日本語版の README は [こちら](https://github.com/SlashNephy/.github/blob/master/env/userscript/${filenames.ja}) です。`,
     ja: `🇺🇸 Click [here](https://github.com/SlashNephy/.github/blob/master/env/userscript/${filenames.en}) for the English version of README.`,
   },
@@ -47,11 +47,11 @@ const generate = async (language: 'en' | 'ja') => {
   md.h1('env/userscripts')
   md.newline()
 
-  md.text(localizedStrings.localized_markdown[language])
+  md.text(localizedStrings.localizedMarkdown[language])
   md.newline()
   md.newline()
 
-  md.text(localizedStrings.repository_description[language])
+  md.text(localizedStrings.repositoryDescription[language])
   md.newline()
   md.newline()
 
@@ -75,7 +75,7 @@ const generate = async (language: 'en' | 'ja') => {
   }
   md.table(table)
 
-  banners.map((banner) => {
+  for (const banner of banners) {
     const name = typeof banner.name === 'string' ? banner.name : banner.name[language] ?? ''
     md.h3(`${name} (v${banner.version})`)
 
@@ -91,7 +91,7 @@ const generate = async (language: 'en' | 'ja') => {
       localizedStrings.source[language]
     )
 
-    if (banner.homepage) {
+    if (banner.homepage !== undefined) {
       md.text(' / ')
       md.link(banner.homepage, localizedStrings.article[language])
     }
@@ -107,7 +107,7 @@ const generate = async (language: 'en' | 'ja') => {
 
     md.newline()
     md.newline()
-  })
+  }
 
   const content = md.toMarkdown().trim()
   console.info(content)

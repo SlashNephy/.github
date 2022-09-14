@@ -1,4 +1,4 @@
-import { AMQ_addScriptData } from '../lib/thirdparty/amqScriptInfo'
+import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 document.addEventListener('DOMNodeInserted', () => {
   for (const element of document.querySelectorAll<HTMLVideoElement>('video')) {
@@ -6,7 +6,7 @@ document.addEventListener('DOMNodeInserted', () => {
   }
 })
 
-AMQ_addScriptData({
+addScriptData({
   name: 'Preload Video',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description:
