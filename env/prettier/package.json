@@ -23,7 +23,7 @@
     "format": "concurrently -n format: 'yarn:format:*'",
     "format:eslint": "yarn lint:eslint --fix",
     "format:prettier": "yarn lint:prettier --write",
-    "clean": "rm -rf dist/*",
+    "clean": "rm -rf dist/",
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
   "peerDependencies": {
