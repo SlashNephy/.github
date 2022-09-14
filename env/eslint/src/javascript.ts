@@ -103,8 +103,6 @@ const javascript: Linter.Config = {
     'no-constant-binary-expression': 'error',
     // コンストラクター内で return を禁止
     'no-constructor-return': 'error',
-    // 重複した import/export 文を禁止
-    'no-duplicate-imports': ['error', { includeExports: true }],
     // 関数の返り値としての Promise executor を禁止
     'no-promise-executor-return': 'error',
     // 自身との比較 (e.g. foo === foo) を禁止
@@ -118,8 +116,6 @@ const javascript: Linter.Config = {
     'no-unreachable-loop': 'error',
     // 未使用の private メンバーを禁止
     'no-unused-private-class-members': 'error',
-    // 定義前の使用を禁止
-    'no-use-before-define': 'error',
     // スレッドセーフで安全に更新されないコードを禁止
     'require-atomic-updates': 'error',
     // func () 👉 func()

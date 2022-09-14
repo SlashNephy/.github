@@ -23,6 +23,8 @@ const typescript: Linter.Config = {
     /**
      * Automatically fixable は error にする
      */
+    // interface 👉 type
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     // export type を優先
     '@typescript-eslint/consistent-type-exports': [
       'error',
@@ -55,10 +57,11 @@ const typescript: Linter.Config = {
         format: ['camelCase'],
         leadingUnderscore: 'allow',
       },
-      // グローバルな export されている定数は UPPER_CASE
+      // グローバルな export されているプリミティブな定数は UPPER_CASE
       {
         selector: ['variable'],
         modifiers: ['const', 'global', 'exported'],
+        types: ['boolean', 'string', 'number'],
         format: ['UPPER_CASE'],
       },
       // Boolean は特定のプレフィックスを強制
@@ -102,7 +105,6 @@ const typescript: Linter.Config = {
     '@typescript-eslint/no-redundant-type-constituents': 'warn',
     // require() を禁止
     '@typescript-eslint/no-require-imports': 'warn',
-    '@typescript-eslint/no-type-alias': 'warn',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     '@typescript-eslint/no-useless-empty-export': 'error',
     // パラメーターでのプロパティ宣言を強制
@@ -123,12 +125,10 @@ const typescript: Linter.Config = {
     ],
     '@typescript-eslint/prefer-enum-initializers': 'warn',
     '@typescript-eslint/prefer-readonly': 'error',
-    '@typescript-eslint/prefer-readonly-parameter-types': 'warn',
     '@typescript-eslint/prefer-regexp-exec': 'error',
     // Promise<T> を返す関数では async のマークを強制
     '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/require-array-sort-compare': 'off',
-    '@typescript-eslint/sort-type-union-intersection-members': 'error',
     '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
