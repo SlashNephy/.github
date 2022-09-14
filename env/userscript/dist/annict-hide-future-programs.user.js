@@ -27,7 +27,7 @@ const main = () => {
       continue
     }
     const dateElement = card.querySelector('div.col div[class="small"] span.text-muted')
-    if (!dateElement?.textContent) {
+    if (dateElement === null || dateElement.textContent === null) {
       continue
     }
     const datetime = Date.parse(dateElement.textContent)
