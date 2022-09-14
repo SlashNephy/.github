@@ -6,7 +6,7 @@ on:
       registry-url:
         required: false
         type: string
-        default: 'https://registry.npmjs.org'
+        default: 'https://registry.yarnpkg.com'
       node-version:
         required: false
         type: string
@@ -58,7 +58,12 @@ jobs:
 
       - name: Setup $NODE_AUTH_TOKEN
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn config set npmRegistries.${{ inputs.registry-url }}.npmAuthToken "${{ secrets.NODE_AUTH_TOKEN }}"'
+        run: 'echo $CONTENT >> .yarnrc.yml'
+        env:
+          CONTENT: |
+            npmRegistries:
+              "${{ inputs.registry-url }}":
+                npmAuthToken: ${{ secrets.NODE_AUTH_TOKEN }}
 
       - name: Publish
         working-directory: '${{ inputs.working-directory }}'
