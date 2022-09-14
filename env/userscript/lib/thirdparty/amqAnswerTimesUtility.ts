@@ -23,7 +23,7 @@ class AmqAnswerTimesUtility {
 
     new Listener<{ quizState: { songTimer: number } }>('Join Game', (data) => {
       const quizState = data.quizState
-      if (quizState) {
+      if (quizState.songTimer > 0) {
         this.songStartTime = Date.now() - quizState.songTimer * 1000
       }
     }).bindListener()

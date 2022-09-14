@@ -1,3 +1,6 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable @typescript-eslint/naming-convention */
+
 declare global {
   declare class Listener<T> {
     public constructor(command: string, callback: (payload: T) => void)

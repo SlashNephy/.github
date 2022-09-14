@@ -4,6 +4,7 @@
 // from: https://github.com/TheJoseph98/AMQ-Scripts/blob/master/common/amqScriptInfo.js (MIT License)
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Window {
     setupDocumentDone: boolean
   }
@@ -12,7 +13,7 @@ declare global {
 /*
 Creates the installed scripts window if it doesn't exist and adds "Installed Userscripts" button to the main page and settings
 */
-export const AMQ_createInstalledWindow = () => {
+export const createInstalledWindow = (): void => {
   if (!window.setupDocumentDone) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
@@ -55,7 +56,7 @@ export const AMQ_createInstalledWindow = () => {
         `)
     )
 
-    AMQ_addStyle(`
+    addStyle(`
             .descriptionContainer {
                 width: 95%;
                 margin: auto;
@@ -77,8 +78,8 @@ metadataObj = {
     description: "Adds a song list to the game which can be accessed mid-quiz by clicking the list icon in the top right corner"
 }
 */
-export const AMQ_addScriptData = (metadata: { name: string; author: string; description: string }) => {
-  AMQ_createInstalledWindow()
+export const addScriptData = (metadata: { name?: string; author?: string; description?: string }): void => {
+  createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
       .append(
@@ -110,7 +111,7 @@ export const AMQ_addScriptData = (metadata: { name: string; author: string; desc
   )
 }
 
-export const AMQ_addStyle = (css: string) => {
+export const addStyle = (css: string): void => {
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)

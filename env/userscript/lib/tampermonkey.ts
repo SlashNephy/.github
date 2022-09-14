@@ -147,12 +147,12 @@ const headers: {
   {
     key: 'icon',
     render: (b) => {
-      if (b.icon) {
+      if (b.icon !== undefined) {
         return b.icon
       }
 
       const url = Array.isArray(b.match) ? b.match[0] : b.match
-      if (url) {
+      if (url !== undefined) {
         const domain = new URL(url).hostname
         return `https://www.google.com/s2/favicons?sz=64&domain=${domain}`
       }
@@ -202,7 +202,7 @@ const headers: {
   },
   {
     key: 'grant',
-    render: (b) => b.grant || 'none',
+    render: (b) => b.grant ?? 'none',
   },
   {
     key: 'antifeature',
@@ -211,7 +211,7 @@ const headers: {
   {
     key: 'noframes',
     render: (b) => {
-      if (b.noFrames) {
+      if (b.noFrames === true) {
         return ''
       }
     },
@@ -219,7 +219,7 @@ const headers: {
   {
     key: 'unwrap',
     render: (b) => {
-      if (b.unwrap) {
+      if (b.unwrap === true) {
         return ''
       }
     },
@@ -236,7 +236,7 @@ const buildBanner = (banner: Banner): string => {
       key: header.key,
       value: header.render(banner),
     }))
-    .filter((x) => !!x.value)
+    .filter((x) => x.value !== undefined)
 
   const maxKeyLength = Math.max(...evaluated.map((h) => h.key.length))
   const lines = [
@@ -251,8 +251,10 @@ const buildBanner = (banner: Banner): string => {
         if (value !== undefined) {
           return `${label}${value}`.trimEnd()
         }
+
+        return null
       })
-      .filter((x): x is Exclude<typeof x, undefined> => !!x),
+      .filter((x): x is Exclude<typeof x, null> => x !== null),
     '// ==/UserScript==',
     '',
   ]

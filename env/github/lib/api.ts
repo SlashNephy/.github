@@ -54,7 +54,7 @@ export const deleteWebhook = async (
   owner: string,
   repo: string,
   id: number
-) => {
+): Promise<void> => {
   const execAsync = promisify(exec)
   await execAsync(
     `curl -s -X DELETE -H "Accept: application/vnd.github+json" -H "Authorization: token ${env.GITHUB_TOKEN}" https://api.github.com/repos/${owner}/${repo}/hooks/${id}`
@@ -73,7 +73,7 @@ export const createWebhook = async (
   repo: string,
   url: string,
   events: string[]
-) => {
+): Promise<void> => {
   await octokit.repos.createWebhook({
     owner,
     repo,

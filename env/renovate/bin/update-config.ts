@@ -8,7 +8,7 @@ import deepEqual from 'fast-deep-equal'
 dotenv.config()
 
 const { GITHUB_TOKEN } = process.env
-if (!GITHUB_TOKEN) {
+if (GITHUB_TOKEN === undefined) {
   throw new Error('GITHUB_TOKEN is not set')
 }
 
@@ -23,7 +23,7 @@ const listOrgRepos = async (org: string): Promise<[string, string][]> => {
   })
 
   return repos
-    .filter((repo) => !repo.archived && !repo.fork)
+    .filter((repo) => repo.archived === false && !repo.fork)
     .map((repo) => repo.full_name.split('/') as [string, string])
 }
 
@@ -34,13 +34,13 @@ const listUserRepos = async (username: string): Promise<[string, string][]> => {
   })
 
   return repos
-    .filter((repo) => !repo.archived && !repo.fork)
+    .filter((repo) => repo.archived === false && !repo.fork)
     .map((repo) => repo.full_name.split('/') as [string, string])
 }
 
 const main = async () => {
   const content = await readFile('../../renovate.json', 'utf8')
-  const renovateConfig = JSON.parse(content)
+  const renovateConfig = JSON.parse(content) as unknown
   const encodedContent = Buffer.from(content).toString('base64').trim()
 
   const repos = await Promise.all([
@@ -58,11 +58,11 @@ const main = async () => {
       })
 
       if ('sha' in previousContent.data) {
-        sha = previousContent.data?.sha
+        sha = previousContent.data.sha
       }
 
       if ('content' in previousContent.data) {
-        const previousContentData = previousContent.data?.content
+        const previousContentData = previousContent.data.content
           .replace(/\r?\n/g, '')
           .trim()
         const decodedContent = Buffer.from(
@@ -80,7 +80,7 @@ const main = async () => {
           return
         }
       }
-    } catch (error) {
+    } catch (error: unknown) {
       if (!(error instanceof RequestError) || error.status !== 404) {
         console.error(`[${owner}/${repo}] Error while getting content`, error)
         return
@@ -97,7 +97,7 @@ const main = async () => {
         sha,
       })
       console.info(`${owner}/${repo} update done.`)
-    } catch (error) {
+    } catch (error: unknown) {
       console.error(`[${owner}/${repo}] Failed to update`, error)
     }
   })
