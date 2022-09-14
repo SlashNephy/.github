@@ -15,6 +15,7 @@ intel-media-driver
 intel-ucode
 irqbalance
 jq
+kubectl
 libpam-google-authenticator
 libva-utils
 linux-firmware
@@ -23,6 +24,7 @@ linux-lts-headers
 lsof
 m4
 mackerel-agent
+minikube
 nano
 nano-syntax-highlighting
 net-tools
