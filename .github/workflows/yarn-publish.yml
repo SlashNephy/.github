@@ -44,7 +44,6 @@ jobs:
           node-version-file: '${{ inputs.node-version-file }}'
           cache: 'yarn'
           cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
-          registry-url: '${{ inputs.registry-url }}'
       - name: Setup Node (via node-version)
         if: inputs.node-version-file == ''
         uses: actions/setup-node@v3
@@ -52,15 +51,15 @@ jobs:
           node-version: '${{ inputs.node-version }}'
           cache: 'yarn'
           cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
-          registry-url: '${{ inputs.registry-url }}'
 
       - name: Install
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn install --immutable'
 
+      - name: Setup $NODE_AUTH_TOKEN
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn config set npmRegistries.${{ inputs.registry-url }}.npmAuthToken "${{ secrets.NODE_AUTH_TOKEN }}"'
+
       - name: Publish
         working-directory: '${{ inputs.working-directory }}'
-        shell: 'bash -c {0}'
         run: 'yarn ${{ inputs.script }}'
-        env:
-          NODE_AUTH_TOKEN: "${{ secrets.NODE_AUTH_TOKEN }}"
