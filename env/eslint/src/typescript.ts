@@ -47,24 +47,35 @@ const typescript: Linter.Config = {
       // デフォルトは camelCase
       {
         selector: ['default'],
-        format: ['camelCase'],
+        format: ['strictCamelCase'],
       },
-      // 変数名は camelCase / UPPER_CASE
+      // 型名は PascalCase
+      {
+        selector: ['typeLike'],
+        format: ['StrictPascalCase'],
+      },
+      // 変数名は camelCase
       {
         selector: ['variableLike'],
-        format: ['camelCase', 'UPPER_CASE'],
+        format: ['strictCamelCase'],
         leadingUnderscore: 'allow',
       },
-      // プロパティーに snake_case を許容
+      // export された定数は UPPER_CASE / PascalCase を許容
+      {
+        selector: ['variable'],
+        modifiers: ['const', 'global', 'exported'],
+        format: ['strictCamelCase', 'UPPER_CASE', 'StrictPascalCase'],
+      },
+      // プロパティーに snake_case / UPPER_CASE を許容
       {
         selector: ['property'],
-        format: ['camelCase', 'snake_case'],
+        format: ['strictCamelCase', 'snake_case', 'UPPER_CASE'],
       },
       // Boolean は特定のプレフィックスを強制
       {
         selector: ['variableLike'],
         types: ['boolean'],
-        format: ['PascalCase'],
+        format: ['StrictPascalCase'],
         prefix: [
           'is',
           'are',
@@ -78,16 +89,12 @@ const typescript: Linter.Config = {
           'contains',
         ],
       },
-      // 型名は PascalCase
-      {
-        selector: ['typeLike'],
-        format: ['PascalCase'],
-      },
+
       // プライベートメンバーは _ で始める
       {
         selector: ['memberLike'],
         modifiers: ['private'],
-        format: ['camelCase'],
+        format: ['strictCamelCase'],
         leadingUnderscore: 'require',
       },
       // deconstruct で宣言された変数は許容
@@ -139,6 +146,7 @@ const typescript: Linter.Config = {
     '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
+    '@typescript-eslint/unbound-method': 'off',
     // テンプレート文字列で number | boolean | undefined | null を許可
     '@typescript-eslint/restrict-template-expressions': [
       'error',
