@@ -46,7 +46,7 @@ on:
       eslint-flags:
         required: false
         type: string
-        default: '--max-warnings=0'
+        default: ''
       prettier-flags:
         required: false
         type: string
