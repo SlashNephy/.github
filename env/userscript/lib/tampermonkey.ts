@@ -86,7 +86,7 @@ type TampermonkeyHeader = {
 
 const headers: {
   key: string
-  render: (banner: Banner) => string | string[] | undefined
+  render(banner: Banner): string | string[] | undefined
 }[] = [
   {
     key: 'name',

@@ -60,7 +60,7 @@ declare global {
     | {
         socialStatus?: {
           currentStatus: number
-          changeSocialStatus: (status: number) => void
+          changeSocialStatus(status: number): void
         }
       }
     | undefined
