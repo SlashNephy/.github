@@ -98,7 +98,7 @@ const typescript: Linter.Config = {
       },
       // オブジェクトのキーなど '' 付きの宣言は許容
       {
-        selector: ['memberLike'],
+        selector: ['memberLike', 'property'],
         modifiers: ['requiresQuotes'],
         format: null,
       },
