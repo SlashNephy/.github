@@ -29,6 +29,11 @@ const executeGas = async (row: (string | number | boolean)[]) => {
     url,
     method: 'POST',
     data: JSON.stringify(row),
+    headers: {
+      'User-Agent':
+        'amq-result-exporter (+https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js)',
+      'Content-Type': 'application/json',
+    },
   })
 }
 
@@ -55,6 +60,7 @@ const handle = (payload: AnswerResultsPayload) => {
         tags: payload.songInfo.animeTags,
         genre: payload.songInfo.animeGenre,
         malId: payload.songInfo.siteIds.malId,
+        aniListId: payload.songInfo.siteIds.aniListId,
         annictId: armEntries.find((e) => e.mal_id === payload.songInfo.siteIds.malId)?.annict_id,
         type: payload.songInfo.animeType,
         score: payload.songInfo.animeScore,
@@ -156,6 +162,7 @@ const handle = (payload: AnswerResultsPayload) => {
       .filter((p) => p.status)
       .map((p) => p.name)
       .join('\n'),
+    result.song.anime.aniListId,
   ]
   executeGas(row).catch(console.error)
 }
