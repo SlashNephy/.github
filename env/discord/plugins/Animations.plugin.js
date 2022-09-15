@@ -1,6 +1,6 @@
 /**
  * @name Animations
- * @version 1.3.8
+ * @version 1.3.9.2
  * @description This plugin is designed to animate different objects (lists, buttons, panels, etc.) with the ability to set delays, durations, types and sequences of these animations.
  * @author Mops
  * @invite PWtAHjBXtG
@@ -23,15 +23,15 @@ module.exports = (
                         github_username: 'Mopsgamer',
                     }
                 ],
-                version: '1.3.8',
+                version: '1.3.9.2',
                 description: 'This plugin is designed to animate different objects (lists, buttons, panels, etc.) with the ability to set delays, durations, types and sequences of these animations.',
                 github: 'https://github.com/Mopsgamer/Animations/blob/main/Animations.plugin.js',
                 github_raw: 'https://raw.githubusercontent.com/Mopsgamer/Animations/main/Animations.plugin.js',
             },
             changelog: [
-                { "title": "New Stuff", "items": ["Sending message animation settings."] },
+                { "title": "New Stuff", "items": ["Popouts has been removed, check out BetterAnimations. This plugin will focus on lists."] },
                 //{ "title": "Improvements", "type": "improved", "items": [""] },
-                { "title": "Fixes", "type": "fixed", "items": ["Related fixes."] }
+                { "title": "Fixes", "type": "fixed", "items": ["Translation import fix. The settings are now available."] }
             ],
             main: 'index.js',
         };
@@ -110,6 +110,8 @@ module.exports = (
 
                     constructor() {
                         super();
+
+                        this.patchedMessagesIds = []
 
                         this.defaultFrames = {
                             clear: {
@@ -215,28 +217,6 @@ module.exports = (
                                 },
                                 timing: 'linear'
                             },
-                            popouts: {
-                                custom: {
-                                    enabled: false,
-                                    frames: [{
-                                        anim: '',
-                                        start: ''
-                                    }, {
-                                        anim: '',
-                                        start: ''
-                                    }, {
-                                        anim: '',
-                                        start: ''
-                                    }],
-                                    page: 0
-                                },
-                                duration: 0.3,
-                                enabled: true,
-                                name: 'brick-down',
-                                page: 0,
-                                selectors: '',
-                                timing: 'linear'
-                            }
                         }
 
                         /**@type defaultSettings */
@@ -306,7 +286,6 @@ module.exports = (
                             "duration_note_buttons": "Animation playback speed in seconds for each button after the delay.",
                             "duration_note_lists": "Animation playback speed in seconds for each list item after the delay.",
                             "duration_note_messages": "Animation playback speed in seconds for each message after the delay.",
-                            "duration_note_popouts": "Animation playback speed in seconds for a popout.",
                             "limit": "Limit",
                             "limit_note_messages": "The maximum number of messages in the list for which the animation will be played.",
                             "name": "Animation",
@@ -316,7 +295,6 @@ module.exports = (
                             "name_note_lists": "Animation of the lists items.",
                             "name_note_messages": "Animation of the messages.",
                             "name_note_messages_sending": "Animation of the message to be sent.",
-                            "name_note_popouts": "Animation of the popouts.",
                             "sequence": "Sequence",
                             "sequence_note_buttons": "The sequence in which the buttons are built.",
                             "sequence_note_lists": "The sequence in which the list items are built.",
@@ -324,7 +302,6 @@ module.exports = (
                             "timing_note_buttons": "Defines the change in animation playback speed for buttons.",
                             "timing_note_lists": "Defines the change in animation playback speed for lists.",
                             "timing_note_messages": "Defines the change in animation playback speed for messages.",
-                            "timing_note_popouts": "Defines the change in animation playback speed for popouts."
                         },
                         "view": {
                             "advanced": "Advanced",
@@ -340,18 +317,15 @@ module.exports = (
                             "messages": "Messages",
                             "messages_received": "Received",
                             "messages_sending": "Sending",
-                            "popouts": "Popouts",
                             "rebuild_animations": "Rebuild animations",
                             "reset_all_settings": "Reset all",
                             "reset_buttons": "Reset buttons settings",
                             "reset_lists": "Reset lists settings",
                             "reset_messages": "Reset messages settings",
-                            "reset_popouts": "Reset popouts settings",
                             "resetting": "Resetting...",
                             "selectors_buttons": "Selectors of buttons",
                             "selectors_lists": "Selectors of lists",
                             "selectors_note_all": "If you leave this field empty, the default selectors will appear here on reload. Changes to the selectors are saved when typing (if the code is valid). The separator is a comma (,).",
-                            "selectors_popouts": "Selectors of popouts",
                             "upd_translation": "Update the translation file",
                             "update_check": "Check for updates",
                             "update_err_timeout": "Timeout exceeded",
@@ -436,13 +410,6 @@ module.exports = (
                         `.${WebpackModules.getByProps('toolbar', 'container').toolbar} > *`,
                         `.${WebpackModules.getByProps('toolbar', 'children').children} > *`,
                         `.${WebpackModules.getByProps('tabBar', 'peopleColumn').tabBar} > .${WebpackModules.getByProps('item', 'peopleColumn').item}`
-                    ]
-
-                    static selectorsPopouts = [
-                        /*modals*/
-                        `[role="dialog"].${WebpackModules.getByProps('focusLock').focusLock} > *:not(.bd-addon-modal)`,
-                        /*popouts*/
-                        `.${FindedModules.LayerContainer} > [id^=popout]`
                     ]
 
                     animateChannels = () => {
@@ -942,7 +909,7 @@ module.exports = (
                         let animPrevStyles = () => {
                             let result = '';
 
-                            ; (["lists", "buttons", "messages", "popouts"]).forEach(type => {
+                            ; (["lists", "buttons", "messages"]).forEach(type => {
                                 if (!AnimationsPlugin.names.includes(this.settings[type].name)) {
                                     this.settings[type].name = this.defaultSettings[type].name;
                                     PluginUtilities.saveSettings(this.getName(), this.settings);
@@ -969,7 +936,7 @@ module.exports = (
 
                             AnimationsPlugin.names.forEach(
                                 animName => {
-                                    ['lists', 'popouts', 'messages', 'buttons'].forEach(
+                                    ['lists', 'messages', 'buttons'].forEach(
                                         typeName => {
                                             for (var i = 1; i < 5; i++) {
                                                 result += `.animPreview[pdata="${animName},${typeName}"]:hover > .animPreviewTempsContainer > .animTempBlock:nth-child(${i})`
@@ -988,7 +955,7 @@ module.exports = (
 
                             AnimationsPlugin.sequences.forEach(
                                 seqName => {
-                                    ['lists', 'popouts', 'messages', 'buttons'].forEach(
+                                    ['lists', 'messages', 'buttons'].forEach(
                                         typeName => {
                                             for (var i = 1; i < 5; i++) {
                                                 result += `.animPreview[pdata="${seqName},${typeName}"]:hover > .animPreviewTempsContainer > .animTempBlock:${seqName == 'fromLast' ? 'nth-last-child' : 'nth-child'}(${i})`
@@ -1103,22 +1070,6 @@ module.exports = (
                 }
                 `}
 
-                ${!this.settings.popouts.enabled ? '' : `
-                ${this.settings.popouts.selectors ? this.settings.popouts.selectors : AnimationsPlugin.selectorsPopouts.join(', ')}
-                {
-                    ${this.settings.popouts.custom.frames[this.settings.popouts.custom.page]?.start ? this.settings.popouts.custom.frames[this.settings.popouts.custom.page]?.start : `transform: scale(0);`}
-                    animation-name: ${this.settings.popouts.custom.enabled &&
-                                    (this.settings.popouts.custom.page >= 0 ?
-                                        this.settings.popouts.custom.frames[this.settings.popouts.custom.page].anim.trim() != '' &&
-                                        this.isValidKeyframe(this.settings.popouts.custom.frames[this.settings.popouts.custom.page].anim)
-                                        : 0)
-                                    ? 'custom-popouts' : this.settings.popouts.name};
-                    animation-fill-mode: forwards;
-                    animation-duration: ${this.settings.popouts.duration}s;
-                    animation-timing-function: ${this.settings.popouts.timing};
-                }
-                `}
-
                 ${!this.settings.messages.enabled ? '' : `
                 /* messages */
                 .${FindedModules.MessageListItem} > .${FindedModules.Message}
@@ -1180,10 +1131,6 @@ module.exports = (
                 @keyframes custom-messages+sending {
                     ${this.settings.messages.sending.custom.page >= 0 ? this.settings.messages.sending.custom.frames[this.settings.messages.sending.custom.page]?.anim : ''}
                 }
-
-                @keyframes custom-popouts {
-                    ${this.settings.popouts.custom.page >= 0 ? this.settings.popouts.custom.frames[this.settings.popouts.custom.page]?.anim : ''}
-                }
                     `;
 
                         PluginUtilities.removeStyle(`${this.getName()}-main`);
@@ -1237,6 +1184,7 @@ module.exports = (
                     /**
                      * Reads file
                      * @param {locale} [key]
+                     * @returns {object | null} translation
                      */
                     stringsGet(key = undefined) {
                         try {
@@ -1247,7 +1195,6 @@ module.exports = (
                             let result = tr?.[key] || tr
                             return result
                         } catch (err) {
-                            Logger.err(this.getName(), err)
                             return null
                         }
                     }
@@ -1265,7 +1212,12 @@ module.exports = (
                                     let url = 'https://api.github.com/repos/Mopsgamer/BetterDiscord-codes/contents/plugins/Animations/Animations.translation.json' + '?ref=main'
                                     await this.requestGhFile(url,
                                         (text_new) => {
-                                            let text_old = fs.readFileSync(p)
+                                            let text_old = ''
+                                            try {
+                                                text_old = fs.readFileSync(p)
+                                            } catch {
+
+                                            }
                                             fs.writeFileSync(p, text_new)
                                             rs(text_new == text_old)
                                         },
@@ -1367,13 +1319,14 @@ module.exports = (
                         let locale = FindedModules.LocaleGetter.locale;
 
                         /**@type {AnimationsPlugin.strings}*/
-                        let trn = this.stringsGet(locale)
+                        let trn = this.stringsGet(locale);
                         let src = AnimationsPlugin.strings
-                        for(let key in src) {
+                        if(trn == null) {
+                            trn = src
+                        } else for (let key in src) {
                             if(!trn[key]) trn[key] = src[key]
-                            else for(let sub in src[key]) {
-                                if(!trn[key][sub]) trn[key][sub] = src[key][sub]
-                            }
+                            else for (let sub in src[key])
+                                if (!trn[key][sub]) trn[key][sub] = src[key][sub]
                         }
 
                         /**
@@ -3619,7 +3572,7 @@ module.exports = (
                                                                     ).render
                                                                 ).render,
 
-                                                                Field(trn.stng.name, trn.stng.name_note_messages,
+                                                                Field(trn.stng.name, trn.stng.name_note_messages_sending,
                                                                     PreviewsPanel(
                                                                         [
                                                                             { label: trn.name.in, value: 'in' },
@@ -3664,200 +3617,6 @@ module.exports = (
                                                             ]
                                                         }
                                                     ]).render
-                                                ]
-                                            },
-                                            {
-                                                name: trn.view.popouts,
-                                                content: [
-                                                    Field(null, null,
-                                                        ElementsPanel(
-                                                            [
-                                                                {
-                                                                    elements: [
-                                                                        {
-                                                                            component: 'button',
-                                                                            svgs: [this.settings.popouts.enabled ? SvgTemps.checked : SvgTemps.unchecked],
-                                                                            color: this.settings.popouts.enabled ? 'green' : 'red',
-                                                                            label: trn.view.popouts,
-                                                                            id: 'popouts-switch-button',
-                                                                            onclick: async (e) => {
-
-                                                                                let button = e.currentTarget
-
-                                                                                button.getElementsByTagName('span')[0].innerText = '...'
-
-                                                                                this.settings.popouts.enabled = !this.settings.popouts.enabled;
-                                                                                if (!this.settings.popouts.enabled) {
-                                                                                    button.classList.remove('green')
-                                                                                    button.classList.add('red')
-                                                                                    button.querySelector('path').setAttribute('d', SvgTemps.unchecked.paths)
-                                                                                } else {
-                                                                                    button.classList.remove('red')
-                                                                                    button.classList.add('green')
-                                                                                    button.querySelector('path').setAttribute('d', SvgTemps.checked.paths)
-                                                                                }
-                                                                                await this.resetAnimations();
-                                                                                PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                                button.getElementsByTagName('span')[0].innerText = trn.view.popouts;
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            component: 'button',
-                                                                            color: 'blurple',
-                                                                            label: trn.view.reset_popouts,
-                                                                            id: 'animations-reset-popouts',
-                                                                            svgs: [SvgTemps.Other.circleArrow],
-                                                                            onclick: async (e) => {
-
-                                                                                let button = e.currentTarget;
-                                                                                button.getElementsByTagName('span')[0].innerText = trn.view.resetting;
-                                                                                await this.wait(500);
-
-                                                                                this.settings.popouts = this.defaultSettings.popouts
-                                                                                PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                                this.settings = PluginUtilities.loadSettings(this.getName(), this.defaultSettings);
-                                                                                this.resetAnimations();
-                                                                                this.closeSettings();
-                                                                            },
-                                                                        }
-                                                                    ],
-                                                                    options: {
-                                                                        widthAll: '100%',
-                                                                        align: 'space-between'
-                                                                    }
-                                                                }
-                                                            ]
-                                                        ).render
-                                                    ).render,
-
-                                                    Field(trn.stng.name, trn.stng.name_note_popouts,
-                                                        PreviewsPanel(
-                                                            [
-                                                                { label: trn.name.in, value: 'in' },
-                                                                { label: trn.name.out, value: 'out' },
-                                                                { label: trn.name.circle, value: 'circle' },
-                                                                { label: trn.name.polygon, value: 'polygon' },
-                                                                { label: trn.name.opacity, value: 'opacity' },
-                                                                { label: trn.name.slime, value: 'slime' },
-                                                                { label: trn.name.brick_right, value: 'brick-right' },
-                                                                { label: trn.name.brick_left, value: 'brick-left' },
-                                                                { label: trn.name.brick_up, value: 'brick-up' },
-                                                                { label: trn.name.brick_down, value: 'brick-down' },
-                                                                { label: trn.name.slide_right, value: 'slide-right' },
-                                                                { label: trn.name.slide_left, value: 'slide-left' },
-                                                                { label: trn.name.slide_up, value: 'slide-up' },
-                                                                { label: trn.name.slide_down, value: 'slide-down' },
-                                                                { label: trn.name.slide_up_right, value: 'slide-up-right' },
-                                                                { label: trn.name.slide_up_left, value: 'slide-up-left' },
-                                                                { label: trn.name.slide_down_right, value: 'slide-down-right' },
-                                                                { label: trn.name.slide_down_left, value: 'slide-down-left' },
-                                                                { label: trn.name.skew_right, value: 'skew-right' },
-                                                                { label: trn.name.skew_left, value: 'skew-left' },
-                                                                { label: trn.name.wide_skew_right, value: 'wide-skew-right' },
-                                                                { label: trn.name.wide_skew_left, value: 'wide-skew-left' },
-                                                            ],
-                                                            {
-                                                                type: 'popouts-name',
-                                                                class: 'popouts',
-                                                                horizontal: false,
-                                                                tempBlocks: {
-                                                                    count: 1,
-                                                                    height: '36%'
-                                                                },
-                                                                custom: {
-                                                                    data: this.settings.popouts.custom,
-                                                                }
-                                                            },
-                                                            this.settings.popouts.name,
-                                                            (e) => {
-                                                                this.settings.popouts.name = e.value;
-                                                                this.settings.popouts.page = e.page;
-                                                                PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                this.resetAnimations()
-                                                            }
-                                                        ).render
-                                                    ).render,
-
-                                                    Field(trn.stng.timing, trn.stng.timing_note_popouts,
-                                                        ElementsPanel(
-                                                            [
-                                                                {
-                                                                    elements: [
-                                                                        {
-                                                                            component: 'input',
-                                                                            value: this.settings.popouts.timing,
-                                                                            max: 0.35,
-                                                                            step: 0.01,
-                                                                            type: 'string',
-                                                                            onchange: (e, v) => {
-                                                                                this.settings.popouts.timing = v;
-                                                                                PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                                this.resetAnimations()
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            component: 'svg',
-                                                                            id: 'help-timing-lists',
-                                                                            width: '25px',
-                                                                            height: '50px',
-                                                                            ...SvgTemps.Other.help
-                                                                        },
-                                                                        {
-                                                                            component: 'button',
-                                                                            padding: '6px',
-                                                                            svgs: [{ ...SvgTemps.Other.circleArrow, width: '22px', height: '22px' }],
-                                                                            onclick: (e) => {
-                                                                                var button = e.currentTarget;
-                                                                                var input = button.closest('.elementsContainer').querySelector('input');
-
-                                                                                input.value = this.defaultSettings.popouts.timing;
-                                                                                this.settings.popouts.timing = this.defaultSettings.popouts.timing;
-                                                                                PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                                this.resetAnimations()
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                },
-                                                            ]
-                                                        ).render
-                                                    ).render,
-
-                                                    Field(trn.stng.duration, trn.stng.duration_note_popouts,
-                                                        ElementsPanel(
-                                                            [
-                                                                {
-                                                                    elements: [
-                                                                        {
-                                                                            component: 'input',
-                                                                            value: this.settings.popouts.duration,
-                                                                            max: 3,
-                                                                            step: 0.01,
-                                                                            type: 'number',
-                                                                            onchange: (e, v) => {
-                                                                                this.settings.popouts.duration = v;
-                                                                                PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                                this.resetAnimations()
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            component: 'button',
-                                                                            padding: '6px',
-                                                                            svgs: [{ ...SvgTemps.Other.circleArrow, width: '22px', height: '22px' }],
-                                                                            onclick: (e) => {
-                                                                                var button = e.currentTarget;
-                                                                                var input = button.closest('.elementsContainer').querySelector('input');
-
-                                                                                input.value = this.defaultSettings.popouts.duration;
-                                                                                this.settings.popouts.duration = this.defaultSettings.popouts.duration;
-                                                                                PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                                this.resetAnimations()
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        ).render
-                                                    ).render,
                                                 ]
                                             },
                                             { component: 'divider' },
@@ -3985,68 +3744,6 @@ module.exports = (
                                                             },
                                                         ).render
                                                     ).render,
-
-                                                    Field(trn.view.selectors_popouts, trn.view.selectors_note_all,
-                                                        TextareasPanel(
-                                                            {
-                                                                elementsPanel: {
-                                                                    containersTemp: [
-                                                                        {
-                                                                            elements: [
-                                                                                {
-                                                                                    component: 'button',
-                                                                                    label: trn.edit.default,
-                                                                                    id: 'popouts-selectors-default',
-                                                                                    svgs: [SvgTemps.Other.circleArrow],
-                                                                                    onclick: (e) => {
-                                                                                        var textarea = e.currentTarget.closest('.animTextareasPanel').querySelector('.animTextarea')
-                                                                                        textarea.value = AnimationsPlugin.selectorsPopouts.join(',\n\n')
-                                                                                        textarea.style.color = '';
-
-                                                                                        this.settings.popouts.selectors = '';
-                                                                                        PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                                        this.resetAnimations()
-                                                                                    }
-                                                                                },
-                                                                                {
-                                                                                    component: 'button',
-                                                                                    label: trn.edit.clear,
-                                                                                    id: 'popouts-selectors-clear',
-                                                                                    onclick: (e) => {
-                                                                                        var textarea = e.currentTarget.closest('.animTextareasPanel').querySelector('.animTextarea')
-                                                                                        textarea.value = '';
-                                                                                        textarea.focus();
-                                                                                    }
-                                                                                }
-                                                                            ]
-                                                                        }
-                                                                    ],
-                                                                    options: {
-                                                                        widthAll: '100%'
-                                                                    },
-                                                                },
-                                                                textareas: [
-                                                                    {
-                                                                        height: '92px',
-                                                                        value: this.settings.popouts.selectors ? this.settings.popouts.selectors : AnimationsPlugin.selectorsPopouts.join(',\n\n')
-                                                                    }
-                                                                ],
-                                                                onchange: (e) => {
-                                                                    var textarea = e.currentTarget;
-                                                                    var value = textarea.value;
-    
-                                                                    if (value == '' || this.isValidSelector(value)) {
-                                                                        this.settings.popouts.selectors = (value == AnimationsPlugin.selectorsPopouts ? '' : value)
-                                                                        PluginUtilities.saveSettings(this.getName(), this.settings);
-                                                                        this.resetAnimations()
-                                                                        textarea.style.color = ''
-                                                                    } else {
-                                                                        textarea.style.color = Textcolors.red
-                                                                    }
-                                                                },
-                                                            },
-                                                        ).render
-                                                    ).render,
                                                 ]
                                             },
                                         ]
@@ -4065,23 +3762,30 @@ module.exports = (
                             (obj, [props], ret) => {
                                 let li = Utilities.findInTree(ret, node => node?.type == "li")
                                 let div = li.props.children
-                                let state = div.props.childrenAccessories.props.message.state
+
+                                let info = div.props.childrenAccessories.props.message
+                                let state = info.state
+                                let id = info.id
                                 /**@type {sendingPerformance}*/
                                 const perf = this.settings.messages.sending.enabled
 
+                                if(!this.patchedMessagesIds.includes(id)) this.patchedMessagesIds.push(id)
                                 
                                 if(this.settings.messages.enabled)
                                 if (perf == 'onsent') {
-                                    if(state == "SENT")
-                                    div.props.style = {
-                                        "animation-name": this.settings.messages.sending.custom.enabled &&
-                                        (this.settings.messages.sending.custom.page >= 0 ?
-                                            this.settings.messages.sending.custom.frames[this.settings.messages.sending.custom.page].anim.trim() != '' &&
-                                            this.isValidKeyframe(this.settings.messages.sending.custom.frames[this.settings.messages.sending.custom.page].anim)
-                                            : 0)
-                                        ? 'custom-messages-sending' : this.settings.messages.sending.name,
+                                    if (state != "SENDING") {
+                                        let tstamp = info.timestamp._d
+                                        if (Date.now() - tstamp < 1000)
+                                        div.props.style = {
+                                            "animation-name": this.settings.messages.sending.custom.enabled &&
+                                            (this.settings.messages.sending.custom.page >= 0 ?
+                                                this.settings.messages.sending.custom.frames[this.settings.messages.sending.custom.page].anim.trim() != '' &&
+                                                this.isValidKeyframe(this.settings.messages.sending.custom.frames[this.settings.messages.sending.custom.page].anim)
+                                                : 0)
+                                            ? 'custom-messages-sending' : this.settings.messages.sending.name,
+                                        }
                                     }
-                                    else /*if(state == "SENDING")*/
+                                    else
                                     div.props.style = {
                                         "animation": 'none',
                                         "transform": "scale(1)",
@@ -4099,11 +3803,24 @@ module.exports = (
                         )
                     }
 
+                    unpatchAll() {
+
+                        Patcher.unpatchAll(this.getName())
+
+                        this.patchedMessagesIds.forEach(
+                            id => {
+                                let patchedElem = document.getElementById(`chat-messages-${id}`)?.firstChild
+                                console.log(patchedElem)
+                                if(!patchedElem) return;
+                                patchedElem.style = {}
+                            }
+                        )
+
+                    }
+
                     start() {
 
                         this.patchAll()
-
-                        PluginUpdater.checkForUpdate(this.getName(), this.getVersion(), "https://raw.githubusercontent.com/Mopsgamer/BetterDiscord-codes/main/plugins/Animations/Animations.plugin.js");
 
                         let Textcolors = {
                             red: '#ed4245',
@@ -4601,7 +4318,7 @@ module.exports = (
 
                     stop() {
 
-                        Patcher.unpatchAll(this.getName())
+                        this.unpatchAll()
 
                         clearInterval(this.animateInterval)
 
