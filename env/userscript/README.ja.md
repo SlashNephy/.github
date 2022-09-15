@@ -13,7 +13,7 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 | FF14Angler Bypass AdBlocker Check | 0.2.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js   |
 | Feedly Auto Refresh               | 0.2.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js               |
 | AMQ Preload Video                 | 0.2.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js                 |
-| AMQ Result Exporter               | 0.3.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js               |
+| AMQ Result Exporter               | 0.4.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js               |
 | Google Remove Redirection Warning | 0.1.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js |
 | Annict Hide Future Programs       | 0.1.4      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js       |
 | AMQ Private Session               | 0.2.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js               |
@@ -49,7 +49,7 @@ Feedly で未読記事がないとき、フィードを自動リフレッシュ�
 
 プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。
 
-### AMQ Result Exporter (v0.3.1)
+### AMQ Result Exporter (v0.4.0)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-result-exporter.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88%E3%82%92_Google_%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AB%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B_UserScript)
 

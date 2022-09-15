@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.1
+// @version         0.4.0
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
@@ -179,6 +179,11 @@ const executeGas = async (row) => {
     url,
     method: 'POST',
     data: JSON.stringify(row),
+    headers: {
+      'User-Agent':
+        'amq-result-exporter (+https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js)',
+      'Content-Type': 'application/json',
+    },
   })
 }
 const handle = (payload) => {
@@ -202,6 +207,7 @@ const handle = (payload) => {
         tags: payload.songInfo.animeTags,
         genre: payload.songInfo.animeGenre,
         malId: payload.songInfo.siteIds.malId,
+        aniListId: payload.songInfo.siteIds.aniListId,
         annictId: armEntries.find((e) => e.mal_id === payload.songInfo.siteIds.malId)?.annict_id,
         type: payload.songInfo.animeType,
         score: payload.songInfo.animeScore,
@@ -300,13 +306,12 @@ const handle = (payload) => {
       .filter((p) => p.status)
       .map((p) => p.name)
       .join('\n'),
+    result.song.anime.aniListId,
   ]
   executeGas(row).catch(console.error)
 }
-if ('Listener' in window) {
-  const listener = new Listener('answer results', handle)
-  listener.bindListener()
-}
+const listener = new Listener('answer results', handle)
+listener.bindListener()
 addScriptData({
   name: 'Result Exporter',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
