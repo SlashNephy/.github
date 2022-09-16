@@ -6,21 +6,21 @@
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/renovate"
   },
-  "private": true,
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "tsc",
+    "format": "concurrently -n format: 'yarn:format:*'",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "yarn lint:prettier --write",
+    "lint": "concurrently -n lint: 'yarn:lint:*'",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
     "start": "ts-node bin/update-config.ts",
     "test": "concurrently -n test: 'yarn:test:*'",
     "test:project": "RENOVATE_CONFIG_FILE=src/index.json5 renovate-config-validator",
     "test:repo": "RENOVATE_CONFIG_FILE=../../renovate.json renovate-config-validator",
-    "test:share": "RENOVATE_CONFIG_FILE=../../renovate-config.json renovate-config-validator",
-    "lint": "concurrently -n lint: 'yarn:lint:*'",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
-    "format": "concurrently -n format: 'yarn:format:*'",
-    "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "yarn lint:prettier --write"
+    "test:share": "RENOVATE_CONFIG_FILE=../../renovate-config.json renovate-config-validator"
   },
   "dependencies": {
     "@octokit/rest": "19.0.4",
@@ -34,7 +34,7 @@
     "concurrently": "7.4.0",
     "eslint": "8.22.0",
     "prettier": "2.7.1",
-    "renovate": "32.195.5",
+    "renovate": "32.196.0",
     "ts-node": "10.9.1",
     "typescript": "4.8.3"
   },
