@@ -6,17 +6,17 @@
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/github"
   },
-  "private": true,
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "tsc",
-    "start": "ts-node bin/update-webhooks.ts",
+    "format": "concurrently -n format: 'yarn:format:*'",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "yarn lint:prettier --write",
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "format": "concurrently -n format: 'yarn:format:*'",
-    "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "yarn lint:prettier --write"
+    "start": "ts-node bin/update-webhooks.ts"
   },
   "dependencies": {
     "@octokit/rest": "19.0.4",
