@@ -1,15 +1,10 @@
 import dotenv from 'dotenv'
 
 type Env = {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   GITHUB_TOKEN: string
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   USER_WEBHOOK_URL: string
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   ORG_WEBHOOK_URL: string
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   STAR_WEBHOOK_URL: string
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   ISSUE_WEBHOOK_URL: string
 }
 
