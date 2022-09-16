@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if prompt "Install .ssh/authorized_keys?"; then
   mkdir -p ~/.ssh
   chmod 700 ~/.ssh

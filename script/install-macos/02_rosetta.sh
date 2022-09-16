@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if [ "$CI" = "true" ]; then
   echo "Skipping rosetta install on CI..."
   return
