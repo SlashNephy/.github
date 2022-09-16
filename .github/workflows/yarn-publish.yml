@@ -68,3 +68,4 @@ jobs:
       - name: Publish
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.script }}'
+        continue-on-error: true
