@@ -1,11 +1,12 @@
 {
   "name": "@slashnephy/typescript-extension",
   "version": "0.2.3",
+  "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
+    "type": "git",
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/typescript"
   },
-  "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -18,13 +19,13 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "concurrently -n lint: 'yarn:lint:*'",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
+    "clean": "rm -rf dist/",
     "format": "concurrently -n format: 'yarn:format:*'",
     "format:eslint": "yarn lint:eslint --fix",
     "format:prettier": "yarn lint:prettier --write",
-    "clean": "rm -rf dist/",
+    "lint": "concurrently -n lint: 'yarn:lint:*'",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
   "peerDependencies": {

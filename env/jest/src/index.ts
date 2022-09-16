@@ -8,7 +8,6 @@ const config: Config.InitialOptions = {
   collectCoverageFrom: ['**/*.ts', '!./**/*.test.ts', '!./**/test/**/*.ts'],
   coverageDirectory: 'coverage',
   transform: {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     '\\.ts$': 'ts-jest',
   },
 }
