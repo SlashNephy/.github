@@ -1,4 +1,4 @@
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
+import { addScriptData, addStyle } from '../lib/thirdparty/amqScriptInfo'
 
 import type { AnswerResultsPayload } from '../types/amq'
 
@@ -61,11 +61,16 @@ const createDivElementWithId = (container: Element, id: string) => {
   const element = document.createElement('div')
   element.id = id
 
-  const targetElement = container.querySelector('div#qpInfoHider')
-  if (targetElement === null) {
+  const hider = container.querySelector<HTMLDivElement>('div#qpInfoHider')
+  if (hider === null) {
     throw new Error('div#qpInfoHider is not found.')
   }
-  container.insertBefore(element, targetElement.previousElementSibling)
+
+  if (!hider.classList.contains('custom-hider')) {
+    hider.classList.add('custom-hider')
+  }
+
+  container.insertBefore(element, hider.previousElementSibling)
 
   return element
 }
@@ -94,3 +99,9 @@ addScriptData({
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description: 'Display detailed information on the side panel of the song.',
 })
+
+addStyle(`
+.custom-hider {
+  padding: 50% 0;
+}
+`)
