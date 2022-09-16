@@ -35,19 +35,12 @@ jobs:
       contents: 'read'
       pull-requests: 'write'
 
-  format:
+  format-and-build-ci:
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
       working-directory: 'env/userscript'
-    permissions:
-      contents: 'write'
-
-  build-ci:
-    if: github.event_name != 'pull_request'
-    uses: ./.github/workflows/yarn-format.yml
-    with:
-      working-directory: 'env/userscript'
+      pre-script: 'format'
       script: 'ci'
       commit-message: '⚙️ Build (env/userscript)'
     permissions:
