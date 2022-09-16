@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Ensure $GOPATH is set
 if [ -z "${GOPATH+x}" ]; then
   return

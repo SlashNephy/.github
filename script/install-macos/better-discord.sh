@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if prompt "Install BetterDiscord plugins & themes?"; then
   mkdir -p "$HOME/Library/Application Support/BetterDiscord"
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if [ "$CI" = "true" ]; then
   echo "Skipping amplify-cli install on CI..."
   return
