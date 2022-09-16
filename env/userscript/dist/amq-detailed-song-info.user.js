@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -155,11 +155,14 @@ const handle = (payload) => {
 const createDivElementWithId = (container, id) => {
   const element = document.createElement('div')
   element.id = id
-  const targetElement = container.querySelector('div#qpInfoHider')
-  if (targetElement === null) {
+  const hider = container.querySelector('div#qpInfoHider')
+  if (hider === null) {
     throw new Error('div#qpInfoHider is not found.')
   }
-  container.insertBefore(element, targetElement.previousElementSibling)
+  if (!hider.classList.contains('custom-hider')) {
+    hider.classList.add('custom-hider')
+  }
+  container.insertBefore(element, hider.previousElementSibling)
   return element
 }
 const renderRow = (element, title, content) => {
@@ -183,3 +186,8 @@ addScriptData({
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description: 'Display detailed information on the side panel of the song.',
 })
+addStyle(`
+.custom-hider {
+  padding: 50% 0;
+}
+`)
