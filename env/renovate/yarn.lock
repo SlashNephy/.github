@@ -1429,29 +1429,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jamiemagee/osv-offline-db@npm:1.1.4":
-  version: 1.1.4
-  resolution: "@jamiemagee/osv-offline-db@npm:1.1.4"
-  dependencies:
-    "@seald-io/nedb": 3.0.0
-  checksum: f45b061df50a6bc6c14dc503f0fc5be70258902601b1526d856067c92bea4ac9ef07da775e2979de2829cf5cf31885ca10871d6c011cd3131372eef6a9f1fc52
-  languageName: node
-  linkType: hard
-
-"@jamiemagee/osv-offline@npm:1.2.11":
-  version: 1.2.11
-  resolution: "@jamiemagee/osv-offline@npm:1.2.11"
-  dependencies:
-    "@jamiemagee/osv-offline-db": 1.1.4
-    "@octokit/rest": 19.0.4
-    adm-zip: ^0.5.9
-    fs-extra: 10.0.0
-    got: 11.8.5
-    luxon: 3.0.1
-  checksum: 0447ae5304a75e59d747f381395c08029884408f16981e165fc198a34b23771ff172af6e2a7229295d634852d9876420104daf9271570291b0d074cd960229aa
-  languageName: node
-  linkType: hard
-
 "@jridgewell/resolve-uri@npm:^3.0.3":
   version: 3.0.7
   resolution: "@jridgewell/resolve-uri@npm:3.0.7"
@@ -1845,6 +1822,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@renovatebot/osv-offline-db@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@renovatebot/osv-offline-db@npm:1.0.1"
+  dependencies:
+    "@seald-io/nedb": 3.1.0
+  checksum: 78cba35f61c9ed38526bd0a9454435f757294cf17d806299fb583b79b0b67a13b5e5f8d708239f42ca460102db53d2e3ac31ee5d8603d4ad6ceb828eed4aebb4
+  languageName: node
+  linkType: hard
+
+"@renovatebot/osv-offline@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@renovatebot/osv-offline@npm:1.0.2"
+  dependencies:
+    "@octokit/rest": 19.0.4
+    "@renovatebot/osv-offline-db": 1.0.1
+    adm-zip: ^0.5.9
+    fs-extra: 10.0.0
+    got: 11.8.5
+    luxon: 3.0.3
+  checksum: e687066657f0eafd24735a3be6f1bb74150ba2050b46b57229ca437656a48fda2c85d446446283684fd5497161a142953ab2a6d1961cc211b00501eac5216b7c
+  languageName: node
+  linkType: hard
+
 "@renovatebot/pep440@npm:2.1.5":
   version: 2.1.5
   resolution: "@renovatebot/pep440@npm:2.1.5"
@@ -1875,14 +1875,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@seald-io/nedb@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@seald-io/nedb@npm:3.0.0"
+"@seald-io/nedb@npm:3.1.0":
+  version: 3.1.0
+  resolution: "@seald-io/nedb@npm:3.1.0"
   dependencies:
     "@seald-io/binary-search-tree": ^1.0.2
     localforage: ^1.9.0
     util: ^0.12.4
-  checksum: 7c52264e8134c89dec2c2ed8f18ee4545b2903c261a852bfc5e59e3fd5a9a24a1436100c7b4841ee8f957773297b92face6ae35b3f9cd592372c11dfdd78ee5a
+  checksum: 081884b02756c8a623b9cc0907882e51a5c39f530ce02644af8b172fc0451c61e98d3582339d602f3102af8042303d1c3a912a625fc5e934a8b09998dfbf512c
   languageName: node
   linkType: hard
 
@@ -1948,7 +1948,7 @@ __metadata:
     eslint: 8.22.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.196.0
+    renovate: 32.197.0
     ts-node: 10.9.1
     typescript: 4.8.3
   languageName: unknown
@@ -4831,22 +4831,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"git-up@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "git-up@npm:6.0.0"
+"git-up@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "git-up@npm:7.0.0"
   dependencies:
     is-ssh: ^1.4.0
-    parse-url: ^7.0.2
-  checksum: 145a1f546d7a078cdfc2616556e518e634d134e34a31c6bf2ed89e44158659cb525dbd451c338121f7107f55cef066d0b37a7bbf178555befc9304b3940b435e
+    parse-url: ^8.1.0
+  checksum: 2faadbab51e94d2ffb220e426e950087cc02c15d664e673bd5d1f734cfa8196fed8b19493f7bf28fe216d087d10e22a7fd9b63687e0ba7d24f0ddcfb0a266d6e
   languageName: node
   linkType: hard
 
-"git-url-parse@npm:12.0.0":
-  version: 12.0.0
-  resolution: "git-url-parse@npm:12.0.0"
+"git-url-parse@npm:13.0.0":
+  version: 13.0.0
+  resolution: "git-url-parse@npm:13.0.0"
   dependencies:
-    git-up: ^6.0.0
-  checksum: b4c8530b816202ecf9d4dabf755f785a314a096b56145018385b3d7171e862f9d0d9b38cce620c0af354b269750fe7b2d9aa95815c7150922090a11dac4ab1e6
+    git-up: ^7.0.0
+  checksum: 05a3bf51fc5863d26461a815347929a7432e1ebc6763e6a7ee31f510936266f9a82e0f090d09c2c48cd6dba2f17163fa1d860ba4a3ff157083cca5a5d1961c57
   languageName: node
   linkType: hard
 
@@ -5969,13 +5969,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:3.0.1":
-  version: 3.0.1
-  resolution: "luxon@npm:3.0.1"
-  checksum: aa966eb919bf95b1bd819cda784d1f6f66e3fb65bd9ec7bf68b6a978eeb4e3e14f7e2275021b473f93b15b6b7ba2e5a30471e53add3929a7e695fcfd6dd40ec8
-  languageName: node
-  linkType: hard
-
 "luxon@npm:3.0.3":
   version: 3.0.3
   resolution: "luxon@npm:3.0.3"
@@ -6483,13 +6476,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-html-parser@npm:5.4.2":
-  version: 5.4.2
-  resolution: "node-html-parser@npm:5.4.2"
+"node-html-parser@npm:6.0.0":
+  version: 6.0.0
+  resolution: "node-html-parser@npm:6.0.0"
   dependencies:
     css-select: ^4.2.1
     he: 1.2.0
-  checksum: 2d2391147c83b402786eeab95d23ea4e24ca8608e0e70a2823bfd4f2a248be13a8cc31acfd55a0109e051131e4f0c17d7ada8d999ce70ff2e342ab0110f5da59
+  checksum: dac23645479fe7ba48d6f50523b4ced6256f5245e1d9476dbabc8d3cf26104406f5394040a56f3f6f8a76e65ef1f98ebaa7d2f151ef78c3a4bab71e3c8533d1d
   languageName: node
   linkType: hard
 
@@ -6538,7 +6531,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"normalize-url@npm:^6.0.1, normalize-url@npm:^6.1.0":
+"normalize-url@npm:^6.0.1":
   version: 6.1.0
   resolution: "normalize-url@npm:6.1.0"
   checksum: 4a4944631173e7d521d6b80e4c85ccaeceb2870f315584fa30121f505a6dfd86439c5e3fdd8cd9e0e291290c41d0c3599f0cb12ab356722ed242584c30348e50
@@ -6894,24 +6887,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parse-path@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "parse-path@npm:5.0.0"
+"parse-path@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "parse-path@npm:7.0.0"
   dependencies:
     protocols: ^2.0.0
-  checksum: e9f670559cd8e535f39f548bf5d41ad96a220190ea98df33d0babd9dfaa7c3c70ee2e55394078517d5e7e93c6a39c8eac1261ed3f9e68033656614fc954262e8
+  checksum: 244b46523a58181d251dda9b888efde35d8afb957436598d948852f416d8c76ddb4f2010f9fc94218b4be3e5c0f716aa0d2026194a781e3b8981924142009302
   languageName: node
   linkType: hard
 
-"parse-url@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "parse-url@npm:7.0.2"
+"parse-url@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "parse-url@npm:8.1.0"
   dependencies:
-    is-ssh: ^1.4.0
-    normalize-url: ^6.1.0
-    parse-path: ^5.0.0
-    protocols: ^2.0.1
-  checksum: 3e26852706bebe9fac409909316716dee52883d2fb5c82d65577effba1507abb7bc42bb59ce0ba6c8659168fb99acf89000bd8fe096ed3ad7124fa85227436d7
+    parse-path: ^7.0.0
+  checksum: b93e21ab4c93c7d7317df23507b41be7697694d4c94f49ed5c8d6288b01cba328fcef5ba388e147948eac20453dee0df9a67ab2012415189fff85973bdffe8d9
   languageName: node
   linkType: hard
 
@@ -7305,9 +7295,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.196.0":
-  version: 32.196.0
-  resolution: "renovate@npm:32.196.0"
+"renovate@npm:32.197.0":
+  version: 32.197.0
+  resolution: "renovate@npm:32.197.0"
   dependencies:
     "@aws-sdk/client-ec2": 3.155.0
     "@aws-sdk/client-ecr": 3.154.0
@@ -7316,7 +7306,7 @@ __metadata:
     "@breejs/later": 4.1.0
     "@cheap-glitch/mi-cron": 1.0.1
     "@iarna/toml": 2.2.5
-    "@jamiemagee/osv-offline": 1.2.11
+    "@renovatebot/osv-offline": 1.0.2
     "@renovatebot/pep440": 2.1.5
     "@renovatebot/ruby-semver": 1.1.6
     "@sindresorhus/is": 4.6.0
@@ -7349,7 +7339,7 @@ __metadata:
     find-packages: 9.0.9
     find-up: 5.0.0
     fs-extra: 10.1.0
-    git-url-parse: 12.0.0
+    git-url-parse: 13.0.0
     github-url-from-git: 1.5.0
     global-agent: 3.0.0
     good-enough-parser: 1.1.19
@@ -7370,7 +7360,7 @@ __metadata:
     minimatch: 5.1.0
     moo: 0.5.1
     nanoid: 3.3.4
-    node-html-parser: 5.4.2
+    node-html-parser: 6.0.0
     openpgp: 5.5.0
     p-all: 3.0.0
     p-map: 4.0.0
@@ -7401,7 +7391,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 29eaad8124cfeafaf2057aba1284d62ac20c81a6c1393b1232106af140c6f88ed40c7e7faa23f1ec208a1e9ad951b486c15cc86889a4eb02981f57c6d3bd6900
+  checksum: 53ddbfddddc25c444dccad951aeb204f1005d6403632403693063b8a9851932ad8984a10a3fac342b42408e7df708f642107ad932c1de3e2aa95bb826f79e75e
   languageName: node
   linkType: hard
 
