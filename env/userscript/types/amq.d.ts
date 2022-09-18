@@ -65,7 +65,7 @@ declare global {
   }
 }
 
-export type AnswerResultsPayload = {
+export type AnswerResultsEvent = {
   players: {
     correctGuesses: number
     answerNumber: number | undefined
@@ -104,4 +104,20 @@ export type AnswerResultsPayload = {
   progressBarState: { length: number; played: number }
   groupMap: Record<string, number[]>
   watched: boolean
+}
+
+export type GameStartingEvent = {
+  players: {
+    name: string
+    teamNumber?: number
+    gamePlayerId: number
+  }[]
+}
+
+export type PlayerAnsweredEvent = number[]
+
+export type JoinGameEvent = {
+  quizState: {
+    songTimer: number
+  }
 }
