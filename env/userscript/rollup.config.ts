@@ -7,7 +7,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-work-links',
     name: 'Annict Work Links',
-    version: '0.2.4',
+    version: '0.2.5',
     description: {
       en: 'Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.',
       ja: 'Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。',
@@ -22,7 +22,7 @@ export const banners: Banner[] = [
   {
     id: 'dominion-online-auto-table-setter',
     name: 'dominion.games Auto Table Setter',
-    version: '0.3.3',
+    version: '0.3.4',
     description: {
       en: 'Automatically configures the table settings in dominion.games.',
       ja: 'dominion.games の卓設定を自動的に設定します。',
@@ -106,7 +106,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-hide-future-programs',
     name: 'Annict Hide Future Programs',
-    version: '0.1.4',
+    version: '0.1.5',
     description: {
       en: 'Hide programs for the next day or later in Annict track page. In addition, it hides works that have no unwatched episodes.',
       ja: 'Annict の「記録するページ」で翌日以降の番組を非表示にします。さらに未視聴エピソードがない作品を非表示にします。',
