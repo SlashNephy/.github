@@ -114,3 +114,9 @@ out
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+bin/private
+dist/private
+lib/private
+src/private
+rollup.config.private.ts
