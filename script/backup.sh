@@ -2,6 +2,7 @@
 set -eu
 shopt -s nullglob dotglob
 
+# shellcheck disable=SC1091
 source "$HOME/.github/script/paths.sh"
 
 SCRIPTS_DIR="$ROOT_DIR/script"
