@@ -1,0 +1,5 @@
+@document domain("sm.rakuten.co.jp") {
+  p.header-user-info-box-name {
+    display: none;
+  }
+}
