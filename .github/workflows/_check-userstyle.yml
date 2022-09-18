@@ -31,6 +31,8 @@ jobs:
     uses: ./.github/workflows/yarn-lint.yml
     with:
       working-directory: 'env/userstyle'
+      enable-eslint: false
+      enable-stylelint: true
     permissions:
       contents: 'read'
       pull-requests: 'write'
