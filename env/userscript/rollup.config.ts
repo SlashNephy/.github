@@ -144,6 +144,22 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
   },
+  {
+    id: 'amq-hide-annoying-dialog',
+    name: 'AMQ Hide Annoying Dialog',
+    version: '0.1.0',
+    description: {
+      en: 'Hide annoying message dialogs when disconnecting and reconnecting.',
+      ja: 'コネクションの切断や再接続時の邪魔なメッセージダイアログを非表示にします。',
+    },
+    homepage:
+      'https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E9%82%AA%E9%AD%94%E3%81%AA%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%82%92%E9%9D%9E%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%81%99%E3%82%8B_UserScript',
+    author: 'SlashNephy',
+    match: ['https://animemusicquiz.com/*'],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
+    runAt: 'document-idle',
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
