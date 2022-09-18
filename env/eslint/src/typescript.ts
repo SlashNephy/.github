@@ -87,6 +87,8 @@ const typescript: Linter.Config = {
           'did',
           'will',
           'contains',
+          'enable',
+          'disable',
         ],
       },
       // プライベートメンバーは _ で始める
