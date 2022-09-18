@@ -38,6 +38,11 @@ const executeGas = async (row: (string | number | boolean)[]) => {
 }
 
 const handle = (payload: AnswerResultsPayload) => {
+  const { quiz, quizVideoController } = unsafeWindow
+  if (quiz === undefined || quizVideoController === undefined) {
+    return
+  }
+
   // 自分が参加していないときは無視
   const self = Object.values(quiz.players).find((p) => p.isSelf && p._inGame)
   if (!self) {
@@ -167,8 +172,10 @@ const handle = (payload: AnswerResultsPayload) => {
   executeGas(row).catch(console.error)
 }
 
-const listener = new Listener<AnswerResultsPayload>('answer results', handle)
-listener.bindListener()
+if (unsafeWindow.Listener !== undefined) {
+  const listener = new unsafeWindow.Listener<AnswerResultsPayload>('answer results', handle)
+  listener.bindListener()
+}
 
 addScriptData({
   name: 'Result Exporter',

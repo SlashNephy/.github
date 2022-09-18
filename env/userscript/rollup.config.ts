@@ -77,7 +77,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.4.0',
+    version: '0.4.1',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',
@@ -88,7 +88,7 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     connect: ['script.google.com', 'raw.githubusercontent.com'],
-    grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue'],
+    grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue', 'unsafeWindow'],
   },
   {
     id: 'google-remove-redirection-warning',
@@ -119,7 +119,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-private-session',
     name: 'AMQ Private Session',
-    version: '0.2.3',
+    version: '0.2.4',
     description: {
       en: 'Set invisible status automatically on login.',
       ja: 'ログイン時に Invisible ステータスを設定します。',
@@ -129,11 +129,12 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
   },
   {
     id: 'amq-detailed-song-info',
     name: 'AMQ Detailed Song Info',
-    version: '0.1.1',
+    version: '0.1.2',
     description: {
       en: 'Display detailed information on the side panel of the song.',
       ja: '曲のサイドパネルに詳細な情報を表示します。',
@@ -143,6 +144,7 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
   },
   {
     id: 'amq-hide-annoying-dialog',
@@ -158,7 +160,6 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
-    runAt: 'document-idle',
   },
 ]
 

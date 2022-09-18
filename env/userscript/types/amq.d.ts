@@ -2,68 +2,67 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+  interface Window {
+    quiz?: {
+      gameMode: string
+      players: Record<
+        number,
+        {
+          avatarInfo: {
+            avatar: unknown
+            background: unknown
+          }
+          avatarSlot: {
+            $answerContainerText: JQuery
+            _disabled: boolean
+          }
+          gamePlayerId: number
+          hidden: undefined
+          isSelf: boolean
+          level: number
+          lifeCountEnabled: boolean
+          particleAnimation: unknown
+          particleTrack: unknown
+          points: number
+          startPositionSlot: number
+          teamNumber: null
+          _groupNumber: number
+          _host: boolean
+          _inGame: boolean
+          _name: string
+        }
+      >
+    }
+    quizVideoController?: {
+      currentMoePlayerId: string
+      moePlayers: Record<
+        string,
+        {
+          $player: JQuery
+          startPoint: number
+        }
+      >
+    }
+    options?: {
+      $SETTING_TABS: JQuery
+      $SETTING_CONTAINERS: JQuery
+    }
+    socialTab?: {
+      socialStatus?: {
+        currentStatus: number
+        changeSocialStatus(status: number): void
+      }
+    }
+    Listener?: new <T>(command: string, callback: (payload: T) => void) => Listener<T>
+  }
+
   declare class Listener<T> {
     public constructor(command: string, callback: (payload: T) => void)
     public fire(payload: T): void
     public bindListener(): void
     public unbindListener(): void
   }
-
-  declare const quiz: {
-    gameMode: string
-    players: Record<
-      number,
-      {
-        avatarInfo: {
-          avatar: unknown
-          background: unknown
-        }
-        avatarSlot: {
-          $answerContainerText: JQuery
-          _disabled: boolean
-        }
-        gamePlayerId: number
-        hidden: undefined
-        isSelf: boolean
-        level: number
-        lifeCountEnabled: boolean
-        particleAnimation: unknown
-        particleTrack: unknown
-        points: number
-        startPositionSlot: number
-        teamNumber: null
-        _groupNumber: number
-        _host: boolean
-        _inGame: boolean
-        _name: string
-      }
-    >
-  }
-
-  declare const quizVideoController: {
-    currentMoePlayerId: string
-    moePlayers: Record<
-      string,
-      {
-        $player: JQuery
-        startPoint: number
-      }
-    >
-  }
-
-  declare const options: {
-    $SETTING_TABS: JQuery
-    $SETTING_CONTAINERS: JQuery
-  }
-
-  declare const socialTab:
-    | {
-        socialStatus?: {
-          currentStatus: number
-          changeSocialStatus(status: number): void
-        }
-      }
-    | undefined
 }
 
 export type AnswerResultsPayload = {
