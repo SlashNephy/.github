@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.0
+// @version         0.4.1
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
@@ -17,6 +17,7 @@
 // @grant           GM_xmlhttpRequest
 // @grant           GM_getValue
 // @grant           GM_setValue
+// @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
 
@@ -187,6 +188,10 @@ const executeGas = async (row) => {
   })
 }
 const handle = (payload) => {
+  const { quiz, quizVideoController } = unsafeWindow
+  if (quiz === undefined || quizVideoController === undefined) {
+    return
+  }
   const self = Object.values(quiz.players).find((p) => p.isSelf && p._inGame)
   if (!self) {
     return
@@ -310,8 +315,10 @@ const handle = (payload) => {
   ]
   executeGas(row).catch(console.error)
 }
-const listener = new Listener('answer results', handle)
-listener.bindListener()
+if (unsafeWindow.Listener !== undefined) {
+  const listener = new unsafeWindow.Listener('answer results', handle)
+  listener.bindListener()
+}
 addScriptData({
   name: 'Result Exporter',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',

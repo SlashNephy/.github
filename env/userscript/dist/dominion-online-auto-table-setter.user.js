@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            dominion.games Auto Table Setter
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.3
+// @version         0.3.4
 // @author          SlashNephy
 // @description     Automatically configures the table settings in dominion.games.
 // @description:ja  dominion.games の卓設定を自動的に設定します。
@@ -61,4 +61,4 @@ const observe = () => {
     attributeFilter: ['class'],
   })
 }
-window.addEventListener('load', observe)
+document.addEventListener('load', observe)
