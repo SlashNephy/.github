@@ -19,6 +19,7 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 | AMQ Private Session               | 0.2.4      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js               |
 | AMQ Detailed Song Info            | 0.1.2      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js            |
 | AMQ Hide Annoying Dialog          | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js          |
+| AMQ Readable Watching Status      | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-readable-watching-status.user.js      |
 
 ### Annict Work Links (v0.2.5)
 
@@ -85,3 +86,9 @@ Annict の「記録するページ」で翌日以降の番組を非表示にし�
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-hide-annoying-dialog.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E9%82%AA%E9%AD%94%E3%81%AA%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%82%92%E9%9D%9E%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%81%99%E3%82%8B_UserScript)
 
 コネクションの切断や再接続時の邪魔なメッセージダイアログを非表示にします。
+
+### AMQ Readable Watching Status (v0.1.0)
+
+[📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-readable-watching-status.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-readable-watching-status.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E9%82%AA%E9%AD%94%E3%81%AA%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%82%92%E9%9D%9E%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%81%99%E3%82%8B_UserScript)
+
+解答欄の幅を狭め、視聴状況のインジケーターを読みやすくします。
