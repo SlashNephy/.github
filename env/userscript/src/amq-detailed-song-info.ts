@@ -1,45 +1,45 @@
 import { addScriptData, addStyle } from '../lib/thirdparty/amqScriptInfo'
 
-import type { AnswerResultsPayload } from '../types/amq'
+import type { AnswerResultsEvent } from '../types/amq'
 
 type CustomRow = {
   id: string
   title: string
-  content(payload: AnswerResultsPayload): string
+  content(payload: AnswerResultsEvent): string
 }
 
 const rows: CustomRow[] = [
   {
     id: 'difficulty-row',
     title: 'Difficulty',
-    content(payload: AnswerResultsPayload): string {
+    content(payload: AnswerResultsEvent): string {
       return `${payload.songInfo.animeDifficulty.toFixed(1)} / 100`
     },
   },
   {
     id: 'vintage-row',
     title: 'Vintage',
-    content(payload: AnswerResultsPayload): string {
+    content(payload: AnswerResultsEvent): string {
       return payload.songInfo.vintage
     },
   },
   {
     id: 'format-row',
     title: 'Format',
-    content(payload: AnswerResultsPayload): string {
+    content(payload: AnswerResultsEvent): string {
       return payload.songInfo.animeType
     },
   },
   {
     id: 'rating-row',
     title: 'Rating',
-    content(payload: AnswerResultsPayload): string {
+    content(payload: AnswerResultsEvent): string {
       return `${payload.songInfo.animeScore.toFixed(2)} / 10`
     },
   },
 ]
 
-const handle = (payload: AnswerResultsPayload) => {
+const handle = (payload: AnswerResultsEvent) => {
   const container = document.querySelector('#qpAnimeContainer div.qpSideContainer:not([id])')
   if (!container) {
     throw new Error('container is not found.')
@@ -90,7 +90,7 @@ const renderRow = (element: HTMLElement, title: string, content: string) => {
 }
 
 if (unsafeWindow.Listener !== undefined) {
-  const listener = new unsafeWindow.Listener<AnswerResultsPayload>('answer results', handle)
+  const listener = new unsafeWindow.Listener<AnswerResultsEvent>('answer results', handle)
   listener.bindListener()
 }
 
