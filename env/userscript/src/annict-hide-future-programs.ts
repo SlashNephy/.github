@@ -29,6 +29,6 @@ const main = () => {
 
 main()
 
-window.addEventListener('turbo:load', () => {
+document.addEventListener('turbo:load', () => {
   main()
 })

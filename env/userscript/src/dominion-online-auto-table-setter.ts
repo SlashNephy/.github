@@ -80,4 +80,4 @@ const observe = () => {
   })
 }
 
-window.addEventListener('load', observe)
+document.addEventListener('load', observe)

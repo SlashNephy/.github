@@ -62,6 +62,6 @@ const main = async () => {
 
 main().catch(console.error)
 
-window.addEventListener('turbo:load', () => {
+document.addEventListener('turbo:load', () => {
   main().catch(console.error)
 })
