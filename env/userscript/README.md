@@ -18,6 +18,7 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | Annict Hide Future Programs       | 0.1.4          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js       |
 | AMQ Private Session               | 0.2.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js               |
 | AMQ Detailed Song Info            | 0.1.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js            |
+| AMQ Hide Annoying Dialog          | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js          |
 
 ### Annict Work Links (v0.2.4)
 
@@ -78,3 +79,9 @@ Set invisible status automatically on login.
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-detailed-song-info.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E6%9B%B2%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%AB%E8%A9%B3%E7%B4%B0%E6%83%85%E5%A0%B1%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
 Display detailed information on the side panel of the song.
+
+### AMQ Hide Annoying Dialog (v0.1.0)
+
+[📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-hide-annoying-dialog.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E9%82%AA%E9%AD%94%E3%81%AA%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%82%92%E9%9D%9E%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%81%99%E3%82%8B_UserScript)
+
+Hide annoying message dialogs when disconnecting and reconnecting.
