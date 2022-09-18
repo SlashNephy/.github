@@ -4,7 +4,7 @@ import { amqAnswerTimesUtility } from '../lib/thirdparty/amqAnswerTimesUtility'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { ArmEntry } from '../lib/arm'
-import type { AnswerResultsPayload } from '../types/amq'
+import type { AnswerResultsEvent } from '../types/amq'
 
 const loadGasUrl = (): string => {
   const url = GM_getValue<string | null>('GAS_URL', null)
@@ -37,7 +37,7 @@ const executeGas = async (row: (string | number | boolean)[]) => {
   })
 }
 
-const handle = (payload: AnswerResultsPayload) => {
+const handle = (payload: AnswerResultsEvent) => {
   const { quiz, quizVideoController } = unsafeWindow
   if (quiz === undefined || quizVideoController === undefined) {
     return
@@ -173,7 +173,7 @@ const handle = (payload: AnswerResultsPayload) => {
 }
 
 if (unsafeWindow.Listener !== undefined) {
-  const listener = new unsafeWindow.Listener<AnswerResultsPayload>('answer results', handle)
+  const listener = new unsafeWindow.Listener<AnswerResultsEvent>('answer results', handle)
   listener.bindListener()
 }
 
