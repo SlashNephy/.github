@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Private Session
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.3
+// @version         0.2.4
 // @author          SlashNephy
 // @description     Set invisible status automatically on login.
 // @description:ja  ログイン時に Invisible ステータスを設定します。
@@ -12,7 +12,7 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
-// @grant           none
+// @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
 
@@ -112,15 +112,12 @@ var SocialStatus
   SocialStatus[(SocialStatus.Invisible = 4)] = 'Invisible'
 })(SocialStatus || (SocialStatus = {}))
 document.addEventListener('DOMNodeInserted', () => {
-  if (!('socialTab' in window)) {
-    return
-  }
-  switch (socialTab?.socialStatus?.currentStatus) {
+  switch (unsafeWindow.socialTab?.socialStatus?.currentStatus) {
     case SocialStatus.Invisible:
     case undefined:
       return
     default:
-      socialTab?.socialStatus?.changeSocialStatus(SocialStatus.Invisible)
+      unsafeWindow.socialTab?.socialStatus?.changeSocialStatus(SocialStatus.Invisible)
   }
 })
 addScriptData({

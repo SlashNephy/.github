@@ -12,7 +12,6 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
-// @run-at          document-idle
 // @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
@@ -108,7 +107,7 @@ const addStyle = (css) => {
   style.appendChild(document.createTextNode(css))
 }
 
-if ('displayMessage' in unsafeWindow) {
+if (unsafeWindow.displayMessage !== undefined) {
   unsafeWindow.originalDisplayMessage = unsafeWindow.displayMessage
   unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {
     if (title === 'Disconnected from server' || title === 'Successfully  Reconnected') {

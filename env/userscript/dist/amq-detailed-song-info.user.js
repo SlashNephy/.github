@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.1
+// @version         0.1.2
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -12,7 +12,7 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
-// @grant           none
+// @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
 
@@ -177,8 +177,8 @@ const renderRow = (element, title, content) => {
   p.classList.add('row-content')
   p.textContent = content
 }
-if ('Listener' in window) {
-  const listener = new Listener('answer results', handle)
+if (unsafeWindow.Listener !== undefined) {
+  const listener = new unsafeWindow.Listener('answer results', handle)
   listener.bindListener()
 }
 addScriptData({
