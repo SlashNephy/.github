@@ -3,12 +3,12 @@ import typescript from '@rollup/plugin-typescript'
 
 import type { RollupOptions } from 'rollup'
 
-export const buildOptions = (banner: Banner): RollupOptions => {
+export const buildOptions = (banner: Banner, isPrivate = false): RollupOptions => {
   return {
-    input: `src/${banner.id}.ts`,
+    input: isPrivate ? `src/private/${banner.id}.ts` : `src/${banner.id}.ts`,
     output: {
       banner: buildBanner(banner),
-      file: `dist/${banner.id}.user.js`,
+      file: isPrivate ? `dist/private/${banner.id}.user.js` : `dist/${banner.id}.user.js`,
     },
     plugins: [
       typescript(),

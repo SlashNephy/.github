@@ -9,6 +9,7 @@
   "scripts": {
     "build": "tsc",
     "bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript && yarn format",
+    "bundle:private": "rollup --config rollup.config.private.ts --configPlugin @rollup/plugin-typescript && yarn format",
     "ci": "concurrently -n ci: 'yarn:ci:*'",
     "ci:bundle": "yarn bundle",
     "ci:generate-readme": "ts-node --project tsconfig.bin.json bin/generate-readme.ts && yarn format:prettier",
