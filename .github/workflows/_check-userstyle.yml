@@ -1,20 +1,20 @@
-name: 'Check env/userscript'
+name: 'Check env/userstyle'
 
 on:
   push:
     branches:
       - 'master'
     paths:
-      - 'env/userscript/**'
-      - '.github/workflows/_check-userscript.yml'
+      - 'env/userstyle/**'
+      - '.github/workflows/_check-userstyle.yml'
 
   pull_request:
     types:
       - opened
       - synchronize
     paths:
-      - 'env/userscript/**'
-      - '.github/workflows/_check-userscript.yml'
+      - 'env/userstyle/**'
+      - '.github/workflows/_check-userstyle.yml'
 
   workflow_dispatch:
 
@@ -22,7 +22,7 @@ jobs:
   build:
     uses: ./.github/workflows/yarn-run.yml
     with:
-      working-directory: 'env/userscript'
+      working-directory: 'env/userstyle'
       script: 'build'
     permissions:
       contents: 'read'
@@ -30,7 +30,7 @@ jobs:
   lint:
     uses: ./.github/workflows/yarn-lint.yml
     with:
-      working-directory: 'env/userscript'
+      working-directory: 'env/userstyle'
     permissions:
       contents: 'read'
       pull-requests: 'write'
@@ -39,8 +39,8 @@ jobs:
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
-      working-directory: 'env/userscript'
+      working-directory: 'env/userstyle'
       script: 'ci'
-      commit-message: '⚙️ Build (env/userscript)'
+      commit-message: '⚙️ Build (env/userstyle)'
     permissions:
       contents: 'write'

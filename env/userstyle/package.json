@@ -1,0 +1,38 @@
+{
+  "name": "@slashnephy/userstyle",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SlashNephy/.github",
+    "directory": "env/userstyle"
+  },
+  "scripts": {
+    "build": "yarn build:sass && yarn build:postcss && yarn format",
+    "build:sass": "sass src:dist -c --no-source-map",
+    "build:postcss": "postcss dist/*.css -r --no-map -u autoprefixer",
+    "ci": "concurrently -n ci: 'yarn:ci:*'",
+    "ci:build": "yarn build",
+    "format": "concurrently -n format: 'yarn:format:*'",
+    "format:prettier": "yarn lint:prettier --write",
+    "format:stylelint": "yarn lint:stylelint --fix",
+    "lint": "concurrently -n lint: 'yarn:lint:*'",
+    "lint:prettier": "prettier --check .",
+    "lint:stylelint": "stylelint **/*.{css,scss}",
+    "watch:sass": "yarn build:sass -w",
+    "watch:postcss": "yarn build:postcss -w"
+  },
+  "devDependencies": {
+    "@slashnephy/prettier-config": "0.1.1",
+    "@slashnephy/stylelint-config": "0.1.1",
+    "autoprefixer": "10.4.11",
+    "concurrently": "7.4.0",
+    "eslint": "8.22.0",
+    "postcss": "8.4.16",
+    "postcss-cli": "10.0.0",
+    "postcss-scss": "4.0.5",
+    "prettier": "2.7.1",
+    "sass": "1.54.9",
+    "stylelint": "14.11.0"
+  },
+  "packageManager": "yarn@3.2.3"
+}
