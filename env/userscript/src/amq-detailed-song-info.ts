@@ -95,7 +95,7 @@ if ('Listener' in window) {
 }
 
 addScriptData({
-  name: 'AMQ Detailed Song Info',
+  name: 'Detailed Song Info',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description: 'Display detailed information on the side panel of the song.',
 })
