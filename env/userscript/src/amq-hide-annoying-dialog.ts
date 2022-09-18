@@ -3,8 +3,8 @@ import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 declare global {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Window {
-    originalDisplayMessage: Window['displayMessage']
-    displayMessage(
+    originalDisplayMessage: Exclude<Window['displayMessage'], undefined>
+    displayMessage?(
       title: string,
       message: string,
       callback?: () => void,
@@ -14,7 +14,7 @@ declare global {
   }
 }
 
-if ('displayMessage' in unsafeWindow) {
+if (unsafeWindow.displayMessage !== undefined) {
   unsafeWindow.originalDisplayMessage = unsafeWindow.displayMessage
 
   unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {

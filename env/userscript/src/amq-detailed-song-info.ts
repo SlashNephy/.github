@@ -89,8 +89,8 @@ const renderRow = (element: HTMLElement, title: string, content: string) => {
   p.textContent = content
 }
 
-if ('Listener' in window) {
-  const listener = new Listener<AnswerResultsPayload>('answer results', handle)
+if (unsafeWindow.Listener !== undefined) {
+  const listener = new unsafeWindow.Listener<AnswerResultsPayload>('answer results', handle)
   listener.bindListener()
 }
 
