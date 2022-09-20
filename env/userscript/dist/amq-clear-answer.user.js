@@ -17,10 +17,10 @@
 // ==/UserScript==
 
 const createInstalledWindow = () => {
-    if (!window.setupDocumentDone)
-        return
-    if ($('#installedModal').length === 0) {
-        $('#gameContainer').append($(`
+  if (!window.setupDocumentDone) return
+  if ($('#installedModal').length === 0) {
+    $('#gameContainer').append(
+      $(`
             <div class="modal fade" id="installedModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -40,18 +40,23 @@ const createInstalledWindow = () => {
                     </div>
                 </div>
             </div>
-        `))
-        $('#mainMenu')
-            .prepend($(`
+        `)
+    )
+    $('#mainMenu')
+      .prepend(
+        $(`
             <div class="button floatingContainer mainMenuButton" id="mpInstalled" data-toggle="modal" data-target="#installedModal">
                 <h1>Installed Userscripts</h1>
             </div>
-        `))
-            .css('margin-top', '20vh')
-        $('#optionsContainer > ul').prepend($(`
+        `)
+      )
+      .css('margin-top', '20vh')
+    $('#optionsContainer > ul').prepend(
+      $(`
             <li class="clickAble" data-toggle="modal" data-target="#installedModal">Installed Userscripts</li>
-        `))
-        addStyle(`
+        `)
+    )
+    addStyle(`
             .descriptionContainer {
                 width: 95%;
                 margin: auto;
@@ -61,52 +66,61 @@ const createInstalledWindow = () => {
                 margin: 10px 10%;
             }
         `)
-    }
+  }
 }
 const addScriptData = (metadata) => {
-    createInstalledWindow()
-    $('#installedListContainer').append($('<div></div>')
-        .append($('<h4></h4>')
-        .html(`<i class="fa fa-caret-right"></i> ${metadata.name !== undefined ? metadata.name : 'Unknown'} by ${metadata.author !== undefined ? metadata.author : 'Unknown'}`)
-        .css('font-weight', 'bold')
-        .css('cursor', 'pointer')
-        .click(function () {
-        const selector = $(this).next()
-        if (selector.is(':visible')) {
-            selector.slideUp()
-            $(this).find('.fa-caret-down').addClass('fa-caret-right').removeClass('fa-caret-down')
-        }
-        else {
-            selector.slideDown()
-            $(this).find('.fa-caret-right').addClass('fa-caret-down').removeClass('fa-caret-right')
-        }
-    }))
-        .append($('<div></div>')
-        .addClass('descriptionContainer')
-        .html(metadata.description !== undefined ? metadata.description : 'No description provided')
-        .hide()))
+  createInstalledWindow()
+  $('#installedListContainer').append(
+    $('<div></div>')
+      .append(
+        $('<h4></h4>')
+          .html(
+            `<i class="fa fa-caret-right"></i> ${metadata.name !== undefined ? metadata.name : 'Unknown'} by ${
+              metadata.author !== undefined ? metadata.author : 'Unknown'
+            }`
+          )
+          .css('font-weight', 'bold')
+          .css('cursor', 'pointer')
+          .click(function () {
+            const selector = $(this).next()
+            if (selector.is(':visible')) {
+              selector.slideUp()
+              $(this).find('.fa-caret-down').addClass('fa-caret-right').removeClass('fa-caret-down')
+            } else {
+              selector.slideDown()
+              $(this).find('.fa-caret-right').addClass('fa-caret-down').removeClass('fa-caret-right')
+            }
+          })
+      )
+      .append(
+        $('<div></div>')
+          .addClass('descriptionContainer')
+          .html(metadata.description !== undefined ? metadata.description : 'No description provided')
+          .hide()
+      )
+  )
 }
 const addStyle = (css) => {
-    const head = document.head
-    const style = document.createElement('style')
-    head.appendChild(style)
-    style.appendChild(document.createTextNode(css))
+  const head = document.head
+  const style = document.createElement('style')
+  head.appendChild(style)
+  style.appendChild(document.createTextNode(css))
 }
 
 const handleKeydown = (event) => {
-    const target = event.target
-    if (target === null) {
-        return
-    }
-    if (event.key === 'Delete') {
-        target.value = ''
-    }
+  const target = event.target
+  if (target === null) {
+    return
+  }
+  if (event.key === 'Delete') {
+    target.value = ''
+  }
 }
 for (const input of document.querySelectorAll('input.flatTextInput')) {
-    input.addEventListener('keydown', handleKeydown)
+  input.addEventListener('keydown', handleKeydown)
 }
 addScriptData({
-    name: 'Clear Answer',
-    author: 'SlashNephy &lt;spica@starry.blue&gt;',
-    description: 'Add a feature to clear text in the answer column with delete key.',
+  name: 'Clear Answer',
+  author: 'SlashNephy &lt;spica@starry.blue&gt;',
+  description: 'Add a feature to clear text in the answer column with delete key.',
 })
