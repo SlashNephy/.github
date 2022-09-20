@@ -136,6 +136,7 @@ const renderRow = (element: HTMLElement, title: string, content: string) => {
 }
 
 const createLinkContainer = (container: Element, id: string) => {
+  // 既にあれば一旦破棄する
   const existing = document.getElementById(id)
   if (existing !== null) {
     existing.remove()
