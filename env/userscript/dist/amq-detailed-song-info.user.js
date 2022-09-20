@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.3
+// @version         0.2.0
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -137,13 +137,33 @@ const rows = [
     },
   },
 ]
+const links = [
+  {
+    id: 'spotify-link',
+    title: 'Spotify',
+    href(payload) {
+      return `https://open.spotify.com/search/${encodeURIComponent(payload.songInfo.songName)}%20${encodeURIComponent(
+        payload.songInfo.artist
+      )}/tracks`
+    },
+  },
+  {
+    id: 'youtube-link',
+    title: 'YouTube',
+    href(payload) {
+      return `https://www.youtube.com/results?search_query=${encodeURIComponent(
+        payload.songInfo.songName
+      )}+${encodeURIComponent(payload.songInfo.artist)}`
+    },
+  },
+]
 const handle = (payload) => {
   const container = document.querySelector('#qpAnimeContainer div.qpSideContainer:not([id])')
   if (!container) {
     throw new Error('container is not found.')
   }
   for (const row of rows) {
-    const element = document.getElementById(row.id) ?? createDivElementWithId(container, row.id)
+    const element = getOrCreateRow(container, row.id)
     const contentElement = element.querySelector('.row-content')
     if (contentElement !== null) {
       contentElement.textContent = row.content(payload)
@@ -151,8 +171,22 @@ const handle = (payload) => {
       renderRow(element, row.title, row.content(payload))
     }
   }
+  const linkContainer = createLinkContainer(container, 'link-container')
+  renderLinks(
+    linkContainer,
+    links.map((link) => {
+      return {
+        title: link.title,
+        href: link.href(payload),
+      }
+    })
+  )
 }
-const createDivElementWithId = (container, id) => {
+const getOrCreateRow = (container, id) => {
+  const existing = document.getElementById(id)
+  if (existing !== null) {
+    return existing
+  }
   const element = document.createElement('div')
   element.id = id
   const hider = container.querySelector('div#qpInfoHider')
@@ -169,13 +203,45 @@ const renderRow = (element, title, content) => {
   const h5 = document.createElement('h5')
   const b = document.createElement('b')
   const p = document.createElement('p')
-  h5.appendChild(b)
-  element.appendChild(h5)
-  element.appendChild(p)
+  h5.append(b)
+  element.append(h5)
+  element.append(p)
   element.classList.add('row')
   b.textContent = title
   p.classList.add('row-content')
   p.textContent = content
+}
+const createLinkContainer = (container, id) => {
+  const existing = document.getElementById(id)
+  if (existing !== null) {
+    existing.remove()
+  }
+  const element = document.createElement('div')
+  element.id = id
+  const hider = container.querySelector('div#qpInfoHider')
+  if (hider === null) {
+    throw new Error('div#qpInfoHider is not found.')
+  }
+  if (!hider.classList.contains('custom-hider')) {
+    hider.classList.add('custom-hider')
+  }
+  container.insertBefore(element, hider)
+  return element
+}
+const renderLinks = (element, links) => {
+  const b = document.createElement('b')
+  element.appendChild(b)
+  for (let i = 0; i < links.length; i++) {
+    const { title, href } = links[i]
+    const a = document.createElement('a')
+    a.target = '_blank'
+    a.href = href
+    a.textContent = title
+    b.append(a)
+    if (i !== links.length - 1) {
+      b.append(' - ')
+    }
+  }
 }
 if (unsafeWindow.Listener !== undefined) {
   const listener = new unsafeWindow.Listener('answer results', handle)
