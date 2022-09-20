@@ -191,3 +191,10 @@ addStyle(`
   padding: 50% 0;
 }
 `)
+ailed information on the side panel of the song.',
+})
+addStyle(`
+.custom-hider {
+  padding: 50% 0;
+}
+`)
