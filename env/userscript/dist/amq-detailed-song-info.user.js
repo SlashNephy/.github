@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.2
+// @version         0.1.3
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -185,13 +185,6 @@ addScriptData({
   name: 'Detailed Song Info',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
   description: 'Display detailed information on the side panel of the song.',
-})
-addStyle(`
-.custom-hider {
-  padding: 50% 0;
-}
-`)
-ailed information on the side panel of the song.',
 })
 addStyle(`
 .custom-hider {
