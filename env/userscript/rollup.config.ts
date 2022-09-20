@@ -175,6 +175,19 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
   },
+  {
+    id: 'amq-clear-answer',
+    name: 'AMQ Clear Answer',
+    version: '1.0.0',
+    description: {
+      en: 'Add a feature to clear text in the answer column with Delete key.',
+      ja: 'Delete キーを押下することで解答欄のテキストをクリアする機能を追加します。',
+    },
+    homepage: '',
+    author: 'SlashNephy',
+    match: ['https://animemusicquiz.com/*'],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
