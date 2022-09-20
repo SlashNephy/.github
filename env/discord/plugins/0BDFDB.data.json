@@ -146,6 +146,7 @@
 		"TimestampUtils": {"props": ["fromTimestamp", "extractTimestamp"]},
 		"TimeUtils": {"props": ["calendarFormat", "dateFormat"]},
 		"ThemeSettingsStore": {"props": ["theme"]},
+		"ThreadConfigStore": {"props": ["hasJoined", "isMuted"]},
 		"ThreadStore": {"props": ["isActive", "getThreadsForGuild"]},
 		"UnreadGuildUtils": {"props": ["hasUnread", "getTotalMentionCount"]},
 		"UnreadChannelUtils": {"props": ["getUnreadCount", "getOldestUnreadMessageId"]},
@@ -1125,6 +1126,7 @@
 		},
 		"StaffTag": {
 			"adminIcon": "admin-Kv1Hp_",
+			"forumCreatorIcon": "forumCreator-5sOT2A",
 			"groupOwnerIcon": "groupOwner-g6FlmA",
 			"managementIcon": "management-3fF_o8",
 			"ownerIcon": "owner-FfFh3B",
@@ -1626,6 +1628,7 @@
 		"_spotifycontrolstimeline": ["SpotifyControls", "timeline"],
 		"_spotifycontrolsvolumeslider": ["SpotifyControls", "volumeSlider"],
 		"_stafftagadminicon": ["StaffTag", "adminIcon"],
+		"_stafftagforumcreatoricon": ["StaffTag", "forumCreatorIcon"],
 		"_stafftaggroupownericon": ["StaffTag", "groupOwnerIcon"],
 		"_stafftagmanagementicon": ["StaffTag", "managementIcon"],
 		"_stafftagownericon": ["StaffTag", "ownerIcon"],
@@ -5403,6 +5406,7 @@
 		}
 	},
 	"BDFDB_Patrons": {
+		"446383444763869184": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "ari (ArCl)"},
 		"226444377482985473": 	{"active": true,	"tier": "t3",	"text": "xoxo",										"color": "",			"id": "seivag (zij)"},
 		"276137824460210178": 	{"active": true,	"tier": "t3",	"text": "FFXIV DRK Main for life!",					"color": "#1f0046",		"id": "werewolf (MaMa)"},
 		"507464069100601363": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "Cracky (MiPo)"},
