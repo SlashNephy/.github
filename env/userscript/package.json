@@ -13,7 +13,7 @@
     "ci": "concurrently -n ci: 'yarn:ci:*'",
     "ci:bundle": "yarn bundle",
     "ci:generate-readme": "ts-node --project tsconfig.bin.json bin/generate-readme.ts && yarn format:prettier",
-    "format": "concurrently -n format: 'yarn:format:*'",
+    "format": "concurrently -n format: -m 1 'yarn:format:*'",
     "format:eslint": "yarn lint:eslint --fix",
     "format:prettier": "yarn lint:prettier --write",
     "lint": "concurrently -n lint: 'yarn:lint:*'",
