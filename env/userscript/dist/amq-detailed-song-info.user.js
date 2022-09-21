@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.1
+// @version         0.3.0
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -111,29 +111,29 @@ const rows = [
   {
     id: 'difficulty-row',
     title: 'Difficulty',
-    content(payload) {
-      return `${payload.songInfo.animeDifficulty.toFixed(1)} / 100`
+    content(event) {
+      return `${event.songInfo.animeDifficulty.toFixed(1)} / 100`
     },
   },
   {
     id: 'vintage-row',
     title: 'Vintage',
-    content(payload) {
-      return payload.songInfo.vintage
+    content(event) {
+      return event.songInfo.vintage
     },
   },
   {
     id: 'format-row',
     title: 'Format',
-    content(payload) {
-      return payload.songInfo.animeType
+    content(event) {
+      return event.songInfo.animeType
     },
   },
   {
     id: 'rating-row',
     title: 'Rating',
-    content(payload) {
-      return `${payload.songInfo.animeScore.toFixed(2)} / 10`
+    content(event) {
+      return `${event.songInfo.animeScore.toFixed(2)} / 10`
     },
   },
 ]
@@ -141,23 +141,25 @@ const links = [
   {
     id: 'spotify-link',
     title: 'Spotify',
-    href(payload) {
-      return `spotify://search/${encodeURIComponent(payload.songInfo.songName)}%20${encodeURIComponent(
-        payload.songInfo.artist
+    target: '_blank',
+    href(event) {
+      return `spotify://search/${encodeURIComponent(event.songInfo.songName)}%20${encodeURIComponent(
+        event.songInfo.artist
       )}/tracks`
     },
   },
   {
     id: 'youtube-link',
     title: 'YouTube',
-    href(payload) {
+    target: '_blank',
+    href(event) {
       return `https://www.youtube.com/results?search_query=${encodeURIComponent(
-        payload.songInfo.songName
-      )}+${encodeURIComponent(payload.songInfo.artist)}`
+        event.songInfo.songName
+      )}+${encodeURIComponent(event.songInfo.artist)}`
     },
   },
 ]
-const handle = (payload) => {
+const handle = (event) => {
   const container = document.querySelector('#qpAnimeContainer div.qpSideContainer:not([id])')
   if (!container) {
     throw new Error('container is not found.')
@@ -166,20 +168,33 @@ const handle = (payload) => {
     const element = getOrCreateRow(container, row.id)
     const contentElement = element.querySelector('.row-content')
     if (contentElement !== null) {
-      contentElement.textContent = row.content(payload)
+      contentElement.textContent = row.content(event)
     } else {
-      renderRow(element, row.title, row.content(payload))
+      const content = row.content(event)
+      if (content === null) {
+        continue
+      }
+      renderRow(element, {
+        ...row,
+        content,
+      })
     }
   }
-  const linkContainer = createLinkContainer(container, 'link-container')
+  const element = getOrCreateLinkContainer(container, 'link-container')
   renderLinks(
-    linkContainer,
-    links.map((link) => {
-      return {
-        title: link.title,
-        href: link.href(payload),
-      }
-    })
+    element,
+    links
+      .map((link) => {
+        const href = link.href(event)
+        if (href === null) {
+          return null
+        }
+        return {
+          ...link,
+          href,
+        }
+      })
+      .filter((x) => x !== null)
   )
 }
 const getOrCreateRow = (container, id) => {
@@ -199,7 +214,7 @@ const getOrCreateRow = (container, id) => {
   container.insertBefore(element, hider.previousElementSibling)
   return element
 }
-const renderRow = (element, title, content) => {
+const renderRow = (element, row) => {
   const h5 = document.createElement('h5')
   const b = document.createElement('b')
   const p = document.createElement('p')
@@ -207,14 +222,17 @@ const renderRow = (element, title, content) => {
   element.append(h5)
   element.append(p)
   element.classList.add('row')
-  b.textContent = title
   p.classList.add('row-content')
-  p.textContent = content
+  b.textContent = row.title
+  p.textContent = row.content
 }
-const createLinkContainer = (container, id) => {
+const getOrCreateLinkContainer = (container, id) => {
   const existing = document.getElementById(id)
   if (existing !== null) {
-    existing.remove()
+    while (existing.lastElementChild !== null) {
+      existing.removeChild(existing.lastElementChild)
+    }
+    return existing
   }
   const element = document.createElement('div')
   element.id = id
@@ -230,17 +248,43 @@ const createLinkContainer = (container, id) => {
 }
 const renderLinks = (element, links) => {
   const b = document.createElement('b')
-  element.appendChild(b)
-  for (let i = 0; i < links.length; i++) {
-    const { title, href } = links[i]
+  element.append(b)
+  const lastIndex = links.length - 1
+  for (const [index, link] of links.entries()) {
     const a = document.createElement('a')
-    a.target = '_blank'
-    a.href = href
-    a.textContent = title
     b.append(a)
-    if (i !== links.length - 1) {
+    a.href = link.href
+    a.textContent = link.title
+    if (link.target !== undefined) {
+      a.target = link.target
+    }
+    if (index !== lastIndex) {
       b.append(' - ')
     }
+  }
+}
+if (unsafeWindow.detailedSongInfo === undefined) {
+  unsafeWindow.detailedSongInfo = {
+    register(item) {
+      const container = 'content' in item ? rows : links
+      if (container.some((x) => x.id === item.id)) {
+        return
+      }
+      container.push(item)
+    },
+    unregister(item) {
+      const container = 'content' in item ? rows : links
+      const index = container.findIndex((x) => x.id === item.id)
+      if (index >= 0) {
+        container.splice(index, 1)
+      }
+    },
+    get rows() {
+      return rows
+    },
+    get links() {
+      return links
+    },
   }
 }
 if (unsafeWindow.Listener !== undefined) {
