@@ -1,14 +1,10 @@
 import { addScriptData, addStyle } from '../lib/thirdparty/amqScriptInfo'
 
 import type { AnswerResultsEvent } from '../types/amq'
+import type { CustomLink, CustomRow } from '../types/amq-detailed-song-info'
 
-type CustomRow = {
-  id: string
-  title: string
-  content(payload: AnswerResultsEvent): string
-}
-
-type EvaluatedCustomRow = Omit<CustomRow, 'id' | 'content'> & { content: string }
+type EvaluatedCustomRow = Omit<CustomRow, 'id' | 'content'> & { readonly content: string }
+type EvaluatedCustomLink = Omit<CustomLink, 'id' | 'href'> & { readonly href: string }
 
 const rows: CustomRow[] = [
   {
@@ -41,19 +37,11 @@ const rows: CustomRow[] = [
   },
 ]
 
-type CustomLink = {
-  id: string
-  title: string
-  target?: string
-  href(payload: AnswerResultsEvent): string
-}
-
-type EvaluatedCustomLink = Omit<CustomLink, 'id' | 'href'> & { href: string }
-
 const links: CustomLink[] = [
   {
     id: 'spotify-link',
     title: 'Spotify',
+    target: '_blank',
     href(payload: AnswerResultsEvent): string {
       return `spotify://search/${encodeURIComponent(payload.songInfo.songName)}%20${encodeURIComponent(
         payload.songInfo.artist
@@ -63,6 +51,7 @@ const links: CustomLink[] = [
   {
     id: 'youtube-link',
     title: 'YouTube',
+    target: '_blank',
     href(payload: AnswerResultsEvent): string {
       return `https://www.youtube.com/results?search_query=${encodeURIComponent(
         payload.songInfo.songName
@@ -189,6 +178,32 @@ const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
     if (index !== lastIndex) {
       b.append(' - ')
     }
+  }
+}
+
+if (unsafeWindow.detailedSongInfo === undefined) {
+  unsafeWindow.detailedSongInfo = {
+    register(item: CustomRow | CustomLink) {
+      const container = 'content' in item ? rows : links
+      if (container.some((x) => x.id === item.id)) {
+        return
+      }
+
+      container.push(item as unknown as CustomRow & CustomLink)
+    },
+    unregister(item: CustomRow | CustomLink) {
+      const container = 'content' in item ? rows : links
+      const index = container.findIndex((x) => x.id === item.id)
+      if (index >= 0) {
+        container.splice(index, 1)
+      }
+    },
+    get rows(): CustomRow[] {
+      return rows
+    },
+    get links(): CustomLink[] {
+      return links
+    },
   }
 }
 
