@@ -10,29 +10,29 @@ const rows: CustomRow[] = [
   {
     id: 'difficulty-row',
     title: 'Difficulty',
-    content(payload: AnswerResultsEvent): string {
-      return `${payload.songInfo.animeDifficulty.toFixed(1)} / 100`
+    content(event: AnswerResultsEvent): string {
+      return `${event.songInfo.animeDifficulty.toFixed(1)} / 100`
     },
   },
   {
     id: 'vintage-row',
     title: 'Vintage',
-    content(payload: AnswerResultsEvent): string {
-      return payload.songInfo.vintage
+    content(event: AnswerResultsEvent): string {
+      return event.songInfo.vintage
     },
   },
   {
     id: 'format-row',
     title: 'Format',
-    content(payload: AnswerResultsEvent): string {
-      return payload.songInfo.animeType
+    content(event: AnswerResultsEvent): string {
+      return event.songInfo.animeType
     },
   },
   {
     id: 'rating-row',
     title: 'Rating',
-    content(payload: AnswerResultsEvent): string {
-      return `${payload.songInfo.animeScore.toFixed(2)} / 10`
+    content(event: AnswerResultsEvent): string {
+      return `${event.songInfo.animeScore.toFixed(2)} / 10`
     },
   },
 ]
@@ -42,9 +42,9 @@ const links: CustomLink[] = [
     id: 'spotify-link',
     title: 'Spotify',
     target: '_blank',
-    href(payload: AnswerResultsEvent): string {
-      return `spotify://search/${encodeURIComponent(payload.songInfo.songName)}%20${encodeURIComponent(
-        payload.songInfo.artist
+    href(event: AnswerResultsEvent): string {
+      return `spotify://search/${encodeURIComponent(event.songInfo.songName)}%20${encodeURIComponent(
+        event.songInfo.artist
       )}/tracks`
     },
   },
@@ -52,10 +52,10 @@ const links: CustomLink[] = [
     id: 'youtube-link',
     title: 'YouTube',
     target: '_blank',
-    href(payload: AnswerResultsEvent): string {
+    href(event: AnswerResultsEvent): string {
       return `https://www.youtube.com/results?search_query=${encodeURIComponent(
-        payload.songInfo.songName
-      )}+${encodeURIComponent(payload.songInfo.artist)}`
+        event.songInfo.songName
+      )}+${encodeURIComponent(event.songInfo.artist)}`
     },
   },
 ]
@@ -75,9 +75,14 @@ const handle = (event: AnswerResultsEvent) => {
     if (contentElement !== null) {
       contentElement.textContent = row.content(event)
     } else {
+      const content = row.content(event)
+      if (content === null) {
+        continue
+      }
+
       renderRow(element, {
         ...row,
-        content: row.content(event),
+        content,
       })
     }
   }
@@ -86,12 +91,19 @@ const handle = (event: AnswerResultsEvent) => {
   const element = getOrCreateLinkContainer(container, 'link-container')
   renderLinks(
     element,
-    links.map((link) => {
-      return {
-        ...link,
-        href: link.href(event),
-      }
-    })
+    links
+      .map((link) => {
+        const href = link.href(event)
+        if (href === null) {
+          return null
+        }
+
+        return {
+          ...link,
+          href,
+        }
+      })
+      .filter((x): x is Exclude<typeof x, null> => x !== null)
   )
 }
 
