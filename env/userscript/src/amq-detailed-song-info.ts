@@ -50,7 +50,7 @@ const links: CustomLink[] = [
     id: 'spotify-link',
     title: 'Spotify',
     href(payload: AnswerResultsEvent): string {
-      return `https://open.spotify.com/search/${encodeURIComponent(payload.songInfo.songName)}%20${encodeURIComponent(
+      return `spotify://search/${encodeURIComponent(payload.songInfo.songName)}%20${encodeURIComponent(
         payload.songInfo.artist
       )}/tracks`
     },
