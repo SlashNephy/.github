@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -142,7 +142,7 @@ const links = [
     id: 'spotify-link',
     title: 'Spotify',
     href(payload) {
-      return `https://open.spotify.com/search/${encodeURIComponent(payload.songInfo.songName)}%20${encodeURIComponent(
+      return `spotify://search/${encodeURIComponent(payload.songInfo.songName)}%20${encodeURIComponent(
         payload.songInfo.artist
       )}/tracks`
     },
