@@ -8,6 +8,8 @@ type CustomRow = {
   content(payload: AnswerResultsEvent): string
 }
 
+type EvaluatedCustomRow = Omit<CustomRow, 'id' | 'content'> & { content: string }
+
 const rows: CustomRow[] = [
   {
     id: 'difficulty-row',
@@ -42,8 +44,11 @@ const rows: CustomRow[] = [
 type CustomLink = {
   id: string
   title: string
+  target?: string
   href(payload: AnswerResultsEvent): string
 }
+
+type EvaluatedCustomLink = Omit<CustomLink, 'id' | 'href'> & { href: string }
 
 const links: CustomLink[] = [
   {
@@ -66,7 +71,7 @@ const links: CustomLink[] = [
   },
 ]
 
-const handle = (payload: AnswerResultsEvent) => {
+const handle = (event: AnswerResultsEvent) => {
   const container = document.querySelector('#qpAnimeContainer div.qpSideContainer:not([id])')
   if (!container) {
     throw new Error('container is not found.')
@@ -79,20 +84,23 @@ const handle = (payload: AnswerResultsEvent) => {
     // 既に row が挿入されていれば、textContent の更新だけ行う
     const contentElement = element.querySelector('.row-content')
     if (contentElement !== null) {
-      contentElement.textContent = row.content(payload)
+      contentElement.textContent = row.content(event)
     } else {
-      renderRow(element, row.title, row.content(payload))
+      renderRow(element, {
+        ...row,
+        content: row.content(event),
+      })
     }
   }
 
   // CustomLink
-  const linkContainer = createLinkContainer(container, 'link-container')
+  const element = getOrCreateLinkContainer(container, 'link-container')
   renderLinks(
-    linkContainer,
+    element,
     links.map((link) => {
       return {
-        title: link.title,
-        href: link.href(payload),
+        ...link,
+        href: link.href(event),
       }
     })
   )
@@ -121,7 +129,7 @@ const getOrCreateRow = (container: Element, id: string) => {
   return element
 }
 
-const renderRow = (element: HTMLElement, title: string, content: string) => {
+const renderRow = (element: HTMLElement, row: EvaluatedCustomRow) => {
   const h5 = document.createElement('h5')
   const b = document.createElement('b')
   const p = document.createElement('p')
@@ -130,16 +138,19 @@ const renderRow = (element: HTMLElement, title: string, content: string) => {
   element.append(p)
 
   element.classList.add('row')
-  b.textContent = title
   p.classList.add('row-content')
-  p.textContent = content
+  b.textContent = row.title
+  p.textContent = row.content
 }
 
-const createLinkContainer = (container: Element, id: string) => {
-  // 既にあれば一旦破棄する
+const getOrCreateLinkContainer = (container: Element, id: string) => {
   const existing = document.getElementById(id)
   if (existing !== null) {
-    existing.remove()
+    while (existing.lastElementChild !== null) {
+      existing.removeChild(existing.lastElementChild)
+    }
+
+    return existing
   }
 
   const element = document.createElement('div')
@@ -159,27 +170,30 @@ const createLinkContainer = (container: Element, id: string) => {
   return element
 }
 
-const renderLinks = (element: HTMLElement, links: { title: string; href: string }[]) => {
+const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
   const b = document.createElement('b')
-  element.appendChild(b)
+  element.append(b)
 
-  for (let i = 0; i < links.length; i++) {
-    const { title, href } = links[i]
+  const lastIndex = links.length - 1
+  for (const [index, link] of links.entries()) {
     const a = document.createElement('a')
-    a.target = '_blank'
-    a.href = href
-    a.textContent = title
     b.append(a)
 
+    a.href = link.href
+    a.textContent = link.title
+    if (link.target !== undefined) {
+      a.target = link.target
+    }
+
     // 最後じゃなければハイフンを挿入
-    if (i !== links.length - 1) {
+    if (index !== lastIndex) {
       b.append(' - ')
     }
   }
 }
 
 if (unsafeWindow.Listener !== undefined) {
-  const listener = new unsafeWindow.Listener<AnswerResultsEvent>('answer results', handle)
+  const listener = new unsafeWindow.Listener('answer results', handle)
   listener.bindListener()
 }
 

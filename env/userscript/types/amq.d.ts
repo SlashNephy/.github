@@ -31,8 +31,20 @@ declare global {
           _host: boolean
           _inGame: boolean
           _name: string
+          answer: string
+          unknownAnswerNumber: number
+          toggleTeamAnswerSharing(flag: boolean): void
         }
       >
+      isSpectator: boolean
+      answerInput: {
+        showSubmitedAnswer(): void
+        resetAnswerState(): void
+      }
+      videoTimerBar: {
+        updateState(state: unknown): void
+      }
+      _playerAnswerListner: Listener
     }
     quizVideoController?: {
       currentMoePlayerId: string
@@ -54,15 +66,15 @@ declare global {
         changeSocialStatus(status: number): void
       }
     }
-    Listener?: new <T>(command: string, callback: (payload: T) => void) => Listener<T>
+    Listener?: new <E = unknown>(command: string, callback: (event: E) => void) => Listener
+    selfName?: string
   }
+}
 
-  declare class Listener<T> {
-    public constructor(command: string, callback: (payload: T) => void)
-    public fire(payload: T): void
-    public bindListener(): void
-    public unbindListener(): void
-  }
+type Listener = {
+  fire(event: E): void
+  bindListener(): void
+  unbindListener(): void
 }
 
 export type AnswerResultsEvent = {
@@ -120,4 +132,13 @@ export type JoinGameEvent = {
   quizState: {
     songTimer: number
   }
+}
+
+export type PlayerAnswersEvent = {
+  answers: {
+    gamePlayerId: number
+    answer: string
+    answerNumber: number
+  }[]
+  progressBarState: unknown
 }
