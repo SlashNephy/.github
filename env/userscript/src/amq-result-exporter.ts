@@ -1,6 +1,6 @@
 import { executeXhr } from '../lib/api'
 import { fetchArmEntries } from '../lib/arm'
-import { amqAnswerTimesUtility } from '../lib/thirdparty/amqAnswerTimesUtility'
+import { amqAnswerTimes } from '../lib/thirdparty/amqAnswerTimes'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { ArmEntry } from '../lib/arm'
@@ -119,7 +119,7 @@ const handle = (payload: AnswerResultsEvent) => {
           correctGuesses: quiz.gameMode !== 'Standard' && quiz.gameMode !== 'Ranked' ? p.correctGuesses : p.score,
           correct: p.correct,
           answer: quiz.players[p.gamePlayerId].avatarSlot.$answerContainerText.text(),
-          guessTime: amqAnswerTimesUtility.playerTimes[p.gamePlayerId],
+          guessTime: amqAnswerTimes.query(p.gamePlayerId),
           active: !quiz.players[p.gamePlayerId].avatarSlot._disabled,
           position: p.position,
           positionSlot: p.positionSlot,
