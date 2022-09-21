@@ -45,30 +45,35 @@ const fetchArmEntries = async () => {
 
 class AmqAnswerTimesUtility {
   songStartTime = 0
-  playerTimes = []
+  times = []
   constructor() {
-    if (typeof Listener === 'undefined') {
-      return
+    if (unsafeWindow.Listener === undefined) {
+      throw new Error('Listener is not defined.')
     }
-    new Listener('play next song', () => {
-      this.songStartTime = Date.now()
-      this.playerTimes = []
-    }).bindListener()
-    new Listener('player answered', (data) => {
-      const time = Date.now() - this.songStartTime
-      data.forEach((gamePlayerId) => {
-        this.playerTimes[gamePlayerId] = time
-      })
-    }).bindListener()
-    new Listener('Join Game', (data) => {
-      const quizState = data.quizState
-      if (quizState.songTimer > 0) {
-        this.songStartTime = Date.now() - quizState.songTimer * 1000
-      }
-    }).bindListener()
+    new unsafeWindow.Listener('play next song', this._onPlayNextSong).bindListener()
+    new unsafeWindow.Listener('player answered', this._onPlayerAnswered).bindListener()
+    new unsafeWindow.Listener('Join Game', this._onJoinGame).bindListener()
+  }
+  query(playerId) {
+    return playerId in this.times ? this.times[playerId] : null
+  }
+  _onPlayNextSong() {
+    this.songStartTime = Date.now()
+    this.times.splice(0)
+  }
+  _onPlayerAnswered(playerIds) {
+    const time = Date.now() - this.songStartTime
+    for (const id of playerIds) {
+      this.times[id] = time
+    }
+  }
+  _onJoinGame({ quizState }) {
+    if (quizState.songTimer > 0) {
+      this.songStartTime = Date.now() - quizState.songTimer * 1000
+    }
   }
 }
-const amqAnswerTimesUtility = new AmqAnswerTimesUtility()
+const amqAnswerTimes = new AmqAnswerTimesUtility()
 
 const createInstalledWindow = () => {
   if (!window.setupDocumentDone) return
@@ -265,7 +270,7 @@ const handle = (payload) => {
           correctGuesses: quiz.gameMode !== 'Standard' && quiz.gameMode !== 'Ranked' ? p.correctGuesses : p.score,
           correct: p.correct,
           answer: quiz.players[p.gamePlayerId].avatarSlot.$answerContainerText.text(),
-          guessTime: amqAnswerTimesUtility.playerTimes[p.gamePlayerId],
+          guessTime: amqAnswerTimes.query(p.gamePlayerId),
           active: !quiz.players[p.gamePlayerId].avatarSlot._disabled,
           position: p.position,
           positionSlot: p.positionSlot,
