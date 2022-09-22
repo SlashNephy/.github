@@ -3,7 +3,7 @@ import { addScriptData, addStyle } from '../lib/thirdparty/amqScriptInfo'
 import type { AnswerResultsEvent } from '../types/amq'
 import type { CustomLink, CustomRow } from '../types/amq-detailed-song-info'
 
-type EvaluatedCustomRow = Omit<CustomRow, 'id' | 'content'> & { readonly content: string }
+type EvaluatedCustomRow = Omit<CustomRow, 'id' | 'content'> & { readonly content: string | null }
 type EvaluatedCustomLink = Omit<CustomLink, 'id' | 'href'> & { readonly href: string }
 
 const rows: CustomRow[] = [
@@ -73,17 +73,22 @@ const handle = (event: AnswerResultsEvent) => {
     // 既に row が挿入されていれば、textContent の更新だけ行う
     const contentElement = element.querySelector('.row-content')
     if (contentElement !== null) {
-      contentElement.textContent = row.content(event)
+      const content = row.content(event)
+      Promise.resolve(content)
+        .then((c) => {
+          contentElement.textContent = c
+        })
+        .catch(console.error)
     } else {
       const content = row.content(event)
-      if (content === null) {
-        continue
-      }
-
-      renderRow(element, {
-        ...row,
-        content,
-      })
+      Promise.resolve(content)
+        .then((c) => {
+          renderRow(element, {
+            ...row,
+            content: c,
+          })
+        })
+        .catch(console.error)
     }
   }
 
