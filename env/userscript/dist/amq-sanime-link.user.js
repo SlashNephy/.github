@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name            AMQ sanime Link
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Display links to sanime and "i(lyl)2m" in the player list.
 // @description:ja  プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。
-// @homepage
-// @homepageURL
+// @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%A7_sanime_%E3%82%84_i(lyl)2m_%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
+// @homepageURL     https://scrapbox.io/slashnephy/AMQ_%E3%81%A7_sanime_%E3%82%84_i(lyl)2m_%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
 // @icon            https://animemusicquiz.com/favicon-32x32.png
 // @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js
@@ -175,12 +175,9 @@ const links = [
     },
   },
 ]
-const handle = () => {
-  if (unsafeWindow.quiz === undefined) {
-    return
-  }
+const handle = (playerNames) => {
   const container = getOrCreateLinkContainer('anime-list-links')
-  fetchPlayerAnimeLists(unsafeWindow.quiz.players)
+  fetchPlayerAnimeLists(playerNames)
     .then((animeLists) => {
       renderLinks(
         container,
@@ -194,16 +191,26 @@ const handle = () => {
     })
     .catch(console.error)
 }
+const handleGameStarting = (event) => {
+  const playerNames = event.players.map((p) => p.name)
+  handle(playerNames)
+}
+const handleAnswerResults = () => {
+  if (unsafeWindow.quiz === undefined) {
+    return
+  }
+  const playerNames = Object.values(unsafeWindow.quiz.players).map((p) => p._name)
+  handle(playerNames)
+}
 const cache = {
   playerNames: [],
   lists: [],
 }
-const fetchPlayerAnimeLists = async (players) => {
+const fetchPlayerAnimeLists = async (playerNames) => {
   return new Promise((resolve) => {
     if (unsafeWindow.Listener === undefined || unsafeWindow.socket === undefined) {
       throw new Error('Listener or socket is not defined.')
     }
-    const playerNames = Object.values(players).map((p) => p._name)
     if (contentEquals(cache.playerNames, playerNames)) {
       resolve(cache.lists)
       return
@@ -278,9 +285,8 @@ const renderLinks = (element, links) => {
   }
 }
 if (unsafeWindow.Listener !== undefined) {
-  new unsafeWindow.Listener('Game Starting', handle).bindListener()
-  new unsafeWindow.Listener('Join Game', handle).bindListener()
-  new unsafeWindow.Listener('answer results', handle).bindListener()
+  new unsafeWindow.Listener('Game Starting', handleGameStarting).bindListener()
+  new unsafeWindow.Listener('answer results', handleAnswerResults).bindListener()
 }
 addScriptData({
   name: 'sanime Link',
