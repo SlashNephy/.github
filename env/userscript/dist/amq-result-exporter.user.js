@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.1
+// @version         0.4.2
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
@@ -45,32 +45,30 @@ const fetchArmEntries = async () => {
 
 class AmqAnswerTimesUtility {
   songStartTime = 0
-  times = []
+  playerTimes = []
   constructor() {
     if (unsafeWindow.Listener === undefined) {
-      throw new Error('Listener is not defined.')
+      return
     }
-    new unsafeWindow.Listener('play next song', this._onPlayNextSong).bindListener()
-    new unsafeWindow.Listener('player answered', this._onPlayerAnswered).bindListener()
-    new unsafeWindow.Listener('Join Game', this._onJoinGame).bindListener()
+    new unsafeWindow.Listener('play next song', () => {
+      this.songStartTime = Date.now()
+      this.playerTimes = []
+    }).bindListener()
+    new unsafeWindow.Listener('player answered', (data) => {
+      const time = Date.now() - this.songStartTime
+      data.forEach((gamePlayerId) => {
+        this.playerTimes[gamePlayerId] = time
+      })
+    }).bindListener()
+    new unsafeWindow.Listener('Join Game', (data) => {
+      const quizState = data.quizState
+      if (quizState.songTimer > 0) {
+        this.songStartTime = Date.now() - quizState.songTimer * 1000
+      }
+    }).bindListener()
   }
   query(playerId) {
-    return playerId in this.times ? this.times[playerId] : null
-  }
-  _onPlayNextSong() {
-    this.songStartTime = Date.now()
-    this.times.splice(0)
-  }
-  _onPlayerAnswered(playerIds) {
-    const time = Date.now() - this.songStartTime
-    for (const id of playerIds) {
-      this.times[id] = time
-    }
-  }
-  _onJoinGame({ quizState }) {
-    if (quizState.songTimer > 0) {
-      this.songStartTime = Date.now() - quizState.songTimer * 1000
-    }
+    return playerId in this.playerTimes ? this.playerTimes[playerId] : null
   }
 }
 const amqAnswerTimes = new AmqAnswerTimesUtility()
