@@ -26,7 +26,7 @@ declare global {
           particleTrack: unknown
           points: number
           startPositionSlot: number
-          teamNumber: null
+          teamNumber: number | null
           _groupNumber: number
           _host: boolean
           _inGame: boolean
@@ -44,7 +44,7 @@ declare global {
       videoTimerBar: {
         updateState(state: unknown): void
       }
-      _playerAnswerListner: Listener
+      _playerAnswerListner: ReturnType<Window['Listener']>
     }
     quizVideoController?: {
       currentMoePlayerId: string
@@ -60,21 +60,38 @@ declare global {
       $SETTING_TABS: JQuery
       $SETTING_CONTAINERS: JQuery
     }
+    selfName?: string
     socialTab?: {
+      // scripts/pages/gamePage/menuBar/socialStatus.js
       socialStatus?: {
         currentStatus: number
         changeSocialStatus(status: number): void
+        getSocialStatusInfo(status: number): string
       }
     }
-    Listener?: new <E = unknown>(command: string, callback: (event: E) => void) => Listener
-    selfName?: string
+    // scripts/pages/gamePage/shared/listener.js
+    Listener?: new <E = unknown>(command: string, callback: (event: E) => void) => {
+      command: string
+      // eslint-disable-next-line @typescript-eslint/method-signature-style
+      callback: (event: E) => void
+      bound: boolean
+      fire(event: E): void
+      bindListener(): void
+      unbindListener(): void
+    }
+    // scripts/pages/gamePage/shared/socket.js
+    socket?: {
+      _socket: Window['socket']
+      listners: Record<string, (event: unknown) => void>
+      _disconnected: boolean
+      _sessionId: number | undefined
+      _attempReconect: boolean
+      setup(): void
+      addListerner<T>(command: string, listener: (event: T) => void): void
+      removeListener<T>(command: string, listener: (event: T) => void): void
+      sendCommand<T>(content: { command: string } & Record<string, unknown>, responseHandler?: (event: T) => void): void
+    }
   }
-}
-
-type Listener = {
-  fire(event: E): void
-  bindListener(): void
-  unbindListener(): void
 }
 
 export type AnswerResultsEvent = {
@@ -119,11 +136,48 @@ export type AnswerResultsEvent = {
 }
 
 export type GameStartingEvent = {
+  gameMode: string
+  groupSlotMap: Record<number, number[]>
   players: {
-    name: string
-    teamNumber?: number
+    avatarInfo: {
+      avatar: {
+        active: number
+        avatarId: number
+        avatarName: string
+        backgroundFileName: string
+        characterId: number
+        colorActive: number
+        colorId: number
+        colorName: string
+        editor: string
+        optionActive: boolean
+        optionName: string
+        outfitName: string
+        sizeModifier: number
+      }
+      background: {
+        avatarId: number
+        avatarName: string
+        backgroundHori: string
+        backgroundVert: string
+        colorId: number
+        outfitName: string
+      }
+    }
     gamePlayerId: number
+    host: boolean
+    inGame: boolean
+    level: number
+    name: string
+    pose: number
+    position: number
+    positionSlot: number
+    score: number
+    teamCaptain: null
+    teamNumber: number | null
+    teamPlayer: null
   }[]
+  showSelection: number
 }
 
 export type PlayerAnsweredEvent = number[]
@@ -141,4 +195,51 @@ export type PlayerAnswersEvent = {
     answerNumber: number
   }[]
   progressBarState: unknown
+}
+
+export type PlayerProfileEvent = {
+  allBadges: unknown[]
+  avatar: {
+    avatarName: string
+    colorName: string
+    optionActive: number
+    optionName: string
+    outfitName: string
+  }
+  avatarProfileImage: number
+  badges: {
+    filename: string
+    id: number
+    name: string
+    slot: number
+    special: boolean
+    type: number
+    unlockDescription: string
+  }[]
+  creationDate: {
+    hidden: boolean
+    value: string
+    adminView: boolean
+  }
+  guessPercent: {
+    hidden: boolean
+    value: string
+    adminView: boolean
+  }
+  level: number
+  list: {
+    hidden: boolean
+    listId: 1 | 2 | 3
+    listUser: string | null
+    listUserUrl: string | null
+    adminView: boolean
+  }
+  name: string
+  originalName: string
+  profileEmoteId: null
+  songCount: {
+    hidden: boolean
+    value: number
+    adminView: boolean
+  }
 }
