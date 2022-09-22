@@ -206,12 +206,13 @@ export const banners: Banner[] = [
   {
     id: 'amq-sanime-link',
     name: 'AMQ sanime Link',
-    version: '0.1.0',
+    version: '0.1.1',
     description: {
       en: 'Display links to sanime and "i(lyl)2m" in the player list.',
       ja: 'プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。',
     },
-    homepage: '',
+    homepage:
+      'https://scrapbox.io/slashnephy/AMQ_%E3%81%A7_sanime_%E3%82%84_i(lyl)2m_%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript',
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
