@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.0
+// @version         0.4.0
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -168,16 +168,22 @@ const handle = (event) => {
     const element = getOrCreateRow(container, row.id)
     const contentElement = element.querySelector('.row-content')
     if (contentElement !== null) {
-      contentElement.textContent = row.content(event)
+      const content = row.content(event)
+      Promise.resolve(content)
+        .then((c) => {
+          contentElement.textContent = c
+        })
+        .catch(console.error)
     } else {
       const content = row.content(event)
-      if (content === null) {
-        continue
-      }
-      renderRow(element, {
-        ...row,
-        content,
-      })
+      Promise.resolve(content)
+        .then((c) => {
+          renderRow(element, {
+            ...row,
+            content: c,
+          })
+        })
+        .catch(console.error)
     }
   }
   const element = getOrCreateLinkContainer(container, 'link-container')
