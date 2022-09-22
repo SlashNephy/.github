@@ -1,6 +1,6 @@
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
-import type { PlayerProfileEvent } from '../types/amq'
+import type { GameStartingEvent, PlayerProfileEvent } from '../types/amq'
 
 type CustomLink = {
   id: string
@@ -103,13 +103,9 @@ type PlayerAnimeList = {
   username: string | null
 }
 
-const handle = () => {
-  if (unsafeWindow.quiz === undefined) {
-    return
-  }
-
+const handle = (playerNames: string[]) => {
   const container = getOrCreateLinkContainer('anime-list-links')
-  fetchPlayerAnimeLists(unsafeWindow.quiz.players)
+  fetchPlayerAnimeLists(playerNames)
     .then((animeLists) => {
       renderLinks(
         container,
@@ -124,18 +120,31 @@ const handle = () => {
     .catch(console.error)
 }
 
+const handleGameStarting = (event: GameStartingEvent) => {
+  const playerNames = event.players.map((p) => p.name)
+  handle(playerNames)
+}
+
+const handleAnswerResults = () => {
+  if (unsafeWindow.quiz === undefined) {
+    return
+  }
+
+  const playerNames = Object.values(unsafeWindow.quiz.players).map((p) => p._name)
+  handle(playerNames)
+}
+
 const cache: { playerNames: string[]; lists: PlayerAnimeList[] } = {
   playerNames: [],
   lists: [],
 }
 
-const fetchPlayerAnimeLists = async (players: Exclude<Window['quiz'], undefined>['players']) => {
+const fetchPlayerAnimeLists = async (playerNames: string[]) => {
   return new Promise<PlayerAnimeList[]>((resolve) => {
     if (unsafeWindow.Listener === undefined || unsafeWindow.socket === undefined) {
       throw new Error('Listener or socket is not defined.')
     }
 
-    const playerNames = Object.values(players).map((p) => p._name)
     if (contentEquals(cache.playerNames, playerNames)) {
       resolve(cache.lists)
       return
@@ -228,9 +237,8 @@ const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
 }
 
 if (unsafeWindow.Listener !== undefined) {
-  new unsafeWindow.Listener('Game Starting', handle).bindListener()
-  new unsafeWindow.Listener('Join Game', handle).bindListener()
-  new unsafeWindow.Listener('answer results', handle).bindListener()
+  new unsafeWindow.Listener('Game Starting', handleGameStarting).bindListener()
+  new unsafeWindow.Listener('answer results', handleAnswerResults).bindListener()
 }
 
 addScriptData({
