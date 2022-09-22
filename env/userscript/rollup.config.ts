@@ -218,6 +218,21 @@ export const banners: Banner[] = [
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
   },
+  {
+    id: 'amq-display-answer-time-2',
+    name: 'AMQ Display Answer Time 2',
+    version: '0.1.0',
+    description: {
+      en: 'Display player answer time in seconds.',
+      ja: 'プレイヤーの解答時間を秒単位で表示します。',
+    },
+    homepage:
+      'https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%A7%A3%E7%AD%94%E6%99%82%E9%96%93%E3%82%92%E7%A7%92%E5%8D%98%E4%BD%8D%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript',
+    author: 'SlashNephy',
+    match: ['https://animemusicquiz.com/*'],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
