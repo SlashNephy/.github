@@ -15,7 +15,7 @@ declare global {
 export type CustomRow = {
   readonly id: string
   readonly title: string
-  content(event: AnswerResultsEvent): string | null
+  content(event: AnswerResultsEvent): string | null | Promise<string | null>
 }
 
 export type CustomLink = {
