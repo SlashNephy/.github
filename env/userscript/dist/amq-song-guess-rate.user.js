@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Song Guess Rate
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.2.0
 // @author          SlashNephy
 // @description     Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)
 // @description:ja  曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)
@@ -15,6 +15,8 @@
 // @grant           GM_getValue
 // @grant           GM_setValue
 // @grant           unsafeWindow
+// @grant           GM_deleteValue
+// @grant           GM_listValues
 // @license         MIT license
 // ==/UserScript==
 
@@ -112,19 +114,41 @@ const addStyle = (css) => {
 if (unsafeWindow.detailedSongInfo === undefined) {
   throw new Error('AMQ Detailed Song Info plugin is not installed.')
 }
-const increment = (key, isCorrect) => {
-  const count = GM_getValue(key, { correct: 0, total: 0 })
+const increment = async (key, isCorrect) => {
+  const hashKey = await digestMessage(key)
+  const count = GM_getValue(hashKey, { correct: 0, total: 0 })
   count.total++
   if (isCorrect) {
     count.correct++
   }
-  GM_setValue(key, count)
+  GM_setValue(hashKey, count)
   return count
+}
+const migrate = async () => {
+  const regex = /^[\da-f]{64}$/
+  const oldKeys = GM_listValues().filter((k) => regex.exec(k) === null)
+  await Promise.all(
+    oldKeys.map(async (key) => {
+      const hashKey = await digestMessage(key)
+      const count = GM_getValue(hashKey, { correct: 0, total: 0 })
+      const oldCount = GM_getValue(key, { correct: 0, total: 0 })
+      count.total += oldCount.total
+      count.correct += oldCount.correct
+      GM_setValue(hashKey, count)
+      GM_deleteValue(key)
+    })
+  )
+}
+const digestMessage = async (message) => {
+  const data = new TextEncoder().encode(message)
+  const buffer = await crypto.subtle.digest('SHA-256', data)
+  const arrayBuffer = Array.from(new Uint8Array(buffer))
+  return arrayBuffer.map((b) => b.toString(16).padStart(2, '0')).join('')
 }
 unsafeWindow.detailedSongInfo.register({
   id: 'guess-rate-row',
   title: 'Guess Rate',
-  content(event) {
+  async content(event) {
     if (unsafeWindow.quiz === undefined) {
       return null
     }
@@ -133,10 +157,11 @@ unsafeWindow.detailedSongInfo.register({
       return null
     }
     const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
-    const count = increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
+    const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
     return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
   },
 })
+migrate().catch(console.error)
 addScriptData({
   name: 'Song Guess Rate',
   author: 'SlashNephy &lt;spica@starry.blue&gt;',
