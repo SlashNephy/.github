@@ -203,6 +203,20 @@ export const banners: Banner[] = [
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: ['GM_getValue', 'GM_setValue', 'unsafeWindow', 'GM_deleteValue', 'GM_listValues'],
   },
+  {
+    id: 'amq-sanime-link',
+    name: 'AMQ sanime Link',
+    version: '0.1.0',
+    description: {
+      en: 'Display links to sanime and "i(lyl)2m" in the player list.',
+      ja: 'プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。',
+    },
+    homepage: '',
+    author: 'SlashNephy',
+    match: ['https://animemusicquiz.com/*'],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
