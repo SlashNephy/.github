@@ -191,7 +191,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-song-guess-rate',
     name: 'AMQ Song Guess Rate',
-    version: '0.1.0',
+    version: '0.2.0',
     description: {
       en: 'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
       ja: '曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)',
@@ -201,7 +201,7 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
-    grant: ['GM_getValue', 'GM_setValue', 'unsafeWindow'],
+    grant: ['GM_getValue', 'GM_setValue', 'unsafeWindow', 'GM_deleteValue', 'GM_listValues'],
   },
 ]
 
