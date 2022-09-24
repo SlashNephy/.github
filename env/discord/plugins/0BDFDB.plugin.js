@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.6.1
+ * @version 2.6.3
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -4117,33 +4117,34 @@ module.exports = (_ => {
 					config.id = config.id && [config.id].flat().filter(n => n);
 					let contextMenu = BDFDB.ReactUtils.findChild(returnvalue, {props: "navId"}) || (BDFDB.ArrayUtils.is(returnvalue) ? {props: {children: returnvalue}} : null);
 					if (contextMenu) {
-						for (let i in contextMenu.props.children) {
-							if (contextMenu.props.children[i] && contextMenu.props.children[i].type == RealMenuItems.MenuGroup) {
-								if (BDFDB.ArrayUtils.is(contextMenu.props.children[i].props.children)) {
-									for (let j in contextMenu.props.children[i].props.children) if (check(contextMenu.props.children[i].props.children[j])) {
-										if (config.group) return [contextMenu.props.children, parseInt(i)];
-										else return [contextMenu.props.children[i].props.children, parseInt(j)];
+						let children = [contextMenu.props.children].flat(10);
+						for (let i in children) {
+							if (children[i] && children[i].type == RealMenuItems.MenuGroup) {
+								if (BDFDB.ArrayUtils.is(children[i].props.children)) {
+									for (let j in children[i].props.children) if (check(children[i].props.children[j])) {
+										if (config.group) return [children, parseInt(i)];
+										else return [children[i].props.children, parseInt(j)];
 									}
 								}
-								else if (contextMenu.props.children[i] && contextMenu.props.children[i].props) {
-									if (check(contextMenu.props.children[i].props.children)) {
-										if (config.group) return [contextMenu.props.children, parseInt(i)];
+								else if (children[i] && children[i].props) {
+									if (check(children[i].props.children)) {
+										if (config.group) return [children, parseInt(i)];
 										else {
-											contextMenu.props.children[i].props.children = [contextMenu.props.children[i].props.children];
-											return [contextMenu.props.children[i].props.children, 0];
+											children[i].props.children = [children[i].props.children];
+											return [children[i].props.children, 0];
 										}
 									}
-									else if (contextMenu.props.children[i].props.children && contextMenu.props.children[i].props.children.props && BDFDB.ArrayUtils.is(contextMenu.props.children[i].props.children.props.children)) {
-										for (let j in contextMenu.props.children[i].props.children.props.children) if (check(contextMenu.props.children[i].props.children.props.children[j])) {
-											if (config.group) return [contextMenu.props.children, parseInt(i)];
-											else return [contextMenu.props.children[i].props.children.props.children, parseInt(j)];
+									else if (children[i].props.children && children[i].props.children.props && BDFDB.ArrayUtils.is(children[i].props.children.props.children)) {
+										for (let j in children[i].props.children.props.children) if (check(children[i].props.children.props.children[j])) {
+											if (config.group) return [children, parseInt(i)];
+											else return [children[i].props.children.props.children, parseInt(j)];
 										}
 									}
 								}
 							}
-							else if (check(contextMenu.props.children[i])) return [contextMenu.props.children, parseInt(i)];
+							else if (check(children[i])) return [children, parseInt(i)];
 						}
-						return [contextMenu.props.children, -1];
+						return [children, -1];
 					}
 					return [null, -1];
 					function check (child) {
@@ -4650,6 +4651,10 @@ module.exports = (_ => {
 									formatVars[err.toString().split("for: ")[1]] = value != null ? (value === 0 ? "0" : value) : "undefined";
 									if (stringObj.intMessage) {
 										try {for (let hook of stringObj.intMessage.format(formatVars).match(/\([^\(\)]+\)/gi)) formatVars[hook.replace(/[\(\)]/g, "")] = n => n;}
+										catch (err2) {}
+									}
+									if (stringObj.intlMessage) {
+										try {for (let hook of stringObj.intlMessage.format(formatVars).match(/\([^\(\)]+\)/gi)) formatVars[hook.replace(/[\(\)]/g, "")] = n => n;}
 										catch (err2) {}
 									}
 								}
@@ -5867,6 +5872,8 @@ module.exports = (_ => {
 														"$day will be replaced with the Weekday Name",
 														"$dayS will be replaced with the Weekday Name (Short Form)",
 														"$agoAmount will be replaced with ('Today', 'Yesterday', 'x days/weeks/months ago')",
+														"$agoWeekday will be replaced with ('Today', 'Yesterday', $day)",
+														"$agoWeekdayS will be replaced with ('Today', 'Yesterday', $dayS)",
 														"$agoDays will be replaced with ('Today', 'Yesterday', 'x days ago')",
 														"$agoDate will be replaced with ('Today', 'Yesterday', $date)"
 													], {marginRight: 6}),
@@ -6036,6 +6043,8 @@ module.exports = (_ => {
 							.replace(/\$dayS/g, timeObj.toLocaleDateString(language, {weekday: "short"}))
 							.replace(/\$day/g, timeObj.toLocaleDateString(language, {weekday: "long"}))
 							.replace(/\$agoAmount/g, daysAgo < 0 ? "" : daysAgo > 1 ? Internal.DiscordObjects.Timestamp(timeObj.getTime()).fromNow() : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
+							.replace(/\$agoWeekdayS/g, daysAgo < 0 ? "" : daysAgo > 1 ? timeObj.toLocaleDateString(language, {weekday: "short"}) : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
+							.replace(/\$agoWeekday/g, daysAgo < 0 ? "" : daysAgo > 1 ? timeObj.toLocaleDateString(language, {weekday: "long"}) : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
 							.replace(/\$agoDays/g, daysAgo < 0 ? "" : daysAgo > 1 ? BDFDB.LanguageUtils.LanguageStringsFormat(`GAME_LIBRARY_LAST_PLAYED_DAYS`, daysAgo) : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
 							.replace(/\$agoDate/g, daysAgo < 0 ? "" : daysAgo > 1 ? date : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
 							.replace(/\(\)|\[\]/g, "").replace(/,\s*$|^\s*,/g, "").replace(/ +/g, " ").trim();
