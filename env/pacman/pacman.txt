@@ -1,7 +1,7 @@
 base
 clamav
 clamav-unofficial-sigs
-cloudflared-bin
+cloudflared
 dkms
 docker
 docker-compose
