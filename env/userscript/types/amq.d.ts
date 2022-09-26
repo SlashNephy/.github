@@ -101,6 +101,7 @@ type EventMap = {
   'Join Game': JoinGameEvent
   'player answers': PlayerAnswersEvent
   'player profile': PlayerProfileEvent
+  'play next song': unknown
 }
 
 export type AnswerResultsEvent = {

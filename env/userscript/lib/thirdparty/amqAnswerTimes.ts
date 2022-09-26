@@ -1,7 +1,5 @@
 // from: https://raw.githubusercontent.com/amq-script-project/AMQ-Scripts/master/gameplay/amqAnswerTimesUtility.user.js (MIT License)
 
-import type { JoinGameEvent, PlayerAnsweredEvent } from '../../types/amq'
-
 class AmqAnswerTimesUtility {
   public songStartTime = 0
   public playerTimes: number[] = []
@@ -16,15 +14,14 @@ class AmqAnswerTimesUtility {
       this.playerTimes = []
     }).bindListener()
 
-    new unsafeWindow.Listener<PlayerAnsweredEvent>('player answered', (data) => {
+    new unsafeWindow.Listener('player answered', (playerIds) => {
       const time = Date.now() - this.songStartTime
-      data.forEach((gamePlayerId) => {
-        this.playerTimes[gamePlayerId] = time
-      })
+      for (const id of playerIds) {
+        this.playerTimes[id] = time
+      }
     }).bindListener()
 
-    new unsafeWindow.Listener<JoinGameEvent>('Join Game', (data) => {
-      const quizState = data.quizState
+    new unsafeWindow.Listener('Join Game', ({ quizState }) => {
       if (quizState.songTimer > 0) {
         this.songStartTime = Date.now() - quizState.songTimer * 1000
       }
