@@ -151,7 +151,7 @@ const fetchPlayerAnimeLists = async (playerNames: string[]) => {
     }
 
     const lists: PlayerAnimeList[] = []
-    const listener = new unsafeWindow.Listener<PlayerProfileEvent>('player profile', (event) => {
+    const listener = new unsafeWindow.Listener('player profile', (event) => {
       lists.push({
         type: event.list.listId,
         username: event.list.listUser,

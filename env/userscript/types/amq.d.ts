@@ -70,12 +70,12 @@ declare global {
       }
     }
     // scripts/pages/gamePage/shared/listener.js
-    Listener?: new <E = unknown>(command: string, callback: (event: E) => void) => {
-      command: string
+    Listener?: new <K extends keyof EventMap>(command: K, callback: (event: EventMap[K]) => void) => {
+      command: K
       // eslint-disable-next-line @typescript-eslint/method-signature-style
-      callback: (event: E) => void
+      callback: (event: EventMap[K]) => void
       bound: boolean
-      fire(event: E): void
+      fire(event: EventMap[K]): void
       bindListener(): void
       unbindListener(): void
     }
@@ -87,11 +87,20 @@ declare global {
       _sessionId: number | undefined
       _attempReconect: boolean
       setup(): void
-      addListerner<T>(command: string, listener: (event: T) => void): void
+      addListerner<K extends keyof EventMap>(command: K, listener: (event: EventMap[K]) => void): void
       removeListener<T>(command: string, listener: (event: T) => void): void
       sendCommand<T>(content: { command: string } & Record<string, unknown>, responseHandler?: (event: T) => void): void
     }
   }
+}
+
+type EventMap = {
+  'answer results': AnswerResultsEvent
+  'Game Starting': GameStartingEvent
+  'player answered': PlayerAnsweredEvent
+  'Join Game': JoinGameEvent
+  'player answers': PlayerAnswersEvent
+  'player profile': PlayerProfileEvent
 }
 
 export type AnswerResultsEvent = {
