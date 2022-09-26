@@ -29,7 +29,6 @@ nano
 nano-syntax-highlighting
 net-tools
 openssh
-parted
 preload
 progress
 rclone
