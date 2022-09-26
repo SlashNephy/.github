@@ -27,14 +27,13 @@ class AmqAnswerTimesUtility {
       this.songStartTime = Date.now()
       this.playerTimes = []
     }).bindListener()
-    new unsafeWindow.Listener('player answered', (data) => {
+    new unsafeWindow.Listener('player answered', (playerIds) => {
       const time = Date.now() - this.songStartTime
-      data.forEach((gamePlayerId) => {
-        this.playerTimes[gamePlayerId] = time
-      })
+      for (const id of playerIds) {
+        this.playerTimes[id] = time
+      }
     }).bindListener()
-    new unsafeWindow.Listener('Join Game', (data) => {
-      const quizState = data.quizState
+    new unsafeWindow.Listener('Join Game', ({ quizState }) => {
       if (quizState.songTimer > 0) {
         this.songStartTime = Date.now() - quizState.songTimer * 1000
       }
