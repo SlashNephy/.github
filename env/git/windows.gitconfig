@@ -2,10 +2,14 @@
   path = ~/.github/env/git/.gitconfig
 
 [user]
-  signingkey = BCA28552511519D3
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJissZETg59pdvsAu20bF510AOW/P50f6IG1Y6Hk/+Tw
 
 [gpg]
-  program = C:/Program FIles (x86)/GnuPG/bin/gpg.exe
+  format = ssh
+
+[gpg "ssh"]
+  # ~ が使えないらしい
+  program = "C:/Users/spica/AppData/Local/1Password/app/8/op-ssh-sign.exe"
 
 [core]
   sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
