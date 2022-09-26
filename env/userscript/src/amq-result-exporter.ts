@@ -173,7 +173,7 @@ const handle = (payload: AnswerResultsEvent) => {
 }
 
 if (unsafeWindow.Listener !== undefined) {
-  const listener = new unsafeWindow.Listener<AnswerResultsEvent>('answer results', handle)
+  const listener = new unsafeWindow.Listener('answer results', handle)
   listener.bindListener()
 }
 
