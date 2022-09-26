@@ -1959,7 +1959,7 @@ __metadata:
     eslint: 8.24.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.204.2
+    renovate: 32.204.3
     ts-node: 10.9.1
     typescript: 4.8.3
   languageName: unknown
@@ -6507,13 +6507,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-html-parser@npm:6.0.0":
-  version: 6.0.0
-  resolution: "node-html-parser@npm:6.0.0"
+"node-html-parser@npm:6.1.0":
+  version: 6.1.0
+  resolution: "node-html-parser@npm:6.1.0"
   dependencies:
     css-select: ^4.2.1
     he: 1.2.0
-  checksum: dac23645479fe7ba48d6f50523b4ced6256f5245e1d9476dbabc8d3cf26104406f5394040a56f3f6f8a76e65ef1f98ebaa7d2f151ef78c3a4bab71e3c8533d1d
+  checksum: f91c2dadd59aec3c0124e7d20adf7c6187606be906d005383d37ccfe341695e59357367c64dc85b8e2cec3c06f9733d0b905c967d4cdf064d51b491ca07fff10
   languageName: node
   linkType: hard
 
@@ -7326,9 +7326,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.204.2":
-  version: 32.204.2
-  resolution: "renovate@npm:32.204.2"
+"renovate@npm:32.204.3":
+  version: 32.204.3
+  resolution: "renovate@npm:32.204.3"
   dependencies:
     "@aws-sdk/client-ec2": 3.155.0
     "@aws-sdk/client-ecr": 3.154.0
@@ -7391,7 +7391,7 @@ __metadata:
     minimatch: 5.1.0
     moo: 0.5.1
     nanoid: 3.3.4
-    node-html-parser: 6.0.0
+    node-html-parser: 6.1.0
     openpgp: 5.5.0
     p-all: 3.0.0
     p-map: 4.0.0
@@ -7422,7 +7422,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 1e7b8580eace3a585cb843d73f018eba37f818269bb7dbda7dfe4b17a99408c4fece715d58cfa6bad18fd31fbf14c828e89feef572e560227e90f46bf38fef75
+  checksum: 981856300974e61ec1b94e8ab7421a83cd442c25adba5057ced07cbc76d46f6aac1fd725e4a991a19bb7174fdef399698b865b9fcc9ab52f5958f877ebf57bf8
   languageName: node
   linkType: hard
 
