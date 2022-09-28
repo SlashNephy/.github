@@ -46,7 +46,7 @@
     "eslint-plugin-react": "7.31.8",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-unused-imports": "2.0.0",
-    "eslint-plugin-userscripts": "0.2.9",
+    "eslint-plugin-userscripts": "0.2.10",
     "eslint-plugin-xss": "0.1.12",
     "eslint-plugin-yml": "1.2.0"
   },
