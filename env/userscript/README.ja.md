@@ -22,7 +22,7 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 | AMQ Readable Watching Status      | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-readable-watching-status.user.js      |
 | AMQ Clear Answer                  | 1.0.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-clear-answer.user.js                  |
 | AMQ Song Guess Rate               | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-song-guess-rate.user.js               |
-| AMQ sanime Link                   | 0.1.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js                   |
+| AMQ sanime Link                   | 0.1.2      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js                   |
 | AMQ Display Answer Time 2         | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js         |
 
 ### Annict Work Links (v0.2.5)
@@ -109,7 +109,7 @@ Delete キーを押下することで解答欄のテキストをクリアする�
 
 曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)
 
-### AMQ sanime Link (v0.1.1)
+### AMQ sanime Link (v0.1.2)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-sanime-link.ts) / [📖 解説記事](<https://scrapbox.io/slashnephy/AMQ_%E3%81%A7_sanime_%E3%82%84_i(lyl)2m_%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript>)
 
