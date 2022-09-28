@@ -206,7 +206,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-sanime-link',
     name: 'AMQ sanime Link',
-    version: '0.1.1',
+    version: '0.1.2',
     description: {
       en: 'Display links to sanime and "i(lyl)2m" in the player list.',
       ja: 'プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。',

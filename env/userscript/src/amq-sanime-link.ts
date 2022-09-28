@@ -104,6 +104,10 @@ type PlayerAnimeList = {
 }
 
 const handle = (playerNames: string[]) => {
+  if (playerNames.length > 20) {
+    return
+  }
+
   const container = getOrCreateLinkContainer('anime-list-links')
   fetchPlayerAnimeLists(playerNames)
     .then((animeLists) => {
