@@ -1,3 +1,5 @@
+import { getAnimeById } from '../lib/jikan'
+import { getAnimeScoreById } from '../lib/mal'
 import { addScriptData, addStyle } from '../lib/thirdparty/amqScriptInfo'
 
 import type { AnswerResultsEvent } from '../types/amq'
@@ -5,6 +7,8 @@ import type { CustomLink, CustomRow } from '../types/amq-detailed-song-info'
 
 type EvaluatedCustomRow = Omit<CustomRow, 'id' | 'content'> & { readonly content: string | null }
 type EvaluatedCustomLink = Omit<CustomLink, 'id' | 'href'> & { readonly href: string }
+
+const scoreCache = new Map<number, number | null>()
 
 const rows: CustomRow[] = [
   {
@@ -31,8 +35,34 @@ const rows: CustomRow[] = [
   {
     id: 'rating-row',
     title: 'Rating',
-    content(event: AnswerResultsEvent): string {
-      return `${event.songInfo.animeScore.toFixed(2)} / 10`
+    async content(event: AnswerResultsEvent): Promise<string> {
+      const malId = event.songInfo.siteIds.malId
+      let score = scoreCache.get(malId)
+      if (score === undefined) {
+        try {
+          // Jikan API
+          const result = await getAnimeById(malId)
+          score = result.data.score
+        } catch (e: unknown) {
+          console.error(e)
+
+          try {
+            // MyAnimeList API
+            const result = await getAnimeScoreById(malId)
+            score = result.mean
+          } catch (e: unknown) {
+            console.error(e)
+            score = null
+          }
+        }
+        scoreCache.set(malId, score)
+      }
+
+      if (score === null) {
+        return `${event.songInfo.animeScore.toFixed(2)} / 10`
+      }
+
+      return `${score.toFixed(2)} / 10 (MAL)`
     },
   },
 ]
@@ -74,6 +104,12 @@ const handle = (event: AnswerResultsEvent) => {
     const contentElement = element.querySelector('.row-content')
     if (contentElement !== null) {
       const content = row.content(event)
+
+      // Promise の時は先にテキストを書き換えておく
+      if (content !== null && typeof content !== 'string') {
+        contentElement.textContent = 'Loading...'
+      }
+
       Promise.resolve(content)
         .then((c) => {
           contentElement.textContent = c
