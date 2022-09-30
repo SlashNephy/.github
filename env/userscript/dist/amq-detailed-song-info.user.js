@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.0
+// @version         0.5.0
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -12,9 +12,43 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
+// @connect         api.jikan.moe
+// @connect         api.myanimelist.net
 // @grant           unsafeWindow
+// @grant           GM_xmlhttpRequest
 // @license         MIT license
 // ==/UserScript==
+
+const executeXhr = async (request) => {
+  return new Promise((resolve, reject) => {
+    GM_xmlhttpRequest({
+      ...request,
+      onload: (response) => {
+        resolve(response)
+      },
+      onerror: (error) => {
+        reject(error)
+      },
+    })
+  })
+}
+
+const getAnimeById = async (id) => {
+  const content = await executeXhr({
+    url: `https://api.jikan.moe/v4/anime/${id}`,
+  })
+  return JSON.parse(content.responseText)
+}
+
+const getAnimeScoreById = async (id) => {
+  const content = await executeXhr({
+    url: `https://api.myanimelist.net/v2/anime/${id}?fields=mean`,
+    headers: {
+      'X-MAL-CLIENT-ID': '6b13c8a22ad3a5e16dd52f548ba7d545',
+    },
+  })
+  return JSON.parse(content.responseText)
+}
 
 const createInstalledWindow = () => {
   if (!window.setupDocumentDone) return
@@ -107,6 +141,7 @@ const addStyle = (css) => {
   style.appendChild(document.createTextNode(css))
 }
 
+const scoreCache = new Map()
 const rows = [
   {
     id: 'difficulty-row',
@@ -132,8 +167,29 @@ const rows = [
   {
     id: 'rating-row',
     title: 'Rating',
-    content(event) {
-      return `${event.songInfo.animeScore.toFixed(2)} / 10`
+    async content(event) {
+      const malId = event.songInfo.siteIds.malId
+      let score = scoreCache.get(malId)
+      if (score === undefined) {
+        try {
+          const result = await getAnimeById(malId)
+          score = result.data.score
+        } catch (e) {
+          console.error(e)
+          try {
+            const result = await getAnimeScoreById(malId)
+            score = result.mean
+          } catch (e) {
+            console.error(e)
+            score = null
+          }
+        }
+        scoreCache.set(malId, score)
+      }
+      if (score === null) {
+        return `${event.songInfo.animeScore.toFixed(2)} / 10`
+      }
+      return `${score.toFixed(2)} / 10 (MAL)`
     },
   },
 ]
@@ -169,6 +225,9 @@ const handle = (event) => {
     const contentElement = element.querySelector('.row-content')
     if (contentElement !== null) {
       const content = row.content(event)
+      if (content !== null && typeof content !== 'string') {
+        contentElement.textContent = 'Loading...'
+      }
       Promise.resolve(content)
         .then((c) => {
           contentElement.textContent = c
