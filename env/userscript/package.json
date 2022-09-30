@@ -7,7 +7,7 @@
     "directory": "env/userscript"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --noEmit",
     "bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript && yarn format",
     "bundle:private": "rollup --config rollup.config.private.ts --configPlugin @rollup/plugin-typescript && yarn format",
     "ci": "concurrently -n ci: 'yarn:ci:*'",
