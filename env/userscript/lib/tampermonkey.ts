@@ -16,12 +16,16 @@ export const buildOptions = (banner: Banner, isPrivate = false): RollupOptions =
         babelHelpers: 'bundled',
       }),
     ],
+    ...(banner.options ?? {}),
   }
 }
 
-export type Banner = {
+export type Banner = BuildConfig & TampermonkeyHeader
+
+type BuildConfig = {
   id: string
-} & TampermonkeyHeader
+  options?: RollupOptions
+}
 
 type InternationalizationStrings = Record<string, string> & { en: string; ja?: string }
 
