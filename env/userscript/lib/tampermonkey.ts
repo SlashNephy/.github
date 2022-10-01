@@ -3,6 +3,7 @@ import { join } from 'path'
 
 import { babel } from '@rollup/plugin-babel'
 import typescript from '@rollup/plugin-typescript'
+import { externals } from 'rollup-plugin-node-externals'
 
 import type { RollupOptions } from 'rollup'
 
@@ -19,6 +20,7 @@ export const buildOptions = (banner: Banner): RollupOptions => {
           : join('dist', `${banner.id}.user.js`),
     },
     plugins: [
+      externals(),
       typescript(),
       babel({
         babelHelpers: 'bundled',
