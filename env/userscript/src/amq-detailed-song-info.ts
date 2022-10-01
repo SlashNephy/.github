@@ -88,6 +88,14 @@ const links: CustomLink[] = [
       )}+${encodeURIComponent(event.songInfo.artist)}`
     },
   },
+  {
+    id: 'ann-link',
+    title: 'ANN',
+    target: '_blank',
+    href(event: AnswerResultsEvent): string {
+      return `https://www.animenewsnetwork.com/encyclopedia/anime.php?id=${event.songInfo.annId}`
+    },
+  },
 ]
 
 const handle = (event: AnswerResultsEvent) => {
