@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.5.0
+// @version         0.5.1
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -212,6 +212,14 @@ const links = [
       return `https://www.youtube.com/results?search_query=${encodeURIComponent(
         event.songInfo.songName
       )}+${encodeURIComponent(event.songInfo.artist)}`
+    },
+  },
+  {
+    id: 'ann-link',
+    title: 'ANN',
+    target: '_blank',
+    href(event) {
+      return `https://www.animenewsnetwork.com/encyclopedia/anime.php?id=${event.songInfo.annId}`
     },
   },
 ]
