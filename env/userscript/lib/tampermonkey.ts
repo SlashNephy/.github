@@ -1,14 +1,22 @@
+import { writeFile } from 'fs/promises'
+import { join } from 'path'
+
 import { babel } from '@rollup/plugin-babel'
 import typescript from '@rollup/plugin-typescript'
 
 import type { RollupOptions } from 'rollup'
 
-export const buildOptions = (banner: Banner, isPrivate = false): RollupOptions => {
+export const buildOptions = (banner: Banner): RollupOptions => {
+  void createDevScript(banner)
+
   return {
-    input: isPrivate ? `src/private/${banner.id}.ts` : `src/${banner.id}.ts`,
+    input: banner.private === true ? join('src', 'private', `${banner.id}.ts`) : join('src', `${banner.id}.ts`),
     output: {
-      banner: buildBanner(banner),
-      file: isPrivate ? `dist/private/${banner.id}.user.js` : `dist/${banner.id}.user.js`,
+      banner: renderBanner(banner, false),
+      file:
+        banner.private === true
+          ? join('dist', 'private', `${banner.id}.user.js`)
+          : join('dist', `${banner.id}.user.js`),
     },
     plugins: [
       typescript(),
@@ -20,10 +28,20 @@ export const buildOptions = (banner: Banner, isPrivate = false): RollupOptions =
   }
 }
 
+const createDevScript = async (banner: Banner) => {
+  const path =
+    banner.private === true
+      ? join('dist', 'private', `${banner.id}.dev.user.js`)
+      : join('dist', `${banner.id}.dev.user.js`)
+
+  await writeFile(path, renderBanner(banner, true))
+}
+
 export type Banner = BuildConfig & TampermonkeyHeader
 
 type BuildConfig = {
   id: string
+  private?: boolean
   options?: RollupOptions
 }
 
@@ -90,23 +108,23 @@ type TampermonkeyHeader = {
 
 const headers: {
   key: string
-  render(banner: Banner): string | string[] | undefined
+  render(banner: Banner, isDev: boolean): string | string[] | undefined
 }[] = [
   {
     key: 'name',
-    render: (b) => {
+    render: (b, isDev) => {
       if (typeof b.name === 'string') {
-        return b.name
+        return `${isDev ? '[Dev] ' : ''}${b.name}`
       } else {
-        return b.name.en
+        return `${isDev ? '[Dev] ' : ''}${b.name.en}`
       }
     },
   },
   {
     key: 'name:ja',
-    render: (b) => {
+    render: (b, isDev) => {
       if (typeof b.name !== 'string') {
-        return b.name.ja
+        return `${isDev ? '[Dev] ' : ''}${b.name.ja}`
       }
     },
   },
@@ -164,13 +182,27 @@ const headers: {
   },
   {
     key: 'updateURL',
-    render: (b) =>
-      b.updateUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`,
+    render: (b, isDev) => {
+      if (isDev) {
+        return b.private === true
+          ? `file://${join(__dirname, 'dist', 'private', `${b.id}.dev.user.js`)}`
+          : `file://${join(__dirname, 'dist', `${b.id}.dev.user.js`)}`
+      }
+
+      return b.updateUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`
+    },
   },
   {
     key: 'downloadURL',
-    render: (b) =>
-      b.downloadUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`,
+    render: (b, isDev) => {
+      if (isDev) {
+        return b.private === true
+          ? `file://${join(__dirname, 'dist', 'private', `${b.id}.dev.user.js`)}`
+          : `file://${join(__dirname, 'dist', `${b.id}.dev.user.js`)}`
+      }
+
+      return b.downloadUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`
+    },
   },
   {
     key: 'supportURL',
@@ -190,7 +222,22 @@ const headers: {
   },
   {
     key: 'require',
-    render: (b) => b.require,
+    render: (b, isDev) => {
+      if (!isDev) {
+        return b.require
+      }
+
+      const require = b.require ?? []
+      const path =
+        b.private === true
+          ? `file://${join(__dirname, 'dist', 'private', `${b.id}.user.js`)}`
+          : `file://${join(__dirname, 'dist', `${b.id}.user.js`)}`
+      if (typeof require === 'string') {
+        return [path]
+      } else {
+        return [...require, path]
+      }
+    },
   },
   {
     key: 'resource',
@@ -234,11 +281,11 @@ const headers: {
   },
 ]
 
-const buildBanner = (banner: Banner): string => {
+const renderBanner = (banner: Banner, isDev: boolean): string => {
   const evaluated = headers
     .map((header) => ({
       key: header.key,
-      value: header.render(banner),
+      value: header.render(banner, isDev),
     }))
     .filter((x) => x.value !== undefined)
 

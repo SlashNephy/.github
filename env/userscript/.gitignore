@@ -120,3 +120,4 @@ dist/private
 lib/private
 src/private
 rollup.config.private.ts
+dist/*.dev.user.js
