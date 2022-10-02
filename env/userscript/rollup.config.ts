@@ -77,7 +77,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.4.2',
+    version: '0.4.3',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',

@@ -1,22 +1,14 @@
 import { executeXhr } from '../lib/api'
 import { fetchArmEntries } from '../lib/arm'
+import { GM_Value } from '../lib/GM_Value'
 import { amqAnswerTimes } from '../lib/thirdparty/amqAnswerTimes'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { ArmEntry } from '../lib/arm'
 import type { AnswerResultsEvent } from '../types/amq'
 
-const loadGasUrl = (): string => {
-  const url = GM_getValue<string | null>('GAS_URL', null)
-  if (url !== null) {
-    return url
-  }
-
-  GM_setValue('GAS_URL', '')
-  throw new Error('Please set GAS_URL from the Storage tab in Tampermonkey dashboard.')
-}
-
-loadGasUrl()
+const gasUrl = new GM_Value('GAS_URL', '')
+const dryRun = new GM_Value('DRY_RUN', false)
 
 const armEntries: ArmEntry[] = []
 fetchArmEntries()
@@ -24,7 +16,15 @@ fetchArmEntries()
   .catch(console.error)
 
 const executeGas = async (row: (string | number | boolean)[]) => {
-  const url = loadGasUrl()
+  const url = gasUrl.get()
+  if (url === '') {
+    throw new Error('Please set GAS_URL from the Storage tab in Tampermonkey dashboard.')
+  }
+
+  if (dryRun.get()) {
+    return
+  }
+
   await executeXhr({
     url,
     method: 'POST',
