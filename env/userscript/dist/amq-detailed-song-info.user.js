@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.6.0
+// @version         0.6.1
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -16,8 +16,34 @@
 // @connect         api.myanimelist.net
 // @grant           unsafeWindow
 // @grant           GM_xmlhttpRequest
+// @grant           GM_getValue
+// @grant           GM_setValue
 // @license         MIT license
 // ==/UserScript==
+
+class GM_Value {
+  _key
+  _default
+  _initialize
+  constructor(_key, _default, _initialize = true) {
+    this._key = _key
+    this._default = _default
+    this._initialize = _initialize
+    const value = GM_getValue(_key, null)
+    if (_initialize && value === null) {
+      GM_setValue(_key, null)
+    }
+  }
+  get() {
+    return GM_getValue(this._key, this._default)
+  }
+  set(value) {
+    GM_setValue(this._key, value)
+  }
+  delete() {
+    GM_deleteValue(this._key)
+  }
+}
 
 const executeXhr = async (request) => {
   return new Promise((resolve, reject) => {
@@ -143,10 +169,20 @@ const addStyle = (css) => {
 
 const scoreCache = new Map()
 const titleCache = new Map()
+const showDifficultyRow = new GM_Value('SHOW_DIFFICULTY_ROW', true)
+const showVintageRow = new GM_Value('SHOW_VINTAGE_ROW', true)
+const showFormatRow = new GM_Value('SHOW_FORMAT_ROW', true)
+const showRatingRow = new GM_Value('SHOW_RATING_ROW', true)
+const showSpotifyLink = new GM_Value('SHOW_SPOTIFY_LINK', true)
+const showYouTubeLink = new GM_Value('SHOW_YOUTUBE_LINK', true)
+const showAnnLink = new GM_Value('SHOW_ANN_LINK', true)
 const rows = [
   {
     id: 'difficulty-row',
     title: 'Difficulty',
+    isEnabled() {
+      return showDifficultyRow.get()
+    },
     content(event) {
       return `${event.songInfo.animeDifficulty.toFixed(1)} / 100`
     },
@@ -154,6 +190,9 @@ const rows = [
   {
     id: 'vintage-row',
     title: 'Vintage',
+    isEnabled() {
+      return showVintageRow.get()
+    },
     content(event) {
       return event.songInfo.vintage
     },
@@ -161,6 +200,9 @@ const rows = [
   {
     id: 'format-row',
     title: 'Format',
+    isEnabled() {
+      return showFormatRow.get()
+    },
     content(event) {
       return event.songInfo.animeType
     },
@@ -168,6 +210,9 @@ const rows = [
   {
     id: 'rating-row',
     title: 'Rating',
+    isEnabled() {
+      return showRatingRow.get()
+    },
     async content(event) {
       const malId = event.songInfo.siteIds.malId
       let score = scoreCache.get(malId)
@@ -208,6 +253,9 @@ const links = [
     id: 'spotify-link',
     title: 'Spotify',
     target: '_blank',
+    isEnabled() {
+      return showSpotifyLink.get()
+    },
     href(event) {
       return `spotify://search/${encodeURIComponent(event.songInfo.songName)}%20${encodeURIComponent(
         event.songInfo.artist
@@ -218,6 +266,9 @@ const links = [
     id: 'youtube-link',
     title: 'YouTube',
     target: '_blank',
+    isEnabled() {
+      return showYouTubeLink.get()
+    },
     href(event) {
       return `https://www.youtube.com/results?search_query=${encodeURIComponent(
         event.songInfo.songName
@@ -228,6 +279,9 @@ const links = [
     id: 'ann-link',
     title: 'ANN',
     target: '_blank',
+    isEnabled() {
+      return showAnnLink.get()
+    },
     href(event) {
       return `https://www.animenewsnetwork.com/encyclopedia/anime.php?id=${event.songInfo.annId}`
     },
@@ -239,6 +293,9 @@ const handle = (event) => {
     throw new Error('container is not found.')
   }
   for (const row of rows) {
+    if (row.isEnabled !== undefined && !row.isEnabled()) {
+      continue
+    }
     const element = getOrCreateRow(container, row.id)
     const contentElement = element.querySelector('.row-content')
     if (contentElement !== null) {
@@ -267,6 +324,7 @@ const handle = (event) => {
   renderLinks(
     element,
     links
+      .filter((link) => link.isEnabled === undefined || link.isEnabled())
       .map((link) => {
         const href = link.href(event)
         if (href === null) {
