@@ -85,7 +85,8 @@ const rows: CustomRow[] = [
       if (title !== null) {
         const element = document.getElementById('qpAnimeName')
         if (element !== null) {
-          element.textContent = title
+          element.innerHTML = `${title}<br/>(${element.textContent})`
+          unsafeWindow.quiz?.infoContainer.fitTextToContainer()
         }
       }
 
