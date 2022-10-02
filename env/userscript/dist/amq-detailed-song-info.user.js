@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.6.1
+// @version         0.6.3
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -31,7 +31,7 @@ class GM_Value {
     this._initialize = _initialize
     const value = GM_getValue(_key, null)
     if (_initialize && value === null) {
-      GM_setValue(_key, null)
+      GM_setValue(_key, _initialize)
     }
   }
   get() {
@@ -238,7 +238,8 @@ const rows = [
       if (title !== null) {
         const element = document.getElementById('qpAnimeName')
         if (element !== null) {
-          element.textContent = title
+          element.innerHTML = `${title}<br/>(${element.textContent})`
+          unsafeWindow.quiz?.infoContainer.fitTextToContainer()
         }
       }
       if (score === null) {
