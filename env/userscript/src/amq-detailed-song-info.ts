@@ -9,6 +9,7 @@ type EvaluatedCustomRow = Omit<CustomRow, 'id' | 'content'> & { readonly content
 type EvaluatedCustomLink = Omit<CustomLink, 'id' | 'href'> & { readonly href: string }
 
 const scoreCache = new Map<number, number | null>()
+const titleCache = new Map<number, string | null>()
 
 const rows: CustomRow[] = [
   {
@@ -38,24 +39,33 @@ const rows: CustomRow[] = [
     async content(event: AnswerResultsEvent): Promise<string> {
       const malId = event.songInfo.siteIds.malId
       let score = scoreCache.get(malId)
-      if (score === undefined) {
+      let title = titleCache.get(malId)
+      if (score === undefined || title === undefined) {
         try {
           // Jikan API
           const result = await getAnimeById(malId)
           score = result.data.score
+          title = result.data.title_japanese
         } catch (e: unknown) {
-          console.error(e)
-
           try {
             // MyAnimeList API
             const result = await getAnimeScoreById(malId)
             score = result.mean
+            title = result.alternative_titles.ja
           } catch (e: unknown) {
-            console.error(e)
             score = null
+            title = null
           }
         }
         scoreCache.set(malId, score)
+        titleCache.set(malId, title)
+      }
+
+      if (title !== null) {
+        const element = document.getElementById('qpAnimeName')
+        if (element !== null) {
+          element.textContent = title
+        }
       }
 
       if (score === null) {

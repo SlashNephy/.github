@@ -6,4 +6,7 @@ export type GetAnimeScoreResponse = {
     large: string
   }
   mean: number | null
+  alternative_titles: {
+    ja: string | null
+  }
 }
