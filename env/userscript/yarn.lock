@@ -1863,7 +1863,7 @@ __metadata:
     "@types/tampermonkey": 4.0.5
     concurrently: 7.4.0
     eslint: 8.24.0
-    fuzzyset: 1.0.5
+    fuzzyset: 1.0.7
     markdown-doc-builder: 1.3.0
     prettier: 2.7.1
     rollup: 2.79.1
@@ -3773,10 +3773,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fuzzyset@npm:1.0.5":
-  version: 1.0.5
-  resolution: "fuzzyset@npm:1.0.5"
-  checksum: 95297d5f964060132b4ae3660e0819ec2c7b7daffe6400e056de8506164d51205af4165124a914bd8c63e7f76e6abbc0a923ea01e12b792da5375deaa17f1b13
+"fuzzyset@npm:1.0.7":
+  version: 1.0.7
+  resolution: "fuzzyset@npm:1.0.7"
+  checksum: d78974e14f676117427562717d3e63030baa76bcf7827b998823a600d7b9b0405e5ab6960088f9862e2fc5987d6be5a91efc4f6dd6b7c48335ee198c2af38f42
   languageName: node
   linkType: hard
 
