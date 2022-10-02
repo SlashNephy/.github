@@ -7,7 +7,7 @@ export class GM_Value<T> {
   ) {
     const value = GM_getValue<T | null>(_key, null)
     if (_initialize && value === null) {
-      GM_setValue(_key, _initialize)
+      GM_setValue(_key, _default)
     }
   }
 
