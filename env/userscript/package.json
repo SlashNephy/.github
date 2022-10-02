@@ -21,6 +21,9 @@
     "lint:prettier": "prettier --check .",
     "watch": "yarn bundle -w"
   },
+  "dependencies": {
+    "fuzzyset": "1.0.5"
+  },
   "devDependencies": {
     "@babel/core": "7.19.3",
     "@babel/preset-env": "7.19.3",
@@ -31,6 +34,7 @@
     "@slashnephy/prettier-config": "0.1.1",
     "@types/babel__core": "7.1.19",
     "@types/babel__preset-env": "7.9.2",
+    "@types/fuzzyset": "1.0.4",
     "@types/jquery": "3.5.14",
     "@types/node": "18.7.14",
     "@types/tampermonkey": "4.0.5",
