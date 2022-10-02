@@ -1,0 +1,36 @@
+@document regexp("https://fod.fujitv.co.jp/title/.+/.+/") {
+    #root > header,
+    #root > div > nav,
+    #root > div > div > div.sp-only,
+    #root > div > div > div.ps-scroll_box,
+    #root > div > div > div.st-Inner.js-LineupBasis.st-Inner-1024 > section > div.geGePrEp-Status,
+    #root > div > div > div.st-Inner.js-LineupBasis.st-Inner-1024 > section > div.geGePrEp-Title,
+    #root > div > div > div.st-Inner.js-LineupBasis.st-Inner-1024 > section > p,
+    #root > div > div > div.st-Inner.js-LineupBasis.st-Inner-1024 > section > div.geGePrEp-Detail,
+    #root > div > div > div.st-Inner.js-LineupBasis.st-Inner-1024 > section > div:nth-child(6),
+    #root > div > div > footer {
+        display: none;
+    }
+
+    .st-Inner {
+      padding: unset;
+    }
+
+    .st-Inner-1024 {
+        max-width: 100%;
+    }
+
+    .st-Contents {
+        width: 100%;
+        margin: 0;
+        padding: 0 !important;
+    }
+
+    .geGePrEp-MV {
+        margin: 0;
+    }
+
+    body {
+        overflow: hidden;
+    }
+}
