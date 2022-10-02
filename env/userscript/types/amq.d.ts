@@ -45,6 +45,10 @@ declare global {
         updateState(state: unknown): void
       }
       _playerAnswerListner: ReturnType<Window['Listener']>
+      infoContainer: {
+        $extraAnimeNameContent: HTMLElement | string
+        fitTextToContainer()
+      }
     }
     quizVideoController?: {
       currentMoePlayerId: string
