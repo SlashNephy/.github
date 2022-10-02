@@ -235,7 +235,7 @@ const rows = [
         scoreCache.set(malId, score)
         titleCache.set(malId, title)
       }
-      if (title !== null) {
+      if (title !== null && navigator.language === 'ja') {
         const element = document.getElementById('qpAnimeName')
         if (element !== null) {
           element.innerHTML = `${title}<br/>(${element.textContent})`
