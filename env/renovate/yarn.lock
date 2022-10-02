@@ -1842,17 +1842,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/osv-offline@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@renovatebot/osv-offline@npm:1.0.2"
+"@renovatebot/osv-offline@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@renovatebot/osv-offline@npm:1.0.3"
   dependencies:
     "@octokit/rest": 19.0.4
     "@renovatebot/osv-offline-db": 1.0.1
     adm-zip: ^0.5.9
     fs-extra: 10.0.0
     got: 11.8.5
-    luxon: 3.0.3
-  checksum: e687066657f0eafd24735a3be6f1bb74150ba2050b46b57229ca437656a48fda2c85d446446283684fd5497161a142953ab2a6d1961cc211b00501eac5216b7c
+    luxon: 3.0.4
+  checksum: 690f926d0dc0186157bd47323b50bd2a35c14bdcbbb4d178011f007d9c9fb0c3af317780fe5f2559cb30b33a65c4149b140367fbb02115994dc0f59b3b3a89d4
   languageName: node
   linkType: hard
 
@@ -1959,7 +1959,7 @@ __metadata:
     eslint: 8.24.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.211.0
+    renovate: 32.211.2
     ts-node: 10.9.1
     typescript: 4.8.4
   languageName: unknown
@@ -3406,20 +3406,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-select@npm:^4.2.1":
-  version: 4.3.0
-  resolution: "css-select@npm:4.3.0"
+"css-select@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "css-select@npm:5.1.0"
   dependencies:
     boolbase: ^1.0.0
-    css-what: ^6.0.1
-    domhandler: ^4.3.1
-    domutils: ^2.8.0
+    css-what: ^6.1.0
+    domhandler: ^5.0.2
+    domutils: ^3.0.1
     nth-check: ^2.0.1
-  checksum: d6202736839194dd7f910320032e7cfc40372f025e4bf21ca5bf6eb0a33264f322f50ba9c0adc35dadd342d3d6fae5ca244779a4873afbfa76561e343f2058e0
+  checksum: 2772c049b188d3b8a8159907192e926e11824aea525b8282981f72ba3f349cf9ecd523fdf7734875ee2cb772246c22117fc062da105b6d59afe8dcd5c99c9bda
   languageName: node
   linkType: hard
 
-"css-what@npm:^6.0.1":
+"css-what@npm:^6.1.0":
   version: 6.1.0
   resolution: "css-what@npm:6.1.0"
   checksum: b975e547e1e90b79625918f84e67db5d33d896e6de846c9b584094e529f0c63e2ab85ee33b9daffd05bff3a146a1916bec664e18bb76dd5f66cbff9fc13b2bbe
@@ -3655,41 +3655,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dom-serializer@npm:^1.0.1":
-  version: 1.4.1
-  resolution: "dom-serializer@npm:1.4.1"
+"dom-serializer@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "dom-serializer@npm:2.0.0"
   dependencies:
-    domelementtype: ^2.0.1
-    domhandler: ^4.2.0
-    entities: ^2.0.0
-  checksum: fbb0b01f87a8a2d18e6e5a388ad0f7ec4a5c05c06d219377da1abc7bb0f674d804f4a8a94e3f71ff15f6cb7dcfc75704a54b261db672b9b3ab03da6b758b0b22
+    domelementtype: ^2.3.0
+    domhandler: ^5.0.2
+    entities: ^4.2.0
+  checksum: cd1810544fd8cdfbd51fa2c0c1128ec3a13ba92f14e61b7650b5de421b88205fd2e3f0cc6ace82f13334114addb90ed1c2f23074a51770a8e9c1273acbc7f3e6
   languageName: node
   linkType: hard
 
-"domelementtype@npm:^2.0.1, domelementtype@npm:^2.2.0":
+"domelementtype@npm:^2.3.0":
   version: 2.3.0
   resolution: "domelementtype@npm:2.3.0"
   checksum: ee837a318ff702622f383409d1f5b25dd1024b692ef64d3096ff702e26339f8e345820f29a68bcdcea8cfee3531776b3382651232fbeae95612d6f0a75efb4f6
   languageName: node
   linkType: hard
 
-"domhandler@npm:^4.2.0, domhandler@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "domhandler@npm:4.3.1"
+"domhandler@npm:^5.0.1, domhandler@npm:^5.0.2":
+  version: 5.0.3
+  resolution: "domhandler@npm:5.0.3"
   dependencies:
-    domelementtype: ^2.2.0
-  checksum: 4c665ceed016e1911bf7d1dadc09dc888090b64dee7851cccd2fcf5442747ec39c647bb1cb8c8919f8bbdd0f0c625a6bafeeed4b2d656bbecdbae893f43ffaaa
+    domelementtype: ^2.3.0
+  checksum: 0f58f4a6af63e6f3a4320aa446d28b5790a009018707bce2859dcb1d21144c7876482b5188395a188dfa974238c019e0a1e610d2fc269a12b2c192ea2b0b131c
   languageName: node
   linkType: hard
 
-"domutils@npm:^2.8.0":
-  version: 2.8.0
-  resolution: "domutils@npm:2.8.0"
+"domutils@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "domutils@npm:3.0.1"
   dependencies:
-    dom-serializer: ^1.0.1
-    domelementtype: ^2.2.0
-    domhandler: ^4.2.0
-  checksum: abf7434315283e9aadc2a24bac0e00eab07ae4313b40cc239f89d84d7315ebdfd2fb1b5bf750a96bc1b4403d7237c7b2ebf60459be394d625ead4ca89b934391
+    dom-serializer: ^2.0.0
+    domelementtype: ^2.3.0
+    domhandler: ^5.0.1
+  checksum: 23aa7a840572d395220e173cb6263b0d028596e3950100520870a125af33ff819e6f609e1606d6f7d73bd9e7feb03bb404286e57a39063b5384c62b724d987b3
   languageName: node
   linkType: hard
 
@@ -3803,10 +3803,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:2.2.0, entities@npm:^2.0.0":
+"entities@npm:2.2.0":
   version: 2.2.0
   resolution: "entities@npm:2.2.0"
   checksum: 19010dacaf0912c895ea262b4f6128574f9ccf8d4b3b65c7e8334ad0079b3706376360e28d8843ff50a78aabcb8f08f0a32dbfacdc77e47ed77ca08b713669b3
+  languageName: node
+  linkType: hard
+
+"entities@npm:^4.2.0":
+  version: 4.4.0
+  resolution: "entities@npm:4.4.0"
+  checksum: 84d250329f4b56b40fa93ed067b194db21e8815e4eb9b59f43a086f0ecd342814f6bc483de8a77da5d64e0f626033192b1b4f1792232a7ea6b970ebe0f3187c2
   languageName: node
   linkType: hard
 
@@ -6000,10 +6007,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:3.0.3":
-  version: 3.0.3
-  resolution: "luxon@npm:3.0.3"
-  checksum: 67d143f102f520761c4202086579a5cf30b230ea299da27cacb31e9f9d372cadef90f14cbe7e2621b70825b267fe00128b8176ed8b7172b48f77a403a662d5aa
+"luxon@npm:3.0.4":
+  version: 3.0.4
+  resolution: "luxon@npm:3.0.4"
+  checksum: d0908c3951da2a10ccf23040210ead23b0da5366a9d0954e7d5db3560189a7bd703d8af1e00084f197effc9cd7158d1bddf32886d98a70d59ce9bc3fe88bbce0
   languageName: node
   linkType: hard
 
@@ -6507,13 +6514,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-html-parser@npm:6.1.0":
-  version: 6.1.0
-  resolution: "node-html-parser@npm:6.1.0"
+"node-html-parser@npm:6.1.1":
+  version: 6.1.1
+  resolution: "node-html-parser@npm:6.1.1"
   dependencies:
-    css-select: ^4.2.1
+    css-select: ^5.1.0
     he: 1.2.0
-  checksum: f91c2dadd59aec3c0124e7d20adf7c6187606be906d005383d37ccfe341695e59357367c64dc85b8e2cec3c06f9733d0b905c967d4cdf064d51b491ca07fff10
+  checksum: ce4d4035dfedafed117349db0717ce3cb4ce9d64ea0e4f43e43c6f264496561f0ecc8790908d45ea8ad4c8f3c5933a68f309bce39f1845922f1da127501d4b86
   languageName: node
   linkType: hard
 
@@ -7326,9 +7333,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.211.0":
-  version: 32.211.0
-  resolution: "renovate@npm:32.211.0"
+"renovate@npm:32.211.2":
+  version: 32.211.2
+  resolution: "renovate@npm:32.211.2"
   dependencies:
     "@aws-sdk/client-ec2": 3.155.0
     "@aws-sdk/client-ecr": 3.154.0
@@ -7337,7 +7344,7 @@ __metadata:
     "@breejs/later": 4.1.0
     "@cheap-glitch/mi-cron": 1.0.1
     "@iarna/toml": 2.2.5
-    "@renovatebot/osv-offline": 1.0.2
+    "@renovatebot/osv-offline": 1.0.3
     "@renovatebot/pep440": 2.1.5
     "@renovatebot/ruby-semver": 1.1.6
     "@sindresorhus/is": 4.6.0
@@ -7384,14 +7391,14 @@ __metadata:
     json-dup-key-validator: 1.0.3
     json-stringify-pretty-compact: 3.0.0
     json5: 2.2.1
-    luxon: 3.0.3
+    luxon: 3.0.4
     markdown-it: 13.0.1
     markdown-table: 2.0.0
     marshal: 0.5.4
     minimatch: 5.1.0
     moo: 0.5.1
     nanoid: 3.3.4
-    node-html-parser: 6.1.0
+    node-html-parser: 6.1.1
     openpgp: 5.5.0
     p-all: 3.0.0
     p-map: 4.0.0
@@ -7423,7 +7430,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 4d36e2ff2fb2f57ca9e6dad1b83366e481e02560560caffa21aa5c860edff20d1bd00ac81867c7784e807db6285a80d67e5d609083b4e7c4192003b1c246d717
+  checksum: 3eac87ccbf6b52eac1c8c0ed750210591b96f8046a01bf89bf91dd7d9de4830c0dcb1833d26fed7f327f8b78ffaadc49a931f21a5e20b228cee6cc51bad16345
   languageName: node
   linkType: hard
 
