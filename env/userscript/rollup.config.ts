@@ -77,7 +77,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.4.3',
+    version: '0.4.4',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',
@@ -134,7 +134,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-detailed-song-info',
     name: 'AMQ Detailed Song Info',
-    version: '0.6.1',
+    version: '0.6.2',
     description: {
       en: 'Display detailed information on the side panel of the song.',
       ja: '曲のサイドパネルに詳細な情報を表示します。',
@@ -192,7 +192,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-song-guess-rate',
     name: 'AMQ Song Guess Rate',
-    version: '0.2.1',
+    version: '0.2.2',
     description: {
       en: 'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
       ja: '曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)',
