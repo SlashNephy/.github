@@ -12,25 +12,20 @@
   #root > div > div > footer {
     display: none;
   }
-
   .st-Inner {
     padding: unset;
   }
-
   .st-Inner-1024 {
     max-width: 100%;
   }
-
   .st-Contents {
     width: 100%;
     margin: 0;
     padding: 0 !important;
   }
-
   .geGePrEp-MV {
     margin: 0;
   }
-
   body {
     overflow: hidden;
   }
