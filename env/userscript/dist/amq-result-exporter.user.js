@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.2
+// @version         0.4.3
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
@@ -41,6 +41,30 @@ const fetchArmEntries = async () => {
     url: 'https://raw.githubusercontent.com/kawaiioverflow/arm/master/arm.json',
   })
   return JSON.parse(response.responseText)
+}
+
+class GM_Value {
+  _key
+  _default
+  _initialize
+  constructor(_key, _default, _initialize = true) {
+    this._key = _key
+    this._default = _default
+    this._initialize = _initialize
+    const value = GM_getValue(_key, null)
+    if (_initialize && value === null) {
+      GM_setValue(_key, null)
+    }
+  }
+  get() {
+    return GM_getValue(this._key, this._default)
+  }
+  set(value) {
+    GM_setValue(this._key, value)
+  }
+  delete() {
+    GM_deleteValue(this._key)
+  }
 }
 
 class AmqAnswerTimesUtility {
@@ -163,21 +187,20 @@ const addStyle = (css) => {
   style.appendChild(document.createTextNode(css))
 }
 
-const loadGasUrl = () => {
-  const url = GM_getValue('GAS_URL', null)
-  if (url !== null) {
-    return url
-  }
-  GM_setValue('GAS_URL', '')
-  throw new Error('Please set GAS_URL from the Storage tab in Tampermonkey dashboard.')
-}
-loadGasUrl()
+const gasUrl = new GM_Value('GAS_URL', '')
+const dryRun = new GM_Value('DRY_RUN', false)
 const armEntries = []
 fetchArmEntries()
   .then((entries) => armEntries.push(...entries))
   .catch(console.error)
 const executeGas = async (row) => {
-  const url = loadGasUrl()
+  const url = gasUrl.get()
+  if (url === '') {
+    throw new Error('Please set GAS_URL from the Storage tab in Tampermonkey dashboard.')
+  }
+  if (dryRun.get()) {
+    return
+  }
   await executeXhr({
     url,
     method: 'POST',

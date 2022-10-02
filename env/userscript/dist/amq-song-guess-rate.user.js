@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Song Guess Rate
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)
 // @description:ja  曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)
@@ -19,6 +19,30 @@
 // @grant           GM_listValues
 // @license         MIT license
 // ==/UserScript==
+
+class GM_Value {
+  _key
+  _default
+  _initialize
+  constructor(_key, _default, _initialize = true) {
+    this._key = _key
+    this._default = _default
+    this._initialize = _initialize
+    const value = GM_getValue(_key, null)
+    if (_initialize && value === null) {
+      GM_setValue(_key, null)
+    }
+  }
+  get() {
+    return GM_getValue(this._key, this._default)
+  }
+  set(value) {
+    GM_setValue(this._key, value)
+  }
+  delete() {
+    GM_deleteValue(this._key)
+  }
+}
 
 const createInstalledWindow = () => {
   if (!window.setupDocumentDone) return
@@ -116,12 +140,13 @@ if (unsafeWindow.detailedSongInfo === undefined) {
 }
 const increment = async (key, isCorrect) => {
   const hashKey = await digestMessage(key)
-  const count = GM_getValue(hashKey, { correct: 0, total: 0 })
+  const value = new GM_Value(hashKey, { correct: 0, total: 0 })
+  const count = value.get()
   count.total++
   if (isCorrect) {
     count.correct++
   }
-  GM_setValue(hashKey, count)
+  value.set(count)
   return count
 }
 const migrate = async () => {
@@ -130,12 +155,14 @@ const migrate = async () => {
   await Promise.all(
     oldKeys.map(async (key) => {
       const hashKey = await digestMessage(key)
-      const count = GM_getValue(hashKey, { correct: 0, total: 0 })
-      const oldCount = GM_getValue(key, { correct: 0, total: 0 })
+      const value = new GM_Value(hashKey, { correct: 0, total: 0 })
+      const count = value.get()
+      const oldValue = new GM_Value(hashKey, { correct: 0, total: 0 }, false)
+      const oldCount = oldValue.get()
       count.total += oldCount.total
       count.correct += oldCount.correct
-      GM_setValue(hashKey, count)
-      GM_deleteValue(key)
+      value.set(count)
+      oldValue.delete()
     })
   )
 }
