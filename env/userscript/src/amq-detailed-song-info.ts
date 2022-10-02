@@ -1,3 +1,4 @@
+import { GM_Value } from '../lib/GM_Value'
 import { getAnimeById } from '../lib/jikan'
 import { getAnimeScoreById } from '../lib/mal'
 import { addScriptData, addStyle } from '../lib/thirdparty/amqScriptInfo'
@@ -11,32 +12,52 @@ type EvaluatedCustomLink = Omit<CustomLink, 'id' | 'href'> & { readonly href: st
 const scoreCache = new Map<number, number | null>()
 const titleCache = new Map<number, string | null>()
 
+const showDifficultyRow = new GM_Value('SHOW_DIFFICULTY_ROW', true)
+const showVintageRow = new GM_Value('SHOW_VINTAGE_ROW', true)
+const showFormatRow = new GM_Value('SHOW_FORMAT_ROW', true)
+const showRatingRow = new GM_Value('SHOW_RATING_ROW', true)
+const showSpotifyLink = new GM_Value('SHOW_SPOTIFY_LINK', true)
+const showYouTubeLink = new GM_Value('SHOW_YOUTUBE_LINK', true)
+const showAnnLink = new GM_Value('SHOW_ANN_LINK', true)
+
 const rows: CustomRow[] = [
   {
     id: 'difficulty-row',
     title: 'Difficulty',
-    content(event: AnswerResultsEvent): string {
+    isEnabled() {
+      return showDifficultyRow.get()
+    },
+    content(event: AnswerResultsEvent) {
       return `${event.songInfo.animeDifficulty.toFixed(1)} / 100`
     },
   },
   {
     id: 'vintage-row',
     title: 'Vintage',
-    content(event: AnswerResultsEvent): string {
+    isEnabled() {
+      return showVintageRow.get()
+    },
+    content(event: AnswerResultsEvent) {
       return event.songInfo.vintage
     },
   },
   {
     id: 'format-row',
     title: 'Format',
-    content(event: AnswerResultsEvent): string {
+    isEnabled() {
+      return showFormatRow.get()
+    },
+    content(event: AnswerResultsEvent) {
       return event.songInfo.animeType
     },
   },
   {
     id: 'rating-row',
     title: 'Rating',
-    async content(event: AnswerResultsEvent): Promise<string> {
+    isEnabled() {
+      return showRatingRow.get()
+    },
+    async content(event: AnswerResultsEvent) {
       const malId = event.songInfo.siteIds.malId
       let score = scoreCache.get(malId)
       let title = titleCache.get(malId)
@@ -82,7 +103,10 @@ const links: CustomLink[] = [
     id: 'spotify-link',
     title: 'Spotify',
     target: '_blank',
-    href(event: AnswerResultsEvent): string {
+    isEnabled() {
+      return showSpotifyLink.get()
+    },
+    href(event: AnswerResultsEvent) {
       return `spotify://search/${encodeURIComponent(event.songInfo.songName)}%20${encodeURIComponent(
         event.songInfo.artist
       )}/tracks`
@@ -92,7 +116,10 @@ const links: CustomLink[] = [
     id: 'youtube-link',
     title: 'YouTube',
     target: '_blank',
-    href(event: AnswerResultsEvent): string {
+    isEnabled() {
+      return showYouTubeLink.get()
+    },
+    href(event: AnswerResultsEvent) {
       return `https://www.youtube.com/results?search_query=${encodeURIComponent(
         event.songInfo.songName
       )}+${encodeURIComponent(event.songInfo.artist)}`
@@ -102,7 +129,10 @@ const links: CustomLink[] = [
     id: 'ann-link',
     title: 'ANN',
     target: '_blank',
-    href(event: AnswerResultsEvent): string {
+    isEnabled() {
+      return showAnnLink.get()
+    },
+    href(event: AnswerResultsEvent) {
       return `https://www.animenewsnetwork.com/encyclopedia/anime.php?id=${event.songInfo.annId}`
     },
   },
@@ -116,6 +146,10 @@ const handle = (event: AnswerResultsEvent) => {
 
   // CustomRow
   for (const row of rows) {
+    if (row.isEnabled !== undefined && !row.isEnabled()) {
+      continue
+    }
+
     const element = getOrCreateRow(container, row.id)
 
     // 既に row が挿入されていれば、textContent の更新だけ行う
@@ -151,6 +185,7 @@ const handle = (event: AnswerResultsEvent) => {
   renderLinks(
     element,
     links
+      .filter((link) => link.isEnabled === undefined || link.isEnabled())
       .map((link) => {
         const href = link.href(event)
         if (href === null) {
