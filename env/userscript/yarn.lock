@@ -1857,11 +1857,13 @@ __metadata:
     "@slashnephy/prettier-config": 0.1.1
     "@types/babel__core": 7.1.19
     "@types/babel__preset-env": 7.9.2
+    "@types/fuzzyset": 1.0.4
     "@types/jquery": 3.5.14
     "@types/node": 18.7.14
     "@types/tampermonkey": 4.0.5
     concurrently: 7.4.0
     eslint: 8.24.0
+    fuzzyset: 1.0.5
     markdown-doc-builder: 1.3.0
     prettier: 2.7.1
     rollup: 2.79.1
@@ -1958,6 +1960,13 @@ __metadata:
   version: 0.0.39
   resolution: "@types/estree@npm:0.0.39"
   checksum: 412fb5b9868f2c418126451821833414189b75cc6bf84361156feed733e3d92ec220b9d74a89e52722e03d5e241b2932732711b7497374a404fad49087adc248
+  languageName: node
+  linkType: hard
+
+"@types/fuzzyset@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@types/fuzzyset@npm:1.0.4"
+  checksum: 006cad4fa7733edf2325c140536ddd70b8651a6075e46a549938a2bd83da059fdec8b5828b5fc8bda11ad119bad2056f2ed0b37dab94e3ac87b1d3b3ec395149
   languageName: node
   linkType: hard
 
@@ -3761,6 +3770,13 @@ __metadata:
   version: 1.2.3
   resolution: "functions-have-names@npm:1.2.3"
   checksum: c3f1f5ba20f4e962efb71344ce0a40722163e85bee2101ce25f88214e78182d2d2476aa85ef37950c579eb6cf6ee811c17b3101bb84004bb75655f3e33f3fdb5
+  languageName: node
+  linkType: hard
+
+"fuzzyset@npm:1.0.5":
+  version: 1.0.5
+  resolution: "fuzzyset@npm:1.0.5"
+  checksum: 95297d5f964060132b4ae3660e0819ec2c7b7daffe6400e056de8506164d51205af4165124a914bd8c63e7f76e6abbc0a923ea01e12b792da5375deaa17f1b13
   languageName: node
   linkType: hard
 
