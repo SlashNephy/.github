@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.5.1
+// @version         0.6.0
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -142,6 +142,7 @@ const addStyle = (css) => {
 }
 
 const scoreCache = new Map()
+const titleCache = new Map()
 const rows = [
   {
     id: 'difficulty-row',
@@ -170,21 +171,30 @@ const rows = [
     async content(event) {
       const malId = event.songInfo.siteIds.malId
       let score = scoreCache.get(malId)
-      if (score === undefined) {
+      let title = titleCache.get(malId)
+      if (score === undefined || title === undefined) {
         try {
           const result = await getAnimeById(malId)
           score = result.data.score
+          title = result.data.title_japanese
         } catch (e) {
-          console.error(e)
           try {
             const result = await getAnimeScoreById(malId)
             score = result.mean
+            title = result.alternative_titles.ja
           } catch (e) {
-            console.error(e)
             score = null
+            title = null
           }
         }
         scoreCache.set(malId, score)
+        titleCache.set(malId, title)
+      }
+      if (title !== null) {
+        const element = document.getElementById('qpAnimeName')
+        if (element !== null) {
+          element.textContent = title
+        }
       }
       if (score === null) {
         return `${event.songInfo.animeScore.toFixed(2)} / 10`
