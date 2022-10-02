@@ -1,3 +1,4 @@
+import { GM_Value } from '../lib/GM_Value'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { AnswerResultsEvent } from '../types/amq'
@@ -13,13 +14,14 @@ type GuessCount = {
 
 const increment = async (key: string, isCorrect: boolean) => {
   const hashKey = await digestMessage(key)
-  const count = GM_getValue<GuessCount>(hashKey, { correct: 0, total: 0 })
+  const value = new GM_Value<GuessCount>(hashKey, { correct: 0, total: 0 })
+  const count = value.get()
   count.total++
   if (isCorrect) {
     count.correct++
   }
 
-  GM_setValue(hashKey, count)
+  value.set(count)
   return count
 }
 
@@ -30,14 +32,16 @@ const migrate = async () => {
   await Promise.all(
     oldKeys.map(async (key) => {
       const hashKey = await digestMessage(key)
-      const count = GM_getValue<GuessCount>(hashKey, { correct: 0, total: 0 })
+      const value = new GM_Value<GuessCount>(hashKey, { correct: 0, total: 0 })
+      const count = value.get()
 
-      const oldCount = GM_getValue<GuessCount>(key, { correct: 0, total: 0 })
+      const oldValue = new GM_Value<GuessCount>(hashKey, { correct: 0, total: 0 }, false)
+      const oldCount = oldValue.get()
       count.total += oldCount.total
       count.correct += oldCount.correct
 
-      GM_setValue(hashKey, count)
-      GM_deleteValue(key)
+      value.set(count)
+      oldValue.delete()
     })
   )
 }

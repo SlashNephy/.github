@@ -192,7 +192,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-song-guess-rate',
     name: 'AMQ Song Guess Rate',
-    version: '0.2.0',
+    version: '0.2.1',
     description: {
       en: 'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
       ja: '曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)',
