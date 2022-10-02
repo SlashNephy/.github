@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "eslint-plugin-jest": "27.0.4",
     "eslint-plugin-jest-formatting": "3.1.0",
     "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-no-void-return-type": "1.0.2",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-package-json": "0.1.4",
     "eslint-plugin-promise": "6.0.1",

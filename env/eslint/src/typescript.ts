@@ -9,6 +9,7 @@ const typescript: Linter.Config = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
     'plugin:import/typescript',
+    'plugin:no-void-return-type/recommended',
   ],
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',

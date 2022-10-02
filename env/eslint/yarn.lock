@@ -180,6 +180,7 @@ __metadata:
     eslint-plugin-jest: 27.0.4
     eslint-plugin-jest-formatting: 3.1.0
     eslint-plugin-json: 3.1.0
+    eslint-plugin-no-void-return-type: 1.0.2
     eslint-plugin-node: 11.1.0
     eslint-plugin-package-json: 0.1.4
     eslint-plugin-promise: 6.0.1
@@ -1142,6 +1143,13 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
   checksum: 311ab993ed982d0cc7cb0ba02fbc4b36c4a94e9434f31e97f13c4d67e8ecb8aec36baecfd759ff70498846e7e11d7a197eb04c39ad64934baf3354712fd0bc9d
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-no-void-return-type@npm:1.0.2":
+  version: 1.0.2
+  resolution: "eslint-plugin-no-void-return-type@npm:1.0.2"
+  checksum: e10001c7d9a638c5f424066075897385beb5450788fe2aea8e8c5b039a3eedcb66679318e6658d0950252d16a6899aae3c637f549a656473b47a131331ea9c21
   languageName: node
   linkType: hard
 
