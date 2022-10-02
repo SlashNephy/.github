@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.4
+// @version         0.4.5
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
@@ -53,7 +53,7 @@ class GM_Value {
     this._initialize = _initialize
     const value = GM_getValue(_key, null)
     if (_initialize && value === null) {
-      GM_setValue(_key, _initialize)
+      GM_setValue(_key, _default)
     }
   }
   get() {
