@@ -22,26 +22,24 @@
 // ==/UserScript==
 
 class GM_Value {
-  _key
-  _default
-  _initialize
-  constructor(_key, _default, _initialize = true) {
-    this._key = _key
-    this._default = _default
-    this._initialize = _initialize
-    const value = GM_getValue(_key, null)
-    if (_initialize && value === null) {
-      GM_setValue(_key, _default)
+  key
+  defaultValue
+  constructor(key, defaultValue, initialize = true) {
+    this.key = key
+    this.defaultValue = defaultValue
+    const value = GM_getValue(key, null)
+    if (initialize && value === null) {
+      GM_setValue(key, defaultValue)
     }
   }
   get() {
-    return GM_getValue(this._key, this._default)
+    return GM_getValue(this.key, this.defaultValue)
   }
   set(value) {
-    GM_setValue(this._key, value)
+    GM_setValue(this.key, value)
   }
   delete() {
-    GM_deleteValue(this._key)
+    GM_deleteValue(this.key)
   }
 }
 

@@ -21,27 +21,32 @@
 // ==/UserScript==
 
 class GM_Value {
-  _key
-  _default
-  _initialize
-  constructor(_key, _default, _initialize = true) {
-    this._key = _key
-    this._default = _default
-    this._initialize = _initialize
-    const value = GM_getValue(_key, null)
-    if (_initialize && value === null) {
-      GM_setValue(_key, _default)
+  key
+  defaultValue
+  constructor(key, defaultValue, initialize = true) {
+    this.key = key
+    this.defaultValue = defaultValue
+    const value = GM_getValue(key, null)
+    if (initialize && value === null) {
+      GM_setValue(key, defaultValue)
     }
   }
   get() {
-    return GM_getValue(this._key, this._default)
+    return GM_getValue(this.key, this.defaultValue)
   }
   set(value) {
-    GM_setValue(this._key, value)
+    GM_setValue(this.key, value)
   }
   delete() {
-    GM_deleteValue(this._key)
+    GM_deleteValue(this.key)
   }
+}
+
+const makeSha256HexDigest = async (message) => {
+  const data = new TextEncoder().encode(message)
+  const buffer = await crypto.subtle.digest('SHA-256', data)
+  const arrayBuffer = Array.from(new Uint8Array(buffer))
+  return arrayBuffer.map((b) => b.toString(16).padStart(2, '0')).join('')
 }
 
 const createInstalledWindow = () => {
@@ -139,7 +144,7 @@ if (unsafeWindow.detailedSongInfo === undefined) {
   throw new Error('AMQ Detailed Song Info plugin is not installed.')
 }
 const increment = async (key, isCorrect) => {
-  const hashKey = await digestMessage(key)
+  const hashKey = await makeSha256HexDigest(key)
   const value = new GM_Value(hashKey, { correct: 0, total: 0 })
   const count = value.get()
   count.total++
@@ -154,7 +159,7 @@ const migrate = async () => {
   const oldKeys = GM_listValues().filter((k) => regex.exec(k) === null)
   await Promise.all(
     oldKeys.map(async (key) => {
-      const hashKey = await digestMessage(key)
+      const hashKey = await makeSha256HexDigest(key)
       const value = new GM_Value(hashKey, { correct: 0, total: 0 })
       const count = value.get()
       const oldValue = new GM_Value(hashKey, { correct: 0, total: 0 }, false)
@@ -165,12 +170,6 @@ const migrate = async () => {
       oldValue.delete()
     })
   )
-}
-const digestMessage = async (message) => {
-  const data = new TextEncoder().encode(message)
-  const buffer = await crypto.subtle.digest('SHA-256', data)
-  const arrayBuffer = Array.from(new Uint8Array(buffer))
-  return arrayBuffer.map((b) => b.toString(16).padStart(2, '0')).join('')
 }
 unsafeWindow.detailedSongInfo.register({
   id: 'guess-rate-row',
