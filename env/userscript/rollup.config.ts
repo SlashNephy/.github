@@ -222,7 +222,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-display-answer-time-2',
     name: 'AMQ Display Answer Time 2',
-    version: '0.1.0',
+    version: '0.2.0',
     description: {
       en: 'Display player answer time in seconds.',
       ja: 'プレイヤーの解答時間を秒単位で表示します。',

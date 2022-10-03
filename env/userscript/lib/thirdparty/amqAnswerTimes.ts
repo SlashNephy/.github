@@ -3,6 +3,7 @@
 class AmqAnswerTimesUtility {
   public songStartTime = 0
   public playerTimes: number[] = []
+  public firstPlayers: number[] = []
 
   public constructor() {
     if (unsafeWindow.Listener === undefined) {
@@ -12,10 +13,16 @@ class AmqAnswerTimesUtility {
     new unsafeWindow.Listener('play next song', () => {
       this.songStartTime = Date.now()
       this.playerTimes = []
+      this.firstPlayers = []
     }).bindListener()
 
     new unsafeWindow.Listener('player answered', (playerIds) => {
       const time = Date.now() - this.songStartTime
+
+      if (this.playerTimes.length === 0) {
+        this.firstPlayers.push(...playerIds)
+      }
+
       for (const id of playerIds) {
         this.playerTimes[id] = time
       }
@@ -30,6 +37,10 @@ class AmqAnswerTimesUtility {
 
   public query(playerId: number): number | null {
     return playerId in this.playerTimes ? this.playerTimes[playerId] : null
+  }
+
+  public isFirst(playerId: number): boolean {
+    return playerId in this.firstPlayers
   }
 }
 
