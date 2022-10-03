@@ -31,7 +31,8 @@ const formatAnswerTime = (playerId: number): string | null => {
     return null
   }
 
-  return `${(time / 1000).toFixed(2)} s`
+  const isLightning = amqAnswerTimes.isFirst(playerId)
+  return `${isLightning ? '⚡ ' : ''}${(time / 1000).toFixed(2)} s`
 }
 
 const handlePlayerAnswered = (event: PlayerAnsweredEvent) => {
