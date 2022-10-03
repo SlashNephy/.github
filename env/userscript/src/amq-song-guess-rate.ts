@@ -1,4 +1,5 @@
 import { GM_Value } from '../lib/GM_Value'
+import { makeSha256HexDigest } from '../lib/hash'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { AnswerResultsEvent } from '../types/amq'
@@ -13,7 +14,7 @@ type GuessCount = {
 }
 
 const increment = async (key: string, isCorrect: boolean) => {
-  const hashKey = await digestMessage(key)
+  const hashKey = await makeSha256HexDigest(key)
   const value = new GM_Value<GuessCount>(hashKey, { correct: 0, total: 0 })
   const count = value.get()
   count.total++
@@ -31,7 +32,7 @@ const migrate = async () => {
   const oldKeys = GM_listValues().filter((k) => regex.exec(k) === null)
   await Promise.all(
     oldKeys.map(async (key) => {
-      const hashKey = await digestMessage(key)
+      const hashKey = await makeSha256HexDigest(key)
       const value = new GM_Value<GuessCount>(hashKey, { correct: 0, total: 0 })
       const count = value.get()
 
@@ -44,13 +45,6 @@ const migrate = async () => {
       oldValue.delete()
     })
   )
-}
-
-const digestMessage = async (message: string) => {
-  const data = new TextEncoder().encode(message)
-  const buffer = await crypto.subtle.digest('SHA-256', data)
-  const arrayBuffer = Array.from(new Uint8Array(buffer))
-  return arrayBuffer.map((b) => b.toString(16).padStart(2, '0')).join('')
 }
 
 unsafeWindow.detailedSongInfo.register({
