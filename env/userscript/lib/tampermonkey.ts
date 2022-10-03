@@ -162,11 +162,23 @@ const headers: {
   },
   {
     key: 'homepage',
-    render: (b) => b.homepage ?? `https://github.com/SlashNephy/.github/blob/master/env/userscript/src/${b.id}.ts`,
+    render: (b) => {
+      if (b.private === true) {
+        return
+      }
+
+      return b.homepage ?? `https://github.com/SlashNephy/.github/blob/master/env/userscript/src/${b.id}.ts`
+    },
   },
   {
     key: 'homepageURL',
-    render: (b) => b.homepage ?? `https://github.com/SlashNephy/.github/blob/master/env/userscript/src/${b.id}.ts`,
+    render: (b) => {
+      if (b.private === true) {
+        return
+      }
+
+      return b.homepage ?? `https://github.com/SlashNephy/.github/blob/master/env/userscript/src/${b.id}.ts`
+    },
   },
   {
     key: 'icon',
@@ -208,7 +220,13 @@ const headers: {
   },
   {
     key: 'supportURL',
-    render: (b) => b.supportUrl ?? 'https://github.com/SlashNephy/.github/issues',
+    render: (b) => {
+      if (b.private === true) {
+        return
+      }
+
+      return b.supportUrl ?? 'https://github.com/SlashNephy/.github/issues'
+    },
   },
   {
     key: 'include',
@@ -279,7 +297,13 @@ const headers: {
   },
   {
     key: 'license',
-    render: (b) => b.license ?? 'MIT license',
+    render: (b) => {
+      if (b.private === true) {
+        return
+      }
+
+      return b.license ?? 'MIT license'
+    },
   },
 ]
 
