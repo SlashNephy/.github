@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Display Answer Time 2
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.2.0
 // @author          SlashNephy
 // @description     Display player answer time in seconds.
 // @description:ja  プレイヤーの解答時間を秒単位で表示します。
@@ -19,6 +19,7 @@
 class AmqAnswerTimesUtility {
   songStartTime = 0
   playerTimes = []
+  firstPlayers = []
   constructor() {
     if (unsafeWindow.Listener === undefined) {
       return
@@ -26,9 +27,13 @@ class AmqAnswerTimesUtility {
     new unsafeWindow.Listener('play next song', () => {
       this.songStartTime = Date.now()
       this.playerTimes = []
+      this.firstPlayers = []
     }).bindListener()
     new unsafeWindow.Listener('player answered', (playerIds) => {
       const time = Date.now() - this.songStartTime
+      if (this.playerTimes.length === 0) {
+        this.firstPlayers.push(...playerIds)
+      }
       for (const id of playerIds) {
         this.playerTimes[id] = time
       }
@@ -41,6 +46,9 @@ class AmqAnswerTimesUtility {
   }
   query(playerId) {
     return playerId in this.playerTimes ? this.playerTimes[playerId] : null
+  }
+  isFirst(playerId) {
+    return playerId in this.firstPlayers
   }
 }
 const amqAnswerTimes = new AmqAnswerTimesUtility()
@@ -157,7 +165,8 @@ const formatAnswerTime = (playerId) => {
   if (time === null) {
     return null
   }
-  return `${(time / 1000).toFixed(2)} s`
+  const isLightning = amqAnswerTimes.isFirst(playerId)
+  return `${isLightning ? '⚡ ' : ''}${(time / 1000).toFixed(2)} s`
 }
 const handlePlayerAnswered = (event) => {
   if (unsafeWindow.quiz === undefined) {

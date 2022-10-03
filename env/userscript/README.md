@@ -23,7 +23,7 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | AMQ Clear Answer                  | 1.0.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-clear-answer.user.js                  |
 | AMQ Song Guess Rate               | 0.2.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-song-guess-rate.user.js               |
 | AMQ sanime Link                   | 0.1.2          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js                   |
-| AMQ Display Answer Time 2         | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js         |
+| AMQ Display Answer Time 2         | 0.2.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js         |
 
 ### Annict Work Links (v0.2.5)
 
@@ -115,7 +115,7 @@ Display guess rates per song in side panel of the song. (Requires AMQ Detailed S
 
 Display links to sanime and "i(lyl)2m" in the player list.
 
-### AMQ Display Answer Time 2 (v0.1.0)
+### AMQ Display Answer Time 2 (v0.2.0)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-display-answer-time-2.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%A7%A3%E7%AD%94%E6%99%82%E9%96%93%E3%82%92%E7%A7%92%E5%8D%98%E4%BD%8D%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 

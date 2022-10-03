@@ -68,6 +68,7 @@ class GM_Value {
 class AmqAnswerTimesUtility {
   songStartTime = 0
   playerTimes = []
+  firstPlayers = []
   constructor() {
     if (unsafeWindow.Listener === undefined) {
       return
@@ -75,9 +76,13 @@ class AmqAnswerTimesUtility {
     new unsafeWindow.Listener('play next song', () => {
       this.songStartTime = Date.now()
       this.playerTimes = []
+      this.firstPlayers = []
     }).bindListener()
     new unsafeWindow.Listener('player answered', (playerIds) => {
       const time = Date.now() - this.songStartTime
+      if (this.playerTimes.length === 0) {
+        this.firstPlayers.push(...playerIds)
+      }
       for (const id of playerIds) {
         this.playerTimes[id] = time
       }
@@ -90,6 +95,9 @@ class AmqAnswerTimesUtility {
   }
   query(playerId) {
     return playerId in this.playerTimes ? this.playerTimes[playerId] : null
+  }
+  isFirst(playerId) {
+    return playerId in this.firstPlayers
   }
 }
 const amqAnswerTimes = new AmqAnswerTimesUtility()
