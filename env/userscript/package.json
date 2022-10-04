@@ -8,8 +8,10 @@
   },
   "scripts": {
     "build": "tsc --noEmit",
-    "bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript && yarn format",
-    "bundle:private": "rollup --config rollup.config.private.ts --configPlugin @rollup/plugin-typescript && yarn format",
+    "build:rollup": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "build:rollup:private": "rollup --config rollup.config.private.ts --configPlugin @rollup/plugin-typescript",
+    "bundle": "yarn build:rollup && yarn format",
+    "bundle:private": "yarn build:rollup:private && yarn format",
     "ci": "concurrently -n ci: 'yarn:ci:*'",
     "ci:bundle": "yarn bundle",
     "ci:generate-readme": "ts-node --project tsconfig.bin.json bin/generate-readme.ts && yarn format:prettier",
@@ -19,7 +21,8 @@
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "watch": "yarn bundle -w"
+    "watch": "yarn build:rollup -w",
+    "watch:private": "yarn build:rollup:private -w"
   },
   "dependencies": {
     "fuzzyset": "1.0.7"
