@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# IntelliJ からのコミットは許可する
+# shellcheck disable=SC2154
+if [[ "${__CFBundleIdentifier}" = "com.jetbrains.intellij" ]]
+then
+  exit 0
+fi
+
+local_branch=$(git symbolic-ref HEAD | sed -e 's:^refs/heads/::')
+
+for branch in "master" "main" "develop" "dev" "staging"
+do
+  if [[ "${local_branch}" = "${branch}" ]]
+  then
+    while true
+    do
+      read -r -p "[Warning] You are about to commit to $branch. Do you really want to commit? [y/N]: " result
+      case $result in
+        [Yy]*) exit 0;;
+            *) exit 1;;
+      esac
+    done
+  fi
+done

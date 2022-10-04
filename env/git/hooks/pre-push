@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# IntelliJ からのプッシュは許可する
+# shellcheck disable=SC2154
+if [[ "${__CFBundleIdentifier}" = "com.jetbrains.intellij" ]]
+then
+  exit 0
+fi
+
+while read -r _ _ remote_ref _
+do
+  remote_branch=${remote_ref##refs/heads/}
+
+  for branch in "master" "main" "develop" "dev" "staging"
+  do
+    if [[ "$remote_branch" = "$branch" ]]
+    then
+      while true
+      do
+        read -r -p "[Warning] You are about to push to $branch. Do you really want to push? [y/N]: " result
+        case $result in
+          [Yy]*) exit 0;;
+              *) exit 1;;
+        esac
+      done
+    fi
+  done
+done
