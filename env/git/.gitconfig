@@ -4,6 +4,7 @@
 [core]
   excludesFile = ~/.gitignore
   autocrlf = input
+  hooksPath = ~/.github/env/git/hooks
 
 [commit]
   gpgsign = true
