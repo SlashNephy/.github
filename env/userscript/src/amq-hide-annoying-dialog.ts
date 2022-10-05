@@ -1,28 +1,21 @@
+import { isAmqReady } from '../lib/amq'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Window {
-    originalDisplayMessage: Exclude<Window['displayMessage'], undefined>
-    displayMessage?(
-      title: string,
-      message: string,
-      callback?: () => void,
-      isOutsideDismiss?: boolean,
-      disableSwal?: boolean
-    ): void
+    displayMessage: typeof displayMessage
   }
 }
 
-if (unsafeWindow.displayMessage !== undefined) {
-  unsafeWindow.originalDisplayMessage = unsafeWindow.displayMessage
-
+if (isAmqReady()) {
+  const originalDisplayMessage = displayMessage
   unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {
     if (title === 'Disconnected from server' || title === 'Successfully  Reconnected') {
       return
     }
 
-    unsafeWindow.originalDisplayMessage(
+    originalDisplayMessage(
       title,
       message,
       // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -31,10 +24,10 @@ if (unsafeWindow.displayMessage !== undefined) {
       disableSwal ?? false
     )
   }
-}
 
-addScriptData({
-  name: 'Hide Annoying Dialog',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Hide annoying message dialogs when disconnecting and reconnecting.',
-})
+  addScriptData({
+    name: 'Hide Annoying Dialog',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Hide annoying message dialogs when disconnecting and reconnecting.',
+  })
+}

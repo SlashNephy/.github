@@ -63,7 +63,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-preload-video',
     name: 'AMQ Preload Video',
-    version: '0.2.3',
+    version: '0.2.4',
     description: {
       en: 'Just enable media preloading. Buffering may be faster.',
       ja: 'プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。',
@@ -73,11 +73,12 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
   },
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.4.5',
+    version: '0.4.6',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',
@@ -119,7 +120,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-private-session',
     name: 'AMQ Private Session',
-    version: '0.2.4',
+    version: '0.2.5',
     description: {
       en: 'Set invisible status automatically on login.',
       ja: 'ログイン時に Invisible ステータスを設定します。',
@@ -134,7 +135,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-detailed-song-info',
     name: 'AMQ Detailed Song Info',
-    version: '0.6.4',
+    version: '0.6.5',
     description: {
       en: 'Display detailed information on the side panel of the song.',
       ja: '曲のサイドパネルに詳細な情報を表示します。',
@@ -150,7 +151,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-hide-annoying-dialog',
     name: 'AMQ Hide Annoying Dialog',
-    version: '0.1.0',
+    version: '0.1.1',
     description: {
       en: 'Hide annoying message dialogs when disconnecting and reconnecting.',
       ja: 'コネクションの切断や再接続時の邪魔なメッセージダイアログを非表示にします。',
@@ -165,7 +166,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-readable-watching-status',
     name: 'AMQ Readable Watching Status',
-    version: '0.1.0',
+    version: '0.1.1',
     description: {
       en: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
       ja: '解答欄の幅を狭め、視聴状況のインジケーターを読みやすくします。',
@@ -175,11 +176,12 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
   },
   {
     id: 'amq-clear-answer',
     name: 'AMQ Clear Answer',
-    version: '1.0.0',
+    version: '1.0.1',
     description: {
       en: 'Add a feature to clear text in the answer column with Delete key.',
       ja: 'Delete キーを押下することで解答欄のテキストをクリアする機能を追加します。',
@@ -188,11 +190,12 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
   },
   {
     id: 'amq-song-guess-rate',
     name: 'AMQ Song Guess Rate',
-    version: '0.2.3',
+    version: '0.2.4',
     description: {
       en: 'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
       ja: '曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)',
@@ -207,7 +210,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-sanime-link',
     name: 'AMQ sanime Link',
-    version: '0.1.2',
+    version: '0.1.3',
     description: {
       en: 'Display links to sanime and "i(lyl)2m" in the player list.',
       ja: 'プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。',
@@ -222,7 +225,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-display-answer-time-2',
     name: 'AMQ Display Answer Time 2',
-    version: '0.2.0',
+    version: '0.2.1',
     description: {
       en: 'Display player answer time in seconds.',
       ja: 'プレイヤーの解答時間を秒単位で表示します。',

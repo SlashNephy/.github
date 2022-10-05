@@ -1,3 +1,4 @@
+import { isAmqReady } from '../lib/amq'
 import { amqAnswerTimes } from '../lib/thirdparty/amqAnswerTimes'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
@@ -36,10 +37,6 @@ const formatAnswerTime = (playerId: number): string | null => {
 }
 
 const handlePlayerAnswered = (event: PlayerAnsweredEvent) => {
-  if (unsafeWindow.quiz === undefined) {
-    return
-  }
-
   for (const playerId of event.filter((id) => !ignoredPlayerIds.includes(id))) {
     const time = formatAnswerTime(playerId)
     if (time !== null) {
@@ -49,10 +46,6 @@ const handlePlayerAnswered = (event: PlayerAnsweredEvent) => {
 }
 
 const handlePlayerAnswers = (event: PlayerAnswersEvent) => {
-  if (unsafeWindow.quiz === undefined) {
-    return
-  }
-
   for (const answer of event.answers) {
     const time = formatAnswerTime(answer.gamePlayerId)
     const text = time !== null ? `${answer.answer} (${time})` : answer.answer
@@ -71,14 +64,14 @@ const handlePlayerAnswers = (event: PlayerAnswersEvent) => {
   unsafeWindow.quiz.videoTimerBar.updateState(event.progressBarState)
 }
 
-if (unsafeWindow.Listener !== undefined && unsafeWindow.quiz !== undefined) {
-  new unsafeWindow.Listener('Game Starting', handleGameStarting).bindListener()
-  new unsafeWindow.Listener('player answered', handlePlayerAnswered).bindListener()
-  unsafeWindow.quiz._playerAnswerListner = new unsafeWindow.Listener('player answers', handlePlayerAnswers)
-}
+if (isAmqReady()) {
+  new Listener('Game Starting', handleGameStarting).bindListener()
+  new Listener('player answered', handlePlayerAnswered).bindListener()
+  unsafeWindow.quiz._playerAnswerListner = new Listener('player answers', handlePlayerAnswers)
 
-addScriptData({
-  name: 'Display Answer Time 2',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Display player answer time in seconds.',
-})
+  addScriptData({
+    name: 'Display Answer Time 2',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Display player answer time in seconds.',
+  })
+}

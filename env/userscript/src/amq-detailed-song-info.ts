@@ -1,3 +1,4 @@
+import { isAmqReady } from '../lib/amq'
 import { GM_Value } from '../lib/GM_Value'
 import { getAnimeById } from '../lib/jikan'
 import { getAnimeScoreById } from '../lib/mal'
@@ -86,7 +87,7 @@ const rows: CustomRow[] = [
         const element = document.getElementById('qpAnimeName')
         if (element !== null) {
           element.innerHTML = `${title}<br/>(${element.textContent})`
-          unsafeWindow.quiz?.infoContainer.fitTextToContainer()
+          unsafeWindow.quiz.infoContainer.fitTextToContainer()
         }
       }
 
@@ -288,45 +289,42 @@ const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
   }
 }
 
-if (unsafeWindow.detailedSongInfo === undefined) {
-  unsafeWindow.detailedSongInfo = {
-    register(item: CustomRow | CustomLink) {
-      const container = 'content' in item ? rows : links
-      if (container.some((x) => x.id === item.id)) {
-        return
-      }
+unsafeWindow.detailedSongInfo = {
+  register(item: CustomRow | CustomLink) {
+    const container = 'content' in item ? rows : links
+    if (container.some((x) => x.id === item.id)) {
+      return
+    }
 
-      container.push(item as unknown as CustomRow & CustomLink)
-    },
-    unregister(item: CustomRow | CustomLink) {
-      const container = 'content' in item ? rows : links
-      const index = container.findIndex((x) => x.id === item.id)
-      if (index >= 0) {
-        container.splice(index, 1)
-      }
-    },
-    get rows(): CustomRow[] {
-      return rows
-    },
-    get links(): CustomLink[] {
-      return links
-    },
-  }
+    container.push(item as unknown as CustomRow & CustomLink)
+  },
+  unregister(item: CustomRow | CustomLink) {
+    const container = 'content' in item ? rows : links
+    const index = container.findIndex((x) => x.id === item.id)
+    if (index >= 0) {
+      container.splice(index, 1)
+    }
+  },
+  get rows(): CustomRow[] {
+    return rows
+  },
+  get links(): CustomLink[] {
+    return links
+  },
 }
 
-if (unsafeWindow.Listener !== undefined) {
-  const listener = new unsafeWindow.Listener('answer results', handle)
-  listener.bindListener()
-}
+if (isAmqReady()) {
+  new Listener('answer results', handle).bindListener()
 
-addScriptData({
-  name: 'Detailed Song Info',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Display detailed information on the side panel of the song.',
-})
+  addScriptData({
+    name: 'Detailed Song Info',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Display detailed information on the side panel of the song.',
+  })
 
-addStyle(`
-.custom-hider {
-  padding: 50% 0;
+  addStyle(`
+    .custom-hider {
+      padding: 50% 0;
+    }
+  `)
 }
-`)

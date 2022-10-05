@@ -1,104 +1,238 @@
 // eslint-disable-next-line eslint-comments/disable-enable-pair
 /* eslint-disable @typescript-eslint/naming-convention */
+// noinspection JSUnusedGlobalSymbols
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Window {
-    quiz?: {
-      gameMode: string
-      players: Record<
-        number,
-        {
-          avatarInfo: {
-            avatar: unknown
-            background: unknown
-          }
-          avatarSlot: {
-            $answerContainerText: JQuery
-            _disabled: boolean
-          }
-          gamePlayerId: number
-          hidden: undefined
-          isSelf: boolean
-          level: number
-          lifeCountEnabled: boolean
-          particleAnimation: unknown
-          particleTrack: unknown
-          points: number
-          startPositionSlot: number
-          teamNumber: number | null
-          _groupNumber: number
-          _host: boolean
-          _inGame: boolean
-          _name: string
-          answer: string
-          unknownAnswerNumber: number
-          toggleTeamAnswerSharing(flag: boolean): void
+    quiz: Quiz
+    quizVideoController: QuizVideoController
+    options: Options
+    setupDocumentDone?: boolean
+    selfName: string
+    socialTab: SocialTab
+    socket: Socket
+  }
+
+  declare function displayMessage(
+    title: string,
+    msg: string,
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    callback: () => void = () => {},
+    outsideDismiss = true,
+    disableSWAL = false
+  ): void
+}
+
+// scripts/pages/gamePage/game/quiz/quiz.js
+declare global {
+  declare class Quiz {
+    // incomplete
+    public gameMode: string
+    public players: Record<
+      number,
+      {
+        avatarInfo: {
+          avatar: unknown
+          background: unknown
         }
-      >
-      isSpectator: boolean
-      answerInput: {
-        showSubmitedAnswer(): void
-        resetAnswerState(): void
-      }
-      videoTimerBar: {
-        updateState(state: unknown): void
-      }
-      _playerAnswerListner: ReturnType<Window['Listener']>
-      infoContainer: {
-        $extraAnimeNameContent: HTMLElement | string
-        fitTextToContainer()
-      }
-    }
-    quizVideoController?: {
-      currentMoePlayerId: string
-      moePlayers: Record<
-        string,
-        {
-          $player: JQuery
-          startPoint: number
+        avatarSlot: {
+          $answerContainerText: JQuery
+          _disabled: boolean
         }
-      >
-    }
-    options?: {
-      $SETTING_TABS: JQuery
-      $SETTING_CONTAINERS: JQuery
-    }
-    selfName?: string
-    socialTab?: {
-      // scripts/pages/gamePage/menuBar/socialStatus.js
-      socialStatus?: {
-        currentStatus: number
-        changeSocialStatus(status: number): void
-        getSocialStatusInfo(status: number): string
+        gamePlayerId: number
+        hidden: undefined
+        isSelf: boolean
+        level: number
+        lifeCountEnabled: boolean
+        particleAnimation: unknown
+        particleTrack: unknown
+        points: number
+        startPositionSlot: number
+        teamNumber: number | null
+        _groupNumber: number
+        _host: boolean
+        _inGame: boolean
+        _name: string
+        answer: string
+        unknownAnswerNumber: number
+        toggleTeamAnswerSharing(flag: boolean): void
       }
+    >
+    public isSpectator: boolean
+    public answerInput: {
+      $input: JQuery
+      showSubmitedAnswer(): void
+      resetAnswerState(): void
+      submitAnswer()
     }
-    // scripts/pages/gamePage/shared/listener.js
-    Listener?: new <K extends keyof EventMap>(command: K, callback: (event: EventMap[K]) => void) => {
-      command: K
-      // eslint-disable-next-line @typescript-eslint/method-signature-style
-      callback: (event: EventMap[K]) => void
-      bound: boolean
-      fire(event: EventMap[K]): void
-      bindListener(): void
-      unbindListener(): void
+    public videoTimerBar: {
+      updateState(state: unknown): void
     }
-    // scripts/pages/gamePage/shared/socket.js
-    socket?: {
-      _socket: Window['socket']
-      listners: Record<string, (event: unknown) => void>
-      _disconnected: boolean
-      _sessionId: number | undefined
-      _attempReconect: boolean
-      setup(): void
-      addListerner<K extends keyof EventMap>(command: K, listener: (event: EventMap[K]) => void): void
-      removeListener<T>(command: string, listener: (event: T) => void): void
-      sendCommand<T>(content: { command: string } & Record<string, unknown>, responseHandler?: (event: T) => void): void
+    public _playerAnswerListner: ReturnType<Window['Listener']>
+    public infoContainer: {
+      $extraAnimeNameContent: HTMLElement | string
+      fitTextToContainer()
     }
+    public nextSongPlayLength: number
   }
 }
 
-type EventMap = {
+// scripts/pages/gamePage/menuBar/socialStatus.js
+declare global {
+  declare class SocialStatus {
+    public currentStatus: number
+    public STATUS_IDS: {
+      ONLINE: number
+      DO_NO_DISTURB: number
+      AWAY: number
+      INVISIBLE: number
+    }
+    public constructor(public $entry: JQuery)
+    public changeSocialStatus(status: number): void
+    public getSocialStatusInfo(status: number): string
+  }
+}
+
+// scripts/pages/gamePage/menuBar/socialTab.js
+declare global {
+  declare class SocialTab {
+    // incomplete
+    public socialStatus?: SocialStatus
+  }
+}
+
+// scripts/pages/gamePage/shared/socket.js
+declare global {
+  declare class Socket {
+    public _socket: unknown
+    public listners: { [command in keyof EventMap]: (event: EventMap[command]) => void }
+    public _disconnected: boolean
+    public _sessionId: number | undefined
+    public _attempReconect: boolean
+    public setup(): void
+    public addListerner<C extends keyof EventMap>(command: C, listener: (event: EventMap[C]) => void): void
+    public removeListener<C extends keyof EventMap>(command: C, listener: (event: EventMap[C]) => void): void
+    public sendCommand<C extends keyof EventMap>(
+      content: { command: C } & Record<string, unknown>,
+      responseHandler?: (event: EventMap[C]) => void
+    ): void
+  }
+}
+
+// scripts/pages/gamePage/shared/listener.js
+declare global {
+  declare class Listener<C extends keyof EventMap> {
+    public bound: boolean
+    public constructor(public command: C, public callback: (event: EventMap[C]) => void)
+    public fire(event: EventMap[C]): void
+    public bindListener(): void
+    public unbindListener(): void
+  }
+}
+
+// scripts/pages/gamePage/settings/options.js
+declare global {
+  declare class Options {
+    // incomplete
+    public $SETTING_TABS: JQuery
+    public $SETTING_CONTAINERS: JQuery
+  }
+}
+
+declare class QuizVideoController {
+  // incomplete
+  public currentMoePlayerId: string
+  public moePlayers: Record<
+    string,
+    {
+      $player: JQuery
+      startPoint: number
+    }
+  >
+}
+
+declare class QuizAnswerState {
+  public $SENDING_CONTAINER: JQuery
+  public $ANSWER_CHECK: JQuery
+  public $OUTER_CONTAINER: JQuery
+  public $INNER_CONTAINER: JQuery
+  public $INPUT: JQuery
+  public loadingInterval?: number
+  public currentAnswer: null | undefined
+  public submittedAnswer: null
+  public popoverContent: unknown
+  public answerListener: ReturnType<Exclude<Window['Listener'], undefined>>
+
+  public constructor($input: JQuery)
+  public startListner()
+  public stopListener()
+  public startLoad()
+  public stopLoad()
+  public show()
+  public hide()
+  public showCheck()
+  public hideCheck()
+  public submitAnswer(answer: unknown, showState: boolean, noLoad: boolean)
+  public reset()
+  public toggleFade(on: boolean)
+  public setInputToAnswer()
+  public answerSubmited()
+}
+
+declare class Awesomplete {}
+
+declare class AmqAwesomeplete extends Awesomplete {
+  public searchId: number
+  public currentSubList: unknown[] | null
+  public _list: unknown[] | null
+  public letterLists: Record<string, unknown[]>
+  public currentQuery: string
+  public $ul: JQuery
+  public minChars: number
+  public index: number
+  public constructor(input: unknown, o: unknown, scrollable: boolean)
+  public item(text: string, input: string, item_id: string): HTMLLIElement
+  public evaluate()
+}
+
+declare class AutoCompleteController {
+  public list: unknown[]
+  public version: unknown
+  public awesomepleteInstance?: AmqAwesomeplete
+
+  public constructor(public $input: JQuery)
+  public updateList()
+  public newList()
+  public hide()
+}
+
+declare class QuizAnswerInput {
+  public $input: JQuery
+  public $inputContainer: JQuery
+  public quizAnswerState: QuizAnswerState
+  public autoCompleteController: AutoCompleteController
+  public gotTeamAnswer: boolean
+  public _inFocus: boolean
+
+  public constructor(public skipController: unknown)
+  public get inFocus(): boolean
+  public set inFocus(newValue: boolean)
+  // eslint-disable-next-line accessor-pairs
+  public set active(newValue: boolean)
+  public displayAnswer(answer: unknown)
+  public setNewAnswer(answer: unknown)
+  public submitAnswer(showState: boolean)
+  public showSubmitedAnswer()
+  public handleGuessPhaseOver()
+  public disable()
+  public enable()
+  public clear()
+  public updateAutocomplete()
+  public resetAnswerState()
+}
+
+export type EventMap = Record<string, never> & {
   'answer results': AnswerResultsEvent
   'Game Starting': GameStartingEvent
   'player answered': PlayerAnsweredEvent
@@ -106,6 +240,7 @@ type EventMap = {
   'player answers': PlayerAnswersEvent
   'player profile': PlayerProfileEvent
   'play next song': unknown
+  'expandLibrary questions': ExpandLibraryQuestionsEvent
 }
 
 export type AnswerResultsEvent = {
@@ -256,4 +391,27 @@ export type PlayerProfileEvent = {
     value: number
     adminView: boolean
   }
+}
+
+export type ExpandLibraryQuestionsEvent = {
+  success: boolean
+  questions: {
+    annId: number
+    name: string
+    songs: {
+      annSongId: number
+      artist: string
+      examples: Record<string, string>
+      name: string
+      number: number
+      type: number
+      versions: {
+        open: Record<string, Record<string, number>>
+        closed: {
+          resolution: number | null
+          status: number
+        }
+      }
+    }[]
+  }[]
 }

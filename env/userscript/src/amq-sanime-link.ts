@@ -1,3 +1,4 @@
+import { isAmqReady } from '../lib/amq'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { GameStartingEvent, PlayerProfileEvent } from '../types/amq'
@@ -130,10 +131,6 @@ const handleGameStarting = (event: GameStartingEvent) => {
 }
 
 const handleAnswerResults = () => {
-  if (unsafeWindow.quiz === undefined) {
-    return
-  }
-
   const playerNames = Object.values(unsafeWindow.quiz.players).map((p) => p._name)
   handle(playerNames)
 }
@@ -145,17 +142,13 @@ const cache: { playerNames: string[]; lists: PlayerAnimeList[] } = {
 
 const fetchPlayerAnimeLists = async (playerNames: string[]) => {
   return new Promise<PlayerAnimeList[]>((resolve) => {
-    if (unsafeWindow.Listener === undefined || unsafeWindow.socket === undefined) {
-      throw new Error('Listener or socket is not defined.')
-    }
-
     if (contentEquals(cache.playerNames, playerNames)) {
       resolve(cache.lists)
       return
     }
 
     const lists: PlayerAnimeList[] = []
-    const listener = new unsafeWindow.Listener('player profile', (event) => {
+    const listener = new Listener('player profile', (event) => {
       lists.push({
         type: event.list.listId,
         username: event.list.listUser,
@@ -240,13 +233,13 @@ const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
   }
 }
 
-if (unsafeWindow.Listener !== undefined) {
-  new unsafeWindow.Listener('Game Starting', handleGameStarting).bindListener()
-  new unsafeWindow.Listener('answer results', handleAnswerResults).bindListener()
-}
+if (isAmqReady()) {
+  new Listener('Game Starting', handleGameStarting).bindListener()
+  new Listener('answer results', handleAnswerResults).bindListener()
 
-addScriptData({
-  name: 'sanime Link',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Display links to sanime and "i(lyl)2m" in the player list.',
-})
+  addScriptData({
+    name: 'sanime Link',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Display links to sanime and "i(lyl)2m" in the player list.',
+  })
+}

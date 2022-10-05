@@ -1,3 +1,4 @@
+import { isAmqReady } from '../lib/amq'
 import { executeXhr } from '../lib/api'
 import { fetchArmEntries } from '../lib/arm'
 import { GM_Value } from '../lib/GM_Value'
@@ -39,9 +40,6 @@ const executeGas = async (row: (string | number | boolean)[]) => {
 
 const handle = (payload: AnswerResultsEvent) => {
   const { quiz, quizVideoController } = unsafeWindow
-  if (quiz === undefined || quizVideoController === undefined) {
-    return
-  }
 
   // 自分が参加していないときは無視
   const self = Object.values(quiz.players).find((p) => p.isSelf && p._inGame)
@@ -172,13 +170,12 @@ const handle = (payload: AnswerResultsEvent) => {
   executeGas(row).catch(console.error)
 }
 
-if (unsafeWindow.Listener !== undefined) {
-  const listener = new unsafeWindow.Listener('answer results', handle)
-  listener.bindListener()
-}
+if (isAmqReady()) {
+  new Listener('answer results', handle).bindListener()
 
-addScriptData({
-  name: 'Result Exporter',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Export song results to Google Spreadsheet!',
-})
+  addScriptData({
+    name: 'Result Exporter',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Export song results to Google Spreadsheet!',
+  })
+}
