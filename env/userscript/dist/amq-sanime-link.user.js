@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ sanime Link
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.2
+// @version         0.1.3
 // @author          SlashNephy
 // @description     Display links to sanime and "i(lyl)2m" in the player list.
 // @description:ja  プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。
@@ -16,8 +16,12 @@
 // @license         MIT license
 // ==/UserScript==
 
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
+
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -69,6 +73,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -101,6 +106,7 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
@@ -199,9 +205,6 @@ const handleGameStarting = (event) => {
   handle(playerNames)
 }
 const handleAnswerResults = () => {
-  if (unsafeWindow.quiz === undefined) {
-    return
-  }
   const playerNames = Object.values(unsafeWindow.quiz.players).map((p) => p._name)
   handle(playerNames)
 }
@@ -211,15 +214,12 @@ const cache = {
 }
 const fetchPlayerAnimeLists = async (playerNames) => {
   return new Promise((resolve) => {
-    if (unsafeWindow.Listener === undefined || unsafeWindow.socket === undefined) {
-      throw new Error('Listener or socket is not defined.')
-    }
     if (contentEquals(cache.playerNames, playerNames)) {
       resolve(cache.lists)
       return
     }
     const lists = []
-    const listener = new unsafeWindow.Listener('player profile', (event) => {
+    const listener = new Listener('player profile', (event) => {
       lists.push({
         type: event.list.listId,
         username: event.list.listUser,
@@ -287,12 +287,12 @@ const renderLinks = (element, links) => {
     }
   }
 }
-if (unsafeWindow.Listener !== undefined) {
-  new unsafeWindow.Listener('Game Starting', handleGameStarting).bindListener()
-  new unsafeWindow.Listener('answer results', handleAnswerResults).bindListener()
+if (isAmqReady()) {
+  new Listener('Game Starting', handleGameStarting).bindListener()
+  new Listener('answer results', handleAnswerResults).bindListener()
+  addScriptData({
+    name: 'sanime Link',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Display links to sanime and "i(lyl)2m" in the player list.',
+  })
 }
-addScriptData({
-  name: 'sanime Link',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Display links to sanime and "i(lyl)2m" in the player list.',
-})

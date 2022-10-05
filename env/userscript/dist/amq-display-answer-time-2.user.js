@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Display Answer Time 2
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Display player answer time in seconds.
 // @description:ja  プレイヤーの解答時間を秒単位で表示します。
@@ -16,20 +16,24 @@
 // @license         MIT license
 // ==/UserScript==
 
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
+
 class AmqAnswerTimesUtility {
   songStartTime = 0
   playerTimes = []
   firstPlayers = []
   constructor() {
-    if (unsafeWindow.Listener === undefined) {
+    if (!isAmqReady()) {
       return
     }
-    new unsafeWindow.Listener('play next song', () => {
+    new Listener('play next song', () => {
       this.songStartTime = Date.now()
       this.playerTimes = []
       this.firstPlayers = []
     }).bindListener()
-    new unsafeWindow.Listener('player answered', (playerIds) => {
+    new Listener('player answered', (playerIds) => {
       const time = Date.now() - this.songStartTime
       if (this.playerTimes.length === 0) {
         this.firstPlayers.push(...playerIds)
@@ -38,7 +42,7 @@ class AmqAnswerTimesUtility {
         this.playerTimes[id] = time
       }
     }).bindListener()
-    new unsafeWindow.Listener('Join Game', ({ quizState }) => {
+    new Listener('Join Game', ({ quizState }) => {
       if (quizState.songTimer > 0) {
         this.songStartTime = Date.now() - quizState.songTimer * 1000
       }
@@ -54,7 +58,7 @@ class AmqAnswerTimesUtility {
 const amqAnswerTimes = new AmqAnswerTimesUtility()
 
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -106,6 +110,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -138,6 +143,7 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
@@ -169,9 +175,6 @@ const formatAnswerTime = (playerId) => {
   return `${isLightning ? '⚡ ' : ''}${(time / 1000).toFixed(2)} s`
 }
 const handlePlayerAnswered = (event) => {
-  if (unsafeWindow.quiz === undefined) {
-    return
-  }
   for (const playerId of event.filter((id) => !ignoredPlayerIds.includes(id))) {
     const time = formatAnswerTime(playerId)
     if (time !== null) {
@@ -180,9 +183,6 @@ const handlePlayerAnswered = (event) => {
   }
 }
 const handlePlayerAnswers = (event) => {
-  if (unsafeWindow.quiz === undefined) {
-    return
-  }
   for (const answer of event.answers) {
     const time = formatAnswerTime(answer.gamePlayerId)
     const text = time !== null ? `${answer.answer} (${time})` : answer.answer
@@ -197,13 +197,13 @@ const handlePlayerAnswers = (event) => {
   }
   unsafeWindow.quiz.videoTimerBar.updateState(event.progressBarState)
 }
-if (unsafeWindow.Listener !== undefined && unsafeWindow.quiz !== undefined) {
-  new unsafeWindow.Listener('Game Starting', handleGameStarting).bindListener()
-  new unsafeWindow.Listener('player answered', handlePlayerAnswered).bindListener()
-  unsafeWindow.quiz._playerAnswerListner = new unsafeWindow.Listener('player answers', handlePlayerAnswers)
+if (isAmqReady()) {
+  new Listener('Game Starting', handleGameStarting).bindListener()
+  new Listener('player answered', handlePlayerAnswered).bindListener()
+  unsafeWindow.quiz._playerAnswerListner = new Listener('player answers', handlePlayerAnswers)
+  addScriptData({
+    name: 'Display Answer Time 2',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Display player answer time in seconds.',
+  })
 }
-addScriptData({
-  name: 'Display Answer Time 2',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Display player answer time in seconds.',
-})

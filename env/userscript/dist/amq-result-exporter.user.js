@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.5
+// @version         0.4.6
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
@@ -20,6 +20,10 @@
 // @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
+
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
 
 const executeXhr = async (request) => {
   return new Promise((resolve, reject) => {
@@ -70,15 +74,15 @@ class AmqAnswerTimesUtility {
   playerTimes = []
   firstPlayers = []
   constructor() {
-    if (unsafeWindow.Listener === undefined) {
+    if (!isAmqReady()) {
       return
     }
-    new unsafeWindow.Listener('play next song', () => {
+    new Listener('play next song', () => {
       this.songStartTime = Date.now()
       this.playerTimes = []
       this.firstPlayers = []
     }).bindListener()
-    new unsafeWindow.Listener('player answered', (playerIds) => {
+    new Listener('player answered', (playerIds) => {
       const time = Date.now() - this.songStartTime
       if (this.playerTimes.length === 0) {
         this.firstPlayers.push(...playerIds)
@@ -87,7 +91,7 @@ class AmqAnswerTimesUtility {
         this.playerTimes[id] = time
       }
     }).bindListener()
-    new unsafeWindow.Listener('Join Game', ({ quizState }) => {
+    new Listener('Join Game', ({ quizState }) => {
       if (quizState.songTimer > 0) {
         this.songStartTime = Date.now() - quizState.songTimer * 1000
       }
@@ -103,7 +107,7 @@ class AmqAnswerTimesUtility {
 const amqAnswerTimes = new AmqAnswerTimesUtility()
 
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -155,6 +159,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -187,6 +192,7 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
@@ -220,9 +226,6 @@ const executeGas = async (row) => {
 }
 const handle = (payload) => {
   const { quiz, quizVideoController } = unsafeWindow
-  if (quiz === undefined || quizVideoController === undefined) {
-    return
-  }
   const self = Object.values(quiz.players).find((p) => p.isSelf && p._inGame)
   if (!self) {
     return
@@ -346,12 +349,11 @@ const handle = (payload) => {
   ]
   executeGas(row).catch(console.error)
 }
-if (unsafeWindow.Listener !== undefined) {
-  const listener = new unsafeWindow.Listener('answer results', handle)
-  listener.bindListener()
+if (isAmqReady()) {
+  new Listener('answer results', handle).bindListener()
+  addScriptData({
+    name: 'Result Exporter',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Export song results to Google Spreadsheet!',
+  })
 }
-addScriptData({
-  name: 'Result Exporter',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Export song results to Google Spreadsheet!',
-})

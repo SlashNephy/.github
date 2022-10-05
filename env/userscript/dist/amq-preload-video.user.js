@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Preload Video
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.3
+// @version         0.2.4
 // @author          SlashNephy
 // @description     Just enable media preloading. Buffering may be faster.
 // @description:ja  プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。
@@ -12,12 +12,16 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
-// @grant           none
+// @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
 
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
+
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -69,6 +73,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -101,20 +106,23 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
   style.appendChild(document.createTextNode(css))
 }
 
-document.addEventListener('DOMNodeInserted', () => {
-  for (const element of document.querySelectorAll('video')) {
-    element.preload = 'auto'
-  }
-})
-addScriptData({
-  name: 'Preload Video',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description:
-    'Just enable media preloading. Speed up buffering. Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!',
-})
+if (isAmqReady()) {
+  document.addEventListener('DOMNodeInserted', () => {
+    for (const element of document.querySelectorAll('video')) {
+      element.preload = 'auto'
+    }
+  })
+  addScriptData({
+    name: 'Preload Video',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description:
+      'Just enable media preloading. Speed up buffering. Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!',
+  })
+}
