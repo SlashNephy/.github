@@ -1,12 +1,9 @@
+import { isAmqReady } from '../lib/amq'
 import { GM_Value } from '../lib/GM_Value'
 import { makeSha256HexDigest } from '../lib/hash'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { AnswerResultsEvent } from '../types/amq'
-
-if (unsafeWindow.detailedSongInfo === undefined) {
-  throw new Error('AMQ Detailed Song Info plugin is not installed.')
-}
 
 type GuessCount = {
   correct: number
@@ -47,30 +44,32 @@ const migrate = async () => {
   )
 }
 
-unsafeWindow.detailedSongInfo.register({
-  id: 'guess-rate-row',
-  title: 'Guess Rate',
-  async content(event: AnswerResultsEvent): Promise<string | null> {
-    if (unsafeWindow.quiz === undefined) {
-      return null
-    }
+if (isAmqReady()) {
+  if (unsafeWindow.detailedSongInfo === undefined) {
+    throw new Error('AMQ Detailed Song Info plugin is not installed.')
+  }
 
-    const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
-    if (self === undefined) {
-      return null
-    }
+  unsafeWindow.detailedSongInfo.register({
+    id: 'guess-rate-row',
+    title: 'Guess Rate',
+    async content(event: AnswerResultsEvent): Promise<string | null> {
+      const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
+      if (self === undefined) {
+        return null
+      }
 
-    const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
-    const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
-    return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
-  },
-})
+      const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
+      const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
+      return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
+    },
+  })
 
-migrate().catch(console.error)
+  migrate().catch(console.error)
 
-addScriptData({
-  name: 'Song Guess Rate',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description:
-    'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
-})
+  addScriptData({
+    name: 'Song Guess Rate',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description:
+      'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
+  })
+}

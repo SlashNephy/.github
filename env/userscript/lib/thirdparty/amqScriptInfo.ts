@@ -3,18 +3,13 @@
 
 // from: https://github.com/TheJoseph98/AMQ-Scripts/blob/master/common/amqScriptInfo.js (MIT License)
 
-declare global {
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-  interface Window {
-    setupDocumentDone: boolean
-  }
-}
-
 /*
 Creates the installed scripts window if it doesn't exist and adds "Installed Userscripts" button to the main page and settings
 */
+import { isAmqReady } from '../amq'
+
 export const createInstalledWindow = (): void => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -79,6 +74,8 @@ metadataObj = {
 }
 */
 export const addScriptData = (metadata: { name?: string; author?: string; description?: string }): void => {
+  if (!isAmqReady()) return
+
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -112,6 +109,8 @@ export const addScriptData = (metadata: { name?: string; author?: string; descri
 }
 
 export const addStyle = (css: string): void => {
+  if (!isAmqReady()) return
+
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)

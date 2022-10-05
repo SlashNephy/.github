@@ -1,3 +1,4 @@
+import { isAmqReady } from '../lib/amq'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 const handleKeydown = (event: KeyboardEvent) => {
@@ -14,12 +15,14 @@ const handleKeydown = (event: KeyboardEvent) => {
   }
 }
 
-for (const input of document.querySelectorAll<HTMLInputElement>('input.flatTextInput')) {
-  input.addEventListener('keydown', handleKeydown)
-}
+if (isAmqReady()) {
+  for (const input of document.querySelectorAll<HTMLInputElement>('input.flatTextInput')) {
+    input.addEventListener('keydown', handleKeydown)
+  }
 
-addScriptData({
-  name: 'Clear Answer',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Add a feature to clear text in the answer column with delete key.',
-})
+  addScriptData({
+    name: 'Clear Answer',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Add a feature to clear text in the answer column with delete key.',
+  })
+}
