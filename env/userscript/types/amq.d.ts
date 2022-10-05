@@ -180,9 +180,7 @@ declare class QuizAnswerState {
   public answerSubmited()
 }
 
-declare class Awesomplete {}
-
-declare class AmqAwesomeplete extends Awesomplete {
+declare class AmqAwesomeplete {
   public searchId: number
   public currentSubList: unknown[] | null
   public _list: unknown[] | null
