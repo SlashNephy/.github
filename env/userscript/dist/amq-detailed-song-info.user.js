@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.6.4
+// @version         0.6.5
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -20,6 +20,10 @@
 // @grant           GM_setValue
 // @license         MIT license
 // ==/UserScript==
+
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
 
 class GM_Value {
   key
@@ -75,7 +79,7 @@ const getAnimeScoreById = async (id) => {
 }
 
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -127,6 +131,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -159,6 +164,7 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
@@ -237,7 +243,7 @@ const rows = [
         const element = document.getElementById('qpAnimeName')
         if (element !== null) {
           element.innerHTML = `${title}<br/>(${element.textContent})`
-          unsafeWindow.quiz?.infoContainer.fitTextToContainer()
+          unsafeWindow.quiz.infoContainer.fitTextToContainer()
         }
       }
       if (score === null) {
@@ -403,41 +409,38 @@ const renderLinks = (element, links) => {
     }
   }
 }
-if (unsafeWindow.detailedSongInfo === undefined) {
-  unsafeWindow.detailedSongInfo = {
-    register(item) {
-      const container = 'content' in item ? rows : links
-      if (container.some((x) => x.id === item.id)) {
-        return
-      }
-      container.push(item)
-    },
-    unregister(item) {
-      const container = 'content' in item ? rows : links
-      const index = container.findIndex((x) => x.id === item.id)
-      if (index >= 0) {
-        container.splice(index, 1)
-      }
-    },
-    get rows() {
-      return rows
-    },
-    get links() {
-      return links
-    },
-  }
+unsafeWindow.detailedSongInfo = {
+  register(item) {
+    const container = 'content' in item ? rows : links
+    if (container.some((x) => x.id === item.id)) {
+      return
+    }
+    container.push(item)
+  },
+  unregister(item) {
+    const container = 'content' in item ? rows : links
+    const index = container.findIndex((x) => x.id === item.id)
+    if (index >= 0) {
+      container.splice(index, 1)
+    }
+  },
+  get rows() {
+    return rows
+  },
+  get links() {
+    return links
+  },
 }
-if (unsafeWindow.Listener !== undefined) {
-  const listener = new unsafeWindow.Listener('answer results', handle)
-  listener.bindListener()
+if (isAmqReady()) {
+  new Listener('answer results', handle).bindListener()
+  addScriptData({
+    name: 'Detailed Song Info',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Display detailed information on the side panel of the song.',
+  })
+  addStyle(`
+    .custom-hider {
+      padding: 50% 0;
+    }
+  `)
 }
-addScriptData({
-  name: 'Detailed Song Info',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Display detailed information on the side panel of the song.',
-})
-addStyle(`
-.custom-hider {
-  padding: 50% 0;
-}
-`)

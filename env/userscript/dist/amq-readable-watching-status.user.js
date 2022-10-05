@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Readable Watching Status
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Narrow the width of the answered anime titles to make the watching status indicator readable.
 // @description:ja  解答欄の幅を狭め、視聴状況のインジケーターを読みやすくします。
@@ -12,12 +12,16 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-readable-watching-status.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
-// @grant           none
+// @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
 
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
+
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -69,6 +73,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -101,23 +106,26 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
   style.appendChild(document.createTextNode(css))
 }
 
-addStyle(`
-.qpAvatarAnswerText {
-  width: calc(100% - 1em);
-}
+if (isAmqReady()) {
+  addStyle(`
+    .qpAvatarAnswerText {
+      width: calc(100% - 1em);
+    }
 
-.qpAvatarStatusInnerContainer {
-  opacity: 1;
+    .qpAvatarStatusInnerContainer {
+      opacity: 1;
+    }
+  `)
+  addScriptData({
+    name: 'Readable Watching Status',
+    author: 'SlashNephy',
+    description: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
+  })
 }
-`)
-addScriptData({
-  name: 'Readable Watching Status',
-  author: 'SlashNephy',
-  description: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
-})

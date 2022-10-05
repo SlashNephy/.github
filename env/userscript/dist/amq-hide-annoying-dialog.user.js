@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Hide Annoying Dialog
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Hide annoying message dialogs when disconnecting and reconnecting.
 // @description:ja  コネクションの切断や再接続時の邪魔なメッセージダイアログを非表示にします。
@@ -16,8 +16,12 @@
 // @license         MIT license
 // ==/UserScript==
 
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
+
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -69,6 +73,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -101,29 +106,24 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
   style.appendChild(document.createTextNode(css))
 }
 
-if (unsafeWindow.displayMessage !== undefined) {
-  unsafeWindow.originalDisplayMessage = unsafeWindow.displayMessage
+if (isAmqReady()) {
+  const originalDisplayMessage = displayMessage
   unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {
     if (title === 'Disconnected from server' || title === 'Successfully  Reconnected') {
       return
     }
-    unsafeWindow.originalDisplayMessage(
-      title,
-      message,
-      callback ?? (() => {}),
-      isOutsideDismiss ?? true,
-      disableSwal ?? false
-    )
+    originalDisplayMessage(title, message, callback ?? (() => {}), isOutsideDismiss ?? true, disableSwal ?? false)
   }
+  addScriptData({
+    name: 'Hide Annoying Dialog',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Hide annoying message dialogs when disconnecting and reconnecting.',
+  })
 }
-addScriptData({
-  name: 'Hide Annoying Dialog',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Hide annoying message dialogs when disconnecting and reconnecting.',
-})
