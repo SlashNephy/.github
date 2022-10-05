@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Song Guess Rate
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.3
+// @version         0.2.4
 // @author          SlashNephy
 // @description     Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)
 // @description:ja  曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)
@@ -19,6 +19,10 @@
 // @grant           GM_listValues
 // @license         MIT license
 // ==/UserScript==
+
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
 
 class GM_Value {
   key
@@ -50,7 +54,7 @@ const makeSha256HexDigest = async (message) => {
 }
 
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -102,6 +106,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -134,15 +139,13 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
   style.appendChild(document.createTextNode(css))
 }
 
-if (unsafeWindow.detailedSongInfo === undefined) {
-  throw new Error('AMQ Detailed Song Info plugin is not installed.')
-}
 const increment = async (key, isCorrect) => {
   const hashKey = await makeSha256HexDigest(key)
   const value = new GM_Value(hashKey, { correct: 0, total: 0 })
@@ -171,26 +174,28 @@ const migrate = async () => {
     })
   )
 }
-unsafeWindow.detailedSongInfo.register({
-  id: 'guess-rate-row',
-  title: 'Guess Rate',
-  async content(event) {
-    if (unsafeWindow.quiz === undefined) {
-      return null
-    }
-    const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
-    if (self === undefined) {
-      return null
-    }
-    const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
-    const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
-    return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
-  },
-})
-migrate().catch(console.error)
-addScriptData({
-  name: 'Song Guess Rate',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description:
-    'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
-})
+if (isAmqReady()) {
+  if (unsafeWindow.detailedSongInfo === undefined) {
+    throw new Error('AMQ Detailed Song Info plugin is not installed.')
+  }
+  unsafeWindow.detailedSongInfo.register({
+    id: 'guess-rate-row',
+    title: 'Guess Rate',
+    async content(event) {
+      const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
+      if (self === undefined) {
+        return null
+      }
+      const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
+      const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
+      return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
+    },
+  })
+  migrate().catch(console.error)
+  addScriptData({
+    name: 'Song Guess Rate',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description:
+      'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
+  })
+}

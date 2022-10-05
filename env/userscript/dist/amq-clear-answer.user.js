@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Clear Answer
 // @namespace       https://github.com/SlashNephy
-// @version         1.0.0
+// @version         1.0.1
 // @author          SlashNephy
 // @description     Add a feature to clear text in the answer column with Delete key.
 // @description:ja  Delete キーを押下することで解答欄のテキストをクリアする機能を追加します。
@@ -12,12 +12,16 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-clear-answer.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
-// @grant           none
+// @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
 
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
+
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -69,6 +73,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -101,6 +106,7 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
@@ -116,11 +122,13 @@ const handleKeydown = (event) => {
     target.value = ''
   }
 }
-for (const input of document.querySelectorAll('input.flatTextInput')) {
-  input.addEventListener('keydown', handleKeydown)
+if (isAmqReady()) {
+  for (const input of document.querySelectorAll('input.flatTextInput')) {
+    input.addEventListener('keydown', handleKeydown)
+  }
+  addScriptData({
+    name: 'Clear Answer',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Add a feature to clear text in the answer column with delete key.',
+  })
 }
-addScriptData({
-  name: 'Clear Answer',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Add a feature to clear text in the answer column with delete key.',
-})

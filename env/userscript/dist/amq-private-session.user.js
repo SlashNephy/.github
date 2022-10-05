@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Private Session
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.4
+// @version         0.2.5
 // @author          SlashNephy
 // @description     Set invisible status automatically on login.
 // @description:ja  ログイン時に Invisible ステータスを設定します。
@@ -16,8 +16,12 @@
 // @license         MIT license
 // ==/UserScript==
 
+const isAmqReady = () => {
+  return unsafeWindow.setupDocumentDone === true
+}
+
 const createInstalledWindow = () => {
-  if (!window.setupDocumentDone) return
+  if (!isAmqReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -69,6 +73,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
+  if (!isAmqReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -101,27 +106,28 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
+  if (!isAmqReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
   style.appendChild(document.createTextNode(css))
 }
 
-var SocialStatus
-;(function (SocialStatus) {
-  SocialStatus[(SocialStatus.Invisible = 4)] = 'Invisible'
-})(SocialStatus || (SocialStatus = {}))
-document.addEventListener('DOMNodeInserted', () => {
-  switch (unsafeWindow.socialTab?.socialStatus?.currentStatus) {
-    case SocialStatus.Invisible:
-    case undefined:
-      return
-    default:
-      unsafeWindow.socialTab?.socialStatus?.changeSocialStatus(SocialStatus.Invisible)
-  }
-})
-addScriptData({
-  name: 'Private Session',
-  author: 'SlashNephy &lt;spica@starry.blue&gt;',
-  description: 'Set invisible status automatically.',
-})
+if (isAmqReady()) {
+  document.addEventListener('DOMNodeInserted', () => {
+    switch (unsafeWindow.socialTab.socialStatus?.currentStatus) {
+      case unsafeWindow.socialTab.socialStatus?.STATUS_IDS.INVISIBLE:
+      case undefined:
+        return
+      default:
+        unsafeWindow.socialTab.socialStatus?.changeSocialStatus(
+          unsafeWindow.socialTab.socialStatus.STATUS_IDS.INVISIBLE
+        )
+    }
+  })
+  addScriptData({
+    name: 'Private Session',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Set invisible status automatically.',
+  })
+}
