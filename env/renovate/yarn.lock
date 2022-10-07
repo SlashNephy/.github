@@ -1960,7 +1960,7 @@ __metadata:
     eslint: 8.24.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 32.221.1
+    renovate: 32.222.2
     ts-node: 10.9.1
     typescript: 4.8.4
   languageName: unknown
@@ -3294,10 +3294,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:9.4.0":
-  version: 9.4.0
-  resolution: "commander@npm:9.4.0"
-  checksum: a322de584a6ccd1ea83c24f6a660e52d16ffbe2613fcfbb8d2cc68bc9dec637492456d754fe8bb5b039ad843ed8e04fb0b107e581a75f62cde9e1a0ab1546e09
+"commander@npm:9.4.1":
+  version: 9.4.1
+  resolution: "commander@npm:9.4.1"
+  checksum: bfb18e325a5bdf772763c2213d5c7d9e77144d944124e988bcd8e5e65fb6d45d5d4e86b09155d0f2556c9a59c31e428720e57968bcd050b2306e910a0bf3cf13
   languageName: node
   linkType: hard
 
@@ -7306,9 +7306,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:32.221.1":
-  version: 32.221.1
-  resolution: "renovate@npm:32.221.1"
+"renovate@npm:32.222.2":
+  version: 32.222.2
+  resolution: "renovate@npm:32.222.2"
   dependencies:
     "@aws-sdk/client-ec2": 3.155.0
     "@aws-sdk/client-ecr": 3.154.0
@@ -7334,7 +7334,7 @@ __metadata:
     chalk: 4.1.2
     changelog-filename-regex: 2.0.1
     clean-git-ref: 2.0.1
-    commander: 9.4.0
+    commander: 9.4.1
     conventional-commits-detector: 1.0.3
     crypto-random-string: 3.3.1
     deepmerge: 4.2.2
@@ -7403,7 +7403,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 4255d5453a1e4e0effccb54b82d730e1c6071986085cb9d203f3b7a0f1d5e12b1ff8d29050d75f693fc603aa0009655d63c72af245efc37d2d766d27a19fd935
+  checksum: 2439dd7669ea89e4b4b20e84da849d053208ba6be8cf5c756c95ec58ca85202624edd62043a8ed81a18b32881cce718aeb295ca5b8669cb9205c1e0f6c272da3
   languageName: node
   linkType: hard
 
