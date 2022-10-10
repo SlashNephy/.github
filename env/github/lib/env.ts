@@ -6,6 +6,7 @@ type Env = {
   ORG_WEBHOOK_URL: string
   STAR_WEBHOOK_URL: string
   ISSUE_WEBHOOK_URL: string
+  DELETE_OLD_WEBHOOK: string
 }
 
 const loadConfig = (): Env => {
