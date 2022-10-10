@@ -1,5 +1,6 @@
 import {
   createWebhook,
+  deleteWebhook,
   listOrgRepos,
   listRepoWebhooks,
   listUserRepos,
@@ -39,10 +40,13 @@ const main = async () => {
           hasIssue = true
           continue
         default:
-          // await deleteWebhook(repo.owner.login, repo.name, webhook.id)
-          console.info(
-            `[${repo.owner.login}/${repo.name}] Deleted webhook: ${webhook.id}`
-          )
+          if (env.DELETE_OLD_WEBHOOK === '1') {
+            // eslint-disable-next-line no-await-in-loop
+            await deleteWebhook(repo.owner.login, repo.name, webhook.id)
+            console.info(
+              `[${repo.owner.login}/${repo.name}] Deleted webhook: ${webhook.id}`
+            )
+          }
       }
     }
 
