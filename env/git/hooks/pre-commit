@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ "$GIT_FORCE" = "1" ]]
+then
+  exit 0
+fi
+
 # IntelliJ からのコミットは許可する
 # shellcheck disable=SC2154
 if [[ "${__CFBundleIdentifier}" = "com.jetbrains.intellij" ]]
