@@ -21,19 +21,19 @@
     "@babel/core": "7.19.3",
     "@babel/preset-env": "7.19.3",
     "@babel/preset-typescript": "7.18.6",
-    "@rollup/plugin-babel": "5.3.1",
+    "@rollup/plugin-babel": "6.0.0",
     "@rollup/plugin-typescript": "8.5.0",
     "@slashnephy/eslint-config": "0.2.6",
     "@slashnephy/prettier-config": "0.1.1",
     "@types/babel__core": "7.1.19",
     "@types/babel__preset-env": "7.9.2",
     "concurrently": "7.4.0",
-    "eslint": "8.24.0",
+    "eslint": "8.25.0",
     "prettier": "2.7.1",
     "rollup": "2.79.1",
     "typescript": "4.8.4"
   },
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "yarn@3.2.4",
   "eslintConfig": {
     "extends": [
       "@slashnephy/eslint-config"
