@@ -16,6 +16,7 @@
   editor = \"~/AppData/Local/Programs/Microsoft VS Code/Code.exe\" --wait
   pager = LESSCHARSET=utf-8 less
   autocrlf = true
+  hookspath =
 
 [credential]
   helper = wincred
