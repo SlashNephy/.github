@@ -2,7 +2,7 @@
  * @name SpotifyControls
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.2.7
+ * @version 1.2.8
  * @description Adds a Control Panel while listening to Spotify on a connected Account
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -13,20 +13,16 @@
  */
 
 module.exports = (_ => {
-	const config = {
-		"info": {
-			"name": "SpotifyControls",
-			"author": "DevilBro",
-			"version": "1.2.7",
-			"description": "Adds a Control Panel while listening to Spotify on a connected Account"
-		}
+	const changeLog = {
+		
 	};
 
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
-		getName () {return config.info.name;}
-		getAuthor () {return config.info.author;}
-		getVersion () {return config.info.version;}
-		getDescription () {return `The Library Plugin needed for ${config.info.name} is missing. Open the Plugin Settings to download it. \n\n${config.info.description}`;}
+		constructor (meta) {for (let key in meta) this[key] = meta[key];}
+		getName () {return this.name;}
+		getAuthor () {return this.author;}
+		getVersion () {return this.version;}
+		getDescription () {return `The Library Plugin needed for ${this.name} is missing. Open the Plugin Settings to download it. \n\n${this.description}`;}
 		
 		downloadLibrary () {
 			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
@@ -39,7 +35,7 @@ module.exports = (_ => {
 			if (!window.BDFDB_Global || !Array.isArray(window.BDFDB_Global.pluginQueue)) window.BDFDB_Global = Object.assign({}, window.BDFDB_Global, {pluginQueue: []});
 			if (!window.BDFDB_Global.downloadModal) {
 				window.BDFDB_Global.downloadModal = true;
-				BdApi.showConfirmationModal("Library Missing", `The Library Plugin needed for ${config.info.name} is missing. Please click "Download Now" to install it.`, {
+				BdApi.showConfirmationModal("Library Missing", `The Library Plugin needed for ${this.name} is missing. Please click "Download Now" to install it.`, {
 					confirmText: "Download Now",
 					cancelText: "Cancel",
 					onCancel: _ => {delete window.BDFDB_Global.downloadModal;},
@@ -49,13 +45,13 @@ module.exports = (_ => {
 					}
 				});
 			}
-			if (!window.BDFDB_Global.pluginQueue.includes(config.info.name)) window.BDFDB_Global.pluginQueue.push(config.info.name);
+			if (!window.BDFDB_Global.pluginQueue.includes(this.name)) window.BDFDB_Global.pluginQueue.push(this.name);
 		}
 		start () {this.load();}
 		stop () {}
 		getSettingsPanel () {
 			let template = document.createElement("template");
-			template.innerHTML = `<div style="color: var(--header-primary); font-size: 16px; font-weight: 300; white-space: pre; line-height: 22px;">The Library Plugin needed for ${config.info.name} is missing.\nPlease click <a style="font-weight: 500;">Download Now</a> to install it.</div>`;
+			template.innerHTML = `<div style="color: var(--header-primary); font-size: 16px; font-weight: 300; white-space: pre; line-height: 22px;">The Library Plugin needed for ${this.name} is missing.\nPlease click <a style="font-weight: 500;">Download Now</a> to install it.</div>`;
 			template.content.firstElementChild.querySelector("a").addEventListener("click", this.downloadLibrary);
 			return template.content.firstElementChild;
 		}
@@ -78,27 +74,26 @@ module.exports = (_ => {
 			}
 			request(socket, device, type, data) {
 				return new Promise(callback => {
-					let method = "PUT";
+					let method = "put";
 					switch (type) {
 						case "next":
 						case "previous":
-							method = "POST";
+							method = "post";
 							break;
 						case "get":
 							type = "";
-							method = "GET";
+							method = "get";
 							break;
 					};
-					BDFDB.LibraryRequires.request({
+					BDFDB.LibraryRequires.request[method]({
 						url: `https://api.spotify.com/v1/me/player${type ? "/" + type : ""}?${Object.entries(Object.assign({device_id: device.id}, data)).map(n => `${n[0]}=${n[1]}`).join("&")}`,
-						method: method,
 						headers: {
 							authorization: `Bearer ${socket.accessToken}`
 						}
 					}, (error, response, result) => {
 						if (response && response.statusCode == 401) {
 							BDFDB.LibraryModules.SpotifyUtils.getAccessToken(socket.accountId).then(promiseResult => {
-								let newSocketDevice = BDFDB.LibraryModules.SpotifyTrackUtils.getActiveSocketAndDevice();
+								let newSocketDevice = BDFDB.LibraryStores.SpotifyStore.getActiveSocketAndDevice();
 								this.request(newSocketDevice.socket, newSocketDevice.device, type, data).then(_ => {
 									try {callback(JSON.parse(result));}
 									catch (err) {callback({});}
@@ -119,7 +114,7 @@ module.exports = (_ => {
 				});
 			}
 			render() {
-				let socketDevice = BDFDB.LibraryModules.SpotifyTrackUtils.getActiveSocketAndDevice();
+				let socketDevice = BDFDB.LibraryStores.SpotifyStore.getActiveSocketAndDevice();
 				if (this.props.song) this.props.noDevice = false;
 				if (!socketDevice || this.props.noDevice) return null;
 				if (this.props.song) {
@@ -138,8 +133,8 @@ module.exports = (_ => {
 				}
 				if (!lastSong) return null;
 				
-				let coverSrc = BDFDB.LibraryModules.AssetUtils.getAssetImage(lastSong.application_id, lastSong.assets.large_image);
-				let connection = (BDFDB.LibraryModules.ConnectionStore.getAccounts().find(n => n.type == "spotify") || {});
+				let coverSrc = BDFDB.LibraryModules.ApplicationAssetUtils.getAssetImage(lastSong.application_id, lastSong.assets.large_image);
+				let connection = (BDFDB.LibraryStores.ConnectedAccountsStore.getAccounts().find(n => n.type == "spotify") || {});
 				showActivity = showActivity != undefined ? showActivity : (connection.show_activity || connection.showActivity);
 				currentVolume = this.props.draggingVolume ? currentVolume : socketDevice.device.volume_percent;
 				return BDFDB.ReactUtils.createElement("div", {
@@ -184,7 +179,7 @@ module.exports = (_ => {
 												onClick: event => {
 													BDFDB.ListenerUtils.stopEvent(event);
 													showActivity = !showActivity;
-													let account = BDFDB.LibraryModules.ConnectionStore.getAccounts().find(n => n.type == "spotify");
+													let account = BDFDB.LibraryStores.ConnectedAccountsStore.getAccounts().find(n => n.type == "spotify");
 													account && BDFDB.LibraryModules.ConnectionUtils.setShowActivity("spotify", account.id, showActivity);
 												}
 											})
@@ -385,7 +380,7 @@ module.exports = (_ => {
 				updateInterval = BDFDB.TimeUtils.interval(_ => {
 					if (!this.updater || typeof this.updater.isMounted != "function" || !this.updater.isMounted(this)) BDFDB.TimeUtils.clear(updateInterval);
 					else if (playbackState.is_playing) {
-						let song = BDFDB.LibraryModules.SpotifyTrackUtils.getActivity(false);
+						let song = BDFDB.LibraryStores.SpotifyStore.getActivity(false);
 						if (!song) BDFDB.ReactUtils.forceUpdate(controls);
 						else if (playbackState.is_playing) BDFDB.ReactUtils.forceUpdate(this);
 					}
@@ -447,7 +442,7 @@ module.exports = (_ => {
 				
 				this.defaults = {
 					general: {
-						addBy: 			{value: true,		description: "Adds the Word 'by' infront of the Author Name"},
+						addBy: 				{value: true,		description: "Adds the Word 'by' infront of the Author Name"},
 						addTimeline: 		{value: true,		description: "Shows the Song Timeline in the Controls"},
 						addActivityButton: 	{value: true,		description: "Shows the Activity Status Toggle Button in the Controls"},
 						doubleBack: 		{value: true,		description: "Requires the User to press the Back Button twice to go to previous Track"}
@@ -463,10 +458,10 @@ module.exports = (_ => {
 					}
 				};
 				
-				this.patchedModules = {
-					before: {
-						AnalyticsContext: "render"
-					}
+				this.modulePatches = {
+					after: [
+						"ChannelSidebar"
+					]
 				};
 				
 				this.css = `
@@ -680,14 +675,14 @@ module.exports = (_ => {
 			}
 			
 			onStart () {
-				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.SpotifyTrackUtils, "getActivity", {after: e => {
+				BDFDB.PatchUtils.patch(this, BDFDB.LibraryStores.SpotifyStore, "getActivity", {after: e => {
 					if (e.methodArguments[0] !== false) {
 						if (e.returnValue && e.returnValue.name == "Spotify") this.updatePlayer(e.returnValue);
 						else if (!e.returnValue) this.updatePlayer(null);
 					}
 				}});
 
-				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.SpotifyTrackUtils, "wasAutoPaused", {instead: e => {
+				BDFDB.PatchUtils.patch(this, BDFDB.LibraryStores.SpotifyStore, "wasAutoPaused", {instead: e => {
 					return false;
 				}});
 
@@ -695,11 +690,11 @@ module.exports = (_ => {
 					return false;
 				}});
 				
-				BDFDB.PatchUtils.forceAllUpdates(this);
+				BDFDB.DiscordUtils.rerenderAll();
 			}
 			
 			onStop () {
-				BDFDB.PatchUtils.forceAllUpdates(this);
+				BDFDB.DiscordUtils.rerenderAll();
 			}
 
 			getSettingsPanel (collapseStates = {}) {				
@@ -709,7 +704,7 @@ module.exports = (_ => {
 					children: _ => {
 						let settingsItems = [];
 						
-						if (!BDFDB.LibraryModules.SpotifyTrackUtils.hasConnectedAccount()) BDFDB.ModalUtils.open(this, {
+						if (!BDFDB.LibraryStores.SpotifyStore.hasConnectedAccount()) BDFDB.ModalUtils.open(this, {
 							size: "SMALL",
 							header: `${this.name}: ${this.labels.noaccount_header}...`,
 							subHeader: this.labels.noaccount_subheader,
@@ -784,22 +779,20 @@ module.exports = (_ => {
 			onSettingsClosed () {
 				if (this.SettingsUpdated) {
 					delete this.SettingsUpdated;
-					BDFDB.PatchUtils.forceAllUpdates(this);
+					BDFDB.DiscordUtils.rerenderAll();
 				}
 			}
 
-			processAnalyticsContext (e) {
-				if (e.instance.props.section == BDFDB.DiscordConstants.AnalyticsSections.ACCOUNT_PANEL) e.instance.props.children = [
-					BDFDB.ReactUtils.createElement(SpotifyControlsComponent, {
-						key: "SPOTIFY_CONTROLS",
-						song: BDFDB.LibraryModules.SpotifyTrackUtils.getActivity(false),
-						maximized: BDFDB.DataUtils.load(this, "playerState", "maximized"),
-						buttonStates: [],
-						timeline: this.settings.general.addTimeline,
-						activityToggle: this.settings.general.addActivityButton
-					}, true),
-					[e.instance.props.children].flat(10).filter(n => !n || n.key != "SPOTIFY_CONTROLS")
-				].flat(10);
+			processChannelSidebar (e) {
+				let panels = BDFDB.ReactUtils.findChild(e.returnvalue, {props: [["className", BDFDB.disCN.channelpanels]]});
+				if (panels) panels.props.children.unshift(BDFDB.ReactUtils.createElement(SpotifyControlsComponent, {
+					key: "SPOTIFY_CONTROLS",
+					song: BDFDB.LibraryStores.SpotifyStore.getActivity(false),
+					maximized: BDFDB.DataUtils.load(this, "playerState", "maximized"),
+					buttonStates: [],
+					timeline: this.settings.general.addTimeline,
+					activityToggle: this.settings.general.addActivityButton
+				}, true));
 			}
 			
 			updatePlayer (song) {
@@ -1105,5 +1098,5 @@ module.exports = (_ => {
 				}
 			}
 		};
-	})(window.BDFDB_Global.PluginUtils.buildPlugin(config));
+	})(window.BDFDB_Global.PluginUtils.buildPlugin(changeLog));
 })();
