@@ -11,7 +11,7 @@ const react: Linter.Config = {
     'plugin:react/jsx-runtime',
     'plugin:css-import-order/recommended',
   ],
-  plugins: ['css-import-order'],
+  plugins: ['react-hooks', 'css-import-order'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -39,6 +39,14 @@ const react: Linter.Config = {
     ],
     // コンポーネント名を PascalCase に強制
     'react/jsx-pascal-case': 'error',
+    // https://recoiljs.org/docs/introduction/installation/#eslint
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': [
+      'warn',
+      {
+        additionalHooks: '(useRecoilCallback|useRecoilTransaction_UNSTABLE)',
+      },
+    ],
   },
 }
 
