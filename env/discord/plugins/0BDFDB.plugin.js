@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.7.5
+ * @version 2.7.6
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -6827,13 +6827,21 @@ module.exports = (_ => {
 					let positionState = BDFDB.ReactUtils.useState(props.position != null);
 					let animationState = BDFDB.ReactUtils.useState((_ => new Internal.LibraryComponents.Timeout));
 					BDFDB.ReactUtils.useEffect((_ => (_ => animationState[0].stop())), [animationState[0]]);
-					BDFDB.ReactUtils.useEffect(_ => (props.position && T.start(10, (_ => positionState[1](true)))), [props.position, animationState[0]]);
+					BDFDB.ReactUtils.useEffect(_ => (props.position && animationState[0].start(10, (_ => positionState[1](true)))), [props.position, animationState[0]]);
 					const position = typeof props.position == "string" && props.position.replace("window_", "");
-					const animation = (Object.entries(Internal.LibraryComponents.PopoutContainer.Animation).find(n => n[1] == this.props.animation) || ["NONE"])[0].toLowerCase();
+					const animation = (Object.entries(Internal.LibraryComponents.PopoutContainer.Animation).find(n => n[1] == props.animation) || ["NONE"])[0].toLowerCase();
 					return BDFDB.ReactUtils.createElement("div", {
-						className: BDFDB.DOMUtils.formatClassName(DiscordClasses[`animationcontainer${position}`] && BDFDB.disCN[`animationcontainer${animation}`], DiscordClasses[`animationcontainer${animation}`] && BDFDB.disCN[`animationcontainer${position}`], positionState[0] && BDFDB.disCN.animationcontainerdidrender),
+						className: BDFDB.DOMUtils.formatClassName(DiscordClasses[`animationcontainer${position}`] && BDFDB.disCN[`animationcontainer${position}`], DiscordClasses[`animationcontainer${animation}`] && BDFDB.disCN[`animationcontainer${animation}`], positionState[0] && BDFDB.disCN.animationcontainerrender),
 						children: props.children
 					})
+				};
+				CustomComponents.PopoutCSSAnimator.Types = {
+					"1": "TRANSLATE",
+					"2": "SCALE",
+					"3": "FADE",
+					"TRANSLATE": "1",
+					"SCALE": "2",
+					"FADE": "3"
 				};
 				
 				CustomComponents.QuickSelect = reactInitialized && class BDFDB_QuickSelect extends Internal.LibraryModules.React.Component {
