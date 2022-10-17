@@ -21,9 +21,7 @@
 // @license         MIT license
 // ==/UserScript==
 
-const isAmqReady = () => {
-  return unsafeWindow.setupDocumentDone === true
-}
+const isReady = () => unsafeWindow.setupDocumentDone === true
 
 class GM_Value {
   key
@@ -79,7 +77,7 @@ const getAnimeScoreById = async (id) => {
 }
 
 const createInstalledWindow = () => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -131,7 +129,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -164,7 +162,7 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
@@ -431,7 +429,7 @@ unsafeWindow.detailedSongInfo = {
     return links
   },
 }
-if (isAmqReady()) {
+if (isReady()) {
   new Listener('answer results', handle).bindListener()
   addScriptData({
     name: 'Detailed Song Info',

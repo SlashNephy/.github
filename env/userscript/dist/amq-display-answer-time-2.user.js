@@ -16,49 +16,46 @@
 // @license         MIT license
 // ==/UserScript==
 
-const isAmqReady = () => {
-  return unsafeWindow.setupDocumentDone === true
-}
+const isReady = () => unsafeWindow.setupDocumentDone === true
 
-class AmqAnswerTimesUtility {
-  songStartTime = 0
-  playerTimes = []
-  firstPlayers = []
+class PlayerAnswerTimeManager {
+  #songStartTime = 0
+  #playerTimes = []
+  #firstPlayers = []
   constructor() {
-    if (!isAmqReady()) {
-      return
+    if (!isReady()) {
+      throw new Error('AMQ is not ready.')
     }
     new Listener('play next song', () => {
-      this.songStartTime = Date.now()
-      this.playerTimes = []
-      this.firstPlayers = []
+      this.#songStartTime = Date.now()
+      this.#playerTimes = []
+      this.#firstPlayers = []
     }).bindListener()
     new Listener('player answered', (playerIds) => {
-      const time = Date.now() - this.songStartTime
-      if (this.playerTimes.length === 0) {
-        this.firstPlayers.push(...playerIds)
+      const time = Date.now() - this.#songStartTime
+      if (this.#firstPlayers.length === 0) {
+        this.#firstPlayers.push(...playerIds)
       }
       for (const id of playerIds) {
-        this.playerTimes[id] = time
+        this.#playerTimes[id] = time
       }
     }).bindListener()
     new Listener('Join Game', ({ quizState }) => {
       if (quizState.songTimer > 0) {
-        this.songStartTime = Date.now() - quizState.songTimer * 1000
+        this.#songStartTime = Date.now() - quizState.songTimer * 1000
       }
     }).bindListener()
   }
   query(playerId) {
-    return playerId in this.playerTimes ? this.playerTimes[playerId] : null
+    return playerId in this.#playerTimes ? this.#playerTimes[playerId] : null
   }
   isFirst(playerId) {
-    return playerId in this.firstPlayers
+    return this.#firstPlayers.includes(playerId)
   }
 }
-const amqAnswerTimes = new AmqAnswerTimesUtility()
 
 const createInstalledWindow = () => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -110,7 +107,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -143,64 +140,62 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
   style.appendChild(document.createTextNode(css))
 }
 
-const ignoredPlayerIds = []
-const handleGameStarting = ({ players }) => {
-  ignoredPlayerIds.splice(0)
-  const player = players.find((p) => p.name === unsafeWindow.selfName)
-  if (player === undefined) {
-    return
-  }
-  const teamNumber = player.teamNumber
-  if (teamNumber === null) {
-    return
-  }
-  const teamMates = players.filter((p) => p.teamNumber === teamNumber)
-  if (teamMates.length > 1) {
-    ignoredPlayerIds.push(...teamMates.map((p) => p.gamePlayerId))
-  }
-}
-const formatAnswerTime = (playerId) => {
-  const time = amqAnswerTimes.query(playerId)
-  if (time === null) {
-    return null
-  }
-  const isLightning = amqAnswerTimes.isFirst(playerId)
-  return `${isLightning ? '⚡ ' : ''}${(time / 1000).toFixed(2)} s`
-}
-const handlePlayerAnswered = (event) => {
-  for (const playerId of event.filter((id) => !ignoredPlayerIds.includes(id))) {
-    const time = formatAnswerTime(playerId)
-    if (time !== null) {
-      unsafeWindow.quiz.players[playerId].answer = time
+if (isReady()) {
+  const ignoredPlayerIds = []
+  const playerAnswers = new PlayerAnswerTimeManager()
+  const formatAnswerTime = (playerId) => {
+    const time = playerAnswers.query(playerId)
+    if (time === null) {
+      return null
     }
+    const isLightning = playerAnswers.isFirst(playerId)
+    return `${isLightning ? '⚡ ' : ''}${(time / 1000).toFixed(2)} s`
   }
-}
-const handlePlayerAnswers = (event) => {
-  for (const answer of event.answers) {
-    const time = formatAnswerTime(answer.gamePlayerId)
-    const text = time !== null ? `${answer.answer} (${time})` : answer.answer
-    const player = unsafeWindow.quiz.players[answer.gamePlayerId]
-    player.answer = text
-    player.unknownAnswerNumber = answer.answerNumber
-    player.toggleTeamAnswerSharing(false)
-  }
-  if (!unsafeWindow.quiz.isSpectator) {
-    unsafeWindow.quiz.answerInput.showSubmitedAnswer()
-    unsafeWindow.quiz.answerInput.resetAnswerState()
-  }
-  unsafeWindow.quiz.videoTimerBar.updateState(event.progressBarState)
-}
-if (isAmqReady()) {
-  new Listener('Game Starting', handleGameStarting).bindListener()
-  new Listener('player answered', handlePlayerAnswered).bindListener()
-  unsafeWindow.quiz._playerAnswerListner = new Listener('player answers', handlePlayerAnswers)
+  new Listener('Game Starting', ({ players }) => {
+    ignoredPlayerIds.splice(0)
+    const player = players.find((p) => p.name === unsafeWindow.selfName)
+    if (player === undefined) {
+      return
+    }
+    const teamNumber = player.teamNumber
+    if (teamNumber === null) {
+      return
+    }
+    const teamMates = players.filter((p) => p.teamNumber === teamNumber)
+    if (teamMates.length > 1) {
+      ignoredPlayerIds.push(...teamMates.map((p) => p.gamePlayerId))
+    }
+  }).bindListener()
+  new Listener('player answered', (event) => {
+    for (const playerId of event.filter((id) => !ignoredPlayerIds.includes(id))) {
+      const time = formatAnswerTime(playerId)
+      if (time !== null) {
+        unsafeWindow.quiz.players[playerId].answer = time
+      }
+    }
+  }).bindListener()
+  unsafeWindow.quiz._playerAnswerListner = new Listener('player answers', (event) => {
+    for (const answer of event.answers) {
+      const time = formatAnswerTime(answer.gamePlayerId)
+      const text = time !== null ? `${answer.answer} (${time})` : answer.answer
+      const player = unsafeWindow.quiz.players[answer.gamePlayerId]
+      player.answer = text
+      player.unknownAnswerNumber = answer.answerNumber
+      player.toggleTeamAnswerSharing(false)
+    }
+    if (!unsafeWindow.quiz.isSpectator) {
+      unsafeWindow.quiz.answerInput.showSubmitedAnswer()
+      unsafeWindow.quiz.answerInput.resetAnswerState()
+    }
+    unsafeWindow.quiz.videoTimerBar.updateState(event.progressBarState)
+  })
   addScriptData({
     name: 'Display Answer Time 2',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
