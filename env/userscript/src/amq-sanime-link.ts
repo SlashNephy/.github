@@ -1,4 +1,4 @@
-import { isAmqReady } from '../lib/amq'
+import { isReady } from '../lib/amq/isReady'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { GameStartingEvent, PlayerProfileEvent } from '../types/amq'
@@ -233,7 +233,7 @@ const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
   }
 }
 
-if (isAmqReady()) {
+if (isReady()) {
   new Listener('Game Starting', handleGameStarting).bindListener()
   new Listener('answer results', handleAnswerResults).bindListener()
 

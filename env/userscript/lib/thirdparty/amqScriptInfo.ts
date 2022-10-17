@@ -6,10 +6,10 @@
 /*
 Creates the installed scripts window if it doesn't exist and adds "Installed Userscripts" button to the main page and settings
 */
-import { isAmqReady } from '../amq'
+import { isReady } from '../amq/isReady'
 
 export const createInstalledWindow = (): void => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -74,7 +74,7 @@ metadataObj = {
 }
 */
 export const addScriptData = (metadata: { name?: string; author?: string; description?: string }): void => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
 
   createInstalledWindow()
   $('#installedListContainer').append(
@@ -109,7 +109,7 @@ export const addScriptData = (metadata: { name?: string; author?: string; descri
 }
 
 export const addStyle = (css: string): void => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
 
   const head = document.head
   const style = document.createElement('style')

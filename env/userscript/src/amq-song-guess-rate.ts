@@ -1,4 +1,4 @@
-import { isAmqReady } from '../lib/amq'
+import { isReady } from '../lib/amq/isReady'
 import { GM_Value } from '../lib/GM_Value'
 import { makeSha256HexDigest } from '../lib/hash'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
@@ -44,7 +44,7 @@ const migrate = async () => {
   )
 }
 
-if (isAmqReady()) {
+if (isReady()) {
   if (unsafeWindow.detailedSongInfo === undefined) {
     throw new Error('AMQ Detailed Song Info plugin is not installed.')
   }

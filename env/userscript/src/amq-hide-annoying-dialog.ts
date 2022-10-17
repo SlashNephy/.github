@@ -1,4 +1,4 @@
-import { isAmqReady } from '../lib/amq'
+import { isReady } from '../lib/amq/isReady'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 declare global {
@@ -8,7 +8,7 @@ declare global {
   }
 }
 
-if (isAmqReady()) {
+if (isReady()) {
   const originalDisplayMessage = displayMessage
   unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {
     if (title === 'Disconnected from server' || title === 'Successfully  Reconnected') {
