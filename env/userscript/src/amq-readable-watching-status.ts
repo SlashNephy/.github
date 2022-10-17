@@ -1,7 +1,7 @@
-import { isAmqReady } from '../lib/amq'
+import { isReady } from '../lib/amq/isReady'
 import { addScriptData, addStyle } from '../lib/thirdparty/amqScriptInfo'
 
-if (isAmqReady()) {
+if (isReady()) {
   addStyle(`
     .qpAvatarAnswerText {
       width: calc(100% - 1em);

@@ -1,4 +1,4 @@
-import { isAmqReady } from '../lib/amq'
+import { isReady } from '../lib/amq/isReady'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 const handleKeydown = (event: KeyboardEvent) => {
@@ -15,7 +15,7 @@ const handleKeydown = (event: KeyboardEvent) => {
   }
 }
 
-if (isAmqReady()) {
+if (isReady()) {
   for (const input of document.querySelectorAll<HTMLInputElement>('input.flatTextInput')) {
     input.addEventListener('keydown', handleKeydown)
   }

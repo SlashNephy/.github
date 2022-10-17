@@ -26,7 +26,6 @@ export const buildOptions = (banner: Banner): RollupOptions => {
       babel({
         babelHelpers: 'bundled',
       }),
-      ...(banner.options?.plugins ?? []),
     ],
     ...(banner.options ?? {}),
   }
@@ -201,8 +200,8 @@ const headers: {
     render: (b, isDev) => {
       if (isDev) {
         return b.private === true
-          ? `file://${join(__dirname, 'dist', 'private', `${b.id}.dev.user.js`)}`
-          : `file://${join(__dirname, 'dist', `${b.id}.dev.user.js`)}`
+          ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.dev.user.js`)}`
+          : `file://${join(process.cwd(), 'dist', `${b.id}.dev.user.js`)}`
       }
 
       return b.updateUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`
@@ -213,8 +212,8 @@ const headers: {
     render: (b, isDev) => {
       if (isDev) {
         return b.private === true
-          ? `file://${join(__dirname, 'dist', 'private', `${b.id}.dev.user.js`)}`
-          : `file://${join(__dirname, 'dist', `${b.id}.dev.user.js`)}`
+          ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.dev.user.js`)}`
+          : `file://${join(process.cwd(), 'dist', `${b.id}.dev.user.js`)}`
       }
 
       return b.downloadUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`
@@ -252,8 +251,8 @@ const headers: {
       const require = b.require ?? []
       const path =
         b.private === true
-          ? `file://${join(__dirname, 'dist', 'private', `${b.id}.user.js`)}`
-          : `file://${join(__dirname, 'dist', `${b.id}.user.js`)}`
+          ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.user.js`)}`
+          : `file://${join(process.cwd(), 'dist', `${b.id}.user.js`)}`
       if (typeof require === 'string') {
         return [path]
       } else {
