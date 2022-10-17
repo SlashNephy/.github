@@ -19,7 +19,7 @@ export class PlayerAnswerTimeManager {
     new Listener('player answered', (playerIds) => {
       const time = Date.now() - this.#songStartTime
 
-      if (this.#playerTimes.length === 0) {
+      if (this.#firstPlayers.length === 0) {
         this.#firstPlayers.push(...playerIds)
       }
 
@@ -40,6 +40,6 @@ export class PlayerAnswerTimeManager {
   }
 
   public isFirst(playerId: number): boolean {
-    return playerId in this.#firstPlayers
+    return this.#firstPlayers.includes(playerId)
   }
 }
