@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name            AMQ Hide Annoying Dialog
+// @name            AMQ Auto Continue Login
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.1
+// @version         0.1.0
 // @author          SlashNephy
-// @description     Hide annoying message dialogs when disconnecting and reconnecting.
-// @description:ja  コネクションの切断や再接続時の邪魔なメッセージダイアログを非表示にします。
-// @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E9%82%AA%E9%AD%94%E3%81%AA%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%82%92%E9%9D%9E%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%81%99%E3%82%8B_UserScript
-// @homepageURL     https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E9%82%AA%E9%AD%94%E3%81%AA%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%82%92%E9%9D%9E%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%81%99%E3%82%8B_UserScript
+// @description     Press the Continue Login button automatically in Login Page.
+// @description:ja  ログインページの「Continue Login」ボタンを自動で押下します。
+// @homepage        https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%87%AA%E5%8B%95%E3%81%A7_Continue_Login_%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99_UserScript
+// @homepageURL     https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%87%AA%E5%8B%95%E3%81%A7_Continue_Login_%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99_UserScript
 // @icon            https://animemusicquiz.com/favicon-32x32.png
-// @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js
-// @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js
+// @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js
+// @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
 // @grant           unsafeWindow
@@ -111,17 +111,14 @@ const addStyle = (css) => {
   style.appendChild(document.createTextNode(css))
 }
 
+const element = document.querySelector('#loginFormContainer > div > a')
+if (element !== null) {
+  element.click()
+}
 if (isReady()) {
-  const originalDisplayMessage = displayMessage
-  unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {
-    if (title === 'Disconnected from server' || title === 'Successfully  Reconnected') {
-      return
-    }
-    originalDisplayMessage(title, message, callback ?? (() => {}), isOutsideDismiss ?? true, disableSwal ?? false)
-  }
   addScriptData({
-    name: 'Hide Annoying Dialog',
+    name: 'Auto Continue Login',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
-    description: 'Hide annoying message dialogs when disconnecting and reconnecting.',
+    description: 'Press the Continue Login button automatically in Login Page.',
   })
 }

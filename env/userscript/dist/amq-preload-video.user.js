@@ -16,12 +16,10 @@
 // @license         MIT license
 // ==/UserScript==
 
-const isAmqReady = () => {
-  return unsafeWindow.setupDocumentDone === true
-}
+const isReady = () => unsafeWindow.setupDocumentDone === true
 
 const createInstalledWindow = () => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   if ($('#installedModal').length === 0) {
     $('#gameContainer').append(
       $(`
@@ -73,7 +71,7 @@ const createInstalledWindow = () => {
   }
 }
 const addScriptData = (metadata) => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   createInstalledWindow()
   $('#installedListContainer').append(
     $('<div></div>')
@@ -106,14 +104,14 @@ const addScriptData = (metadata) => {
   )
 }
 const addStyle = (css) => {
-  if (!isAmqReady()) return
+  if (!isReady()) return
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
   style.appendChild(document.createTextNode(css))
 }
 
-if (isAmqReady()) {
+if (isReady()) {
   document.addEventListener('DOMNodeInserted', () => {
     for (const element of document.querySelectorAll('video')) {
       element.preload = 'auto'
