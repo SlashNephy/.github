@@ -12,7 +12,7 @@
     "build:rollup:private": "rollup --config rollup.config.private.ts --configPlugin @rollup/plugin-typescript",
     "bundle": "yarn build:rollup && yarn format",
     "bundle:private": "yarn build:rollup:private && yarn format",
-    "ci": "concurrently -n ci: 'yarn:ci:*'",
+    "ci": "concurrently -n ci: -m 1 'yarn:ci:*'",
     "ci:bundle": "yarn bundle",
     "ci:generate-readme": "ts-node --project tsconfig.bin.json bin/generate-readme.ts && yarn format:prettier",
     "format": "concurrently -n format: -m 1 'yarn:format:*'",
