@@ -4,6 +4,10 @@
 			"messages": true,
 			"voiceChat": true
 		},
+		"notifications": {
+			"messages": true,
+			"voiceChat": true
+		},
 		"places": {
 			"messages": true,
 			"pins": true,
