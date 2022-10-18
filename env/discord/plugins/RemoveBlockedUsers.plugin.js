@@ -2,7 +2,7 @@
  * @name RemoveBlockedUsers
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.5.3
+ * @version 1.5.4
  * @description Removes blocked Messages/Users
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -61,7 +61,7 @@ module.exports = (_ => {
 		return class RemoveBlockedUsers extends Plugin {
 			onLoad () {
 				this.defaults = {
-					notifcations: {
+					notifications: {
 						messages:			{value: true, 	description: "Messages Notifications"},
 						voiceChat:			{value: true, 	description: "Voice Chat Notifications"},
 					},
@@ -132,7 +132,7 @@ module.exports = (_ => {
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.RelationshipUtils, "removeRelationship", {after: e => this.forceUpdateAll()});
 				
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryStores.ReadStateStore, "getUnreadCount", {after: e => {
-					if (e.returnValue && this.settings.notifcations.messages && e.returnValue < BDFDB.DiscordConstants.MAX_MESSAGES_PER_CHANNEL) {
+					if (e.returnValue && this.settings.notifications.messages && e.returnValue < BDFDB.DiscordConstants.MAX_MESSAGES_PER_CHANNEL) {
 						let sub = 0, messages = [].concat(BDFDB.LibraryStores.MessageStore.getMessages(e.methodArguments[0])._array).reverse();
 						for (let i = 0; i < e.returnValue; i++) if (messages[i] && messages[i].blocked) sub++;
 						e.returnValue -= sub;
@@ -140,7 +140,7 @@ module.exports = (_ => {
 				}});
 				
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryStores.ReadStateStore, "hasUnread", {after: e => {
-					if (e.returnValue && this.settings.notifcations.messages && BDFDB.LibraryStores.ReadStateStore.getUnreadCount(e.methodArguments[0]) < BDFDB.DiscordConstants.MAX_MESSAGES_PER_CHANNEL) {
+					if (e.returnValue && this.settings.notifications.messages && BDFDB.LibraryStores.ReadStateStore.getUnreadCount(e.methodArguments[0]) < BDFDB.DiscordConstants.MAX_MESSAGES_PER_CHANNEL) {
 						let id = BDFDB.LibraryStores.ReadStateStore.lastMessageId(e.methodArguments[0]);
 						let message = id && BDFDB.LibraryStores.MessageStore.getMessage(e.methodArguments[0], id);
 						if (message && message.blocked) {
@@ -155,7 +155,7 @@ module.exports = (_ => {
 				}});
 				
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryStores.GuildReadStateStore, "hasUnread", {after: e => {
-					if (e.returnValue && this.settings.notifcations.messages) return BDFDB.LibraryStores.GuildChannelStore.getChannels(e.methodArguments[0]).SELECTABLE.map(n => n.channel && n.channel.id).filter(n => n && n != "null").some(id => BDFDB.LibraryStores.ReadStateStore.hasUnread(id));
+					if (e.returnValue && this.settings.notifications.messages) return BDFDB.LibraryStores.GuildChannelStore.getChannels(e.methodArguments[0]).SELECTABLE.map(n => n.channel && n.channel.id).filter(n => n && n != "null").some(id => BDFDB.LibraryStores.ReadStateStore.hasUnread(id));
 				}});
 				
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.QuerySearchUtils, ["queryDMUsers", "queryFriends", "queryGuildUsers", "queryChannelUsers"], {after: e => {
@@ -166,33 +166,24 @@ module.exports = (_ => {
 				let muteTimeout;
 				let channelId = BDFDB.LibraryModules.RTCConnectionUtils.getChannelId();
 				let connectedUsers = BDFDB.ObjectUtils.filter(BDFDB.LibraryStores.SortedVoiceStateStore.getVoiceStates(BDFDB.LibraryModules.RTCConnectionUtils.getGuildId()), n => n && n.channelId == channelId && !BDFDB.LibraryStores.RelationshipStore.isBlocked(n.userId));
-				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.SoundUtils, "playSound", {instead: e => {
+				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.SoundUtils, "playSound", {before: e => {
 					let type = e.methodArguments[0];
-					if (this.settings.notifcations.voiceChat && (type == "disconnect" || type == "user_join" || type == "user_leave" || type == "user_moved")) {
-						channelId = BDFDB.LibraryModules.RTCConnectionUtils.getChannelId();
-						if (channelId) {
-							let allConnectedUsers = BDFDB.ObjectUtils.filter(BDFDB.LibraryStores.SortedVoiceStateStore.getVoiceStates(BDFDB.LibraryModules.RTCConnectionUtils.getGuildId()), n => n && n.channelId == channelId);
-							let unblockedUsers = BDFDB.ObjectUtils.filter(allConnectedUsers, n => n && !BDFDB.LibraryStores.RelationshipStore.isBlocked(n.userId));
-							let unmutedBlockedUsers = BDFDB.ObjectUtils.toArray(allConnectedUsers).filter(n => n && BDFDB.LibraryStores.RelationshipStore.isBlocked(n.userId) && !BDFDB.LibraryStores.MediaEngineStore.isLocalMute(n.userId));
-							if (unmutedBlockedUsers.length) {
-								BDFDB.TimeUtils.clear(muteTimeout);
-								muteTimeout = BDFDB.TimeUtils.timeout(_ => {
-									while (unmutedBlockedUsers.length) BDFDB.LibraryModules.MediaEngineUtils.toggleLocalMute(unmutedBlockedUsers.pop().userId);
-								}, 1000);
-							}
-							if (Object.keys(unblockedUsers).length == Object.keys(connectedUsers).length) {
-								e.stopOriginalMethodCall();
-								e.methodArguments[0] = null;
-							}
-							else e.callOriginalMethodAfterwards();
-							connectedUsers = unblockedUsers;
+					if (!this.settings.notifications.voiceChat || !["disconnect", "user_join", "user_leave", "user_moved"].includes(type)) return;
+					channelId = BDFDB.LibraryModules.RTCConnectionUtils.getChannelId();
+					if (channelId) {
+						let allConnectedUsers = BDFDB.ObjectUtils.filter(BDFDB.LibraryStores.SortedVoiceStateStore.getVoiceStates(BDFDB.LibraryModules.RTCConnectionUtils.getGuildId()), n => n && n.channelId == channelId);
+						let unblockedUsers = BDFDB.ObjectUtils.filter(allConnectedUsers, n => n && !BDFDB.LibraryStores.RelationshipStore.isBlocked(n.userId));
+						let unmutedBlockedUsers = BDFDB.ObjectUtils.toArray(allConnectedUsers).filter(n => n && BDFDB.LibraryStores.RelationshipStore.isBlocked(n.userId) && !BDFDB.LibraryStores.MediaEngineStore.isLocalMute(n.userId));
+						if (unmutedBlockedUsers.length) {
+							BDFDB.TimeUtils.clear(muteTimeout);
+							muteTimeout = BDFDB.TimeUtils.timeout(_ => {
+								while (unmutedBlockedUsers.length) BDFDB.LibraryModules.MediaEngineUtils.toggleLocalMute(unmutedBlockedUsers.pop().userId);
+							}, 1000);
 						}
-						else {
-							connectedUsers = {};
-							e.callOriginalMethodAfterwards();
-						}
+						if (Object.keys(unblockedUsers).length == Object.keys(connectedUsers).length) e.methodArguments[0] = null;
+						connectedUsers = unblockedUsers;
 					}
-					else e.callOriginalMethodAfterwards();
+					else connectedUsers = {};
 				}});
 				
 				BDFDB.DiscordUtils.rerenderAll();
@@ -211,12 +202,12 @@ module.exports = (_ => {
 						
 						settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsPanelList, {
 							title: "Disable",
-							children: Object.keys(this.defaults.notifcations).map(key => BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsSaveItem, {
+							children: Object.keys(this.defaults.notifications).map(key => BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsSaveItem, {
 								type: "Switch",
 								plugin: this,
-								keys: ["notifcations", key],
-								label: this.defaults.notifcations[key].description,
-								value: this.settings.notifcations[key]
+								keys: ["notifications", key],
+								label: this.defaults.notifications[key].description,
+								value: this.settings.notifications[key]
 							}))
 						}));
 						
@@ -247,20 +238,23 @@ module.exports = (_ => {
 				if (!this.settings.places.messages) return;
 				if (BDFDB.ArrayUtils.is(e.instance.props.channelStream)) {
 					let oldStream = e.instance.props.channelStream.filter(n => n.type != "MESSAGE_GROUP_BLOCKED"), newStream = [];
-					for (let i in oldStream) {
-						let next = parseInt(i)+1;
-						if (oldStream[i].type != "DIVIDER" || (oldStream[next] && oldStream[i].type == "DIVIDER" && oldStream[next].type != "DIVIDER" && oldStream.slice(next).some(nextStream => nextStream.type != "DIVIDER"))) newStream.push(oldStream[i]);
-					}
-					let groupId, author;
-					for (let i in newStream) {
-						if (newStream[i].type == "MESSAGE" && BDFDB.DiscordConstants.MessageTypeGroups.USER_MESSAGE.has(newStream[i].content.type) && groupId != newStream[i].groupId) {
-							if (author && author.id == newStream[i].content.author.id && author.username == newStream[i].content.author.username) newStream[i] = Object.assign({}, newStream[i], {groupId: groupId});
-							author = newStream[i].content.author;
+					if (oldStream.length != e.instance.props.channelStream.length) {
+						for (let i in oldStream) {
+							let next = parseInt(i)+1;
+							if (oldStream[i].type != "DIVIDER" || (oldStream[next] && oldStream[i].type == "DIVIDER" && oldStream[next].type != "DIVIDER" && oldStream.slice(next).some(nextStream => nextStream.type != "DIVIDER"))) newStream.push(oldStream[i]);
 						}
-						else author = null;;
-						groupId = newStream[i].groupId;
+						let groupId, timestamp, author;
+						for (let i in newStream) {
+							if (newStream[i].type == "MESSAGE" && BDFDB.DiscordConstants.MessageTypeGroups.USER_MESSAGE.has(newStream[i].content.type) && groupId != newStream[i].groupId && timestamp && newStream[i].content.timestamp - timestamp < 600000) {
+								if (author && author.id == newStream[i].content.author.id && author.username == newStream[i].content.author.username) newStream[i] = Object.assign({}, newStream[i], {groupId: groupId});
+								author = newStream[i].content.author;
+							}
+							else author = null;
+							groupId = newStream[i].groupId;
+							timestamp = newStream[i].content.timestamp;
+						}
+						e.instance.props.channelStream = newStream;
 					}
-					e.instance.props.channelStream = newStream;
 				}
 				if (BDFDB.ObjectUtils.is(e.instance.props.messages) && BDFDB.ArrayUtils.is(e.instance.props.messages._array)) {
 					let messages = e.instance.props.messages;
