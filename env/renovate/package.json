@@ -23,7 +23,7 @@
     "test:share": "RENOVATE_CONFIG_FILE=../../renovate-config.json renovate-config-validator"
   },
   "dependencies": {
-    "@octokit/rest": "19.0.4",
+    "@octokit/rest": "19.0.5",
     "dotenv": "16.0.3",
     "fast-deep-equal": "3.1.3"
   },
