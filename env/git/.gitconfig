@@ -5,6 +5,7 @@
   excludesFile = ~/.gitignore
   autocrlf = input
   hooksPath = ~/.github/env/git/hooks
+  commentchar = auto
 
 [commit]
   gpgsign = true
@@ -20,7 +21,13 @@
   force-pull = !git fetch && git reset --hard origin/$(git current-branch)
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[url "https://github.com/"]
+  insteadOf = git://github.com/
+
+[include]
+  path = ~/.github/env/git/private.gitconfig
