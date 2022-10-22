@@ -240,7 +240,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-auto-continue-login',
     name: 'AMQ Auto Continue Login',
-    version: '0.1.0',
+    version: '0.1.1',
     description: {
       en: 'Press the Continue Login button automatically in Login Page.',
       ja: 'ログインページの「Continue Login」ボタンを自動で押下します。',
@@ -248,7 +248,7 @@ export const banners: Banner[] = [
     homepage:
       'https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%87%AA%E5%8B%95%E3%81%A7_Continue_Login_%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99_UserScript',
     author: 'SlashNephy',
-    match: ['https://animemusicquiz.com/*'],
+    match: ['https://animemusicquiz.com'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
   },
