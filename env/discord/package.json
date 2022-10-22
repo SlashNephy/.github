@@ -27,7 +27,7 @@
     "@slashnephy/prettier-config": "0.1.1",
     "@types/babel__core": "7.1.19",
     "@types/babel__preset-env": "7.9.2",
-    "concurrently": "7.4.0",
+    "concurrently": "7.5.0",
     "eslint": "8.26.0",
     "prettier": "2.7.1",
     "rollup": "3.2.3",
