@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.8.3
+ * @version 2.8.5
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -4723,19 +4723,20 @@ module.exports = (_ => {
 					handleContextMenu(e) {if (typeof this.props.onContextMenu == "function") this.props.onContextMenu(e, this);}
 					handleMouseEnter(e) {if (typeof this.props.onMouseEnter == "function") this.props.onMouseEnter(e, this);}
 					handleMouseLeave(e) {if (typeof this.props.onMouseLeave == "function") this.props.onMouseLeave(e, this);}
+					getBadgeWidthForValue(e) {return e < 10 ? 16 : e < 100 ? 22 : 30}
+					getBadgeCountString(e) {return e < 1e3 ? "" + e : Math.min(Math.floor(e/1e3), 9) + "k+"}
 					render() {
 						return BDFDB.ReactUtils.createElement("div", {
 							className: BDFDB.DOMUtils.formatClassName(this.props.className, BDFDB.disCN.badgenumberbadge, this.props.shape && Internal.LibraryComponents.Badges.BadgeShapes[this.props.shape] || Internal.LibraryComponents.Badges.BadgeShapes.ROUND),
 							style: Object.assign({
 								backgroundColor: !this.props.disableColor && (this.props.color || Internal.DiscordConstants.Colors.STATUS_RED),
-								width: Internal.LibraryComponents.Badges.getBadgeWidthForValue(this.props.count),
-								paddingRight: Internal.LibraryComponents.Badges.getBadgePaddingForValue(this.props.count)
+								width: this.getBadgeWidthForValue(this.props.count)
 							}, this.props.style),
 							onClick: this.handleClick.bind(this),
 							onContextMenu: this.handleContextMenu.bind(this),
 							onMouseEnter: this.handleMouseEnter.bind(this),
 							onMouseLeave: this.handleMouseLeave.bind(this),
-							children: Internal.LibraryComponents.Badges.getBadgeCountString(this.props.count)
+							children: this.getBadgeCountString(this.props.count)
 						});
 					}
 				};
@@ -8102,24 +8103,6 @@ module.exports = (_ => {
 					let extraDefaultProps = {};
 					for (let type of newBadges) extraDefaultProps[`${type}Width`] = 16;
 					
-					const getLeftBadgePositionInterpolation = function (leftBadge, newValue) {
-						return void 0 === newValue && (newValue = 1), leftBadge.springs.spring.to([0, 1], [20, 0]).to(value => "translate(" + value * -1 + " " + value * newValue + ")");
-					};
-					const getLowerLeftBadgeStyles = function () {
-						const spring = this.state.lowerLeftBadgeMask.springs.spring;
-						return {
-							opacity: spring.to([0, .5, 1], [0, 0, 1]),
-							transform: spring.to(value => "translate(" + -1 * (16 - 16 * value) + "px, " + (16 - 16 * value) + "px)")
-						};
-					};
-					const getUpperLeftBadgeStyles = function () {
-						const spring = this.state.upperLeftBadgeMask.springs.spring;
-						return {
-							opacity: spring.to([0, .5, 1], [0, 0, 1]),
-							transform: spring.to(value => "translate(" + -1 * (16 - 16 * value) + "px, " + -1 * (16 - 16 * value) + "px)")
-						};
-					};
-					
 					BDFDB.PatchUtils.patch(BDFDB, e.component.prototype, "render", {
 						before: e2 => {
 							e2.instance.props = Object.assign({}, e.component.defaultProps, extraDefaultProps, e2.instance.props);
@@ -8131,13 +8114,25 @@ module.exports = (_ => {
 								tChildren[tIndex].props.children.push(!e2.instance.props.lowerLeftBadge ? null : BDFDB.ReactUtils.createElement(Internal.LibraryComponents.BadgeAnimationContainer, {
 									className: BDFDB.disCN.guildlowerleftbadge,
 									key: "lower-left-badge",
-									animatedStyle: getLowerLeftBadgeStyles(),
+									animatedStyle: _ => {
+										const spring = e2.instance.state.lowerLeftBadgeMask.springs.spring;
+										return {
+											opacity: spring.to([0, .5, 1], [0, 0, 1]),
+											transform: spring.to(value => "translate(" + -1 * (16 - 16 * value) + "px, " + (16 - 16 * value) + "px)")
+										};
+									},
 									children: e2.instance.props.lowerLeftBadge
 								}));
 								tChildren[tIndex].props.children.push(!e2.instance.props.upperLeftBadge ? null : BDFDB.ReactUtils.createElement(Internal.LibraryComponents.BadgeAnimationContainer, {
 									className: BDFDB.disCN.guildupperleftbadge,
 									key: "upper-left-badge",
-									animatedStyle: getUpperLeftBadgeStyles(),
+									animatedStyle: _ => {
+										const spring = e2.instance.state.upperLeftBadgeMask.springs.spring;
+										return {
+											opacity: spring.to([0, .5, 1], [0, 0, 1]),
+											transform: spring.to(value => "translate(" + -1 * (16 - 16 * value) + "px, " + -1 * (16 - 16 * value) + "px)")
+										};
+									},
 									children: e2.instance.props.upperLeftBadge
 								}));
 							}
@@ -8150,7 +8145,7 @@ module.exports = (_ => {
 									height: 24,
 									rx: 12,
 									ry: 12,
-									transform: getLeftBadgePositionInterpolation(e2.instance.state.upperLeftBadgeMask, -1),
+									transform: e2.instance.state.upperLeftBadgeMask.springs.spring.to([0, 1], [20, 0]).to(value => `translate(${value * -1} ${value * -1})`),
 									fill: "black"
 								}));
 								mChildren[mIndex].props.children.push(BDFDB.ReactUtils.createElement(Internal.LibraryComponents.Animations.animated.rect, {
@@ -8160,12 +8155,12 @@ module.exports = (_ => {
 									height: 24,
 									rx: 12,
 									ry: 12,
-									transform: getLeftBadgePositionInterpolation(e2.instance.state.lowerLeftBadgeMask),
+									transform: e2.instance.state.lowerLeftBadgeMask.springs.spring.to([0, 1], [20, 0]).to(value => `translate(${value * -1} ${value * 1})`),
 									fill: "black"
 								}));
 							}
 						}
-					});
+					}, {name: "BlobMask"});
 					BDFDB.PatchUtils.patch(BDFDB, e.component.prototype, "componentDidMount", {
 						after: e2 => {
 							for (let type of newBadges) e2.instance.state[`${type}Mask`].update({
@@ -8173,7 +8168,7 @@ module.exports = (_ => {
 								immediate: true
 							}).start();
 						}
-					});
+					}, {name: "BlobMask"});
 					BDFDB.PatchUtils.patch(BDFDB, e.component.prototype, "componentWillUnmount", {
 						after: e2 => {
 							for (let type of newBadges) if (e2.instance.state[`${type}Mask`]) e2.instance.state[`${type}Mask`].dispose();
@@ -8196,7 +8191,7 @@ module.exports = (_ => {
 								}).start();
 							}
 						}
-					});
+					}, {name: "BlobMask"});
 				};
 				Internal.processDiscordTag = function (e) {
 					if (e.instance && e.instance.props && e.returnvalue && e.instance.props.user) e.returnvalue.props.user = e.instance.props.user;
