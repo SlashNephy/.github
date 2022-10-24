@@ -149,15 +149,6 @@ const typescript: Linter.Config = {
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/unbound-method': 'off',
-    // テンプレート文字列で number | boolean | undefined | null を許可
-    '@typescript-eslint/restrict-template-expressions': [
-      'error',
-      {
-        allowNumber: true,
-        allowBoolean: true,
-        allowNullish: true,
-      },
-    ],
     // 不要な変数を禁止
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-vars': [
@@ -170,6 +161,13 @@ const typescript: Linter.Config = {
         argsIgnorePattern: '^_',
       },
     ],
+    // 過激なルールを無効化
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/restrict-template-expressions': 'off',
   },
 }
 
