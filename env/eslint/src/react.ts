@@ -11,7 +11,7 @@ const react: Linter.Config = {
     'plugin:react/jsx-runtime',
     'plugin:css-import-order/recommended',
   ],
-  plugins: ['react-hooks', 'css-import-order'],
+  plugins: ['css-import-order'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
