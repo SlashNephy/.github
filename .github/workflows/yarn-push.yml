@@ -1,0 +1,109 @@
+name: 'yarn push'
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        default: '18'
+      node-version-file:
+        required: false
+        type: string
+        default: ''
+      working-directory:
+        required: false
+        type: string
+        default: '.'
+      pre-script:
+        required: false
+        type: string
+        default: ''
+      pre-command:
+        required: false
+        type: string
+        default: ''
+      script:
+        required: true
+        type: string
+      command:
+        required: false
+        type: string
+        default: ''
+      post-script:
+        required: false
+        type: string
+        default: ''
+      post-command:
+        required: false
+        type: string
+        default: ''
+      commit-message:
+        required: true
+        type: string
+
+permissions:
+  contents: 'write'
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node (via node-version-file)
+        if: inputs.node-version-file != ''
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '${{ inputs.node-version-file }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+      - name: Setup Node (via node-version)
+        if: inputs.node-version-file == ''
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ inputs.node-version }}'
+          cache: 'yarn'
+          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
+
+      - name: Install
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn install --immutable'
+
+      - name: Run Pre-Script
+        if: inputs.pre-script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.pre-script }}'
+
+      - name: Run Pre-Command
+        if: inputs.pre-command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.pre-command }}'
+
+      - name: Run Script
+        if: inputs.script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.script }}'
+
+      - name: Run Command
+        if: inputs.command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.command }}'
+
+      - name: Run Post-Script
+        if: inputs.post-script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.post-script }}'
+
+      - name: Run Post-Command
+        if: inputs.post-command != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: '${{ inputs.post-command }}'
+
+      - name: Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: '${{ inputs.commit-message }}'
