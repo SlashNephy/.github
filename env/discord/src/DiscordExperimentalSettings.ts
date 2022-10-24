@@ -1,6 +1,6 @@
 // prettier-ignore
 // eslint-disable-next-line eslint-comments/disable-enable-pair
-/* eslint-disable eqeqeq, no-empty,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-argument */
+/* eslint-disable eqeqeq, no-empty */
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
