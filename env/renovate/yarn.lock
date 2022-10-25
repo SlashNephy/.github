@@ -2284,7 +2284,7 @@ __metadata:
     eslint: 8.26.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 34.0.0
+    renovate: 34.1.0
     ts-node: 10.9.1
     typescript: 4.8.4
   languageName: unknown
@@ -7234,6 +7234,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"p-throttle@npm:4.1.1":
+  version: 4.1.1
+  resolution: "p-throttle@npm:4.1.1"
+  checksum: fe8709f3c3b1da7c033479375c2c302e80c1a5d86449013afa7cd46d1dc210bc824a7e4a9d088e66d31987d00878c2b5491bb2fe76246d4d2fc9a1636f5f8298
+  languageName: node
+  linkType: hard
+
 "p-timeout@npm:^3.2.0":
   version: 3.2.0
   resolution: "p-timeout@npm:3.2.0"
@@ -7720,9 +7727,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.0.0":
-  version: 34.0.0
-  resolution: "renovate@npm:34.0.0"
+"renovate@npm:34.1.0":
+  version: 34.1.0
+  resolution: "renovate@npm:34.1.0"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7803,6 +7810,7 @@ __metadata:
     p-all: 3.0.0
     p-map: 4.0.0
     p-queue: 6.6.2
+    p-throttle: 4.1.1
     parse-link-header: 2.0.0
     prettier: 2.7.1
     quick-lru: 5.1.1
@@ -7830,7 +7838,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 4fbe429d974c9f715e090ac8b3f1b39ffe11f4f1d769a65eb239bc4ce76705f1508c7892f0749e295a9c82b23a1f437fd21f7afcff99ebcba7ac70f6757018cd
+  checksum: 1128567f9530671c53bb802ee8f489b60290accfadaba75c6397298e20dd2103f419166d403d87d84c60a84c51c4a4ea796a33c27f4b47ac9a4b5782e6f1322e
   languageName: node
   linkType: hard
 
