@@ -7,7 +7,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-work-links',
     name: 'Annict Work Links',
-    version: '0.2.5',
+    version: '0.3.0',
     description: {
       en: 'Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.',
       ja: 'Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。',
