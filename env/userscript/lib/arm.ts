@@ -10,7 +10,7 @@ export type ArmEntry = {
 export const fetchArmEntries = async (): Promise<ArmEntry[]> => {
   const response = await executeXhr({
     method: 'GET',
-    url: 'https://raw.githubusercontent.com/kawaiioverflow/arm/master/arm.json',
+    url: 'https://raw.githubusercontent.com/SlashNephy/arm-supplementary/master/dist/arm.json',
   })
   return JSON.parse(response.responseText) as ArmEntry[]
 }
