@@ -163,8 +163,8 @@ __metadata:
   resolution: "@slashnephy/eslint-config@workspace:."
   dependencies:
     "@slashnephy/prettier-config": 0.1.1
-    "@types/eslint": 8.4.7
-    "@types/node": 17.0.41
+    "@types/eslint": 8.4.8
+    "@types/node": 18.11.5
     "@types/prettier": 2.7.1
     "@typescript-eslint/eslint-plugin": 5.37.0
     "@typescript-eslint/parser": 5.37.0
@@ -208,13 +208,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:8.4.7":
-  version: 8.4.7
-  resolution: "@types/eslint@npm:8.4.7"
+"@types/eslint@npm:8.4.8":
+  version: 8.4.8
+  resolution: "@types/eslint@npm:8.4.8"
   dependencies:
     "@types/estree": "*"
     "@types/json-schema": "*"
-  checksum: 5e1b8ed100dcb96c74098030ca00386d1661e83261c0b64a841e570a4dd74740bc15fe04363cb22d7c6e0c56cee61f8b2c1455ec7124e69226d41fb4fed2028e
+  checksum: 5b4708a56adeb5c209bc5d33590499be01286a90d3c324e2aabb1812d405a622ea9dd65eb8a095b2b9eb902bc8a25afddb9832f1f634457f973c07eade86aa5e
   languageName: node
   linkType: hard
 
@@ -239,10 +239,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:17.0.41":
-  version: 17.0.41
-  resolution: "@types/node@npm:17.0.41"
-  checksum: ddaf9e7decb487850a9bbfeb670b41c9d35c5b1597c4c4f889419b65042d776e9041ed533c7afc1bac30cad1e9dcfd984085b4a35312efe8ea5eaf0bd36a8191
+"@types/node@npm:18.11.5":
+  version: 18.11.5
+  resolution: "@types/node@npm:18.11.5"
+  checksum: ac54e9287dd4549ea3dc8aabc0cf7bfa04c52f02925d7fd68414789617ec770f034c8ae2e111e8bd00d446a46fcac42587b5a316a1303e2f6ea094854248c9ff
   languageName: node
   linkType: hard
 
