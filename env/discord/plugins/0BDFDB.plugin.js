@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.8.9
+ * @version 2.9.1
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -25,6 +25,9 @@ module.exports = (_ => {
 	BDFDB = {
 		started: true,
 		changeLog: {
+			"fixed": {
+				"Double Execution": "Patching certain stuff no longer executes them twice/thrice etc."
+			}
 		}
 	};
 	
@@ -2210,9 +2213,8 @@ module.exports = (_ => {
 					
 					for (let methodName of methodNames) if (module[methodName] == null || typeof module[methodName] == "function") {
 						if (!module[methodName]) module[methodName] = _ => {return null};
-						if (!config.noCache && !module[methodName].BDFDB_Patches) module[methodName].BDFDB_Patches = {};
-						let patches = !config.noCache ? module[methodName].BDFDB_Patches : {};
-						if (patches) for (let type in patchMethods) {
+						let patches = module[methodName].BDFDB_Patches || {};
+						for (let type in patchMethods) {
 							if (!patches[type]) {
 								const originalMethod = module[methodName].__originalFunction || module[methodName];
 								const internalData = (Object.entries(InternalData.LibraryModules).find(n => n && n[0] && LibraryModules[n[0]] == module && n[1] && n[1]._originalModule && n[1]._mappedItems[methodName]) || [])[1];
@@ -2240,6 +2242,7 @@ module.exports = (_ => {
 									
 									if (type != "before") return (methodName == "render" || methodName == "default") && data.returnValue === undefined ? null : data.returnValue;
 								});
+								module[methodName].BDFDB_Patches = patches;
 								patches[type] = {plugins: {}, cancel: _ => {
 									if (!config.noCache) BDFDB.ArrayUtils.remove(Internal.patchCancels, patches[type].cancel, true);
 									delete patches[type];
@@ -2462,7 +2465,7 @@ module.exports = (_ => {
 				MyReact.objectToReact = function (obj) {
 					if (!obj) return null;
 					else if (typeof obj == "string") return obj;
-					else if (BDFDB.ObjectUtils.is(obj)) return BDFDB.ReactUtils.createElement(obj.type || obj.props && obj.props.href && "a" || "div", !obj.props ?  {} : Object.assign({}, obj.props, {
+					else if (BDFDB.ObjectUtils.is(obj)) return BDFDB.ReactUtils.createElement(obj.type && typeof obj.type == "function" || typeof obj.type == "string" ? obj.type : (obj.props && obj.props.href && "a" || "div"), !obj.props ? {} : Object.assign({}, obj.props, {
 						children: obj.props.children ? MyReact.objectToReact(obj.props.children) : null
 					}));
 					else if (BDFDB.ArrayUtils.is(obj)) return obj.map(n => MyReact.objectToReact(n));
