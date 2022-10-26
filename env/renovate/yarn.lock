@@ -1790,10 +1790,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@one-ini/wasm@npm:0.1.0":
-  version: 0.1.0
-  resolution: "@one-ini/wasm@npm:0.1.0"
-  checksum: 9a8e5000b370bc436491415719627b0c0b28948beccee1c74296be9f53d7195a17ca540373cfda50a0017398a6aa6bdf295ea21e54e224ca2d95c4c7bce7cdaf
+"@one-ini/wasm@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@one-ini/wasm@npm:0.1.1"
+  checksum: 11de17108eae57c797e552e36b259398aede999b4a689d78be6459652edc37f3428472410590a9d328011a8751b771063a5648dd5c4205631c55d1d58e313156
   languageName: node
   linkType: hard
 
@@ -2284,7 +2284,7 @@ __metadata:
     eslint: 8.26.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 34.1.4
+    renovate: 34.1.5
     ts-node: 10.9.1
     typescript: 4.8.4
   languageName: unknown
@@ -4064,17 +4064,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"editorconfig@npm:1.0.0":
-  version: 1.0.0
-  resolution: "editorconfig@npm:1.0.0"
+"editorconfig@npm:1.0.1":
+  version: 1.0.1
+  resolution: "editorconfig@npm:1.0.1"
   dependencies:
-    "@one-ini/wasm": 0.1.0
+    "@one-ini/wasm": 0.1.1
     commander: ^9.4.1
     minimatch: 5.1.0
     semver: ^7.3.8
   bin:
     editorconfig: bin/editorconfig
-  checksum: 88cab142456ea3e46c7793a4b6e88314583192620ad583b63bada5c66b07461b842009f8a9b2b7f1d5780eac5ba7e025cc5a72a5cb85f734e1017d55bc819bf2
+  checksum: 9dbd988d4fbd62c4324a2af1ad9d62e009ff73b9c5bf32b6f64127e75f8edfa3d6715f879ab4821c0f3c62541f3e369cd56a77957ee4e66b2252b2f51e9efecc
   languageName: node
   linkType: hard
 
@@ -7727,9 +7727,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.1.4":
-  version: 34.1.4
-  resolution: "renovate@npm:34.1.4"
+"renovate@npm:34.1.5":
+  version: 34.1.5
+  resolution: "renovate@npm:34.1.5"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7775,7 +7775,7 @@ __metadata:
     delay: 5.0.0
     dequal: 2.0.3
     detect-indent: 6.1.0
-    editorconfig: 1.0.0
+    editorconfig: 1.0.1
     email-addresses: 5.0.0
     emoji-regex: 10.2.1
     emojibase: 6.1.0
@@ -7838,7 +7838,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: cf9eb1bf836ea84cd2affb8bfc493a33ad6384e0e3b9fbdf820c79ac166ab761e2f6b541854683343697363286fd9065da2ece80f7317971779512a273d6f007
+  checksum: 15d0700778f05b1839c2875c5f7d1bdc88c8f23531739a0aeb6599471b4e4d580dd151a0f56927d585929ead8e8ae22aec28aa3c938aac8aed77066892bcfa33
   languageName: node
   linkType: hard
 
