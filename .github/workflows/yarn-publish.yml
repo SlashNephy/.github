@@ -19,16 +19,24 @@ on:
         required: false
         type: string
         default: '.'
+      pre-script:
+        required: false
+        type: string
+        default: ''
       script:
         required: false
         type: string
         default: 'publish'
+      commit-message:
+        required: false
+        type: string
+        default: ''
     secrets:
       NODE_AUTH_TOKEN:
         required: true
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   run:
@@ -65,7 +73,18 @@ jobs:
               "${{ inputs.registry-url }}":
                 npmAuthToken: ${{ secrets.NODE_AUTH_TOKEN }}
 
+      - name: Run Pre-Script
+        if: inputs.pre-script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.pre-script }}'
+
       - name: Publish
         working-directory: '${{ inputs.working-directory }}'
         run: 'yarn ${{ inputs.script }}'
         continue-on-error: true
+
+      - name: Push
+        if: inputs.commit-message != ''
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: '${{ inputs.commit-message }}'
