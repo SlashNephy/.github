@@ -10,5 +10,6 @@
     "strict": true,
     "skipLibCheck": true,
     "useUnknownInCatchVariables": true
-  }
+  },
+  "exclude": ["bin/*.ts"]
 }
