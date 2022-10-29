@@ -43,7 +43,9 @@ jobs:
     uses: ./.github/workflows/yarn-publish.yml
     with:
       working-directory: 'env/eslint'
+      pre-script: 'bump-version'
+      commit-message: '🔨 Bump version'
     permissions:
-      contents: 'read'
+      contents: 'write'
     secrets:
       NODE_AUTH_TOKEN: '${{ secrets.NPM_ACCESS_TOKEN }}'
