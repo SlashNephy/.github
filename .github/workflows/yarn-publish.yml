@@ -83,6 +83,12 @@ jobs:
         run: 'yarn ${{ inputs.script }}'
         continue-on-error: true
 
+      - name: Reset .yarnrc.yml
+        if: inputs.commit-message != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'git checkout .yarnrc.yml'
+        continue-on-error: true
+
       - name: Push
         if: inputs.commit-message != ''
         uses: stefanzweifel/git-auto-commit-action@v4
