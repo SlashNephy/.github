@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@jest/types": "29.2.1",
-    "@slashnephy/eslint-config": "0.2.10",
+    "@slashnephy/eslint-config": "0.2.11",
     "@slashnephy/prettier-config": "0.1.1",
     "@types/node": "18.11.7",
     "concurrently": "7.5.0",
