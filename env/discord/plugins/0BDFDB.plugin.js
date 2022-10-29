@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.9.1
+ * @version 2.9.2
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -15,6 +15,8 @@
 module.exports = (_ => {
 	if (window.BDFDB_Global && window.BDFDB_Global.PluginUtils && typeof window.BDFDB_Global.PluginUtils.cleanUp == "function") window.BDFDB_Global.PluginUtils.cleanUp(window.BDFDB_Global);
 	
+	const request = require("request"), fs = require("fs"), path = require("path");
+	
 	var BDFDB, Internal;
 	var LibraryRequires = {};
 	var DiscordObjects = {}, DiscordConstants = {};
@@ -25,9 +27,7 @@ module.exports = (_ => {
 	BDFDB = {
 		started: true,
 		changeLog: {
-			"fixed": {
-				"Double Execution": "Patching certain stuff no longer executes them twice/thrice etc."
-			}
+			
 		}
 	};
 	
@@ -529,7 +529,8 @@ module.exports = (_ => {
 				}
 			};
 			
-			
+			const cssFileName = "0BDFDB.raw.css", dataFileName = "0BDFDB.data.json";
+			const cssFilePath = path.join(BDFDB.BDUtils.getPluginsFolder(), cssFileName), dataFilePath = path.join(BDFDB.BDUtils.getPluginsFolder(), dataFileName);
 			BDFDB.PluginUtils = {};
 			BDFDB.PluginUtils.buildPlugin = function (changeLog) {
 				return [Plugin(changeLog), BDFDB];
@@ -909,7 +910,16 @@ module.exports = (_ => {
 				loadingIconWrapper.appendChild(icon);
 			};
 			BDFDB.PluginUtils.createSettingsPanel = function (addon, props) {
-				if (!window.BDFDB_Global.loaded) return "Could not initiate BDFDB Library Plugin! Can not create Settings Panel!";
+				if (!window.BDFDB_Global.loaded) return BdApi.React.createElement("div", {
+					style: {"color": "var(--header-secondary)", "white-space": "pre-wrap"},
+					children: [
+						"Could not initiate BDFDB Library Plugin! Can not create Settings Panel!\n\nTry deleting the ",
+						BdApi.React.createElement("strong", {children: dataFileName}),
+						" File in your ",
+						BdApi.React.createElement("strong", {children: BDFDB.BDUtils.getPluginsFolder()}),
+						"\nDirectory and reload Discord afterwards!"
+					]
+				});
 				addon = addon == BDFDB && Internal || addon;
 				if (!BDFDB.ObjectUtils.is(addon)) return;
 				let settingsProps = props;
@@ -942,8 +952,6 @@ module.exports = (_ => {
 					cleanUp: BDFDB.PluginUtils.cleanUp
 				}
 			}, window.BDFDB_Global);
-			
-			const request = require("request"), fs = require("fs"), path = require("path");
 			
 			Internal.writeConfig = function (plugin, path, config) {
 				let allData = {};
@@ -1066,11 +1074,6 @@ module.exports = (_ => {
 				else if (id === undefined) return newC[key] === undefined ? {} : newC[key];
 				else return newC[key] === undefined || newC[key][id] === undefined ? null : newC[key][id];
 			};
-			
-			const cssFileName = "0BDFDB.raw.css";
-			const dataFileName = "0BDFDB.data.json";
-			const cssFilePath = path.join(BDFDB.BDUtils.getPluginsFolder(), cssFileName);
-			const dataFilePath = path.join(BDFDB.BDUtils.getPluginsFolder(), dataFileName);
 			let InternalData, libHashes = {}, oldLibHashes = BDFDB.DataUtils.load(BDFDB, "hashes"), libraryCSS;
 			
 			const getBackup = (fileName, path) => {
@@ -1094,7 +1097,7 @@ module.exports = (_ => {
 					libraryCSS = css;
 				
 					const backupObj = getBackup(dataFileName, dataFilePath);
-					if (backupObj.backup && backupObj.hashIsSame) parseData(backupObj.backup);
+					if (backupObj.backup && backupObj.hashIsSame || true) parseData(backupObj.backup);
 					else request.get(`https://mwittrien.github.io/BetterDiscordAddons/Library/_res/${dataFileName}`, (e, r, b) => {
 						if ((e || !b || r.statusCode != 200) && tryAgain) return BDFDB.TimeUtils.timeout(_ => requestLibraryData(), 10000);
 						if (!e && b && r.statusCode == 200) {
@@ -3891,34 +3894,24 @@ module.exports = (_ => {
 					if (!returnvalue || !BDFDB.ObjectUtils.is(config) || !config.label && !config.id) return [null, -1];
 					config.label = config.label && [config.label].flat().filter(n => n);
 					config.id = config.id && [config.id].flat().filter(n => n);
-					let contextMenu = BDFDB.ReactUtils.findChild(returnvalue, {props: "navId"}) || (BDFDB.ArrayUtils.is(returnvalue) ? {props: {children: returnvalue}} : null);
+					let contextMenu = BDFDB.ArrayUtils.is(returnvalue) ? {props: {children: returnvalue}} : BDFDB.ReactUtils.findChild(returnvalue, {props: "navId"});
 					if (contextMenu) {
 						let children = BDFDB.ArrayUtils.is(contextMenu.props.children) ? contextMenu.props.children : [contextMenu.props.children];
-						for (let i in children) {
-							if (children[i] && children[i].type == LibraryComponents.MenuItems.MenuGroup) {
-								if (BDFDB.ArrayUtils.is(children[i].props.children)) {
-									for (let j in children[i].props.children) if (check(children[i].props.children[j])) {
-										if (config.group) return [children, parseInt(i)];
-										else return [children[i].props.children, parseInt(j)];
-									}
+						for (let i in children) if (children[i]) {
+							if (check(children[i])) return [children, parseInt(i)];
+							else if (children[i].props) {
+								if (BDFDB.ArrayUtils.is(children[i].props.children) && children[i].props.children.length) {
+									let [possibleChildren, possibleIndex] = BDFDB.ContextMenuUtils.findItem(children[i].props.children, config);
+									if (possibleIndex > -1) return [possibleChildren, possibleIndex];
 								}
-								else if (children[i] && children[i].props) {
-									if (check(children[i].props.children)) {
-										if (config.group) return [children, parseInt(i)];
-										else {
-											children[i].props.children = [children[i].props.children];
-											return [children[i].props.children, 0];
-										}
-									}
-									else if (children[i].props.children && children[i].props.children.props && BDFDB.ArrayUtils.is(children[i].props.children.props.children)) {
-										for (let j in children[i].props.children.props.children) if (check(children[i].props.children.props.children[j])) {
-											if (config.group) return [children, parseInt(i)];
-											else return [children[i].props.children.props.children, parseInt(j)];
-										}
+								else if (check(children[i].props.children)) {
+									if (config.group) return [children, parseInt(i)];
+									else {
+										children[i].props.children = [children[i].props.children];
+										return [children[i].props.children, 0];
 									}
 								}
 							}
-							else if (check(children[i])) return [children, parseInt(i)];
 						}
 						return [children, -1];
 					}
