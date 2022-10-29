@@ -8,10 +8,10 @@
     "directory": "env/eslint"
   },
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "files": [
     "package.json",
-    "dist/*.js"
+    "dist/src/*.js"
   ],
   "publishConfig": {
     "access": "public"
@@ -71,7 +71,7 @@
   "packageManager": "yarn@3.2.4",
   "eslintConfig": {
     "extends": [
-      "./dist/index.js"
+      "./dist/src/index.js"
     ]
   }
 }
