@@ -53,6 +53,6 @@ jobs:
     with:
       working-directory: 'env/textlint'
     permissions:
-      contents: 'read'
+      contents: 'write'
     secrets:
       NODE_AUTH_TOKEN: '${{ secrets.NPM_ACCESS_TOKEN }}'
