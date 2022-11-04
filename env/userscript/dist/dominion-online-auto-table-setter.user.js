@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            dominion.games Auto Table Setter
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.4
+// @version         0.4.0
 // @author          SlashNephy
 // @description     Automatically configures the table settings in dominion.games.
 // @description:ja  dominion.games の卓設定を自動的に設定します。
@@ -16,27 +16,17 @@
 // @license         MIT license
 // ==/UserScript==
 
-const updateSettings = () => {
-  document.querySelector('button[ng-click="$ctrl.switchView()"]')?.click()
-  document.querySelector('input[ng-model="$ctrl.tableRules.useVPCounter"]')?.click()
-  document.querySelector('button[ng-click="$ctrl.showKingdomSelection()"]')?.click()
-  for (const element of document.querySelectorAll('input.expansion-checkbox')) {
+const applySettings = () => {
+  document.querySelector('div.clear-button')?.click()
+  for (let i = 0; i < 2; i++) {
+    document.querySelector('div.table-kingdom-landscape.add-landscape')?.click()
+  }
+  for (const element of document.querySelectorAll('div.landscape-selector-none')) {
     element.click()
   }
-  for (let i = 0; i < 2; i++) {
-    document.querySelector('three-valued-button[ng-model="kc.kingdom.colonies"] button')?.click()
-    document.querySelector('three-valued-button[ng-model="kc.kingdom.shelters"] button')?.click()
-  }
-  for (let i = 0; i < 2; i++) {
-    document.querySelector('div[ng-click="$ctrl.addNewSlot()"]')?.click()
-  }
-  for (let i = 0; i < 2; i++) {
-    document.querySelector('div[ng-if="$ctrl.canBeNothing()"]')?.click()
-  }
-  for (const element of document.querySelectorAll('div.landscape-type-text.type-W')) {
-    element.click()
-  }
-  document.querySelector('input[ng-click="kc.close()"]')?.click()
+  document.querySelector('div#colony-selector')?.click()
+  document.querySelector('div#shelter-selector')?.click()
+  document.querySelector('div.game-options div.table-toggle-container:nth-child(3) > div.switch-button')?.click()
   alert('Table settings applied!')
 }
 const observe = () => {
@@ -45,20 +35,23 @@ const observe = () => {
     setTimeout(observe, 1000)
     return
   }
-  let hasUpdated = false
   const observer = new MutationObserver((records) => {
-    const r = records[0]
-    console.log(r)
-    if (r.target instanceof Element && r.target.classList.contains('my-table') && !hasUpdated) {
-      updateSettings()
-      hasUpdated = true
-    } else if (r.target instanceof Element && r.target.classList.contains('new-table') && hasUpdated) {
-      hasUpdated = false
+    for (const record of records) {
+      if (!(record.target instanceof Element)) {
+        continue
+      }
+      if (record.oldValue?.split(/\s/).some((x) => x === 'my-table') === true) {
+        continue
+      }
+      if (record.target.classList.contains('my-table')) {
+        applySettings()
+      }
     }
   })
   observer.observe(target, {
     attributes: true,
     attributeFilter: ['class'],
+    attributeOldValue: true,
   })
 }
-document.addEventListener('load', observe)
+observe()

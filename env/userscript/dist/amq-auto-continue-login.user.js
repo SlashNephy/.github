@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Auto Continue Login
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Press the Continue Login button automatically in Login Page.
 // @description:ja  ログインページの「Continue Login」ボタンを自動で押下します。
@@ -11,7 +11,7 @@
 // @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
-// @match           https://animemusicquiz.com/*
+// @match           https://animemusicquiz.com
 // @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
