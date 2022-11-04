@@ -47,6 +47,8 @@ const react: Linter.Config = {
         additionalHooks: '(useRecoilCallback|useRecoilTransaction_UNSTABLE)',
       },
     ],
+    // ハンドラーの名前規則
+    'react/jsx-handler-names': 'error',
   },
 }
 

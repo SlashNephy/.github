@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "0.2.11",
+  "version": "0.2.13",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
     "type": "git",
@@ -29,9 +29,9 @@
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.40.1",
-    "@typescript-eslint/parser": "5.40.1",
-    "eslint-config-next": "12.3.1",
+    "@typescript-eslint/eslint-plugin": "5.41.0",
+    "@typescript-eslint/parser": "5.41.0",
+    "eslint-config-next": "13.0.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "3.5.2",
     "eslint-plugin-css-import-order": "1.1.0",
@@ -60,7 +60,7 @@
   "devDependencies": {
     "@slashnephy/prettier-config": "0.1.1",
     "@types/eslint": "8.4.9",
-    "@types/node": "18.11.7",
+    "@types/node": "18.11.9",
     "@types/prettier": "2.7.1",
     "concurrently": "7.5.0",
     "eslint": "8.26.0",
