@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Work Links
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.5
+// @version         0.3.0
 // @author          SlashNephy
 // @description     Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.
 // @description:ja  Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。
@@ -34,7 +34,7 @@ const executeXhr = async (request) => {
 const fetchArmEntries = async () => {
   const response = await executeXhr({
     method: 'GET',
-    url: 'https://raw.githubusercontent.com/kawaiioverflow/arm/master/arm.json',
+    url: 'https://raw.githubusercontent.com/SlashNephy/arm-supplementary/master/dist/arm.json',
   })
   return JSON.parse(response.responseText)
 }
