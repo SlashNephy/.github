@@ -29,6 +29,18 @@ const main = async () => {
       hasStar = false,
       hasIssue = false
     for (const webhook of await listRepoWebhooks(repo.owner.login, repo.name)) {
+      if (
+        webhook.last_response.code !== null &&
+        (200 < webhook.last_response.code ||
+          webhook.last_response.code >= 300) &&
+        // Too Many Requests は許可
+        webhook.last_response.code !== 429
+      ) {
+        console.log(
+          `[${repo.owner.login}/${repo.name}] This webhook has an error: ${webhook.config.url}`
+        )
+      }
+
       switch (webhook.config.url) {
         case eventsWebhookUrl:
           hasEvents = true
@@ -59,6 +71,7 @@ const main = async () => {
     if (!hasStar) {
       await createWebhook(repo.owner.login, repo.name, env.STAR_WEBHOOK_URL, [
         'star',
+        'watch',
       ])
       console.info(`[${repo.owner.login}/${repo.name}] Created star webhook`)
     }
