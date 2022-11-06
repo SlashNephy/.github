@@ -2,7 +2,7 @@
  * @name Translator
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.4.2
+ * @version 2.4.5
  * @description Allows you to translate Messages and your outgoing Messages within Discord
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -340,7 +340,7 @@ module.exports = (_ => {
 					"zh-CN": "zh",
 					"zh-TW": "cht"
 				},
-				key: "xxxxxxxxx xxxxxx xxxxxxxxxx"
+				key: "appId (number) key (string)"
 			}
 		};
 		
@@ -414,6 +414,13 @@ module.exports = (_ => {
 			}
 			
 			onStart () {
+				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.MessageUtils, "startEditMessage", {before: e => {
+					if (e.methodArguments[1] && oldMessages[e.methodArguments[1]] && oldMessages[e.methodArguments[1]].content) e.methodArguments[2] = oldMessages[e.methodArguments[1]].content;
+				}});
+				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.MessageUtils, "editMessage", {before: e => {
+					delete translatedMessages[e.methodArguments[1]];
+					delete oldMessages[e.methodArguments[1]];
+				}});
 				this.forceUpdateAll();
 			}
 			
@@ -531,7 +538,7 @@ module.exports = (_ => {
 
 			onMessageContextMenu (e) {
 				if (e.instance.props.message && e.instance.props.channel) {
-					let translated = translatedMessages[e.instance.props.message.id];
+					let translated = !!translatedMessages[e.instance.props.message.id];
 					let hint = BDFDB.BDUtils.isPluginEnabled("MessageUtilities") ? BDFDB.BDUtils.getPlugin("MessageUtilities").getActiveShortcutString("__Translate_Message") : null;
 					let [children, index] = BDFDB.ContextMenuUtils.findItem(e.returnvalue, {id: ["pin", "unpin"]});
 					if (index == -1) [children, index] = BDFDB.ContextMenuUtils.findItem(e.returnvalue, {id: ["edit", "add-reaction", "quote"]});
@@ -653,7 +660,7 @@ module.exports = (_ => {
 			}
 			
 			processChannelTextAreaContainer (e) {
-				if (e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL_WITH_ACTIVITY) return;
+				if (e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL_WITH_ACTIVITY && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.SIDEBAR) return;
 				BDFDB.PatchUtils.patch(this, e.instance.props, "onSubmit", {instead: e2 => {
 					if (this.isTranslationEnabled(e.instance.props.channel.id) && e2.methodArguments[0].value) {
 						e2.stopOriginalMethodCall();
@@ -667,7 +674,7 @@ module.exports = (_ => {
 						});
 					}
 					return e2.callOriginalMethodAfterwards();
-				}}, {force: true, noCache: true});
+				}}, {noCache: true});
 			}
 
 			processChannelTextAreaEditor (e) {
@@ -675,12 +682,11 @@ module.exports = (_ => {
 			}
 			
 			processChannelTextAreaButtons (e) {
-				if (this.settings.general.addTranslateButton && (e.instance.props.type == BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL || e.instance.props.type == BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL_WITH_ACTIVITY || e.instance.props.type == BDFDB.LibraryComponents.ChannelTextAreaTypes.SIDEBAR) && !e.instance.props.disabled) {
-					e.returnvalue.props.children.unshift(BDFDB.ReactUtils.createElement(TranslateButtonComponent, {
-						guildId: e.instance.props.channel.guild_id ? e.instance.props.channel.guild_id : "@me",
-						channelId: e.instance.props.channel.id
-					}));
-				}
+				if (!this.settings.general.addTranslateButton || e.instance.props.disabled || e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL_WITH_ACTIVITY && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.SIDEBAR) return;
+				e.returnvalue.props.children.unshift(BDFDB.ReactUtils.createElement(TranslateButtonComponent, {
+					guildId: e.instance.props.channel.guild_id ? e.instance.props.channel.guild_id : "@me",
+					channelId: e.instance.props.channel.id
+				}));
 			}
 
 			processMessages (e) {
@@ -707,7 +713,7 @@ module.exports = (_ => {
 			}
 
 			processMessageReply (e) {
-				if (!e.instance.props.referencedMessage || !translatedMessages[e.instance.props.referencedMessage.message.id]) return;
+				if (!e.instance.props.referencedMessage || !e.instance.props.referencedMessage.message || !translatedMessages[e.instance.props.referencedMessage.message.id]) return;
 				e.instance.props.referencedMessage = Object.assign({}, e.instance.props.referencedMessage);
 				e.instance.props.referencedMessage.message = new BDFDB.DiscordObjects.Message(e.instance.props.referencedMessage.message);
 				e.instance.props.referencedMessage.message.content = translatedMessages[e.instance.props.referencedMessage.message.id].content;
@@ -1007,8 +1013,8 @@ module.exports = (_ => {
 			
 			iTranslateTranslate (data, callback) {
 				let translate = _ => {
-					BDFDB.LibraryRequires.request.post({
-						url: "https://web-api.itranslateapp.com/v3/texts/translate",
+					BDFDB.LibraryRequires.request("https://web-api.itranslateapp.com/v3/texts/translate", {
+						method: "post",
 						headers: {
 							"API-KEY": authKeys.itranslate && authKeys.itranslate.key || data.engine.APIkey
 						},
@@ -1138,16 +1144,17 @@ module.exports = (_ => {
 			}
 			
 			baiduTranslate (data, callback) {
-				const credentials = (authKeys.baidu && authKeys.baidu.key || "20210425000799880 e12h9h4rh39r8h12r8 D90usZcbznwthzKC1KOb").split(" ");
-				BDFDB.LibraryRequires.request.post({
-					url: "https://fanyi-api.baidu.com/api/trans/vip/translate",
+				const credentials = (authKeys.baidu && authKeys.baidu.key || "20221009001380882 TOPnUKz8jJ32AZNOuUhX").split(" ");
+				const salt = BDFDB.NumberUtils.generateId();
+				BDFDB.LibraryRequires.request("https://fanyi-api.baidu.com/api/trans/vip/translate", {
+					method: "post",
 					form: {
 						from: translationEngines.baidu.parser[data.input.id] || data.input.id,
 						to: translationEngines.baidu.parser[data.output.id] || data.output.id,
-						q: data.text,
+						q: encodeURIComponent(data.text),
 						appid: credentials[0],
-						salt: credentials[1],
-						sign: this.MD5(credentials[0] + data.text + credentials[1] + credentials[2])
+						salt: salt,
+						sign: this.MD5(credentials[0] + data.text + salt + (credentials[2] || credentials[1]))
 					}
 				}, (error, response, result) => {
 					if (!error && result && response.statusCode == 200) {

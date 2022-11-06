@@ -6,6 +6,7 @@
 			"epicgames": true,
 			"facebook": true,
 			"github": true,
+			"instagram": true,
 			"leagueoflegends": true,
 			"paypal": true,
 			"playstation": true,
@@ -16,6 +17,7 @@
 			"skype": true,
 			"spotify": true,
 			"steam": true,
+			"tiktok": true,
 			"twitch": true,
 			"twitter": true,
 			"xbox": true,
@@ -24,7 +26,6 @@
 		"general": {
 			"useColoredIcons": true,
 			"useColoredTooltips": true,
-			"placeAtTop": false,
 			"showVerifiedBadge": true,
 			"openWebpage": true
 		}
