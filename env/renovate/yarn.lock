@@ -2284,7 +2284,7 @@ __metadata:
     eslint: 8.27.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 34.20.0
+    renovate: 34.20.1
     ts-node: 10.9.1
     typescript: 4.8.4
   languageName: unknown
@@ -6402,6 +6402,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:3.1.0":
+  version: 3.1.0
+  resolution: "luxon@npm:3.1.0"
+  checksum: f8a850b759ba7a2e009d904c522ed7bc264bf4add57578f8948e52a0ed96b627b025b5aad8032295b570ae19fac41f0ffab91bdb128715fb0cc020798a7ba886
+  languageName: node
+  linkType: hard
+
 "make-error@npm:^1.1.1":
   version: 1.3.6
   resolution: "make-error@npm:1.3.6"
@@ -7735,9 +7742,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.20.0":
-  version: 34.20.0
-  resolution: "renovate@npm:34.20.0"
+"renovate@npm:34.20.1":
+  version: 34.20.1
+  resolution: "renovate@npm:34.20.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7806,7 +7813,7 @@ __metadata:
     json-dup-key-validator: 1.0.3
     json-stringify-pretty-compact: 3.0.0
     json5: 2.2.1
-    luxon: 3.0.4
+    luxon: 3.1.0
     markdown-it: 13.0.1
     markdown-table: 2.0.0
     marshal: 0.5.4
@@ -7834,7 +7841,7 @@ __metadata:
     simple-git: 3.14.1
     slugify: 1.6.5
     traverse: 0.6.7
-    tslib: 2.4.0
+    tslib: 2.4.1
     upath: 2.0.1
     url-join: 4.0.1
     validate-npm-package-name: 5.0.0
@@ -7846,7 +7853,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: baf549f8a07299e5843772345f580da3785edac9233e21edf63e9b4ea91f26c046252700ef1ad8dfb089d202368d0429f2f2868465f859cc380a3251166300e6
+  checksum: 51496378660e95052305996d6bc42de8f51d7095ec40f880bc96fb97a8c7f4301d14ca2e7d3cb48a746df4765f1dbec4ffbc2748509bac5d3821371c8b476905
   languageName: node
   linkType: hard
 
@@ -8752,6 +8759,13 @@ __metadata:
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
+"tslib@npm:2.4.1":
+  version: 2.4.1
+  resolution: "tslib@npm:2.4.1"
+  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
   languageName: node
   linkType: hard
 
