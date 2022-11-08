@@ -2284,7 +2284,7 @@ __metadata:
     eslint: 8.27.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 34.20.4
+    renovate: 34.21.0
     ts-node: 10.9.1
     typescript: 4.8.4
   languageName: unknown
@@ -7735,9 +7735,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.20.4":
-  version: 34.20.4
-  resolution: "renovate@npm:34.20.4"
+"renovate@npm:34.21.0":
+  version: 34.21.0
+  resolution: "renovate@npm:34.21.0"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7846,7 +7846,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 6596ea5020596465d3477df71adc124207322aa2117384d316cda6feb61ff68cf09dd41200cac0bb98ee4a9a619e1d7a94162725a7fb9015a677435853adda7f
+  checksum: 186a901480f79358af1afcbb951a09075ada9eb97412e7293d481a9f7387a88eaedc04b5b35fa65cbd74757f66656f373738997728326677a654ade57b7f7664
   languageName: node
   linkType: hard
 
