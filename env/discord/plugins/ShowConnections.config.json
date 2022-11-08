@@ -2,6 +2,7 @@
 	"all": {
 		"connections": {
 			"battlenet": true,
+			"crunchyroll": true,
 			"ebay": true,
 			"epicgames": true,
 			"facebook": true,

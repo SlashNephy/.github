@@ -1,7 +1,7 @@
 /**
  * @name RoleMentionIcons
  * @author Neodymium
- * @version 1.1.3
+ * @version 1.1.4
  * @description Displays icons next to role mentions.
  * @source https://github.com/Neodymium7/BetterDiscordStuff/blob/main/RoleMentionIcons/RoleMentionIcons.plugin.js
  * @updateUrl https://raw.githubusercontent.com/Neodymium7/BetterDiscordStuff/main/RoleMentionIcons/RoleMentionIcons.plugin.js
@@ -10,7 +10,7 @@
 
 /*@cc_on
 @if (@_jscript)
-
+    
     // Offer to self-install for clueless users that try to run this directly.
 	var shell = WScript.CreateObject("WScript.Shell");
 	var fs = new ActiveXObject("Scripting.FileSystemObject");
@@ -35,7 +35,7 @@ const config = {
 	info: {
 		name: "RoleMentionIcons",
 		authors: [{ name: "Neodymium" }],
-		version: "1.1.3",
+		version: "1.1.4",
 		description: "Displays icons next to role mentions.",
 		github: "https://github.com/Neodymium7/BetterDiscordStuff/blob/main/RoleMentionIcons/RoleMentionIcons.plugin.js",
 		github_raw: "https://raw.githubusercontent.com/Neodymium7/BetterDiscordStuff/main/RoleMentionIcons/RoleMentionIcons.plugin.js"
@@ -43,7 +43,7 @@ const config = {
 	changelog: [{
 		title: "Fixed",
 		type: "fixed",
-		items: ["Rewrote the plugin to use DOM Manipulation instead of patching for compatibility with Discord's latest update."]
+		items: ["Fixed potential error message spam in console."]
 	}]
 };
 
@@ -62,32 +62,32 @@ if (!global.ZeresPluginLibrary) {
 
 function buildPlugin([Plugin, Library]) {
     const { Filters: { byProps }, getModule } = BdApi.Webpack;
-
+	
 	const { SettingPanel, Switch } = Library.Settings;
-
+	
 	const GuildStore = getModule(byProps("getGuildCount"));
 	const roleMention = getModule(byProps("roleMention")).roleMention.split(" ")[0];
-
+	
 	const peopleSVG = (() => {
 		const element = document.createElement("div");
 		element.innerHTML = '<svg class="role-mention-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="14" width="14"><path d="M14 8.00598C14 10.211 12.206 12.006 10 12.006C7.795 12.006 6 10.211 6 8.00598C6 5.80098 7.794 4.00598 10 4.00598C12.206 4.00598 14 5.80098 14 8.00598ZM2 19.006C2 15.473 5.29 13.006 10 13.006C14.711 13.006 18 15.473 18 19.006V20.006H2V19.006Z" fill="currentColor" /><path d="M14 8.00598C14 10.211 12.206 12.006 10 12.006C7.795 12.006 6 10.211 6 8.00598C6 5.80098 7.794 4.00598 10 4.00598C12.206 4.00598 14 5.80098 14 8.00598ZM2 19.006C2 15.473 5.29 13.006 10 13.006C14.711 13.006 18 15.473 18 19.006V20.006H2V19.006Z" fill="currentColor" /><path d="M20.0001 20.006H22.0001V19.006C22.0001 16.4433 20.2697 14.4415 17.5213 13.5352C19.0621 14.9127 20.0001 16.8059 20.0001 19.006V20.006Z" fill="currentColor" /><path d="M14.8834 11.9077C16.6657 11.5044 18.0001 9.9077 18.0001 8.00598C18.0001 5.96916 16.4693 4.28218 14.4971 4.0367C15.4322 5.09511 16.0001 6.48524 16.0001 8.00598C16.0001 9.44888 15.4889 10.7742 14.6378 11.8102C14.7203 11.8418 14.8022 11.8743 14.8834 11.9077Z" fill="currentColor" /></svg>';
 		return element.firstChild;
 	})();
-
+	
 	// From https://github.com/rauenzi/BetterDiscordAddons/blob/692abbd1877ff6d837dc8a606767d019e52ebe23/Plugins/RoleMembers/RoleMembers.plugin.js#L60-L61
 	const from = arr => arr && arr.length > 0 && Object.assign(...arr.map(([k, v]) => ({ [k]: v })));
 	const filter = (obj, predicate) => from(Object.entries(obj).filter((o) => { return predicate(o[1]); }));
-
+	
 	const getProps = (el, filter) => {
 		const reactInstance = BdApi.getInternalInstance(el);
-		let current = reactInstance.return;
+		let current = reactInstance?.return;
 		while (current) {
 			if (current.pendingProps && filter(current.pendingProps)) return current.pendingProps;
 			current = current.return;
 		}
 		return null;
 	};
-
+	
 	const getIconElement = (roleId, roleIcon) => {
 		const icon = document.createElement("img");
 		icon.className = "role-mention-icon";
@@ -96,7 +96,7 @@ function buildPlugin([Plugin, Library]) {
 		icon.src = `https://cdn.discordapp.com/role-icons/${roleId}/${roleIcon}.webp?size=24&quality=lossless`;
 		return icon;
 	};
-
+	
 	return class RoleMentionIcons extends Plugin {
 		constructor() {
 			super();
@@ -107,14 +107,14 @@ function buildPlugin([Plugin, Library]) {
 			};
 			this.clearCallbacks = new Set();
 		}
-
+	
 		onStart() {
 			BdApi.injectCSS("RoleMentionIcons", ".role-mention-icon { position: relative; top: 2px; margin-left: 4px; }");
 
 			const elements = Array.from(document.getElementsByClassName(roleMention));
 			this.processElements(elements);
 		}
-
+	
 		observer({ addedNodes }) {
 			for (const node of addedNodes) {
 				if (node.nodeType === Node.TEXT_NODE) continue;
@@ -122,14 +122,14 @@ function buildPlugin([Plugin, Library]) {
 				this.processElements(elements);
 			}
 		}
-
+	
 		processElements(elements) {
 			if (!elements.length) return;
 
 			for (const element of elements) {
 				const props = getProps(element, e => e.roleName || e.roleId);
 				if (!props) return;
-
+				
 				const isEveryone = props.roleName === "@everyone";
 				const isHere = props.roleName === "@here";
 				let role;
@@ -155,12 +155,12 @@ function buildPlugin([Plugin, Library]) {
 			this.clearCallbacks.forEach(callback => callback());
 			this.clearCallbacks.clear();
 		}
-
+	
 		onStop() {
 			BdApi.clearCSS("RoleMentionIcons");
 			this.clearIcons();
 		}
-
+	
 		getSettingsPanel() {
 			return SettingPanel.build(
 				() => {
