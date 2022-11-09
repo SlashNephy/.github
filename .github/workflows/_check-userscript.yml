@@ -42,5 +42,7 @@ jobs:
       working-directory: 'env/userscript'
       script: 'ci'
       commit-message: '⚙️ Build (env/userscript)'
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
     permissions:
       contents: 'write'
