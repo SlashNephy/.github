@@ -8,8 +8,8 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 
 | ⚙ Script                          | Latest Version | 📥 Install                                                                                                     |
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------- |
-| Annict Work Links                 | 0.2.5          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js                 |
-| dominion.games Auto Table Setter  | 0.3.4          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js |
+| Annict Work Links                 | 0.3.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js                 |
+| dominion.games Auto Table Setter  | 0.4.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js |
 | FF14Angler Bypass AdBlocker Check | 0.2.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js   |
 | Feedly Auto Refresh               | 0.2.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js               |
 | AMQ Preload Video                 | 0.2.4          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js                 |
@@ -24,14 +24,16 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | AMQ Song Guess Rate               | 0.2.4          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-song-guess-rate.user.js               |
 | AMQ sanime Link                   | 0.1.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js                   |
 | AMQ Display Answer Time 2         | 0.2.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js         |
+| AMQ Auto Continue Login           | 0.1.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js           |
+| AKASHI Show Remaining Hours       | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/akashi-show-remaining-hours.user.js       |
 
-### Annict Work Links (v0.2.5)
+### Annict Work Links (v0.3.0)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/annict-work-links.ts) / [📖 Article](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%90%84%E7%A8%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
 Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.
 
-### dominion.games Auto Table Setter (v0.3.4)
+### dominion.games Auto Table Setter (v0.4.0)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/dominion-online-auto-table-setter.ts) / [📖 Article](https://scrapbox.io/slashnephy/Dominion_Online_%E3%81%AE%E5%8D%93%E3%82%92%E8%87%AA%E5%8B%95%E3%81%A7%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B_UserScript)
 
@@ -120,3 +122,15 @@ Display links to sanime and "i(lyl)2m" in the player list.
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-display-answer-time-2.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%A7%A3%E7%AD%94%E6%99%82%E9%96%93%E3%82%92%E7%A7%92%E5%8D%98%E4%BD%8D%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
 Display player answer time in seconds.
+
+### AMQ Auto Continue Login (v0.1.1)
+
+[📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-auto-continue-login.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%87%AA%E5%8B%95%E3%81%A7_Continue_Login_%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99_UserScript)
+
+Press the Continue Login button automatically in Login Page.
+
+### AKASHI Show Remaining Hours (v0.1.0)
+
+[📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/akashi-show-remaining-hours.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/akashi-show-remaining-hours.ts) / [📖 Article](https://scrapbox.io/slashnephy/AKASHI_%E3%81%AE%E6%AE%8B%E3%82%8A%E5%BF%85%E8%A6%81%E5%8A%B4%E5%83%8D%E6%99%82%E9%96%93%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
+
+Display the remaining required working hours in attendance page.
