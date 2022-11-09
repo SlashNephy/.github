@@ -265,21 +265,6 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://atnd.ak4.jp/attendance'],
   },
-  // {
-  //   id: 'amq-improved-auto-complete-2',
-  //   name: 'AMQ Improved AutoComplete 2',
-  //   version: '0.1.0',
-  //   description: {
-  //     en: '',
-  //     ja: '',
-  //   },
-  //   homepage: '',
-  //   author: 'SlashNephy',
-  //   match: ['https://animemusicquiz.com/*'],
-  //   icon: 'https://animemusicquiz.com/favicon-32x32.png',
-  //   grant: 'unsafeWindow',
-  //   require: 'https://cdnjs.cloudflare.com/ajax/libs/fuzzyset.js/1.0.5/fuzzyset.js',
-  // },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
