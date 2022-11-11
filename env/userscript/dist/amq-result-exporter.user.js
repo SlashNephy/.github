@@ -261,9 +261,7 @@ if (isReady()) {
         file: {
           samplePoint: quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].startPoint,
           videoLength: parseFloat(
-            quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].$player
-              .find('video')[0]
-              .duration.toFixed(2)
+            quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].$player[0].duration.toFixed(2)
           ),
           videoUrl: event.songInfo.urlMap.catbox
             ? event.songInfo.urlMap.catbox['720'] ?? event.songInfo.urlMap.catbox['480']

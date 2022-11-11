@@ -146,7 +146,7 @@ declare class QuizVideoController {
   public moePlayers: Record<
     string,
     {
-      $player: JQuery
+      $player: JQuery<HTMLVideoElement>
       startPoint: number
     }
   >

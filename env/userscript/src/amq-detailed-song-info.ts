@@ -141,7 +141,7 @@ const links: CustomLink[] = [
 ]
 
 const handle = (event: AnswerResultsEvent) => {
-  const container = document.querySelector('#qpAnimeContainer div.qpSideContainer:not([id])')
+  const container = document.querySelector('#qpAnimeContainer #qpSongInfoContainer')
   if (!container) {
     throw new Error('container is not found.')
   }
