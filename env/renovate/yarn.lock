@@ -1614,12 +1614,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@npmcli/fs@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@npmcli/fs@npm:3.0.0"
+"@npmcli/fs@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@npmcli/fs@npm:3.1.0"
   dependencies:
     semver: ^7.3.5
-  checksum: a95714f2369ede1fffbcaf2e7ef2db36819316d240ff0cca883ddf243544aee3519c36e4eaaa760cd2721d077a415f71f6808c71382c20a03d0cbb6e753ccd4f
+  checksum: a50a6818de5fc557d0b0e6f50ec780a7a02ab8ad07e5ac8b16bf519e0ad60a144ac64f97d05c443c3367235d337182e1d012bbac0eb8dbae8dc7b40b193efd0e
   languageName: node
   linkType: hard
 
@@ -1630,16 +1630,6 @@ __metadata:
     mkdirp: ^1.0.4
     rimraf: ^3.0.2
   checksum: 1388777b507b0c592d53f41b9d182e1a8de7763bc625fc07999b8edbc22325f074e5b3ec90af79c89d6987fdb2325bc66d59f483258543c14a43661621f841b0
-  languageName: node
-  linkType: hard
-
-"@npmcli/move-file@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@npmcli/move-file@npm:3.0.0"
-  dependencies:
-    mkdirp: ^1.0.4
-    rimraf: ^3.0.2
-  checksum: 5ccce4b1e9d94234e303bdd93cbb23720ce52f48bfc7ffbe88554eab63af2b26d5bd8b62f3e10b6649b88a5d69e2ea48790f86de737dbbdc49e31ec050a2e64a
   languageName: node
   linkType: hard
 
@@ -2284,7 +2274,7 @@ __metadata:
     eslint: 8.27.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 34.22.1
+    renovate: 34.22.2
     ts-node: 10.9.1
     typescript: 4.8.4
   languageName: unknown
@@ -3373,12 +3363,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cacache@npm:17.0.1":
-  version: 17.0.1
-  resolution: "cacache@npm:17.0.1"
+"cacache@npm:17.0.2":
+  version: 17.0.2
+  resolution: "cacache@npm:17.0.2"
   dependencies:
-    "@npmcli/fs": ^3.0.0
-    "@npmcli/move-file": ^3.0.0
+    "@npmcli/fs": ^3.1.0
     fs-minipass: ^2.1.0
     glob: ^8.0.1
     lru-cache: ^7.7.1
@@ -3391,7 +3380,7 @@ __metadata:
     ssri: ^10.0.0
     tar: ^6.1.11
     unique-filename: ^3.0.0
-  checksum: 91b6349e7bcdb5210d79966f92985738be5fbbcecf87ac58ff7d48aed1c51d65e9c32ed5835b2d28343d352fb72e5f73cf5f25ad4e89fa036009ac6a40e6b9f1
+  checksum: 75a41961b7f49901a8b24b5e30a6ecce9cbf2c7af6c872b0436b0d4dc1ebf7afbb41ba1e5309f943f2c3e8823ea49fbd8ce3cd832beea4f23d5da07595752c85
   languageName: node
   linkType: hard
 
@@ -7735,9 +7724,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.22.1":
-  version: 34.22.1
-  resolution: "renovate@npm:34.22.1"
+"renovate@npm:34.22.2":
+  version: 34.22.2
+  resolution: "renovate@npm:34.22.2"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7771,7 +7760,7 @@ __metadata:
     aws4: 1.11.0
     azure-devops-node-api: 11.2.0
     bunyan: 1.8.15
-    cacache: 17.0.1
+    cacache: 17.0.2
     cacheable-lookup: 5.0.4
     chalk: 4.1.2
     changelog-filename-regex: 2.0.1
@@ -7846,7 +7835,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: fe155c03cb34d651a67ef50248d02a5602c8d28ac2396cb320cad9cc429fc833a90ce51268d21bffc7da8581b3994dc7ad59bacb3eb77a8a2deaf021fc8639d7
+  checksum: 5c266a330cf29ee0385483597279a0251eb3e3b19605dc4092cfedf0670ff8d82660e1d96d86759803e7866351964b2febc2e7b2178755980f35cfd6dd9516f5
   languageName: node
   linkType: hard
 
