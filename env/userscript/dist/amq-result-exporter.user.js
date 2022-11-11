@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.4.6
+// @version         0.4.7
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
