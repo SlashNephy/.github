@@ -2274,7 +2274,7 @@ __metadata:
     eslint: 8.28.0
     fast-deep-equal: 3.1.3
     prettier: 2.7.1
-    renovate: 34.29.0
+    renovate: 34.29.1
     ts-node: 10.9.1
     typescript: 4.9.3
   languageName: unknown
@@ -7733,9 +7733,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.29.0":
-  version: 34.29.0
-  resolution: "renovate@npm:34.29.0"
+"renovate@npm:34.29.1":
+  version: 34.29.1
+  resolution: "renovate@npm:34.29.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7824,7 +7824,7 @@ __metadata:
     redis: 4.5.0
     remark: 13.0.0
     remark-github: 10.1.0
-    safe-stable-stringify: 2.4.0
+    safe-stable-stringify: 2.4.1
     semver: 7.3.8
     semver-stable: 3.0.0
     semver-utils: 1.1.4
@@ -7844,7 +7844,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 4a695e73fb9a46a440a0d7186d144cbfea402b4ec264c2443b4dada53a27c8023163d10f70f5cd8762010075157e421f7bcc08962e06111fade0b7a6a9d6fe0b
+  checksum: 59f57a1ffbfecad4c83a4a34bbac9ed1c76119e6b441708bd34251b3a901bfc4f53a683a5c7e9e515f960bc0ba5d821d0720ad584f584fb7001e8b1743dccd75
   languageName: node
   linkType: hard
 
@@ -8071,10 +8071,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-stable-stringify@npm:2.4.0":
-  version: 2.4.0
-  resolution: "safe-stable-stringify@npm:2.4.0"
-  checksum: 5c9e4b2b2423470becafe232244948e7ce9545baaa65d67965e8c36536c93d2f7b4c1ddeb4bba8a912d0325e02c7691f24dd4de6935a9c1221402c17582ae1c1
+"safe-stable-stringify@npm:2.4.1":
+  version: 2.4.1
+  resolution: "safe-stable-stringify@npm:2.4.1"
+  checksum: d8e505c462031301040605a4836ca25b52a1744eff01b0939b4d43136638fb8e88e0cec3d3ab6ab8e26f501086e6ba6bf34b228f57bf2ac56cb8d4061355d723
   languageName: node
   linkType: hard
 
