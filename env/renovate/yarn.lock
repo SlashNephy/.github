@@ -1787,26 +1787,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/api-metrics@npm:0.32.0":
-  version: 0.32.0
-  resolution: "@opentelemetry/api-metrics@npm:0.32.0"
-  dependencies:
-    "@opentelemetry/api": ^1.0.0
-  checksum: 00595d29b0a501d2f35a91205ab9b1985c2d94cc8636201518bab66566e2714d7944daf0a0c69f319f142d8e22b30c7d933b5e7a0ad95cb21192032c938d813a
-  languageName: node
-  linkType: hard
-
 "@opentelemetry/api@npm:1.3.0":
   version: 1.3.0
   resolution: "@opentelemetry/api@npm:1.3.0"
   checksum: 33d284b67b6fab20ff72961d289c6487d3cb27caf7489f0231d7030551f82871e081e744b0390751d8aef3bf1614bd79f854788901a354e15274f552581fb374
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/api@npm:^1.0.0":
-  version: 1.2.0
-  resolution: "@opentelemetry/api@npm:1.2.0"
-  checksum: 764efa81bf939200a8e80520a4735b23038abafc60c80420b007ae2bbb7ad843d806894414e95d974c2ef1b81d4ae8a3106804e1af7b5090240cfeb2467db099
   languageName: node
   linkType: hard
 
@@ -1845,15 +1829,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/instrumentation-bunyan@npm:0.30.1":
-  version: 0.30.1
-  resolution: "@opentelemetry/instrumentation-bunyan@npm:0.30.1"
+"@opentelemetry/instrumentation-bunyan@npm:0.31.0":
+  version: 0.31.0
+  resolution: "@opentelemetry/instrumentation-bunyan@npm:0.31.0"
   dependencies:
-    "@opentelemetry/instrumentation": ^0.32.0
+    "@opentelemetry/instrumentation": ^0.34.0
     "@types/bunyan": 1.8.7
   peerDependencies:
-    "@opentelemetry/api": ^1.0.0
-  checksum: b41a0515b146df39a662eac74f45e15b5e1f5474cb6410d7f3af7c09bfe47d7aac380042ec7ea80d74df86771b57a05006ea3ae626bbd830249d2e92d05fc6a5
+    "@opentelemetry/api": ^1.3.0
+  checksum: 661633ec1491b4d041fa429a89ca9a0b6413e37a345ac032bad4099c630c7cdd6e01c0c441f77753d3222cd154b4fc1f69034969d87d2ae973cfdbd24497c864
   languageName: node
   linkType: hard
 
@@ -1871,7 +1855,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/instrumentation@npm:0.34.0":
+"@opentelemetry/instrumentation@npm:0.34.0, @opentelemetry/instrumentation@npm:^0.34.0":
   version: 0.34.0
   resolution: "@opentelemetry/instrumentation@npm:0.34.0"
   dependencies:
@@ -1881,20 +1865,6 @@ __metadata:
   peerDependencies:
     "@opentelemetry/api": ^1.3.0
   checksum: edea9748a18fa4452fca3f986662544dda97854fabad5b47972495946ced061f60875bd3aa71b53daadabad4ea5dad5abc7b5ba4c5acb88af9ebe9d71ca0ec1f
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/instrumentation@npm:^0.32.0":
-  version: 0.32.0
-  resolution: "@opentelemetry/instrumentation@npm:0.32.0"
-  dependencies:
-    "@opentelemetry/api-metrics": 0.32.0
-    require-in-the-middle: ^5.0.3
-    semver: ^7.3.2
-    shimmer: ^1.2.1
-  peerDependencies:
-    "@opentelemetry/api": ^1.0.0
-  checksum: 0f3b594b35f36f4c229ef4c930a75f7499038017ce15fadc80a27e6f915bc4d290d1dca47bdda6e540490fb7849c148c4601c5d0212479a0fce68a80a2f342c9
   languageName: node
   linkType: hard
 
@@ -2274,7 +2244,7 @@ __metadata:
     eslint: 8.28.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.0
-    renovate: 34.35.1
+    renovate: 34.37.0
     ts-node: 10.9.1
     typescript: 4.9.3
   languageName: unknown
@@ -7732,9 +7702,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.35.1":
-  version: 34.35.1
-  resolution: "renovate@npm:34.35.1"
+"renovate@npm:34.37.0":
+  version: 34.37.0
+  resolution: "renovate@npm:34.37.0"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7749,7 +7719,7 @@ __metadata:
     "@opentelemetry/context-async-hooks": 1.8.0
     "@opentelemetry/exporter-trace-otlp-http": 0.34.0
     "@opentelemetry/instrumentation": 0.34.0
-    "@opentelemetry/instrumentation-bunyan": 0.30.1
+    "@opentelemetry/instrumentation-bunyan": 0.31.0
     "@opentelemetry/instrumentation-http": 0.34.0
     "@opentelemetry/resources": 1.8.0
     "@opentelemetry/sdk-trace-base": 1.8.0
@@ -7843,7 +7813,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 65ca2c02d5858980b603a7ab7bac5c8ff6db2a5c66227db098e5863becfcd585daaee9aa2950e5233b1311121f9169e7b136db86d7ab8823260f36487044c695
+  checksum: 4eadc4810d12a40f7849617a2d062ca38805e1cf6f88653cbe7b582cc38460c3cd90e4acca957d0999012f3152e640d79da2b6cbada1a1d18dab7e34caf98828
   languageName: node
   linkType: hard
 
