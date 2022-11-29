@@ -8,6 +8,10 @@ fi
 
 source "$HOME/.github/script/paths.sh"
 
+if [ -f "$ENV_DIR/zsh/private.zsh" ]; then
+  source "$ENV_DIR/zsh/private.zsh"
+fi
+
 for script in "$ENV_DIR"/zsh/common/**/*.zsh; do
   # shellcheck disable=SC1090
   source "$script"

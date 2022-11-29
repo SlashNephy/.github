@@ -1,4 +1,5 @@
 tap "arrow2nd/tap"
+tap "buildpacks/tap"
 tap "ci7lus/miraktest"
 tap "gcenx/wine"
 tap "homebrew/bundle"
@@ -10,6 +11,7 @@ tap "homebrew/services"
 tap "k1low/tap"
 tap "ktr0731/evans"
 tap "minacle/chntpw"
+tap "motemen/furoshiki2"
 tap "reviewdog/tap"
 tap "romkatv/powerlevel10k"
 tap "teamookla/speedtest"
@@ -20,6 +22,8 @@ brew "act"
 brew "actionlint"
 # Access Log Profiler
 brew "alp"
+# GitOps Continuous Delivery for Kubernetes
+brew "argocd"
 # Download with resuming and segmented downloading
 brew "aria2"
 # Automatic configure script builder
@@ -34,10 +38,10 @@ brew "asdf"
 brew "node"
 # AWS Cloud Development Kit - framework for defining AWS infra as code
 brew "aws-cdk"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Simple command-line tool to read AWS CloudWatch logs
 brew "awslogs"
 # Programmable completion for Bash 3.2
@@ -68,14 +72,18 @@ brew "colordiff"
 brew "openldap"
 # Tool for downloading RTMP streaming media
 brew "rtmpdump"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
 # File comparison utilities
 brew "diffutils"
 # Bash, Zsh and Fish completion for Docker
-brew "docker-completion", link: false
+brew "docker-completion"
 # Isolated development environments using Docker
 brew "docker-compose"
 # Command-line DNS client
 brew "dog"
+# AST-based pattern checker for JavaScript
+brew "eslint", link: false
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # OpenType text shaping engine
@@ -84,6 +92,8 @@ brew "harfbuzz"
 brew "ffmpeg"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
+# Firebase command-line tools
+brew "firebase-cli"
 # GNU awk utility
 brew "gawk"
 # GNU compiler collection
@@ -92,6 +102,8 @@ brew "gcc"
 brew "gh"
 # Remote repository management made easy
 brew "ghq"
+# Audit git repos for secrets
+brew "gitleaks"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # GNU version of the tar archiving utility
@@ -100,8 +112,6 @@ brew "gnu-tar"
 brew "gnu-which"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Development kit for the Java programming language
-brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # GNU grep, egrep and fgrep
@@ -130,6 +140,8 @@ brew "jq"
 brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# Fully functional local AWS cloud stack
+brew "localstack"
 # Utility to list open files
 brew "lsof"
 # Utility for directing compilation
@@ -164,6 +176,8 @@ brew "nmap"
 brew "nvm"
 # Reverse proxy for authenticating users via OAuth 2 providers
 brew "oauth2_proxy"
+# Development kit for the Java programming language
+brew "openjdk"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Command-line tool to generate, analyze, convert and manipulate colors
@@ -172,6 +186,8 @@ brew "pastel"
 brew "percona-toolkit"
 # Highly capable, feature-rich programming language
 brew "perl"
+# Perl builder
+brew "perl-build"
 # General-purpose scripting language
 brew "php"
 # Python dependency management tool
@@ -210,6 +226,10 @@ brew "tldr"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Command-line interface for Vercel
+brew "vercel-cli"
+# Next generation frontend tooling. It's fast!
+brew "vite"
 # Pager/text based browser
 brew "w3m"
 # Library to create, extract, and modify Windows Imaging files
@@ -220,8 +240,12 @@ brew "winetricks"
 brew "yamllint"
 # JavaScript package manager
 brew "yarn"
+# Tool for managing your YubiKey configuration
+brew "ykman"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Fork of youtube-dl with additional features and fixes
+brew "yt-dlp", link: false
 # Next-generation plugin manager for zsh
 brew "zplug"
 # UNIX shell (command interpreter)
@@ -234,12 +258,15 @@ brew "zsh-completions"
 brew "zsh-fast-syntax-highlighting"
 # TUI Twitter client 🐈
 brew "arrow2nd/tap/nekome"
+# A CLI for building apps using Cloud Native Buildpacks
+brew "buildpacks/tap/pack"
 # tbls is a CI-Friendly tool for document a database, written in Go.
 brew "k1low/tap/tbls"
 # Evans: more expressive universal gRPC client
 brew "ktr0731/evans/evans"
 # The Offline NT Password Editor
 brew "minacle/chntpw/chntpw"
+brew "motemen/furoshiki2/furoshiki2", args: ["HEAD"]
 # Automated code review tool integrated with any code analysis tools regardless of programming language.
 brew "reviewdog/tap/reviewdog"
 # A Zsh Theme
@@ -269,6 +296,8 @@ cask "appcleaner"
 cask "audacity"
 # Securely stores and accesses AWS credentials in a development environment
 cask "aws-vault"
+# Managed client-based VPN service to securely access AWS resources
+cask "aws-vpn-client"
 # Installer for BetterDiscord
 cask "betterdiscord-installer"
 # Virtual Audio Driver
@@ -283,6 +312,7 @@ cask "chrome-remote-desktop-host"
 cask "clipy"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
+# Presentations from Markdown
 cask "deckset"
 # Voice and text chat software
 cask "discord"
@@ -294,6 +324,8 @@ cask "discord-ptb"
 cask "docker"
 # Developer platform
 cask "dotnet-sdk"
+# Draw.io is free online diagram software
+cask "drawio"
 # Launcher for *Epic Games* games
 cask "epic-games"
 # Web browser
@@ -301,6 +333,8 @@ cask "firefox"
 cask "font-source-code-pro"
 cask "font-source-sans-pro"
 cask "font-source-serif-pro"
+# Twitter Unicode emoji color OpenType-SVG font
+cask "font-twitter-color-emoji"
 # Software reverse engineering (SRE) suite of tools
 cask "ghidra"
 # Free and open-source image editor
@@ -313,10 +347,11 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 # Client for the Google Drive storage service
 cask "google-drive"
-# Tools to protect your emails and files
-cask "gpg-suite"
+cask "google-japanese-ime"
 # GraphQL IDE for better development workflows
 cask "graphql-playground"
+# Hex editor focussing on speed
+cask "hex-fiend"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # Free and open-source media player
@@ -325,6 +360,8 @@ cask "iina"
 cask "ilspy"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
+# HTTP and GraphQL Client
+cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # JetBrains tools manager
@@ -353,6 +390,8 @@ cask "mono-mdk-for-visual-studio"
 cask "mysqlworkbench"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Monitors computer mic and webcam
+cask "oversight"
 # Desktop virtualization software
 cask "parallels"
 # Remote desktop
@@ -369,6 +408,8 @@ cask "raycast"
 cask "rectangle"
 # MongoDB management tool
 cask "robo-3t"
+# File sharing app
+cask "send-anywhere"
 # MySQL/MariaDB database management
 cask "sequel-ace"
 # Team communication and collaboration software
