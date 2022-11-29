@@ -56,12 +56,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository (secrets.github-token)
-        if: secrets.github-token != ''
+        if: ${{ secrets.github-token != '' }}
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout Repository (GITHUB_TOKEN)
-        if: secrets.github-token == ''
+        if: ${{ secrets.github-token == '' }}
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
