@@ -19,6 +19,9 @@ const react: Linter.Config = {
     jsxPragma: 'React',
     lib: ['dom'],
   },
+  env: {
+    browser: true,
+  },
   settings: {
     react: {
       version: 'detect',
@@ -50,6 +53,14 @@ const react: Linter.Config = {
     // ハンドラーの名前規則
     'react/jsx-handler-names': 'error',
   },
+  overrides: [
+    {
+      files: '**/*.jsx',
+      rules: {
+        'react/prop-types': 'error',
+      },
+    },
+  ],
 }
 
 module.exports = react
