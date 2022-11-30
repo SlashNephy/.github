@@ -28,7 +28,7 @@
     "concurrently": "7.6.0",
     "eslint": "8.28.0",
     "postcss": "8.4.19",
-    "postcss-cli": "10.0.0",
+    "postcss-cli": "10.1.0",
     "postcss-scss": "4.0.6",
     "prettier": "2.8.0",
     "sass": "1.56.1",
