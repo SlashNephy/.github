@@ -43,6 +43,10 @@ on:
         required: false
         type: string
         default: '🧹 yarn format'
+      use-custom-token:
+        required: false
+        type: boolean
+        default: false
     secrets:
       github-token:
         required: false
@@ -56,12 +60,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository (secrets.github-token)
-        if: ${{ secrets.github-token != '' }}
+        if: inputs.use-custom-token
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout Repository (GITHUB_TOKEN)
-        if: ${{ secrets.github-token == '' }}
+        if: inputs.use-custom-token == false
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
