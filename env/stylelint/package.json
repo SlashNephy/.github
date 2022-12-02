@@ -34,7 +34,7 @@
     "stylelint": "^14"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.2.21",
+    "@slashnephy/eslint-config": "0.2.22",
     "@slashnephy/prettier-config": "0.1.1",
     "@types/node": "18.11.10",
     "concurrently": "7.6.0",
