@@ -1478,6 +1478,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gwhitney/detect-indent@npm:7.0.1":
+  version: 7.0.1
+  resolution: "@gwhitney/detect-indent@npm:7.0.1"
+  checksum: b5b3e66a4dce47622f5880353299a77de80c4e3e342e302ce110090c28294f18664054b9b43ca93a38ffe5b3d6406c0a753b09647b66e0fd09e9d7196cf3c59c
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.10.4":
   version: 0.10.4
   resolution: "@humanwhocodes/config-array@npm:0.10.4"
@@ -2015,15 +2022,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnpm/read-project-manifest@npm:4.0.2":
-  version: 4.0.2
-  resolution: "@pnpm/read-project-manifest@npm:4.0.2"
+"@pnpm/read-project-manifest@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@pnpm/read-project-manifest@npm:4.1.0"
   dependencies:
+    "@gwhitney/detect-indent": 7.0.1
     "@pnpm/error": 4.0.0
     "@pnpm/graceful-fs": 2.0.0
+    "@pnpm/text.comments-parser": 1.0.0
     "@pnpm/types": 8.9.0
-    "@pnpm/write-project-manifest": 4.0.2
-    detect-indent: ^6.1.0
+    "@pnpm/write-project-manifest": 4.1.0
     fast-deep-equal: ^3.1.3
     is-windows: ^1.0.2
     json5: ^2.2.1
@@ -2031,7 +2039,16 @@ __metadata:
     read-yaml-file: ^2.1.0
     sort-keys: ^4.2.0
     strip-bom: ^4.0.0
-  checksum: 2f8e51400e61a6b2b21397a07fb8f89947c01ea92ab09a0b9b8292939460d06761f30fc45a8d930bb5160eece7a3ede2eed75484f00429822cd99d7da17ec765
+  checksum: 9388e92a8d6c22b2b2a842128674d5389c24b78dfb7e36c1e4d92eaf0e66a94c0ca94f64c1cb7649a5fd17147004030facd5aa995384d36fb96a7246efbea99a
+  languageName: node
+  linkType: hard
+
+"@pnpm/text.comments-parser@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@pnpm/text.comments-parser@npm:1.0.0"
+  dependencies:
+    strip-comments-strings: 1.2.0
+  checksum: b66d1b29db7dc2f3d120aef657b7d343e7224495837b95bb0eb55c2712c2e052ec7aeda66040ef030a5c0c856970b2726c5fe21f93ceeb6df95e16da0d49a52c
   languageName: node
   linkType: hard
 
@@ -2049,15 +2066,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnpm/write-project-manifest@npm:4.0.2":
-  version: 4.0.2
-  resolution: "@pnpm/write-project-manifest@npm:4.0.2"
+"@pnpm/write-project-manifest@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@pnpm/write-project-manifest@npm:4.1.0"
   dependencies:
+    "@pnpm/text.comments-parser": 1.0.0
     "@pnpm/types": 8.9.0
     json5: ^2.2.1
     write-file-atomic: ^4.0.2
     write-yaml-file: ^4.2.0
-  checksum: f391f9816e0646c9e467e2662675a3f8ed37dd6e9b0666953001ea35c7f61a4d66285f5c83de3ca0a3b086269accb703279d7dd62a378fccb629460367bd19f9
+  checksum: 64a1c4617229d80e9b28aace2b4f56a9d09b17cee202525daca1656c22d750c26f5389d7d4e0ac4737a55e3bac3f0af955a7ec641534cc200285b0defdc4d7da
   languageName: node
   linkType: hard
 
@@ -2244,7 +2262,7 @@ __metadata:
     eslint: 8.29.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.0
-    renovate: 34.48.0
+    renovate: 34.48.2
     ts-node: 10.9.1
     typescript: 4.9.3
   languageName: unknown
@@ -3876,7 +3894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-indent@npm:6.1.0, detect-indent@npm:^6.1.0":
+"detect-indent@npm:6.1.0":
   version: 6.1.0
   resolution: "detect-indent@npm:6.1.0"
   checksum: ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
@@ -4968,16 +4986,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-packages@npm:10.0.2":
-  version: 10.0.2
-  resolution: "find-packages@npm:10.0.2"
+"find-packages@npm:10.0.3":
+  version: 10.0.3
+  resolution: "find-packages@npm:10.0.3"
   dependencies:
-    "@pnpm/read-project-manifest": 4.0.2
+    "@pnpm/read-project-manifest": 4.1.0
     "@pnpm/types": 8.9.0
     "@pnpm/util.lex-comparator": 1.0.0
     fast-glob: ^3.2.12
     p-filter: ^2.1.0
-  checksum: b2dab51a3bc10a0ef705f80dc2f4ece7ff419ed8f7232bd88f153e4d862447b3b4cc89f57b04b75308ed95035b61eba9f5b989a78c218641f2afdd061ecefc3c
+  checksum: 81a96309551c9a0bf4d94cc6bbd777a3d6d146080218bd9f9f5b680ea2563762b01a4a8842b8c5c7c869dea73c057e9de1ec6047d8877b0ada7833c4e928fc13
   languageName: node
   linkType: hard
 
@@ -7810,9 +7828,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.48.0":
-  version: 34.48.0
-  resolution: "renovate@npm:34.48.0"
+"renovate@npm:34.48.2":
+  version: 34.48.2
+  resolution: "renovate@npm:34.48.2"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7864,7 +7882,7 @@ __metadata:
     emojibase: 6.1.0
     emojibase-regex: 6.0.1
     extract-zip: 2.0.1
-    find-packages: 10.0.2
+    find-packages: 10.0.3
     find-up: 5.0.0
     fs-extra: 11.1.0
     git-url-parse: 13.1.0
@@ -7921,7 +7939,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 093380b1516cde567e1373845008d32564a590318809e9476d8747b0bbd3e22efd7d4842ef9181885bd200d83d736f2eecfb4f37b3f581f0fb78017e6bbca96d
+  checksum: 8cc36a36dc3b7b272a7cef81efdd2b119252b1a8b23e7dd0142fb13aa90b588d3f5722b1a1f41601f37be5cc468324c196275c3cce8b05eb22ac7758d92ddf96
   languageName: node
   linkType: hard
 
@@ -8609,6 +8627,13 @@ __metadata:
   version: 4.0.0
   resolution: "strip-bom@npm:4.0.0"
   checksum: 9dbcfbaf503c57c06af15fe2c8176fb1bf3af5ff65003851a102749f875a6dbe0ab3b30115eccf6e805e9d756830d3e40ec508b62b3f1ddf3761a20ebe29d3f3
+  languageName: node
+  linkType: hard
+
+"strip-comments-strings@npm:1.2.0":
+  version: 1.2.0
+  resolution: "strip-comments-strings@npm:1.2.0"
+  checksum: e2639199cc7a55e71aced674478068c7a2205d1fad295a229a0d80e0a4bd788caa6da4906e3e7d05161e327e03b0630264717c946cb453d9dfe055504c56f8e6
   languageName: node
   linkType: hard
 
