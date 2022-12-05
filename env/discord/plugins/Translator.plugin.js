@@ -2,7 +2,7 @@
  * @name Translator
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.4.5
+ * @version 2.4.7
  * @description Allows you to translate Messages and your outgoing Messages within Discord
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -14,23 +14,23 @@
 
 module.exports = (_ => {
 	const changeLog = {
-		
+
 	};
-	
+
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
 		constructor (meta) {for (let key in meta) this[key] = meta[key];}
 		getName () {return this.name;}
 		getAuthor () {return this.author;}
 		getVersion () {return this.version;}
 		getDescription () {return `The Library Plugin needed for ${this.name} is missing. Open the Plugin Settings to download it. \n\n${this.description}`;}
-		
+
 		downloadLibrary () {
 			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
 				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Finished downloading BDFDB Library", {type: "success"}));
 				else BdApi.alert("Error", "Could not download BDFDB Library Plugin. Try again later or download it manually from GitHub: https://mwittrien.github.io/downloader/?library");
 			});
 		}
-		
+
 		load () {
 			if (!window.BDFDB_Global || !Array.isArray(window.BDFDB_Global.pluginQueue)) window.BDFDB_Global = Object.assign({}, window.BDFDB_Global, {pluginQueue: []});
 			if (!window.BDFDB_Global.downloadModal) {
@@ -57,12 +57,12 @@ module.exports = (_ => {
 		}
 	} : (([Plugin, BDFDB]) => {
 		var _this;
-		
+
 		const translateIconGeneral = `<svg name="Translate" width="24" height="24" viewBox="0 0 24 24"><mask/><path fill="currentColor" mask="url(#translateIconMask)" d="M 4 2 C 2.9005593 2 2 2.9005593 2 4 L 2 17 C 2 18.10035 2.9005593 19 4 19 L 11 19 L 12 22 L 20 22 C 21.10035 22 22 21.099441 22 20 L 22 7 C 22 5.9005592 21.099441 5 20 5 L 10.880859 5 L 10 2 L 4 2 z M 11.173828 6 L 20 6 C 20.550175 6 21 6.4498249 21 7 L 21 20 C 21 20.550175 20.550176 21 20 21 L 13 21 L 15 19 L 14.185547 16.236328 L 15.105469 15.314453 L 17.791016 18 L 18.521484 17.269531 L 15.814453 14.583984 C 16.714739 13.54911 17.414914 12.335023 17.730469 11.080078 L 19 11.080078 L 19 10.039062 L 15.365234 10.039062 L 15.365234 9 L 14.324219 9 L 14.324219 10.039062 L 12.365234 10.039062 L 11.173828 6 z M 7.1660156 6.4160156 C 8.2063466 6.4160156 9.1501519 6.7857022 9.9003906 7.4804688 L 9.9648438 7.5449219 L 8.7441406 8.7246094 L 8.6855469 8.6699219 C 8.4009108 8.3998362 7.9053417 8.0859375 7.1660156 8.0859375 C 5.8555986 8.0859375 4.7890625 9.1708897 4.7890625 10.505859 C 4.7890625 11.84083 5.8555986 12.925781 7.1660156 12.925781 C 8.5364516 12.925781 9.1309647 12.050485 9.2910156 11.464844 L 7.0800781 11.464844 L 7.0800781 9.9160156 L 11.03125 9.9160156 L 11.044922 9.984375 C 11.084932 10.194442 11.099609 10.379777 11.099609 10.589844 C 11.094109 12.945139 9.4803883 14.583984 7.1660156 14.583984 C 4.9107525 14.583984 3.0800781 12.749807 3.0800781 10.5 C 3.0800781 8.2501934 4.9162088 6.4160156 7.1660156 6.4160156 z M 12.675781 11.074219 L 16.669922 11.074219 C 16.669922 11.074219 16.330807 12.390095 15.111328 13.810547 C 14.576613 13.195806 14.206233 12.595386 13.970703 12.115234 L 12.980469 12.115234 L 12.675781 11.074219 z M 13.201172 12.884766 C 13.535824 13.484957 13.940482 14.059272 14.390625 14.583984 L 13.855469 15.115234 L 13.201172 12.884766 z"/><extra/></svg>`;
 		const translateIconMask = `<mask id="translateIconMask" fill="black"><path fill="white" d="M 0 0 H 24 V 24 H 0 Z"/><path fill="black" d="M24 12 H 12 V 24 H 24 Z"/></mask>`;
 		const translateIcon = translateIconGeneral.replace(`<extra/>`, ``).replace(`<mask/>`, ``).replace(` mask="url(#translateIconMask)"`, ``);
 		const translateIconUntranslate = translateIconGeneral.replace(`<extra/>`, `<path fill="none" stroke="#f04747" stroke-width="2" d="m 14.702359,14.702442 8.596228,8.596148 m 0,-8.597139 -8.59722,8.596147 z"/>`).replace(`<mask/>`, translateIconMask);
-		
+
 		const TranslateButtonComponent = class TranslateButton extends BdApi.React.Component {
 			render() {
 				const enabled = _this.isTranslationEnabled(this.props.channelId);
@@ -78,7 +78,7 @@ module.exports = (_ => {
 					onClick: _ => {
 						this.props.isActive = true;
 						BDFDB.ReactUtils.forceUpdate(this);
-						
+
 						BDFDB.ModalUtils.open(_this, {
 							size: "LARGE",
 							header: BDFDB.LanguageUtils.LanguageStrings.SETTINGS,
@@ -100,7 +100,7 @@ module.exports = (_ => {
 				});
 			}
 		};
-		
+
 		const TranslateSettingsComponent = class TranslateSettings extends BdApi.React.Component {
 			filterLanguages(direction, place) {
 				let isOutput = direction == languageTypes.OUTPUT;
@@ -159,7 +159,7 @@ module.exports = (_ => {
 										}
 										BDFDB.DataUtils.save(channelLanguages, _this, "channelLanguages");
 										BDFDB.DataUtils.save(guildLanguages, _this, "guildLanguages");
-										
+
 										BDFDB.ReactUtils.forceUpdate(this);
 									}
 								}, {
@@ -168,12 +168,12 @@ module.exports = (_ => {
 										let input = _this.getLanguageChoice(languageTypes.INPUT, place, this.props.channelId);
 										let output = _this.getLanguageChoice(languageTypes.OUTPUT, place, this.props.channelId);
 										input = input == "auto" ? "en" : input;
-										
+
 										_this.saveLanguageChoice(output, languageTypes.INPUT, place, this.props.channelId);
 										_this.saveLanguageChoice(input, languageTypes.OUTPUT, place, this.props.channelId);
-										
+
 										_this.setLanguages();
-										
+
 										BDFDB.ReactUtils.forceUpdate(this);
 									}
 								}].map(data => {
@@ -256,13 +256,13 @@ module.exports = (_ => {
 						plugin: _this,
 						keys: ["general", key],
 						label: _this.labels[`general_${key}`],
-						tag: BDFDB.LibraryComponents.FormComponents.FormTitle.Tags.H5,
+						tag: BDFDB.LibraryComponents.FormComponents.FormTags.H5,
 						value: _this.settings.general[key]
 					})),
 					BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsItem, {
 						type: "Switch",
 						label: _this.labels.translate_your_message,
-						tag: BDFDB.LibraryComponents.FormComponents.FormTitle.Tags.H5,
+						tag: BDFDB.LibraryComponents.FormComponents.FormTags.H5,
 						value: _this.isTranslationEnabled(this.props.channelId),
 						onChange: value => {
 							_this.toggleTranslation(this.props.channelId);
@@ -280,7 +280,7 @@ module.exports = (_ => {
 		const morseConverter = {
 			"0":"−−−−−", "1":"·−−−−", "2":"··−−−", "3":"···−−", "4":"····−", "5":"·····", "6":"−····", "7":"−−···", "8":"−−−··", "9":"−−−−·", "!":"−·−·−−", "\"":"·−··−·", "$":"···−··−", "&":"·−···", "'":"·−−−−·", "(":"−·−−·", ")":"−·−−·−", "+":"·−·−·", ",":"−−··−−", "-":"−····−", ".":"·−·−·−", "/":"−··−·", ":":"−−−···", ";":"−·−·−·", "=":"−···−", "?":"··−−··", "@":"·−−·−·", "a":"·−", "b":"−···", "c":"−·−·", "d":"−··", "e":"·", "f":"··−·", "g":"−−·", "h":"····", "i":"··", "j":"·−−−", "k":"−·−", "l":"·−··", "m":"−−", "n":"−·", "o":"−−−", "p":"·−−·", "q":"−−·−", "r":"·−·", "s":"···", "t":"−", "u":"··−", "v":"···−", "w":"·−−", "x":"−··−", "y":"−·−−", "z":"−−··", "·":"e", "··":"i", "···":"s", "····":"h", "·····":"5", "····−":"4", "···−":"v", "···−··−":"$", "···−−":"3", "··−":"u", "··−·":"f", "··−−··":"?", "··−−·−":"_", "··−−−":"2", "·−":"a", "·−·":"r", "·−··":"l", "·−···":"&", "·−··−·":"\"", "·−·−·":"+", "·−·−·−":".", "·−−":"w", "·−−·":"p", "·−−·−·":"@", "·−−−":"j", "·−−−−":"1", "·−−−−·":"'", "−":"t", "−·":"n", "−··":"d", "−···":"b", "−····":"6", "−····−":"-", "−···−":"=", "−··−":"x", "−··−·":"/", "−·−":"k", "−·−·":"c", "−·−·−·":";", "−·−·−−":"!", "−·−−":"y", "−·−−·":"(", "−·−−·−":")", "−−":"m", "−−·":"g", "−−··":"z", "−−···":"7", "−−··−−":",", "−−·−":"q", "−−−":"o", "−−−··":"8", "−−−···":":", "−−−−·":"9", "−−−−−":"0", "_":"··−−·−"
 		};
-		
+
 		const googleLanguages = ["af","am","ar","az","be","bg","bn","bs","ca","ceb","co","cs","cy","da","de","el","en","eo","es","et","eu","fa","fi","fr","fy","ga","gd","gl","gu","ha","haw","hi","hmn","hr","ht","hu","hy","id","ig","is","it","iw","ja","jw","ka","kk","km","kn","ko","ku","ky","la","lb","lo","lt","lv","mg","mi","mk","ml","mn","mr","ms","mt","my","ne","nl","no","ny","or","pa","pl","ps","pt","ro","ru","rw","sd","si","sk","sl","sm","sn","so","sq","sr","st","su","sv","sw","ta","te","tg","th","tk","tl","tr","tt","ug","uk","ur","uz","vi","xh","yi","yo","zh-CN","zh-TW","zu"];
 		const translationEngines = {
 			googleapi: {
@@ -343,14 +343,14 @@ module.exports = (_ => {
 				key: "appId (number) key (string)"
 			}
 		};
-		
+
 		var languages = {};
 		var favorites = [];
 		var authKeys = {};
 		var channelLanguages = {}, guildLanguages = {};
 		var translationEnabledStates = [], isTranslating;
 		var translatedMessages = {}, oldMessages = {};
-		
+
 		const defaultLanguages = {
 			INPUT: "auto",
 			OUTPUT: "$discord"
@@ -363,11 +363,11 @@ module.exports = (_ => {
 			RECEIVED: "received",
 			SENT: "sent",
 		};
-	
+
 		return class Translator extends Plugin {
 			onLoad () {
 				_this = this;
-				
+
 				this.defaults = {
 					general: {
 						addTranslateButton:		{value: true, 	popout: false},
@@ -385,7 +385,7 @@ module.exports = (_ => {
 					}
 				};
 				for (let m in messageTypes) this.defaults.choices[messageTypes[m]] = {value: Object.keys(languageTypes).reduce((newObj, l) => (newObj[languageTypes[l]] = defaultLanguages[l], newObj), {})};
-			
+
 				this.modulePatches = {
 					before: [
 						"ChannelTextAreaContainer",
@@ -412,7 +412,7 @@ module.exports = (_ => {
 					}
 				`;
 			}
-			
+
 			onStart () {
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.MessageUtils, "startEditMessage", {before: e => {
 					if (e.methodArguments[1] && oldMessages[e.methodArguments[1]] && oldMessages[e.methodArguments[1]].content) e.methodArguments[2] = oldMessages[e.methodArguments[1]].content;
@@ -423,7 +423,7 @@ module.exports = (_ => {
 				}});
 				this.forceUpdateAll();
 			}
-			
+
 			onStop () {
 				this.forceUpdateAll();
 			}
@@ -434,7 +434,7 @@ module.exports = (_ => {
 					collapseStates: collapseStates,
 					children: _ => {
 						let settingsItems = [];
-						
+
 						for (let key in this.defaults.general) settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsSaveItem, {
 							type: "Switch",
 							plugin: this,
@@ -442,11 +442,11 @@ module.exports = (_ => {
 							label: this.labels[`general_${key}`],
 							value: this.settings.general[key]
 						}));
-						
+
 						settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.FormComponents.FormDivider, {
 							className: BDFDB.disCNS.dividerdefault + BDFDB.disCN.marginbottom8
 						}));
-						
+
 						settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsPanelList, {
 							title: "Own Auth Keys:",
 							children: Object.keys(translationEngines).filter(key => translationEngines[key].key).map(key => BDFDB.ReactUtils.createElement("div", {
@@ -459,7 +459,7 @@ module.exports = (_ => {
 										children: [
 											BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.FormComponents.FormTitle, {
 												className: BDFDB.disCN.marginreset,
-												tag: BDFDB.LibraryComponents.FormComponents.FormTitle.Tags.H5,
+												tag: BDFDB.LibraryComponents.FormComponents.FormTags.H5,
 												children: translationEngines[key].name
 											}),
 											translationEngines[key].premium && BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsItem, {
@@ -467,7 +467,7 @@ module.exports = (_ => {
 												margin: 0,
 												grow: 0,
 												label: "Paid Version",
-												tag: BDFDB.LibraryComponents.FormComponents.FormTitle.Tags.H5,
+												tag: BDFDB.LibraryComponents.FormComponents.FormTags.H5,
 												value: authKeys[key] && authKeys[key].paid,
 												onChange: value => {
 													if (!authKeys[key]) authKeys[key] = {};
@@ -489,11 +489,11 @@ module.exports = (_ => {
 								]
 							}))
 						}));
-						
+
 						settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.FormComponents.FormDivider, {
 							className: BDFDB.disCNS.dividerdefault + BDFDB.disCN.marginbottom8
 						}));
-						
+
 						for (let key in this.defaults.exceptions) settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.FormComponents.FormItem, {
 							title: this.labels.exception_text.replace("{{var0}}", "").split(" ").filter(n => n).join(" "),
 							className: BDFDB.disCN.marginbottom8,
@@ -507,30 +507,30 @@ module.exports = (_ => {
 								}
 							})
 						}));
-						
+
 						return settingsItems.flat(10);
 					}
 				});
 			}
-		
+
 			onSettingsClosed () {
 				if (this.SettingsUpdated) {
 					delete this.SettingsUpdated;
 					this.forceUpdateAll();
 				}
 			}
-		
+
 			forceUpdateAll () {
 				favorites = BDFDB.DataUtils.load(this, "favorites");
 				favorites = !BDFDB.ArrayUtils.is(favorites) ? [] : favorites;
-				
+
 				authKeys = BDFDB.DataUtils.load(this, "authKeys");
 				channelLanguages = BDFDB.DataUtils.load(this, "channelLanguages");
 				guildLanguages = BDFDB.DataUtils.load(this, "guildLanguages");
-				
+
 				translationEnabledStates = BDFDB.DataUtils.load(this, "translationEnabledStates");
 				translationEnabledStates = BDFDB.ArrayUtils.is(translationEnabledStates) ? translationEnabledStates : [];
-				
+
 				this.setLanguages();
 				BDFDB.PatchUtils.forceAllUpdates(this);
 				BDFDB.MessageUtils.rerenderAll();
@@ -557,11 +557,11 @@ module.exports = (_ => {
 					this.injectSearchItem(e);
 				}
 			}
-			
+
 			onTextAreaContextMenu (e) {
 				this.injectSearchItem(e);
 			}
-			
+
 			injectSearchItem (e) {
 				let text = document.getSelection().toString();
 				if (text) {
@@ -614,7 +614,7 @@ module.exports = (_ => {
 					}));
 				}
 			}
-			
+
 			processMessageActionsContextMenu (e) {
 				if (e.instance.props.message && e.instance.props.channel) {
 					let translated = !!translatedMessages[e.instance.props.message.id];
@@ -630,7 +630,7 @@ module.exports = (_ => {
 					}));
 				}
 			}
-		
+
 			processMessageToolbar (e) {
 				if (e.instance.props.expanded && e.instance.props.message && e.instance.props.channel) {
 					let translated = !!translatedMessages[e.instance.props.message.id];
@@ -658,7 +658,7 @@ module.exports = (_ => {
 					}));
 				}
 			}
-			
+
 			processChannelTextAreaContainer (e) {
 				if (e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL_WITH_ACTIVITY && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.SIDEBAR) return;
 				BDFDB.PatchUtils.patch(this, e.instance.props, "onSubmit", {instead: e2 => {
@@ -680,7 +680,7 @@ module.exports = (_ => {
 			processChannelTextAreaEditor (e) {
 				if (this.isTranslationEnabled(e.instance.props.channel.id) && isTranslating) e.instance.props.disabled = true;
 			}
-			
+
 			processChannelTextAreaButtons (e) {
 				if (!this.settings.general.addTranslateButton || e.instance.props.disabled || e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.NORMAL_WITH_ACTIVITY && e.instance.props.type != BDFDB.DiscordConstants.ChannelTextAreaTypes.SIDEBAR) return;
 				e.returnvalue.props.children.unshift(BDFDB.ReactUtils.createElement(TranslateButtonComponent, {
@@ -702,7 +702,7 @@ module.exports = (_ => {
 					}
 				}
 			}
-			
+
 			checkMessage (stream, message) {
 				let translation = translatedMessages[message.id];
 				if (translation) stream.content.content = translation.content;
@@ -763,13 +763,13 @@ module.exports = (_ => {
 					delete e.instance.props.embed.originalDescription;
 				}
 			}
-			
+
 			toggleTranslation (channelId) {
 				if (!this.isTranslationEnabled(channelId)) translationEnabledStates.push(this.settings.general.usePerChatTranslation ? channelId : "global");
 				else BDFDB.ArrayUtils.remove(translationEnabledStates, this.settings.general.usePerChatTranslation ? channelId : "global", true);
 				BDFDB.DataUtils.save(translationEnabledStates, this, "translationEnabledStates");
 			}
-			
+
 			isTranslationEnabled (channelId) {
 				return translationEnabledStates.includes(this.settings.general.usePerChatTranslation ? channelId : "global");
 			}
@@ -880,7 +880,7 @@ module.exports = (_ => {
 				let toast = null, toastInterval, finished = false, finishTranslation = translation => {
 					isTranslating = false;
 					if (toast) toast.close();
-					
+
 					if (finished) return;
 					finished = true;
 					if (translation) translation = this.addExceptions(translation, excepts);
@@ -913,7 +913,7 @@ module.exports = (_ => {
 							isTranslating = true;
 							if (toast) toast.close();
 							BDFDB.TimeUtils.clear(toastInterval);
-							
+
 							toast = BDFDB.NotificationUtils.toast(`${this.labels.toast_translating} (${translationEngines[engine].name}) - ${BDFDB.LanguageUtils.LibraryStrings.please_wait}`, {
 								timeout: 0,
 								ellipsis: true,
@@ -948,11 +948,11 @@ module.exports = (_ => {
 				}
 				else finishTranslation();
 			}
-			
+
 			validTranslator (key, input, output, specialCase) {
 				return translationEngines[key] && typeof this[translationEngines[key].funcName] == "function" && (specialCase || input.auto && translationEngines[key].auto || translationEngines[key].languages.includes(input.id) && translationEngines[key].languages.includes(output.id));
 			}
-			
+
 			googleApiTranslate (data, callback) {
 				BDFDB.LibraryRequires.request(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${data.input.id}&tl=${data.output.id}&dt=t&dj=1&source=input&q=${encodeURIComponent(data.text)}`, (error, response, body) => {
 					if (!error && body && response.statusCode == 200) {
@@ -979,7 +979,7 @@ module.exports = (_ => {
 					}
 				});
 			}
-			
+
 			deepLTranslate (data, callback) {
 				BDFDB.LibraryRequires.request(`${authKeys.deepl && authKeys.deepl.paid ? "https://api.deepl.com/v2/translate" : "https://api-free.deepl.com/v2/translate"}?auth_key=${authKeys.deepl && authKeys.deepl.key || "75cc2f40-fdae-14cd-7242-6a384e2abb9c:fx"}&text=${encodeURIComponent(data.text)}${data.input.auto ? "" : `&source_lang=${data.input.id}`}&target_lang=${data.output.id}`, (error, response, body) => {
 					if (!error && body && response.statusCode == 200) {
@@ -1010,7 +1010,7 @@ module.exports = (_ => {
 					}
 				});
 			}
-			
+
 			iTranslateTranslate (data, callback) {
 				let translate = _ => {
 					BDFDB.LibraryRequires.request("https://web-api.itranslateapp.com/v3/texts/translate", {
@@ -1069,7 +1069,7 @@ module.exports = (_ => {
 					else callback("");
 				});
 			}
-			
+
 			yandexTranslate (data, callback) {
 				BDFDB.LibraryRequires.request(`https://translate.yandex.net/api/v1.5/tr/translate?key=${authKeys.yandex && authKeys.yandex.key || "trnsl.1.1.20191206T223907Z.52bd512eca953a5b.1ec123ce4dcab3ae859f312d27cdc8609ab280de"}&text=${encodeURIComponent(data.text)}&lang=${data.specialCase || data.input.auto ? data.output.id : (data.input.id + "-" + data.output.id)}&options=1`, (error, response, body) => {
 					if (!error && body && response.statusCode == 200) {
@@ -1105,11 +1105,11 @@ module.exports = (_ => {
 					}
 				});
 			}
-			
+
 			papagoTranslate (data, callback) {
 				const credentials = (authKeys.papago && authKeys.papago.key || "kUNGxtAmTJQFbaFehdjk zC70k3VhpM").split(" ");
-				BDFDB.LibraryRequires.request.post({
-					url: "https://openapi.naver.com/v1/papago/n2mt",
+				BDFDB.LibraryRequires.request("https://openapi.naver.com/v1/papago/n2mt", {
+					method: "post",
 					form: {
 						source: data.input.id,
 						target: data.output.id,
@@ -1142,7 +1142,7 @@ module.exports = (_ => {
 					}
 				});
 			}
-			
+
 			baiduTranslate (data, callback) {
 				const credentials = (authKeys.baidu && authKeys.baidu.key || "20221009001380882 TOPnUKz8jJ32AZNOuUhX").split(" ");
 				const salt = BDFDB.NumberUtils.generateId();
@@ -1184,7 +1184,7 @@ module.exports = (_ => {
 					}
 				});
 			}
-			
+
 			MD5 (e) {
 				function h(a, b) {
 					var e = a & 2147483648, f = b & 2147483648, c = a & 1073741824, d = b & 1073741824, g = (a & 1073741823) + (b & 1073741823);
@@ -1211,7 +1211,7 @@ module.exports = (_ => {
 					for (c = 0; 3 >= c; c++) d = a >>> 8 * c & 255, d = "0" + d.toString(16), b += d.substr(d.length - 2, 2);
 					return b;
 				}
-				
+
 				var f = [], q, r, s, t, a, b, c, d;
 				e = function(a) {
 					a = a.replace(/\r\n/g, "\n");
@@ -1325,7 +1325,7 @@ module.exports = (_ => {
 				let excepts = {}, newString = [], count = 0;
 				if (place == messageTypes.RECEIVED) {
 					let text = [], i = 0;
-					string.split("").forEach(chara => { 
+					string.split("").forEach(chara => {
 						if (chara == "<" && text[i]) i++;
 						text[i] = text[i] ? text[i] + chara : chara;
 						if (chara == ">") i++;
