@@ -60,7 +60,7 @@
   "devDependencies": {
     "@slashnephy/prettier-config": "0.1.1",
     "@types/eslint": "8.4.10",
-    "@types/node": "18.11.11",
+    "@types/node": "18.11.12",
     "@types/prettier": "2.7.1",
     "concurrently": "7.6.0",
     "eslint": "8.29.0",
