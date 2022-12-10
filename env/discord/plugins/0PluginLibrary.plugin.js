@@ -1,14 +1,14 @@
 /**
  * @name ZeresPluginLibrary
  * @description Gives other plugins utility functions and the ability to emulate v2.
- * @version 2.0.9
+ * @version 2.0.10
  * @author Zerebos
  * @source https://github.com/rauenzi/BDPluginLibrary
  */
 
 /*@cc_on
 @if (@_jscript)
-
+    
     // Offer to self-install for clueless users that try to run this directly.
     var shell = WScript.CreateObject("WScript.Shell");
     var fs = new ActiveXObject("Scripting.FileSystemObject");
@@ -90,11 +90,11 @@ module.exports = {
     id: "9",
     name: "ZeresPluginLibrary",
     author: "Zerebos",
-    version: "2.0.9",
+    version: "2.0.10",
     description: "Gives other plugins utility functions and the ability to emulate v2.",
     source: "https://github.com/rauenzi/BDPluginLibrary",
     changelog: [
-        {title: "What's Fixed?", type: "fixed", items: ["Fixed startup crashes when trying to show broken changelogs."]},
+        {title: "Fixes by arg0NNY:", type: "fixed", items: ["Fix plugin settings.", "Fix popouts."]},
     ],
     main: "index.js"
 };
@@ -137,7 +137,7 @@ class ColorConverter {
         const [red, green, blue] = this.getRGB(color);
         return `rgb(${red}, ${green}, ${blue})`;
     }
-
+    
     static int2hex(color) {
         const red = color >> 16 & 255;
         const green = color >> 8 & 255;
@@ -167,7 +167,7 @@ class ColorConverter {
 
         result = /#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/.exec(color);
         if (result) return [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)];
-
+        
         result = /#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])/.exec(color);
         if (result) return [parseInt(result[1] + result[1], 16), parseInt(result[2] + result[2], 16), parseInt(result[3] + result[3], 16)];
     }
@@ -245,9 +245,9 @@ const getClass = function(prop) {
  * to retrieve nested things without error. Also wraps the class in
  * {@link module:DOMTools.ClassName} which adds features but can still
  * be used in native function.
- *
+ * 
  * For a list of all available class namespaces check out {@link module:DiscordClassModules}.
- *
+ * 
  * @see module:DiscordClassModules
  * @module DiscordClasses
  */
@@ -290,9 +290,9 @@ __webpack_require__.r(__webpack_exports__);
  * Click the source link down below to view more info. Otherwise, if you
  * have the library installed or have a plugin using this library,
  * do `Object.keys(ZLibrary.DiscordClassModules)` in console for a list of modules.
- *
+ * 
  * You can use this directly, however the preferred way of doing this is to use {@link module:DiscordClasses} or {@link module:DiscordSelectors}
- *
+ * 
  * @see module:DiscordClasses
  * @see module:DiscordSelectors
  * @module DiscordClassModules
@@ -530,7 +530,7 @@ __webpack_require__.r(__webpack_exports__);
     /* Popouts */
     get PopoutStack() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("open", "close", "closeAll");},
     get PopoutOpener() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("openPopout");},
-    get UserPopout() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getModule(m => m?.toString && m.toString().includes("().canViewThemes"));},
+    get UserPopout() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getModule(m => m.toString?.().includes("().canViewThemes?"));},
 
     /* Context Menus */
     get ContextMenuActions() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("openContextMenu");},
@@ -563,7 +563,7 @@ __webpack_require__.r(__webpack_exports__);
     get AdvancedScrollerNone() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("AdvancedScrollerNone").AdvancedScrollerNone;},
 
     /* Settings */
-    get SettingsWrapper() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getModule(m => m.Tags && m?.toString().includes("required") && m?.toString().includes("titleClassName"));},
+    get SettingsWrapper() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getModule(m => m?.render?.toString().includes("required") && m?.render?.toString().includes("titleClassName"));},
     get SettingsNote() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getModule(m => m.Types && m?.toString().includes("selectable"));},
     get SettingsDivider() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getModule(m => !m.defaultProps && m.prototype && m.prototype.render && m.prototype.render.toString().includes("default.divider"));},
 
@@ -608,11 +608,11 @@ const getSelector = function(prop) {
 /**
  * Gives us a way to retrieve the internal classes as selectors without
  * needing to concatenate strings or use string templates. Wraps the
- * selector in {@link module:DOMTools.Selector} which adds features but can
+ * selector in {@link module:DOMTools.Selector} which adds features but can 
  * still be used in native function.
- *
+ * 
  * For a list of all available class namespaces check out {@link module:DiscordClassModules}.
- *
+ * 
  * @see module:DiscordClassModules
  * @module DiscordSelectors
  */
@@ -649,7 +649,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var structs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! structs */ "./src/structs/structs.js");
 /**
  * Helpful utilities for dealing with DOM operations.
- *
+ * 
  * This module also extends `HTMLElement` to add a set of utility functions,
  * the same as the ones available in the module itself, but with the `element`
  * parameter bound to `this`.
@@ -673,7 +673,7 @@ __webpack_require__.r(__webpack_exports__);
  * Function that automatically removes added listener.
  * @callback module:DOMTools~CancelListener
  */
-
+ 
 class DOMTools {
 
     static get Selector() {return structs__WEBPACK_IMPORTED_MODULE_0__.Selector;}
@@ -682,7 +682,7 @@ class DOMTools {
 
     /**
      * Default DOMObserver for global usage.
-     *
+     * 
      * @see DOMObserver
      */
     static get observer() {
@@ -801,7 +801,7 @@ class DOMTools {
      * Parses a string of HTML and returns the results. If the second parameter is true,
      * the parsed HTML will be returned as a document fragment {@see https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment}.
      * This is extremely useful if you have a list of elements at the top level, they can then be appended all at once to another node.
-     *
+     * 
      * If the second parameter is false, then the return value will be the list of parsed
      * nodes and there were multiple top level nodes, otherwise the single node is returned.
      * @param {string} html - HTML to be parsed
@@ -818,7 +818,7 @@ class DOMTools {
 
     /** Alternate name for {@link module:DOMTools.parseHTML} */
     static createElement(html, fragment = false) {return this.parseHTML(html, fragment);}
-
+    
     /**
      * Takes a string of html and escapes it using the brower's own escaping mechanism.
      * @param {String} html - html to be escaped
@@ -979,7 +979,7 @@ class DOMTools {
      * @returns {Array<Element>} - The list of siblings
      */
     static nextUntil(element, selector) {
-        const next = [];
+        const next = []; 
         while (element.nextElementSibling && !element.nextElementSibling.matches(selector)) next.push(element = element.nextElementSibling);
         return next;
     }
@@ -1014,7 +1014,7 @@ class DOMTools {
      * @returns {Array<Element>} - The list of siblings
      */
     static previousUntil(element, selector) {
-        const previous = [];
+        const previous = []; 
         while (element.previousElementSibling && !element.previousElementSibling.matches(selector)) previous.push(element = element.previousElementSibling);
         return previous;
     }
@@ -1106,7 +1106,7 @@ class DOMTools {
     /**
      * Sets or gets css styles for a specific element. If `value` is provided
      * then it sets the style and returns the element to allow for chaining,
-     * otherwise returns the style.
+     * otherwise returns the style.  
      * @param {Element} element - Element to set the CSS of
      * @param {string} attribute - Attribute to get or set
      * @param {string} [value] - Value to set for attribute
@@ -1121,7 +1121,7 @@ class DOMTools {
     /**
      * Sets or gets the width for a specific element. If `value` is provided
      * then it sets the width and returns the element to allow for chaining,
-     * otherwise returns the width.
+     * otherwise returns the width.  
      * @param {Element} element - Element to set the CSS of
      * @param {string} [value] - Width to set
      * @returns {Element|string} - When setting a value, element is returned for chaining, otherwise the value is returned.
@@ -1135,7 +1135,7 @@ class DOMTools {
     /**
      * Sets or gets the height for a specific element. If `value` is provided
      * then it sets the height and returns the element to allow for chaining,
-     * otherwise returns the height.
+     * otherwise returns the height.  
      * @param {Element} element - Element to set the CSS of
      * @param {string} [value] - Height to set
      * @returns {Element|string} - When setting a value, element is returned for chaining, otherwise the value is returned.
@@ -1206,21 +1206,21 @@ class DOMTools {
 
     /**
      * This is similar to jQuery's `on` function and can *hopefully* be used in the same way.
-     *
+     * 
      * Rather than attempt to explain, I'll show some example usages.
-     *
+     * 
      * The following will add a click listener (in the `myPlugin` namespace) to `element`.
      * `DOMTools.on(element, "click.myPlugin", () => {console.log("clicked!");});`
-     *
+     * 
      * The following will add a click listener (in the `myPlugin` namespace) to `element` that only fires when the target is a `.block` element.
      * `DOMTools.on(element, "click.myPlugin", ".block", () => {console.log("clicked!");});`
-     *
+     * 
      * The following will add a click listener (without namespace) to `element`.
      * `DOMTools.on(element, "click", () => {console.log("clicked!");});`
-     *
+     * 
      * The following will add a click listener (without namespace) to `element` that only fires once.
      * `const cancel = DOMTools.on(element, "click", () => {console.log("fired!"); cancel();});`
-     *
+     * 
      * @param {Element} element - Element to add listener to
      * @param {string} event - Event to listen to with option namespace (e.g. "event.namespace")
      * @param {(string|callable)} delegate - Selector to run on element to listen to
@@ -1260,7 +1260,7 @@ class DOMTools {
     /**
      * Functionality for this method matches {@link module:DOMTools.on} but automatically cancels itself
      * and removes the listener upon the first firing of the desired event.
-     *
+     * 
      * @param {Element} element - Element to add listener to
      * @param {string} event - Event to listen to with option namespace (e.g. "event.namespace")
      * @param {(string|callable)} delegate - Selector to run on element to listen to
@@ -1311,30 +1311,30 @@ class DOMTools {
         const list = type ? listeners.filter(matchFilter) : listeners.filter(defaultFilter);
         for (let c = 0; c < list.length; c++) list[c].cancel();
     }
-
+    
     /**
      * This is similar to jQuery's `off` function and can *hopefully* be used in the same way.
-     *
+     * 
      * Rather than attempt to explain, I'll show some example usages.
-     *
+     * 
      * The following will remove a click listener called `onClick` (in the `myPlugin` namespace) from `element`.
      * `DOMTools.off(element, "click.myPlugin", onClick);`
-     *
+     * 
      * The following will remove a click listener called `onClick` (in the `myPlugin` namespace) from `element` that only fired when the target is a `.block` element.
      * `DOMTools.off(element, "click.myPlugin", ".block", onClick);`
-     *
+     * 
      * The following will remove a click listener (without namespace) from `element`.
      * `DOMTools.off(element, "click", onClick);`
-     *
+     * 
      * The following will remove all listeners in namespace `myPlugin` from `element`.
      * `DOMTools.off(element, ".myPlugin");`
-     *
+     * 
      * The following will remove all click listeners in namespace `myPlugin` from *all elements*.
      * `DOMTools.off("click.myPlugin");`
-     *
+     * 
      * The following will remove all listeners in namespace `myPlugin` from *all elements*.
      * `DOMTools.off(".myPlugin");`
-     *
+     * 
      * @param {(Element|string)} element - Element to remove listener from
      * @param {string} [event] - Event to listen to with option namespace (e.g. "event.namespace")
      * @param {(string|callable)} [delegate] - Selector to run on element to listen to
@@ -1430,9 +1430,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "LogTypes": () => (/* binding */ LogTypes),
 /* harmony export */   "default": () => (/* binding */ Logger)
 /* harmony export */ });
-/**
+/** 
  * Simple logger for the lib and plugins.
- *
+ * 
  * @module Logger
  */
 
@@ -1457,7 +1457,7 @@ class Logger {
 
     /**
      * Logs an error using a collapsed error group with stacktrace.
-     *
+     * 
      * @param {string} module - Name of the calling module.
      * @param {string} message - Message or error to have logged.
      * @param {Error} error - Error object to log with the message.
@@ -1468,7 +1468,7 @@ class Logger {
 
     /**
      * Logs using error formatting. For logging an actual error object consider {@link module:Logger.stacktrace}
-     *
+     * 
      * @param {string} module - Name of the calling module.
      * @param {string} message - Messages to have logged.
      */
@@ -1476,7 +1476,7 @@ class Logger {
 
     /**
      * Logs a warning message.
-     *
+     * 
      * @param {string} module - Name of the calling module.
      * @param {...any} message - Messages to have logged.
      */
@@ -1484,7 +1484,7 @@ class Logger {
 
     /**
      * Logs an informational message.
-     *
+     * 
      * @param {string} module - Name of the calling module.
      * @param {...any} message - Messages to have logged.
      */
@@ -1492,15 +1492,15 @@ class Logger {
 
     /**
      * Logs used for debugging purposes.
-     *
+     * 
      * @param {string} module - Name of the calling module.
      * @param {...any} message - Messages to have logged.
      */
     static debug(module, ...message) {Logger._log(module, message, "debug");}
-
+    
     /**
      * Logs used for basic loggin.
-     *
+     * 
      * @param {string} module - Name of the calling module.
      * @param {...any} message - Messages to have logged.
      */
@@ -1508,7 +1508,7 @@ class Logger {
 
     /**
      * Logs strings using different console levels and a module label.
-     *
+     * 
      * @param {string} module - Name of the calling module.
      * @param {any|Array<any>} message - Messages to have logged.
      * @param {module:Logger.LogTypes} type - Type of log to use in console.
@@ -2355,14 +2355,14 @@ class ReactTools {
             const name = getDisplayName(owner);
             return (name !== null && !!(nameFilter.includes(name) ^ excluding));
         }
-
+        
         let curr = this.getReactInstance(node);
         for (curr = curr && curr.return; !_utilities__WEBPACK_IMPORTED_MODULE_2__["default"].isNil(curr); curr = curr.return) {
             if (_utilities__WEBPACK_IMPORTED_MODULE_2__["default"].isNil(curr)) continue;
             const owner = curr.stateNode;
             if (!_utilities__WEBPACK_IMPORTED_MODULE_2__["default"].isNil(owner) && !(owner instanceof HTMLElement) && classFilter(curr) && filter(owner)) return owner;
         }
-
+        
         return null;
     }
 
@@ -2382,7 +2382,7 @@ class ReactTools {
         }
         return stateNodes;
     }
-
+    
     /**
      * Grabs the react internal component tree of a specific node.
      * @param {(HTMLElement|jQuery)} node - node to obtain react components of
@@ -2422,7 +2422,7 @@ class ReactTools {
                 super(props);
                 this.element = element;
             }
-
+    
             componentDidMount() {this.refs.element.appendChild(this.element);}
             render() {return _discordmodules__WEBPACK_IMPORTED_MODULE_1__["default"].React.createElement("div", {className: "react-wrapper", ref: "element"});}
         };
@@ -2675,7 +2675,7 @@ class Utilities {
     /**
      * Deep extends an object with a set of other objects. Objects later in the list
      * of `extenders` have priority, that is to say if one sets a key to be a primitive,
-     * it will be overwritten with the next one with the same key. If it is an object,
+     * it will be overwritten with the next one with the same key. If it is an object, 
      * and the keys match, the object is extended. This happens recursively.
      * @param {object} extendee - Object to be extended
      * @param {...object} extenders - Objects to extend with
@@ -2760,11 +2760,11 @@ class Utilities {
      * Returns a function, that, as long as it continues to be invoked, will not
      * be triggered. The function will be called after it stops being called for
      * N milliseconds.
-     *
+     * 
      * Adapted from the version by David Walsh (https://davidwalsh.name/javascript-debounce-function)
-     *
-     * @param {function} executor
-     * @param {number} delay
+     * 
+     * @param {function} executor 
+     * @param {number} delay 
      */
     static debounce(executor, delay) {
         let timeout;
@@ -3116,7 +3116,7 @@ class WebpackModules {
     static initialize() {
         this.handlePush = this.handlePush.bind(this);
         this.listeners = new Set();
-
+        
         this.__ORIGINAL_PUSH__ = window[this.chunkName].push;
         Object.defineProperty(window[this.chunkName], "push", {
             configurable: true,
@@ -3131,7 +3131,7 @@ class WebpackModules {
                 });
             }
         });
-    }
+    }    
 
     /**
      * Adds a listener for when discord loaded a chunk. Useful for subscribing to lazy loaded modules.
@@ -3201,19 +3201,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./selector */ "./src/structs/dom/selector.js");
 
 
-/**
+/** 
  * Representation of a Class Name
  * @memberof module:DOMTools
  **/
 class ClassName {
     /**
-     *
+     * 
      * @param {string} name - name of the class to represent
      */
     constructor(name) {
         this.value = name;
     }
-
+    
     /**
      * Concatenates new class names to the current one using spaces.
      * @param {string} classNames - list of class names to add to this class name
@@ -3223,7 +3223,7 @@ class ClassName {
         for (let i = 0; i < classNames.length; i++) this.value += " " + classNames[i];
         return this;
     }
-
+    
     /**
      * Returns the raw class name, this is how native function get the value.
      * @returns {string} raw class name.
@@ -3231,7 +3231,7 @@ class ClassName {
     toString() {
         return this.value;
     }
-
+    
     /**
      * Returns the raw class name, this is how native function get the value.
      * @returns {string} raw class name.
@@ -3239,7 +3239,7 @@ class ClassName {
     valueOf() {
         return this.value;
     }
-
+    
     /**
      * Returns the classname represented as {@link module:DOMTools.Selector}.
      * @returns {Selector} selector representation of this class name.
@@ -3287,7 +3287,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* eslint-disable operator-linebreak */
 
-/**
+/** 
  * Representation of a MutationObserver but with helpful utilities.
  * @memberof module:DOMTools
  **/
@@ -3423,19 +3423,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/**
+/** 
  * Representation of a Selector
  * @memberof module:DOMTools
  **/
 class Selector {
     /**
-     *
+     * 
      * @param {string} classname - class to create selector for
      */
     constructor(className) {
         this.value = " ." + className.split(" ").join(".");
     }
-
+    
     /**
      * Returns the raw selector, this is how native function get the value.
      * @returns {string} raw selector.
@@ -3443,7 +3443,7 @@ class Selector {
     toString() {
         return this.value;
     }
-
+    
     /**
      * Returns the raw selector, this is how native function get the value.
      * @returns {string} raw selector.
@@ -3451,12 +3451,12 @@ class Selector {
     valueOf() {
         return this.value;
     }
-
+    
     selector(symbol, other) {
         this.value = `${this.toString()} ${symbol} ${other.toString()}`;
         return this;
     }
-
+    
     /**
      * Adds another selector as a direct child `>` to this one.
      * @param {string|DOMTools.Selector} other - Selector to add as child
@@ -3465,7 +3465,7 @@ class Selector {
     child(other) {
         return this.selector(">", other);
     }
-
+    
     /**
      * Adds another selector as a adjacent sibling `+` to this one.
      * @param {string|DOMTools.Selector} other - Selector to add as adjacent sibling
@@ -3474,7 +3474,7 @@ class Selector {
     adjacent(other) {
         return this.selector("+", other);
     }
-
+    
     /**
      * Adds another selector as a general sibling `~` to this one.
      * @param {string|DOMTools.Selector} other - Selector to add as sibling
@@ -3483,7 +3483,7 @@ class Selector {
     sibling(other) {
         return this.selector("~", other);
     }
-
+    
     /**
      * Adds another selector as a descendent `(space)` to this one.
      * @param {string|DOMTools.Selector} other - Selector to add as descendent
@@ -3548,10 +3548,10 @@ class Listenable {
         if (typeof(callback) !== "function") return;
         this.listeners.splice(this.listeners.indexOf(callback), 1);
     }
-
+    
     /**
      * Alerts the listeners that an event occurred. Data passed is optional
-     * @param {*} [...data] - Any data desired to be passed to listeners
+     * @param {*} [...data] - Any data desired to be passed to listeners 
      */
     alertListeners(...data) {
         for (let l = 0; l < this.listeners.length; l++) this.listeners[l](...data);
@@ -3608,7 +3608,7 @@ class Plugin {
         if (this._config.strings.hasOwnProperty("en")) return this._config.strings.en;
         return this._config.strings;
     }
-
+    
     set strings(strings) {
         this._config.strings = strings;
     }
@@ -3716,7 +3716,7 @@ class Plugin {
                 }
                 list.push(this.buildSetting(current));
             }
-
+            
             const settingGroup = new _ui_settings__WEBPACK_IMPORTED_MODULE_6__.SettingGroup(name, {shown, collapsible}).append(...list);
             settingGroup.id = id;
             return settingGroup;
@@ -3846,12 +3846,12 @@ class ColorPicker extends React.Component {
         this.onChange = this.onChange.bind(this);
         this.swatchRef = React.createRef();
     }
-
+    
     get canCustom() {return this.props.acceptsCustom || true;}
 
     onChange(value) {
         this.setState({value: value}, () => {
-            if (typeof(this.props.onChange) === "function") this.props.onChange(this.state.value);
+            if (typeof(this.props.onChange) === "function") this.props.onChange(this.state.value); 
         });
     }
 
@@ -3940,12 +3940,12 @@ __webpack_require__.r(__webpack_exports__);
  * @description
  * This is the generic context menu item component. It is very extensible and will adapt
  * it's type depending on the props.
- *
- * Note: The item ID should be unique to this item across the entire menu. If no `id` is
+ * 
+ * Note: The item ID should be unique to this item across the entire menu. If no `id` is 
  * provided, the system will use the `label`. Plugins should ensure there are no `label`
  * conflicts if they do not wish to provide `id`. `label` conflicts (when not using
  * unique `id`s) can cause multiple items to be hovered at once.
- *
+ * 
  * @param {object} props - props to pass to the react renderer
  * @param {string} props.label - label to show on the menu item
  * @param {string} [props.id] - specific id used for this item
@@ -3959,7 +3959,7 @@ __webpack_require__.r(__webpack_exports__);
  * @param {function} [props.onClose] - function to run when this is closed
  * @param {boolean} [props.danger=false] - should the item show as danger (red)
  * @param {boolean} [props.disabled=false] - should the item be disabled/unclickable
- *
+ * 
  * @param {object} [props.style] - allows you to add custom styles
  * @param {boolean} [props.closeOnClick] - allows you to prevent closing on click
  */
@@ -3971,8 +3971,8 @@ __webpack_require__.r(__webpack_exports__);
  * @description
  * This item is used for creating checkboxes in menus. Properties shown here are additional
  * to those of the main MenuItem {@link module:DiscordContextMenu~MenuItem}
- *
- *
+ * 
+ * 
  * @param {boolean} [props.checked=false] - should the checkbox be checked
  * @param {boolean} [props.active=false] - alias of `checked`
  */
@@ -3984,11 +3984,11 @@ __webpack_require__.r(__webpack_exports__);
  * @description
  * This item is used for creating radio selections in menus. Properties shown here are additional
  * to those of the main MenuItem {@link module:DiscordContextMenu~MenuItem}
- *
- * Note: for the `forceUpdate` option... Without this enabled, you will manually need to
+ * 
+ * Note: for the `forceUpdate` option... Without this enabled, you will manually need to 
  * manage the state for the functional component. If you do not the toggle will appear
  * to not update. @see {@link https://reactjs.org/docs/hooks-reference.html#usestate}
- *
+ * 
  * @param {boolean} [props.checked=false] - should the checkbox be checked
  * @param {boolean} [props.active=false] - alias of `checked`
  * @param {boolean} [props.forceUpdate=true] - should the menu be force-updated after click
@@ -4001,7 +4001,7 @@ __webpack_require__.r(__webpack_exports__);
  * @description
  * This item is used for creating nested submenus. Properties shown here are additional
  * to those of the main MenuItem {@link module:DiscordContextMenu~MenuItem}
- *
+ * 
  * @param {Array<object>} [props.render] - array of items to render in the submenu
  * @param {Array<object>} [props.items] - alias of `render`
  * @param {Array<object>} [props.children] - Already rendered elements
@@ -4014,7 +4014,7 @@ __webpack_require__.r(__webpack_exports__);
  * @description
  * This item is used for adding custom controls like sliders to the context menu.
  * Properties shown here are additional to those of the main MenuItem {@link module:DiscordContextMenu~MenuItem}
- *
+ * 
  * @param {function} [props.control] - control function that renders the component
  */
 
@@ -4031,24 +4031,24 @@ class DiscordContextMenu {
      * for each, they often have less in common than you might think. See {@link module:DiscordContextMenu.MenuItem}
      * for the majority of props commonly available. Check the documentation for the
      * rest of the components.
-     *
+     * 
      * @param {object} props - props used to build the item
      * @param {string} [props.type="text"] - type of the item, options: text, submenu, toggle, radio, custom, separator
      * @returns {object} the created component
-     *
+     * 
      * @see {@link module:DiscordContextMenu~MenuItem}
      * @see {@link module:DiscordContextMenu~MenuToggleItem}
      * @see {@link module:DiscordContextMenu~MenuRadioItem}
      * @see {@link module:DiscordContextMenu~SubMenuItem}
      * @see {@link module:DiscordContextMenu~MenuControlItem}
-     *
+     * 
      * @example
      * // Creates a single menu item that prints "MENU ITEM" on click
      * DiscordContextMenu.buildMenuItem({
      *      label: "Menu Item",
      *      action: () => {console.log("MENU ITEM");}
      * });
-     *
+     * 
      * @example
      * // Creates a single toggle item that starts unchecked
      * // and print the new value on every toggle
@@ -4069,7 +4069,7 @@ class DiscordContextMenu {
      * of items in a menu.
      * @param {Array<object>} setup - array of item props used to build items. See {@link module:DiscordContextMenu.buildMenuItem}
      * @returns {Array<object>} array of the created component
-     *
+     * 
      * @example
      * // Creates a single item group item with a toggle item
      * DiscordContextMenu.buildMenuChildren([{
@@ -4081,7 +4081,7 @@ class DiscordContextMenu {
      *          action: (newValue) => {console.log(newValue);}
      *      }]
      * }]);
-     *
+     * 
      * @example
      * // Creates two item groups with a single toggle item each
      * DiscordContextMenu.buildMenuChildren([{
@@ -4122,7 +4122,7 @@ class DiscordContextMenu {
     }
 
     /**
-     *
+     * 
      * @param {MouseEvent} event - The context menu event. This can be emulated, requires target, and all X, Y locations.
      * @param {function} menuComponent - Component to render. This can be any react component or output of {@link module:DiscordContextMenu.buildMenu}
      * @param {object} config - configuration/props for the context menu
@@ -4200,14 +4200,14 @@ class ErrorBoundary extends React.Component {
       super(props);
       this.state = {hasError: false};
     }
-
+  
     componentDidCatch() {
       this.setState({hasError: true});
     }
-
+  
     render() {
-      if (this.state.hasError) return this.props.errorChildren ? this.props.errorChildren : ce("div", {className: "error"}, "Component Error");
-      return this.props.children;
+      if (this.state.hasError) return this.props.errorChildren ? this.props.errorChildren : ce("div", {className: "error"}, "Component Error");  
+      return this.props.children; 
     }
 }
 
@@ -4514,9 +4514,12 @@ const AppLayer = modules__WEBPACK_IMPORTED_MODULE_0__.WebpackModules.getModule(m
 const ReferencePositionLayer = Object.values(AppLayer).find(m => m.prototype?.render);
 // const PopoutCSSAnimator = WebpackModules.getByDisplayName("PopoutCSSAnimator");
 const LayerProvider = Object.values(AppLayer).find(m => m.displayName === "AppLayerProvider")?.().props.layerContext.Provider; // eslint-disable-line new-cap
-const ComponentDispatch = modules__WEBPACK_IMPORTED_MODULE_0__.WebpackModules.getModule(m => m.toString && m.toString().includes("useContext(c).windowDispatch"), {searchExports: true});
+const ComponentDispatch = modules__WEBPACK_IMPORTED_MODULE_0__.WebpackModules.getModule(m => m.toString?.().includes("useContext") && m.toString?.().includes("windowDispatch"), {searchExports: true});
 const ComponentActions = modules__WEBPACK_IMPORTED_MODULE_0__.WebpackModules.getModule(m => m.POPOUT_SHOW, {searchExports: true});
 const Popout = modules__WEBPACK_IMPORTED_MODULE_0__.WebpackModules.getModule(m => m?.defaultProps && m?.Animation);
+const ThemeContext = modules__WEBPACK_IMPORTED_MODULE_0__.WebpackModules.getModule(m => m._currentValue === 'dark');
+const useStateFromStores = modules__WEBPACK_IMPORTED_MODULE_0__.WebpackModules.getModule(m => m.toString?.().includes('useStateFromStores'));
+const ThemeStore = modules__WEBPACK_IMPORTED_MODULE_0__.WebpackModules.getModule(m => m.theme);
 
 const createStore = state => {
     const listeners = new Set();
@@ -4661,9 +4664,13 @@ class Popouts {
 }
 
 function DiscordProviders({children, container}) {
+    const theme = useStateFromStores([ThemeStore], () => ThemeStore.theme);
+
     return React.createElement(LayerProvider, {
         value: [container]
-    }, children);
+    }, React.createElement(ThemeContext.Provider, {
+        value: theme
+    }, children));
 }
 
 function PopoutsContainer() {
@@ -4717,9 +4724,6 @@ function PopoutWrapper({render, popoutId, ...props}) {
     const ComponentDispatcher = ComponentDispatch();
 
     return React.createElement(ReferencePositionLayer, Object.assign(props, {
-        style: {
-            transform: "translateZ(0)"
-        },
         ref: popoutRef,
         positionKey: "0",
         autoInvert: true,
@@ -4735,7 +4739,7 @@ function PopoutWrapper({render, popoutId, ...props}) {
         children: (props, ...p) => React.createElement(
             "div",
             {
-                style: {transform: "translateZ(0)"} // for z-index to work properly for sub-popouts
+                style: {transform: "translateZ(0)"}, // for z-index to work properly for sub-popouts
             },
             render({popoutId, ...props}, ...p)
         )
@@ -4822,16 +4826,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/**
+/** 
  * Setting field to extend to create new settings
  * @memberof module:Settings
  */
 class SettingField extends _structs_listenable__WEBPACK_IMPORTED_MODULE_0__["default"] {
     /**
-     * @param {string} name - name label of the setting
+     * @param {string} name - name label of the setting 
      * @param {string} note - help/note to show underneath or above the setting
      * @param {callable} onChange - callback to perform on setting change
-     * @param {(ReactComponent|HTMLElement)} settingtype - actual setting to render
+     * @param {(ReactComponent|HTMLElement)} settingtype - actual setting to render 
      * @param {object} [props] - object of props to give to the setting and the settingtype
      * @param {boolean} [props.noteOnTop=false] - determines if the note should be shown above the element or not.
      */
@@ -4890,7 +4894,7 @@ class ReactSetting extends modules__WEBPACK_IMPORTED_MODULE_1__.DiscordModules.R
             const Flex = modules__WEBPACK_IMPORTED_MODULE_1__.DiscordModules.FlexChild;
             const titleDefault = modules__WEBPACK_IMPORTED_MODULE_1__.WebpackModules.getByProps("titleDefault") ? modules__WEBPACK_IMPORTED_MODULE_1__.WebpackModules.getByProps("titleDefault").title : "titleDefault-a8-ZSr title-31JmR4";
             return ce(Flex, {direction: Flex.Direction.VERTICAL},
-            ce(Flex, {align: Flex.Align.START},
+            ce(Flex, {align: Flex.Align.START}, 
                 ce(Flex.Child, {wrap: !0},
                     ce("div", {className: titleDefault}, this.props.title)
                 ),
@@ -4900,7 +4904,7 @@ class ReactSetting extends modules__WEBPACK_IMPORTED_MODULE_1__.DiscordModules.R
             this.dividerElement
             );
         }
-
+        
         return ce(modules__WEBPACK_IMPORTED_MODULE_1__.DiscordModules.SettingsWrapper, {
             className: modules__WEBPACK_IMPORTED_MODULE_1__.DiscordClasses.Margins.marginTop20.toString(),
             title: this.props.title,
@@ -4935,7 +4939,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/**
+/** 
  * Grouping of controls for easier management in settings panels.
  * @memberof module:Settings
  */
@@ -4985,13 +4989,13 @@ class SettingGroup extends _structs_listenable__WEBPACK_IMPORTED_MODULE_0__["def
             controls.style.setProperty("height", "");
         });
     }
-
+    
     /** @returns {HTMLElement} - root node for the group. */
     getElement() {return this.group;}
-
+    
     /**
      * Adds multiple nodes to this group.
-     * @param {(...HTMLElement|...jQuery|...module:Settings.SettingField|...module:Settings.SettingGroup)} nodes - list of nodes to add to the group container
+     * @param {(...HTMLElement|...jQuery|...module:Settings.SettingField|...module:Settings.SettingGroup)} nodes - list of nodes to add to the group container 
      * @returns {module:Settings.SettingGroup} - returns self for chaining
      */
     append(...nodes) {
@@ -5011,7 +5015,7 @@ class SettingGroup extends _structs_listenable__WEBPACK_IMPORTED_MODULE_0__["def
         }
         return this;
     }
-
+    
     /**
      * Appends this node to another
      * @param {HTMLElement} node - node to attach the group to.
@@ -5052,7 +5056,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/**
+/** 
  * Grouping of controls for easier management in settings panels.
  * @memberof module:Settings
  */
@@ -5061,7 +5065,7 @@ class SettingPanel extends _structs_listenable__WEBPACK_IMPORTED_MODULE_0__["def
     /**
      * Creates a new settings panel
      * @param {callable} onChange - callback to fire when settings change
-     * @param {(...HTMLElement|...jQuery|...module:Settings.SettingField|...module:Settings.SettingGroup)} nodes  - list of nodes to add to the panel container
+     * @param {(...HTMLElement|...jQuery|...module:Settings.SettingField|...module:Settings.SettingGroup)} nodes  - list of nodes to add to the panel container 
      */
     constructor(onChange, ...nodes) {
         super();
@@ -5070,23 +5074,23 @@ class SettingPanel extends _structs_listenable__WEBPACK_IMPORTED_MODULE_0__["def
         this.onChange = this.onChange.bind(this);
         this.append(...nodes);
     }
-
+    
     /**
      * Creates a new settings panel
      * @param {callable} onChange - callback to fire when settings change
-     * @param {(...HTMLElement|...jQuery|...module:Settings.SettingField|...module:Settings.SettingGroup)} nodes  - list of nodes to add to the panel container
+     * @param {(...HTMLElement|...jQuery|...module:Settings.SettingField|...module:Settings.SettingGroup)} nodes  - list of nodes to add to the panel container 
      * @returns {HTMLElement} - root node for the panel.
      */
     static build(onChange, ...nodes) {
         return (new SettingPanel(onChange, ...nodes)).getElement();
     }
-
+    
     /** @returns {HTMLElement} - root node for the panel. */
     getElement() {return this.element;}
 
     /**
      * Adds multiple nodes to this panel.
-     * @param {(...HTMLElement|...jQuery|...SettingField|...SettingGroup)} nodes - list of nodes to add to the panel container
+     * @param {(...HTMLElement|...jQuery|...SettingField|...SettingGroup)} nodes - list of nodes to add to the panel container 
      * @returns {module:Settings.SettingPanel} - returns self for chaining
      */
     append(...nodes) {
@@ -5139,7 +5143,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const presetColors = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306];
 
-/**
+/** 
  * Creates a color picker using Discord's built in color picker
  * as a base. Input and output using hex strings.
  * @memberof module:Settings
@@ -5147,7 +5151,7 @@ const presetColors = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 1
  */
 class ColorPicker extends _settingfield__WEBPACK_IMPORTED_MODULE_0__["default"] {
     /**
-     * @param {string} name - name label of the setting
+     * @param {string} name - name label of the setting 
      * @param {string} note - help/note to show underneath or above the setting
      * @param {string} value - current hex color
      * @param {callable} onChange - callback to perform on setting change, callback receives hex string
@@ -5304,14 +5308,14 @@ class Select extends React.Component {
     }
 }
 
-/**
+/** 
  * Creates a dropdown using discord's built in dropdown.
  * @memberof module:Settings
  * @extends module:Settings.SettingField
  */
 class Dropdown extends _settingfield__WEBPACK_IMPORTED_MODULE_0__["default"] {
     /**
-     * @param {string} name - name label of the setting
+     * @param {string} name - name label of the setting 
      * @param {string} note - help/note to show underneath or above the setting
      * @param {*} defaultValue - currently selected value
      * @param {Array<module:Settings~DropdownItem>} values - array of all options available
@@ -5358,14 +5362,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/**
+/** 
  * Creates a file picker using chromium's default.
  * @memberof module:Settings
  * @extends module:Settings.SettingField
  */
 class FilePicker extends _settingfield__WEBPACK_IMPORTED_MODULE_0__["default"] {
     /**
-     * @param {string} name - name label of the setting
+     * @param {string} name - name label of the setting 
      * @param {string} note - help/note to show underneath or above the setting
      * @param {callable} onChange - callback to perform on setting change, callback receives File object
      * @param {object} [options] - object of options to give to the setting
@@ -5446,20 +5450,20 @@ class ClearableKeybind extends React.Component {
     }
 }
 
-/**
+/** 
  * Creates a keybind setting using discord's built in keybind recorder.
  * @memberof module:Settings=
  * @extends module:Settings.SettingField
  */
 class Keybind extends _settingfield__WEBPACK_IMPORTED_MODULE_0__["default"] {
     /**
-     * @param {string} name - name label of the setting
+     * @param {string} name - name label of the setting 
      * @param {string} note - help/note to show underneath or above the setting
      * @param {Array<string>} value - array of key names
      * @param {callable} onChange - callback to perform on setting change, callback receives array of keycodes
      * @param {object} [options] - object of options to give to the setting
      * @param {boolean} [options.disabled=false] - should the setting be disabled
-     */
+     */    
     constructor(label, help, value, onChange, options = {}) {
         const {disabled = false} = options;
         if (!Array.isArray(value) || value.some(v => typeof(v) !== "string")) value = []; // if non-strings present, not a valid combo
@@ -5504,14 +5508,14 @@ __webpack_require__.r(__webpack_exports__);
  * @property {string} color - hex string to color the item
  */
 
-/**
+/** 
  * Creates a radio group using discord's built in radios.
  * @memberof module:Settings
  * @extends module:Settings.SettingField
  */
 class RadioGroup extends _settingfield__WEBPACK_IMPORTED_MODULE_0__["default"] {
     /**
-     * @param {string} name - name label of the setting
+     * @param {string} name - name label of the setting 
      * @param {string} note - help/note to show underneath or above the setting
      * @param {*} defaultValue - currently selected value
      * @param {Array<module:Settings~RadioItem>} values - array of all options available
@@ -5570,15 +5574,15 @@ __webpack_require__.r(__webpack_exports__);
  * @callback module:Settings~SliderRenderValue
  */
 
-/**
+/** 
  * Creates a slider/range using discord's built in slider.
  * @memberof module:Settings
  * @extends module:Settings.SettingField
  */
 class Slider extends _settingfield__WEBPACK_IMPORTED_MODULE_0__["default"] {
    /**
-    *
-    * @param {string} name - name label of the setting
+    * 
+    * @param {string} name - name label of the setting 
     * @param {string} note - help/note to show underneath or above the setting
     * @param {number} min - minimum value allowed
     * @param {number} max - maximum value allowed
@@ -5661,14 +5665,14 @@ class SwitchWrapper extends modules__WEBPACK_IMPORTED_MODULE_1__.DiscordModules.
     }
 }
 
-/**
+/** 
  * Creates a switch using discord's built in switch.
  * @memberof module:Settings
  * @extends module:Settings.SettingField
  */
 class Switch extends _settingfield__WEBPACK_IMPORTED_MODULE_0__["default"] {
     /**
-     * @param {string} name - name label of the setting
+     * @param {string} name - name label of the setting 
      * @param {string} note - help/note to show underneath or above the setting
      * @param {boolean} isChecked - should switch be checked
      * @param {callable} onChange - callback to perform on setting change, callback receives boolean
@@ -5714,14 +5718,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/**
+/** 
  * Creates a textbox using discord's built in textbox.
  * @memberof module:Settings
  * @extends module:Settings.SettingField
  */
 class Textbox extends _settingfield__WEBPACK_IMPORTED_MODULE_0__["default"] {
     /**
-     * @param {string} name - name label of the setting
+     * @param {string} name - name label of the setting 
      * @param {string} note - help/note to show underneath or above the setting
      * @param {string} value - current text in box
      * @param {callable} onChange - callback to perform on setting change, callback receives text
@@ -5762,9 +5766,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! modules */ "./src/modules/modules.js");
 /* harmony import */ var ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ui */ "./src/ui/ui.js");
 /* harmony import */ var _styles_toasts_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/toasts.css */ "./src/styles/toasts.css");
-/**
+/** 
  * Toast maker similar to Android.
- *
+ * 
  * @module Toasts
  */
 
@@ -5793,7 +5797,7 @@ class Toasts {
 
 
     /**
-     * Shows a simple toast, similar to Android, centered over
+     * Shows a simple toast, similar to Android, centered over 
      * the textarea if it exists, and center screen otherwise.
      * Vertically it shows towards the bottom like in Android.
      * @param {string} content - The string to show in the toast.
@@ -6132,7 +6136,7 @@ __webpack_require__.r(__webpack_exports__);
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -6146,14 +6150,14 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
@@ -6166,12 +6170,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -6182,7 +6186,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
