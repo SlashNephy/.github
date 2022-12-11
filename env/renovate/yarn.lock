@@ -2022,16 +2022,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnpm/read-project-manifest@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@pnpm/read-project-manifest@npm:4.1.0"
+"@pnpm/read-project-manifest@npm:4.1.1":
+  version: 4.1.1
+  resolution: "@pnpm/read-project-manifest@npm:4.1.1"
   dependencies:
     "@gwhitney/detect-indent": 7.0.1
     "@pnpm/error": 4.0.0
     "@pnpm/graceful-fs": 2.0.0
     "@pnpm/text.comments-parser": 1.0.0
     "@pnpm/types": 8.9.0
-    "@pnpm/write-project-manifest": 4.1.0
+    "@pnpm/write-project-manifest": 4.1.1
     fast-deep-equal: ^3.1.3
     is-windows: ^1.0.2
     json5: ^2.2.1
@@ -2039,7 +2039,7 @@ __metadata:
     read-yaml-file: ^2.1.0
     sort-keys: ^4.2.0
     strip-bom: ^4.0.0
-  checksum: 9388e92a8d6c22b2b2a842128674d5389c24b78dfb7e36c1e4d92eaf0e66a94c0ca94f64c1cb7649a5fd17147004030facd5aa995384d36fb96a7246efbea99a
+  checksum: d583f83f4d5f0f6d98a5367d38e01612fc6ffb85898911a9cb7015bdab0731f9764fafdad8832e560bf6d113bc636d8aa179ac08804ee22f9ee00f8ef84b5974
   languageName: node
   linkType: hard
 
@@ -2066,16 +2066,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnpm/write-project-manifest@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@pnpm/write-project-manifest@npm:4.1.0"
+"@pnpm/write-project-manifest@npm:4.1.1":
+  version: 4.1.1
+  resolution: "@pnpm/write-project-manifest@npm:4.1.1"
   dependencies:
     "@pnpm/text.comments-parser": 1.0.0
     "@pnpm/types": 8.9.0
     json5: ^2.2.1
-    write-file-atomic: ^4.0.2
+    write-file-atomic: ^5.0.0
     write-yaml-file: ^4.2.0
-  checksum: 64a1c4617229d80e9b28aace2b4f56a9d09b17cee202525daca1656c22d750c26f5389d7d4e0ac4737a55e3bac3f0af955a7ec641534cc200285b0defdc4d7da
+  checksum: 97d9ada12ec9f463451e42dab307def3a896234c5099a50ef3d3794fe23fea91e5bf82e0b272f32156a4f6487220595af84fca6d9d487acd02e458dd63713b5e
   languageName: node
   linkType: hard
 
@@ -2262,7 +2262,7 @@ __metadata:
     eslint: 8.29.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.1
-    renovate: 34.54.0
+    renovate: 34.54.1
     ts-node: 10.9.1
     typescript: 4.9.4
   languageName: unknown
@@ -5048,16 +5048,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-packages@npm:10.0.3":
-  version: 10.0.3
-  resolution: "find-packages@npm:10.0.3"
+"find-packages@npm:10.0.4":
+  version: 10.0.4
+  resolution: "find-packages@npm:10.0.4"
   dependencies:
-    "@pnpm/read-project-manifest": 4.1.0
+    "@pnpm/read-project-manifest": 4.1.1
     "@pnpm/types": 8.9.0
     "@pnpm/util.lex-comparator": 1.0.0
     fast-glob: ^3.2.12
     p-filter: ^2.1.0
-  checksum: 81a96309551c9a0bf4d94cc6bbd777a3d6d146080218bd9f9f5b680ea2563762b01a4a8842b8c5c7c869dea73c057e9de1ec6047d8877b0ada7833c4e928fc13
+  checksum: 1ee7c19ce21c2061fa2397d2a0b985e50882b70f509669fa79288b1453a21f18013596bc55232773f3eebdb6c69b0efe43125d278ba4614703f37c5f7803e560
   languageName: node
   linkType: hard
 
@@ -7915,9 +7915,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.54.0":
-  version: 34.54.0
-  resolution: "renovate@npm:34.54.0"
+"renovate@npm:34.54.1":
+  version: 34.54.1
+  resolution: "renovate@npm:34.54.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7969,7 +7969,7 @@ __metadata:
     emojibase: 6.1.0
     emojibase-regex: 6.0.1
     extract-zip: 2.0.1
-    find-packages: 10.0.3
+    find-packages: 10.0.4
     find-up: 5.0.0
     fs-extra: 11.1.0
     git-url-parse: 13.1.0
@@ -8026,7 +8026,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: bcf9ec5874184e67f50e9baec81b78008f8be7b80624992f90d5faba550da0977b59c1e1619504e38af990219eb1eb39dd466f695096a6e2dc57d327b3abc48d
+  checksum: 00e8e09f39947638230f00ac2035c32a252551c872f5952da33dc5efc0d504850f8aa445c00816bb2a881c8213fc77265dfea6b3c10ab0f3da5c46943bbac334
   languageName: node
   linkType: hard
 
@@ -9485,13 +9485,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"write-file-atomic@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "write-file-atomic@npm:4.0.2"
+"write-file-atomic@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "write-file-atomic@npm:5.0.0"
   dependencies:
     imurmurhash: ^0.1.4
     signal-exit: ^3.0.7
-  checksum: 5da60bd4eeeb935eec97ead3df6e28e5917a6bd317478e4a85a5285e8480b8ed96032bbcc6ecd07b236142a24f3ca871c924ec4a6575e623ec1b11bf8c1c253c
+  checksum: 6ee16b195572386cb1c905f9d29808f77f4de2fd063d74a6f1ab6b566363832d8906a493b764ee715e57ab497271d5fc91642a913724960e8e845adf504a9837
   languageName: node
   linkType: hard
 
