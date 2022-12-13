@@ -40,7 +40,7 @@
     "@slashnephy/eslint-config": "0.2.26",
     "@slashnephy/prettier-config": "0.1.1",
     "@textlint/types": "12.2.3",
-    "@types/node": "18.11.13",
+    "@types/node": "18.11.14",
     "concurrently": "7.6.0",
     "eslint": "8.29.0",
     "prettier": "2.8.1",
