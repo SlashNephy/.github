@@ -1,3 +1,4 @@
+1password-cli
 base
 clamav
 clamav-unofficial-sigs
