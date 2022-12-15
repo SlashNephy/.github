@@ -30,6 +30,10 @@ on:
         required: false
         type: boolean
         default: true
+      build-args:
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -83,6 +87,7 @@ jobs:
           build-args: |
             IMAGE_TAG=${{ steps.metadata.outputs.version }}
             COMMIT_ID=${{ github.sha }}
+            ${{ inputs.build-args }}
 
       - name: Scan Image
         if: inputs.scan-image
