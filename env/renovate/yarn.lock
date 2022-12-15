@@ -2262,7 +2262,7 @@ __metadata:
     eslint: 8.29.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.1
-    renovate: 34.56.2
+    renovate: 34.56.3
     ts-node: 10.9.1
     typescript: 4.9.4
   languageName: unknown
@@ -3380,15 +3380,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cacache@npm:17.0.2":
-  version: 17.0.2
-  resolution: "cacache@npm:17.0.2"
+"cacache@npm:17.0.3":
+  version: 17.0.3
+  resolution: "cacache@npm:17.0.3"
   dependencies:
     "@npmcli/fs": ^3.1.0
     fs-minipass: ^2.1.0
     glob: ^8.0.1
     lru-cache: ^7.7.1
-    minipass: ^3.1.6
+    minipass: ^4.0.0
     minipass-collect: ^1.0.2
     minipass-flush: ^1.0.5
     minipass-pipeline: ^1.2.4
@@ -3397,7 +3397,7 @@ __metadata:
     ssri: ^10.0.0
     tar: ^6.1.11
     unique-filename: ^3.0.0
-  checksum: 75a41961b7f49901a8b24b5e30a6ecce9cbf2c7af6c872b0436b0d4dc1ebf7afbb41ba1e5309f943f2c3e8823ea49fbd8ce3cd832beea4f23d5da07595752c85
+  checksum: de86ac4a07c4aefdbd7f20cbba74461bd0816355fedc36f75a10336cef70efc84ae08a6f8f206e686bc32f46941a5a81a1fb7b0b189ad7858011b83caee3dfdb
   languageName: node
   linkType: hard
 
@@ -6813,6 +6813,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minipass@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "minipass@npm:4.0.0"
+  dependencies:
+    yallist: ^4.0.0
+  checksum: 7a609afbf394abfcf9c48e6c90226f471676c8f2a67f07f6838871afb03215ede431d1433feffe1b855455bcb13ef0eb89162841b9796109d6fed8d89790f381
+  languageName: node
+  linkType: hard
+
 "minizlib@npm:^2.1.1, minizlib@npm:^2.1.2":
   version: 2.1.2
   resolution: "minizlib@npm:2.1.2"
@@ -7906,9 +7915,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.56.2":
-  version: 34.56.2
-  resolution: "renovate@npm:34.56.2"
+"renovate@npm:34.56.3":
+  version: 34.56.3
+  resolution: "renovate@npm:34.56.3"
   dependencies:
     "@aws-sdk/client-codecommit": 3.154.0
     "@aws-sdk/client-ec2": 3.155.0
@@ -7942,7 +7951,7 @@ __metadata:
     aws4: 1.11.0
     azure-devops-node-api: 11.2.0
     bunyan: 1.8.15
-    cacache: 17.0.2
+    cacache: 17.0.3
     cacheable-lookup: 5.0.4
     chalk: 4.1.2
     changelog-filename-regex: 2.0.1
@@ -8017,7 +8026,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: cc7e664d6fec2b6ef06383dc8fe5ae29192da858e8690c9cd6c8bacfa0410c6c69d7b11ae9f0244a529cf5aa395dc883bac6ed539679cb9bd67876d2e0350f20
+  checksum: c015de4c8f7d9e0f531ef63340f371dfe23150688b9bf737cbabab7c4321f0a95a05c878969e332c1452d34e8f670bd8a955661b6b648af1ad7c2499c294ee27
   languageName: node
   linkType: hard
 
