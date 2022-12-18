@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 3.0.2
+ * @version 3.0.6
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -570,7 +570,7 @@ module.exports = (_ => {
 				BDFDB.LogUtils.log(BDFDB.LanguageUtils.LibraryStringsFormat("toast_plugin_started", ""), plugin);
 				if (Internal.settings.general.showToasts && !BDFDB.BDUtils.getSettings(BDFDB.BDUtils.settingsIds.showToasts)) BDFDB.NotificationUtils.toast(BDFDB.LanguageUtils.LibraryStringsFormat("toast_plugin_started", `${plugin.name} v${plugin.version}`), {
 					disableInteractions: true,
-					barColor: Internal.DiscordConstants.Colors.STATUS_GREEN
+					barColor: "var(--status-positive)"
 				});
 				
 				if (plugin.css) BDFDB.DOMUtils.appendLocalStyle(plugin.name, plugin.css);
@@ -587,7 +587,7 @@ module.exports = (_ => {
 				BDFDB.LogUtils.log(BDFDB.LanguageUtils.LibraryStringsFormat("toast_plugin_stopped", ""), plugin);
 				if (Internal.settings.general.showToasts && !BDFDB.BDUtils.getSettings(BDFDB.BDUtils.settingsIds.showToasts)) BDFDB.NotificationUtils.toast(BDFDB.LanguageUtils.LibraryStringsFormat("toast_plugin_stopped", `${plugin.name} v${plugin.version}`), {
 					disableInteractions: true,
-					barColor: Internal.DiscordConstants.Colors.STATUS_RED
+					barColor: "var(--status-danger)"
 				});
 				
 				const url = Internal.getPluginURL(plugin);
@@ -2943,9 +2943,9 @@ module.exports = (_ => {
 					if (!Internal.DiscordConstants.Colors) return null;
 					status = typeof status == "string" ? status.toLowerCase() : null;
 					switch (status) {
-						case "online": return useColor ? Internal.DiscordConstants.Colors.STATUS_GREEN_600 : "var(--bdfdb-green)";
-						case "idle": return useColor ? Internal.DiscordConstants.Colors.STATUS_YELLOW : "var(--bdfdb-yellow)";
-						case "dnd": return useColor ? Internal.DiscordConstants.Colors.STATUS_RED : "var(--bdfdb-red)";
+						case "online": return useColor ? Internal.DiscordConstants.Colors.STATUS_GREEN_600 : "var(--status-positive)";
+						case "idle": return useColor ? Internal.DiscordConstants.Colors.STATUS_YELLOW : "var(--status-warning)";
+						case "dnd": return useColor ? Internal.DiscordConstants.Colors.STATUS_RED : "var(--status-danger)";
 						case "playing": return useColor ? Internal.DiscordConstants.Colors.BRAND : "var(--bdfdb-blurple)";
 						case "listening": return Internal.DiscordConstants.Colors.SPOTIFY;
 						case "streaming": return Internal.DiscordConstants.Colors.TWITCH;
@@ -4432,7 +4432,7 @@ module.exports = (_ => {
 						let color = (typeof this.props.color == "string" ? this.props.color : Internal.DiscordConstants.MenuItemColors.DEFAULT).toLowerCase();
 						let isCustomColor = false;
 						if (color) {
-							if (InternalData.DiscordClasses[`menu${color}`]) color = color;
+							if (InternalData.DiscordClasses[`menucolor${color}`]) color = color;
 							else if (BDFDB.ColorUtils.getType(color)) {
 								isCustomColor = true;
 								color = BDFDB.ColorUtils.convert(color, "RGBA");
@@ -4453,7 +4453,7 @@ module.exports = (_ => {
 						let focused = !openedItem ? this.props.isFocused : openedItem == this.props.id;
 						let themeDark = BDFDB.DiscordUtils.getTheme() == BDFDB.disCN.themedark;
 						let item = BDFDB.ReactUtils.createElement(Internal.LibraryComponents.Clickable, Object.assign({
-							className: BDFDB.DOMUtils.formatClassName(BDFDB.disCN.menuitem, (this.props.label || this.props.subtext) && BDFDB.disCN.menulabelcontainer, color && (isCustomColor ? BDFDB.disCN.menucolorcustom : BDFDB.disCN[`menu${color}`]), this.props.disabled && BDFDB.disCN.menudisabled, focused && BDFDB.disCN.menufocused),
+							className: BDFDB.DOMUtils.formatClassName(BDFDB.disCN.menuitem, (this.props.label || this.props.subtext) && BDFDB.disCN.menulabelcontainer, color && (isCustomColor ? BDFDB.disCN.menucolorcustom : BDFDB.disCN[`menucolor${color}`]), this.props.disabled && BDFDB.disCN.menudisabled, focused && BDFDB.disCN.menufocused),
 							style: {
 								color: isCustomColor ? ((focused || this.state.hovered) ? (BDFDB.ColorUtils.isBright(color) ? "#000000" : "#ffffff") : color) : (this.state.hovered ? "#ffffff" : null),
 								background: isCustomColor && (focused || this.state.hovered) && color
@@ -4562,7 +4562,7 @@ module.exports = (_ => {
 							style: {
 								background: Internal.DiscordConstants.Colors.PRIMARY_DARK,
 								borderRadius: 5,
-								color: Internal.DiscordConstants.Colors.STATUS_RED,
+								color: "var(--status-danger)",
 								fontSize: 12,
 								fontWeight: 600,
 								padding: 6,
@@ -4613,7 +4613,7 @@ module.exports = (_ => {
 						return BDFDB.ReactUtils.createElement("div", {
 							className: BDFDB.DOMUtils.formatClassName(this.props.className, BDFDB.disCN.badgeiconbadge, this.props.shape && Internal.LibraryComponents.Badges.BadgeShapes[this.props.shape] || Internal.LibraryComponents.Badges.BadgeShapes.ROUND),
 							style: Object.assign({
-								backgroundColor: this.props.disableColor ? null : (this.props.color || Internal.DiscordConstants.Colors.STATUS_RED)
+								backgroundColor: this.props.disableColor ? null : (this.props.color || "var(--status-danger)")
 							}, this.props.style),
 							children: BDFDB.ReactUtils.createElement(Internal.LibraryComponents.SvgIcon, {
 								className: BDFDB.disCN.badgeicon,
@@ -4633,7 +4633,7 @@ module.exports = (_ => {
 						return BDFDB.ReactUtils.createElement("div", {
 							className: BDFDB.DOMUtils.formatClassName(this.props.className, BDFDB.disCN.badgenumberbadge, this.props.shape && Internal.LibraryComponents.Badges.BadgeShapes[this.props.shape] || Internal.LibraryComponents.Badges.BadgeShapes.ROUND),
 							style: Object.assign({
-								backgroundColor: !this.props.disableColor && (this.props.color || Internal.DiscordConstants.Colors.STATUS_RED),
+								backgroundColor: !this.props.disableColor && (this.props.color || "var(--status-danger)"),
 								width: this.getBadgeWidthForValue(this.props.count)
 							}, this.props.style),
 							onClick: this.handleClick.bind(this),
@@ -6221,7 +6221,7 @@ module.exports = (_ => {
 					}), [props.isFocused]);
 					
 					return BDFDB.ReactUtils.createElement("div", Object.assign({
-						className: BDFDB.DOMUtils.formatClassName(BDFDB.disCN.menuitem, BDFDB.disCN[`menu${(props.color && InternalData.DiscordClasses[`menu${props.color.toLowerCase()}`] || Internal.DiscordConstants.MenuItemColors.DEFAULT || "").toLowerCase()}`], props.disabled && BDFDB.disCN.menudisabled, props.showDefaultFocus && props.isFocused && BDFDB.disCN.menufocused, !props.showDefaultFocus && BDFDB.disCN.menuhideinteraction),
+						className: BDFDB.DOMUtils.formatClassName(BDFDB.disCN.menuitem, BDFDB.disCN[`menucolor${(props.color && InternalData.DiscordClasses[`menucolor${props.color.toLowerCase()}`] || Internal.DiscordConstants.MenuItemColors.DEFAULT || "").toLowerCase()}`], props.disabled && BDFDB.disCN.menudisabled, props.showDefaultFocus && props.isFocused && BDFDB.disCN.menufocused, !props.showDefaultFocus && BDFDB.disCN.menuhideinteraction),
 						onClick: BDFDB.ReactUtils.useCallback((_ => {
 							if (!controlRef.current || !controlRef.current.activate || !controlRef.current.activate.call(controlRef.current)) typeof props.onClose == "function" && props.onClose();
 						}), [props.onClose]),
@@ -7642,7 +7642,7 @@ module.exports = (_ => {
 					BDFDB.ReactUtils.useEffect(_ => {
 						if (ref.current) props.play ? ref.current.play() : ref.current.pause();
 					}, [props.play]);
-					return props.naturalWidth <= Internal.DiscordConstants.MAX_VIDEO_WIDTH && props.naturalHeight <= Internal.DiscordConstants.MAX_VIDEO_HEIGHT || props.naturalWidth <= Internal.DiscordConstants.MAX_VIDEO_HEIGHT && props.naturalHeight <= Internal.DiscordConstants.MAX_VIDEO_WIDTH ? BDFDB.ReactUtils.createElement(Internal.LibraryComponents.VideoForwardRef, {
+					return props.ignoreMaxSize || props.naturalWidth <= Internal.DiscordConstants.MAX_VIDEO_WIDTH && props.naturalHeight <= Internal.DiscordConstants.MAX_VIDEO_HEIGHT || props.naturalWidth <= Internal.DiscordConstants.MAX_VIDEO_HEIGHT && props.naturalHeight <= Internal.DiscordConstants.MAX_VIDEO_WIDTH ? BDFDB.ReactUtils.createElement(Internal.LibraryComponents.VideoForwardRef, {
 						ref: ref,
 						className: props.className,
 						poster: props.poster,
