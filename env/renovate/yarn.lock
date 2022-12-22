@@ -2238,10 +2238,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/pep440@npm:2.1.5":
-  version: 2.1.5
-  resolution: "@renovatebot/pep440@npm:2.1.5"
-  checksum: c845de34533324b7500d239069541a23b19c19dd480bb9993481a64a9b660bf4a2e200caa08cd76488afd5ecbd1f5e6cb23b415e0159b069bcc17acc6a90ca0d
+"@renovatebot/pep440@npm:2.1.6":
+  version: 2.1.6
+  resolution: "@renovatebot/pep440@npm:2.1.6"
+  checksum: d0d709e3ae7e6cf7021d0b142216a96fb2355a645a859f7cd6c19264f48e3fa173c99d4a6e9a541c5212b1326aef51c57888186dd9c4dbae4e1707df5dd06865
   languageName: node
   linkType: hard
 
@@ -2342,7 +2342,7 @@ __metadata:
     eslint: 8.30.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.1
-    renovate: 34.70.1
+    renovate: 34.70.3
     ts-node: 10.9.1
     typescript: 4.9.4
   languageName: unknown
@@ -8018,9 +8018,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.70.1":
-  version: 34.70.1
-  resolution: "renovate@npm:34.70.1"
+"renovate@npm:34.70.3":
+  version: 34.70.3
+  resolution: "renovate@npm:34.70.3"
   dependencies:
     "@aws-sdk/client-codecommit": 3.226.0
     "@aws-sdk/client-ec2": 3.226.0
@@ -8042,7 +8042,7 @@ __metadata:
     "@opentelemetry/sdk-trace-node": 1.8.0
     "@opentelemetry/semantic-conventions": 1.8.0
     "@renovatebot/osv-offline": 1.0.8
-    "@renovatebot/pep440": 2.1.5
+    "@renovatebot/pep440": 2.1.6
     "@renovatebot/ruby-semver": 1.1.7
     "@sindresorhus/is": 4.6.0
     "@types/tmp": 0.2.3
@@ -8129,7 +8129,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 636ea1cebc911d9f4f537cc925256fade98bb496d2382124a0a76468233f071dc4e73a6a86ad27b0f1f51ade0eaafa4e03dc2af72b48df83cf0b5202462548db
+  checksum: 717156782dfcd20582d7095167f8637f88f308c106777a49d4d9b00631b828f7dfd56f83709999570105030fd934e65d252d5bbf4d08df6da2cc59a66608218f
   languageName: node
   linkType: hard
 
