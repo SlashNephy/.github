@@ -2342,7 +2342,7 @@ __metadata:
     eslint: 8.30.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.1
-    renovate: 34.73.1
+    renovate: 34.73.2
     ts-node: 10.9.1
     typescript: 4.9.4
   languageName: unknown
@@ -5800,10 +5800,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ignore@npm:5.2.1":
-  version: 5.2.1
-  resolution: "ignore@npm:5.2.1"
-  checksum: 7251d00cba49fe88c4f3565fadeb4aa726ba38294a9a79ffed542edc47bafd989d4b2ccf65700c5b1b26a1e91dfc7218fb23017937c79216025d5caeec0ee9d5
+"ignore@npm:5.2.2":
+  version: 5.2.2
+  resolution: "ignore@npm:5.2.2"
+  checksum: 2086f12e8dca6978001b3861562272888fcf231f464696938049e0aa576d0562a8f31926630a973e302944c20c64639c14cfdd725bacd208dcda973021377420
   languageName: node
   linkType: hard
 
@@ -8043,9 +8043,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.73.1":
-  version: 34.73.1
-  resolution: "renovate@npm:34.73.1"
+"renovate@npm:34.73.2":
+  version: 34.73.2
+  resolution: "renovate@npm:34.73.2"
   dependencies:
     "@aws-sdk/client-codecommit": 3.226.0
     "@aws-sdk/client-ec2": 3.226.0
@@ -8108,7 +8108,7 @@ __metadata:
     graph-data-structure: 2.0.0
     handlebars: 4.7.7
     hasha: 5.2.2
-    ignore: 5.2.1
+    ignore: 5.2.2
     ini: 3.0.1
     js-yaml: 4.1.0
     json-dup-key-validator: 1.0.3
@@ -8155,7 +8155,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 7204f0e7ea4c92199608fda8aa24f071db8a80bb6a7e73b97b6a7e660ae22871ee9eeeed18cf7c3e6dce5d1e91e21018327de1c48a06d2e79a6686192a589a19
+  checksum: 39ad556636c68bde8acc33cd457f3dab18b157287ffa00e9084da744ea7e117c1b4a51e6a1f855463e493cdefb57ec284215b64da00f668243ffbc77b8e0e61b
   languageName: node
   linkType: hard
 
