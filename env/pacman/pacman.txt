@@ -1,5 +1,4 @@
 1password-cli
-argocd
 base
 clamav
 clamav-unofficial-sigs
@@ -14,6 +13,7 @@ fakeroot
 git
 github-cli
 groff
+helm
 htop
 intel-media-driver
 intel-ucode
