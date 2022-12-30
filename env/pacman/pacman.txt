@@ -8,6 +8,7 @@ cri-o
 dkms
 docker
 docker-compose
+docker-credential-pass
 ethtool
 fakeroot
 git
@@ -37,6 +38,7 @@ nano
 nano-syntax-highlighting
 net-tools
 openssh
+pass
 preload
 progress
 rclone
