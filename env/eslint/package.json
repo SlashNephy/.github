@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "0.2.28",
+  "version": "0.2.30",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
     "type": "git",
@@ -29,16 +29,16 @@
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.46.0",
-    "@typescript-eslint/parser": "5.46.0",
-    "eslint-config-next": "13.0.6",
+    "@typescript-eslint/eslint-plugin": "5.46.1",
+    "@typescript-eslint/parser": "5.46.1",
+    "eslint-config-next": "13.0.7",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "3.5.2",
     "eslint-plugin-css-import-order": "1.1.0",
     "eslint-plugin-editorconfig": "4.0.2",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jest": "27.1.6",
+    "eslint-plugin-jest": "27.1.7",
     "eslint-plugin-jest-formatting": "3.1.0",
     "eslint-plugin-json": "3.1.0",
     "eslint-plugin-no-void-return-type": "1.0.2",
@@ -60,8 +60,8 @@
   "devDependencies": {
     "@slashnephy/prettier-config": "0.1.1",
     "@types/eslint": "8.4.10",
-    "@types/node": "18.11.17",
-    "@types/prettier": "2.7.1",
+    "@types/node": "18.11.18",
+    "@types/prettier": "2.7.2",
     "concurrently": "7.6.0",
     "eslint": "8.30.0",
     "prettier": "2.8.1",
