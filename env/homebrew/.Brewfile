@@ -2,6 +2,7 @@ tap "arrow2nd/tap"
 tap "buildpacks/tap"
 tap "ci7lus/miraktest"
 tap "gcenx/wine"
+tap "gromgit/fuse"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -102,6 +103,8 @@ brew "gcc"
 brew "gh"
 # Remote repository management made easy
 brew "ghq"
+# Distributed revision control system
+brew "git"
 # Audit git repos for secrets
 brew "gitleaks"
 # GNU implementation of the famous stream editor
@@ -136,6 +139,8 @@ brew "inetutils"
 brew "ios-webkit-debug-proxy"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Static analysis tool for Kubernetes YAML files and Helm charts
+brew "kube-linter"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
@@ -150,8 +155,6 @@ brew "make"
 brew "mas"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
-# Run a Kubernetes cluster locally
-brew "minikube"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
 # Simple tool to make locally trusted development certificates
@@ -172,6 +175,8 @@ brew "netlify-cli"
 brew "nkf"
 # Port scanning utility for large networks
 brew "nmap"
+# Libraries for security-enabled client and server applications
+brew "nss"
 # Manage multiple Node.js versions
 brew "nvm"
 # Reverse proxy for authenticating users via OAuth 2 providers
@@ -184,14 +189,12 @@ brew "p7zip"
 brew "pastel"
 # Command-line tools for MySQL, MariaDB and system tasks
 brew "percona-toolkit"
-# Highly capable, feature-rich programming language
-brew "perl"
-# Perl builder
-brew "perl-build"
 # General-purpose scripting language
 brew "php"
 # Python dependency management tool
 brew "pipenv"
+# Perl binary manager
+brew "plenv"
 # Coreutils progress viewer
 brew "progress"
 # Ruby version manager
@@ -260,6 +263,8 @@ brew "zsh-fast-syntax-highlighting"
 brew "arrow2nd/tap/nekome"
 # A CLI for building apps using Cloud Native Buildpacks
 brew "buildpacks/tap/pack"
+# File system client based on SSH File Transfer Protocol
+brew "gromgit/fuse/sshfs-mac"
 # tbls is a CI-Friendly tool for document a database, written in Go.
 brew "k1low/tap/tbls"
 # Evans: more expressive universal gRPC client
@@ -298,12 +303,16 @@ cask "audacity"
 cask "aws-vault"
 # Managed client-based VPN service to securely access AWS resources
 cask "aws-vpn-client"
+# Menu bar icon organizer
+cask "bartender"
 # Installer for BetterDiscord
 cask "betterdiscord-installer"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 # 3D creation suite
 cask "blender"
+# Monitors common persistence locations
+cask "blockblock"
 # Missing menulet for Homebrew
 cask "brewlet"
 # Remotely access another computer through the Google Chrome browser
@@ -316,8 +325,6 @@ cask "cloudflare-warp"
 cask "deckset"
 # Voice and text chat software
 cask "discord"
-# Voice and text chat software
-cask "discord-canary"
 # Voice and text chat software
 cask "discord-ptb"
 # App to build and share containerized applications and microservices
@@ -374,6 +381,10 @@ cask "keybase"
 cask "keyboardcleantool"
 # Kubernetes IDE
 cask "lens"
+# Open-source firewall to block unknown outgoing connections
+cask "lulu"
+# File system integration
+cask "macfuse"
 # Create digital art and comics
 cask "medibangpaintpro"
 # Provides updates to various Microsoft products
@@ -390,6 +401,8 @@ cask "mono-mdk-for-visual-studio"
 cask "mysqlworkbench"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Client-side GUI application for modern database development and operations
+cask "nosql-workbench"
 # Monitors computer mic and webcam
 cask "oversight"
 # Desktop virtualization software
@@ -400,6 +413,8 @@ cask "parsec"
 cask "postman"
 # Command-line shell and scripting language
 cask "powershell"
+# HTTP client that helps testing and describing APIs
+cask "rapidapi"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Control your tools with a few keystrokes
@@ -434,6 +449,8 @@ cask "visual-studio"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Shows a files cryptographic signing information
+cask "whatsyoursign"
 # Compatibility layer to run Windows applications
 cask "wine-crossover"
 # Network protocol analyzer
@@ -441,7 +458,9 @@ cask "wireshark"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Apple Configurator", id: 1037126344
+mas "AS Timer", id: 512464723
 mas "Developer", id: 640199958
+mas "EasyRes", id: 688211836
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
