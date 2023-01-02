@@ -1,6 +1,6 @@
-import type { Options } from 'prettier'
+import type { Config } from 'prettier'
 
-const prettier: Options = {
+const prettier: Config = {
   semi: false,
   singleQuote: true,
   jsxSingleQuote: false,
@@ -14,6 +14,14 @@ const prettier: Options = {
   quoteProps: 'as-needed',
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: false,
+  overrides: [
+    {
+      files: ['**/*.yaml', '**/*.yml'],
+      options: {
+        singleQuote: false,
+      },
+    },
+  ],
 }
 
 module.exports = prettier
