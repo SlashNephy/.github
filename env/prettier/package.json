@@ -8,10 +8,10 @@
     "directory": "env/prettier"
   },
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "files": [
     "package.json",
-    "dist/*.js"
+    "dist/src/*.js"
   ],
   "publishConfig": {
     "access": "public"
