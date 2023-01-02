@@ -43,6 +43,8 @@ jobs:
     uses: ./.github/workflows/yarn-publish.yml
     with:
       working-directory: 'env/prettier'
+      pre-script: 'bump-version'
+      commit-message: '🔨 Bump version'
     permissions:
       contents: 'write'
     secrets:
