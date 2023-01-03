@@ -2342,7 +2342,7 @@ __metadata:
     eslint: 8.31.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.1
-    renovate: 34.79.0
+    renovate: 34.81.0
     ts-node: 10.9.1
     typescript: 4.9.4
   languageName: unknown
@@ -6357,12 +6357,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:2.2.2":
-  version: 2.2.2
-  resolution: "json5@npm:2.2.2"
+"json5@npm:2.2.3":
+  version: 2.2.3
+  resolution: "json5@npm:2.2.3"
   bin:
     json5: lib/cli.js
-  checksum: 9a878d66b72157b073cf0017f3e5d93ec209fa5943abcb38d37a54b208917c166bd473c26a24695e67a016ce65759aeb89946592991f8f9174fb96c8e2492683
+  checksum: 2a7436a93393830bce797d4626275152e37e877b265e94ca69c99e3d20c2b9dab021279146a39cdb700e71b2dd32a4cebd1514cd57cee102b1af906ce5040349
   languageName: node
   linkType: hard
 
@@ -8053,9 +8053,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.79.0":
-  version: 34.79.0
-  resolution: "renovate@npm:34.79.0"
+"renovate@npm:34.81.0":
+  version: 34.81.0
+  resolution: "renovate@npm:34.81.0"
   dependencies:
     "@aws-sdk/client-codecommit": 3.226.0
     "@aws-sdk/client-ec2": 3.226.0
@@ -8123,7 +8123,7 @@ __metadata:
     js-yaml: 4.1.0
     json-dup-key-validator: 1.0.3
     json-stringify-pretty-compact: 3.0.0
-    json5: 2.2.2
+    json5: 2.2.3
     luxon: 3.1.1
     markdown-it: 13.0.1
     markdown-table: 2.0.0
@@ -8165,7 +8165,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: cbb182d3fd3309fe3d3427e47541dc173eb11bad7de18bb74d6a38fea53d2e627662ea1b430ee455bd49284f60876ac11cd4f9e3bd842516b6bda1f3f150ee1b
+  checksum: 8c8f729ae2ae69ee8194aafdf7180af3ae38eb08590eb6be84c0d5f7e6ca87860b1c7482d99dcdb1b5b789f01416d11835ac7b979155307fe234e67a7756bb0a
   languageName: node
   linkType: hard
 
