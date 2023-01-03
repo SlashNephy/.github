@@ -21,6 +21,14 @@ const prettier: Config = {
         singleQuote: false,
       },
     },
+    // GitHub Workflow でダブルクォートが使えない場合があるのでシングルに統一
+    // https://github.com/actions/runner/issues/866
+    {
+      files: ['.github/workflows/*.yaml', '.github/workflows/*.yml'],
+      options: {
+        singleQuote: true,
+      },
+    },
   ],
 }
 
