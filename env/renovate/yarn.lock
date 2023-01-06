@@ -2224,17 +2224,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/osv-offline@npm:1.0.9":
-  version: 1.0.9
-  resolution: "@renovatebot/osv-offline@npm:1.0.9"
+"@renovatebot/osv-offline@npm:1.0.10":
+  version: 1.0.10
+  resolution: "@renovatebot/osv-offline@npm:1.0.10"
   dependencies:
     "@octokit/rest": 19.0.5
     "@renovatebot/osv-offline-db": 1.0.1
     adm-zip: 0.5.10
     fs-extra: 10.1.0
     got: 11.8.6
-    luxon: 3.1.1
-  checksum: 05d2154d25e9d646906e0a51808fe9832245e81bf363b25db385455d67cd9ec6aadc9fe20124f5fc0f28a4afa64b32e744671a1831601336fa6ed16ca496c252
+    luxon: 3.2.0
+  checksum: a4f34f9383583e2f76913ede1093f5f347a036b7c75875440cb7a5b65af454d75fb1dc6f91a61351d83781b67080eb13fadacfae84f06702649140e10dd476e5
   languageName: node
   linkType: hard
 
@@ -2342,7 +2342,7 @@ __metadata:
     eslint: 8.31.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.1
-    renovate: 34.84.1
+    renovate: 34.84.2
     ts-node: 10.9.1
     typescript: 4.9.4
   languageName: unknown
@@ -6593,13 +6593,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:3.1.1":
-  version: 3.1.1
-  resolution: "luxon@npm:3.1.1"
-  checksum: 388fb35d3c51a19d8b305a3338e7e74634b08562e7d2f9ed5c05a7f4bc9ee1c1ab6a2546b6d9c4c104516b24043757d65f5f3fe3d78b206fbf55a9586ab62230
-  languageName: node
-  linkType: hard
-
 "luxon@npm:3.2.0":
   version: 3.2.0
   resolution: "luxon@npm:3.2.0"
@@ -8060,9 +8053,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.84.1":
-  version: 34.84.1
-  resolution: "renovate@npm:34.84.1"
+"renovate@npm:34.84.2":
+  version: 34.84.2
+  resolution: "renovate@npm:34.84.2"
   dependencies:
     "@aws-sdk/client-codecommit": 3.226.0
     "@aws-sdk/client-ec2": 3.226.0
@@ -8083,7 +8076,7 @@ __metadata:
     "@opentelemetry/sdk-trace-base": 1.8.0
     "@opentelemetry/sdk-trace-node": 1.8.0
     "@opentelemetry/semantic-conventions": 1.8.0
-    "@renovatebot/osv-offline": 1.0.9
+    "@renovatebot/osv-offline": 1.0.10
     "@renovatebot/pep440": 2.1.6
     "@renovatebot/ruby-semver": 1.1.7
     "@sindresorhus/is": 4.6.0
@@ -8172,7 +8165,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 391a08f2177d3f1e72e8913b55cc385a32d1cb683d10db0fa64d917079b704bd8c753099482a23f2bc63ddc3dda71523bb11f0c1349677840a9048a76ad022d3
+  checksum: 6191c00a1b6587637c5185e08af386e57c1b5bc2a6edbaca89d0eea77d24230939e688dd3ff945198eb6a5b3fd4af81a3c1540ba198b15c746e1a6b547853594
   languageName: node
   linkType: hard
 
