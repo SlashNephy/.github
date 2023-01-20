@@ -87,6 +87,10 @@ brew "dog"
 brew "eslint", link: false
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Play, record, convert, and stream audio and video
@@ -321,6 +325,8 @@ cask "chrome-remote-desktop-host"
 cask "clipy"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
+# Disk space visualizer
+cask "daisydisk"
 # Presentations from Markdown
 cask "deckset"
 # Voice and text chat software

@@ -2,7 +2,7 @@
  * @name VoiceActivity
  * @author Neodymium
  * @description Shows icons and info in popouts, the member list, and more when someone is in a voice channel.
- * @version 1.6.0
+ * @version 1.6.2
  * @source https://github.com/Neodymium7/BetterDiscordStuff/blob/main/VoiceActivity/VoiceActivity.plugin.js
  * @invite fRbsqH87Av
  */
@@ -39,7 +39,7 @@ const config = {
 				name: "Neodymium"
 			}
 		],
-		version: "1.6.0",
+		version: "1.6.2",
 		description: "Shows icons and info in popouts, the member list, and more when someone is in a voice channel.",
 		github: "https://github.com/Neodymium7/BetterDiscordStuff/blob/main/VoiceActivity/VoiceActivity.plugin.js",
 		github_raw: "https://raw.githubusercontent.com/Neodymium7/BetterDiscordStuff/main/VoiceActivity/VoiceActivity.plugin.js"
@@ -49,9 +49,7 @@ const config = {
 			title: "Added",
 			type: "improved",
 			items: [
-				"Added section to DM profile sidebars.",
-				"Added icons to guilds even when you're not currently in the voice channel.",
-				"Added corresponding settings for new features, and new setting for toggling profile section."
+				"Added German translations."
 			]
 		}
 	]
@@ -210,6 +208,76 @@ function buildPlugin([BasePlugin, Library]) {
 		}
 	
 		// locales.json
+		var ru = {
+			SETTINGS_PROFILE: "Раздел в Профиле",
+			SETTINGS_PROFILE_NOTE: "Показывает раздел для текущей голосовой активности в профиле, всплывающих окнах и боковых панелях в ЛС.",
+			SETTINGS_ICONS: "Иконки в Списке Участников",
+			SETTINGS_ICONS_NOTE: "Показывает иконки в списке участников когда пользователь в голосовом канале.",
+			SETTINGS_DM_ICONS: "Иконки в ЛС",
+			SETTINGS_DM_ICONS_NOTE: "Показывает иконки в списке участников ЛС когда пользователь в голосовом канале.",
+			SETTINGS_PEOPLE_ICONS: "Иконки в Списке Друзей",
+			SETTINGS_PEOPLE_ICONS_NOTE: "Показывает иконки в списке друзей когда пользователь в голосовом канале.",
+			SETTINGS_GUILD_ICONS: "Иконки Сервера",
+			SETTINGS_GUILD_ICONS_NOTE: "Показывает голосовые иконки на серверах даже когда вы не участвуете.",
+			SETTINGS_COLOR: "Цвет Иконки Голосовой Активности",
+			SETTINGS_COLOR_NOTE: "Делает иконки в Списке Участников зелёными когда пользователь в голосовом канале вместе с вами.",
+			SETTINGS_STATUS: "Показывать Иконки Статуса",
+			SETTINGS_STATUS_NOTE: "Меняет иконки в Списке Участников когда пользователь Выключил Микрофон/Звук или Начал трансляцию.",
+			SETTINGS_IGNORE: "Ингор",
+			SETTINGS_IGNORE_NOTE: "Добавляет возможность в контекстных меню Голосовых Каналов и Серверов игнорировать этот канал/сервер в Списке Участников и Профилях Пользователей.",
+			CONTEXT_IGNORE: "Игнор (Голосовая Активность)",
+			VOICE_CALL: "Голосовой звонок",
+			PRIVATE_CALL: "Приватный звонок",
+			GROUP_CALL: "Групповой звонок",
+			LIVE: "В ЭФИРЕ",
+			HEADER: "В Голосовом Канале",
+			HEADER_VOICE: "В Голосовом Звонке",
+			HEADER_PRIVATE: "В Приватном Звонке",
+			HEADER_GROUP: "В Групповом Звонке",
+			HEADER_STAGE: "В Канале Трибуны",
+			VIEW: "Просмотреть Канал",
+			VIEW_CALL: "Просмотреть Звонок",
+			JOIN: "Присоединиться к Каналу",
+			JOIN_CALL: "Присоединиться к Звонку",
+			JOIN_DISABLED: "Уже в Канале",
+			JOIN_DISABLED_CALL: "Уже в Звонке",
+			JOIN_VIDEO: "Присоединиться с Видео"
+		};
+		var de = {
+			SETTINGS_PROFILE: "Profilbereich",
+			SETTINGS_PROFILE_NOTE: "Zeigt den Profilbereich für die aktuelle Sprachaktivität in Benutzer-Popouts und DM-Profilseitenleisten an.",
+			SETTINGS_ICONS: "Symbole in der Mitgliederliste",
+			SETTINGS_ICONS_NOTE: "Zeigt Symbole in der Mitgliederliste an, wenn sich jemand in einem Sprachkanal befindet.",
+			SETTINGS_DM_ICONS: "DM-Symbole",
+			SETTINGS_DM_ICONS_NOTE: "Zeigt Symbole in der DM-Liste an, wenn sich jemand in einem Sprachkanal befindet.",
+			SETTINGS_PEOPLE_ICONS: "Symbole in der Freundesliste",
+			SETTINGS_PEOPLE_ICONS_NOTE: "Zeigt Symbole in der Freundesliste an, wenn sich jemand in einem Sprachkanal befindet.",
+			SETTINGS_GUILD_ICONS: "Gildensymbole",
+			SETTINGS_GUILD_ICONS_NOTE: "Zeigt Symbole für Gilden an, auch wenn du nicht teilnimmst.",
+			SETTINGS_COLOR: "Mitgliederliste - Farbe des aktuellen Kanalsymbols",
+			SETTINGS_COLOR_NOTE: "Die Symbole in der Mitgliederliste werden grün, wenn sich der Benutzer in Ihrem aktuellen Sprachkanal befindet.",
+			SETTINGS_STATUS: "Mitgliederliste - Statussymbole anzeigen",
+			SETTINGS_STATUS_NOTE: "Ändert die Symbole in der Mitgliederliste, wenn ein Benutzer stummgeschaltet oder mit aktiviertem Video ist.",
+			SETTINGS_IGNORE: "Ignorieren",
+			SETTINGS_IGNORE_NOTE: "Fügt eine Option in die Kontextmenüs von Sprachkanälen und Gilden hinzu, um diesen Kanal/diese Gilde in der Mitgliederliste und Benutzer-Popouts zu ignorieren.",
+			CONTEXT_IGNORE: "Bei Sprachaktivität ignorieren",
+			VOICE_CALL: "Sprachanruf",
+			PRIVATE_CALL: "Privatanruf",
+			GROUP_CALL: "Gruppenanruf",
+			LIVE: "Live",
+			HEADER: "In einem Sprachkanal",
+			HEADER_VOICE: "In einem Sprachanruf",
+			HEADER_PRIVATE: "In einem privaten Anruf",
+			HEADER_GROUP: "In einem Gruppenruf",
+			HEADER_STAGE: "In einem Stage Kanal",
+			VIEW: "Kanal anzeigen",
+			VIEW_CALL: "Anruf anzeigen",
+			JOIN: "Kanal beitreten",
+			JOIN_CALL: "Anruf beitreten",
+			JOIN_DISABLED: "Bereits im Kanal",
+			JOIN_DISABLED_CALL: "Bereits im Aufruf",
+			JOIN_VIDEO: "Beitreten mit Video"
+		};
 		var locales = {
 			"en-US": {
 			SETTINGS_PROFILE: "Profile Section",
@@ -219,7 +287,7 @@ function buildPlugin([BasePlugin, Library]) {
 			SETTINGS_DM_ICONS: "DM Icons",
 			SETTINGS_DM_ICONS_NOTE: "Shows icons on the DM list when someone is in a voice channel.",
 			SETTINGS_PEOPLE_ICONS: "Friends List Icons",
-			SETTINGS_PEOPLE_ICONS_NOTE: "Shows icons on the DM list when someone is in a voice channel.",
+			SETTINGS_PEOPLE_ICONS_NOTE: "Shows icons on the Friend list when someone is in a voice channel.",
 			SETTINGS_GUILD_ICONS: "Guild Icons",
 			SETTINGS_GUILD_ICONS_NOTE: "Shows voice icons on guilds even when you're not participating.",
 			SETTINGS_COLOR: "Member List - Current Channel Icon Color",
@@ -245,7 +313,9 @@ function buildPlugin([BasePlugin, Library]) {
 			JOIN_DISABLED: "Already in Channel",
 			JOIN_DISABLED_CALL: "Already in Call",
 			JOIN_VIDEO: "Join With Video"
-		}
+		},
+			ru: ru,
+			de: de
 		};
 	
 		// utils.ts
@@ -739,11 +809,18 @@ function buildPlugin([BasePlugin, Library]) {
 				betterdiscord.Patcher.after(PrivateChannelProfile, key, (_, [props], ret) => {
 					if (props.profileType !== 3)
 						return ret;
-					const children2 = betterdiscord.Utils.findInTree(ret, (i) => Array.isArray(i), { walkable: ["props", "children"] });
-					children2.splice(2, 0, BdApi.React.createElement(VoiceProfileSection, {
-						userId: props.user.id,
-						wrapper: Inner
-					}));
+					const children2 = ret.props.children;
+					ret.props.children = (childrenProps) => {
+						const childrenRet = children2(childrenProps);
+						const sections = betterdiscord.Utils.findInTree(childrenRet, (i) => Array.isArray(i), {
+							walkable: ["props", "children"]
+						});
+						sections.splice(2, 0, BdApi.React.createElement(VoiceProfileSection, {
+							userId: props.user.id,
+							wrapper: Inner
+						}));
+						return childrenRet;
+					};
 				});
 			}
 			async patchGuildIcon() {
