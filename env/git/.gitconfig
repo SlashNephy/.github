@@ -20,6 +20,7 @@
   current-branch-name = !git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'
   force-pull = !git fetch && git reset --hard origin/$(git current-branch)
   update-timestamp = rebase origin/HEAD --autostash --exec 'git commit --amend --no-edit --date=now'
+  pushf = push --force-with-lease --force-if-includes
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
