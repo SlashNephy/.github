@@ -22,15 +22,15 @@
     "watch:postcss": "yarn build:postcss -w"
   },
   "devDependencies": {
-    "@slashnephy/prettier-config": "0.1.4",
+    "@slashnephy/prettier-config": "0.1.5",
     "@slashnephy/stylelint-config": "0.1.1",
     "autoprefixer": "10.4.13",
     "concurrently": "7.6.0",
-    "eslint": "8.31.0",
-    "postcss": "8.4.20",
+    "eslint": "8.32.0",
+    "postcss": "8.4.21",
     "postcss-cli": "10.1.0",
     "postcss-scss": "4.0.6",
-    "prettier": "2.8.1",
+    "prettier": "2.8.3",
     "sass": "1.57.1",
     "stylelint": "14.16.1"
   },

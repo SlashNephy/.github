@@ -37,13 +37,13 @@
     "textlint": "^12"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.2.33",
-    "@slashnephy/prettier-config": "0.1.4",
-    "@textlint/types": "12.3.0",
+    "@slashnephy/eslint-config": "0.2.36",
+    "@slashnephy/prettier-config": "0.1.5",
+    "@textlint/types": "12.5.0",
     "@types/node": "18.11.18",
     "concurrently": "7.6.0",
-    "eslint": "8.31.0",
-    "prettier": "2.8.1",
+    "eslint": "8.32.0",
+    "prettier": "2.8.3",
     "typescript": "4.9.4"
   },
   "packageManager": "yarn@3.3.1",
