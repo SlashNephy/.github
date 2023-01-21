@@ -241,7 +241,7 @@ __metadata:
   dependencies:
     "@slashnephy/eslint-config": 0.2.39
     "@slashnephy/prettier-config": 0.1.7
-    "@textlint/types": 12.5.0
+    "@textlint/types": 12.6.0
     "@types/node": 18.11.18
     concurrently: 7.6.0
     eslint: 8.32.0
@@ -283,10 +283,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@textlint/ast-node-types@npm:^12.3.0":
-  version: 12.3.0
-  resolution: "@textlint/ast-node-types@npm:12.3.0"
-  checksum: 5b24568709947dc234ca028ef9dfd0a1a78fd7e3a30b60133241efdc7fb29e0194c15c4226ce72ab780914943ca4db181f928c5cf7e4c4c050dbea9267c304fb
+"@textlint/ast-node-types@npm:^12.6.0":
+  version: 12.6.0
+  resolution: "@textlint/ast-node-types@npm:12.6.0"
+  checksum: 15c0232b8ad29b01eaf6dddfae369e8c116cc0d40d78d5b8b4c1013b68cfc5e7858ca800c4d161e6a70fd6c3869b7955e0e7c5d3b34bcbe68e4a96223a84b937
   languageName: node
   linkType: hard
 
@@ -325,12 +325,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@textlint/types@npm:12.5.0":
-  version: 12.5.0
-  resolution: "@textlint/types@npm:12.5.0"
+"@textlint/types@npm:12.6.0":
+  version: 12.6.0
+  resolution: "@textlint/types@npm:12.6.0"
   dependencies:
-    "@textlint/ast-node-types": ^12.3.0
-  checksum: 4ad949bee66fa55d0e014f7fd88e72c88f8e2274d5a0367466c5561d5612063ff76931dbd444f5ff32d710f9bece9aa48e09973a309c4e0f619358f7d89c0eb6
+    "@textlint/ast-node-types": ^12.6.0
+  checksum: 389dee8463fd9e7873ad66527f486e71d5ac1913ee0589f010e4381e3505f9e2274a02b408afe27dfabef9cff1020cfbdf69a07ab36f1e33b8a33c46c89281bb
   languageName: node
   linkType: hard
 
