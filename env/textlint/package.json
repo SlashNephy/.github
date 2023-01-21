@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.2.39",
-    "@slashnephy/prettier-config": "0.1.6",
+    "@slashnephy/prettier-config": "0.1.7",
     "@textlint/types": "12.5.0",
     "@types/node": "18.11.18",
     "concurrently": "7.6.0",
