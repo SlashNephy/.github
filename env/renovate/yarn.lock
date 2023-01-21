@@ -2374,7 +2374,7 @@ __metadata:
     eslint: 8.32.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.3
-    renovate: 34.108.3
+    renovate: 34.108.4
     ts-node: 10.9.1
     typescript: 4.9.4
   languageName: unknown
@@ -6967,12 +6967,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:5.1.2":
-  version: 5.1.2
-  resolution: "minimatch@npm:5.1.2"
+"minimatch@npm:5.1.4":
+  version: 5.1.4
+  resolution: "minimatch@npm:5.1.4"
   dependencies:
     brace-expansion: ^2.0.1
-  checksum: 32ffda25b9fb8270a1c1beafdb7489dc0e411af553495136509a945691f63c9b6b000eeeaaf8bffe3efa609c1d6d3bc0f5a106f6c3443b5c05da649100ded964
+  checksum: 0de6d7d154e70d12487b30a7bfcb74bd15fd1f1ec007a2516699ba76e63f78ca2e5016c200b242ed75123aff8dcccf49947f71b629fb1b1f221c8e76a13ed8de
   languageName: node
   linkType: hard
 
@@ -8170,9 +8170,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.108.3":
-  version: 34.108.3
-  resolution: "renovate@npm:34.108.3"
+"renovate@npm:34.108.4":
+  version: 34.108.4
+  resolution: "renovate@npm:34.108.4"
   dependencies:
     "@aws-sdk/client-codecommit": 3.226.0
     "@aws-sdk/client-ec2": 3.226.0
@@ -8246,7 +8246,7 @@ __metadata:
     luxon: 3.2.1
     markdown-it: 13.0.1
     markdown-table: 2.0.0
-    minimatch: 5.1.2
+    minimatch: 5.1.4
     moo: 0.5.2
     nanoid: 3.3.4
     node-html-parser: 6.1.4
@@ -8283,7 +8283,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: cede625b30fd072b782ae2734a3e8e559f58e662cab61172876c060aa117e40d05b246f9af2901ea9509cc383664aba0c9506d4f5861f7907cd5f93104f03eaf
+  checksum: 0ecd307e69fa062a8fa82858128ba34e9d184d093771e84af0a10eb9bdf42f54681da3bcf9d95de9949702220f12feced5551e413e42b1d93063dbb2671e7b39
   languageName: node
   linkType: hard
 
