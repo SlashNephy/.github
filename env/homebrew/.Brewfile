@@ -303,8 +303,6 @@ cask "apparency"
 cask "appcleaner"
 # Multi-track audio editor and recorder
 cask "audacity"
-# Securely stores and accesses AWS credentials in a development environment
-cask "aws-vault"
 # Managed client-based VPN service to securely access AWS resources
 cask "aws-vpn-client"
 # Menu bar icon organizer
@@ -329,6 +327,8 @@ cask "cloudflare-warp"
 cask "daisydisk"
 # Presentations from Markdown
 cask "deckset"
+# Trains AIs to understand and translate texts
+cask "deepl"
 # Voice and text chat software
 cask "discord"
 # Voice and text chat software
