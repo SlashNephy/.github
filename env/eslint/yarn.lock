@@ -195,7 +195,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/eslint-config@workspace:."
   dependencies:
-    "@slashnephy/prettier-config": 0.1.8
+    "@slashnephy/prettier-config": 0.1.9
     "@types/eslint": 8.4.10
     "@types/node": 18.11.18
     "@types/prettier": 2.7.2
@@ -233,12 +233,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@slashnephy/prettier-config@npm:0.1.8":
-  version: 0.1.8
-  resolution: "@slashnephy/prettier-config@npm:0.1.8"
+"@slashnephy/prettier-config@npm:0.1.9":
+  version: 0.1.9
+  resolution: "@slashnephy/prettier-config@npm:0.1.9"
   peerDependencies:
     prettier: ^2
-  checksum: 3fffe6545bbb16b89d525c7475213e29436c9faaeba3e521416773ebc6beee2a30c55db6553a2cea2e5356a28e2e560b023ce57b3452095a2a22da5e9141ef3e
+  checksum: 79ea8c98f12d1c5d13e38b6e175f9e6f9d64428d6fd0dfdba9bc0cf0cdc49f45e3d94a4479fd56c6c84181b1f0fc6c5fc90631745833cb69f858e3c031c2808f
   languageName: node
   linkType: hard
 
