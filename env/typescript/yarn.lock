@@ -191,9 +191,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:0.2.40":
-  version: 0.2.40
-  resolution: "@slashnephy/eslint-config@npm:0.2.40"
+"@slashnephy/eslint-config@npm:0.2.41":
+  version: 0.2.41
+  resolution: "@slashnephy/eslint-config@npm:0.2.41"
   dependencies:
     "@typescript-eslint/eslint-plugin": 5.48.1
     "@typescript-eslint/parser": 5.48.1
@@ -211,7 +211,7 @@ __metadata:
     eslint-plugin-node: 11.1.0
     eslint-plugin-package-json: 0.1.4
     eslint-plugin-promise: 6.1.1
-    eslint-plugin-react: 7.32.0
+    eslint-plugin-react: 7.32.1
     eslint-plugin-react-hooks: 4.6.0
     eslint-plugin-unused-imports: 2.0.0
     eslint-plugin-userscripts: 0.2.10
@@ -221,7 +221,7 @@ __metadata:
     eslint: ^8
     prettier: ^2
     typescript: ^4
-  checksum: 904b6e9830e78d820b6c3e653d2cadbecf098886b126f419492c6e5f3608f22239080d6c77cf692ed2176f8862a56348eb5ce73889aaab7ffbdfef50c4ffc098
+  checksum: a9344579f3190544988e4d393a43cedc736728f788bc4e5b22b87df87d12bc27d0b777f01a32b79947c02158335553c795423fe3e760f52002efa165673e3476
   languageName: node
   linkType: hard
 
@@ -238,7 +238,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/typescript-extension@workspace:."
   dependencies:
-    "@slashnephy/eslint-config": 0.2.40
+    "@slashnephy/eslint-config": 0.2.41
     "@slashnephy/prettier-config": 0.1.8
     "@types/node": 18.11.18
     concurrently: 7.6.0
@@ -1472,9 +1472,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:7.32.0":
-  version: 7.32.0
-  resolution: "eslint-plugin-react@npm:7.32.0"
+"eslint-plugin-react@npm:7.32.1":
+  version: 7.32.1
+  resolution: "eslint-plugin-react@npm:7.32.1"
   dependencies:
     array-includes: ^3.1.6
     array.prototype.flatmap: ^1.3.1
@@ -1493,7 +1493,7 @@ __metadata:
     string.prototype.matchall: ^4.0.8
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-  checksum: b81ce2623b50a936287d8e21997bd855094e643856c99b42a9f0c10e1c7b123e469c3d75f77df9eefb719fee2b47a763862f1cdca1e7cc26edc7cde2fb8cba87
+  checksum: e20eab61161a3db6211c2bd1eb9be3e407fd14e72c06c5f39a078b6ac37427b2af6056ee70e3954249bca0a04088ae797a0c8ba909fb8802e29712de2a41262d
   languageName: node
   linkType: hard
 
