@@ -150,6 +150,14 @@ declare class QuizVideoController {
       startPoint: number
     }
   >
+  public getCurrentPlayer(): MoeVideoPlayer | undefined
+}
+
+declare class MoeVideoPlayer {
+  public $player: JQuery<HTMLVideoElement>
+  public player: {
+    hasClass(name: string): boolean
+  }
 }
 
 declare class QuizAnswerState {
