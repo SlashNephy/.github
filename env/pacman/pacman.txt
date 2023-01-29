@@ -13,6 +13,7 @@ ethtool
 fakeroot
 git
 github-cli
+go
 groff
 helm
 htop
@@ -35,6 +36,7 @@ lsof
 m4
 mackerel-agent
 mackerel-agent-plugins-git
+mkr
 nano
 nano-syntax-highlighting
 net-tools
@@ -51,6 +53,7 @@ tlp
 tmux
 tree
 unhide
+unzip
 which
 yay-bin
 zplug
