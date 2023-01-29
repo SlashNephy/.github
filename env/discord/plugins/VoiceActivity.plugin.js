@@ -2,7 +2,7 @@
  * @name VoiceActivity
  * @author Neodymium
  * @description Shows icons and info in popouts, the member list, and more when someone is in a voice channel.
- * @version 1.6.2
+ * @version 1.6.4
  * @source https://github.com/Neodymium7/BetterDiscordStuff/blob/main/VoiceActivity/VoiceActivity.plugin.js
  * @invite fRbsqH87Av
  */
@@ -39,17 +39,18 @@ const config = {
 				name: "Neodymium"
 			}
 		],
-		version: "1.6.2",
+		version: "1.6.4",
 		description: "Shows icons and info in popouts, the member list, and more when someone is in a voice channel.",
 		github: "https://github.com/Neodymium7/BetterDiscordStuff/blob/main/VoiceActivity/VoiceActivity.plugin.js",
 		github_raw: "https://raw.githubusercontent.com/Neodymium7/BetterDiscordStuff/main/VoiceActivity/VoiceActivity.plugin.js"
 	},
 	changelog: [
 		{
-			title: "Added",
-			type: "improved",
+			title: "Fixed",
+			type: "fixed",
 			items: [
-				"Added German translations."
+				"Fixed ignore context menu option appearing on all channels (not just voice channels).",
+				"Fixed titles of unnamed group DMs."
 			]
 		}
 	]
@@ -287,7 +288,7 @@ function buildPlugin([BasePlugin, Library]) {
 			SETTINGS_DM_ICONS: "DM Icons",
 			SETTINGS_DM_ICONS_NOTE: "Shows icons on the DM list when someone is in a voice channel.",
 			SETTINGS_PEOPLE_ICONS: "Friends List Icons",
-			SETTINGS_PEOPLE_ICONS_NOTE: "Shows icons on the Friend list when someone is in a voice channel.",
+			SETTINGS_PEOPLE_ICONS_NOTE: "Shows icons on the friends list when someone is in a voice channel.",
 			SETTINGS_GUILD_ICONS: "Guild Icons",
 			SETTINGS_GUILD_ICONS_NOTE: "Shows voice icons on guilds even when you're not participating.",
 			SETTINGS_COLOR: "Member List - Current Channel Icon Color",
@@ -470,7 +471,7 @@ function buildPlugin([BasePlugin, Library]) {
 					subtext = Strings.PRIVATE_CALL;
 					break;
 				case 3:
-					text = channel.name ?? groupDMName(channel.recipients);
+					text = channel.name || groupDMName(channel.recipients);
 					subtext = Strings.GROUP_CALL;
 					TooltipIcon = People;
 					break;
@@ -643,7 +644,7 @@ function buildPlugin([BasePlugin, Library]) {
 					break;
 				case 3:
 					headerText = Strings.HEADER_GROUP;
-					text = BdApi.React.createElement("h3", null, channel.name ?? groupDMName(channel.recipients));
+					text = BdApi.React.createElement("h3", null, channel.name || groupDMName(channel.recipients));
 					break;
 				case 13:
 					headerText = Strings.HEADER_STAGE;
@@ -707,7 +708,7 @@ function buildPlugin([BasePlugin, Library]) {
 	
 		// components/SettingsPanel.tsx
 		const { getModule: getModule$1 } = betterdiscord.Webpack;
-		const SwitchItem = getModule$1((m) => m.toString().includes("helpdeskArticleId"));
+		const SwitchItem = getModule$1((m) => m.toString?.().includes("().dividerDefault"), { searchExports: true });
 		const SettingsSwitchItem = (props) => {
 			const value = Settings.useSettingsState()[props.setting];
 			return BdApi.React.createElement(SwitchItem, {
@@ -946,6 +947,8 @@ function buildPlugin([BasePlugin, Library]) {
 			async patchChannelContextMenu() {
 				const unpatch = betterdiscord.ContextMenu.patch("channel-context", (ret, props) => {
 					if (!Settings.ignoreEnabled)
+						return ret;
+					if (props.channel.type !== 2 && props.channel.type !== 13)
 						return ret;
 					const { ignoredChannels } = Settings.useSettingsState();
 					const ignored = ignoredChannels.includes(props.channel.id);
