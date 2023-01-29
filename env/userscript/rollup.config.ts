@@ -265,6 +265,21 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://atnd.ak4.jp/attendance'],
   },
+  {
+    id: 'amq-dynamic-background',
+    name: 'AMQ Dynamic Background',
+    version: '0.1.0',
+    description: {
+      en: 'Set the currently playing video surface as the background image.',
+      ja: '現在再生中の動画を背景画像に設定します。',
+    },
+    homepage:
+      'https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E8%83%8C%E6%99%AF%E3%81%AB%E5%8B%95%E7%94%BB%E3%82%92%E6%B5%81%E3%81%99_UserScript',
+    author: 'SlashNephy',
+    match: ['https://animemusicquiz.com'],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: 'unsafeWindow',
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
