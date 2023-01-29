@@ -23,18 +23,18 @@
     "test:share": "RENOVATE_CONFIG_FILE=../../renovate-config.json renovate-config-validator"
   },
   "dependencies": {
-    "@octokit/rest": "19.0.5",
+    "@octokit/rest": "19.0.7",
     "dotenv": "16.0.3",
     "fast-deep-equal": "3.1.3"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.2.38",
-    "@slashnephy/prettier-config": "0.1.5",
+    "@slashnephy/eslint-config": "0.2.42",
+    "@slashnephy/prettier-config": "0.1.9",
     "@types/node": "18.11.18",
     "concurrently": "7.6.0",
-    "eslint": "8.32.0",
+    "eslint": "8.33.0",
     "prettier": "2.8.3",
-    "renovate": "34.108.1",
+    "renovate": "34.116.1",
     "ts-node": "10.9.1",
     "typescript": "4.9.4"
   },
