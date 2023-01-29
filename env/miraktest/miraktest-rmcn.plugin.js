@@ -1,4 +1,4 @@
-/*! miraktest-rmcn.plugin 0.0.3 */
+/*! miraktest-rmcn.plugin 0.1.0 */
 /*!
 @koa/router
 MIT
@@ -23,6 +23,31 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+
+@leichtgewicht/ip-codec
+MIT
+MIT License
+
+Copyright (c) 2021 Martin Heidegger
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 
 @recoiljs/refine
@@ -75,6 +100,58 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+array-flatten
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+bonjour-service
+MIT
+The MIT License (MIT)
+
+Copyright (https://github.com/onlxltd/bonjour-service) (c) 2021 ON LX Limited
+
+Portions Copyright (Bonjour - https://github.com/watson/bonjour) (c) 2015-2016 Thomas Watson Steen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 
 cache-content-type
@@ -370,6 +447,56 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+dns-equal
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2016 Thomas Watson Steen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+dns-packet
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2016 Mathias Buus
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
 ee-first
 MIT
 
@@ -453,6 +580,31 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 eventmit
 MIT
 Copyright (c) 2020 azu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+fast-deep-equal
+MIT
+MIT License
+
+Copyright (c) 2017 Evgeny Poberezkin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -896,6 +1048,31 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+multicast-dns
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2015 Mathias Buus
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
 negotiator
 MIT
 (The MIT License)
@@ -1088,6 +1265,31 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
+thunky
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2018 Mathias Buus
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
 toidentifier
 MIT
 MIT License
@@ -1241,7 +1443,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
-const n={};const __WEBPACK_EXTERNAL_createRequire = () => (s) => require(s);var __webpack_modules__={886:(__unused_webpack_module,exports)=>{eval(`/*! react-loader */
+const e={};const __WEBPACK_EXTERNAL_createRequire = () => (s) => require(s);var __webpack_modules__={886:(__unused_webpack_module,exports)=>{eval(`/*! react-loader */
 /*!
 react
 MIT
@@ -3581,6 +3783,826 @@ function validMime (type) {
 //# sourceURL=[module]
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOTA3OC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zLy4vbm9kZV9tb2R1bGVzL2FjY2VwdHMvaW5kZXguanM/NTM4MyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKiFcbiAqIGFjY2VwdHNcbiAqIENvcHlyaWdodChjKSAyMDE0IEpvbmF0aGFuIE9uZ1xuICogQ29weXJpZ2h0KGMpIDIwMTUgRG91Z2xhcyBDaHJpc3RvcGhlciBXaWxzb25cbiAqIE1JVCBMaWNlbnNlZFxuICovXG5cbid1c2Ugc3RyaWN0J1xuXG4vKipcbiAqIE1vZHVsZSBkZXBlbmRlbmNpZXMuXG4gKiBAcHJpdmF0ZVxuICovXG5cbnZhciBOZWdvdGlhdG9yID0gcmVxdWlyZSgnbmVnb3RpYXRvcicpXG52YXIgbWltZSA9IHJlcXVpcmUoJ21pbWUtdHlwZXMnKVxuXG4vKipcbiAqIE1vZHVsZSBleHBvcnRzLlxuICogQHB1YmxpY1xuICovXG5cbm1vZHVsZS5leHBvcnRzID0gQWNjZXB0c1xuXG4vKipcbiAqIENyZWF0ZSBhIG5ldyBBY2NlcHRzIG9iamVjdCBmb3IgdGhlIGdpdmVuIHJlcS5cbiAqXG4gKiBAcGFyYW0ge29iamVjdH0gcmVxXG4gKiBAcHVibGljXG4gKi9cblxuZnVuY3Rpb24gQWNjZXB0cyAocmVxKSB7XG4gIGlmICghKHRoaXMgaW5zdGFuY2VvZiBBY2NlcHRzKSkge1xuICAgIHJldHVybiBuZXcgQWNjZXB0cyhyZXEpXG4gIH1cblxuICB0aGlzLmhlYWRlcnMgPSByZXEuaGVhZGVyc1xuICB0aGlzLm5lZ290aWF0b3IgPSBuZXcgTmVnb3RpYXRvcihyZXEpXG59XG5cbi8qKlxuICogQ2hlY2sgaWYgdGhlIGdpdmVuIGB0eXBlKHMpYCBpcyBhY2NlcHRhYmxlLCByZXR1cm5pbmdcbiAqIHRoZSBiZXN0IG1hdGNoIHdoZW4gdHJ1ZSwgb3RoZXJ3aXNlIGB1bmRlZmluZWRgLCBpbiB3aGljaFxuICogY2FzZSB5b3Ugc2hvdWxkIHJlc3BvbmQgd2l0aCA0MDYgXCJOb3QgQWNjZXB0YWJsZVwiLlxuICpcbiAqIFRoZSBgdHlwZWAgdmFsdWUgbWF5IGJlIGEgc2luZ2xlIG1pbWUgdHlwZSBzdHJpbmdcbiAqIHN1Y2ggYXMgXCJhcHBsaWNhdGlvbi9qc29uXCIsIHRoZSBleHRlbnNpb24gbmFtZVxuICogc3VjaCBhcyBcImpzb25cIiBvciBhbiBhcnJheSBgW1wianNvblwiLCBcImh0bWxcIiwgXCJ0ZXh0L3BsYWluXCJdYC4gV2hlbiBhIGxpc3RcbiAqIG9yIGFycmF5IGlzIGdpdmVuIHRoZSBfYmVzdF8gbWF0Y2gsIGlmIGFueSBpcyByZXR1cm5lZC5cbiAqXG4gKiBFeGFtcGxlczpcbiAqXG4gKiAgICAgLy8gQWNjZXB0OiB0ZXh0L2h0bWxcbiAqICAgICB0aGlzLnR5cGVzKCdodG1sJyk7XG4gKiAgICAgLy8gPT4gXCJodG1sXCJcbiAqXG4gKiAgICAgLy8gQWNjZXB0OiB0ZXh0LyosIGFwcGxpY2F0aW9uL2pzb25cbiAqICAgICB0aGlzLnR5cGVzKCdodG1sJyk7XG4gKiAgICAgLy8gPT4gXCJodG1sXCJcbiAqICAgICB0aGlzLnR5cGVzKCd0ZXh0L2h0bWwnKTtcbiAqICAgICAvLyA9PiBcInRleHQvaHRtbFwiXG4gKiAgICAgdGhpcy50eXBlcygnanNvbicsICd0ZXh0Jyk7XG4gKiAgICAgLy8gPT4gXCJqc29uXCJcbiAqICAgICB0aGlzLnR5cGVzKCdhcHBsaWNhdGlvbi9qc29uJyk7XG4gKiAgICAgLy8gPT4gXCJhcHBsaWNhdGlvbi9qc29uXCJcbiAqXG4gKiAgICAgLy8gQWNjZXB0OiB0ZXh0LyosIGFwcGxpY2F0aW9uL2pzb25cbiAqICAgICB0aGlzLnR5cGVzKCdpbWFnZS9wbmcnKTtcbiAqICAgICB0aGlzLnR5cGVzKCdwbmcnKTtcbiAqICAgICAvLyA9PiB1bmRlZmluZWRcbiAqXG4gKiAgICAgLy8gQWNjZXB0OiB0ZXh0Lyo7cT0uNSwgYXBwbGljYXRpb24vanNvblxuICogICAgIHRoaXMudHlwZXMoWydodG1sJywgJ2pzb24nXSk7XG4gKiAgICAgdGhpcy50eXBlcygnaHRtbCcsICdqc29uJyk7XG4gKiAgICAgLy8gPT4gXCJqc29uXCJcbiAqXG4gKiBAcGFyYW0ge1N0cmluZ3xBcnJheX0gdHlwZXMuLi5cbiAqIEByZXR1cm4ge1N0cmluZ3xBcnJheXxCb29sZWFufVxuICogQHB1YmxpY1xuICovXG5cbkFjY2VwdHMucHJvdG90eXBlLnR5cGUgPVxuQWNjZXB0cy5wcm90b3R5cGUudHlwZXMgPSBmdW5jdGlvbiAodHlwZXNfKSB7XG4gIHZhciB0eXBlcyA9IHR5cGVzX1xuXG4gIC8vIHN1cHBvcnQgZmxhdHRlbmVkIGFyZ3VtZW50c1xuICBpZiAodHlwZXMgJiYgIUFycmF5LmlzQXJyYXkodHlwZXMpKSB7XG4gICAgdHlwZXMgPSBuZXcgQXJyYXkoYXJndW1lbnRzLmxlbmd0aClcbiAgICBmb3IgKHZhciBpID0gMDsgaSA8IHR5cGVzLmxlbmd0aDsgaSsrKSB7XG4gICAgICB0eXBlc1tpXSA9IGFyZ3VtZW50c1tpXVxuICAgIH1cbiAgfVxuXG4gIC8vIG5vIHR5cGVzLCByZXR1cm4gYWxsIHJlcXVlc3RlZCB0eXBlc1xuICBpZiAoIXR5cGVzIHx8IHR5cGVzLmxlbmd0aCA9PT0gMCkge1xuICAgIHJldHVybiB0aGlzLm5lZ290aWF0b3IubWVkaWFUeXBlcygpXG4gIH1cblxuICAvLyBubyBhY2NlcHQgaGVhZGVyLCByZXR1cm4gZmlyc3QgZ2l2ZW4gdHlwZVxuICBpZiAoIXRoaXMuaGVhZGVycy5hY2NlcHQpIHtcbiAgICByZXR1cm4gdHlwZXNbMF1cbiAgfVxuXG4gIHZhciBtaW1lcyA9IHR5cGVzLm1hcChleHRUb01pbWUpXG4gIHZhciBhY2NlcHRzID0gdGhpcy5uZWdvdGlhdG9yLm1lZGlhVHlwZXMobWltZXMuZmlsdGVyKHZhbGlkTWltZSkpXG4gIHZhciBmaXJzdCA9IGFjY2VwdHNbMF1cblxuICByZXR1cm4gZmlyc3RcbiAgICA/IHR5cGVzW21pbWVzLmluZGV4T2YoZmlyc3QpXVxuICAgIDogZmFsc2Vcbn1cblxuLyoqXG4gKiBSZXR1cm4gYWNjZXB0ZWQgZW5jb2RpbmdzIG9yIGJlc3QgZml0IGJhc2VkIG9uIGBlbmNvZGluZ3NgLlxuICpcbiAqIEdpdmVuIGBBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGVgXG4gKiBhbiBhcnJheSBzb3J0ZWQgYnkgcXVhbGl0eSBpcyByZXR1cm5lZDpcbiAqXG4gKiAgICAgWydnemlwJywgJ2RlZmxhdGUnXVxuICpcbiAqIEBwYXJhbSB7U3RyaW5nfEFycmF5fSBlbmNvZGluZ3MuLi5cbiAqIEByZXR1cm4ge1N0cmluZ3xBcnJheX1cbiAqIEBwdWJsaWNcbiAqL1xuXG5BY2NlcHRzLnByb3RvdHlwZS5lbmNvZGluZyA9XG5BY2NlcHRzLnByb3RvdHlwZS5lbmNvZGluZ3MgPSBmdW5jdGlvbiAoZW5jb2RpbmdzXykge1xuICB2YXIgZW5jb2RpbmdzID0gZW5jb2RpbmdzX1xuXG4gIC8vIHN1cHBvcnQgZmxhdHRlbmVkIGFyZ3VtZW50c1xuICBpZiAoZW5jb2RpbmdzICYmICFBcnJheS5pc0FycmF5KGVuY29kaW5ncykpIHtcbiAgICBlbmNvZGluZ3MgPSBuZXcgQXJyYXkoYXJndW1lbnRzLmxlbmd0aClcbiAgICBmb3IgKHZhciBpID0gMDsgaSA8IGVuY29kaW5ncy5sZW5ndGg7IGkrKykge1xuICAgICAgZW5jb2RpbmdzW2ldID0gYXJndW1lbnRzW2ldXG4gICAgfVxuICB9XG5cbiAgLy8gbm8gZW5jb2RpbmdzLCByZXR1cm4gYWxsIHJlcXVlc3RlZCBlbmNvZGluZ3NcbiAgaWYgKCFlbmNvZGluZ3MgfHwgZW5jb2RpbmdzLmxlbmd0aCA9PT0gMCkge1xuICAgIHJldHVybiB0aGlzLm5lZ290aWF0b3IuZW5jb2RpbmdzKClcbiAgfVxuXG4gIHJldHVybiB0aGlzLm5lZ290aWF0b3IuZW5jb2RpbmdzKGVuY29kaW5ncylbMF0gfHwgZmFsc2Vcbn1cblxuLyoqXG4gKiBSZXR1cm4gYWNjZXB0ZWQgY2hhcnNldHMgb3IgYmVzdCBmaXQgYmFzZWQgb24gYGNoYXJzZXRzYC5cbiAqXG4gKiBHaXZlbiBgQWNjZXB0LUNoYXJzZXQ6IHV0Zi04LCBpc28tODg1OS0xO3E9MC4yLCB1dGYtNztxPTAuNWBcbiAqIGFuIGFycmF5IHNvcnRlZCBieSBxdWFsaXR5IGlzIHJldHVybmVkOlxuICpcbiAqICAgICBbJ3V0Zi04JywgJ3V0Zi03JywgJ2lzby04ODU5LTEnXVxuICpcbiAqIEBwYXJhbSB7U3RyaW5nfEFycmF5fSBjaGFyc2V0cy4uLlxuICogQHJldHVybiB7U3RyaW5nfEFycmF5fVxuICogQHB1YmxpY1xuICovXG5cbkFjY2VwdHMucHJvdG90eXBlLmNoYXJzZXQgPVxuQWNjZXB0cy5wcm90b3R5cGUuY2hhcnNldHMgPSBmdW5jdGlvbiAoY2hhcnNldHNfKSB7XG4gIHZhciBjaGFyc2V0cyA9IGNoYXJzZXRzX1xuXG4gIC8vIHN1cHBvcnQgZmxhdHRlbmVkIGFyZ3VtZW50c1xuICBpZiAoY2hhcnNldHMgJiYgIUFycmF5LmlzQXJyYXkoY2hhcnNldHMpKSB7XG4gICAgY2hhcnNldHMgPSBuZXcgQXJyYXkoYXJndW1lbnRzLmxlbmd0aClcbiAgICBmb3IgKHZhciBpID0gMDsgaSA8IGNoYXJzZXRzLmxlbmd0aDsgaSsrKSB7XG4gICAgICBjaGFyc2V0c1tpXSA9IGFyZ3VtZW50c1tpXVxuICAgIH1cbiAgfVxuXG4gIC8vIG5vIGNoYXJzZXRzLCByZXR1cm4gYWxsIHJlcXVlc3RlZCBjaGFyc2V0c1xuICBpZiAoIWNoYXJzZXRzIHx8IGNoYXJzZXRzLmxlbmd0aCA9PT0gMCkge1xuICAgIHJldHVybiB0aGlzLm5lZ290aWF0b3IuY2hhcnNldHMoKVxuICB9XG5cbiAgcmV0dXJuIHRoaXMubmVnb3RpYXRvci5jaGFyc2V0cyhjaGFyc2V0cylbMF0gfHwgZmFsc2Vcbn1cblxuLyoqXG4gKiBSZXR1cm4gYWNjZXB0ZWQgbGFuZ3VhZ2VzIG9yIGJlc3QgZml0IGJhc2VkIG9uIGBsYW5nc2AuXG4gKlxuICogR2l2ZW4gYEFjY2VwdC1MYW5ndWFnZTogZW47cT0wLjgsIGVzLCBwdGBcbiAqIGFuIGFycmF5IHNvcnRlZCBieSBxdWFsaXR5IGlzIHJldHVybmVkOlxuICpcbiAqICAgICBbJ2VzJywgJ3B0JywgJ2VuJ11cbiAqXG4gKiBAcGFyYW0ge1N0cmluZ3xBcnJheX0gbGFuZ3MuLi5cbiAqIEByZXR1cm4ge0FycmF5fFN0cmluZ31cbiAqIEBwdWJsaWNcbiAqL1xuXG5BY2NlcHRzLnByb3RvdHlwZS5sYW5nID1cbkFjY2VwdHMucHJvdG90eXBlLmxhbmdzID1cbkFjY2VwdHMucHJvdG90eXBlLmxhbmd1YWdlID1cbkFjY2VwdHMucHJvdG90eXBlLmxhbmd1YWdlcyA9IGZ1bmN0aW9uIChsYW5ndWFnZXNfKSB7XG4gIHZhciBsYW5ndWFnZXMgPSBsYW5ndWFnZXNfXG5cbiAgLy8gc3VwcG9ydCBmbGF0dGVuZWQgYXJndW1lbnRzXG4gIGlmIChsYW5ndWFnZXMgJiYgIUFycmF5LmlzQXJyYXkobGFuZ3VhZ2VzKSkge1xuICAgIGxhbmd1YWdlcyA9IG5ldyBBcnJheShhcmd1bWVudHMubGVuZ3RoKVxuICAgIGZvciAodmFyIGkgPSAwOyBpIDwgbGFuZ3VhZ2VzLmxlbmd0aDsgaSsrKSB7XG4gICAgICBsYW5ndWFnZXNbaV0gPSBhcmd1bWVudHNbaV1cbiAgICB9XG4gIH1cblxuICAvLyBubyBsYW5ndWFnZXMsIHJldHVybiBhbGwgcmVxdWVzdGVkIGxhbmd1YWdlc1xuICBpZiAoIWxhbmd1YWdlcyB8fCBsYW5ndWFnZXMubGVuZ3RoID09PSAwKSB7XG4gICAgcmV0dXJuIHRoaXMubmVnb3RpYXRvci5sYW5ndWFnZXMoKVxuICB9XG5cbiAgcmV0dXJuIHRoaXMubmVnb3RpYXRvci5sYW5ndWFnZXMobGFuZ3VhZ2VzKVswXSB8fCBmYWxzZVxufVxuXG4vKipcbiAqIENvbnZlcnQgZXh0bmFtZXMgdG8gbWltZS5cbiAqXG4gKiBAcGFyYW0ge1N0cmluZ30gdHlwZVxuICogQHJldHVybiB7U3RyaW5nfVxuICogQHByaXZhdGVcbiAqL1xuXG5mdW5jdGlvbiBleHRUb01pbWUgKHR5cGUpIHtcbiAgcmV0dXJuIHR5cGUuaW5kZXhPZignLycpID09PSAtMVxuICAgID8gbWltZS5sb29rdXAodHlwZSlcbiAgICA6IHR5cGVcbn1cblxuLyoqXG4gKiBDaGVjayBpZiBtaW1lIGlzIHZhbGlkLlxuICpcbiAqIEBwYXJhbSB7U3RyaW5nfSB0eXBlXG4gKiBAcmV0dXJuIHtTdHJpbmd9XG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIHZhbGlkTWltZSAodHlwZSkge1xuICByZXR1cm4gdHlwZW9mIHR5cGUgPT09ICdzdHJpbmcnXG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
 //# sourceURL=webpack-internal:///9078
+`)},2521:module=>{eval(`
+
+/**
+ * Expose \`arrayFlatten\`.
+ */
+module.exports = flatten
+module.exports.from = flattenFrom
+module.exports.depth = flattenDepth
+module.exports.fromDepth = flattenFromDepth
+
+/**
+ * Flatten an array.
+ *
+ * @param  {Array} array
+ * @return {Array}
+ */
+function flatten (array) {
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected value to be an array')
+  }
+
+  return flattenFrom(array)
+}
+
+/**
+ * Flatten an array-like structure.
+ *
+ * @param  {Array} array
+ * @return {Array}
+ */
+function flattenFrom (array) {
+  return flattenDown(array, [])
+}
+
+/**
+ * Flatten an array-like structure with depth.
+ *
+ * @param  {Array}  array
+ * @param  {number} depth
+ * @return {Array}
+ */
+function flattenDepth (array, depth) {
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected value to be an array')
+  }
+
+  return flattenFromDepth(array, depth)
+}
+
+/**
+ * Flatten an array-like structure with depth.
+ *
+ * @param  {Array}  array
+ * @param  {number} depth
+ * @return {Array}
+ */
+function flattenFromDepth (array, depth) {
+  if (typeof depth !== 'number') {
+    throw new TypeError('Expected the depth to be a number')
+  }
+
+  return flattenDownDepth(array, [], depth)
+}
+
+/**
+ * Flatten an array indefinitely.
+ *
+ * @param  {Array} array
+ * @param  {Array} result
+ * @return {Array}
+ */
+function flattenDown (array, result) {
+  for (var i = 0; i < array.length; i++) {
+    var value = array[i]
+
+    if (Array.isArray(value)) {
+      flattenDown(value, result)
+    } else {
+      result.push(value)
+    }
+  }
+
+  return result
+}
+
+/**
+ * Flatten an array with depth.
+ *
+ * @param  {Array}  array
+ * @param  {Array}  result
+ * @param  {number} depth
+ * @return {Array}
+ */
+function flattenDownDepth (array, result, depth) {
+  depth--
+
+  for (var i = 0; i < array.length; i++) {
+    var value = array[i]
+
+    if (depth > -1 && Array.isArray(value)) {
+      flattenDownDepth(value, result, depth)
+    } else {
+      result.push(value)
+    }
+  }
+
+  return result
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjUyMS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9hcnJheS1mbGF0dGVuL2FycmF5LWZsYXR0ZW4uanM/MDZlOSJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCdcblxuLyoqXG4gKiBFeHBvc2UgYGFycmF5RmxhdHRlbmAuXG4gKi9cbm1vZHVsZS5leHBvcnRzID0gZmxhdHRlblxubW9kdWxlLmV4cG9ydHMuZnJvbSA9IGZsYXR0ZW5Gcm9tXG5tb2R1bGUuZXhwb3J0cy5kZXB0aCA9IGZsYXR0ZW5EZXB0aFxubW9kdWxlLmV4cG9ydHMuZnJvbURlcHRoID0gZmxhdHRlbkZyb21EZXB0aFxuXG4vKipcbiAqIEZsYXR0ZW4gYW4gYXJyYXkuXG4gKlxuICogQHBhcmFtICB7QXJyYXl9IGFycmF5XG4gKiBAcmV0dXJuIHtBcnJheX1cbiAqL1xuZnVuY3Rpb24gZmxhdHRlbiAoYXJyYXkpIHtcbiAgaWYgKCFBcnJheS5pc0FycmF5KGFycmF5KSkge1xuICAgIHRocm93IG5ldyBUeXBlRXJyb3IoJ0V4cGVjdGVkIHZhbHVlIHRvIGJlIGFuIGFycmF5JylcbiAgfVxuXG4gIHJldHVybiBmbGF0dGVuRnJvbShhcnJheSlcbn1cblxuLyoqXG4gKiBGbGF0dGVuIGFuIGFycmF5LWxpa2Ugc3RydWN0dXJlLlxuICpcbiAqIEBwYXJhbSAge0FycmF5fSBhcnJheVxuICogQHJldHVybiB7QXJyYXl9XG4gKi9cbmZ1bmN0aW9uIGZsYXR0ZW5Gcm9tIChhcnJheSkge1xuICByZXR1cm4gZmxhdHRlbkRvd24oYXJyYXksIFtdKVxufVxuXG4vKipcbiAqIEZsYXR0ZW4gYW4gYXJyYXktbGlrZSBzdHJ1Y3R1cmUgd2l0aCBkZXB0aC5cbiAqXG4gKiBAcGFyYW0gIHtBcnJheX0gIGFycmF5XG4gKiBAcGFyYW0gIHtudW1iZXJ9IGRlcHRoXG4gKiBAcmV0dXJuIHtBcnJheX1cbiAqL1xuZnVuY3Rpb24gZmxhdHRlbkRlcHRoIChhcnJheSwgZGVwdGgpIHtcbiAgaWYgKCFBcnJheS5pc0FycmF5KGFycmF5KSkge1xuICAgIHRocm93IG5ldyBUeXBlRXJyb3IoJ0V4cGVjdGVkIHZhbHVlIHRvIGJlIGFuIGFycmF5JylcbiAgfVxuXG4gIHJldHVybiBmbGF0dGVuRnJvbURlcHRoKGFycmF5LCBkZXB0aClcbn1cblxuLyoqXG4gKiBGbGF0dGVuIGFuIGFycmF5LWxpa2Ugc3RydWN0dXJlIHdpdGggZGVwdGguXG4gKlxuICogQHBhcmFtICB7QXJyYXl9ICBhcnJheVxuICogQHBhcmFtICB7bnVtYmVyfSBkZXB0aFxuICogQHJldHVybiB7QXJyYXl9XG4gKi9cbmZ1bmN0aW9uIGZsYXR0ZW5Gcm9tRGVwdGggKGFycmF5LCBkZXB0aCkge1xuICBpZiAodHlwZW9mIGRlcHRoICE9PSAnbnVtYmVyJykge1xuICAgIHRocm93IG5ldyBUeXBlRXJyb3IoJ0V4cGVjdGVkIHRoZSBkZXB0aCB0byBiZSBhIG51bWJlcicpXG4gIH1cblxuICByZXR1cm4gZmxhdHRlbkRvd25EZXB0aChhcnJheSwgW10sIGRlcHRoKVxufVxuXG4vKipcbiAqIEZsYXR0ZW4gYW4gYXJyYXkgaW5kZWZpbml0ZWx5LlxuICpcbiAqIEBwYXJhbSAge0FycmF5fSBhcnJheVxuICogQHBhcmFtICB7QXJyYXl9IHJlc3VsdFxuICogQHJldHVybiB7QXJyYXl9XG4gKi9cbmZ1bmN0aW9uIGZsYXR0ZW5Eb3duIChhcnJheSwgcmVzdWx0KSB7XG4gIGZvciAodmFyIGkgPSAwOyBpIDwgYXJyYXkubGVuZ3RoOyBpKyspIHtcbiAgICB2YXIgdmFsdWUgPSBhcnJheVtpXVxuXG4gICAgaWYgKEFycmF5LmlzQXJyYXkodmFsdWUpKSB7XG4gICAgICBmbGF0dGVuRG93bih2YWx1ZSwgcmVzdWx0KVxuICAgIH0gZWxzZSB7XG4gICAgICByZXN1bHQucHVzaCh2YWx1ZSlcbiAgICB9XG4gIH1cblxuICByZXR1cm4gcmVzdWx0XG59XG5cbi8qKlxuICogRmxhdHRlbiBhbiBhcnJheSB3aXRoIGRlcHRoLlxuICpcbiAqIEBwYXJhbSAge0FycmF5fSAgYXJyYXlcbiAqIEBwYXJhbSAge0FycmF5fSAgcmVzdWx0XG4gKiBAcGFyYW0gIHtudW1iZXJ9IGRlcHRoXG4gKiBAcmV0dXJuIHtBcnJheX1cbiAqL1xuZnVuY3Rpb24gZmxhdHRlbkRvd25EZXB0aCAoYXJyYXksIHJlc3VsdCwgZGVwdGgpIHtcbiAgZGVwdGgtLVxuXG4gIGZvciAodmFyIGkgPSAwOyBpIDwgYXJyYXkubGVuZ3RoOyBpKyspIHtcbiAgICB2YXIgdmFsdWUgPSBhcnJheVtpXVxuXG4gICAgaWYgKGRlcHRoID4gLTEgJiYgQXJyYXkuaXNBcnJheSh2YWx1ZSkpIHtcbiAgICAgIGZsYXR0ZW5Eb3duRGVwdGgodmFsdWUsIHJlc3VsdCwgZGVwdGgpXG4gICAgfSBlbHNlIHtcbiAgICAgIHJlc3VsdC5wdXNoKHZhbHVlKVxuICAgIH1cbiAgfVxuXG4gIHJldHVybiByZXN1bHRcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///2521
+`)},5768:function(__unused_webpack_module,exports,__webpack_require__){eval(`
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Browser = exports.Service = exports.Bonjour = void 0;
+const registry_1 = __importDefault(__webpack_require__(1198));
+const mdns_server_1 = __importDefault(__webpack_require__(4022));
+const browser_1 = __importDefault(__webpack_require__(8040));
+exports.Browser = browser_1.default;
+const service_1 = __importDefault(__webpack_require__(3588));
+exports.Service = service_1.default;
+class Bonjour {
+    constructor(opts, errorCallback) {
+        this.server = new mdns_server_1.default(opts, errorCallback);
+        this.registry = new registry_1.default(this.server);
+    }
+    publish(opts) {
+        return this.registry.publish(opts);
+    }
+    unpublishAll(callback) {
+        return this.registry.unpublishAll(callback);
+    }
+    find(opts = undefined, onup) {
+        return new browser_1.default(this.server.mdns, opts, onup);
+    }
+    findOne(opts = undefined, timeout = 10000, callback) {
+        const browser = new browser_1.default(this.server.mdns, opts);
+        var timer;
+        browser.once('up', (service) => {
+            if (timer !== undefined)
+                clearTimeout(timer);
+            browser.stop();
+            if (callback)
+                callback(service);
+        });
+        timer = setTimeout(() => {
+            browser.stop();
+            if (callback)
+                callback(null);
+        }, timeout);
+        return browser;
+    }
+    destroy() {
+        this.registry.destroy();
+        this.server.mdns.destroy();
+    }
+}
+exports.Bonjour = Bonjour;
+exports["default"] = Bonjour;
+//# sourceMappingURL=index.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNTc2OC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9ib25qb3VyLXNlcnZpY2UvZGlzdC9pbmRleC5qcz85Zjg5Il0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xudmFyIF9faW1wb3J0RGVmYXVsdCA9ICh0aGlzICYmIHRoaXMuX19pbXBvcnREZWZhdWx0KSB8fCBmdW5jdGlvbiAobW9kKSB7XG4gICAgcmV0dXJuIChtb2QgJiYgbW9kLl9fZXNNb2R1bGUpID8gbW9kIDogeyBcImRlZmF1bHRcIjogbW9kIH07XG59O1xuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7IHZhbHVlOiB0cnVlIH0pO1xuZXhwb3J0cy5Ccm93c2VyID0gZXhwb3J0cy5TZXJ2aWNlID0gZXhwb3J0cy5Cb25qb3VyID0gdm9pZCAwO1xuY29uc3QgcmVnaXN0cnlfMSA9IF9faW1wb3J0RGVmYXVsdChyZXF1aXJlKFwiLi9saWIvcmVnaXN0cnlcIikpO1xuY29uc3QgbWRuc19zZXJ2ZXJfMSA9IF9faW1wb3J0RGVmYXVsdChyZXF1aXJlKFwiLi9saWIvbWRucy1zZXJ2ZXJcIikpO1xuY29uc3QgYnJvd3Nlcl8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCIuL2xpYi9icm93c2VyXCIpKTtcbmV4cG9ydHMuQnJvd3NlciA9IGJyb3dzZXJfMS5kZWZhdWx0O1xuY29uc3Qgc2VydmljZV8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCIuL2xpYi9zZXJ2aWNlXCIpKTtcbmV4cG9ydHMuU2VydmljZSA9IHNlcnZpY2VfMS5kZWZhdWx0O1xuY2xhc3MgQm9uam91ciB7XG4gICAgY29uc3RydWN0b3Iob3B0cywgZXJyb3JDYWxsYmFjaykge1xuICAgICAgICB0aGlzLnNlcnZlciA9IG5ldyBtZG5zX3NlcnZlcl8xLmRlZmF1bHQob3B0cywgZXJyb3JDYWxsYmFjayk7XG4gICAgICAgIHRoaXMucmVnaXN0cnkgPSBuZXcgcmVnaXN0cnlfMS5kZWZhdWx0KHRoaXMuc2VydmVyKTtcbiAgICB9XG4gICAgcHVibGlzaChvcHRzKSB7XG4gICAgICAgIHJldHVybiB0aGlzLnJlZ2lzdHJ5LnB1Ymxpc2gob3B0cyk7XG4gICAgfVxuICAgIHVucHVibGlzaEFsbChjYWxsYmFjaykge1xuICAgICAgICByZXR1cm4gdGhpcy5yZWdpc3RyeS51bnB1Ymxpc2hBbGwoY2FsbGJhY2spO1xuICAgIH1cbiAgICBmaW5kKG9wdHMgPSB1bmRlZmluZWQsIG9udXApIHtcbiAgICAgICAgcmV0dXJuIG5ldyBicm93c2VyXzEuZGVmYXVsdCh0aGlzLnNlcnZlci5tZG5zLCBvcHRzLCBvbnVwKTtcbiAgICB9XG4gICAgZmluZE9uZShvcHRzID0gdW5kZWZpbmVkLCB0aW1lb3V0ID0gMTAwMDAsIGNhbGxiYWNrKSB7XG4gICAgICAgIGNvbnN0IGJyb3dzZXIgPSBuZXcgYnJvd3Nlcl8xLmRlZmF1bHQodGhpcy5zZXJ2ZXIubWRucywgb3B0cyk7XG4gICAgICAgIHZhciB0aW1lcjtcbiAgICAgICAgYnJvd3Nlci5vbmNlKCd1cCcsIChzZXJ2aWNlKSA9PiB7XG4gICAgICAgICAgICBpZiAodGltZXIgIT09IHVuZGVmaW5lZClcbiAgICAgICAgICAgICAgICBjbGVhclRpbWVvdXQodGltZXIpO1xuICAgICAgICAgICAgYnJvd3Nlci5zdG9wKCk7XG4gICAgICAgICAgICBpZiAoY2FsbGJhY2spXG4gICAgICAgICAgICAgICAgY2FsbGJhY2soc2VydmljZSk7XG4gICAgICAgIH0pO1xuICAgICAgICB0aW1lciA9IHNldFRpbWVvdXQoKCkgPT4ge1xuICAgICAgICAgICAgYnJvd3Nlci5zdG9wKCk7XG4gICAgICAgICAgICBpZiAoY2FsbGJhY2spXG4gICAgICAgICAgICAgICAgY2FsbGJhY2sobnVsbCk7XG4gICAgICAgIH0sIHRpbWVvdXQpO1xuICAgICAgICByZXR1cm4gYnJvd3NlcjtcbiAgICB9XG4gICAgZGVzdHJveSgpIHtcbiAgICAgICAgdGhpcy5yZWdpc3RyeS5kZXN0cm95KCk7XG4gICAgICAgIHRoaXMuc2VydmVyLm1kbnMuZGVzdHJveSgpO1xuICAgIH1cbn1cbmV4cG9ydHMuQm9uam91ciA9IEJvbmpvdXI7XG5leHBvcnRzLmRlZmF1bHQgPSBCb25qb3VyO1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9aW5kZXguanMubWFwIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///5768
+`)},8040:function(__unused_webpack_module,exports,__webpack_require__){eval(`
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Browser = void 0;
+const dns_txt_1 = __importDefault(__webpack_require__(7978));
+const dns_equal_1 = __importDefault(__webpack_require__(2051));
+const events_1 = __webpack_require__(2361);
+const service_types_1 = __webpack_require__(2765);
+const filter_service_1 = __importDefault(__webpack_require__(3267));
+const filter_txt_1 = __importDefault(__webpack_require__(3246));
+const TLD = '.local';
+const WILDCARD = '_services._dns-sd._udp' + TLD;
+class Browser extends events_1.EventEmitter {
+    constructor(mdns, opts, onup) {
+        super();
+        this.onresponse = null;
+        this.serviceMap = {};
+        this.wildcard = false;
+        this._services = [];
+        if (typeof opts === 'function')
+            return new Browser(mdns, null, opts);
+        this.mdns = mdns;
+        if (opts != null && opts.txt != null) {
+            this.txt = new dns_txt_1.default(opts.txt);
+        }
+        else {
+            this.txt = new dns_txt_1.default();
+        }
+        if (!opts || !opts.type) {
+            this.name = WILDCARD;
+            this.wildcard = true;
+        }
+        else {
+            this.name = (0, service_types_1.toString)({ name: opts.type, protocol: opts.protocol || 'tcp' }) + TLD;
+            if (opts.name)
+                this.name = opts.name + '.' + this.name;
+            this.wildcard = false;
+        }
+        if (opts != null && opts.txt !== undefined)
+            this.txtQuery = (0, filter_txt_1.default)(opts.txt);
+        if (onup)
+            this.on('up', onup);
+        this.start();
+    }
+    start() {
+        if (this.onresponse || this.name === undefined)
+            return;
+        var self = this;
+        var nameMap = {};
+        if (!this.wildcard)
+            nameMap[this.name] = true;
+        this.onresponse = (packet, rinfo) => {
+            if (self.wildcard) {
+                packet.answers.forEach((answer) => {
+                    if (answer.type !== 'PTR' || answer.name !== self.name || answer.name in nameMap)
+                        return;
+                    nameMap[answer.data] = true;
+                    self.mdns.query(answer.data, 'PTR');
+                });
+            }
+            Object.keys(nameMap).forEach(function (name) {
+                self.goodbyes(name, packet).forEach(self.removeService.bind(self));
+                var matches = self.buildServicesFor(name, packet, self.txt, rinfo);
+                if (matches.length === 0)
+                    return;
+                matches.forEach((service) => {
+                    if (self.serviceMap[service.fqdn])
+                        return;
+                    self.addService(service);
+                });
+            });
+        };
+        this.mdns.on('response', this.onresponse);
+        this.update();
+    }
+    stop() {
+        if (!this.onresponse)
+            return;
+        this.mdns.removeListener('response', this.onresponse);
+        this.onresponse = null;
+    }
+    update() {
+        this.mdns.query(this.name, 'PTR');
+    }
+    get services() {
+        return this._services;
+    }
+    addService(service) {
+        if ((0, filter_service_1.default)(service, this.txtQuery) === false)
+            return;
+        this._services.push(service);
+        this.serviceMap[service.fqdn] = true;
+        this.emit('up', service);
+    }
+    removeService(fqdn) {
+        var service, index;
+        this._services.some(function (s, i) {
+            if ((0, dns_equal_1.default)(s.fqdn, fqdn)) {
+                service = s;
+                index = i;
+                return true;
+            }
+        });
+        if (!service || index === undefined)
+            return;
+        this._services.splice(index, 1);
+        delete this.serviceMap[fqdn];
+        this.emit('down', service);
+    }
+    goodbyes(name, packet) {
+        return packet.answers.concat(packet.additionals)
+            .filter((rr) => rr.type === 'PTR' && rr.ttl === 0 && (0, dns_equal_1.default)(rr.name, name))
+            .map((rr) => rr.data);
+    }
+    buildServicesFor(name, packet, txt, referer) {
+        var records = packet.answers.concat(packet.additionals).filter((rr) => rr.ttl > 0);
+        return records
+            .filter((rr) => rr.type === 'PTR' && (0, dns_equal_1.default)(rr.name, name))
+            .map((ptr) => {
+            const service = {
+                addresses: []
+            };
+            records
+                .filter((rr) => {
+                return (rr.type === 'SRV' || rr.type === 'TXT') && (0, dns_equal_1.default)(rr.name, ptr.data);
+            })
+                .forEach((rr) => {
+                if (rr.type === 'SRV') {
+                    var parts = rr.name.split('.');
+                    var name = parts[0];
+                    var types = (0, service_types_1.toType)(parts.slice(1, -1).join('.'));
+                    service.name = name;
+                    service.fqdn = rr.name;
+                    service.host = rr.data.target;
+                    service.referer = referer;
+                    service.port = rr.data.port;
+                    service.type = types.name;
+                    service.protocol = types.protocol;
+                    service.subtypes = types.subtypes;
+                }
+                else if (rr.type === 'TXT') {
+                    service.rawTxt = rr.data;
+                    service.txt = this.txt.decodeAll(rr.data);
+                }
+            });
+            if (!service.name)
+                return;
+            records
+                .filter((rr) => (rr.type === 'A' || rr.type === 'AAAA') && (0, dns_equal_1.default)(rr.name, service.host))
+                .forEach((rr) => service.addresses.push(rr.data));
+            return service;
+        })
+            .filter((rr) => !!rr);
+    }
+}
+exports.Browser = Browser;
+exports["default"] = Browser;
+//# sourceMappingURL=browser.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiODA0MC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zLy4vbm9kZV9tb2R1bGVzL2JvbmpvdXItc2VydmljZS9kaXN0L2xpYi9icm93c2VyLmpzPzQ2M2YiXSwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG52YXIgX19pbXBvcnREZWZhdWx0ID0gKHRoaXMgJiYgdGhpcy5fX2ltcG9ydERlZmF1bHQpIHx8IGZ1bmN0aW9uIChtb2QpIHtcbiAgICByZXR1cm4gKG1vZCAmJiBtb2QuX19lc01vZHVsZSkgPyBtb2QgOiB7IFwiZGVmYXVsdFwiOiBtb2QgfTtcbn07XG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XG5leHBvcnRzLkJyb3dzZXIgPSB2b2lkIDA7XG5jb25zdCBkbnNfdHh0XzEgPSBfX2ltcG9ydERlZmF1bHQocmVxdWlyZShcIi4vZG5zLXR4dFwiKSk7XG5jb25zdCBkbnNfZXF1YWxfMSA9IF9faW1wb3J0RGVmYXVsdChyZXF1aXJlKFwiZG5zLWVxdWFsXCIpKTtcbmNvbnN0IGV2ZW50c18xID0gcmVxdWlyZShcImV2ZW50c1wiKTtcbmNvbnN0IHNlcnZpY2VfdHlwZXNfMSA9IHJlcXVpcmUoXCIuL3NlcnZpY2UtdHlwZXNcIik7XG5jb25zdCBmaWx0ZXJfc2VydmljZV8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCIuL3V0aWxzL2ZpbHRlci1zZXJ2aWNlXCIpKTtcbmNvbnN0IGZpbHRlcl90eHRfMSA9IF9faW1wb3J0RGVmYXVsdChyZXF1aXJlKFwiLi91dGlscy9maWx0ZXItdHh0XCIpKTtcbmNvbnN0IFRMRCA9ICcubG9jYWwnO1xuY29uc3QgV0lMRENBUkQgPSAnX3NlcnZpY2VzLl9kbnMtc2QuX3VkcCcgKyBUTEQ7XG5jbGFzcyBCcm93c2VyIGV4dGVuZHMgZXZlbnRzXzEuRXZlbnRFbWl0dGVyIHtcbiAgICBjb25zdHJ1Y3RvcihtZG5zLCBvcHRzLCBvbnVwKSB7XG4gICAgICAgIHN1cGVyKCk7XG4gICAgICAgIHRoaXMub25yZXNwb25zZSA9IG51bGw7XG4gICAgICAgIHRoaXMuc2VydmljZU1hcCA9IHt9O1xuICAgICAgICB0aGlzLndpbGRjYXJkID0gZmFsc2U7XG4gICAgICAgIHRoaXMuX3NlcnZpY2VzID0gW107XG4gICAgICAgIGlmICh0eXBlb2Ygb3B0cyA9PT0gJ2Z1bmN0aW9uJylcbiAgICAgICAgICAgIHJldHVybiBuZXcgQnJvd3NlcihtZG5zLCBudWxsLCBvcHRzKTtcbiAgICAgICAgdGhpcy5tZG5zID0gbWRucztcbiAgICAgICAgaWYgKG9wdHMgIT0gbnVsbCAmJiBvcHRzLnR4dCAhPSBudWxsKSB7XG4gICAgICAgICAgICB0aGlzLnR4dCA9IG5ldyBkbnNfdHh0XzEuZGVmYXVsdChvcHRzLnR4dCk7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSB7XG4gICAgICAgICAgICB0aGlzLnR4dCA9IG5ldyBkbnNfdHh0XzEuZGVmYXVsdCgpO1xuICAgICAgICB9XG4gICAgICAgIGlmICghb3B0cyB8fCAhb3B0cy50eXBlKSB7XG4gICAgICAgICAgICB0aGlzLm5hbWUgPSBXSUxEQ0FSRDtcbiAgICAgICAgICAgIHRoaXMud2lsZGNhcmQgPSB0cnVlO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgdGhpcy5uYW1lID0gKDAsIHNlcnZpY2VfdHlwZXNfMS50b1N0cmluZykoeyBuYW1lOiBvcHRzLnR5cGUsIHByb3RvY29sOiBvcHRzLnByb3RvY29sIHx8ICd0Y3AnIH0pICsgVExEO1xuICAgICAgICAgICAgaWYgKG9wdHMubmFtZSlcbiAgICAgICAgICAgICAgICB0aGlzLm5hbWUgPSBvcHRzLm5hbWUgKyAnLicgKyB0aGlzLm5hbWU7XG4gICAgICAgICAgICB0aGlzLndpbGRjYXJkID0gZmFsc2U7XG4gICAgICAgIH1cbiAgICAgICAgaWYgKG9wdHMgIT0gbnVsbCAmJiBvcHRzLnR4dCAhPT0gdW5kZWZpbmVkKVxuICAgICAgICAgICAgdGhpcy50eHRRdWVyeSA9ICgwLCBmaWx0ZXJfdHh0XzEuZGVmYXVsdCkob3B0cy50eHQpO1xuICAgICAgICBpZiAob251cClcbiAgICAgICAgICAgIHRoaXMub24oJ3VwJywgb251cCk7XG4gICAgICAgIHRoaXMuc3RhcnQoKTtcbiAgICB9XG4gICAgc3RhcnQoKSB7XG4gICAgICAgIGlmICh0aGlzLm9ucmVzcG9uc2UgfHwgdGhpcy5uYW1lID09PSB1bmRlZmluZWQpXG4gICAgICAgICAgICByZXR1cm47XG4gICAgICAgIHZhciBzZWxmID0gdGhpcztcbiAgICAgICAgdmFyIG5hbWVNYXAgPSB7fTtcbiAgICAgICAgaWYgKCF0aGlzLndpbGRjYXJkKVxuICAgICAgICAgICAgbmFtZU1hcFt0aGlzLm5hbWVdID0gdHJ1ZTtcbiAgICAgICAgdGhpcy5vbnJlc3BvbnNlID0gKHBhY2tldCwgcmluZm8pID0+IHtcbiAgICAgICAgICAgIGlmIChzZWxmLndpbGRjYXJkKSB7XG4gICAgICAgICAgICAgICAgcGFja2V0LmFuc3dlcnMuZm9yRWFjaCgoYW5zd2VyKSA9PiB7XG4gICAgICAgICAgICAgICAgICAgIGlmIChhbnN3ZXIudHlwZSAhPT0gJ1BUUicgfHwgYW5zd2VyLm5hbWUgIT09IHNlbGYubmFtZSB8fCBhbnN3ZXIubmFtZSBpbiBuYW1lTWFwKVxuICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgICAgICAgICBuYW1lTWFwW2Fuc3dlci5kYXRhXSA9IHRydWU7XG4gICAgICAgICAgICAgICAgICAgIHNlbGYubWRucy5xdWVyeShhbnN3ZXIuZGF0YSwgJ1BUUicpO1xuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgT2JqZWN0LmtleXMobmFtZU1hcCkuZm9yRWFjaChmdW5jdGlvbiAobmFtZSkge1xuICAgICAgICAgICAgICAgIHNlbGYuZ29vZGJ5ZXMobmFtZSwgcGFja2V0KS5mb3JFYWNoKHNlbGYucmVtb3ZlU2VydmljZS5iaW5kKHNlbGYpKTtcbiAgICAgICAgICAgICAgICB2YXIgbWF0Y2hlcyA9IHNlbGYuYnVpbGRTZXJ2aWNlc0ZvcihuYW1lLCBwYWNrZXQsIHNlbGYudHh0LCByaW5mbyk7XG4gICAgICAgICAgICAgICAgaWYgKG1hdGNoZXMubGVuZ3RoID09PSAwKVxuICAgICAgICAgICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgICAgICAgbWF0Y2hlcy5mb3JFYWNoKChzZXJ2aWNlKSA9PiB7XG4gICAgICAgICAgICAgICAgICAgIGlmIChzZWxmLnNlcnZpY2VNYXBbc2VydmljZS5mcWRuXSlcbiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgICAgICAgICAgICAgc2VsZi5hZGRTZXJ2aWNlKHNlcnZpY2UpO1xuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgfSk7XG4gICAgICAgIH07XG4gICAgICAgIHRoaXMubWRucy5vbigncmVzcG9uc2UnLCB0aGlzLm9ucmVzcG9uc2UpO1xuICAgICAgICB0aGlzLnVwZGF0ZSgpO1xuICAgIH1cbiAgICBzdG9wKCkge1xuICAgICAgICBpZiAoIXRoaXMub25yZXNwb25zZSlcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgdGhpcy5tZG5zLnJlbW92ZUxpc3RlbmVyKCdyZXNwb25zZScsIHRoaXMub25yZXNwb25zZSk7XG4gICAgICAgIHRoaXMub25yZXNwb25zZSA9IG51bGw7XG4gICAgfVxuICAgIHVwZGF0ZSgpIHtcbiAgICAgICAgdGhpcy5tZG5zLnF1ZXJ5KHRoaXMubmFtZSwgJ1BUUicpO1xuICAgIH1cbiAgICBnZXQgc2VydmljZXMoKSB7XG4gICAgICAgIHJldHVybiB0aGlzLl9zZXJ2aWNlcztcbiAgICB9XG4gICAgYWRkU2VydmljZShzZXJ2aWNlKSB7XG4gICAgICAgIGlmICgoMCwgZmlsdGVyX3NlcnZpY2VfMS5kZWZhdWx0KShzZXJ2aWNlLCB0aGlzLnR4dFF1ZXJ5KSA9PT0gZmFsc2UpXG4gICAgICAgICAgICByZXR1cm47XG4gICAgICAgIHRoaXMuX3NlcnZpY2VzLnB1c2goc2VydmljZSk7XG4gICAgICAgIHRoaXMuc2VydmljZU1hcFtzZXJ2aWNlLmZxZG5dID0gdHJ1ZTtcbiAgICAgICAgdGhpcy5lbWl0KCd1cCcsIHNlcnZpY2UpO1xuICAgIH1cbiAgICByZW1vdmVTZXJ2aWNlKGZxZG4pIHtcbiAgICAgICAgdmFyIHNlcnZpY2UsIGluZGV4O1xuICAgICAgICB0aGlzLl9zZXJ2aWNlcy5zb21lKGZ1bmN0aW9uIChzLCBpKSB7XG4gICAgICAgICAgICBpZiAoKDAsIGRuc19lcXVhbF8xLmRlZmF1bHQpKHMuZnFkbiwgZnFkbikpIHtcbiAgICAgICAgICAgICAgICBzZXJ2aWNlID0gcztcbiAgICAgICAgICAgICAgICBpbmRleCA9IGk7XG4gICAgICAgICAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgICAgICAgICB9XG4gICAgICAgIH0pO1xuICAgICAgICBpZiAoIXNlcnZpY2UgfHwgaW5kZXggPT09IHVuZGVmaW5lZClcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgdGhpcy5fc2VydmljZXMuc3BsaWNlKGluZGV4LCAxKTtcbiAgICAgICAgZGVsZXRlIHRoaXMuc2VydmljZU1hcFtmcWRuXTtcbiAgICAgICAgdGhpcy5lbWl0KCdkb3duJywgc2VydmljZSk7XG4gICAgfVxuICAgIGdvb2RieWVzKG5hbWUsIHBhY2tldCkge1xuICAgICAgICByZXR1cm4gcGFja2V0LmFuc3dlcnMuY29uY2F0KHBhY2tldC5hZGRpdGlvbmFscylcbiAgICAgICAgICAgIC5maWx0ZXIoKHJyKSA9PiByci50eXBlID09PSAnUFRSJyAmJiByci50dGwgPT09IDAgJiYgKDAsIGRuc19lcXVhbF8xLmRlZmF1bHQpKHJyLm5hbWUsIG5hbWUpKVxuICAgICAgICAgICAgLm1hcCgocnIpID0+IHJyLmRhdGEpO1xuICAgIH1cbiAgICBidWlsZFNlcnZpY2VzRm9yKG5hbWUsIHBhY2tldCwgdHh0LCByZWZlcmVyKSB7XG4gICAgICAgIHZhciByZWNvcmRzID0gcGFja2V0LmFuc3dlcnMuY29uY2F0KHBhY2tldC5hZGRpdGlvbmFscykuZmlsdGVyKChycikgPT4gcnIudHRsID4gMCk7XG4gICAgICAgIHJldHVybiByZWNvcmRzXG4gICAgICAgICAgICAuZmlsdGVyKChycikgPT4gcnIudHlwZSA9PT0gJ1BUUicgJiYgKDAsIGRuc19lcXVhbF8xLmRlZmF1bHQpKHJyLm5hbWUsIG5hbWUpKVxuICAgICAgICAgICAgLm1hcCgocHRyKSA9PiB7XG4gICAgICAgICAgICBjb25zdCBzZXJ2aWNlID0ge1xuICAgICAgICAgICAgICAgIGFkZHJlc3NlczogW11cbiAgICAgICAgICAgIH07XG4gICAgICAgICAgICByZWNvcmRzXG4gICAgICAgICAgICAgICAgLmZpbHRlcigocnIpID0+IHtcbiAgICAgICAgICAgICAgICByZXR1cm4gKHJyLnR5cGUgPT09ICdTUlYnIHx8IHJyLnR5cGUgPT09ICdUWFQnKSAmJiAoMCwgZG5zX2VxdWFsXzEuZGVmYXVsdCkocnIubmFtZSwgcHRyLmRhdGEpO1xuICAgICAgICAgICAgfSlcbiAgICAgICAgICAgICAgICAuZm9yRWFjaCgocnIpID0+IHtcbiAgICAgICAgICAgICAgICBpZiAocnIudHlwZSA9PT0gJ1NSVicpIHtcbiAgICAgICAgICAgICAgICAgICAgdmFyIHBhcnRzID0gcnIubmFtZS5zcGxpdCgnLicpO1xuICAgICAgICAgICAgICAgICAgICB2YXIgbmFtZSA9IHBhcnRzWzBdO1xuICAgICAgICAgICAgICAgICAgICB2YXIgdHlwZXMgPSAoMCwgc2VydmljZV90eXBlc18xLnRvVHlwZSkocGFydHMuc2xpY2UoMSwgLTEpLmpvaW4oJy4nKSk7XG4gICAgICAgICAgICAgICAgICAgIHNlcnZpY2UubmFtZSA9IG5hbWU7XG4gICAgICAgICAgICAgICAgICAgIHNlcnZpY2UuZnFkbiA9IHJyLm5hbWU7XG4gICAgICAgICAgICAgICAgICAgIHNlcnZpY2UuaG9zdCA9IHJyLmRhdGEudGFyZ2V0O1xuICAgICAgICAgICAgICAgICAgICBzZXJ2aWNlLnJlZmVyZXIgPSByZWZlcmVyO1xuICAgICAgICAgICAgICAgICAgICBzZXJ2aWNlLnBvcnQgPSByci5kYXRhLnBvcnQ7XG4gICAgICAgICAgICAgICAgICAgIHNlcnZpY2UudHlwZSA9IHR5cGVzLm5hbWU7XG4gICAgICAgICAgICAgICAgICAgIHNlcnZpY2UucHJvdG9jb2wgPSB0eXBlcy5wcm90b2NvbDtcbiAgICAgICAgICAgICAgICAgICAgc2VydmljZS5zdWJ0eXBlcyA9IHR5cGVzLnN1YnR5cGVzO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICBlbHNlIGlmIChyci50eXBlID09PSAnVFhUJykge1xuICAgICAgICAgICAgICAgICAgICBzZXJ2aWNlLnJhd1R4dCA9IHJyLmRhdGE7XG4gICAgICAgICAgICAgICAgICAgIHNlcnZpY2UudHh0ID0gdGhpcy50eHQuZGVjb2RlQWxsKHJyLmRhdGEpO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgaWYgKCFzZXJ2aWNlLm5hbWUpXG4gICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgcmVjb3Jkc1xuICAgICAgICAgICAgICAgIC5maWx0ZXIoKHJyKSA9PiAocnIudHlwZSA9PT0gJ0EnIHx8IHJyLnR5cGUgPT09ICdBQUFBJykgJiYgKDAsIGRuc19lcXVhbF8xLmRlZmF1bHQpKHJyLm5hbWUsIHNlcnZpY2UuaG9zdCkpXG4gICAgICAgICAgICAgICAgLmZvckVhY2goKHJyKSA9PiBzZXJ2aWNlLmFkZHJlc3Nlcy5wdXNoKHJyLmRhdGEpKTtcbiAgICAgICAgICAgIHJldHVybiBzZXJ2aWNlO1xuICAgICAgICB9KVxuICAgICAgICAgICAgLmZpbHRlcigocnIpID0+ICEhcnIpO1xuICAgIH1cbn1cbmV4cG9ydHMuQnJvd3NlciA9IEJyb3dzZXI7XG5leHBvcnRzLmRlZmF1bHQgPSBCcm93c2VyO1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9YnJvd3Nlci5qcy5tYXAiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///8040
+`)},7978:(__unused_webpack_module,exports,__webpack_require__)=>{eval(`/* provided dependency */ var Buffer = __webpack_require__(4300)["Buffer"];
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.DnsTxt = void 0;
+class DnsTxt {
+    constructor(opts = {}) {
+        this.binary = opts ? opts.binary : false;
+    }
+    encode(data = {}) {
+        return Object.entries(data)
+            .map(([key, value]) => {
+            let item = \`\${key}=\${value}\`;
+            return Buffer.from(item);
+        });
+    }
+    decode(buffer) {
+        var data = {};
+        try {
+            let format = buffer.toString();
+            let parts = format.split(/=(.+)/);
+            let key = parts[0];
+            let value = parts[1];
+            data[key] = value;
+        }
+        catch (_) { }
+        return data;
+    }
+    decodeAll(buffer) {
+        return buffer
+            .filter(i => i.length > 1)
+            .map(i => this.decode(i))
+            .reduce((prev, curr) => {
+            var obj = prev;
+            let [key] = Object.keys(curr);
+            let [value] = Object.values(curr);
+            obj[key] = value;
+            return obj;
+        }, {});
+    }
+}
+exports.DnsTxt = DnsTxt;
+exports["default"] = DnsTxt;
+//# sourceMappingURL=dns-txt.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNzk3OC5qcyIsIm1hcHBpbmdzIjoiO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvYm9uam91ci1zZXJ2aWNlL2Rpc3QvbGliL2Rucy10eHQuanM/NzE2NiJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XG5leHBvcnRzLkRuc1R4dCA9IHZvaWQgMDtcbmNsYXNzIERuc1R4dCB7XG4gICAgY29uc3RydWN0b3Iob3B0cyA9IHt9KSB7XG4gICAgICAgIHRoaXMuYmluYXJ5ID0gb3B0cyA/IG9wdHMuYmluYXJ5IDogZmFsc2U7XG4gICAgfVxuICAgIGVuY29kZShkYXRhID0ge30pIHtcbiAgICAgICAgcmV0dXJuIE9iamVjdC5lbnRyaWVzKGRhdGEpXG4gICAgICAgICAgICAubWFwKChba2V5LCB2YWx1ZV0pID0+IHtcbiAgICAgICAgICAgIGxldCBpdGVtID0gYCR7a2V5fT0ke3ZhbHVlfWA7XG4gICAgICAgICAgICByZXR1cm4gQnVmZmVyLmZyb20oaXRlbSk7XG4gICAgICAgIH0pO1xuICAgIH1cbiAgICBkZWNvZGUoYnVmZmVyKSB7XG4gICAgICAgIHZhciBkYXRhID0ge307XG4gICAgICAgIHRyeSB7XG4gICAgICAgICAgICBsZXQgZm9ybWF0ID0gYnVmZmVyLnRvU3RyaW5nKCk7XG4gICAgICAgICAgICBsZXQgcGFydHMgPSBmb3JtYXQuc3BsaXQoLz0oLispLyk7XG4gICAgICAgICAgICBsZXQga2V5ID0gcGFydHNbMF07XG4gICAgICAgICAgICBsZXQgdmFsdWUgPSBwYXJ0c1sxXTtcbiAgICAgICAgICAgIGRhdGFba2V5XSA9IHZhbHVlO1xuICAgICAgICB9XG4gICAgICAgIGNhdGNoIChfKSB7IH1cbiAgICAgICAgcmV0dXJuIGRhdGE7XG4gICAgfVxuICAgIGRlY29kZUFsbChidWZmZXIpIHtcbiAgICAgICAgcmV0dXJuIGJ1ZmZlclxuICAgICAgICAgICAgLmZpbHRlcihpID0+IGkubGVuZ3RoID4gMSlcbiAgICAgICAgICAgIC5tYXAoaSA9PiB0aGlzLmRlY29kZShpKSlcbiAgICAgICAgICAgIC5yZWR1Y2UoKHByZXYsIGN1cnIpID0+IHtcbiAgICAgICAgICAgIHZhciBvYmogPSBwcmV2O1xuICAgICAgICAgICAgbGV0IFtrZXldID0gT2JqZWN0LmtleXMoY3Vycik7XG4gICAgICAgICAgICBsZXQgW3ZhbHVlXSA9IE9iamVjdC52YWx1ZXMoY3Vycik7XG4gICAgICAgICAgICBvYmpba2V5XSA9IHZhbHVlO1xuICAgICAgICAgICAgcmV0dXJuIG9iajtcbiAgICAgICAgfSwge30pO1xuICAgIH1cbn1cbmV4cG9ydHMuRG5zVHh0ID0gRG5zVHh0O1xuZXhwb3J0cy5kZWZhdWx0ID0gRG5zVHh0O1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9ZG5zLXR4dC5qcy5tYXAiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///7978
+`)},4022:function(__unused_webpack_module,exports,__webpack_require__){eval(`
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Server = void 0;
+const array_flatten_1 = __importDefault(__webpack_require__(2521));
+const es6_1 = __importDefault(__webpack_require__(2991));
+const multicast_dns_1 = __importDefault(__webpack_require__(9040));
+const dns_equal_1 = __importDefault(__webpack_require__(2051));
+class Server {
+    constructor(opts, errorCallback) {
+        this.registry = {};
+        this.mdns = (0, multicast_dns_1.default)(opts);
+        this.mdns.setMaxListeners(0);
+        this.mdns.on('query', this.respondToQuery.bind(this));
+        this.errorCallback = errorCallback !== null && errorCallback !== void 0 ? errorCallback : function (err) { throw err; };
+    }
+    register(records) {
+        const shouldRegister = (record) => {
+            var subRegistry = this.registry[record.type];
+            if (!subRegistry) {
+                subRegistry = this.registry[record.type] = [];
+            }
+            else if (subRegistry.some(this.isDuplicateRecord(record))) {
+                return;
+            }
+            subRegistry.push(record);
+        };
+        if (Array.isArray(records)) {
+            records.forEach(shouldRegister);
+        }
+        else {
+            shouldRegister(records);
+        }
+    }
+    unregister(records) {
+        const shouldUnregister = (record) => {
+            let type = record.type;
+            if (!(type in this.registry)) {
+                return;
+            }
+            this.registry[type] = this.registry[type].filter((i) => i.name !== record.name);
+        };
+        if (Array.isArray(records)) {
+            records.forEach(shouldUnregister);
+        }
+        else {
+            shouldUnregister(records);
+        }
+    }
+    respondToQuery(query) {
+        let self = this;
+        query.questions.forEach((question) => {
+            var type = question.type;
+            var name = question.name;
+            var answers = type === 'ANY'
+                ? array_flatten_1.default.depth(Object.keys(self.registry).map(self.recordsFor.bind(self, name)), 1)
+                : self.recordsFor(name, type);
+            if (answers.length === 0)
+                return;
+            var additionals = [];
+            if (type !== 'ANY') {
+                answers.forEach((answer) => {
+                    if (answer.type !== 'PTR')
+                        return;
+                    additionals = additionals
+                        .concat(self.recordsFor(answer.data, 'SRV'))
+                        .concat(self.recordsFor(answer.data, 'TXT'));
+                });
+                additionals
+                    .filter(function (record) {
+                    return record.type === 'SRV';
+                })
+                    .map(function (record) {
+                    return record.data.target;
+                })
+                    .filter(this.unique())
+                    .forEach(function (target) {
+                    additionals = additionals
+                        .concat(self.recordsFor(target, 'A'))
+                        .concat(self.recordsFor(target, 'AAAA'));
+                });
+            }
+            self.mdns.respond({ answers: answers, additionals: additionals }, (err) => {
+                if (err) {
+                    this.errorCallback(err);
+                }
+            });
+        });
+    }
+    recordsFor(name, type) {
+        if (!(type in this.registry)) {
+            return [];
+        }
+        return this.registry[type].filter((record) => {
+            var _name = ~name.indexOf('.') ? record.name : record.name.split('.')[0];
+            return (0, dns_equal_1.default)(_name, name);
+        });
+    }
+    isDuplicateRecord(a) {
+        return (b) => {
+            return a.type === b.type &&
+                a.name === b.name &&
+                (0, es6_1.default)(a.data, b.data);
+        };
+    }
+    unique() {
+        var set = [];
+        return (obj) => {
+            if (~set.indexOf(obj))
+                return false;
+            set.push(obj);
+            return true;
+        };
+    }
+}
+exports.Server = Server;
+exports["default"] = Server;
+//# sourceMappingURL=mdns-server.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDAyMi5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9ib25qb3VyLXNlcnZpY2UvZGlzdC9saWIvbWRucy1zZXJ2ZXIuanM/ZmUyMyJdLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbnZhciBfX2ltcG9ydERlZmF1bHQgPSAodGhpcyAmJiB0aGlzLl9faW1wb3J0RGVmYXVsdCkgfHwgZnVuY3Rpb24gKG1vZCkge1xuICAgIHJldHVybiAobW9kICYmIG1vZC5fX2VzTW9kdWxlKSA/IG1vZCA6IHsgXCJkZWZhdWx0XCI6IG1vZCB9O1xufTtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmV4cG9ydHMuU2VydmVyID0gdm9pZCAwO1xuY29uc3QgYXJyYXlfZmxhdHRlbl8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCJhcnJheS1mbGF0dGVuXCIpKTtcbmNvbnN0IGVzNl8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCJmYXN0LWRlZXAtZXF1YWwvZXM2XCIpKTtcbmNvbnN0IG11bHRpY2FzdF9kbnNfMSA9IF9faW1wb3J0RGVmYXVsdChyZXF1aXJlKFwibXVsdGljYXN0LWRuc1wiKSk7XG5jb25zdCBkbnNfZXF1YWxfMSA9IF9faW1wb3J0RGVmYXVsdChyZXF1aXJlKFwiZG5zLWVxdWFsXCIpKTtcbmNsYXNzIFNlcnZlciB7XG4gICAgY29uc3RydWN0b3Iob3B0cywgZXJyb3JDYWxsYmFjaykge1xuICAgICAgICB0aGlzLnJlZ2lzdHJ5ID0ge307XG4gICAgICAgIHRoaXMubWRucyA9ICgwLCBtdWx0aWNhc3RfZG5zXzEuZGVmYXVsdCkob3B0cyk7XG4gICAgICAgIHRoaXMubWRucy5zZXRNYXhMaXN0ZW5lcnMoMCk7XG4gICAgICAgIHRoaXMubWRucy5vbigncXVlcnknLCB0aGlzLnJlc3BvbmRUb1F1ZXJ5LmJpbmQodGhpcykpO1xuICAgICAgICB0aGlzLmVycm9yQ2FsbGJhY2sgPSBlcnJvckNhbGxiYWNrICE9PSBudWxsICYmIGVycm9yQ2FsbGJhY2sgIT09IHZvaWQgMCA/IGVycm9yQ2FsbGJhY2sgOiBmdW5jdGlvbiAoZXJyKSB7IHRocm93IGVycjsgfTtcbiAgICB9XG4gICAgcmVnaXN0ZXIocmVjb3Jkcykge1xuICAgICAgICBjb25zdCBzaG91bGRSZWdpc3RlciA9IChyZWNvcmQpID0+IHtcbiAgICAgICAgICAgIHZhciBzdWJSZWdpc3RyeSA9IHRoaXMucmVnaXN0cnlbcmVjb3JkLnR5cGVdO1xuICAgICAgICAgICAgaWYgKCFzdWJSZWdpc3RyeSkge1xuICAgICAgICAgICAgICAgIHN1YlJlZ2lzdHJ5ID0gdGhpcy5yZWdpc3RyeVtyZWNvcmQudHlwZV0gPSBbXTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGVsc2UgaWYgKHN1YlJlZ2lzdHJ5LnNvbWUodGhpcy5pc0R1cGxpY2F0ZVJlY29yZChyZWNvcmQpKSkge1xuICAgICAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHN1YlJlZ2lzdHJ5LnB1c2gocmVjb3JkKTtcbiAgICAgICAgfTtcbiAgICAgICAgaWYgKEFycmF5LmlzQXJyYXkocmVjb3JkcykpIHtcbiAgICAgICAgICAgIHJlY29yZHMuZm9yRWFjaChzaG91bGRSZWdpc3Rlcik7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSB7XG4gICAgICAgICAgICBzaG91bGRSZWdpc3RlcihyZWNvcmRzKTtcbiAgICAgICAgfVxuICAgIH1cbiAgICB1bnJlZ2lzdGVyKHJlY29yZHMpIHtcbiAgICAgICAgY29uc3Qgc2hvdWxkVW5yZWdpc3RlciA9IChyZWNvcmQpID0+IHtcbiAgICAgICAgICAgIGxldCB0eXBlID0gcmVjb3JkLnR5cGU7XG4gICAgICAgICAgICBpZiAoISh0eXBlIGluIHRoaXMucmVnaXN0cnkpKSB7XG4gICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgdGhpcy5yZWdpc3RyeVt0eXBlXSA9IHRoaXMucmVnaXN0cnlbdHlwZV0uZmlsdGVyKChpKSA9PiBpLm5hbWUgIT09IHJlY29yZC5uYW1lKTtcbiAgICAgICAgfTtcbiAgICAgICAgaWYgKEFycmF5LmlzQXJyYXkocmVjb3JkcykpIHtcbiAgICAgICAgICAgIHJlY29yZHMuZm9yRWFjaChzaG91bGRVbnJlZ2lzdGVyKTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgIHNob3VsZFVucmVnaXN0ZXIocmVjb3Jkcyk7XG4gICAgICAgIH1cbiAgICB9XG4gICAgcmVzcG9uZFRvUXVlcnkocXVlcnkpIHtcbiAgICAgICAgbGV0IHNlbGYgPSB0aGlzO1xuICAgICAgICBxdWVyeS5xdWVzdGlvbnMuZm9yRWFjaCgocXVlc3Rpb24pID0+IHtcbiAgICAgICAgICAgIHZhciB0eXBlID0gcXVlc3Rpb24udHlwZTtcbiAgICAgICAgICAgIHZhciBuYW1lID0gcXVlc3Rpb24ubmFtZTtcbiAgICAgICAgICAgIHZhciBhbnN3ZXJzID0gdHlwZSA9PT0gJ0FOWSdcbiAgICAgICAgICAgICAgICA/IGFycmF5X2ZsYXR0ZW5fMS5kZWZhdWx0LmRlcHRoKE9iamVjdC5rZXlzKHNlbGYucmVnaXN0cnkpLm1hcChzZWxmLnJlY29yZHNGb3IuYmluZChzZWxmLCBuYW1lKSksIDEpXG4gICAgICAgICAgICAgICAgOiBzZWxmLnJlY29yZHNGb3IobmFtZSwgdHlwZSk7XG4gICAgICAgICAgICBpZiAoYW5zd2Vycy5sZW5ndGggPT09IDApXG4gICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgdmFyIGFkZGl0aW9uYWxzID0gW107XG4gICAgICAgICAgICBpZiAodHlwZSAhPT0gJ0FOWScpIHtcbiAgICAgICAgICAgICAgICBhbnN3ZXJzLmZvckVhY2goKGFuc3dlcikgPT4ge1xuICAgICAgICAgICAgICAgICAgICBpZiAoYW5zd2VyLnR5cGUgIT09ICdQVFInKVxuICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgICAgICAgICBhZGRpdGlvbmFscyA9IGFkZGl0aW9uYWxzXG4gICAgICAgICAgICAgICAgICAgICAgICAuY29uY2F0KHNlbGYucmVjb3Jkc0ZvcihhbnN3ZXIuZGF0YSwgJ1NSVicpKVxuICAgICAgICAgICAgICAgICAgICAgICAgLmNvbmNhdChzZWxmLnJlY29yZHNGb3IoYW5zd2VyLmRhdGEsICdUWFQnKSk7XG4gICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgYWRkaXRpb25hbHNcbiAgICAgICAgICAgICAgICAgICAgLmZpbHRlcihmdW5jdGlvbiAocmVjb3JkKSB7XG4gICAgICAgICAgICAgICAgICAgIHJldHVybiByZWNvcmQudHlwZSA9PT0gJ1NSVic7XG4gICAgICAgICAgICAgICAgfSlcbiAgICAgICAgICAgICAgICAgICAgLm1hcChmdW5jdGlvbiAocmVjb3JkKSB7XG4gICAgICAgICAgICAgICAgICAgIHJldHVybiByZWNvcmQuZGF0YS50YXJnZXQ7XG4gICAgICAgICAgICAgICAgfSlcbiAgICAgICAgICAgICAgICAgICAgLmZpbHRlcih0aGlzLnVuaXF1ZSgpKVxuICAgICAgICAgICAgICAgICAgICAuZm9yRWFjaChmdW5jdGlvbiAodGFyZ2V0KSB7XG4gICAgICAgICAgICAgICAgICAgIGFkZGl0aW9uYWxzID0gYWRkaXRpb25hbHNcbiAgICAgICAgICAgICAgICAgICAgICAgIC5jb25jYXQoc2VsZi5yZWNvcmRzRm9yKHRhcmdldCwgJ0EnKSlcbiAgICAgICAgICAgICAgICAgICAgICAgIC5jb25jYXQoc2VsZi5yZWNvcmRzRm9yKHRhcmdldCwgJ0FBQUEnKSk7XG4gICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBzZWxmLm1kbnMucmVzcG9uZCh7IGFuc3dlcnM6IGFuc3dlcnMsIGFkZGl0aW9uYWxzOiBhZGRpdGlvbmFscyB9LCAoZXJyKSA9PiB7XG4gICAgICAgICAgICAgICAgaWYgKGVycikge1xuICAgICAgICAgICAgICAgICAgICB0aGlzLmVycm9yQ2FsbGJhY2soZXJyKTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9KTtcbiAgICAgICAgfSk7XG4gICAgfVxuICAgIHJlY29yZHNGb3IobmFtZSwgdHlwZSkge1xuICAgICAgICBpZiAoISh0eXBlIGluIHRoaXMucmVnaXN0cnkpKSB7XG4gICAgICAgICAgICByZXR1cm4gW107XG4gICAgICAgIH1cbiAgICAgICAgcmV0dXJuIHRoaXMucmVnaXN0cnlbdHlwZV0uZmlsdGVyKChyZWNvcmQpID0+IHtcbiAgICAgICAgICAgIHZhciBfbmFtZSA9IH5uYW1lLmluZGV4T2YoJy4nKSA/IHJlY29yZC5uYW1lIDogcmVjb3JkLm5hbWUuc3BsaXQoJy4nKVswXTtcbiAgICAgICAgICAgIHJldHVybiAoMCwgZG5zX2VxdWFsXzEuZGVmYXVsdCkoX25hbWUsIG5hbWUpO1xuICAgICAgICB9KTtcbiAgICB9XG4gICAgaXNEdXBsaWNhdGVSZWNvcmQoYSkge1xuICAgICAgICByZXR1cm4gKGIpID0+IHtcbiAgICAgICAgICAgIHJldHVybiBhLnR5cGUgPT09IGIudHlwZSAmJlxuICAgICAgICAgICAgICAgIGEubmFtZSA9PT0gYi5uYW1lICYmXG4gICAgICAgICAgICAgICAgKDAsIGVzNl8xLmRlZmF1bHQpKGEuZGF0YSwgYi5kYXRhKTtcbiAgICAgICAgfTtcbiAgICB9XG4gICAgdW5pcXVlKCkge1xuICAgICAgICB2YXIgc2V0ID0gW107XG4gICAgICAgIHJldHVybiAob2JqKSA9PiB7XG4gICAgICAgICAgICBpZiAofnNldC5pbmRleE9mKG9iaikpXG4gICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlO1xuICAgICAgICAgICAgc2V0LnB1c2gob2JqKTtcbiAgICAgICAgICAgIHJldHVybiB0cnVlO1xuICAgICAgICB9O1xuICAgIH1cbn1cbmV4cG9ydHMuU2VydmVyID0gU2VydmVyO1xuZXhwb3J0cy5kZWZhdWx0ID0gU2VydmVyO1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9bWRucy1zZXJ2ZXIuanMubWFwIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///4022
+`)},1198:function(__unused_webpack_module,exports,__webpack_require__){eval(`
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Registry = void 0;
+const array_flatten_1 = __importDefault(__webpack_require__(2521));
+const dns_equal_1 = __importDefault(__webpack_require__(2051));
+const service_1 = __importDefault(__webpack_require__(3588));
+const REANNOUNCE_MAX_MS = 60 * 60 * 1000;
+const REANNOUNCE_FACTOR = 3;
+class Registry {
+    constructor(server) {
+        this.services = [];
+        this.server = server;
+    }
+    publish(config) {
+        function start(service, registry, opts) {
+            if (service.activated)
+                return;
+            service.activated = true;
+            registry.services.push(service);
+            if (!(service instanceof service_1.default))
+                return;
+            if (opts.probe) {
+                registry.probe(registry.server.mdns, service, (exists) => {
+                    if (exists) {
+                        service.stop();
+                        console.log(new Error('Service name is already in use on the network'));
+                        return;
+                    }
+                    registry.announce(registry.server, service);
+                });
+            }
+            else {
+                registry.announce(registry.server, service);
+            }
+        }
+        function stop(service, registry, callback) {
+            if (!service.activated)
+                return;
+            if (!(service instanceof service_1.default))
+                return;
+            registry.teardown(registry.server, service, callback);
+            const index = registry.services.indexOf(service);
+            if (index !== -1)
+                registry.services.splice(index, 1);
+        }
+        const service = new service_1.default(config);
+        service.start = start.bind(null, service, this);
+        service.stop = stop.bind(null, service, this);
+        service.start({ probe: config.probe !== false });
+        return service;
+    }
+    unpublishAll(callback) {
+        this.teardown(this.server, this.services, callback);
+        this.services = [];
+    }
+    destroy() {
+        this.services.map(service => service.destroyed = true);
+    }
+    probe(mdns, service, callback) {
+        var sent = false;
+        var retries = 0;
+        var timer;
+        const send = () => {
+            if (!service.activated || service.destroyed)
+                return;
+            mdns.query(service.fqdn, 'ANY', function () {
+                sent = true;
+                timer = setTimeout(++retries < 3 ? send : done, 250);
+                timer.unref();
+            });
+        };
+        const onresponse = (packet) => {
+            if (!sent)
+                return;
+            if (packet.answers.some(matchRR) || packet.additionals.some(matchRR))
+                done(true);
+        };
+        const matchRR = (rr) => {
+            return (0, dns_equal_1.default)(rr.name, service.fqdn);
+        };
+        const done = (exists) => {
+            mdns.removeListener('response', onresponse);
+            clearTimeout(timer);
+            callback(!!exists);
+        };
+        mdns.on('response', onresponse);
+        setTimeout(send, Math.random() * 250);
+    }
+    announce(server, service) {
+        var delay = 1000;
+        var packet = service.records();
+        server.register(packet);
+        const broadcast = () => {
+            if (!service.activated || service.destroyed)
+                return;
+            server.mdns.respond(packet, function () {
+                if (!service.published) {
+                    service.activated = true;
+                    service.published = true;
+                    service.emit('up');
+                }
+                delay = delay * REANNOUNCE_FACTOR;
+                if (delay < REANNOUNCE_MAX_MS && !service.destroyed) {
+                    setTimeout(broadcast, delay).unref();
+                }
+            });
+        };
+        broadcast();
+    }
+    teardown(server, services, callback) {
+        if (!Array.isArray(services))
+            services = [services];
+        services = services.filter((service) => service.activated);
+        var records = array_flatten_1.default.depth(services.map(function (service) {
+            service.activated = false;
+            var records = service.records();
+            records.forEach((record) => {
+                record.ttl = 0;
+            });
+            return records;
+        }), 1);
+        if (records.length === 0)
+            return callback && callback();
+        server.unregister(records);
+        server.mdns.respond(records, function () {
+            services.forEach(function (service) {
+                service.published = false;
+            });
+            if (typeof callback === "function") {
+                callback.apply(null, arguments);
+            }
+        });
+    }
+}
+exports.Registry = Registry;
+exports["default"] = Registry;
+//# sourceMappingURL=registry.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTE5OC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvYm9uam91ci1zZXJ2aWNlL2Rpc3QvbGliL3JlZ2lzdHJ5LmpzPzBlNDgiXSwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG52YXIgX19pbXBvcnREZWZhdWx0ID0gKHRoaXMgJiYgdGhpcy5fX2ltcG9ydERlZmF1bHQpIHx8IGZ1bmN0aW9uIChtb2QpIHtcbiAgICByZXR1cm4gKG1vZCAmJiBtb2QuX19lc01vZHVsZSkgPyBtb2QgOiB7IFwiZGVmYXVsdFwiOiBtb2QgfTtcbn07XG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XG5leHBvcnRzLlJlZ2lzdHJ5ID0gdm9pZCAwO1xuY29uc3QgYXJyYXlfZmxhdHRlbl8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCJhcnJheS1mbGF0dGVuXCIpKTtcbmNvbnN0IGRuc19lcXVhbF8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCJkbnMtZXF1YWxcIikpO1xuY29uc3Qgc2VydmljZV8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCIuL3NlcnZpY2VcIikpO1xuY29uc3QgUkVBTk5PVU5DRV9NQVhfTVMgPSA2MCAqIDYwICogMTAwMDtcbmNvbnN0IFJFQU5OT1VOQ0VfRkFDVE9SID0gMztcbmNsYXNzIFJlZ2lzdHJ5IHtcbiAgICBjb25zdHJ1Y3RvcihzZXJ2ZXIpIHtcbiAgICAgICAgdGhpcy5zZXJ2aWNlcyA9IFtdO1xuICAgICAgICB0aGlzLnNlcnZlciA9IHNlcnZlcjtcbiAgICB9XG4gICAgcHVibGlzaChjb25maWcpIHtcbiAgICAgICAgZnVuY3Rpb24gc3RhcnQoc2VydmljZSwgcmVnaXN0cnksIG9wdHMpIHtcbiAgICAgICAgICAgIGlmIChzZXJ2aWNlLmFjdGl2YXRlZClcbiAgICAgICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgICBzZXJ2aWNlLmFjdGl2YXRlZCA9IHRydWU7XG4gICAgICAgICAgICByZWdpc3RyeS5zZXJ2aWNlcy5wdXNoKHNlcnZpY2UpO1xuICAgICAgICAgICAgaWYgKCEoc2VydmljZSBpbnN0YW5jZW9mIHNlcnZpY2VfMS5kZWZhdWx0KSlcbiAgICAgICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgICBpZiAob3B0cy5wcm9iZSkge1xuICAgICAgICAgICAgICAgIHJlZ2lzdHJ5LnByb2JlKHJlZ2lzdHJ5LnNlcnZlci5tZG5zLCBzZXJ2aWNlLCAoZXhpc3RzKSA9PiB7XG4gICAgICAgICAgICAgICAgICAgIGlmIChleGlzdHMpIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIHNlcnZpY2Uuc3RvcCgpO1xuICAgICAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2cobmV3IEVycm9yKCdTZXJ2aWNlIG5hbWUgaXMgYWxyZWFkeSBpbiB1c2Ugb24gdGhlIG5ldHdvcmsnKSk7XG4gICAgICAgICAgICAgICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgcmVnaXN0cnkuYW5ub3VuY2UocmVnaXN0cnkuc2VydmVyLCBzZXJ2aWNlKTtcbiAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgICAgIHJlZ2lzdHJ5LmFubm91bmNlKHJlZ2lzdHJ5LnNlcnZlciwgc2VydmljZSk7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgZnVuY3Rpb24gc3RvcChzZXJ2aWNlLCByZWdpc3RyeSwgY2FsbGJhY2spIHtcbiAgICAgICAgICAgIGlmICghc2VydmljZS5hY3RpdmF0ZWQpXG4gICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgaWYgKCEoc2VydmljZSBpbnN0YW5jZW9mIHNlcnZpY2VfMS5kZWZhdWx0KSlcbiAgICAgICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgICByZWdpc3RyeS50ZWFyZG93bihyZWdpc3RyeS5zZXJ2ZXIsIHNlcnZpY2UsIGNhbGxiYWNrKTtcbiAgICAgICAgICAgIGNvbnN0IGluZGV4ID0gcmVnaXN0cnkuc2VydmljZXMuaW5kZXhPZihzZXJ2aWNlKTtcbiAgICAgICAgICAgIGlmIChpbmRleCAhPT0gLTEpXG4gICAgICAgICAgICAgICAgcmVnaXN0cnkuc2VydmljZXMuc3BsaWNlKGluZGV4LCAxKTtcbiAgICAgICAgfVxuICAgICAgICBjb25zdCBzZXJ2aWNlID0gbmV3IHNlcnZpY2VfMS5kZWZhdWx0KGNvbmZpZyk7XG4gICAgICAgIHNlcnZpY2Uuc3RhcnQgPSBzdGFydC5iaW5kKG51bGwsIHNlcnZpY2UsIHRoaXMpO1xuICAgICAgICBzZXJ2aWNlLnN0b3AgPSBzdG9wLmJpbmQobnVsbCwgc2VydmljZSwgdGhpcyk7XG4gICAgICAgIHNlcnZpY2Uuc3RhcnQoeyBwcm9iZTogY29uZmlnLnByb2JlICE9PSBmYWxzZSB9KTtcbiAgICAgICAgcmV0dXJuIHNlcnZpY2U7XG4gICAgfVxuICAgIHVucHVibGlzaEFsbChjYWxsYmFjaykge1xuICAgICAgICB0aGlzLnRlYXJkb3duKHRoaXMuc2VydmVyLCB0aGlzLnNlcnZpY2VzLCBjYWxsYmFjayk7XG4gICAgICAgIHRoaXMuc2VydmljZXMgPSBbXTtcbiAgICB9XG4gICAgZGVzdHJveSgpIHtcbiAgICAgICAgdGhpcy5zZXJ2aWNlcy5tYXAoc2VydmljZSA9PiBzZXJ2aWNlLmRlc3Ryb3llZCA9IHRydWUpO1xuICAgIH1cbiAgICBwcm9iZShtZG5zLCBzZXJ2aWNlLCBjYWxsYmFjaykge1xuICAgICAgICB2YXIgc2VudCA9IGZhbHNlO1xuICAgICAgICB2YXIgcmV0cmllcyA9IDA7XG4gICAgICAgIHZhciB0aW1lcjtcbiAgICAgICAgY29uc3Qgc2VuZCA9ICgpID0+IHtcbiAgICAgICAgICAgIGlmICghc2VydmljZS5hY3RpdmF0ZWQgfHwgc2VydmljZS5kZXN0cm95ZWQpXG4gICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgbWRucy5xdWVyeShzZXJ2aWNlLmZxZG4sICdBTlknLCBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICAgICAgc2VudCA9IHRydWU7XG4gICAgICAgICAgICAgICAgdGltZXIgPSBzZXRUaW1lb3V0KCsrcmV0cmllcyA8IDMgPyBzZW5kIDogZG9uZSwgMjUwKTtcbiAgICAgICAgICAgICAgICB0aW1lci51bnJlZigpO1xuICAgICAgICAgICAgfSk7XG4gICAgICAgIH07XG4gICAgICAgIGNvbnN0IG9ucmVzcG9uc2UgPSAocGFja2V0KSA9PiB7XG4gICAgICAgICAgICBpZiAoIXNlbnQpXG4gICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgaWYgKHBhY2tldC5hbnN3ZXJzLnNvbWUobWF0Y2hSUikgfHwgcGFja2V0LmFkZGl0aW9uYWxzLnNvbWUobWF0Y2hSUikpXG4gICAgICAgICAgICAgICAgZG9uZSh0cnVlKTtcbiAgICAgICAgfTtcbiAgICAgICAgY29uc3QgbWF0Y2hSUiA9IChycikgPT4ge1xuICAgICAgICAgICAgcmV0dXJuICgwLCBkbnNfZXF1YWxfMS5kZWZhdWx0KShyci5uYW1lLCBzZXJ2aWNlLmZxZG4pO1xuICAgICAgICB9O1xuICAgICAgICBjb25zdCBkb25lID0gKGV4aXN0cykgPT4ge1xuICAgICAgICAgICAgbWRucy5yZW1vdmVMaXN0ZW5lcigncmVzcG9uc2UnLCBvbnJlc3BvbnNlKTtcbiAgICAgICAgICAgIGNsZWFyVGltZW91dCh0aW1lcik7XG4gICAgICAgICAgICBjYWxsYmFjayghIWV4aXN0cyk7XG4gICAgICAgIH07XG4gICAgICAgIG1kbnMub24oJ3Jlc3BvbnNlJywgb25yZXNwb25zZSk7XG4gICAgICAgIHNldFRpbWVvdXQoc2VuZCwgTWF0aC5yYW5kb20oKSAqIDI1MCk7XG4gICAgfVxuICAgIGFubm91bmNlKHNlcnZlciwgc2VydmljZSkge1xuICAgICAgICB2YXIgZGVsYXkgPSAxMDAwO1xuICAgICAgICB2YXIgcGFja2V0ID0gc2VydmljZS5yZWNvcmRzKCk7XG4gICAgICAgIHNlcnZlci5yZWdpc3RlcihwYWNrZXQpO1xuICAgICAgICBjb25zdCBicm9hZGNhc3QgPSAoKSA9PiB7XG4gICAgICAgICAgICBpZiAoIXNlcnZpY2UuYWN0aXZhdGVkIHx8IHNlcnZpY2UuZGVzdHJveWVkKVxuICAgICAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgICAgIHNlcnZlci5tZG5zLnJlc3BvbmQocGFja2V0LCBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICAgICAgaWYgKCFzZXJ2aWNlLnB1Ymxpc2hlZCkge1xuICAgICAgICAgICAgICAgICAgICBzZXJ2aWNlLmFjdGl2YXRlZCA9IHRydWU7XG4gICAgICAgICAgICAgICAgICAgIHNlcnZpY2UucHVibGlzaGVkID0gdHJ1ZTtcbiAgICAgICAgICAgICAgICAgICAgc2VydmljZS5lbWl0KCd1cCcpO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICBkZWxheSA9IGRlbGF5ICogUkVBTk5PVU5DRV9GQUNUT1I7XG4gICAgICAgICAgICAgICAgaWYgKGRlbGF5IDwgUkVBTk5PVU5DRV9NQVhfTVMgJiYgIXNlcnZpY2UuZGVzdHJveWVkKSB7XG4gICAgICAgICAgICAgICAgICAgIHNldFRpbWVvdXQoYnJvYWRjYXN0LCBkZWxheSkudW5yZWYoKTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9KTtcbiAgICAgICAgfTtcbiAgICAgICAgYnJvYWRjYXN0KCk7XG4gICAgfVxuICAgIHRlYXJkb3duKHNlcnZlciwgc2VydmljZXMsIGNhbGxiYWNrKSB7XG4gICAgICAgIGlmICghQXJyYXkuaXNBcnJheShzZXJ2aWNlcykpXG4gICAgICAgICAgICBzZXJ2aWNlcyA9IFtzZXJ2aWNlc107XG4gICAgICAgIHNlcnZpY2VzID0gc2VydmljZXMuZmlsdGVyKChzZXJ2aWNlKSA9PiBzZXJ2aWNlLmFjdGl2YXRlZCk7XG4gICAgICAgIHZhciByZWNvcmRzID0gYXJyYXlfZmxhdHRlbl8xLmRlZmF1bHQuZGVwdGgoc2VydmljZXMubWFwKGZ1bmN0aW9uIChzZXJ2aWNlKSB7XG4gICAgICAgICAgICBzZXJ2aWNlLmFjdGl2YXRlZCA9IGZhbHNlO1xuICAgICAgICAgICAgdmFyIHJlY29yZHMgPSBzZXJ2aWNlLnJlY29yZHMoKTtcbiAgICAgICAgICAgIHJlY29yZHMuZm9yRWFjaCgocmVjb3JkKSA9PiB7XG4gICAgICAgICAgICAgICAgcmVjb3JkLnR0bCA9IDA7XG4gICAgICAgICAgICB9KTtcbiAgICAgICAgICAgIHJldHVybiByZWNvcmRzO1xuICAgICAgICB9KSwgMSk7XG4gICAgICAgIGlmIChyZWNvcmRzLmxlbmd0aCA9PT0gMClcbiAgICAgICAgICAgIHJldHVybiBjYWxsYmFjayAmJiBjYWxsYmFjaygpO1xuICAgICAgICBzZXJ2ZXIudW5yZWdpc3RlcihyZWNvcmRzKTtcbiAgICAgICAgc2VydmVyLm1kbnMucmVzcG9uZChyZWNvcmRzLCBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICBzZXJ2aWNlcy5mb3JFYWNoKGZ1bmN0aW9uIChzZXJ2aWNlKSB7XG4gICAgICAgICAgICAgICAgc2VydmljZS5wdWJsaXNoZWQgPSBmYWxzZTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgaWYgKHR5cGVvZiBjYWxsYmFjayA9PT0gXCJmdW5jdGlvblwiKSB7XG4gICAgICAgICAgICAgICAgY2FsbGJhY2suYXBwbHkobnVsbCwgYXJndW1lbnRzKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfSk7XG4gICAgfVxufVxuZXhwb3J0cy5SZWdpc3RyeSA9IFJlZ2lzdHJ5O1xuZXhwb3J0cy5kZWZhdWx0ID0gUmVnaXN0cnk7XG4vLyMgc291cmNlTWFwcGluZ1VSTD1yZWdpc3RyeS5qcy5tYXAiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///1198
+`)},2765:(__unused_webpack_module,exports)=>{eval(`
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.toType = exports.toString = void 0;
+const Prefix = (name) => {
+    return '_' + name;
+};
+const AllowedProp = (key) => {
+    let keys = ['name', 'protocol', 'subtypes'];
+    return keys.includes(key);
+};
+const toString = (data) => {
+    let formatted = {
+        name: data.name,
+        protocol: data.protocol,
+        subtypes: data.subtypes
+    };
+    let entries = Object.entries(formatted);
+    return entries
+        .filter(([key, val]) => AllowedProp(key) && val !== undefined)
+        .reduce((prev, [key, val]) => {
+        switch (typeof val) {
+            case 'object':
+                val.map((i) => prev.push(Prefix(i)));
+                break;
+            default:
+                prev.push(Prefix(val));
+                break;
+        }
+        return prev;
+    }, [])
+        .join('.');
+};
+exports.toString = toString;
+const toType = (string) => {
+    var parts = string.split('.');
+    for (let i in parts) {
+        if (parts[i][0] !== '_')
+            continue;
+        parts[i] = parts[i].slice(1);
+    }
+    return {
+        name: parts.shift(),
+        protocol: parts.shift() || null,
+        subtypes: parts
+    };
+};
+exports.toType = toType;
+//# sourceMappingURL=service-types.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjc2NS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9ib25qb3VyLXNlcnZpY2UvZGlzdC9saWIvc2VydmljZS10eXBlcy5qcz9jOTc5Il0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7IHZhbHVlOiB0cnVlIH0pO1xuZXhwb3J0cy50b1R5cGUgPSBleHBvcnRzLnRvU3RyaW5nID0gdm9pZCAwO1xuY29uc3QgUHJlZml4ID0gKG5hbWUpID0+IHtcbiAgICByZXR1cm4gJ18nICsgbmFtZTtcbn07XG5jb25zdCBBbGxvd2VkUHJvcCA9IChrZXkpID0+IHtcbiAgICBsZXQga2V5cyA9IFsnbmFtZScsICdwcm90b2NvbCcsICdzdWJ0eXBlcyddO1xuICAgIHJldHVybiBrZXlzLmluY2x1ZGVzKGtleSk7XG59O1xuY29uc3QgdG9TdHJpbmcgPSAoZGF0YSkgPT4ge1xuICAgIGxldCBmb3JtYXR0ZWQgPSB7XG4gICAgICAgIG5hbWU6IGRhdGEubmFtZSxcbiAgICAgICAgcHJvdG9jb2w6IGRhdGEucHJvdG9jb2wsXG4gICAgICAgIHN1YnR5cGVzOiBkYXRhLnN1YnR5cGVzXG4gICAgfTtcbiAgICBsZXQgZW50cmllcyA9IE9iamVjdC5lbnRyaWVzKGZvcm1hdHRlZCk7XG4gICAgcmV0dXJuIGVudHJpZXNcbiAgICAgICAgLmZpbHRlcigoW2tleSwgdmFsXSkgPT4gQWxsb3dlZFByb3Aoa2V5KSAmJiB2YWwgIT09IHVuZGVmaW5lZClcbiAgICAgICAgLnJlZHVjZSgocHJldiwgW2tleSwgdmFsXSkgPT4ge1xuICAgICAgICBzd2l0Y2ggKHR5cGVvZiB2YWwpIHtcbiAgICAgICAgICAgIGNhc2UgJ29iamVjdCc6XG4gICAgICAgICAgICAgICAgdmFsLm1hcCgoaSkgPT4gcHJldi5wdXNoKFByZWZpeChpKSkpO1xuICAgICAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICAgICAgZGVmYXVsdDpcbiAgICAgICAgICAgICAgICBwcmV2LnB1c2goUHJlZml4KHZhbCkpO1xuICAgICAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICB9XG4gICAgICAgIHJldHVybiBwcmV2O1xuICAgIH0sIFtdKVxuICAgICAgICAuam9pbignLicpO1xufTtcbmV4cG9ydHMudG9TdHJpbmcgPSB0b1N0cmluZztcbmNvbnN0IHRvVHlwZSA9IChzdHJpbmcpID0+IHtcbiAgICB2YXIgcGFydHMgPSBzdHJpbmcuc3BsaXQoJy4nKTtcbiAgICBmb3IgKGxldCBpIGluIHBhcnRzKSB7XG4gICAgICAgIGlmIChwYXJ0c1tpXVswXSAhPT0gJ18nKVxuICAgICAgICAgICAgY29udGludWU7XG4gICAgICAgIHBhcnRzW2ldID0gcGFydHNbaV0uc2xpY2UoMSk7XG4gICAgfVxuICAgIHJldHVybiB7XG4gICAgICAgIG5hbWU6IHBhcnRzLnNoaWZ0KCksXG4gICAgICAgIHByb3RvY29sOiBwYXJ0cy5zaGlmdCgpIHx8IG51bGwsXG4gICAgICAgIHN1YnR5cGVzOiBwYXJ0c1xuICAgIH07XG59O1xuZXhwb3J0cy50b1R5cGUgPSB0b1R5cGU7XG4vLyMgc291cmNlTWFwcGluZ1VSTD1zZXJ2aWNlLXR5cGVzLmpzLm1hcCJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///2765
+`)},3588:function(__unused_webpack_module,exports,__webpack_require__){eval(`
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Service = void 0;
+const os_1 = __importDefault(__webpack_require__(9719));
+const dns_txt_1 = __importDefault(__webpack_require__(7978));
+const events_1 = __webpack_require__(2361);
+const service_types_1 = __webpack_require__(2765);
+const TLD = '.local';
+class Service extends events_1.EventEmitter {
+    constructor(config) {
+        super();
+        this.probe = true;
+        this.published = false;
+        this.activated = false;
+        this.destroyed = false;
+        this.txtService = new dns_txt_1.default();
+        if (!config.name)
+            throw new Error('ServiceConfig requires \`name\` property to be set');
+        if (!config.type)
+            throw new Error('ServiceConfig requires \`type\` property to be set');
+        if (!config.port)
+            throw new Error('ServiceConfig requires \`port\` property to be set');
+        this.name = config.name;
+        this.protocol = config.protocol || 'tcp';
+        this.type = (0, service_types_1.toString)({ name: config.type, protocol: this.protocol });
+        this.port = config.port;
+        this.host = config.host || os_1.default.hostname();
+        this.fqdn = \`\${this.name}.\${this.type}\${TLD}\`;
+        this.txt = config.txt;
+        this.subtypes = config.subtypes;
+    }
+    records() {
+        var records = [this.RecordPTR(this), this.RecordSRV(this), this.RecordTXT(this)];
+        let ifaces = Object.values(os_1.default.networkInterfaces());
+        for (let iface of ifaces) {
+            let addrs = iface;
+            for (let addr of addrs) {
+                if (addr.internal || addr.mac === '00:00:00:00:00:00')
+                    continue;
+                switch (addr.family) {
+                    case 'IPv4':
+                        records.push(this.RecordA(this, addr.address));
+                        break;
+                    case 'IPv6':
+                        records.push(this.RecordAAAA(this, addr.address));
+                        break;
+                }
+            }
+        }
+        return records;
+    }
+    RecordPTR(service) {
+        return {
+            name: \`\${service.type}\${TLD}\`,
+            type: 'PTR',
+            ttl: 28800,
+            data: service.fqdn
+        };
+    }
+    RecordSRV(service) {
+        return {
+            name: service.fqdn,
+            type: 'SRV',
+            ttl: 120,
+            data: {
+                port: service.port,
+                target: service.host
+            }
+        };
+    }
+    RecordTXT(service) {
+        return {
+            name: service.fqdn,
+            type: 'TXT',
+            ttl: 4500,
+            data: this.txtService.encode(service.txt)
+        };
+    }
+    RecordA(service, ip) {
+        return {
+            name: service.host,
+            type: 'A',
+            ttl: 120,
+            data: ip
+        };
+    }
+    RecordAAAA(service, ip) {
+        return {
+            name: service.host,
+            type: 'AAAA',
+            ttl: 120,
+            data: ip
+        };
+    }
+}
+exports.Service = Service;
+exports["default"] = Service;
+//# sourceMappingURL=service.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzU4OC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvYm9uam91ci1zZXJ2aWNlL2Rpc3QvbGliL3NlcnZpY2UuanM/NDMzZCJdLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbnZhciBfX2ltcG9ydERlZmF1bHQgPSAodGhpcyAmJiB0aGlzLl9faW1wb3J0RGVmYXVsdCkgfHwgZnVuY3Rpb24gKG1vZCkge1xuICAgIHJldHVybiAobW9kICYmIG1vZC5fX2VzTW9kdWxlKSA/IG1vZCA6IHsgXCJkZWZhdWx0XCI6IG1vZCB9O1xufTtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmV4cG9ydHMuU2VydmljZSA9IHZvaWQgMDtcbmNvbnN0IG9zXzEgPSBfX2ltcG9ydERlZmF1bHQocmVxdWlyZShcIm9zXCIpKTtcbmNvbnN0IGRuc190eHRfMSA9IF9faW1wb3J0RGVmYXVsdChyZXF1aXJlKFwiLi9kbnMtdHh0XCIpKTtcbmNvbnN0IGV2ZW50c18xID0gcmVxdWlyZShcImV2ZW50c1wiKTtcbmNvbnN0IHNlcnZpY2VfdHlwZXNfMSA9IHJlcXVpcmUoXCIuL3NlcnZpY2UtdHlwZXNcIik7XG5jb25zdCBUTEQgPSAnLmxvY2FsJztcbmNsYXNzIFNlcnZpY2UgZXh0ZW5kcyBldmVudHNfMS5FdmVudEVtaXR0ZXIge1xuICAgIGNvbnN0cnVjdG9yKGNvbmZpZykge1xuICAgICAgICBzdXBlcigpO1xuICAgICAgICB0aGlzLnByb2JlID0gdHJ1ZTtcbiAgICAgICAgdGhpcy5wdWJsaXNoZWQgPSBmYWxzZTtcbiAgICAgICAgdGhpcy5hY3RpdmF0ZWQgPSBmYWxzZTtcbiAgICAgICAgdGhpcy5kZXN0cm95ZWQgPSBmYWxzZTtcbiAgICAgICAgdGhpcy50eHRTZXJ2aWNlID0gbmV3IGRuc190eHRfMS5kZWZhdWx0KCk7XG4gICAgICAgIGlmICghY29uZmlnLm5hbWUpXG4gICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ1NlcnZpY2VDb25maWcgcmVxdWlyZXMgYG5hbWVgIHByb3BlcnR5IHRvIGJlIHNldCcpO1xuICAgICAgICBpZiAoIWNvbmZpZy50eXBlKVxuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCdTZXJ2aWNlQ29uZmlnIHJlcXVpcmVzIGB0eXBlYCBwcm9wZXJ0eSB0byBiZSBzZXQnKTtcbiAgICAgICAgaWYgKCFjb25maWcucG9ydClcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcignU2VydmljZUNvbmZpZyByZXF1aXJlcyBgcG9ydGAgcHJvcGVydHkgdG8gYmUgc2V0Jyk7XG4gICAgICAgIHRoaXMubmFtZSA9IGNvbmZpZy5uYW1lO1xuICAgICAgICB0aGlzLnByb3RvY29sID0gY29uZmlnLnByb3RvY29sIHx8ICd0Y3AnO1xuICAgICAgICB0aGlzLnR5cGUgPSAoMCwgc2VydmljZV90eXBlc18xLnRvU3RyaW5nKSh7IG5hbWU6IGNvbmZpZy50eXBlLCBwcm90b2NvbDogdGhpcy5wcm90b2NvbCB9KTtcbiAgICAgICAgdGhpcy5wb3J0ID0gY29uZmlnLnBvcnQ7XG4gICAgICAgIHRoaXMuaG9zdCA9IGNvbmZpZy5ob3N0IHx8IG9zXzEuZGVmYXVsdC5ob3N0bmFtZSgpO1xuICAgICAgICB0aGlzLmZxZG4gPSBgJHt0aGlzLm5hbWV9LiR7dGhpcy50eXBlfSR7VExEfWA7XG4gICAgICAgIHRoaXMudHh0ID0gY29uZmlnLnR4dDtcbiAgICAgICAgdGhpcy5zdWJ0eXBlcyA9IGNvbmZpZy5zdWJ0eXBlcztcbiAgICB9XG4gICAgcmVjb3JkcygpIHtcbiAgICAgICAgdmFyIHJlY29yZHMgPSBbdGhpcy5SZWNvcmRQVFIodGhpcyksIHRoaXMuUmVjb3JkU1JWKHRoaXMpLCB0aGlzLlJlY29yZFRYVCh0aGlzKV07XG4gICAgICAgIGxldCBpZmFjZXMgPSBPYmplY3QudmFsdWVzKG9zXzEuZGVmYXVsdC5uZXR3b3JrSW50ZXJmYWNlcygpKTtcbiAgICAgICAgZm9yIChsZXQgaWZhY2Ugb2YgaWZhY2VzKSB7XG4gICAgICAgICAgICBsZXQgYWRkcnMgPSBpZmFjZTtcbiAgICAgICAgICAgIGZvciAobGV0IGFkZHIgb2YgYWRkcnMpIHtcbiAgICAgICAgICAgICAgICBpZiAoYWRkci5pbnRlcm5hbCB8fCBhZGRyLm1hYyA9PT0gJzAwOjAwOjAwOjAwOjAwOjAwJylcbiAgICAgICAgICAgICAgICAgICAgY29udGludWU7XG4gICAgICAgICAgICAgICAgc3dpdGNoIChhZGRyLmZhbWlseSkge1xuICAgICAgICAgICAgICAgICAgICBjYXNlICdJUHY0JzpcbiAgICAgICAgICAgICAgICAgICAgICAgIHJlY29yZHMucHVzaCh0aGlzLlJlY29yZEEodGhpcywgYWRkci5hZGRyZXNzKSk7XG4gICAgICAgICAgICAgICAgICAgICAgICBicmVhaztcbiAgICAgICAgICAgICAgICAgICAgY2FzZSAnSVB2Nic6XG4gICAgICAgICAgICAgICAgICAgICAgICByZWNvcmRzLnB1c2godGhpcy5SZWNvcmRBQUFBKHRoaXMsIGFkZHIuYWRkcmVzcykpO1xuICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIHJldHVybiByZWNvcmRzO1xuICAgIH1cbiAgICBSZWNvcmRQVFIoc2VydmljZSkge1xuICAgICAgICByZXR1cm4ge1xuICAgICAgICAgICAgbmFtZTogYCR7c2VydmljZS50eXBlfSR7VExEfWAsXG4gICAgICAgICAgICB0eXBlOiAnUFRSJyxcbiAgICAgICAgICAgIHR0bDogMjg4MDAsXG4gICAgICAgICAgICBkYXRhOiBzZXJ2aWNlLmZxZG5cbiAgICAgICAgfTtcbiAgICB9XG4gICAgUmVjb3JkU1JWKHNlcnZpY2UpIHtcbiAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgIG5hbWU6IHNlcnZpY2UuZnFkbixcbiAgICAgICAgICAgIHR5cGU6ICdTUlYnLFxuICAgICAgICAgICAgdHRsOiAxMjAsXG4gICAgICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgICAgICAgcG9ydDogc2VydmljZS5wb3J0LFxuICAgICAgICAgICAgICAgIHRhcmdldDogc2VydmljZS5ob3N0XG4gICAgICAgICAgICB9XG4gICAgICAgIH07XG4gICAgfVxuICAgIFJlY29yZFRYVChzZXJ2aWNlKSB7XG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICBuYW1lOiBzZXJ2aWNlLmZxZG4sXG4gICAgICAgICAgICB0eXBlOiAnVFhUJyxcbiAgICAgICAgICAgIHR0bDogNDUwMCxcbiAgICAgICAgICAgIGRhdGE6IHRoaXMudHh0U2VydmljZS5lbmNvZGUoc2VydmljZS50eHQpXG4gICAgICAgIH07XG4gICAgfVxuICAgIFJlY29yZEEoc2VydmljZSwgaXApIHtcbiAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgIG5hbWU6IHNlcnZpY2UuaG9zdCxcbiAgICAgICAgICAgIHR5cGU6ICdBJyxcbiAgICAgICAgICAgIHR0bDogMTIwLFxuICAgICAgICAgICAgZGF0YTogaXBcbiAgICAgICAgfTtcbiAgICB9XG4gICAgUmVjb3JkQUFBQShzZXJ2aWNlLCBpcCkge1xuICAgICAgICByZXR1cm4ge1xuICAgICAgICAgICAgbmFtZTogc2VydmljZS5ob3N0LFxuICAgICAgICAgICAgdHlwZTogJ0FBQUEnLFxuICAgICAgICAgICAgdHRsOiAxMjAsXG4gICAgICAgICAgICBkYXRhOiBpcFxuICAgICAgICB9O1xuICAgIH1cbn1cbmV4cG9ydHMuU2VydmljZSA9IFNlcnZpY2U7XG5leHBvcnRzLmRlZmF1bHQgPSBTZXJ2aWNlO1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9c2VydmljZS5qcy5tYXAiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///3588
+`)},3267:(__unused_webpack_module,exports)=>{eval(`
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports["default"] = (service, txtQuery) => {
+    if (txtQuery === undefined)
+        return true;
+    let serviceTxt = service.txt;
+    let query = Object.entries(txtQuery)
+        .map(([key, value]) => {
+        let queryValue = serviceTxt[key];
+        if (queryValue === undefined)
+            return false;
+        if (value != queryValue)
+            return false;
+        return true;
+    });
+    if (query.length == 0)
+        return true;
+    if (query.includes(false))
+        return false;
+    return true;
+};
+//# sourceMappingURL=filter-service.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzI2Ny5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zLy4vbm9kZV9tb2R1bGVzL2JvbmpvdXItc2VydmljZS9kaXN0L2xpYi91dGlscy9maWx0ZXItc2VydmljZS5qcz9lN2Y1Il0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7IHZhbHVlOiB0cnVlIH0pO1xuZXhwb3J0cy5kZWZhdWx0ID0gKHNlcnZpY2UsIHR4dFF1ZXJ5KSA9PiB7XG4gICAgaWYgKHR4dFF1ZXJ5ID09PSB1bmRlZmluZWQpXG4gICAgICAgIHJldHVybiB0cnVlO1xuICAgIGxldCBzZXJ2aWNlVHh0ID0gc2VydmljZS50eHQ7XG4gICAgbGV0IHF1ZXJ5ID0gT2JqZWN0LmVudHJpZXModHh0UXVlcnkpXG4gICAgICAgIC5tYXAoKFtrZXksIHZhbHVlXSkgPT4ge1xuICAgICAgICBsZXQgcXVlcnlWYWx1ZSA9IHNlcnZpY2VUeHRba2V5XTtcbiAgICAgICAgaWYgKHF1ZXJ5VmFsdWUgPT09IHVuZGVmaW5lZClcbiAgICAgICAgICAgIHJldHVybiBmYWxzZTtcbiAgICAgICAgaWYgKHZhbHVlICE9IHF1ZXJ5VmFsdWUpXG4gICAgICAgICAgICByZXR1cm4gZmFsc2U7XG4gICAgICAgIHJldHVybiB0cnVlO1xuICAgIH0pO1xuICAgIGlmIChxdWVyeS5sZW5ndGggPT0gMClcbiAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgaWYgKHF1ZXJ5LmluY2x1ZGVzKGZhbHNlKSlcbiAgICAgICAgcmV0dXJuIGZhbHNlO1xuICAgIHJldHVybiB0cnVlO1xufTtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWZpbHRlci1zZXJ2aWNlLmpzLm1hcCJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///3267
+`)},3246:(__unused_webpack_module,exports)=>{eval(`
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports["default"] = (data) => Object.keys(data)
+    .filter((key) => !key.includes('binary'))
+    .reduce((cur, key) => { return Object.assign(cur, { [key]: data[key] }); }, {});
+//# sourceMappingURL=filter-txt.js.map//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzI0Ni5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9ib25qb3VyLXNlcnZpY2UvZGlzdC9saWIvdXRpbHMvZmlsdGVyLXR4dC5qcz9mODg0Il0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7IHZhbHVlOiB0cnVlIH0pO1xuZXhwb3J0cy5kZWZhdWx0ID0gKGRhdGEpID0+IE9iamVjdC5rZXlzKGRhdGEpXG4gICAgLmZpbHRlcigoa2V5KSA9PiAha2V5LmluY2x1ZGVzKCdiaW5hcnknKSlcbiAgICAucmVkdWNlKChjdXIsIGtleSkgPT4geyByZXR1cm4gT2JqZWN0LmFzc2lnbihjdXIsIHsgW2tleV06IGRhdGFba2V5XSB9KTsgfSwge30pO1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9ZmlsdGVyLXR4dC5qcy5tYXAiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///3246
 `)},3601:(module,__unused_webpack_exports,__webpack_require__)=>{eval(`
 
 const mimeTypes = __webpack_require__(983);
@@ -6770,6 +7792,1954 @@ function onOpenClose () {
 //# sourceURL=[module]
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNjE0OS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvZGVzdHJveS9pbmRleC5qcz81YTI2Il0sInNvdXJjZXNDb250ZW50IjpbIi8qIVxuICogZGVzdHJveVxuICogQ29weXJpZ2h0KGMpIDIwMTQgSm9uYXRoYW4gT25nXG4gKiBDb3B5cmlnaHQoYykgMjAxNS0yMDIyIERvdWdsYXMgQ2hyaXN0b3BoZXIgV2lsc29uXG4gKiBNSVQgTGljZW5zZWRcbiAqL1xuXG4ndXNlIHN0cmljdCdcblxuLyoqXG4gKiBNb2R1bGUgZGVwZW5kZW5jaWVzLlxuICogQHByaXZhdGVcbiAqL1xuXG52YXIgRXZlbnRFbWl0dGVyID0gcmVxdWlyZSgnZXZlbnRzJykuRXZlbnRFbWl0dGVyXG52YXIgUmVhZFN0cmVhbSA9IHJlcXVpcmUoJ2ZzJykuUmVhZFN0cmVhbVxudmFyIFN0cmVhbSA9IHJlcXVpcmUoJ3N0cmVhbScpXG52YXIgWmxpYiA9IHJlcXVpcmUoJ3psaWInKVxuXG4vKipcbiAqIE1vZHVsZSBleHBvcnRzLlxuICogQHB1YmxpY1xuICovXG5cbm1vZHVsZS5leHBvcnRzID0gZGVzdHJveVxuXG4vKipcbiAqIERlc3Ryb3kgdGhlIGdpdmVuIHN0cmVhbSwgYW5kIG9wdGlvbmFsbHkgc3VwcHJlc3MgYW55IGZ1dHVyZSBgZXJyb3JgIGV2ZW50cy5cbiAqXG4gKiBAcGFyYW0ge29iamVjdH0gc3RyZWFtXG4gKiBAcGFyYW0ge2Jvb2xlYW59IHN1cHByZXNzXG4gKiBAcHVibGljXG4gKi9cblxuZnVuY3Rpb24gZGVzdHJveSAoc3RyZWFtLCBzdXBwcmVzcykge1xuICBpZiAoaXNGc1JlYWRTdHJlYW0oc3RyZWFtKSkge1xuICAgIGRlc3Ryb3lSZWFkU3RyZWFtKHN0cmVhbSlcbiAgfSBlbHNlIGlmIChpc1psaWJTdHJlYW0oc3RyZWFtKSkge1xuICAgIGRlc3Ryb3labGliU3RyZWFtKHN0cmVhbSlcbiAgfSBlbHNlIGlmIChoYXNEZXN0cm95KHN0cmVhbSkpIHtcbiAgICBzdHJlYW0uZGVzdHJveSgpXG4gIH1cblxuICBpZiAoaXNFdmVudEVtaXR0ZXIoc3RyZWFtKSAmJiBzdXBwcmVzcykge1xuICAgIHN0cmVhbS5yZW1vdmVBbGxMaXN0ZW5lcnMoJ2Vycm9yJylcbiAgICBzdHJlYW0uYWRkTGlzdGVuZXIoJ2Vycm9yJywgbm9vcClcbiAgfVxuXG4gIHJldHVybiBzdHJlYW1cbn1cblxuLyoqXG4gKiBEZXN0cm95IGEgUmVhZFN0cmVhbS5cbiAqXG4gKiBAcGFyYW0ge29iamVjdH0gc3RyZWFtXG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIGRlc3Ryb3lSZWFkU3RyZWFtIChzdHJlYW0pIHtcbiAgc3RyZWFtLmRlc3Ryb3koKVxuXG4gIGlmICh0eXBlb2Ygc3RyZWFtLmNsb3NlID09PSAnZnVuY3Rpb24nKSB7XG4gICAgLy8gbm9kZS5qcyBjb3JlIGJ1ZyB3b3JrLWFyb3VuZFxuICAgIHN0cmVhbS5vbignb3BlbicsIG9uT3BlbkNsb3NlKVxuICB9XG59XG5cbi8qKlxuICogQ2xvc2UgYSBabGliIHN0cmVhbS5cbiAqXG4gKiBabGliIHN0cmVhbXMgYmVsb3cgTm9kZS5qcyA0LjUuNSBoYXZlIGEgYnVnZ3kgaW1wbGVtZW50YXRpb25cbiAqIG9mIC5jbG9zZSgpIHdoZW4gemxpYiBlbmNvdW50ZXJlZCBhbiBlcnJvci5cbiAqXG4gKiBAcGFyYW0ge29iamVjdH0gc3RyZWFtXG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIGNsb3NlWmxpYlN0cmVhbSAoc3RyZWFtKSB7XG4gIGlmIChzdHJlYW0uX2hhZEVycm9yID09PSB0cnVlKSB7XG4gICAgdmFyIHByb3AgPSBzdHJlYW0uX2JpbmRpbmcgPT09IG51bGxcbiAgICAgID8gJ19iaW5kaW5nJ1xuICAgICAgOiAnX2hhbmRsZSdcblxuICAgIHN0cmVhbVtwcm9wXSA9IHtcbiAgICAgIGNsb3NlOiBmdW5jdGlvbiAoKSB7IHRoaXNbcHJvcF0gPSBudWxsIH1cbiAgICB9XG4gIH1cblxuICBzdHJlYW0uY2xvc2UoKVxufVxuXG4vKipcbiAqIERlc3Ryb3kgYSBabGliIHN0cmVhbS5cbiAqXG4gKiBabGliIHN0cmVhbXMgZG9uJ3QgaGF2ZSBhIGRlc3Ryb3kgZnVuY3Rpb24gaW4gTm9kZS5qcyA2LiBPbiB0b3Agb2YgdGhhdFxuICogc2ltcGx5IGNhbGxpbmcgZGVzdHJveSBvbiBhIHpsaWIgc3RyZWFtIGluIE5vZGUuanMgOCsgd2lsbCByZXN1bHQgaW4gYVxuICogbWVtb3J5IGxlYWsuIFNvIHVudGlsIHRoYXQgaXMgZml4ZWQsIHdlIG5lZWQgdG8gY2FsbCBib3RoIGNsb3NlIEFORCBkZXN0cm95LlxuICpcbiAqIFBSIHRvIGZpeCBtZW1vcnkgbGVhazogaHR0cHM6Ly9naXRodWIuY29tL25vZGVqcy9ub2RlL3B1bGwvMjM3MzRcbiAqXG4gKiBJbiBOb2RlLmpzIDYrOCwgaXQncyBpbXBvcnRhbnQgdGhhdCBkZXN0cm95IGlzIGNhbGxlZCBiZWZvcmUgY2xvc2UgYXMgdGhlXG4gKiBzdHJlYW0gd291bGQgb3RoZXJ3aXNlIGVtaXQgdGhlIGVycm9yICd6bGliIGJpbmRpbmcgY2xvc2VkJy5cbiAqXG4gKiBAcGFyYW0ge29iamVjdH0gc3RyZWFtXG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIGRlc3Ryb3labGliU3RyZWFtIChzdHJlYW0pIHtcbiAgaWYgKHR5cGVvZiBzdHJlYW0uZGVzdHJveSA9PT0gJ2Z1bmN0aW9uJykge1xuICAgIC8vIG5vZGUuanMgY29yZSBidWcgd29yay1hcm91bmRcbiAgICAvLyBpc3RhbmJ1bCBpZ25vcmUgaWY6IG5vZGUuanMgMC44XG4gICAgaWYgKHN0cmVhbS5fYmluZGluZykge1xuICAgICAgLy8gbm9kZS5qcyA8IDAuMTAuMFxuICAgICAgc3RyZWFtLmRlc3Ryb3koKVxuICAgICAgaWYgKHN0cmVhbS5fcHJvY2Vzc2luZykge1xuICAgICAgICBzdHJlYW0uX25lZWREcmFpbiA9IHRydWVcbiAgICAgICAgc3RyZWFtLm9uY2UoJ2RyYWluJywgb25EcmFpbkNsZWFyQmluZGluZylcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIHN0cmVhbS5fYmluZGluZy5jbGVhcigpXG4gICAgICB9XG4gICAgfSBlbHNlIGlmIChzdHJlYW0uX2Rlc3Ryb3kgJiYgc3RyZWFtLl9kZXN0cm95ICE9PSBTdHJlYW0uVHJhbnNmb3JtLnByb3RvdHlwZS5fZGVzdHJveSkge1xuICAgICAgLy8gbm9kZS5qcyA+PSAxMiwgXjExLjEuMCwgXjEwLjE1LjFcbiAgICAgIHN0cmVhbS5kZXN0cm95KClcbiAgICB9IGVsc2UgaWYgKHN0cmVhbS5fZGVzdHJveSAmJiB0eXBlb2Ygc3RyZWFtLmNsb3NlID09PSAnZnVuY3Rpb24nKSB7XG4gICAgICAvLyBub2RlLmpzIDcsIDhcbiAgICAgIHN0cmVhbS5kZXN0cm95ZWQgPSB0cnVlXG4gICAgICBzdHJlYW0uY2xvc2UoKVxuICAgIH0gZWxzZSB7XG4gICAgICAvLyBmYWxsYmFja1xuICAgICAgLy8gaXN0YW5idWwgaWdub3JlIG5leHRcbiAgICAgIHN0cmVhbS5kZXN0cm95KClcbiAgICB9XG4gIH0gZWxzZSBpZiAodHlwZW9mIHN0cmVhbS5jbG9zZSA9PT0gJ2Z1bmN0aW9uJykge1xuICAgIC8vIG5vZGUuanMgPCA4IGZhbGxiYWNrXG4gICAgY2xvc2VabGliU3RyZWFtKHN0cmVhbSlcbiAgfVxufVxuXG4vKipcbiAqIERldGVybWluZSBpZiBzdHJlYW0gaGFzIGRlc3Ryb3kuXG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIGhhc0Rlc3Ryb3kgKHN0cmVhbSkge1xuICByZXR1cm4gc3RyZWFtIGluc3RhbmNlb2YgU3RyZWFtICYmXG4gICAgdHlwZW9mIHN0cmVhbS5kZXN0cm95ID09PSAnZnVuY3Rpb24nXG59XG5cbi8qKlxuICogRGV0ZXJtaW5lIGlmIHZhbCBpcyBFdmVudEVtaXR0ZXIuXG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIGlzRXZlbnRFbWl0dGVyICh2YWwpIHtcbiAgcmV0dXJuIHZhbCBpbnN0YW5jZW9mIEV2ZW50RW1pdHRlclxufVxuXG4vKipcbiAqIERldGVybWluZSBpZiBzdHJlYW0gaXMgZnMuUmVhZFN0cmVhbSBzdHJlYW0uXG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIGlzRnNSZWFkU3RyZWFtIChzdHJlYW0pIHtcbiAgcmV0dXJuIHN0cmVhbSBpbnN0YW5jZW9mIFJlYWRTdHJlYW1cbn1cblxuLyoqXG4gKiBEZXRlcm1pbmUgaWYgc3RyZWFtIGlzIFpsaWIgc3RyZWFtLlxuICogQHByaXZhdGVcbiAqL1xuXG5mdW5jdGlvbiBpc1psaWJTdHJlYW0gKHN0cmVhbSkge1xuICByZXR1cm4gc3RyZWFtIGluc3RhbmNlb2YgWmxpYi5HemlwIHx8XG4gICAgc3RyZWFtIGluc3RhbmNlb2YgWmxpYi5HdW56aXAgfHxcbiAgICBzdHJlYW0gaW5zdGFuY2VvZiBabGliLkRlZmxhdGUgfHxcbiAgICBzdHJlYW0gaW5zdGFuY2VvZiBabGliLkRlZmxhdGVSYXcgfHxcbiAgICBzdHJlYW0gaW5zdGFuY2VvZiBabGliLkluZmxhdGUgfHxcbiAgICBzdHJlYW0gaW5zdGFuY2VvZiBabGliLkluZmxhdGVSYXcgfHxcbiAgICBzdHJlYW0gaW5zdGFuY2VvZiBabGliLlVuemlwXG59XG5cbi8qKlxuICogTm8tb3AgZnVuY3Rpb24uXG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIG5vb3AgKCkge31cblxuLyoqXG4gKiBPbiBkcmFpbiBoYW5kbGVyIHRvIGNsZWFyIGJpbmRpbmcuXG4gKiBAcHJpdmF0ZVxuICovXG5cbi8vIGlzdGFuYnVsIGlnbm9yZSBuZXh0OiBub2RlLmpzIDAuOFxuZnVuY3Rpb24gb25EcmFpbkNsZWFyQmluZGluZyAoKSB7XG4gIHRoaXMuX2JpbmRpbmcuY2xlYXIoKVxufVxuXG4vKipcbiAqIE9uIG9wZW4gaGFuZGxlciB0byBjbG9zZSBzdHJlYW0uXG4gKiBAcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIG9uT3BlbkNsb3NlICgpIHtcbiAgaWYgKHR5cGVvZiB0aGlzLmZkID09PSAnbnVtYmVyJykge1xuICAgIC8vIGFjdHVhbGx5IGNsb3NlIGRvd24gdGhlIGZkXG4gICAgdGhpcy5jbG9zZSgpXG4gIH1cbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
 //# sourceURL=webpack-internal:///6149
+`)},2051:module=>{eval(`
+
+var r = /[A-Z]/g
+
+module.exports = function (a, b) {
+  a = a.replace(r, replacer)
+  b = b.replace(r, replacer)
+  return a === b
+}
+
+function replacer (m) {
+  return m.toLowerCase()
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjA1MS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zLy4vbm9kZV9tb2R1bGVzL2Rucy1lcXVhbC9pbmRleC5qcz8xZGZkIl0sInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0J1xuXG52YXIgciA9IC9bQS1aXS9nXG5cbm1vZHVsZS5leHBvcnRzID0gZnVuY3Rpb24gKGEsIGIpIHtcbiAgYSA9IGEucmVwbGFjZShyLCByZXBsYWNlcilcbiAgYiA9IGIucmVwbGFjZShyLCByZXBsYWNlcilcbiAgcmV0dXJuIGEgPT09IGJcbn1cblxuZnVuY3Rpb24gcmVwbGFjZXIgKG0pIHtcbiAgcmV0dXJuIG0udG9Mb3dlckNhc2UoKVxufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///2051
+`)},7845:(__unused_webpack_module,exports)=>{eval(`
+
+exports.toString = function (klass) {
+  switch (klass) {
+    case 1: return 'IN'
+    case 2: return 'CS'
+    case 3: return 'CH'
+    case 4: return 'HS'
+    case 255: return 'ANY'
+  }
+  return 'UNKNOWN_' + klass
+}
+
+exports.toClass = function (name) {
+  switch (name.toUpperCase()) {
+    case 'IN': return 1
+    case 'CS': return 2
+    case 'CH': return 3
+    case 'HS': return 4
+    case 'ANY': return 255
+  }
+  return 0
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNzg0NS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvZG5zLXBhY2tldC9jbGFzc2VzLmpzPzZkNzMiXSwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnXG5cbmV4cG9ydHMudG9TdHJpbmcgPSBmdW5jdGlvbiAoa2xhc3MpIHtcbiAgc3dpdGNoIChrbGFzcykge1xuICAgIGNhc2UgMTogcmV0dXJuICdJTidcbiAgICBjYXNlIDI6IHJldHVybiAnQ1MnXG4gICAgY2FzZSAzOiByZXR1cm4gJ0NIJ1xuICAgIGNhc2UgNDogcmV0dXJuICdIUydcbiAgICBjYXNlIDI1NTogcmV0dXJuICdBTlknXG4gIH1cbiAgcmV0dXJuICdVTktOT1dOXycgKyBrbGFzc1xufVxuXG5leHBvcnRzLnRvQ2xhc3MgPSBmdW5jdGlvbiAobmFtZSkge1xuICBzd2l0Y2ggKG5hbWUudG9VcHBlckNhc2UoKSkge1xuICAgIGNhc2UgJ0lOJzogcmV0dXJuIDFcbiAgICBjYXNlICdDUyc6IHJldHVybiAyXG4gICAgY2FzZSAnQ0gnOiByZXR1cm4gM1xuICAgIGNhc2UgJ0hTJzogcmV0dXJuIDRcbiAgICBjYXNlICdBTlknOiByZXR1cm4gMjU1XG4gIH1cbiAgcmV0dXJuIDBcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///7845
+`)},4568:(__unused_webpack_module,exports,__webpack_require__)=>{eval(`
+
+const Buffer = (__webpack_require__(4300).Buffer)
+const types = __webpack_require__(9082)
+const rcodes = __webpack_require__(6017)
+const opcodes = __webpack_require__(6942)
+const classes = __webpack_require__(7845)
+const optioncodes = __webpack_require__(6285)
+const ip = __webpack_require__(9526)
+
+const QUERY_FLAG = 0
+const RESPONSE_FLAG = 1 << 15
+const FLUSH_MASK = 1 << 15
+const NOT_FLUSH_MASK = ~FLUSH_MASK
+const QU_MASK = 1 << 15
+const NOT_QU_MASK = ~QU_MASK
+
+const name = exports.name = {}
+
+name.encode = function (str, buf, offset) {
+  if (!buf) buf = Buffer.alloc(name.encodingLength(str))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  // strip leading and trailing .
+  const n = str.replace(/^\\.|\\.$/gm, '')
+  if (n.length) {
+    const list = n.split('.')
+
+    for (let i = 0; i < list.length; i++) {
+      const len = buf.write(list[i], offset + 1)
+      buf[offset] = len
+      offset += len + 1
+    }
+  }
+
+  buf[offset++] = 0
+
+  name.encode.bytes = offset - oldOffset
+  return buf
+}
+
+name.encode.bytes = 0
+
+name.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const list = []
+  let oldOffset = offset
+  let totalLength = 0
+  let consumedBytes = 0
+  let jumped = false
+
+  while (true) {
+    if (offset >= buf.length) {
+      throw new Error('Cannot decode name (buffer overflow)')
+    }
+    const len = buf[offset++]
+    consumedBytes += jumped ? 0 : 1
+
+    if (len === 0) {
+      break
+    } else if ((len & 0xc0) === 0) {
+      if (offset + len > buf.length) {
+        throw new Error('Cannot decode name (buffer overflow)')
+      }
+      totalLength += len + 1
+      if (totalLength > 254) {
+        throw new Error('Cannot decode name (name too long)')
+      }
+      list.push(buf.toString('utf-8', offset, offset + len))
+      offset += len
+      consumedBytes += jumped ? 0 : len
+    } else if ((len & 0xc0) === 0xc0) {
+      if (offset + 1 > buf.length) {
+        throw new Error('Cannot decode name (buffer overflow)')
+      }
+      const jumpOffset = buf.readUInt16BE(offset - 1) - 0xc000
+      if (jumpOffset >= oldOffset) {
+        // Allow only pointers to prior data. RFC 1035, section 4.1.4 states:
+        // "[...] an entire domain name or a list of labels at the end of a domain name
+        // is replaced with a pointer to a prior occurance (sic) of the same name."
+        throw new Error('Cannot decode name (bad pointer)')
+      }
+      offset = jumpOffset
+      oldOffset = jumpOffset
+      consumedBytes += jumped ? 0 : 1
+      jumped = true
+    } else {
+      throw new Error('Cannot decode name (bad label)')
+    }
+  }
+
+  name.decode.bytes = consumedBytes
+  return list.length === 0 ? '.' : list.join('.')
+}
+
+name.decode.bytes = 0
+
+name.encodingLength = function (n) {
+  if (n === '.' || n === '..') return 1
+  return Buffer.byteLength(n.replace(/^\\.|\\.$/gm, '')) + 2
+}
+
+const string = {}
+
+string.encode = function (s, buf, offset) {
+  if (!buf) buf = Buffer.alloc(string.encodingLength(s))
+  if (!offset) offset = 0
+
+  const len = buf.write(s, offset + 1)
+  buf[offset] = len
+  string.encode.bytes = len + 1
+  return buf
+}
+
+string.encode.bytes = 0
+
+string.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const len = buf[offset]
+  const s = buf.toString('utf-8', offset + 1, offset + 1 + len)
+  string.decode.bytes = len + 1
+  return s
+}
+
+string.decode.bytes = 0
+
+string.encodingLength = function (s) {
+  return Buffer.byteLength(s) + 1
+}
+
+const header = {}
+
+header.encode = function (h, buf, offset) {
+  if (!buf) buf = header.encodingLength(h)
+  if (!offset) offset = 0
+
+  const flags = (h.flags || 0) & 32767
+  const type = h.type === 'response' ? RESPONSE_FLAG : QUERY_FLAG
+
+  buf.writeUInt16BE(h.id || 0, offset)
+  buf.writeUInt16BE(flags | type, offset + 2)
+  buf.writeUInt16BE(h.questions.length, offset + 4)
+  buf.writeUInt16BE(h.answers.length, offset + 6)
+  buf.writeUInt16BE(h.authorities.length, offset + 8)
+  buf.writeUInt16BE(h.additionals.length, offset + 10)
+
+  return buf
+}
+
+header.encode.bytes = 12
+
+header.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  if (buf.length < 12) throw new Error('Header must be 12 bytes')
+  const flags = buf.readUInt16BE(offset + 2)
+
+  return {
+    id: buf.readUInt16BE(offset),
+    type: flags & RESPONSE_FLAG ? 'response' : 'query',
+    flags: flags & 32767,
+    flag_qr: ((flags >> 15) & 0x1) === 1,
+    opcode: opcodes.toString((flags >> 11) & 0xf),
+    flag_aa: ((flags >> 10) & 0x1) === 1,
+    flag_tc: ((flags >> 9) & 0x1) === 1,
+    flag_rd: ((flags >> 8) & 0x1) === 1,
+    flag_ra: ((flags >> 7) & 0x1) === 1,
+    flag_z: ((flags >> 6) & 0x1) === 1,
+    flag_ad: ((flags >> 5) & 0x1) === 1,
+    flag_cd: ((flags >> 4) & 0x1) === 1,
+    rcode: rcodes.toString(flags & 0xf),
+    questions: new Array(buf.readUInt16BE(offset + 4)),
+    answers: new Array(buf.readUInt16BE(offset + 6)),
+    authorities: new Array(buf.readUInt16BE(offset + 8)),
+    additionals: new Array(buf.readUInt16BE(offset + 10))
+  }
+}
+
+header.decode.bytes = 12
+
+header.encodingLength = function () {
+  return 12
+}
+
+const runknown = exports.unknown = {}
+
+runknown.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(runknown.encodingLength(data))
+  if (!offset) offset = 0
+
+  buf.writeUInt16BE(data.length, offset)
+  data.copy(buf, offset + 2)
+
+  runknown.encode.bytes = data.length + 2
+  return buf
+}
+
+runknown.encode.bytes = 0
+
+runknown.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const len = buf.readUInt16BE(offset)
+  const data = buf.slice(offset + 2, offset + 2 + len)
+  runknown.decode.bytes = len + 2
+  return data
+}
+
+runknown.decode.bytes = 0
+
+runknown.encodingLength = function (data) {
+  return data.length + 2
+}
+
+const rns = exports.ns = {}
+
+rns.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rns.encodingLength(data))
+  if (!offset) offset = 0
+
+  name.encode(data, buf, offset + 2)
+  buf.writeUInt16BE(name.encode.bytes, offset)
+  rns.encode.bytes = name.encode.bytes + 2
+  return buf
+}
+
+rns.encode.bytes = 0
+
+rns.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const len = buf.readUInt16BE(offset)
+  const dd = name.decode(buf, offset + 2)
+
+  rns.decode.bytes = len + 2
+  return dd
+}
+
+rns.decode.bytes = 0
+
+rns.encodingLength = function (data) {
+  return name.encodingLength(data) + 2
+}
+
+const rsoa = exports.soa = {}
+
+rsoa.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rsoa.encodingLength(data))
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+  offset += 2
+  name.encode(data.mname, buf, offset)
+  offset += name.encode.bytes
+  name.encode(data.rname, buf, offset)
+  offset += name.encode.bytes
+  buf.writeUInt32BE(data.serial || 0, offset)
+  offset += 4
+  buf.writeUInt32BE(data.refresh || 0, offset)
+  offset += 4
+  buf.writeUInt32BE(data.retry || 0, offset)
+  offset += 4
+  buf.writeUInt32BE(data.expire || 0, offset)
+  offset += 4
+  buf.writeUInt32BE(data.minimum || 0, offset)
+  offset += 4
+
+  buf.writeUInt16BE(offset - oldOffset - 2, oldOffset)
+  rsoa.encode.bytes = offset - oldOffset
+  return buf
+}
+
+rsoa.encode.bytes = 0
+
+rsoa.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+
+  const data = {}
+  offset += 2
+  data.mname = name.decode(buf, offset)
+  offset += name.decode.bytes
+  data.rname = name.decode(buf, offset)
+  offset += name.decode.bytes
+  data.serial = buf.readUInt32BE(offset)
+  offset += 4
+  data.refresh = buf.readUInt32BE(offset)
+  offset += 4
+  data.retry = buf.readUInt32BE(offset)
+  offset += 4
+  data.expire = buf.readUInt32BE(offset)
+  offset += 4
+  data.minimum = buf.readUInt32BE(offset)
+  offset += 4
+
+  rsoa.decode.bytes = offset - oldOffset
+  return data
+}
+
+rsoa.decode.bytes = 0
+
+rsoa.encodingLength = function (data) {
+  return 22 + name.encodingLength(data.mname) + name.encodingLength(data.rname)
+}
+
+const rtxt = exports.txt = {}
+
+rtxt.encode = function (data, buf, offset) {
+  if (!Array.isArray(data)) data = [data]
+  for (let i = 0; i < data.length; i++) {
+    if (typeof data[i] === 'string') {
+      data[i] = Buffer.from(data[i])
+    }
+    if (!Buffer.isBuffer(data[i])) {
+      throw new Error('Must be a Buffer')
+    }
+  }
+
+  if (!buf) buf = Buffer.alloc(rtxt.encodingLength(data))
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+  offset += 2
+
+  data.forEach(function (d) {
+    buf[offset++] = d.length
+    d.copy(buf, offset, 0, d.length)
+    offset += d.length
+  })
+
+  buf.writeUInt16BE(offset - oldOffset - 2, oldOffset)
+  rtxt.encode.bytes = offset - oldOffset
+  return buf
+}
+
+rtxt.encode.bytes = 0
+
+rtxt.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+  let remaining = buf.readUInt16BE(offset)
+  offset += 2
+
+  let data = []
+  while (remaining > 0) {
+    const len = buf[offset++]
+    --remaining
+    if (remaining < len) {
+      throw new Error('Buffer overflow')
+    }
+    data.push(buf.slice(offset, offset + len))
+    offset += len
+    remaining -= len
+  }
+
+  rtxt.decode.bytes = offset - oldOffset
+  return data
+}
+
+rtxt.decode.bytes = 0
+
+rtxt.encodingLength = function (data) {
+  if (!Array.isArray(data)) data = [data]
+  let length = 2
+  data.forEach(function (buf) {
+    if (typeof buf === 'string') {
+      length += Buffer.byteLength(buf) + 1
+    } else {
+      length += buf.length + 1
+    }
+  })
+  return length
+}
+
+const rnull = exports["null"] = {}
+
+rnull.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rnull.encodingLength(data))
+  if (!offset) offset = 0
+
+  if (typeof data === 'string') data = Buffer.from(data)
+  if (!data) data = Buffer.alloc(0)
+
+  const oldOffset = offset
+  offset += 2
+
+  const len = data.length
+  data.copy(buf, offset, 0, len)
+  offset += len
+
+  buf.writeUInt16BE(offset - oldOffset - 2, oldOffset)
+  rnull.encode.bytes = offset - oldOffset
+  return buf
+}
+
+rnull.encode.bytes = 0
+
+rnull.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+  const len = buf.readUInt16BE(offset)
+
+  offset += 2
+
+  const data = buf.slice(offset, offset + len)
+  offset += len
+
+  rnull.decode.bytes = offset - oldOffset
+  return data
+}
+
+rnull.decode.bytes = 0
+
+rnull.encodingLength = function (data) {
+  if (!data) return 2
+  return (Buffer.isBuffer(data) ? data.length : Buffer.byteLength(data)) + 2
+}
+
+const rhinfo = exports.hinfo = {}
+
+rhinfo.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rhinfo.encodingLength(data))
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+  offset += 2
+  string.encode(data.cpu, buf, offset)
+  offset += string.encode.bytes
+  string.encode(data.os, buf, offset)
+  offset += string.encode.bytes
+  buf.writeUInt16BE(offset - oldOffset - 2, oldOffset)
+  rhinfo.encode.bytes = offset - oldOffset
+  return buf
+}
+
+rhinfo.encode.bytes = 0
+
+rhinfo.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+
+  const data = {}
+  offset += 2
+  data.cpu = string.decode(buf, offset)
+  offset += string.decode.bytes
+  data.os = string.decode(buf, offset)
+  offset += string.decode.bytes
+  rhinfo.decode.bytes = offset - oldOffset
+  return data
+}
+
+rhinfo.decode.bytes = 0
+
+rhinfo.encodingLength = function (data) {
+  return string.encodingLength(data.cpu) + string.encodingLength(data.os) + 2
+}
+
+const rptr = exports.ptr = {}
+const rcname = exports.cname = rptr
+const rdname = exports.dname = rptr
+
+rptr.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rptr.encodingLength(data))
+  if (!offset) offset = 0
+
+  name.encode(data, buf, offset + 2)
+  buf.writeUInt16BE(name.encode.bytes, offset)
+  rptr.encode.bytes = name.encode.bytes + 2
+  return buf
+}
+
+rptr.encode.bytes = 0
+
+rptr.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const data = name.decode(buf, offset + 2)
+  rptr.decode.bytes = name.decode.bytes + 2
+  return data
+}
+
+rptr.decode.bytes = 0
+
+rptr.encodingLength = function (data) {
+  return name.encodingLength(data) + 2
+}
+
+const rsrv = exports.srv = {}
+
+rsrv.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rsrv.encodingLength(data))
+  if (!offset) offset = 0
+
+  buf.writeUInt16BE(data.priority || 0, offset + 2)
+  buf.writeUInt16BE(data.weight || 0, offset + 4)
+  buf.writeUInt16BE(data.port || 0, offset + 6)
+  name.encode(data.target, buf, offset + 8)
+
+  const len = name.encode.bytes + 6
+  buf.writeUInt16BE(len, offset)
+
+  rsrv.encode.bytes = len + 2
+  return buf
+}
+
+rsrv.encode.bytes = 0
+
+rsrv.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const len = buf.readUInt16BE(offset)
+
+  const data = {}
+  data.priority = buf.readUInt16BE(offset + 2)
+  data.weight = buf.readUInt16BE(offset + 4)
+  data.port = buf.readUInt16BE(offset + 6)
+  data.target = name.decode(buf, offset + 8)
+
+  rsrv.decode.bytes = len + 2
+  return data
+}
+
+rsrv.decode.bytes = 0
+
+rsrv.encodingLength = function (data) {
+  return 8 + name.encodingLength(data.target)
+}
+
+const rcaa = exports.caa = {}
+
+rcaa.ISSUER_CRITICAL = 1 << 7
+
+rcaa.encode = function (data, buf, offset) {
+  const len = rcaa.encodingLength(data)
+
+  if (!buf) buf = Buffer.alloc(rcaa.encodingLength(data))
+  if (!offset) offset = 0
+
+  if (data.issuerCritical) {
+    data.flags = rcaa.ISSUER_CRITICAL
+  }
+
+  buf.writeUInt16BE(len - 2, offset)
+  offset += 2
+  buf.writeUInt8(data.flags || 0, offset)
+  offset += 1
+  string.encode(data.tag, buf, offset)
+  offset += string.encode.bytes
+  buf.write(data.value, offset)
+  offset += Buffer.byteLength(data.value)
+
+  rcaa.encode.bytes = len
+  return buf
+}
+
+rcaa.encode.bytes = 0
+
+rcaa.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const len = buf.readUInt16BE(offset)
+  offset += 2
+
+  const oldOffset = offset
+  const data = {}
+  data.flags = buf.readUInt8(offset)
+  offset += 1
+  data.tag = string.decode(buf, offset)
+  offset += string.decode.bytes
+  data.value = buf.toString('utf-8', offset, oldOffset + len)
+
+  data.issuerCritical = !!(data.flags & rcaa.ISSUER_CRITICAL)
+
+  rcaa.decode.bytes = len + 2
+
+  return data
+}
+
+rcaa.decode.bytes = 0
+
+rcaa.encodingLength = function (data) {
+  return string.encodingLength(data.tag) + string.encodingLength(data.value) + 2
+}
+
+const rmx = exports.mx = {}
+
+rmx.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rmx.encodingLength(data))
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+  offset += 2
+  buf.writeUInt16BE(data.preference || 0, offset)
+  offset += 2
+  name.encode(data.exchange, buf, offset)
+  offset += name.encode.bytes
+
+  buf.writeUInt16BE(offset - oldOffset - 2, oldOffset)
+  rmx.encode.bytes = offset - oldOffset
+  return buf
+}
+
+rmx.encode.bytes = 0
+
+rmx.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+
+  const data = {}
+  offset += 2
+  data.preference = buf.readUInt16BE(offset)
+  offset += 2
+  data.exchange = name.decode(buf, offset)
+  offset += name.decode.bytes
+
+  rmx.decode.bytes = offset - oldOffset
+  return data
+}
+
+rmx.encodingLength = function (data) {
+  return 4 + name.encodingLength(data.exchange)
+}
+
+const ra = exports.a = {}
+
+ra.encode = function (host, buf, offset) {
+  if (!buf) buf = Buffer.alloc(ra.encodingLength(host))
+  if (!offset) offset = 0
+
+  buf.writeUInt16BE(4, offset)
+  offset += 2
+  ip.v4.encode(host, buf, offset)
+  ra.encode.bytes = 6
+  return buf
+}
+
+ra.encode.bytes = 0
+
+ra.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  offset += 2
+  const host = ip.v4.decode(buf, offset)
+  ra.decode.bytes = 6
+  return host
+}
+
+ra.decode.bytes = 0
+
+ra.encodingLength = function () {
+  return 6
+}
+
+const raaaa = exports.aaaa = {}
+
+raaaa.encode = function (host, buf, offset) {
+  if (!buf) buf = Buffer.alloc(raaaa.encodingLength(host))
+  if (!offset) offset = 0
+
+  buf.writeUInt16BE(16, offset)
+  offset += 2
+  ip.v6.encode(host, buf, offset)
+  raaaa.encode.bytes = 18
+  return buf
+}
+
+raaaa.encode.bytes = 0
+
+raaaa.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  offset += 2
+  const host = ip.v6.decode(buf, offset)
+  raaaa.decode.bytes = 18
+  return host
+}
+
+raaaa.decode.bytes = 0
+
+raaaa.encodingLength = function () {
+  return 18
+}
+
+const roption = exports.option = {}
+
+roption.encode = function (option, buf, offset) {
+  if (!buf) buf = Buffer.alloc(roption.encodingLength(option))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const code = optioncodes.toCode(option.code)
+  buf.writeUInt16BE(code, offset)
+  offset += 2
+  if (option.data) {
+    buf.writeUInt16BE(option.data.length, offset)
+    offset += 2
+    option.data.copy(buf, offset)
+    offset += option.data.length
+  } else {
+    switch (code) {
+      // case 3: NSID.  No encode makes sense.
+      // case 5,6,7: Not implementable
+      case 8: // ECS
+        // note: do IP math before calling
+        const spl = option.sourcePrefixLength || 0
+        const fam = option.family || ip.familyOf(option.ip)
+        const ipBuf = ip.encode(option.ip, Buffer.alloc)
+        const ipLen = Math.ceil(spl / 8)
+        buf.writeUInt16BE(ipLen + 4, offset)
+        offset += 2
+        buf.writeUInt16BE(fam, offset)
+        offset += 2
+        buf.writeUInt8(spl, offset++)
+        buf.writeUInt8(option.scopePrefixLength || 0, offset++)
+
+        ipBuf.copy(buf, offset, 0, ipLen)
+        offset += ipLen
+        break
+      // case 9: EXPIRE (experimental)
+      // case 10: COOKIE.  No encode makes sense.
+      case 11: // KEEP-ALIVE
+        if (option.timeout) {
+          buf.writeUInt16BE(2, offset)
+          offset += 2
+          buf.writeUInt16BE(option.timeout, offset)
+          offset += 2
+        } else {
+          buf.writeUInt16BE(0, offset)
+          offset += 2
+        }
+        break
+      case 12: // PADDING
+        const len = option.length || 0
+        buf.writeUInt16BE(len, offset)
+        offset += 2
+        buf.fill(0, offset, offset + len)
+        offset += len
+        break
+      // case 13:  CHAIN.  Experimental.
+      case 14: // KEY-TAG
+        const tagsLen = option.tags.length * 2
+        buf.writeUInt16BE(tagsLen, offset)
+        offset += 2
+        for (const tag of option.tags) {
+          buf.writeUInt16BE(tag, offset)
+          offset += 2
+        }
+        break
+      default:
+        throw new Error(\`Unknown roption code: \${option.code}\`)
+    }
+  }
+
+  roption.encode.bytes = offset - oldOffset
+  return buf
+}
+
+roption.encode.bytes = 0
+
+roption.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const option = {}
+  option.code = buf.readUInt16BE(offset)
+  option.type = optioncodes.toString(option.code)
+  offset += 2
+  const len = buf.readUInt16BE(offset)
+  offset += 2
+  option.data = buf.slice(offset, offset + len)
+  switch (option.code) {
+    // case 3: NSID.  No decode makes sense.
+    case 8: // ECS
+      option.family = buf.readUInt16BE(offset)
+      offset += 2
+      option.sourcePrefixLength = buf.readUInt8(offset++)
+      option.scopePrefixLength = buf.readUInt8(offset++)
+      const padded = Buffer.alloc((option.family === 1) ? 4 : 16)
+      buf.copy(padded, 0, offset, offset + len - 4)
+      option.ip = ip.decode(padded)
+      break
+    // case 12: Padding.  No decode makes sense.
+    case 11: // KEEP-ALIVE
+      if (len > 0) {
+        option.timeout = buf.readUInt16BE(offset)
+        offset += 2
+      }
+      break
+    case 14:
+      option.tags = []
+      for (let i = 0; i < len; i += 2) {
+        option.tags.push(buf.readUInt16BE(offset))
+        offset += 2
+      }
+    // don't worry about default.  caller will use data if desired
+  }
+
+  roption.decode.bytes = len + 4
+  return option
+}
+
+roption.decode.bytes = 0
+
+roption.encodingLength = function (option) {
+  if (option.data) {
+    return option.data.length + 4
+  }
+  const code = optioncodes.toCode(option.code)
+  switch (code) {
+    case 8: // ECS
+      const spl = option.sourcePrefixLength || 0
+      return Math.ceil(spl / 8) + 8
+    case 11: // KEEP-ALIVE
+      return (typeof option.timeout === 'number') ? 6 : 4
+    case 12: // PADDING
+      return option.length + 4
+    case 14: // KEY-TAG
+      return 4 + (option.tags.length * 2)
+  }
+  throw new Error(\`Unknown roption code: \${option.code}\`)
+}
+
+const ropt = exports.opt = {}
+
+ropt.encode = function (options, buf, offset) {
+  if (!buf) buf = Buffer.alloc(ropt.encodingLength(options))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const rdlen = encodingLengthList(options, roption)
+  buf.writeUInt16BE(rdlen, offset)
+  offset = encodeList(options, roption, buf, offset + 2)
+
+  ropt.encode.bytes = offset - oldOffset
+  return buf
+}
+
+ropt.encode.bytes = 0
+
+ropt.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const options = []
+  let rdlen = buf.readUInt16BE(offset)
+  offset += 2
+  let o = 0
+  while (rdlen > 0) {
+    options[o++] = roption.decode(buf, offset)
+    offset += roption.decode.bytes
+    rdlen -= roption.decode.bytes
+  }
+  ropt.decode.bytes = offset - oldOffset
+  return options
+}
+
+ropt.decode.bytes = 0
+
+ropt.encodingLength = function (options) {
+  return 2 + encodingLengthList(options || [], roption)
+}
+
+const rdnskey = exports.dnskey = {}
+
+rdnskey.PROTOCOL_DNSSEC = 3
+rdnskey.ZONE_KEY = 0x80
+rdnskey.SECURE_ENTRYPOINT = 0x8000
+
+rdnskey.encode = function (key, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rdnskey.encodingLength(key))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const keydata = key.key
+  if (!Buffer.isBuffer(keydata)) {
+    throw new Error('Key must be a Buffer')
+  }
+
+  offset += 2 // Leave space for length
+  buf.writeUInt16BE(key.flags, offset)
+  offset += 2
+  buf.writeUInt8(rdnskey.PROTOCOL_DNSSEC, offset)
+  offset += 1
+  buf.writeUInt8(key.algorithm, offset)
+  offset += 1
+  keydata.copy(buf, offset, 0, keydata.length)
+  offset += keydata.length
+
+  rdnskey.encode.bytes = offset - oldOffset
+  buf.writeUInt16BE(rdnskey.encode.bytes - 2, oldOffset)
+  return buf
+}
+
+rdnskey.encode.bytes = 0
+
+rdnskey.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  var key = {}
+  var length = buf.readUInt16BE(offset)
+  offset += 2
+  key.flags = buf.readUInt16BE(offset)
+  offset += 2
+  if (buf.readUInt8(offset) !== rdnskey.PROTOCOL_DNSSEC) {
+    throw new Error('Protocol must be 3')
+  }
+  offset += 1
+  key.algorithm = buf.readUInt8(offset)
+  offset += 1
+  key.key = buf.slice(offset, oldOffset + length + 2)
+  offset += key.key.length
+  rdnskey.decode.bytes = offset - oldOffset
+  return key
+}
+
+rdnskey.decode.bytes = 0
+
+rdnskey.encodingLength = function (key) {
+  return 6 + Buffer.byteLength(key.key)
+}
+
+const rrrsig = exports.rrsig = {}
+
+rrrsig.encode = function (sig, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rrrsig.encodingLength(sig))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const signature = sig.signature
+  if (!Buffer.isBuffer(signature)) {
+    throw new Error('Signature must be a Buffer')
+  }
+
+  offset += 2 // Leave space for length
+  buf.writeUInt16BE(types.toType(sig.typeCovered), offset)
+  offset += 2
+  buf.writeUInt8(sig.algorithm, offset)
+  offset += 1
+  buf.writeUInt8(sig.labels, offset)
+  offset += 1
+  buf.writeUInt32BE(sig.originalTTL, offset)
+  offset += 4
+  buf.writeUInt32BE(sig.expiration, offset)
+  offset += 4
+  buf.writeUInt32BE(sig.inception, offset)
+  offset += 4
+  buf.writeUInt16BE(sig.keyTag, offset)
+  offset += 2
+  name.encode(sig.signersName, buf, offset)
+  offset += name.encode.bytes
+  signature.copy(buf, offset, 0, signature.length)
+  offset += signature.length
+
+  rrrsig.encode.bytes = offset - oldOffset
+  buf.writeUInt16BE(rrrsig.encode.bytes - 2, oldOffset)
+  return buf
+}
+
+rrrsig.encode.bytes = 0
+
+rrrsig.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  var sig = {}
+  var length = buf.readUInt16BE(offset)
+  offset += 2
+  sig.typeCovered = types.toString(buf.readUInt16BE(offset))
+  offset += 2
+  sig.algorithm = buf.readUInt8(offset)
+  offset += 1
+  sig.labels = buf.readUInt8(offset)
+  offset += 1
+  sig.originalTTL = buf.readUInt32BE(offset)
+  offset += 4
+  sig.expiration = buf.readUInt32BE(offset)
+  offset += 4
+  sig.inception = buf.readUInt32BE(offset)
+  offset += 4
+  sig.keyTag = buf.readUInt16BE(offset)
+  offset += 2
+  sig.signersName = name.decode(buf, offset)
+  offset += name.decode.bytes
+  sig.signature = buf.slice(offset, oldOffset + length + 2)
+  offset += sig.signature.length
+  rrrsig.decode.bytes = offset - oldOffset
+  return sig
+}
+
+rrrsig.decode.bytes = 0
+
+rrrsig.encodingLength = function (sig) {
+  return 20 +
+    name.encodingLength(sig.signersName) +
+    Buffer.byteLength(sig.signature)
+}
+
+const rrp = exports.rp = {}
+
+rrp.encode = function (data, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rrp.encodingLength(data))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  offset += 2 // Leave space for length
+  name.encode(data.mbox || '.', buf, offset)
+  offset += name.encode.bytes
+  name.encode(data.txt || '.', buf, offset)
+  offset += name.encode.bytes
+  rrp.encode.bytes = offset - oldOffset
+  buf.writeUInt16BE(rrp.encode.bytes - 2, oldOffset)
+  return buf
+}
+
+rrp.encode.bytes = 0
+
+rrp.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const data = {}
+  offset += 2
+  data.mbox = name.decode(buf, offset) || '.'
+  offset += name.decode.bytes
+  data.txt = name.decode(buf, offset) || '.'
+  offset += name.decode.bytes
+  rrp.decode.bytes = offset - oldOffset
+  return data
+}
+
+rrp.decode.bytes = 0
+
+rrp.encodingLength = function (data) {
+  return 2 + name.encodingLength(data.mbox || '.') + name.encodingLength(data.txt || '.')
+}
+
+const typebitmap = {}
+
+typebitmap.encode = function (typelist, buf, offset) {
+  if (!buf) buf = Buffer.alloc(typebitmap.encodingLength(typelist))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  var typesByWindow = []
+  for (var i = 0; i < typelist.length; i++) {
+    var typeid = types.toType(typelist[i])
+    if (typesByWindow[typeid >> 8] === undefined) {
+      typesByWindow[typeid >> 8] = []
+    }
+    typesByWindow[typeid >> 8][(typeid >> 3) & 0x1F] |= 1 << (7 - (typeid & 0x7))
+  }
+
+  for (i = 0; i < typesByWindow.length; i++) {
+    if (typesByWindow[i] !== undefined) {
+      var windowBuf = Buffer.from(typesByWindow[i])
+      buf.writeUInt8(i, offset)
+      offset += 1
+      buf.writeUInt8(windowBuf.length, offset)
+      offset += 1
+      windowBuf.copy(buf, offset)
+      offset += windowBuf.length
+    }
+  }
+
+  typebitmap.encode.bytes = offset - oldOffset
+  return buf
+}
+
+typebitmap.encode.bytes = 0
+
+typebitmap.decode = function (buf, offset, length) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  var typelist = []
+  while (offset - oldOffset < length) {
+    var window = buf.readUInt8(offset)
+    offset += 1
+    var windowLength = buf.readUInt8(offset)
+    offset += 1
+    for (var i = 0; i < windowLength; i++) {
+      var b = buf.readUInt8(offset + i)
+      for (var j = 0; j < 8; j++) {
+        if (b & (1 << (7 - j))) {
+          var typeid = types.toString((window << 8) | (i << 3) | j)
+          typelist.push(typeid)
+        }
+      }
+    }
+    offset += windowLength
+  }
+
+  typebitmap.decode.bytes = offset - oldOffset
+  return typelist
+}
+
+typebitmap.decode.bytes = 0
+
+typebitmap.encodingLength = function (typelist) {
+  var extents = []
+  for (var i = 0; i < typelist.length; i++) {
+    var typeid = types.toType(typelist[i])
+    extents[typeid >> 8] = Math.max(extents[typeid >> 8] || 0, typeid & 0xFF)
+  }
+
+  var len = 0
+  for (i = 0; i < extents.length; i++) {
+    if (extents[i] !== undefined) {
+      len += 2 + Math.ceil((extents[i] + 1) / 8)
+    }
+  }
+
+  return len
+}
+
+const rnsec = exports.nsec = {}
+
+rnsec.encode = function (record, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rnsec.encodingLength(record))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  offset += 2 // Leave space for length
+  name.encode(record.nextDomain, buf, offset)
+  offset += name.encode.bytes
+  typebitmap.encode(record.rrtypes, buf, offset)
+  offset += typebitmap.encode.bytes
+
+  rnsec.encode.bytes = offset - oldOffset
+  buf.writeUInt16BE(rnsec.encode.bytes - 2, oldOffset)
+  return buf
+}
+
+rnsec.encode.bytes = 0
+
+rnsec.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  var record = {}
+  var length = buf.readUInt16BE(offset)
+  offset += 2
+  record.nextDomain = name.decode(buf, offset)
+  offset += name.decode.bytes
+  record.rrtypes = typebitmap.decode(buf, offset, length - (offset - oldOffset))
+  offset += typebitmap.decode.bytes
+
+  rnsec.decode.bytes = offset - oldOffset
+  return record
+}
+
+rnsec.decode.bytes = 0
+
+rnsec.encodingLength = function (record) {
+  return 2 +
+    name.encodingLength(record.nextDomain) +
+    typebitmap.encodingLength(record.rrtypes)
+}
+
+const rnsec3 = exports.nsec3 = {}
+
+rnsec3.encode = function (record, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rnsec3.encodingLength(record))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const salt = record.salt
+  if (!Buffer.isBuffer(salt)) {
+    throw new Error('salt must be a Buffer')
+  }
+
+  const nextDomain = record.nextDomain
+  if (!Buffer.isBuffer(nextDomain)) {
+    throw new Error('nextDomain must be a Buffer')
+  }
+
+  offset += 2 // Leave space for length
+  buf.writeUInt8(record.algorithm, offset)
+  offset += 1
+  buf.writeUInt8(record.flags, offset)
+  offset += 1
+  buf.writeUInt16BE(record.iterations, offset)
+  offset += 2
+  buf.writeUInt8(salt.length, offset)
+  offset += 1
+  salt.copy(buf, offset, 0, salt.length)
+  offset += salt.length
+  buf.writeUInt8(nextDomain.length, offset)
+  offset += 1
+  nextDomain.copy(buf, offset, 0, nextDomain.length)
+  offset += nextDomain.length
+  typebitmap.encode(record.rrtypes, buf, offset)
+  offset += typebitmap.encode.bytes
+
+  rnsec3.encode.bytes = offset - oldOffset
+  buf.writeUInt16BE(rnsec3.encode.bytes - 2, oldOffset)
+  return buf
+}
+
+rnsec3.encode.bytes = 0
+
+rnsec3.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  var record = {}
+  var length = buf.readUInt16BE(offset)
+  offset += 2
+  record.algorithm = buf.readUInt8(offset)
+  offset += 1
+  record.flags = buf.readUInt8(offset)
+  offset += 1
+  record.iterations = buf.readUInt16BE(offset)
+  offset += 2
+  const saltLength = buf.readUInt8(offset)
+  offset += 1
+  record.salt = buf.slice(offset, offset + saltLength)
+  offset += saltLength
+  const hashLength = buf.readUInt8(offset)
+  offset += 1
+  record.nextDomain = buf.slice(offset, offset + hashLength)
+  offset += hashLength
+  record.rrtypes = typebitmap.decode(buf, offset, length - (offset - oldOffset))
+  offset += typebitmap.decode.bytes
+
+  rnsec3.decode.bytes = offset - oldOffset
+  return record
+}
+
+rnsec3.decode.bytes = 0
+
+rnsec3.encodingLength = function (record) {
+  return 8 +
+    record.salt.length +
+    record.nextDomain.length +
+    typebitmap.encodingLength(record.rrtypes)
+}
+
+const rds = exports.ds = {}
+
+rds.encode = function (digest, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rds.encodingLength(digest))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const digestdata = digest.digest
+  if (!Buffer.isBuffer(digestdata)) {
+    throw new Error('Digest must be a Buffer')
+  }
+
+  offset += 2 // Leave space for length
+  buf.writeUInt16BE(digest.keyTag, offset)
+  offset += 2
+  buf.writeUInt8(digest.algorithm, offset)
+  offset += 1
+  buf.writeUInt8(digest.digestType, offset)
+  offset += 1
+  digestdata.copy(buf, offset, 0, digestdata.length)
+  offset += digestdata.length
+
+  rds.encode.bytes = offset - oldOffset
+  buf.writeUInt16BE(rds.encode.bytes - 2, oldOffset)
+  return buf
+}
+
+rds.encode.bytes = 0
+
+rds.decode = function (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  var digest = {}
+  var length = buf.readUInt16BE(offset)
+  offset += 2
+  digest.keyTag = buf.readUInt16BE(offset)
+  offset += 2
+  digest.algorithm = buf.readUInt8(offset)
+  offset += 1
+  digest.digestType = buf.readUInt8(offset)
+  offset += 1
+  digest.digest = buf.slice(offset, oldOffset + length + 2)
+  offset += digest.digest.length
+  rds.decode.bytes = offset - oldOffset
+  return digest
+}
+
+rds.decode.bytes = 0
+
+rds.encodingLength = function (digest) {
+  return 6 + Buffer.byteLength(digest.digest)
+}
+
+const rsshfp = exports.sshfp = {}
+
+rsshfp.getFingerprintLengthForHashType = function getFingerprintLengthForHashType (hashType) {
+  switch (hashType) {
+    case 1: return 20
+    case 2: return 32
+  }
+}
+
+rsshfp.encode = function encode (record, buf, offset) {
+  if (!buf) buf = Buffer.alloc(rsshfp.encodingLength(record))
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  offset += 2 // The function call starts with the offset pointer at the RDLENGTH field, not the RDATA one
+  buf[offset] = record.algorithm
+  offset += 1
+  buf[offset] = record.hash
+  offset += 1
+
+  const fingerprintBuf = Buffer.from(record.fingerprint.toUpperCase(), 'hex')
+  if (fingerprintBuf.length !== rsshfp.getFingerprintLengthForHashType(record.hash)) {
+    throw new Error('Invalid fingerprint length')
+  }
+  fingerprintBuf.copy(buf, offset)
+  offset += fingerprintBuf.byteLength
+
+  rsshfp.encode.bytes = offset - oldOffset
+  buf.writeUInt16BE(rsshfp.encode.bytes - 2, oldOffset)
+
+  return buf
+}
+
+rsshfp.encode.bytes = 0
+
+rsshfp.decode = function decode (buf, offset) {
+  if (!offset) offset = 0
+  const oldOffset = offset
+
+  const record = {}
+  offset += 2 // Account for the RDLENGTH field
+  record.algorithm = buf[offset]
+  offset += 1
+  record.hash = buf[offset]
+  offset += 1
+
+  const fingerprintLength = rsshfp.getFingerprintLengthForHashType(record.hash)
+  record.fingerprint = buf.slice(offset, offset + fingerprintLength).toString('hex').toUpperCase()
+  offset += fingerprintLength
+  rsshfp.decode.bytes = offset - oldOffset
+  return record
+}
+
+rsshfp.decode.bytes = 0
+
+rsshfp.encodingLength = function (record) {
+  return 4 + Buffer.from(record.fingerprint, 'hex').byteLength
+}
+
+const renc = exports.record = function (type) {
+  switch (type.toUpperCase()) {
+    case 'A': return ra
+    case 'PTR': return rptr
+    case 'CNAME': return rcname
+    case 'DNAME': return rdname
+    case 'TXT': return rtxt
+    case 'NULL': return rnull
+    case 'AAAA': return raaaa
+    case 'SRV': return rsrv
+    case 'HINFO': return rhinfo
+    case 'CAA': return rcaa
+    case 'NS': return rns
+    case 'SOA': return rsoa
+    case 'MX': return rmx
+    case 'OPT': return ropt
+    case 'DNSKEY': return rdnskey
+    case 'RRSIG': return rrrsig
+    case 'RP': return rrp
+    case 'NSEC': return rnsec
+    case 'NSEC3': return rnsec3
+    case 'SSHFP': return rsshfp
+    case 'DS': return rds
+  }
+  return runknown
+}
+
+const answer = exports.answer = {}
+
+answer.encode = function (a, buf, offset) {
+  if (!buf) buf = Buffer.alloc(answer.encodingLength(a))
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+
+  name.encode(a.name, buf, offset)
+  offset += name.encode.bytes
+
+  buf.writeUInt16BE(types.toType(a.type), offset)
+
+  if (a.type.toUpperCase() === 'OPT') {
+    if (a.name !== '.') {
+      throw new Error('OPT name must be root.')
+    }
+    buf.writeUInt16BE(a.udpPayloadSize || 4096, offset + 2)
+    buf.writeUInt8(a.extendedRcode || 0, offset + 4)
+    buf.writeUInt8(a.ednsVersion || 0, offset + 5)
+    buf.writeUInt16BE(a.flags || 0, offset + 6)
+
+    offset += 8
+    ropt.encode(a.options || [], buf, offset)
+    offset += ropt.encode.bytes
+  } else {
+    let klass = classes.toClass(a.class === undefined ? 'IN' : a.class)
+    if (a.flush) klass |= FLUSH_MASK // the 1st bit of the class is the flush bit
+    buf.writeUInt16BE(klass, offset + 2)
+    buf.writeUInt32BE(a.ttl || 0, offset + 4)
+
+    offset += 8
+    const enc = renc(a.type)
+    enc.encode(a.data, buf, offset)
+    offset += enc.encode.bytes
+  }
+
+  answer.encode.bytes = offset - oldOffset
+  return buf
+}
+
+answer.encode.bytes = 0
+
+answer.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const a = {}
+  const oldOffset = offset
+
+  a.name = name.decode(buf, offset)
+  offset += name.decode.bytes
+  a.type = types.toString(buf.readUInt16BE(offset))
+  if (a.type === 'OPT') {
+    a.udpPayloadSize = buf.readUInt16BE(offset + 2)
+    a.extendedRcode = buf.readUInt8(offset + 4)
+    a.ednsVersion = buf.readUInt8(offset + 5)
+    a.flags = buf.readUInt16BE(offset + 6)
+    a.flag_do = ((a.flags >> 15) & 0x1) === 1
+    a.options = ropt.decode(buf, offset + 8)
+    offset += 8 + ropt.decode.bytes
+  } else {
+    const klass = buf.readUInt16BE(offset + 2)
+    a.ttl = buf.readUInt32BE(offset + 4)
+
+    a.class = classes.toString(klass & NOT_FLUSH_MASK)
+    a.flush = !!(klass & FLUSH_MASK)
+
+    const enc = renc(a.type)
+    a.data = enc.decode(buf, offset + 8)
+    offset += 8 + enc.decode.bytes
+  }
+
+  answer.decode.bytes = offset - oldOffset
+  return a
+}
+
+answer.decode.bytes = 0
+
+answer.encodingLength = function (a) {
+  const data = (a.data !== null && a.data !== undefined) ? a.data : a.options
+  return name.encodingLength(a.name) + 8 + renc(a.type).encodingLength(data)
+}
+
+const question = exports.question = {}
+
+question.encode = function (q, buf, offset) {
+  if (!buf) buf = Buffer.alloc(question.encodingLength(q))
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+
+  name.encode(q.name, buf, offset)
+  offset += name.encode.bytes
+
+  buf.writeUInt16BE(types.toType(q.type), offset)
+  offset += 2
+
+  buf.writeUInt16BE(classes.toClass(q.class === undefined ? 'IN' : q.class), offset)
+  offset += 2
+
+  question.encode.bytes = offset - oldOffset
+  return q
+}
+
+question.encode.bytes = 0
+
+question.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+  const q = {}
+
+  q.name = name.decode(buf, offset)
+  offset += name.decode.bytes
+
+  q.type = types.toString(buf.readUInt16BE(offset))
+  offset += 2
+
+  q.class = classes.toString(buf.readUInt16BE(offset))
+  offset += 2
+
+  const qu = !!(q.class & QU_MASK)
+  if (qu) q.class &= NOT_QU_MASK
+
+  question.decode.bytes = offset - oldOffset
+  return q
+}
+
+question.decode.bytes = 0
+
+question.encodingLength = function (q) {
+  return name.encodingLength(q.name) + 4
+}
+
+exports.AUTHORITATIVE_ANSWER = 1 << 10
+exports.TRUNCATED_RESPONSE = 1 << 9
+exports.RECURSION_DESIRED = 1 << 8
+exports.RECURSION_AVAILABLE = 1 << 7
+exports.AUTHENTIC_DATA = 1 << 5
+exports.CHECKING_DISABLED = 1 << 4
+exports.DNSSEC_OK = 1 << 15
+
+exports.encode = function (result, buf, offset) {
+  const allocing = !buf
+
+  if (allocing) buf = Buffer.alloc(exports.encodingLength(result))
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+
+  if (!result.questions) result.questions = []
+  if (!result.answers) result.answers = []
+  if (!result.authorities) result.authorities = []
+  if (!result.additionals) result.additionals = []
+
+  header.encode(result, buf, offset)
+  offset += header.encode.bytes
+
+  offset = encodeList(result.questions, question, buf, offset)
+  offset = encodeList(result.answers, answer, buf, offset)
+  offset = encodeList(result.authorities, answer, buf, offset)
+  offset = encodeList(result.additionals, answer, buf, offset)
+
+  exports.encode.bytes = offset - oldOffset
+
+  // just a quick sanity check
+  if (allocing && exports.encode.bytes !== buf.length) {
+    return buf.slice(0, exports.encode.bytes)
+  }
+
+  return buf
+}
+
+exports.encode.bytes = 0
+
+exports.decode = function (buf, offset) {
+  if (!offset) offset = 0
+
+  const oldOffset = offset
+  const result = header.decode(buf, offset)
+  offset += header.decode.bytes
+
+  offset = decodeList(result.questions, question, buf, offset)
+  offset = decodeList(result.answers, answer, buf, offset)
+  offset = decodeList(result.authorities, answer, buf, offset)
+  offset = decodeList(result.additionals, answer, buf, offset)
+
+  exports.decode.bytes = offset - oldOffset
+
+  return result
+}
+
+exports.decode.bytes = 0
+
+exports.encodingLength = function (result) {
+  return header.encodingLength(result) +
+    encodingLengthList(result.questions || [], question) +
+    encodingLengthList(result.answers || [], answer) +
+    encodingLengthList(result.authorities || [], answer) +
+    encodingLengthList(result.additionals || [], answer)
+}
+
+exports.streamEncode = function (result) {
+  const buf = exports.encode(result)
+  const sbuf = Buffer.alloc(2)
+  sbuf.writeUInt16BE(buf.byteLength)
+  const combine = Buffer.concat([sbuf, buf])
+  exports.streamEncode.bytes = combine.byteLength
+  return combine
+}
+
+exports.streamEncode.bytes = 0
+
+exports.streamDecode = function (sbuf) {
+  const len = sbuf.readUInt16BE(0)
+  if (sbuf.byteLength < len + 2) {
+    // not enough data
+    return null
+  }
+  const result = exports.decode(sbuf.slice(2))
+  exports.streamDecode.bytes = exports.decode.bytes
+  return result
+}
+
+exports.streamDecode.bytes = 0
+
+function encodingLengthList (list, enc) {
+  let len = 0
+  for (let i = 0; i < list.length; i++) len += enc.encodingLength(list[i])
+  return len
+}
+
+function encodeList (list, enc, buf, offset) {
+  for (let i = 0; i < list.length; i++) {
+    enc.encode(list[i], buf, offset)
+    offset += enc.encode.bytes
+  }
+  return offset
+}
+
+function decodeList (list, enc, buf, offset) {
+  for (let i = 0; i < list.length; i++) {
+    list[i] = enc.decode(buf, offset)
+    offset += enc.decode.bytes
+  }
+  return offset
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDU2OC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9kbnMtcGFja2V0L2luZGV4LmpzPzkyOWEiXSwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnXG5cbmNvbnN0IEJ1ZmZlciA9IHJlcXVpcmUoJ2J1ZmZlcicpLkJ1ZmZlclxuY29uc3QgdHlwZXMgPSByZXF1aXJlKCcuL3R5cGVzJylcbmNvbnN0IHJjb2RlcyA9IHJlcXVpcmUoJy4vcmNvZGVzJylcbmNvbnN0IG9wY29kZXMgPSByZXF1aXJlKCcuL29wY29kZXMnKVxuY29uc3QgY2xhc3NlcyA9IHJlcXVpcmUoJy4vY2xhc3NlcycpXG5jb25zdCBvcHRpb25jb2RlcyA9IHJlcXVpcmUoJy4vb3B0aW9uY29kZXMnKVxuY29uc3QgaXAgPSByZXF1aXJlKCdAbGVpY2h0Z2V3aWNodC9pcC1jb2RlYycpXG5cbmNvbnN0IFFVRVJZX0ZMQUcgPSAwXG5jb25zdCBSRVNQT05TRV9GTEFHID0gMSA8PCAxNVxuY29uc3QgRkxVU0hfTUFTSyA9IDEgPDwgMTVcbmNvbnN0IE5PVF9GTFVTSF9NQVNLID0gfkZMVVNIX01BU0tcbmNvbnN0IFFVX01BU0sgPSAxIDw8IDE1XG5jb25zdCBOT1RfUVVfTUFTSyA9IH5RVV9NQVNLXG5cbmNvbnN0IG5hbWUgPSBleHBvcnRzLm5hbWUgPSB7fVxuXG5uYW1lLmVuY29kZSA9IGZ1bmN0aW9uIChzdHIsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghYnVmKSBidWYgPSBCdWZmZXIuYWxsb2MobmFtZS5lbmNvZGluZ0xlbmd0aChzdHIpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICAvLyBzdHJpcCBsZWFkaW5nIGFuZCB0cmFpbGluZyAuXG4gIGNvbnN0IG4gPSBzdHIucmVwbGFjZSgvXlxcLnxcXC4kL2dtLCAnJylcbiAgaWYgKG4ubGVuZ3RoKSB7XG4gICAgY29uc3QgbGlzdCA9IG4uc3BsaXQoJy4nKVxuXG4gICAgZm9yIChsZXQgaSA9IDA7IGkgPCBsaXN0Lmxlbmd0aDsgaSsrKSB7XG4gICAgICBjb25zdCBsZW4gPSBidWYud3JpdGUobGlzdFtpXSwgb2Zmc2V0ICsgMSlcbiAgICAgIGJ1ZltvZmZzZXRdID0gbGVuXG4gICAgICBvZmZzZXQgKz0gbGVuICsgMVxuICAgIH1cbiAgfVxuXG4gIGJ1ZltvZmZzZXQrK10gPSAwXG5cbiAgbmFtZS5lbmNvZGUuYnl0ZXMgPSBvZmZzZXQgLSBvbGRPZmZzZXRcbiAgcmV0dXJuIGJ1ZlxufVxuXG5uYW1lLmVuY29kZS5ieXRlcyA9IDBcblxubmFtZS5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBsaXN0ID0gW11cbiAgbGV0IG9sZE9mZnNldCA9IG9mZnNldFxuICBsZXQgdG90YWxMZW5ndGggPSAwXG4gIGxldCBjb25zdW1lZEJ5dGVzID0gMFxuICBsZXQganVtcGVkID0gZmFsc2VcblxuICB3aGlsZSAodHJ1ZSkge1xuICAgIGlmIChvZmZzZXQgPj0gYnVmLmxlbmd0aCkge1xuICAgICAgdGhyb3cgbmV3IEVycm9yKCdDYW5ub3QgZGVjb2RlIG5hbWUgKGJ1ZmZlciBvdmVyZmxvdyknKVxuICAgIH1cbiAgICBjb25zdCBsZW4gPSBidWZbb2Zmc2V0KytdXG4gICAgY29uc3VtZWRCeXRlcyArPSBqdW1wZWQgPyAwIDogMVxuXG4gICAgaWYgKGxlbiA9PT0gMCkge1xuICAgICAgYnJlYWtcbiAgICB9IGVsc2UgaWYgKChsZW4gJiAweGMwKSA9PT0gMCkge1xuICAgICAgaWYgKG9mZnNldCArIGxlbiA+IGJ1Zi5sZW5ndGgpIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKCdDYW5ub3QgZGVjb2RlIG5hbWUgKGJ1ZmZlciBvdmVyZmxvdyknKVxuICAgICAgfVxuICAgICAgdG90YWxMZW5ndGggKz0gbGVuICsgMVxuICAgICAgaWYgKHRvdGFsTGVuZ3RoID4gMjU0KSB7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcignQ2Fubm90IGRlY29kZSBuYW1lIChuYW1lIHRvbyBsb25nKScpXG4gICAgICB9XG4gICAgICBsaXN0LnB1c2goYnVmLnRvU3RyaW5nKCd1dGYtOCcsIG9mZnNldCwgb2Zmc2V0ICsgbGVuKSlcbiAgICAgIG9mZnNldCArPSBsZW5cbiAgICAgIGNvbnN1bWVkQnl0ZXMgKz0ganVtcGVkID8gMCA6IGxlblxuICAgIH0gZWxzZSBpZiAoKGxlbiAmIDB4YzApID09PSAweGMwKSB7XG4gICAgICBpZiAob2Zmc2V0ICsgMSA+IGJ1Zi5sZW5ndGgpIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKCdDYW5ub3QgZGVjb2RlIG5hbWUgKGJ1ZmZlciBvdmVyZmxvdyknKVxuICAgICAgfVxuICAgICAgY29uc3QganVtcE9mZnNldCA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0IC0gMSkgLSAweGMwMDBcbiAgICAgIGlmIChqdW1wT2Zmc2V0ID49IG9sZE9mZnNldCkge1xuICAgICAgICAvLyBBbGxvdyBvbmx5IHBvaW50ZXJzIHRvIHByaW9yIGRhdGEuIFJGQyAxMDM1LCBzZWN0aW9uIDQuMS40IHN0YXRlczpcbiAgICAgICAgLy8gXCJbLi4uXSBhbiBlbnRpcmUgZG9tYWluIG5hbWUgb3IgYSBsaXN0IG9mIGxhYmVscyBhdCB0aGUgZW5kIG9mIGEgZG9tYWluIG5hbWVcbiAgICAgICAgLy8gaXMgcmVwbGFjZWQgd2l0aCBhIHBvaW50ZXIgdG8gYSBwcmlvciBvY2N1cmFuY2UgKHNpYykgb2YgdGhlIHNhbWUgbmFtZS5cIlxuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ0Nhbm5vdCBkZWNvZGUgbmFtZSAoYmFkIHBvaW50ZXIpJylcbiAgICAgIH1cbiAgICAgIG9mZnNldCA9IGp1bXBPZmZzZXRcbiAgICAgIG9sZE9mZnNldCA9IGp1bXBPZmZzZXRcbiAgICAgIGNvbnN1bWVkQnl0ZXMgKz0ganVtcGVkID8gMCA6IDFcbiAgICAgIGp1bXBlZCA9IHRydWVcbiAgICB9IGVsc2Uge1xuICAgICAgdGhyb3cgbmV3IEVycm9yKCdDYW5ub3QgZGVjb2RlIG5hbWUgKGJhZCBsYWJlbCknKVxuICAgIH1cbiAgfVxuXG4gIG5hbWUuZGVjb2RlLmJ5dGVzID0gY29uc3VtZWRCeXRlc1xuICByZXR1cm4gbGlzdC5sZW5ndGggPT09IDAgPyAnLicgOiBsaXN0LmpvaW4oJy4nKVxufVxuXG5uYW1lLmRlY29kZS5ieXRlcyA9IDBcblxubmFtZS5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uIChuKSB7XG4gIGlmIChuID09PSAnLicgfHwgbiA9PT0gJy4uJykgcmV0dXJuIDFcbiAgcmV0dXJuIEJ1ZmZlci5ieXRlTGVuZ3RoKG4ucmVwbGFjZSgvXlxcLnxcXC4kL2dtLCAnJykpICsgMlxufVxuXG5jb25zdCBzdHJpbmcgPSB7fVxuXG5zdHJpbmcuZW5jb2RlID0gZnVuY3Rpb24gKHMsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghYnVmKSBidWYgPSBCdWZmZXIuYWxsb2Moc3RyaW5nLmVuY29kaW5nTGVuZ3RoKHMpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGNvbnN0IGxlbiA9IGJ1Zi53cml0ZShzLCBvZmZzZXQgKyAxKVxuICBidWZbb2Zmc2V0XSA9IGxlblxuICBzdHJpbmcuZW5jb2RlLmJ5dGVzID0gbGVuICsgMVxuICByZXR1cm4gYnVmXG59XG5cbnN0cmluZy5lbmNvZGUuYnl0ZXMgPSAwXG5cbnN0cmluZy5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBsZW4gPSBidWZbb2Zmc2V0XVxuICBjb25zdCBzID0gYnVmLnRvU3RyaW5nKCd1dGYtOCcsIG9mZnNldCArIDEsIG9mZnNldCArIDEgKyBsZW4pXG4gIHN0cmluZy5kZWNvZGUuYnl0ZXMgPSBsZW4gKyAxXG4gIHJldHVybiBzXG59XG5cbnN0cmluZy5kZWNvZGUuYnl0ZXMgPSAwXG5cbnN0cmluZy5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uIChzKSB7XG4gIHJldHVybiBCdWZmZXIuYnl0ZUxlbmd0aChzKSArIDFcbn1cblxuY29uc3QgaGVhZGVyID0ge31cblxuaGVhZGVyLmVuY29kZSA9IGZ1bmN0aW9uIChoLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gaGVhZGVyLmVuY29kaW5nTGVuZ3RoKGgpXG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG5cbiAgY29uc3QgZmxhZ3MgPSAoaC5mbGFncyB8fCAwKSAmIDMyNzY3XG4gIGNvbnN0IHR5cGUgPSBoLnR5cGUgPT09ICdyZXNwb25zZScgPyBSRVNQT05TRV9GTEFHIDogUVVFUllfRkxBR1xuXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKGguaWQgfHwgMCwgb2Zmc2V0KVxuICBidWYud3JpdGVVSW50MTZCRShmbGFncyB8IHR5cGUsIG9mZnNldCArIDIpXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKGgucXVlc3Rpb25zLmxlbmd0aCwgb2Zmc2V0ICsgNClcbiAgYnVmLndyaXRlVUludDE2QkUoaC5hbnN3ZXJzLmxlbmd0aCwgb2Zmc2V0ICsgNilcbiAgYnVmLndyaXRlVUludDE2QkUoaC5hdXRob3JpdGllcy5sZW5ndGgsIG9mZnNldCArIDgpXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKGguYWRkaXRpb25hbHMubGVuZ3RoLCBvZmZzZXQgKyAxMClcblxuICByZXR1cm4gYnVmXG59XG5cbmhlYWRlci5lbmNvZGUuYnl0ZXMgPSAxMlxuXG5oZWFkZXIuZGVjb2RlID0gZnVuY3Rpb24gKGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG4gIGlmIChidWYubGVuZ3RoIDwgMTIpIHRocm93IG5ldyBFcnJvcignSGVhZGVyIG11c3QgYmUgMTIgYnl0ZXMnKVxuICBjb25zdCBmbGFncyA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0ICsgMilcblxuICByZXR1cm4ge1xuICAgIGlkOiBidWYucmVhZFVJbnQxNkJFKG9mZnNldCksXG4gICAgdHlwZTogZmxhZ3MgJiBSRVNQT05TRV9GTEFHID8gJ3Jlc3BvbnNlJyA6ICdxdWVyeScsXG4gICAgZmxhZ3M6IGZsYWdzICYgMzI3NjcsXG4gICAgZmxhZ19xcjogKChmbGFncyA+PiAxNSkgJiAweDEpID09PSAxLFxuICAgIG9wY29kZTogb3Bjb2Rlcy50b1N0cmluZygoZmxhZ3MgPj4gMTEpICYgMHhmKSxcbiAgICBmbGFnX2FhOiAoKGZsYWdzID4+IDEwKSAmIDB4MSkgPT09IDEsXG4gICAgZmxhZ190YzogKChmbGFncyA+PiA5KSAmIDB4MSkgPT09IDEsXG4gICAgZmxhZ19yZDogKChmbGFncyA+PiA4KSAmIDB4MSkgPT09IDEsXG4gICAgZmxhZ19yYTogKChmbGFncyA+PiA3KSAmIDB4MSkgPT09IDEsXG4gICAgZmxhZ196OiAoKGZsYWdzID4+IDYpICYgMHgxKSA9PT0gMSxcbiAgICBmbGFnX2FkOiAoKGZsYWdzID4+IDUpICYgMHgxKSA9PT0gMSxcbiAgICBmbGFnX2NkOiAoKGZsYWdzID4+IDQpICYgMHgxKSA9PT0gMSxcbiAgICByY29kZTogcmNvZGVzLnRvU3RyaW5nKGZsYWdzICYgMHhmKSxcbiAgICBxdWVzdGlvbnM6IG5ldyBBcnJheShidWYucmVhZFVJbnQxNkJFKG9mZnNldCArIDQpKSxcbiAgICBhbnN3ZXJzOiBuZXcgQXJyYXkoYnVmLnJlYWRVSW50MTZCRShvZmZzZXQgKyA2KSksXG4gICAgYXV0aG9yaXRpZXM6IG5ldyBBcnJheShidWYucmVhZFVJbnQxNkJFKG9mZnNldCArIDgpKSxcbiAgICBhZGRpdGlvbmFsczogbmV3IEFycmF5KGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0ICsgMTApKVxuICB9XG59XG5cbmhlYWRlci5kZWNvZGUuYnl0ZXMgPSAxMlxuXG5oZWFkZXIuZW5jb2RpbmdMZW5ndGggPSBmdW5jdGlvbiAoKSB7XG4gIHJldHVybiAxMlxufVxuXG5jb25zdCBydW5rbm93biA9IGV4cG9ydHMudW5rbm93biA9IHt9XG5cbnJ1bmtub3duLmVuY29kZSA9IGZ1bmN0aW9uIChkYXRhLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHJ1bmtub3duLmVuY29kaW5nTGVuZ3RoKGRhdGEpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKGRhdGEubGVuZ3RoLCBvZmZzZXQpXG4gIGRhdGEuY29weShidWYsIG9mZnNldCArIDIpXG5cbiAgcnVua25vd24uZW5jb2RlLmJ5dGVzID0gZGF0YS5sZW5ndGggKyAyXG4gIHJldHVybiBidWZcbn1cblxucnVua25vd24uZW5jb2RlLmJ5dGVzID0gMFxuXG5ydW5rbm93bi5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBsZW4gPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcbiAgY29uc3QgZGF0YSA9IGJ1Zi5zbGljZShvZmZzZXQgKyAyLCBvZmZzZXQgKyAyICsgbGVuKVxuICBydW5rbm93bi5kZWNvZGUuYnl0ZXMgPSBsZW4gKyAyXG4gIHJldHVybiBkYXRhXG59XG5cbnJ1bmtub3duLmRlY29kZS5ieXRlcyA9IDBcblxucnVua25vd24uZW5jb2RpbmdMZW5ndGggPSBmdW5jdGlvbiAoZGF0YSkge1xuICByZXR1cm4gZGF0YS5sZW5ndGggKyAyXG59XG5cbmNvbnN0IHJucyA9IGV4cG9ydHMubnMgPSB7fVxuXG5ybnMuZW5jb2RlID0gZnVuY3Rpb24gKGRhdGEsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghYnVmKSBidWYgPSBCdWZmZXIuYWxsb2Mocm5zLmVuY29kaW5nTGVuZ3RoKGRhdGEpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIG5hbWUuZW5jb2RlKGRhdGEsIGJ1Ziwgb2Zmc2V0ICsgMilcbiAgYnVmLndyaXRlVUludDE2QkUobmFtZS5lbmNvZGUuYnl0ZXMsIG9mZnNldClcbiAgcm5zLmVuY29kZS5ieXRlcyA9IG5hbWUuZW5jb2RlLmJ5dGVzICsgMlxuICByZXR1cm4gYnVmXG59XG5cbnJucy5lbmNvZGUuYnl0ZXMgPSAwXG5cbnJucy5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBsZW4gPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcbiAgY29uc3QgZGQgPSBuYW1lLmRlY29kZShidWYsIG9mZnNldCArIDIpXG5cbiAgcm5zLmRlY29kZS5ieXRlcyA9IGxlbiArIDJcbiAgcmV0dXJuIGRkXG59XG5cbnJucy5kZWNvZGUuYnl0ZXMgPSAwXG5cbnJucy5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uIChkYXRhKSB7XG4gIHJldHVybiBuYW1lLmVuY29kaW5nTGVuZ3RoKGRhdGEpICsgMlxufVxuXG5jb25zdCByc29hID0gZXhwb3J0cy5zb2EgPSB7fVxuXG5yc29hLmVuY29kZSA9IGZ1bmN0aW9uIChkYXRhLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHJzb2EuZW5jb2RpbmdMZW5ndGgoZGF0YSkpXG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG5cbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG4gIG9mZnNldCArPSAyXG4gIG5hbWUuZW5jb2RlKGRhdGEubW5hbWUsIGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gbmFtZS5lbmNvZGUuYnl0ZXNcbiAgbmFtZS5lbmNvZGUoZGF0YS5ybmFtZSwgYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBuYW1lLmVuY29kZS5ieXRlc1xuICBidWYud3JpdGVVSW50MzJCRShkYXRhLnNlcmlhbCB8fCAwLCBvZmZzZXQpXG4gIG9mZnNldCArPSA0XG4gIGJ1Zi53cml0ZVVJbnQzMkJFKGRhdGEucmVmcmVzaCB8fCAwLCBvZmZzZXQpXG4gIG9mZnNldCArPSA0XG4gIGJ1Zi53cml0ZVVJbnQzMkJFKGRhdGEucmV0cnkgfHwgMCwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gNFxuICBidWYud3JpdGVVSW50MzJCRShkYXRhLmV4cGlyZSB8fCAwLCBvZmZzZXQpXG4gIG9mZnNldCArPSA0XG4gIGJ1Zi53cml0ZVVJbnQzMkJFKGRhdGEubWluaW11bSB8fCAwLCBvZmZzZXQpXG4gIG9mZnNldCArPSA0XG5cbiAgYnVmLndyaXRlVUludDE2QkUob2Zmc2V0IC0gb2xkT2Zmc2V0IC0gMiwgb2xkT2Zmc2V0KVxuICByc29hLmVuY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gYnVmXG59XG5cbnJzb2EuZW5jb2RlLmJ5dGVzID0gMFxuXG5yc29hLmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuXG4gIGNvbnN0IGRhdGEgPSB7fVxuICBvZmZzZXQgKz0gMlxuICBkYXRhLm1uYW1lID0gbmFtZS5kZWNvZGUoYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBuYW1lLmRlY29kZS5ieXRlc1xuICBkYXRhLnJuYW1lID0gbmFtZS5kZWNvZGUoYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBuYW1lLmRlY29kZS5ieXRlc1xuICBkYXRhLnNlcmlhbCA9IGJ1Zi5yZWFkVUludDMyQkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gNFxuICBkYXRhLnJlZnJlc2ggPSBidWYucmVhZFVJbnQzMkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDRcbiAgZGF0YS5yZXRyeSA9IGJ1Zi5yZWFkVUludDMyQkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gNFxuICBkYXRhLmV4cGlyZSA9IGJ1Zi5yZWFkVUludDMyQkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gNFxuICBkYXRhLm1pbmltdW0gPSBidWYucmVhZFVJbnQzMkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDRcblxuICByc29hLmRlY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gZGF0YVxufVxuXG5yc29hLmRlY29kZS5ieXRlcyA9IDBcblxucnNvYS5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uIChkYXRhKSB7XG4gIHJldHVybiAyMiArIG5hbWUuZW5jb2RpbmdMZW5ndGgoZGF0YS5tbmFtZSkgKyBuYW1lLmVuY29kaW5nTGVuZ3RoKGRhdGEucm5hbWUpXG59XG5cbmNvbnN0IHJ0eHQgPSBleHBvcnRzLnR4dCA9IHt9XG5cbnJ0eHQuZW5jb2RlID0gZnVuY3Rpb24gKGRhdGEsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghQXJyYXkuaXNBcnJheShkYXRhKSkgZGF0YSA9IFtkYXRhXVxuICBmb3IgKGxldCBpID0gMDsgaSA8IGRhdGEubGVuZ3RoOyBpKyspIHtcbiAgICBpZiAodHlwZW9mIGRhdGFbaV0gPT09ICdzdHJpbmcnKSB7XG4gICAgICBkYXRhW2ldID0gQnVmZmVyLmZyb20oZGF0YVtpXSlcbiAgICB9XG4gICAgaWYgKCFCdWZmZXIuaXNCdWZmZXIoZGF0YVtpXSkpIHtcbiAgICAgIHRocm93IG5ldyBFcnJvcignTXVzdCBiZSBhIEJ1ZmZlcicpXG4gICAgfVxuICB9XG5cbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhydHh0LmVuY29kaW5nTGVuZ3RoKGRhdGEpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuICBvZmZzZXQgKz0gMlxuXG4gIGRhdGEuZm9yRWFjaChmdW5jdGlvbiAoZCkge1xuICAgIGJ1ZltvZmZzZXQrK10gPSBkLmxlbmd0aFxuICAgIGQuY29weShidWYsIG9mZnNldCwgMCwgZC5sZW5ndGgpXG4gICAgb2Zmc2V0ICs9IGQubGVuZ3RoXG4gIH0pXG5cbiAgYnVmLndyaXRlVUludDE2QkUob2Zmc2V0IC0gb2xkT2Zmc2V0IC0gMiwgb2xkT2Zmc2V0KVxuICBydHh0LmVuY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gYnVmXG59XG5cbnJ0eHQuZW5jb2RlLmJ5dGVzID0gMFxuXG5ydHh0LmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcbiAgbGV0IHJlbWFpbmluZyA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuXG4gIGxldCBkYXRhID0gW11cbiAgd2hpbGUgKHJlbWFpbmluZyA+IDApIHtcbiAgICBjb25zdCBsZW4gPSBidWZbb2Zmc2V0KytdXG4gICAgLS1yZW1haW5pbmdcbiAgICBpZiAocmVtYWluaW5nIDwgbGVuKSB7XG4gICAgICB0aHJvdyBuZXcgRXJyb3IoJ0J1ZmZlciBvdmVyZmxvdycpXG4gICAgfVxuICAgIGRhdGEucHVzaChidWYuc2xpY2Uob2Zmc2V0LCBvZmZzZXQgKyBsZW4pKVxuICAgIG9mZnNldCArPSBsZW5cbiAgICByZW1haW5pbmcgLT0gbGVuXG4gIH1cblxuICBydHh0LmRlY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gZGF0YVxufVxuXG5ydHh0LmRlY29kZS5ieXRlcyA9IDBcblxucnR4dC5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uIChkYXRhKSB7XG4gIGlmICghQXJyYXkuaXNBcnJheShkYXRhKSkgZGF0YSA9IFtkYXRhXVxuICBsZXQgbGVuZ3RoID0gMlxuICBkYXRhLmZvckVhY2goZnVuY3Rpb24gKGJ1Zikge1xuICAgIGlmICh0eXBlb2YgYnVmID09PSAnc3RyaW5nJykge1xuICAgICAgbGVuZ3RoICs9IEJ1ZmZlci5ieXRlTGVuZ3RoKGJ1ZikgKyAxXG4gICAgfSBlbHNlIHtcbiAgICAgIGxlbmd0aCArPSBidWYubGVuZ3RoICsgMVxuICAgIH1cbiAgfSlcbiAgcmV0dXJuIGxlbmd0aFxufVxuXG5jb25zdCBybnVsbCA9IGV4cG9ydHMubnVsbCA9IHt9XG5cbnJudWxsLmVuY29kZSA9IGZ1bmN0aW9uIChkYXRhLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHJudWxsLmVuY29kaW5nTGVuZ3RoKGRhdGEpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGlmICh0eXBlb2YgZGF0YSA9PT0gJ3N0cmluZycpIGRhdGEgPSBCdWZmZXIuZnJvbShkYXRhKVxuICBpZiAoIWRhdGEpIGRhdGEgPSBCdWZmZXIuYWxsb2MoMClcblxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcbiAgb2Zmc2V0ICs9IDJcblxuICBjb25zdCBsZW4gPSBkYXRhLmxlbmd0aFxuICBkYXRhLmNvcHkoYnVmLCBvZmZzZXQsIDAsIGxlbilcbiAgb2Zmc2V0ICs9IGxlblxuXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKG9mZnNldCAtIG9sZE9mZnNldCAtIDIsIG9sZE9mZnNldClcbiAgcm51bGwuZW5jb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiBidWZcbn1cblxucm51bGwuZW5jb2RlLmJ5dGVzID0gMFxuXG5ybnVsbC5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG4gIGNvbnN0IGxlbiA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KVxuXG4gIG9mZnNldCArPSAyXG5cbiAgY29uc3QgZGF0YSA9IGJ1Zi5zbGljZShvZmZzZXQsIG9mZnNldCArIGxlbilcbiAgb2Zmc2V0ICs9IGxlblxuXG4gIHJudWxsLmRlY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gZGF0YVxufVxuXG5ybnVsbC5kZWNvZGUuYnl0ZXMgPSAwXG5cbnJudWxsLmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKGRhdGEpIHtcbiAgaWYgKCFkYXRhKSByZXR1cm4gMlxuICByZXR1cm4gKEJ1ZmZlci5pc0J1ZmZlcihkYXRhKSA/IGRhdGEubGVuZ3RoIDogQnVmZmVyLmJ5dGVMZW5ndGgoZGF0YSkpICsgMlxufVxuXG5jb25zdCByaGluZm8gPSBleHBvcnRzLmhpbmZvID0ge31cblxucmhpbmZvLmVuY29kZSA9IGZ1bmN0aW9uIChkYXRhLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHJoaW5mby5lbmNvZGluZ0xlbmd0aChkYXRhKSlcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcbiAgb2Zmc2V0ICs9IDJcbiAgc3RyaW5nLmVuY29kZShkYXRhLmNwdSwgYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBzdHJpbmcuZW5jb2RlLmJ5dGVzXG4gIHN0cmluZy5lbmNvZGUoZGF0YS5vcywgYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBzdHJpbmcuZW5jb2RlLmJ5dGVzXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKG9mZnNldCAtIG9sZE9mZnNldCAtIDIsIG9sZE9mZnNldClcbiAgcmhpbmZvLmVuY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gYnVmXG59XG5cbnJoaW5mby5lbmNvZGUuYnl0ZXMgPSAwXG5cbnJoaW5mby5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICBjb25zdCBkYXRhID0ge31cbiAgb2Zmc2V0ICs9IDJcbiAgZGF0YS5jcHUgPSBzdHJpbmcuZGVjb2RlKGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gc3RyaW5nLmRlY29kZS5ieXRlc1xuICBkYXRhLm9zID0gc3RyaW5nLmRlY29kZShidWYsIG9mZnNldClcbiAgb2Zmc2V0ICs9IHN0cmluZy5kZWNvZGUuYnl0ZXNcbiAgcmhpbmZvLmRlY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gZGF0YVxufVxuXG5yaGluZm8uZGVjb2RlLmJ5dGVzID0gMFxuXG5yaGluZm8uZW5jb2RpbmdMZW5ndGggPSBmdW5jdGlvbiAoZGF0YSkge1xuICByZXR1cm4gc3RyaW5nLmVuY29kaW5nTGVuZ3RoKGRhdGEuY3B1KSArIHN0cmluZy5lbmNvZGluZ0xlbmd0aChkYXRhLm9zKSArIDJcbn1cblxuY29uc3QgcnB0ciA9IGV4cG9ydHMucHRyID0ge31cbmNvbnN0IHJjbmFtZSA9IGV4cG9ydHMuY25hbWUgPSBycHRyXG5jb25zdCByZG5hbWUgPSBleHBvcnRzLmRuYW1lID0gcnB0clxuXG5ycHRyLmVuY29kZSA9IGZ1bmN0aW9uIChkYXRhLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHJwdHIuZW5jb2RpbmdMZW5ndGgoZGF0YSkpXG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG5cbiAgbmFtZS5lbmNvZGUoZGF0YSwgYnVmLCBvZmZzZXQgKyAyKVxuICBidWYud3JpdGVVSW50MTZCRShuYW1lLmVuY29kZS5ieXRlcywgb2Zmc2V0KVxuICBycHRyLmVuY29kZS5ieXRlcyA9IG5hbWUuZW5jb2RlLmJ5dGVzICsgMlxuICByZXR1cm4gYnVmXG59XG5cbnJwdHIuZW5jb2RlLmJ5dGVzID0gMFxuXG5ycHRyLmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGNvbnN0IGRhdGEgPSBuYW1lLmRlY29kZShidWYsIG9mZnNldCArIDIpXG4gIHJwdHIuZGVjb2RlLmJ5dGVzID0gbmFtZS5kZWNvZGUuYnl0ZXMgKyAyXG4gIHJldHVybiBkYXRhXG59XG5cbnJwdHIuZGVjb2RlLmJ5dGVzID0gMFxuXG5ycHRyLmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKGRhdGEpIHtcbiAgcmV0dXJuIG5hbWUuZW5jb2RpbmdMZW5ndGgoZGF0YSkgKyAyXG59XG5cbmNvbnN0IHJzcnYgPSBleHBvcnRzLnNydiA9IHt9XG5cbnJzcnYuZW5jb2RlID0gZnVuY3Rpb24gKGRhdGEsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghYnVmKSBidWYgPSBCdWZmZXIuYWxsb2MocnNydi5lbmNvZGluZ0xlbmd0aChkYXRhKSlcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBidWYud3JpdGVVSW50MTZCRShkYXRhLnByaW9yaXR5IHx8IDAsIG9mZnNldCArIDIpXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKGRhdGEud2VpZ2h0IHx8IDAsIG9mZnNldCArIDQpXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKGRhdGEucG9ydCB8fCAwLCBvZmZzZXQgKyA2KVxuICBuYW1lLmVuY29kZShkYXRhLnRhcmdldCwgYnVmLCBvZmZzZXQgKyA4KVxuXG4gIGNvbnN0IGxlbiA9IG5hbWUuZW5jb2RlLmJ5dGVzICsgNlxuICBidWYud3JpdGVVSW50MTZCRShsZW4sIG9mZnNldClcblxuICByc3J2LmVuY29kZS5ieXRlcyA9IGxlbiArIDJcbiAgcmV0dXJuIGJ1ZlxufVxuXG5yc3J2LmVuY29kZS5ieXRlcyA9IDBcblxucnNydi5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBsZW4gPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcblxuICBjb25zdCBkYXRhID0ge31cbiAgZGF0YS5wcmlvcml0eSA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0ICsgMilcbiAgZGF0YS53ZWlnaHQgPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldCArIDQpXG4gIGRhdGEucG9ydCA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0ICsgNilcbiAgZGF0YS50YXJnZXQgPSBuYW1lLmRlY29kZShidWYsIG9mZnNldCArIDgpXG5cbiAgcnNydi5kZWNvZGUuYnl0ZXMgPSBsZW4gKyAyXG4gIHJldHVybiBkYXRhXG59XG5cbnJzcnYuZGVjb2RlLmJ5dGVzID0gMFxuXG5yc3J2LmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKGRhdGEpIHtcbiAgcmV0dXJuIDggKyBuYW1lLmVuY29kaW5nTGVuZ3RoKGRhdGEudGFyZ2V0KVxufVxuXG5jb25zdCByY2FhID0gZXhwb3J0cy5jYWEgPSB7fVxuXG5yY2FhLklTU1VFUl9DUklUSUNBTCA9IDEgPDwgN1xuXG5yY2FhLmVuY29kZSA9IGZ1bmN0aW9uIChkYXRhLCBidWYsIG9mZnNldCkge1xuICBjb25zdCBsZW4gPSByY2FhLmVuY29kaW5nTGVuZ3RoKGRhdGEpXG5cbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhyY2FhLmVuY29kaW5nTGVuZ3RoKGRhdGEpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGlmIChkYXRhLmlzc3VlckNyaXRpY2FsKSB7XG4gICAgZGF0YS5mbGFncyA9IHJjYWEuSVNTVUVSX0NSSVRJQ0FMXG4gIH1cblxuICBidWYud3JpdGVVSW50MTZCRShsZW4gLSAyLCBvZmZzZXQpXG4gIG9mZnNldCArPSAyXG4gIGJ1Zi53cml0ZVVJbnQ4KGRhdGEuZmxhZ3MgfHwgMCwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICBzdHJpbmcuZW5jb2RlKGRhdGEudGFnLCBidWYsIG9mZnNldClcbiAgb2Zmc2V0ICs9IHN0cmluZy5lbmNvZGUuYnl0ZXNcbiAgYnVmLndyaXRlKGRhdGEudmFsdWUsIG9mZnNldClcbiAgb2Zmc2V0ICs9IEJ1ZmZlci5ieXRlTGVuZ3RoKGRhdGEudmFsdWUpXG5cbiAgcmNhYS5lbmNvZGUuYnl0ZXMgPSBsZW5cbiAgcmV0dXJuIGJ1ZlxufVxuXG5yY2FhLmVuY29kZS5ieXRlcyA9IDBcblxucmNhYS5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBsZW4gPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDJcblxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcbiAgY29uc3QgZGF0YSA9IHt9XG4gIGRhdGEuZmxhZ3MgPSBidWYucmVhZFVJbnQ4KG9mZnNldClcbiAgb2Zmc2V0ICs9IDFcbiAgZGF0YS50YWcgPSBzdHJpbmcuZGVjb2RlKGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gc3RyaW5nLmRlY29kZS5ieXRlc1xuICBkYXRhLnZhbHVlID0gYnVmLnRvU3RyaW5nKCd1dGYtOCcsIG9mZnNldCwgb2xkT2Zmc2V0ICsgbGVuKVxuXG4gIGRhdGEuaXNzdWVyQ3JpdGljYWwgPSAhIShkYXRhLmZsYWdzICYgcmNhYS5JU1NVRVJfQ1JJVElDQUwpXG5cbiAgcmNhYS5kZWNvZGUuYnl0ZXMgPSBsZW4gKyAyXG5cbiAgcmV0dXJuIGRhdGFcbn1cblxucmNhYS5kZWNvZGUuYnl0ZXMgPSAwXG5cbnJjYWEuZW5jb2RpbmdMZW5ndGggPSBmdW5jdGlvbiAoZGF0YSkge1xuICByZXR1cm4gc3RyaW5nLmVuY29kaW5nTGVuZ3RoKGRhdGEudGFnKSArIHN0cmluZy5lbmNvZGluZ0xlbmd0aChkYXRhLnZhbHVlKSArIDJcbn1cblxuY29uc3Qgcm14ID0gZXhwb3J0cy5teCA9IHt9XG5cbnJteC5lbmNvZGUgPSBmdW5jdGlvbiAoZGF0YSwgYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhybXguZW5jb2RpbmdMZW5ndGgoZGF0YSkpXG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG5cbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG4gIG9mZnNldCArPSAyXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKGRhdGEucHJlZmVyZW5jZSB8fCAwLCBvZmZzZXQpXG4gIG9mZnNldCArPSAyXG4gIG5hbWUuZW5jb2RlKGRhdGEuZXhjaGFuZ2UsIGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gbmFtZS5lbmNvZGUuYnl0ZXNcblxuICBidWYud3JpdGVVSW50MTZCRShvZmZzZXQgLSBvbGRPZmZzZXQgLSAyLCBvbGRPZmZzZXQpXG4gIHJteC5lbmNvZGUuYnl0ZXMgPSBvZmZzZXQgLSBvbGRPZmZzZXRcbiAgcmV0dXJuIGJ1ZlxufVxuXG5ybXguZW5jb2RlLmJ5dGVzID0gMFxuXG5ybXguZGVjb2RlID0gZnVuY3Rpb24gKGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG5cbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG5cbiAgY29uc3QgZGF0YSA9IHt9XG4gIG9mZnNldCArPSAyXG4gIGRhdGEucHJlZmVyZW5jZSA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICBkYXRhLmV4Y2hhbmdlID0gbmFtZS5kZWNvZGUoYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBuYW1lLmRlY29kZS5ieXRlc1xuXG4gIHJteC5kZWNvZGUuYnl0ZXMgPSBvZmZzZXQgLSBvbGRPZmZzZXRcbiAgcmV0dXJuIGRhdGFcbn1cblxucm14LmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKGRhdGEpIHtcbiAgcmV0dXJuIDQgKyBuYW1lLmVuY29kaW5nTGVuZ3RoKGRhdGEuZXhjaGFuZ2UpXG59XG5cbmNvbnN0IHJhID0gZXhwb3J0cy5hID0ge31cblxucmEuZW5jb2RlID0gZnVuY3Rpb24gKGhvc3QsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghYnVmKSBidWYgPSBCdWZmZXIuYWxsb2MocmEuZW5jb2RpbmdMZW5ndGgoaG9zdCkpXG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG5cbiAgYnVmLndyaXRlVUludDE2QkUoNCwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICBpcC52NC5lbmNvZGUoaG9zdCwgYnVmLCBvZmZzZXQpXG4gIHJhLmVuY29kZS5ieXRlcyA9IDZcbiAgcmV0dXJuIGJ1ZlxufVxuXG5yYS5lbmNvZGUuYnl0ZXMgPSAwXG5cbnJhLmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIG9mZnNldCArPSAyXG4gIGNvbnN0IGhvc3QgPSBpcC52NC5kZWNvZGUoYnVmLCBvZmZzZXQpXG4gIHJhLmRlY29kZS5ieXRlcyA9IDZcbiAgcmV0dXJuIGhvc3Rcbn1cblxucmEuZGVjb2RlLmJ5dGVzID0gMFxuXG5yYS5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uICgpIHtcbiAgcmV0dXJuIDZcbn1cblxuY29uc3QgcmFhYWEgPSBleHBvcnRzLmFhYWEgPSB7fVxuXG5yYWFhYS5lbmNvZGUgPSBmdW5jdGlvbiAoaG9zdCwgYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhyYWFhYS5lbmNvZGluZ0xlbmd0aChob3N0KSlcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBidWYud3JpdGVVSW50MTZCRSgxNiwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICBpcC52Ni5lbmNvZGUoaG9zdCwgYnVmLCBvZmZzZXQpXG4gIHJhYWFhLmVuY29kZS5ieXRlcyA9IDE4XG4gIHJldHVybiBidWZcbn1cblxucmFhYWEuZW5jb2RlLmJ5dGVzID0gMFxuXG5yYWFhYS5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBvZmZzZXQgKz0gMlxuICBjb25zdCBob3N0ID0gaXAudjYuZGVjb2RlKGJ1Ziwgb2Zmc2V0KVxuICByYWFhYS5kZWNvZGUuYnl0ZXMgPSAxOFxuICByZXR1cm4gaG9zdFxufVxuXG5yYWFhYS5kZWNvZGUuYnl0ZXMgPSAwXG5cbnJhYWFhLmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKCkge1xuICByZXR1cm4gMThcbn1cblxuY29uc3Qgcm9wdGlvbiA9IGV4cG9ydHMub3B0aW9uID0ge31cblxucm9wdGlvbi5lbmNvZGUgPSBmdW5jdGlvbiAob3B0aW9uLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHJvcHRpb24uZW5jb2RpbmdMZW5ndGgob3B0aW9uKSlcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG5cbiAgY29uc3QgY29kZSA9IG9wdGlvbmNvZGVzLnRvQ29kZShvcHRpb24uY29kZSlcbiAgYnVmLndyaXRlVUludDE2QkUoY29kZSwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICBpZiAob3B0aW9uLmRhdGEpIHtcbiAgICBidWYud3JpdGVVSW50MTZCRShvcHRpb24uZGF0YS5sZW5ndGgsIG9mZnNldClcbiAgICBvZmZzZXQgKz0gMlxuICAgIG9wdGlvbi5kYXRhLmNvcHkoYnVmLCBvZmZzZXQpXG4gICAgb2Zmc2V0ICs9IG9wdGlvbi5kYXRhLmxlbmd0aFxuICB9IGVsc2Uge1xuICAgIHN3aXRjaCAoY29kZSkge1xuICAgICAgLy8gY2FzZSAzOiBOU0lELiAgTm8gZW5jb2RlIG1ha2VzIHNlbnNlLlxuICAgICAgLy8gY2FzZSA1LDYsNzogTm90IGltcGxlbWVudGFibGVcbiAgICAgIGNhc2UgODogLy8gRUNTXG4gICAgICAgIC8vIG5vdGU6IGRvIElQIG1hdGggYmVmb3JlIGNhbGxpbmdcbiAgICAgICAgY29uc3Qgc3BsID0gb3B0aW9uLnNvdXJjZVByZWZpeExlbmd0aCB8fCAwXG4gICAgICAgIGNvbnN0IGZhbSA9IG9wdGlvbi5mYW1pbHkgfHwgaXAuZmFtaWx5T2Yob3B0aW9uLmlwKVxuICAgICAgICBjb25zdCBpcEJ1ZiA9IGlwLmVuY29kZShvcHRpb24uaXAsIEJ1ZmZlci5hbGxvYylcbiAgICAgICAgY29uc3QgaXBMZW4gPSBNYXRoLmNlaWwoc3BsIC8gOClcbiAgICAgICAgYnVmLndyaXRlVUludDE2QkUoaXBMZW4gKyA0LCBvZmZzZXQpXG4gICAgICAgIG9mZnNldCArPSAyXG4gICAgICAgIGJ1Zi53cml0ZVVJbnQxNkJFKGZhbSwgb2Zmc2V0KVxuICAgICAgICBvZmZzZXQgKz0gMlxuICAgICAgICBidWYud3JpdGVVSW50OChzcGwsIG9mZnNldCsrKVxuICAgICAgICBidWYud3JpdGVVSW50OChvcHRpb24uc2NvcGVQcmVmaXhMZW5ndGggfHwgMCwgb2Zmc2V0KyspXG5cbiAgICAgICAgaXBCdWYuY29weShidWYsIG9mZnNldCwgMCwgaXBMZW4pXG4gICAgICAgIG9mZnNldCArPSBpcExlblxuICAgICAgICBicmVha1xuICAgICAgLy8gY2FzZSA5OiBFWFBJUkUgKGV4cGVyaW1lbnRhbClcbiAgICAgIC8vIGNhc2UgMTA6IENPT0tJRS4gIE5vIGVuY29kZSBtYWtlcyBzZW5zZS5cbiAgICAgIGNhc2UgMTE6IC8vIEtFRVAtQUxJVkVcbiAgICAgICAgaWYgKG9wdGlvbi50aW1lb3V0KSB7XG4gICAgICAgICAgYnVmLndyaXRlVUludDE2QkUoMiwgb2Zmc2V0KVxuICAgICAgICAgIG9mZnNldCArPSAyXG4gICAgICAgICAgYnVmLndyaXRlVUludDE2QkUob3B0aW9uLnRpbWVvdXQsIG9mZnNldClcbiAgICAgICAgICBvZmZzZXQgKz0gMlxuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIGJ1Zi53cml0ZVVJbnQxNkJFKDAsIG9mZnNldClcbiAgICAgICAgICBvZmZzZXQgKz0gMlxuICAgICAgICB9XG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlIDEyOiAvLyBQQURESU5HXG4gICAgICAgIGNvbnN0IGxlbiA9IG9wdGlvbi5sZW5ndGggfHwgMFxuICAgICAgICBidWYud3JpdGVVSW50MTZCRShsZW4sIG9mZnNldClcbiAgICAgICAgb2Zmc2V0ICs9IDJcbiAgICAgICAgYnVmLmZpbGwoMCwgb2Zmc2V0LCBvZmZzZXQgKyBsZW4pXG4gICAgICAgIG9mZnNldCArPSBsZW5cbiAgICAgICAgYnJlYWtcbiAgICAgIC8vIGNhc2UgMTM6ICBDSEFJTi4gIEV4cGVyaW1lbnRhbC5cbiAgICAgIGNhc2UgMTQ6IC8vIEtFWS1UQUdcbiAgICAgICAgY29uc3QgdGFnc0xlbiA9IG9wdGlvbi50YWdzLmxlbmd0aCAqIDJcbiAgICAgICAgYnVmLndyaXRlVUludDE2QkUodGFnc0xlbiwgb2Zmc2V0KVxuICAgICAgICBvZmZzZXQgKz0gMlxuICAgICAgICBmb3IgKGNvbnN0IHRhZyBvZiBvcHRpb24udGFncykge1xuICAgICAgICAgIGJ1Zi53cml0ZVVJbnQxNkJFKHRhZywgb2Zmc2V0KVxuICAgICAgICAgIG9mZnNldCArPSAyXG4gICAgICAgIH1cbiAgICAgICAgYnJlYWtcbiAgICAgIGRlZmF1bHQ6XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgVW5rbm93biByb3B0aW9uIGNvZGU6ICR7b3B0aW9uLmNvZGV9YClcbiAgICB9XG4gIH1cblxuICByb3B0aW9uLmVuY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gYnVmXG59XG5cbnJvcHRpb24uZW5jb2RlLmJ5dGVzID0gMFxuXG5yb3B0aW9uLmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvcHRpb24gPSB7fVxuICBvcHRpb24uY29kZSA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KVxuICBvcHRpb24udHlwZSA9IG9wdGlvbmNvZGVzLnRvU3RyaW5nKG9wdGlvbi5jb2RlKVxuICBvZmZzZXQgKz0gMlxuICBjb25zdCBsZW4gPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDJcbiAgb3B0aW9uLmRhdGEgPSBidWYuc2xpY2Uob2Zmc2V0LCBvZmZzZXQgKyBsZW4pXG4gIHN3aXRjaCAob3B0aW9uLmNvZGUpIHtcbiAgICAvLyBjYXNlIDM6IE5TSUQuICBObyBkZWNvZGUgbWFrZXMgc2Vuc2UuXG4gICAgY2FzZSA4OiAvLyBFQ1NcbiAgICAgIG9wdGlvbi5mYW1pbHkgPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcbiAgICAgIG9mZnNldCArPSAyXG4gICAgICBvcHRpb24uc291cmNlUHJlZml4TGVuZ3RoID0gYnVmLnJlYWRVSW50OChvZmZzZXQrKylcbiAgICAgIG9wdGlvbi5zY29wZVByZWZpeExlbmd0aCA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0KyspXG4gICAgICBjb25zdCBwYWRkZWQgPSBCdWZmZXIuYWxsb2MoKG9wdGlvbi5mYW1pbHkgPT09IDEpID8gNCA6IDE2KVxuICAgICAgYnVmLmNvcHkocGFkZGVkLCAwLCBvZmZzZXQsIG9mZnNldCArIGxlbiAtIDQpXG4gICAgICBvcHRpb24uaXAgPSBpcC5kZWNvZGUocGFkZGVkKVxuICAgICAgYnJlYWtcbiAgICAvLyBjYXNlIDEyOiBQYWRkaW5nLiAgTm8gZGVjb2RlIG1ha2VzIHNlbnNlLlxuICAgIGNhc2UgMTE6IC8vIEtFRVAtQUxJVkVcbiAgICAgIGlmIChsZW4gPiAwKSB7XG4gICAgICAgIG9wdGlvbi50aW1lb3V0ID0gYnVmLnJlYWRVSW50MTZCRShvZmZzZXQpXG4gICAgICAgIG9mZnNldCArPSAyXG4gICAgICB9XG4gICAgICBicmVha1xuICAgIGNhc2UgMTQ6XG4gICAgICBvcHRpb24udGFncyA9IFtdXG4gICAgICBmb3IgKGxldCBpID0gMDsgaSA8IGxlbjsgaSArPSAyKSB7XG4gICAgICAgIG9wdGlvbi50YWdzLnB1c2goYnVmLnJlYWRVSW50MTZCRShvZmZzZXQpKVxuICAgICAgICBvZmZzZXQgKz0gMlxuICAgICAgfVxuICAgIC8vIGRvbid0IHdvcnJ5IGFib3V0IGRlZmF1bHQuICBjYWxsZXIgd2lsbCB1c2UgZGF0YSBpZiBkZXNpcmVkXG4gIH1cblxuICByb3B0aW9uLmRlY29kZS5ieXRlcyA9IGxlbiArIDRcbiAgcmV0dXJuIG9wdGlvblxufVxuXG5yb3B0aW9uLmRlY29kZS5ieXRlcyA9IDBcblxucm9wdGlvbi5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uIChvcHRpb24pIHtcbiAgaWYgKG9wdGlvbi5kYXRhKSB7XG4gICAgcmV0dXJuIG9wdGlvbi5kYXRhLmxlbmd0aCArIDRcbiAgfVxuICBjb25zdCBjb2RlID0gb3B0aW9uY29kZXMudG9Db2RlKG9wdGlvbi5jb2RlKVxuICBzd2l0Y2ggKGNvZGUpIHtcbiAgICBjYXNlIDg6IC8vIEVDU1xuICAgICAgY29uc3Qgc3BsID0gb3B0aW9uLnNvdXJjZVByZWZpeExlbmd0aCB8fCAwXG4gICAgICByZXR1cm4gTWF0aC5jZWlsKHNwbCAvIDgpICsgOFxuICAgIGNhc2UgMTE6IC8vIEtFRVAtQUxJVkVcbiAgICAgIHJldHVybiAodHlwZW9mIG9wdGlvbi50aW1lb3V0ID09PSAnbnVtYmVyJykgPyA2IDogNFxuICAgIGNhc2UgMTI6IC8vIFBBRERJTkdcbiAgICAgIHJldHVybiBvcHRpb24ubGVuZ3RoICsgNFxuICAgIGNhc2UgMTQ6IC8vIEtFWS1UQUdcbiAgICAgIHJldHVybiA0ICsgKG9wdGlvbi50YWdzLmxlbmd0aCAqIDIpXG4gIH1cbiAgdGhyb3cgbmV3IEVycm9yKGBVbmtub3duIHJvcHRpb24gY29kZTogJHtvcHRpb24uY29kZX1gKVxufVxuXG5jb25zdCByb3B0ID0gZXhwb3J0cy5vcHQgPSB7fVxuXG5yb3B0LmVuY29kZSA9IGZ1bmN0aW9uIChvcHRpb25zLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHJvcHQuZW5jb2RpbmdMZW5ndGgob3B0aW9ucykpXG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuXG4gIGNvbnN0IHJkbGVuID0gZW5jb2RpbmdMZW5ndGhMaXN0KG9wdGlvbnMsIHJvcHRpb24pXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKHJkbGVuLCBvZmZzZXQpXG4gIG9mZnNldCA9IGVuY29kZUxpc3Qob3B0aW9ucywgcm9wdGlvbiwgYnVmLCBvZmZzZXQgKyAyKVxuXG4gIHJvcHQuZW5jb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiBidWZcbn1cblxucm9wdC5lbmNvZGUuYnl0ZXMgPSAwXG5cbnJvcHQuZGVjb2RlID0gZnVuY3Rpb24gKGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuXG4gIGNvbnN0IG9wdGlvbnMgPSBbXVxuICBsZXQgcmRsZW4gPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDJcbiAgbGV0IG8gPSAwXG4gIHdoaWxlIChyZGxlbiA+IDApIHtcbiAgICBvcHRpb25zW28rK10gPSByb3B0aW9uLmRlY29kZShidWYsIG9mZnNldClcbiAgICBvZmZzZXQgKz0gcm9wdGlvbi5kZWNvZGUuYnl0ZXNcbiAgICByZGxlbiAtPSByb3B0aW9uLmRlY29kZS5ieXRlc1xuICB9XG4gIHJvcHQuZGVjb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiBvcHRpb25zXG59XG5cbnJvcHQuZGVjb2RlLmJ5dGVzID0gMFxuXG5yb3B0LmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKG9wdGlvbnMpIHtcbiAgcmV0dXJuIDIgKyBlbmNvZGluZ0xlbmd0aExpc3Qob3B0aW9ucyB8fCBbXSwgcm9wdGlvbilcbn1cblxuY29uc3QgcmRuc2tleSA9IGV4cG9ydHMuZG5za2V5ID0ge31cblxucmRuc2tleS5QUk9UT0NPTF9ETlNTRUMgPSAzXG5yZG5za2V5LlpPTkVfS0VZID0gMHg4MFxucmRuc2tleS5TRUNVUkVfRU5UUllQT0lOVCA9IDB4ODAwMFxuXG5yZG5za2V5LmVuY29kZSA9IGZ1bmN0aW9uIChrZXksIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghYnVmKSBidWYgPSBCdWZmZXIuYWxsb2MocmRuc2tleS5lbmNvZGluZ0xlbmd0aChrZXkpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICBjb25zdCBrZXlkYXRhID0ga2V5LmtleVxuICBpZiAoIUJ1ZmZlci5pc0J1ZmZlcihrZXlkYXRhKSkge1xuICAgIHRocm93IG5ldyBFcnJvcignS2V5IG11c3QgYmUgYSBCdWZmZXInKVxuICB9XG5cbiAgb2Zmc2V0ICs9IDIgLy8gTGVhdmUgc3BhY2UgZm9yIGxlbmd0aFxuICBidWYud3JpdGVVSW50MTZCRShrZXkuZmxhZ3MsIG9mZnNldClcbiAgb2Zmc2V0ICs9IDJcbiAgYnVmLndyaXRlVUludDgocmRuc2tleS5QUk9UT0NPTF9ETlNTRUMsIG9mZnNldClcbiAgb2Zmc2V0ICs9IDFcbiAgYnVmLndyaXRlVUludDgoa2V5LmFsZ29yaXRobSwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICBrZXlkYXRhLmNvcHkoYnVmLCBvZmZzZXQsIDAsIGtleWRhdGEubGVuZ3RoKVxuICBvZmZzZXQgKz0ga2V5ZGF0YS5sZW5ndGhcblxuICByZG5za2V5LmVuY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICBidWYud3JpdGVVSW50MTZCRShyZG5za2V5LmVuY29kZS5ieXRlcyAtIDIsIG9sZE9mZnNldClcbiAgcmV0dXJuIGJ1ZlxufVxuXG5yZG5za2V5LmVuY29kZS5ieXRlcyA9IDBcblxucmRuc2tleS5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG5cbiAgdmFyIGtleSA9IHt9XG4gIHZhciBsZW5ndGggPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDJcbiAga2V5LmZsYWdzID0gYnVmLnJlYWRVSW50MTZCRShvZmZzZXQpXG4gIG9mZnNldCArPSAyXG4gIGlmIChidWYucmVhZFVJbnQ4KG9mZnNldCkgIT09IHJkbnNrZXkuUFJPVE9DT0xfRE5TU0VDKSB7XG4gICAgdGhyb3cgbmV3IEVycm9yKCdQcm90b2NvbCBtdXN0IGJlIDMnKVxuICB9XG4gIG9mZnNldCArPSAxXG4gIGtleS5hbGdvcml0aG0gPSBidWYucmVhZFVJbnQ4KG9mZnNldClcbiAgb2Zmc2V0ICs9IDFcbiAga2V5LmtleSA9IGJ1Zi5zbGljZShvZmZzZXQsIG9sZE9mZnNldCArIGxlbmd0aCArIDIpXG4gIG9mZnNldCArPSBrZXkua2V5Lmxlbmd0aFxuICByZG5za2V5LmRlY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4ga2V5XG59XG5cbnJkbnNrZXkuZGVjb2RlLmJ5dGVzID0gMFxuXG5yZG5za2V5LmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKGtleSkge1xuICByZXR1cm4gNiArIEJ1ZmZlci5ieXRlTGVuZ3RoKGtleS5rZXkpXG59XG5cbmNvbnN0IHJycnNpZyA9IGV4cG9ydHMucnJzaWcgPSB7fVxuXG5ycnJzaWcuZW5jb2RlID0gZnVuY3Rpb24gKHNpZywgYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhycnJzaWcuZW5jb2RpbmdMZW5ndGgoc2lnKSlcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG5cbiAgY29uc3Qgc2lnbmF0dXJlID0gc2lnLnNpZ25hdHVyZVxuICBpZiAoIUJ1ZmZlci5pc0J1ZmZlcihzaWduYXR1cmUpKSB7XG4gICAgdGhyb3cgbmV3IEVycm9yKCdTaWduYXR1cmUgbXVzdCBiZSBhIEJ1ZmZlcicpXG4gIH1cblxuICBvZmZzZXQgKz0gMiAvLyBMZWF2ZSBzcGFjZSBmb3IgbGVuZ3RoXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKHR5cGVzLnRvVHlwZShzaWcudHlwZUNvdmVyZWQpLCBvZmZzZXQpXG4gIG9mZnNldCArPSAyXG4gIGJ1Zi53cml0ZVVJbnQ4KHNpZy5hbGdvcml0aG0sIG9mZnNldClcbiAgb2Zmc2V0ICs9IDFcbiAgYnVmLndyaXRlVUludDgoc2lnLmxhYmVscywgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICBidWYud3JpdGVVSW50MzJCRShzaWcub3JpZ2luYWxUVEwsIG9mZnNldClcbiAgb2Zmc2V0ICs9IDRcbiAgYnVmLndyaXRlVUludDMyQkUoc2lnLmV4cGlyYXRpb24sIG9mZnNldClcbiAgb2Zmc2V0ICs9IDRcbiAgYnVmLndyaXRlVUludDMyQkUoc2lnLmluY2VwdGlvbiwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gNFxuICBidWYud3JpdGVVSW50MTZCRShzaWcua2V5VGFnLCBvZmZzZXQpXG4gIG9mZnNldCArPSAyXG4gIG5hbWUuZW5jb2RlKHNpZy5zaWduZXJzTmFtZSwgYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBuYW1lLmVuY29kZS5ieXRlc1xuICBzaWduYXR1cmUuY29weShidWYsIG9mZnNldCwgMCwgc2lnbmF0dXJlLmxlbmd0aClcbiAgb2Zmc2V0ICs9IHNpZ25hdHVyZS5sZW5ndGhcblxuICBycnJzaWcuZW5jb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIGJ1Zi53cml0ZVVJbnQxNkJFKHJycnNpZy5lbmNvZGUuYnl0ZXMgLSAyLCBvbGRPZmZzZXQpXG4gIHJldHVybiBidWZcbn1cblxucnJyc2lnLmVuY29kZS5ieXRlcyA9IDBcblxucnJyc2lnLmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICB2YXIgc2lnID0ge31cbiAgdmFyIGxlbmd0aCA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICBzaWcudHlwZUNvdmVyZWQgPSB0eXBlcy50b1N0cmluZyhidWYucmVhZFVJbnQxNkJFKG9mZnNldCkpXG4gIG9mZnNldCArPSAyXG4gIHNpZy5hbGdvcml0aG0gPSBidWYucmVhZFVJbnQ4KG9mZnNldClcbiAgb2Zmc2V0ICs9IDFcbiAgc2lnLmxhYmVscyA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICBzaWcub3JpZ2luYWxUVEwgPSBidWYucmVhZFVJbnQzMkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDRcbiAgc2lnLmV4cGlyYXRpb24gPSBidWYucmVhZFVJbnQzMkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDRcbiAgc2lnLmluY2VwdGlvbiA9IGJ1Zi5yZWFkVUludDMyQkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gNFxuICBzaWcua2V5VGFnID0gYnVmLnJlYWRVSW50MTZCRShvZmZzZXQpXG4gIG9mZnNldCArPSAyXG4gIHNpZy5zaWduZXJzTmFtZSA9IG5hbWUuZGVjb2RlKGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gbmFtZS5kZWNvZGUuYnl0ZXNcbiAgc2lnLnNpZ25hdHVyZSA9IGJ1Zi5zbGljZShvZmZzZXQsIG9sZE9mZnNldCArIGxlbmd0aCArIDIpXG4gIG9mZnNldCArPSBzaWcuc2lnbmF0dXJlLmxlbmd0aFxuICBycnJzaWcuZGVjb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiBzaWdcbn1cblxucnJyc2lnLmRlY29kZS5ieXRlcyA9IDBcblxucnJyc2lnLmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKHNpZykge1xuICByZXR1cm4gMjAgK1xuICAgIG5hbWUuZW5jb2RpbmdMZW5ndGgoc2lnLnNpZ25lcnNOYW1lKSArXG4gICAgQnVmZmVyLmJ5dGVMZW5ndGgoc2lnLnNpZ25hdHVyZSlcbn1cblxuY29uc3QgcnJwID0gZXhwb3J0cy5ycCA9IHt9XG5cbnJycC5lbmNvZGUgPSBmdW5jdGlvbiAoZGF0YSwgYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhycnAuZW5jb2RpbmdMZW5ndGgoZGF0YSkpXG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuXG4gIG9mZnNldCArPSAyIC8vIExlYXZlIHNwYWNlIGZvciBsZW5ndGhcbiAgbmFtZS5lbmNvZGUoZGF0YS5tYm94IHx8ICcuJywgYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBuYW1lLmVuY29kZS5ieXRlc1xuICBuYW1lLmVuY29kZShkYXRhLnR4dCB8fCAnLicsIGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gbmFtZS5lbmNvZGUuYnl0ZXNcbiAgcnJwLmVuY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICBidWYud3JpdGVVSW50MTZCRShycnAuZW5jb2RlLmJ5dGVzIC0gMiwgb2xkT2Zmc2V0KVxuICByZXR1cm4gYnVmXG59XG5cbnJycC5lbmNvZGUuYnl0ZXMgPSAwXG5cbnJycC5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG5cbiAgY29uc3QgZGF0YSA9IHt9XG4gIG9mZnNldCArPSAyXG4gIGRhdGEubWJveCA9IG5hbWUuZGVjb2RlKGJ1Ziwgb2Zmc2V0KSB8fCAnLidcbiAgb2Zmc2V0ICs9IG5hbWUuZGVjb2RlLmJ5dGVzXG4gIGRhdGEudHh0ID0gbmFtZS5kZWNvZGUoYnVmLCBvZmZzZXQpIHx8ICcuJ1xuICBvZmZzZXQgKz0gbmFtZS5kZWNvZGUuYnl0ZXNcbiAgcnJwLmRlY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gZGF0YVxufVxuXG5ycnAuZGVjb2RlLmJ5dGVzID0gMFxuXG5ycnAuZW5jb2RpbmdMZW5ndGggPSBmdW5jdGlvbiAoZGF0YSkge1xuICByZXR1cm4gMiArIG5hbWUuZW5jb2RpbmdMZW5ndGgoZGF0YS5tYm94IHx8ICcuJykgKyBuYW1lLmVuY29kaW5nTGVuZ3RoKGRhdGEudHh0IHx8ICcuJylcbn1cblxuY29uc3QgdHlwZWJpdG1hcCA9IHt9XG5cbnR5cGViaXRtYXAuZW5jb2RlID0gZnVuY3Rpb24gKHR5cGVsaXN0LCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHR5cGViaXRtYXAuZW5jb2RpbmdMZW5ndGgodHlwZWxpc3QpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICB2YXIgdHlwZXNCeVdpbmRvdyA9IFtdXG4gIGZvciAodmFyIGkgPSAwOyBpIDwgdHlwZWxpc3QubGVuZ3RoOyBpKyspIHtcbiAgICB2YXIgdHlwZWlkID0gdHlwZXMudG9UeXBlKHR5cGVsaXN0W2ldKVxuICAgIGlmICh0eXBlc0J5V2luZG93W3R5cGVpZCA+PiA4XSA9PT0gdW5kZWZpbmVkKSB7XG4gICAgICB0eXBlc0J5V2luZG93W3R5cGVpZCA+PiA4XSA9IFtdXG4gICAgfVxuICAgIHR5cGVzQnlXaW5kb3dbdHlwZWlkID4+IDhdWyh0eXBlaWQgPj4gMykgJiAweDFGXSB8PSAxIDw8ICg3IC0gKHR5cGVpZCAmIDB4NykpXG4gIH1cblxuICBmb3IgKGkgPSAwOyBpIDwgdHlwZXNCeVdpbmRvdy5sZW5ndGg7IGkrKykge1xuICAgIGlmICh0eXBlc0J5V2luZG93W2ldICE9PSB1bmRlZmluZWQpIHtcbiAgICAgIHZhciB3aW5kb3dCdWYgPSBCdWZmZXIuZnJvbSh0eXBlc0J5V2luZG93W2ldKVxuICAgICAgYnVmLndyaXRlVUludDgoaSwgb2Zmc2V0KVxuICAgICAgb2Zmc2V0ICs9IDFcbiAgICAgIGJ1Zi53cml0ZVVJbnQ4KHdpbmRvd0J1Zi5sZW5ndGgsIG9mZnNldClcbiAgICAgIG9mZnNldCArPSAxXG4gICAgICB3aW5kb3dCdWYuY29weShidWYsIG9mZnNldClcbiAgICAgIG9mZnNldCArPSB3aW5kb3dCdWYubGVuZ3RoXG4gICAgfVxuICB9XG5cbiAgdHlwZWJpdG1hcC5lbmNvZGUuYnl0ZXMgPSBvZmZzZXQgLSBvbGRPZmZzZXRcbiAgcmV0dXJuIGJ1ZlxufVxuXG50eXBlYml0bWFwLmVuY29kZS5ieXRlcyA9IDBcblxudHlwZWJpdG1hcC5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQsIGxlbmd0aCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICB2YXIgdHlwZWxpc3QgPSBbXVxuICB3aGlsZSAob2Zmc2V0IC0gb2xkT2Zmc2V0IDwgbGVuZ3RoKSB7XG4gICAgdmFyIHdpbmRvdyA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0KVxuICAgIG9mZnNldCArPSAxXG4gICAgdmFyIHdpbmRvd0xlbmd0aCA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0KVxuICAgIG9mZnNldCArPSAxXG4gICAgZm9yICh2YXIgaSA9IDA7IGkgPCB3aW5kb3dMZW5ndGg7IGkrKykge1xuICAgICAgdmFyIGIgPSBidWYucmVhZFVJbnQ4KG9mZnNldCArIGkpXG4gICAgICBmb3IgKHZhciBqID0gMDsgaiA8IDg7IGorKykge1xuICAgICAgICBpZiAoYiAmICgxIDw8ICg3IC0gaikpKSB7XG4gICAgICAgICAgdmFyIHR5cGVpZCA9IHR5cGVzLnRvU3RyaW5nKCh3aW5kb3cgPDwgOCkgfCAoaSA8PCAzKSB8IGopXG4gICAgICAgICAgdHlwZWxpc3QucHVzaCh0eXBlaWQpXG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gICAgb2Zmc2V0ICs9IHdpbmRvd0xlbmd0aFxuICB9XG5cbiAgdHlwZWJpdG1hcC5kZWNvZGUuYnl0ZXMgPSBvZmZzZXQgLSBvbGRPZmZzZXRcbiAgcmV0dXJuIHR5cGVsaXN0XG59XG5cbnR5cGViaXRtYXAuZGVjb2RlLmJ5dGVzID0gMFxuXG50eXBlYml0bWFwLmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKHR5cGVsaXN0KSB7XG4gIHZhciBleHRlbnRzID0gW11cbiAgZm9yICh2YXIgaSA9IDA7IGkgPCB0eXBlbGlzdC5sZW5ndGg7IGkrKykge1xuICAgIHZhciB0eXBlaWQgPSB0eXBlcy50b1R5cGUodHlwZWxpc3RbaV0pXG4gICAgZXh0ZW50c1t0eXBlaWQgPj4gOF0gPSBNYXRoLm1heChleHRlbnRzW3R5cGVpZCA+PiA4XSB8fCAwLCB0eXBlaWQgJiAweEZGKVxuICB9XG5cbiAgdmFyIGxlbiA9IDBcbiAgZm9yIChpID0gMDsgaSA8IGV4dGVudHMubGVuZ3RoOyBpKyspIHtcbiAgICBpZiAoZXh0ZW50c1tpXSAhPT0gdW5kZWZpbmVkKSB7XG4gICAgICBsZW4gKz0gMiArIE1hdGguY2VpbCgoZXh0ZW50c1tpXSArIDEpIC8gOClcbiAgICB9XG4gIH1cblxuICByZXR1cm4gbGVuXG59XG5cbmNvbnN0IHJuc2VjID0gZXhwb3J0cy5uc2VjID0ge31cblxucm5zZWMuZW5jb2RlID0gZnVuY3Rpb24gKHJlY29yZCwgYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhybnNlYy5lbmNvZGluZ0xlbmd0aChyZWNvcmQpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICBvZmZzZXQgKz0gMiAvLyBMZWF2ZSBzcGFjZSBmb3IgbGVuZ3RoXG4gIG5hbWUuZW5jb2RlKHJlY29yZC5uZXh0RG9tYWluLCBidWYsIG9mZnNldClcbiAgb2Zmc2V0ICs9IG5hbWUuZW5jb2RlLmJ5dGVzXG4gIHR5cGViaXRtYXAuZW5jb2RlKHJlY29yZC5ycnR5cGVzLCBidWYsIG9mZnNldClcbiAgb2Zmc2V0ICs9IHR5cGViaXRtYXAuZW5jb2RlLmJ5dGVzXG5cbiAgcm5zZWMuZW5jb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIGJ1Zi53cml0ZVVJbnQxNkJFKHJuc2VjLmVuY29kZS5ieXRlcyAtIDIsIG9sZE9mZnNldClcbiAgcmV0dXJuIGJ1ZlxufVxuXG5ybnNlYy5lbmNvZGUuYnl0ZXMgPSAwXG5cbnJuc2VjLmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICB2YXIgcmVjb3JkID0ge31cbiAgdmFyIGxlbmd0aCA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICByZWNvcmQubmV4dERvbWFpbiA9IG5hbWUuZGVjb2RlKGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gbmFtZS5kZWNvZGUuYnl0ZXNcbiAgcmVjb3JkLnJydHlwZXMgPSB0eXBlYml0bWFwLmRlY29kZShidWYsIG9mZnNldCwgbGVuZ3RoIC0gKG9mZnNldCAtIG9sZE9mZnNldCkpXG4gIG9mZnNldCArPSB0eXBlYml0bWFwLmRlY29kZS5ieXRlc1xuXG4gIHJuc2VjLmRlY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICByZXR1cm4gcmVjb3JkXG59XG5cbnJuc2VjLmRlY29kZS5ieXRlcyA9IDBcblxucm5zZWMuZW5jb2RpbmdMZW5ndGggPSBmdW5jdGlvbiAocmVjb3JkKSB7XG4gIHJldHVybiAyICtcbiAgICBuYW1lLmVuY29kaW5nTGVuZ3RoKHJlY29yZC5uZXh0RG9tYWluKSArXG4gICAgdHlwZWJpdG1hcC5lbmNvZGluZ0xlbmd0aChyZWNvcmQucnJ0eXBlcylcbn1cblxuY29uc3Qgcm5zZWMzID0gZXhwb3J0cy5uc2VjMyA9IHt9XG5cbnJuc2VjMy5lbmNvZGUgPSBmdW5jdGlvbiAocmVjb3JkLCBidWYsIG9mZnNldCkge1xuICBpZiAoIWJ1ZikgYnVmID0gQnVmZmVyLmFsbG9jKHJuc2VjMy5lbmNvZGluZ0xlbmd0aChyZWNvcmQpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICBjb25zdCBzYWx0ID0gcmVjb3JkLnNhbHRcbiAgaWYgKCFCdWZmZXIuaXNCdWZmZXIoc2FsdCkpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoJ3NhbHQgbXVzdCBiZSBhIEJ1ZmZlcicpXG4gIH1cblxuICBjb25zdCBuZXh0RG9tYWluID0gcmVjb3JkLm5leHREb21haW5cbiAgaWYgKCFCdWZmZXIuaXNCdWZmZXIobmV4dERvbWFpbikpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoJ25leHREb21haW4gbXVzdCBiZSBhIEJ1ZmZlcicpXG4gIH1cblxuICBvZmZzZXQgKz0gMiAvLyBMZWF2ZSBzcGFjZSBmb3IgbGVuZ3RoXG4gIGJ1Zi53cml0ZVVJbnQ4KHJlY29yZC5hbGdvcml0aG0sIG9mZnNldClcbiAgb2Zmc2V0ICs9IDFcbiAgYnVmLndyaXRlVUludDgocmVjb3JkLmZsYWdzLCBvZmZzZXQpXG4gIG9mZnNldCArPSAxXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKHJlY29yZC5pdGVyYXRpb25zLCBvZmZzZXQpXG4gIG9mZnNldCArPSAyXG4gIGJ1Zi53cml0ZVVJbnQ4KHNhbHQubGVuZ3RoLCBvZmZzZXQpXG4gIG9mZnNldCArPSAxXG4gIHNhbHQuY29weShidWYsIG9mZnNldCwgMCwgc2FsdC5sZW5ndGgpXG4gIG9mZnNldCArPSBzYWx0Lmxlbmd0aFxuICBidWYud3JpdGVVSW50OChuZXh0RG9tYWluLmxlbmd0aCwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICBuZXh0RG9tYWluLmNvcHkoYnVmLCBvZmZzZXQsIDAsIG5leHREb21haW4ubGVuZ3RoKVxuICBvZmZzZXQgKz0gbmV4dERvbWFpbi5sZW5ndGhcbiAgdHlwZWJpdG1hcC5lbmNvZGUocmVjb3JkLnJydHlwZXMsIGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gdHlwZWJpdG1hcC5lbmNvZGUuYnl0ZXNcblxuICBybnNlYzMuZW5jb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIGJ1Zi53cml0ZVVJbnQxNkJFKHJuc2VjMy5lbmNvZGUuYnl0ZXMgLSAyLCBvbGRPZmZzZXQpXG4gIHJldHVybiBidWZcbn1cblxucm5zZWMzLmVuY29kZS5ieXRlcyA9IDBcblxucm5zZWMzLmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICB2YXIgcmVjb3JkID0ge31cbiAgdmFyIGxlbmd0aCA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICByZWNvcmQuYWxnb3JpdGhtID0gYnVmLnJlYWRVSW50OChvZmZzZXQpXG4gIG9mZnNldCArPSAxXG4gIHJlY29yZC5mbGFncyA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICByZWNvcmQuaXRlcmF0aW9ucyA9IGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICBjb25zdCBzYWx0TGVuZ3RoID0gYnVmLnJlYWRVSW50OChvZmZzZXQpXG4gIG9mZnNldCArPSAxXG4gIHJlY29yZC5zYWx0ID0gYnVmLnNsaWNlKG9mZnNldCwgb2Zmc2V0ICsgc2FsdExlbmd0aClcbiAgb2Zmc2V0ICs9IHNhbHRMZW5ndGhcbiAgY29uc3QgaGFzaExlbmd0aCA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICByZWNvcmQubmV4dERvbWFpbiA9IGJ1Zi5zbGljZShvZmZzZXQsIG9mZnNldCArIGhhc2hMZW5ndGgpXG4gIG9mZnNldCArPSBoYXNoTGVuZ3RoXG4gIHJlY29yZC5ycnR5cGVzID0gdHlwZWJpdG1hcC5kZWNvZGUoYnVmLCBvZmZzZXQsIGxlbmd0aCAtIChvZmZzZXQgLSBvbGRPZmZzZXQpKVxuICBvZmZzZXQgKz0gdHlwZWJpdG1hcC5kZWNvZGUuYnl0ZXNcblxuICBybnNlYzMuZGVjb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiByZWNvcmRcbn1cblxucm5zZWMzLmRlY29kZS5ieXRlcyA9IDBcblxucm5zZWMzLmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKHJlY29yZCkge1xuICByZXR1cm4gOCArXG4gICAgcmVjb3JkLnNhbHQubGVuZ3RoICtcbiAgICByZWNvcmQubmV4dERvbWFpbi5sZW5ndGggK1xuICAgIHR5cGViaXRtYXAuZW5jb2RpbmdMZW5ndGgocmVjb3JkLnJydHlwZXMpXG59XG5cbmNvbnN0IHJkcyA9IGV4cG9ydHMuZHMgPSB7fVxuXG5yZHMuZW5jb2RlID0gZnVuY3Rpb24gKGRpZ2VzdCwgYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhyZHMuZW5jb2RpbmdMZW5ndGgoZGlnZXN0KSlcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG5cbiAgY29uc3QgZGlnZXN0ZGF0YSA9IGRpZ2VzdC5kaWdlc3RcbiAgaWYgKCFCdWZmZXIuaXNCdWZmZXIoZGlnZXN0ZGF0YSkpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoJ0RpZ2VzdCBtdXN0IGJlIGEgQnVmZmVyJylcbiAgfVxuXG4gIG9mZnNldCArPSAyIC8vIExlYXZlIHNwYWNlIGZvciBsZW5ndGhcbiAgYnVmLndyaXRlVUludDE2QkUoZGlnZXN0LmtleVRhZywgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuICBidWYud3JpdGVVSW50OChkaWdlc3QuYWxnb3JpdGhtLCBvZmZzZXQpXG4gIG9mZnNldCArPSAxXG4gIGJ1Zi53cml0ZVVJbnQ4KGRpZ2VzdC5kaWdlc3RUeXBlLCBvZmZzZXQpXG4gIG9mZnNldCArPSAxXG4gIGRpZ2VzdGRhdGEuY29weShidWYsIG9mZnNldCwgMCwgZGlnZXN0ZGF0YS5sZW5ndGgpXG4gIG9mZnNldCArPSBkaWdlc3RkYXRhLmxlbmd0aFxuXG4gIHJkcy5lbmNvZGUuYnl0ZXMgPSBvZmZzZXQgLSBvbGRPZmZzZXRcbiAgYnVmLndyaXRlVUludDE2QkUocmRzLmVuY29kZS5ieXRlcyAtIDIsIG9sZE9mZnNldClcbiAgcmV0dXJuIGJ1ZlxufVxuXG5yZHMuZW5jb2RlLmJ5dGVzID0gMFxuXG5yZHMuZGVjb2RlID0gZnVuY3Rpb24gKGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuXG4gIHZhciBkaWdlc3QgPSB7fVxuICB2YXIgbGVuZ3RoID0gYnVmLnJlYWRVSW50MTZCRShvZmZzZXQpXG4gIG9mZnNldCArPSAyXG4gIGRpZ2VzdC5rZXlUYWcgPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldClcbiAgb2Zmc2V0ICs9IDJcbiAgZGlnZXN0LmFsZ29yaXRobSA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICBkaWdlc3QuZGlnZXN0VHlwZSA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0KVxuICBvZmZzZXQgKz0gMVxuICBkaWdlc3QuZGlnZXN0ID0gYnVmLnNsaWNlKG9mZnNldCwgb2xkT2Zmc2V0ICsgbGVuZ3RoICsgMilcbiAgb2Zmc2V0ICs9IGRpZ2VzdC5kaWdlc3QubGVuZ3RoXG4gIHJkcy5kZWNvZGUuYnl0ZXMgPSBvZmZzZXQgLSBvbGRPZmZzZXRcbiAgcmV0dXJuIGRpZ2VzdFxufVxuXG5yZHMuZGVjb2RlLmJ5dGVzID0gMFxuXG5yZHMuZW5jb2RpbmdMZW5ndGggPSBmdW5jdGlvbiAoZGlnZXN0KSB7XG4gIHJldHVybiA2ICsgQnVmZmVyLmJ5dGVMZW5ndGgoZGlnZXN0LmRpZ2VzdClcbn1cblxuY29uc3QgcnNzaGZwID0gZXhwb3J0cy5zc2hmcCA9IHt9XG5cbnJzc2hmcC5nZXRGaW5nZXJwcmludExlbmd0aEZvckhhc2hUeXBlID0gZnVuY3Rpb24gZ2V0RmluZ2VycHJpbnRMZW5ndGhGb3JIYXNoVHlwZSAoaGFzaFR5cGUpIHtcbiAgc3dpdGNoIChoYXNoVHlwZSkge1xuICAgIGNhc2UgMTogcmV0dXJuIDIwXG4gICAgY2FzZSAyOiByZXR1cm4gMzJcbiAgfVxufVxuXG5yc3NoZnAuZW5jb2RlID0gZnVuY3Rpb24gZW5jb2RlIChyZWNvcmQsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghYnVmKSBidWYgPSBCdWZmZXIuYWxsb2MocnNzaGZwLmVuY29kaW5nTGVuZ3RoKHJlY29yZCkpXG4gIGlmICghb2Zmc2V0KSBvZmZzZXQgPSAwXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuXG4gIG9mZnNldCArPSAyIC8vIFRoZSBmdW5jdGlvbiBjYWxsIHN0YXJ0cyB3aXRoIHRoZSBvZmZzZXQgcG9pbnRlciBhdCB0aGUgUkRMRU5HVEggZmllbGQsIG5vdCB0aGUgUkRBVEEgb25lXG4gIGJ1ZltvZmZzZXRdID0gcmVjb3JkLmFsZ29yaXRobVxuICBvZmZzZXQgKz0gMVxuICBidWZbb2Zmc2V0XSA9IHJlY29yZC5oYXNoXG4gIG9mZnNldCArPSAxXG5cbiAgY29uc3QgZmluZ2VycHJpbnRCdWYgPSBCdWZmZXIuZnJvbShyZWNvcmQuZmluZ2VycHJpbnQudG9VcHBlckNhc2UoKSwgJ2hleCcpXG4gIGlmIChmaW5nZXJwcmludEJ1Zi5sZW5ndGggIT09IHJzc2hmcC5nZXRGaW5nZXJwcmludExlbmd0aEZvckhhc2hUeXBlKHJlY29yZC5oYXNoKSkge1xuICAgIHRocm93IG5ldyBFcnJvcignSW52YWxpZCBmaW5nZXJwcmludCBsZW5ndGgnKVxuICB9XG4gIGZpbmdlcnByaW50QnVmLmNvcHkoYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBmaW5nZXJwcmludEJ1Zi5ieXRlTGVuZ3RoXG5cbiAgcnNzaGZwLmVuY29kZS5ieXRlcyA9IG9mZnNldCAtIG9sZE9mZnNldFxuICBidWYud3JpdGVVSW50MTZCRShyc3NoZnAuZW5jb2RlLmJ5dGVzIC0gMiwgb2xkT2Zmc2V0KVxuXG4gIHJldHVybiBidWZcbn1cblxucnNzaGZwLmVuY29kZS5ieXRlcyA9IDBcblxucnNzaGZwLmRlY29kZSA9IGZ1bmN0aW9uIGRlY29kZSAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcbiAgY29uc3Qgb2xkT2Zmc2V0ID0gb2Zmc2V0XG5cbiAgY29uc3QgcmVjb3JkID0ge31cbiAgb2Zmc2V0ICs9IDIgLy8gQWNjb3VudCBmb3IgdGhlIFJETEVOR1RIIGZpZWxkXG4gIHJlY29yZC5hbGdvcml0aG0gPSBidWZbb2Zmc2V0XVxuICBvZmZzZXQgKz0gMVxuICByZWNvcmQuaGFzaCA9IGJ1ZltvZmZzZXRdXG4gIG9mZnNldCArPSAxXG5cbiAgY29uc3QgZmluZ2VycHJpbnRMZW5ndGggPSByc3NoZnAuZ2V0RmluZ2VycHJpbnRMZW5ndGhGb3JIYXNoVHlwZShyZWNvcmQuaGFzaClcbiAgcmVjb3JkLmZpbmdlcnByaW50ID0gYnVmLnNsaWNlKG9mZnNldCwgb2Zmc2V0ICsgZmluZ2VycHJpbnRMZW5ndGgpLnRvU3RyaW5nKCdoZXgnKS50b1VwcGVyQ2FzZSgpXG4gIG9mZnNldCArPSBmaW5nZXJwcmludExlbmd0aFxuICByc3NoZnAuZGVjb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiByZWNvcmRcbn1cblxucnNzaGZwLmRlY29kZS5ieXRlcyA9IDBcblxucnNzaGZwLmVuY29kaW5nTGVuZ3RoID0gZnVuY3Rpb24gKHJlY29yZCkge1xuICByZXR1cm4gNCArIEJ1ZmZlci5mcm9tKHJlY29yZC5maW5nZXJwcmludCwgJ2hleCcpLmJ5dGVMZW5ndGhcbn1cblxuY29uc3QgcmVuYyA9IGV4cG9ydHMucmVjb3JkID0gZnVuY3Rpb24gKHR5cGUpIHtcbiAgc3dpdGNoICh0eXBlLnRvVXBwZXJDYXNlKCkpIHtcbiAgICBjYXNlICdBJzogcmV0dXJuIHJhXG4gICAgY2FzZSAnUFRSJzogcmV0dXJuIHJwdHJcbiAgICBjYXNlICdDTkFNRSc6IHJldHVybiByY25hbWVcbiAgICBjYXNlICdETkFNRSc6IHJldHVybiByZG5hbWVcbiAgICBjYXNlICdUWFQnOiByZXR1cm4gcnR4dFxuICAgIGNhc2UgJ05VTEwnOiByZXR1cm4gcm51bGxcbiAgICBjYXNlICdBQUFBJzogcmV0dXJuIHJhYWFhXG4gICAgY2FzZSAnU1JWJzogcmV0dXJuIHJzcnZcbiAgICBjYXNlICdISU5GTyc6IHJldHVybiByaGluZm9cbiAgICBjYXNlICdDQUEnOiByZXR1cm4gcmNhYVxuICAgIGNhc2UgJ05TJzogcmV0dXJuIHJuc1xuICAgIGNhc2UgJ1NPQSc6IHJldHVybiByc29hXG4gICAgY2FzZSAnTVgnOiByZXR1cm4gcm14XG4gICAgY2FzZSAnT1BUJzogcmV0dXJuIHJvcHRcbiAgICBjYXNlICdETlNLRVknOiByZXR1cm4gcmRuc2tleVxuICAgIGNhc2UgJ1JSU0lHJzogcmV0dXJuIHJycnNpZ1xuICAgIGNhc2UgJ1JQJzogcmV0dXJuIHJycFxuICAgIGNhc2UgJ05TRUMnOiByZXR1cm4gcm5zZWNcbiAgICBjYXNlICdOU0VDMyc6IHJldHVybiBybnNlYzNcbiAgICBjYXNlICdTU0hGUCc6IHJldHVybiByc3NoZnBcbiAgICBjYXNlICdEUyc6IHJldHVybiByZHNcbiAgfVxuICByZXR1cm4gcnVua25vd25cbn1cblxuY29uc3QgYW5zd2VyID0gZXhwb3J0cy5hbnN3ZXIgPSB7fVxuXG5hbnN3ZXIuZW5jb2RlID0gZnVuY3Rpb24gKGEsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGlmICghYnVmKSBidWYgPSBCdWZmZXIuYWxsb2MoYW5zd2VyLmVuY29kaW5nTGVuZ3RoKGEpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuXG4gIG5hbWUuZW5jb2RlKGEubmFtZSwgYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBuYW1lLmVuY29kZS5ieXRlc1xuXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKHR5cGVzLnRvVHlwZShhLnR5cGUpLCBvZmZzZXQpXG5cbiAgaWYgKGEudHlwZS50b1VwcGVyQ2FzZSgpID09PSAnT1BUJykge1xuICAgIGlmIChhLm5hbWUgIT09ICcuJykge1xuICAgICAgdGhyb3cgbmV3IEVycm9yKCdPUFQgbmFtZSBtdXN0IGJlIHJvb3QuJylcbiAgICB9XG4gICAgYnVmLndyaXRlVUludDE2QkUoYS51ZHBQYXlsb2FkU2l6ZSB8fCA0MDk2LCBvZmZzZXQgKyAyKVxuICAgIGJ1Zi53cml0ZVVJbnQ4KGEuZXh0ZW5kZWRSY29kZSB8fCAwLCBvZmZzZXQgKyA0KVxuICAgIGJ1Zi53cml0ZVVJbnQ4KGEuZWRuc1ZlcnNpb24gfHwgMCwgb2Zmc2V0ICsgNSlcbiAgICBidWYud3JpdGVVSW50MTZCRShhLmZsYWdzIHx8IDAsIG9mZnNldCArIDYpXG5cbiAgICBvZmZzZXQgKz0gOFxuICAgIHJvcHQuZW5jb2RlKGEub3B0aW9ucyB8fCBbXSwgYnVmLCBvZmZzZXQpXG4gICAgb2Zmc2V0ICs9IHJvcHQuZW5jb2RlLmJ5dGVzXG4gIH0gZWxzZSB7XG4gICAgbGV0IGtsYXNzID0gY2xhc3Nlcy50b0NsYXNzKGEuY2xhc3MgPT09IHVuZGVmaW5lZCA/ICdJTicgOiBhLmNsYXNzKVxuICAgIGlmIChhLmZsdXNoKSBrbGFzcyB8PSBGTFVTSF9NQVNLIC8vIHRoZSAxc3QgYml0IG9mIHRoZSBjbGFzcyBpcyB0aGUgZmx1c2ggYml0XG4gICAgYnVmLndyaXRlVUludDE2QkUoa2xhc3MsIG9mZnNldCArIDIpXG4gICAgYnVmLndyaXRlVUludDMyQkUoYS50dGwgfHwgMCwgb2Zmc2V0ICsgNClcblxuICAgIG9mZnNldCArPSA4XG4gICAgY29uc3QgZW5jID0gcmVuYyhhLnR5cGUpXG4gICAgZW5jLmVuY29kZShhLmRhdGEsIGJ1Ziwgb2Zmc2V0KVxuICAgIG9mZnNldCArPSBlbmMuZW5jb2RlLmJ5dGVzXG4gIH1cblxuICBhbnN3ZXIuZW5jb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiBidWZcbn1cblxuYW5zd2VyLmVuY29kZS5ieXRlcyA9IDBcblxuYW5zd2VyLmRlY29kZSA9IGZ1bmN0aW9uIChidWYsIG9mZnNldCkge1xuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGNvbnN0IGEgPSB7fVxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICBhLm5hbWUgPSBuYW1lLmRlY29kZShidWYsIG9mZnNldClcbiAgb2Zmc2V0ICs9IG5hbWUuZGVjb2RlLmJ5dGVzXG4gIGEudHlwZSA9IHR5cGVzLnRvU3RyaW5nKGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KSlcbiAgaWYgKGEudHlwZSA9PT0gJ09QVCcpIHtcbiAgICBhLnVkcFBheWxvYWRTaXplID0gYnVmLnJlYWRVSW50MTZCRShvZmZzZXQgKyAyKVxuICAgIGEuZXh0ZW5kZWRSY29kZSA9IGJ1Zi5yZWFkVUludDgob2Zmc2V0ICsgNClcbiAgICBhLmVkbnNWZXJzaW9uID0gYnVmLnJlYWRVSW50OChvZmZzZXQgKyA1KVxuICAgIGEuZmxhZ3MgPSBidWYucmVhZFVJbnQxNkJFKG9mZnNldCArIDYpXG4gICAgYS5mbGFnX2RvID0gKChhLmZsYWdzID4+IDE1KSAmIDB4MSkgPT09IDFcbiAgICBhLm9wdGlvbnMgPSByb3B0LmRlY29kZShidWYsIG9mZnNldCArIDgpXG4gICAgb2Zmc2V0ICs9IDggKyByb3B0LmRlY29kZS5ieXRlc1xuICB9IGVsc2Uge1xuICAgIGNvbnN0IGtsYXNzID0gYnVmLnJlYWRVSW50MTZCRShvZmZzZXQgKyAyKVxuICAgIGEudHRsID0gYnVmLnJlYWRVSW50MzJCRShvZmZzZXQgKyA0KVxuXG4gICAgYS5jbGFzcyA9IGNsYXNzZXMudG9TdHJpbmcoa2xhc3MgJiBOT1RfRkxVU0hfTUFTSylcbiAgICBhLmZsdXNoID0gISEoa2xhc3MgJiBGTFVTSF9NQVNLKVxuXG4gICAgY29uc3QgZW5jID0gcmVuYyhhLnR5cGUpXG4gICAgYS5kYXRhID0gZW5jLmRlY29kZShidWYsIG9mZnNldCArIDgpXG4gICAgb2Zmc2V0ICs9IDggKyBlbmMuZGVjb2RlLmJ5dGVzXG4gIH1cblxuICBhbnN3ZXIuZGVjb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiBhXG59XG5cbmFuc3dlci5kZWNvZGUuYnl0ZXMgPSAwXG5cbmFuc3dlci5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uIChhKSB7XG4gIGNvbnN0IGRhdGEgPSAoYS5kYXRhICE9PSBudWxsICYmIGEuZGF0YSAhPT0gdW5kZWZpbmVkKSA/IGEuZGF0YSA6IGEub3B0aW9uc1xuICByZXR1cm4gbmFtZS5lbmNvZGluZ0xlbmd0aChhLm5hbWUpICsgOCArIHJlbmMoYS50eXBlKS5lbmNvZGluZ0xlbmd0aChkYXRhKVxufVxuXG5jb25zdCBxdWVzdGlvbiA9IGV4cG9ydHMucXVlc3Rpb24gPSB7fVxuXG5xdWVzdGlvbi5lbmNvZGUgPSBmdW5jdGlvbiAocSwgYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFidWYpIGJ1ZiA9IEJ1ZmZlci5hbGxvYyhxdWVzdGlvbi5lbmNvZGluZ0xlbmd0aChxKSlcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcblxuICBuYW1lLmVuY29kZShxLm5hbWUsIGJ1Ziwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gbmFtZS5lbmNvZGUuYnl0ZXNcblxuICBidWYud3JpdGVVSW50MTZCRSh0eXBlcy50b1R5cGUocS50eXBlKSwgb2Zmc2V0KVxuICBvZmZzZXQgKz0gMlxuXG4gIGJ1Zi53cml0ZVVJbnQxNkJFKGNsYXNzZXMudG9DbGFzcyhxLmNsYXNzID09PSB1bmRlZmluZWQgPyAnSU4nIDogcS5jbGFzcyksIG9mZnNldClcbiAgb2Zmc2V0ICs9IDJcblxuICBxdWVzdGlvbi5lbmNvZGUuYnl0ZXMgPSBvZmZzZXQgLSBvbGRPZmZzZXRcbiAgcmV0dXJuIHFcbn1cblxucXVlc3Rpb24uZW5jb2RlLmJ5dGVzID0gMFxuXG5xdWVzdGlvbi5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcbiAgY29uc3QgcSA9IHt9XG5cbiAgcS5uYW1lID0gbmFtZS5kZWNvZGUoYnVmLCBvZmZzZXQpXG4gIG9mZnNldCArPSBuYW1lLmRlY29kZS5ieXRlc1xuXG4gIHEudHlwZSA9IHR5cGVzLnRvU3RyaW5nKGJ1Zi5yZWFkVUludDE2QkUob2Zmc2V0KSlcbiAgb2Zmc2V0ICs9IDJcblxuICBxLmNsYXNzID0gY2xhc3Nlcy50b1N0cmluZyhidWYucmVhZFVJbnQxNkJFKG9mZnNldCkpXG4gIG9mZnNldCArPSAyXG5cbiAgY29uc3QgcXUgPSAhIShxLmNsYXNzICYgUVVfTUFTSylcbiAgaWYgKHF1KSBxLmNsYXNzICY9IE5PVF9RVV9NQVNLXG5cbiAgcXVlc3Rpb24uZGVjb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG4gIHJldHVybiBxXG59XG5cbnF1ZXN0aW9uLmRlY29kZS5ieXRlcyA9IDBcblxucXVlc3Rpb24uZW5jb2RpbmdMZW5ndGggPSBmdW5jdGlvbiAocSkge1xuICByZXR1cm4gbmFtZS5lbmNvZGluZ0xlbmd0aChxLm5hbWUpICsgNFxufVxuXG5leHBvcnRzLkFVVEhPUklUQVRJVkVfQU5TV0VSID0gMSA8PCAxMFxuZXhwb3J0cy5UUlVOQ0FURURfUkVTUE9OU0UgPSAxIDw8IDlcbmV4cG9ydHMuUkVDVVJTSU9OX0RFU0lSRUQgPSAxIDw8IDhcbmV4cG9ydHMuUkVDVVJTSU9OX0FWQUlMQUJMRSA9IDEgPDwgN1xuZXhwb3J0cy5BVVRIRU5USUNfREFUQSA9IDEgPDwgNVxuZXhwb3J0cy5DSEVDS0lOR19ESVNBQkxFRCA9IDEgPDwgNFxuZXhwb3J0cy5ETlNTRUNfT0sgPSAxIDw8IDE1XG5cbmV4cG9ydHMuZW5jb2RlID0gZnVuY3Rpb24gKHJlc3VsdCwgYnVmLCBvZmZzZXQpIHtcbiAgY29uc3QgYWxsb2NpbmcgPSAhYnVmXG5cbiAgaWYgKGFsbG9jaW5nKSBidWYgPSBCdWZmZXIuYWxsb2MoZXhwb3J0cy5lbmNvZGluZ0xlbmd0aChyZXN1bHQpKVxuICBpZiAoIW9mZnNldCkgb2Zmc2V0ID0gMFxuXG4gIGNvbnN0IG9sZE9mZnNldCA9IG9mZnNldFxuXG4gIGlmICghcmVzdWx0LnF1ZXN0aW9ucykgcmVzdWx0LnF1ZXN0aW9ucyA9IFtdXG4gIGlmICghcmVzdWx0LmFuc3dlcnMpIHJlc3VsdC5hbnN3ZXJzID0gW11cbiAgaWYgKCFyZXN1bHQuYXV0aG9yaXRpZXMpIHJlc3VsdC5hdXRob3JpdGllcyA9IFtdXG4gIGlmICghcmVzdWx0LmFkZGl0aW9uYWxzKSByZXN1bHQuYWRkaXRpb25hbHMgPSBbXVxuXG4gIGhlYWRlci5lbmNvZGUocmVzdWx0LCBidWYsIG9mZnNldClcbiAgb2Zmc2V0ICs9IGhlYWRlci5lbmNvZGUuYnl0ZXNcblxuICBvZmZzZXQgPSBlbmNvZGVMaXN0KHJlc3VsdC5xdWVzdGlvbnMsIHF1ZXN0aW9uLCBidWYsIG9mZnNldClcbiAgb2Zmc2V0ID0gZW5jb2RlTGlzdChyZXN1bHQuYW5zd2VycywgYW5zd2VyLCBidWYsIG9mZnNldClcbiAgb2Zmc2V0ID0gZW5jb2RlTGlzdChyZXN1bHQuYXV0aG9yaXRpZXMsIGFuc3dlciwgYnVmLCBvZmZzZXQpXG4gIG9mZnNldCA9IGVuY29kZUxpc3QocmVzdWx0LmFkZGl0aW9uYWxzLCBhbnN3ZXIsIGJ1Ziwgb2Zmc2V0KVxuXG4gIGV4cG9ydHMuZW5jb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG5cbiAgLy8ganVzdCBhIHF1aWNrIHNhbml0eSBjaGVja1xuICBpZiAoYWxsb2NpbmcgJiYgZXhwb3J0cy5lbmNvZGUuYnl0ZXMgIT09IGJ1Zi5sZW5ndGgpIHtcbiAgICByZXR1cm4gYnVmLnNsaWNlKDAsIGV4cG9ydHMuZW5jb2RlLmJ5dGVzKVxuICB9XG5cbiAgcmV0dXJuIGJ1ZlxufVxuXG5leHBvcnRzLmVuY29kZS5ieXRlcyA9IDBcblxuZXhwb3J0cy5kZWNvZGUgPSBmdW5jdGlvbiAoYnVmLCBvZmZzZXQpIHtcbiAgaWYgKCFvZmZzZXQpIG9mZnNldCA9IDBcblxuICBjb25zdCBvbGRPZmZzZXQgPSBvZmZzZXRcbiAgY29uc3QgcmVzdWx0ID0gaGVhZGVyLmRlY29kZShidWYsIG9mZnNldClcbiAgb2Zmc2V0ICs9IGhlYWRlci5kZWNvZGUuYnl0ZXNcblxuICBvZmZzZXQgPSBkZWNvZGVMaXN0KHJlc3VsdC5xdWVzdGlvbnMsIHF1ZXN0aW9uLCBidWYsIG9mZnNldClcbiAgb2Zmc2V0ID0gZGVjb2RlTGlzdChyZXN1bHQuYW5zd2VycywgYW5zd2VyLCBidWYsIG9mZnNldClcbiAgb2Zmc2V0ID0gZGVjb2RlTGlzdChyZXN1bHQuYXV0aG9yaXRpZXMsIGFuc3dlciwgYnVmLCBvZmZzZXQpXG4gIG9mZnNldCA9IGRlY29kZUxpc3QocmVzdWx0LmFkZGl0aW9uYWxzLCBhbnN3ZXIsIGJ1Ziwgb2Zmc2V0KVxuXG4gIGV4cG9ydHMuZGVjb2RlLmJ5dGVzID0gb2Zmc2V0IC0gb2xkT2Zmc2V0XG5cbiAgcmV0dXJuIHJlc3VsdFxufVxuXG5leHBvcnRzLmRlY29kZS5ieXRlcyA9IDBcblxuZXhwb3J0cy5lbmNvZGluZ0xlbmd0aCA9IGZ1bmN0aW9uIChyZXN1bHQpIHtcbiAgcmV0dXJuIGhlYWRlci5lbmNvZGluZ0xlbmd0aChyZXN1bHQpICtcbiAgICBlbmNvZGluZ0xlbmd0aExpc3QocmVzdWx0LnF1ZXN0aW9ucyB8fCBbXSwgcXVlc3Rpb24pICtcbiAgICBlbmNvZGluZ0xlbmd0aExpc3QocmVzdWx0LmFuc3dlcnMgfHwgW10sIGFuc3dlcikgK1xuICAgIGVuY29kaW5nTGVuZ3RoTGlzdChyZXN1bHQuYXV0aG9yaXRpZXMgfHwgW10sIGFuc3dlcikgK1xuICAgIGVuY29kaW5nTGVuZ3RoTGlzdChyZXN1bHQuYWRkaXRpb25hbHMgfHwgW10sIGFuc3dlcilcbn1cblxuZXhwb3J0cy5zdHJlYW1FbmNvZGUgPSBmdW5jdGlvbiAocmVzdWx0KSB7XG4gIGNvbnN0IGJ1ZiA9IGV4cG9ydHMuZW5jb2RlKHJlc3VsdClcbiAgY29uc3Qgc2J1ZiA9IEJ1ZmZlci5hbGxvYygyKVxuICBzYnVmLndyaXRlVUludDE2QkUoYnVmLmJ5dGVMZW5ndGgpXG4gIGNvbnN0IGNvbWJpbmUgPSBCdWZmZXIuY29uY2F0KFtzYnVmLCBidWZdKVxuICBleHBvcnRzLnN0cmVhbUVuY29kZS5ieXRlcyA9IGNvbWJpbmUuYnl0ZUxlbmd0aFxuICByZXR1cm4gY29tYmluZVxufVxuXG5leHBvcnRzLnN0cmVhbUVuY29kZS5ieXRlcyA9IDBcblxuZXhwb3J0cy5zdHJlYW1EZWNvZGUgPSBmdW5jdGlvbiAoc2J1Zikge1xuICBjb25zdCBsZW4gPSBzYnVmLnJlYWRVSW50MTZCRSgwKVxuICBpZiAoc2J1Zi5ieXRlTGVuZ3RoIDwgbGVuICsgMikge1xuICAgIC8vIG5vdCBlbm91Z2ggZGF0YVxuICAgIHJldHVybiBudWxsXG4gIH1cbiAgY29uc3QgcmVzdWx0ID0gZXhwb3J0cy5kZWNvZGUoc2J1Zi5zbGljZSgyKSlcbiAgZXhwb3J0cy5zdHJlYW1EZWNvZGUuYnl0ZXMgPSBleHBvcnRzLmRlY29kZS5ieXRlc1xuICByZXR1cm4gcmVzdWx0XG59XG5cbmV4cG9ydHMuc3RyZWFtRGVjb2RlLmJ5dGVzID0gMFxuXG5mdW5jdGlvbiBlbmNvZGluZ0xlbmd0aExpc3QgKGxpc3QsIGVuYykge1xuICBsZXQgbGVuID0gMFxuICBmb3IgKGxldCBpID0gMDsgaSA8IGxpc3QubGVuZ3RoOyBpKyspIGxlbiArPSBlbmMuZW5jb2RpbmdMZW5ndGgobGlzdFtpXSlcbiAgcmV0dXJuIGxlblxufVxuXG5mdW5jdGlvbiBlbmNvZGVMaXN0IChsaXN0LCBlbmMsIGJ1Ziwgb2Zmc2V0KSB7XG4gIGZvciAobGV0IGkgPSAwOyBpIDwgbGlzdC5sZW5ndGg7IGkrKykge1xuICAgIGVuYy5lbmNvZGUobGlzdFtpXSwgYnVmLCBvZmZzZXQpXG4gICAgb2Zmc2V0ICs9IGVuYy5lbmNvZGUuYnl0ZXNcbiAgfVxuICByZXR1cm4gb2Zmc2V0XG59XG5cbmZ1bmN0aW9uIGRlY29kZUxpc3QgKGxpc3QsIGVuYywgYnVmLCBvZmZzZXQpIHtcbiAgZm9yIChsZXQgaSA9IDA7IGkgPCBsaXN0Lmxlbmd0aDsgaSsrKSB7XG4gICAgbGlzdFtpXSA9IGVuYy5kZWNvZGUoYnVmLCBvZmZzZXQpXG4gICAgb2Zmc2V0ICs9IGVuYy5kZWNvZGUuYnl0ZXNcbiAgfVxuICByZXR1cm4gb2Zmc2V0XG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///4568
+`)},6942:(__unused_webpack_module,exports)=>{eval(`
+
+/*
+ * Traditional DNS header OPCODEs (4-bits) defined by IANA in
+ * https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-5
+ */
+
+exports.toString = function (opcode) {
+  switch (opcode) {
+    case 0: return 'QUERY'
+    case 1: return 'IQUERY'
+    case 2: return 'STATUS'
+    case 3: return 'OPCODE_3'
+    case 4: return 'NOTIFY'
+    case 5: return 'UPDATE'
+    case 6: return 'OPCODE_6'
+    case 7: return 'OPCODE_7'
+    case 8: return 'OPCODE_8'
+    case 9: return 'OPCODE_9'
+    case 10: return 'OPCODE_10'
+    case 11: return 'OPCODE_11'
+    case 12: return 'OPCODE_12'
+    case 13: return 'OPCODE_13'
+    case 14: return 'OPCODE_14'
+    case 15: return 'OPCODE_15'
+  }
+  return 'OPCODE_' + opcode
+}
+
+exports.toOpcode = function (code) {
+  switch (code.toUpperCase()) {
+    case 'QUERY': return 0
+    case 'IQUERY': return 1
+    case 'STATUS': return 2
+    case 'OPCODE_3': return 3
+    case 'NOTIFY': return 4
+    case 'UPDATE': return 5
+    case 'OPCODE_6': return 6
+    case 'OPCODE_7': return 7
+    case 'OPCODE_8': return 8
+    case 'OPCODE_9': return 9
+    case 'OPCODE_10': return 10
+    case 'OPCODE_11': return 11
+    case 'OPCODE_12': return 12
+    case 'OPCODE_13': return 13
+    case 'OPCODE_14': return 14
+    case 'OPCODE_15': return 15
+  }
+  return 0
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNjk0Mi5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvZG5zLXBhY2tldC9vcGNvZGVzLmpzPzI2ZmIiXSwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnXG5cbi8qXG4gKiBUcmFkaXRpb25hbCBETlMgaGVhZGVyIE9QQ09ERXMgKDQtYml0cykgZGVmaW5lZCBieSBJQU5BIGluXG4gKiBodHRwczovL3d3dy5pYW5hLm9yZy9hc3NpZ25tZW50cy9kbnMtcGFyYW1ldGVycy9kbnMtcGFyYW1ldGVycy54aHRtbCNkbnMtcGFyYW1ldGVycy01XG4gKi9cblxuZXhwb3J0cy50b1N0cmluZyA9IGZ1bmN0aW9uIChvcGNvZGUpIHtcbiAgc3dpdGNoIChvcGNvZGUpIHtcbiAgICBjYXNlIDA6IHJldHVybiAnUVVFUlknXG4gICAgY2FzZSAxOiByZXR1cm4gJ0lRVUVSWSdcbiAgICBjYXNlIDI6IHJldHVybiAnU1RBVFVTJ1xuICAgIGNhc2UgMzogcmV0dXJuICdPUENPREVfMydcbiAgICBjYXNlIDQ6IHJldHVybiAnTk9USUZZJ1xuICAgIGNhc2UgNTogcmV0dXJuICdVUERBVEUnXG4gICAgY2FzZSA2OiByZXR1cm4gJ09QQ09ERV82J1xuICAgIGNhc2UgNzogcmV0dXJuICdPUENPREVfNydcbiAgICBjYXNlIDg6IHJldHVybiAnT1BDT0RFXzgnXG4gICAgY2FzZSA5OiByZXR1cm4gJ09QQ09ERV85J1xuICAgIGNhc2UgMTA6IHJldHVybiAnT1BDT0RFXzEwJ1xuICAgIGNhc2UgMTE6IHJldHVybiAnT1BDT0RFXzExJ1xuICAgIGNhc2UgMTI6IHJldHVybiAnT1BDT0RFXzEyJ1xuICAgIGNhc2UgMTM6IHJldHVybiAnT1BDT0RFXzEzJ1xuICAgIGNhc2UgMTQ6IHJldHVybiAnT1BDT0RFXzE0J1xuICAgIGNhc2UgMTU6IHJldHVybiAnT1BDT0RFXzE1J1xuICB9XG4gIHJldHVybiAnT1BDT0RFXycgKyBvcGNvZGVcbn1cblxuZXhwb3J0cy50b09wY29kZSA9IGZ1bmN0aW9uIChjb2RlKSB7XG4gIHN3aXRjaCAoY29kZS50b1VwcGVyQ2FzZSgpKSB7XG4gICAgY2FzZSAnUVVFUlknOiByZXR1cm4gMFxuICAgIGNhc2UgJ0lRVUVSWSc6IHJldHVybiAxXG4gICAgY2FzZSAnU1RBVFVTJzogcmV0dXJuIDJcbiAgICBjYXNlICdPUENPREVfMyc6IHJldHVybiAzXG4gICAgY2FzZSAnTk9USUZZJzogcmV0dXJuIDRcbiAgICBjYXNlICdVUERBVEUnOiByZXR1cm4gNVxuICAgIGNhc2UgJ09QQ09ERV82JzogcmV0dXJuIDZcbiAgICBjYXNlICdPUENPREVfNyc6IHJldHVybiA3XG4gICAgY2FzZSAnT1BDT0RFXzgnOiByZXR1cm4gOFxuICAgIGNhc2UgJ09QQ09ERV85JzogcmV0dXJuIDlcbiAgICBjYXNlICdPUENPREVfMTAnOiByZXR1cm4gMTBcbiAgICBjYXNlICdPUENPREVfMTEnOiByZXR1cm4gMTFcbiAgICBjYXNlICdPUENPREVfMTInOiByZXR1cm4gMTJcbiAgICBjYXNlICdPUENPREVfMTMnOiByZXR1cm4gMTNcbiAgICBjYXNlICdPUENPREVfMTQnOiByZXR1cm4gMTRcbiAgICBjYXNlICdPUENPREVfMTUnOiByZXR1cm4gMTVcbiAgfVxuICByZXR1cm4gMFxufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///6942
+`)},6285:(__unused_webpack_module,exports)=>{eval(`
+
+exports.toString = function (type) {
+  switch (type) {
+    // list at
+    // https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-11
+    case 1: return 'LLQ'
+    case 2: return 'UL'
+    case 3: return 'NSID'
+    case 5: return 'DAU'
+    case 6: return 'DHU'
+    case 7: return 'N3U'
+    case 8: return 'CLIENT_SUBNET'
+    case 9: return 'EXPIRE'
+    case 10: return 'COOKIE'
+    case 11: return 'TCP_KEEPALIVE'
+    case 12: return 'PADDING'
+    case 13: return 'CHAIN'
+    case 14: return 'KEY_TAG'
+    case 26946: return 'DEVICEID'
+  }
+  if (type < 0) {
+    return null
+  }
+  return \`OPTION_\${type}\`
+}
+
+exports.toCode = function (name) {
+  if (typeof name === 'number') {
+    return name
+  }
+  if (!name) {
+    return -1
+  }
+  switch (name.toUpperCase()) {
+    case 'OPTION_0': return 0
+    case 'LLQ': return 1
+    case 'UL': return 2
+    case 'NSID': return 3
+    case 'OPTION_4': return 4
+    case 'DAU': return 5
+    case 'DHU': return 6
+    case 'N3U': return 7
+    case 'CLIENT_SUBNET': return 8
+    case 'EXPIRE': return 9
+    case 'COOKIE': return 10
+    case 'TCP_KEEPALIVE': return 11
+    case 'PADDING': return 12
+    case 'CHAIN': return 13
+    case 'KEY_TAG': return 14
+    case 'DEVICEID': return 26946
+    case 'OPTION_65535': return 65535
+  }
+  const m = name.match(/_(\\d+)$/)
+  if (m) {
+    return parseInt(m[1], 10)
+  }
+  return -1
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNjI4NS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvZG5zLXBhY2tldC9vcHRpb25jb2Rlcy5qcz8zZDBhIl0sInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0J1xuXG5leHBvcnRzLnRvU3RyaW5nID0gZnVuY3Rpb24gKHR5cGUpIHtcbiAgc3dpdGNoICh0eXBlKSB7XG4gICAgLy8gbGlzdCBhdFxuICAgIC8vIGh0dHBzOi8vd3d3LmlhbmEub3JnL2Fzc2lnbm1lbnRzL2Rucy1wYXJhbWV0ZXJzL2Rucy1wYXJhbWV0ZXJzLnhodG1sI2Rucy1wYXJhbWV0ZXJzLTExXG4gICAgY2FzZSAxOiByZXR1cm4gJ0xMUSdcbiAgICBjYXNlIDI6IHJldHVybiAnVUwnXG4gICAgY2FzZSAzOiByZXR1cm4gJ05TSUQnXG4gICAgY2FzZSA1OiByZXR1cm4gJ0RBVSdcbiAgICBjYXNlIDY6IHJldHVybiAnREhVJ1xuICAgIGNhc2UgNzogcmV0dXJuICdOM1UnXG4gICAgY2FzZSA4OiByZXR1cm4gJ0NMSUVOVF9TVUJORVQnXG4gICAgY2FzZSA5OiByZXR1cm4gJ0VYUElSRSdcbiAgICBjYXNlIDEwOiByZXR1cm4gJ0NPT0tJRSdcbiAgICBjYXNlIDExOiByZXR1cm4gJ1RDUF9LRUVQQUxJVkUnXG4gICAgY2FzZSAxMjogcmV0dXJuICdQQURESU5HJ1xuICAgIGNhc2UgMTM6IHJldHVybiAnQ0hBSU4nXG4gICAgY2FzZSAxNDogcmV0dXJuICdLRVlfVEFHJ1xuICAgIGNhc2UgMjY5NDY6IHJldHVybiAnREVWSUNFSUQnXG4gIH1cbiAgaWYgKHR5cGUgPCAwKSB7XG4gICAgcmV0dXJuIG51bGxcbiAgfVxuICByZXR1cm4gYE9QVElPTl8ke3R5cGV9YFxufVxuXG5leHBvcnRzLnRvQ29kZSA9IGZ1bmN0aW9uIChuYW1lKSB7XG4gIGlmICh0eXBlb2YgbmFtZSA9PT0gJ251bWJlcicpIHtcbiAgICByZXR1cm4gbmFtZVxuICB9XG4gIGlmICghbmFtZSkge1xuICAgIHJldHVybiAtMVxuICB9XG4gIHN3aXRjaCAobmFtZS50b1VwcGVyQ2FzZSgpKSB7XG4gICAgY2FzZSAnT1BUSU9OXzAnOiByZXR1cm4gMFxuICAgIGNhc2UgJ0xMUSc6IHJldHVybiAxXG4gICAgY2FzZSAnVUwnOiByZXR1cm4gMlxuICAgIGNhc2UgJ05TSUQnOiByZXR1cm4gM1xuICAgIGNhc2UgJ09QVElPTl80JzogcmV0dXJuIDRcbiAgICBjYXNlICdEQVUnOiByZXR1cm4gNVxuICAgIGNhc2UgJ0RIVSc6IHJldHVybiA2XG4gICAgY2FzZSAnTjNVJzogcmV0dXJuIDdcbiAgICBjYXNlICdDTElFTlRfU1VCTkVUJzogcmV0dXJuIDhcbiAgICBjYXNlICdFWFBJUkUnOiByZXR1cm4gOVxuICAgIGNhc2UgJ0NPT0tJRSc6IHJldHVybiAxMFxuICAgIGNhc2UgJ1RDUF9LRUVQQUxJVkUnOiByZXR1cm4gMTFcbiAgICBjYXNlICdQQURESU5HJzogcmV0dXJuIDEyXG4gICAgY2FzZSAnQ0hBSU4nOiByZXR1cm4gMTNcbiAgICBjYXNlICdLRVlfVEFHJzogcmV0dXJuIDE0XG4gICAgY2FzZSAnREVWSUNFSUQnOiByZXR1cm4gMjY5NDZcbiAgICBjYXNlICdPUFRJT05fNjU1MzUnOiByZXR1cm4gNjU1MzVcbiAgfVxuICBjb25zdCBtID0gbmFtZS5tYXRjaCgvXyhcXGQrKSQvKVxuICBpZiAobSkge1xuICAgIHJldHVybiBwYXJzZUludChtWzFdLCAxMClcbiAgfVxuICByZXR1cm4gLTFcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///6285
+`)},6017:(__unused_webpack_module,exports)=>{eval(`
+
+/*
+ * Traditional DNS header RCODEs (4-bits) defined by IANA in
+ * https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml
+ */
+
+exports.toString = function (rcode) {
+  switch (rcode) {
+    case 0: return 'NOERROR'
+    case 1: return 'FORMERR'
+    case 2: return 'SERVFAIL'
+    case 3: return 'NXDOMAIN'
+    case 4: return 'NOTIMP'
+    case 5: return 'REFUSED'
+    case 6: return 'YXDOMAIN'
+    case 7: return 'YXRRSET'
+    case 8: return 'NXRRSET'
+    case 9: return 'NOTAUTH'
+    case 10: return 'NOTZONE'
+    case 11: return 'RCODE_11'
+    case 12: return 'RCODE_12'
+    case 13: return 'RCODE_13'
+    case 14: return 'RCODE_14'
+    case 15: return 'RCODE_15'
+  }
+  return 'RCODE_' + rcode
+}
+
+exports.toRcode = function (code) {
+  switch (code.toUpperCase()) {
+    case 'NOERROR': return 0
+    case 'FORMERR': return 1
+    case 'SERVFAIL': return 2
+    case 'NXDOMAIN': return 3
+    case 'NOTIMP': return 4
+    case 'REFUSED': return 5
+    case 'YXDOMAIN': return 6
+    case 'YXRRSET': return 7
+    case 'NXRRSET': return 8
+    case 'NOTAUTH': return 9
+    case 'NOTZONE': return 10
+    case 'RCODE_11': return 11
+    case 'RCODE_12': return 12
+    case 'RCODE_13': return 13
+    case 'RCODE_14': return 14
+    case 'RCODE_15': return 15
+  }
+  return 0
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNjAxNy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvZG5zLXBhY2tldC9yY29kZXMuanM/NmQ1NyJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCdcblxuLypcbiAqIFRyYWRpdGlvbmFsIEROUyBoZWFkZXIgUkNPREVzICg0LWJpdHMpIGRlZmluZWQgYnkgSUFOQSBpblxuICogaHR0cHM6Ly93d3cuaWFuYS5vcmcvYXNzaWdubWVudHMvZG5zLXBhcmFtZXRlcnMvZG5zLXBhcmFtZXRlcnMueGh0bWxcbiAqL1xuXG5leHBvcnRzLnRvU3RyaW5nID0gZnVuY3Rpb24gKHJjb2RlKSB7XG4gIHN3aXRjaCAocmNvZGUpIHtcbiAgICBjYXNlIDA6IHJldHVybiAnTk9FUlJPUidcbiAgICBjYXNlIDE6IHJldHVybiAnRk9STUVSUidcbiAgICBjYXNlIDI6IHJldHVybiAnU0VSVkZBSUwnXG4gICAgY2FzZSAzOiByZXR1cm4gJ05YRE9NQUlOJ1xuICAgIGNhc2UgNDogcmV0dXJuICdOT1RJTVAnXG4gICAgY2FzZSA1OiByZXR1cm4gJ1JFRlVTRUQnXG4gICAgY2FzZSA2OiByZXR1cm4gJ1lYRE9NQUlOJ1xuICAgIGNhc2UgNzogcmV0dXJuICdZWFJSU0VUJ1xuICAgIGNhc2UgODogcmV0dXJuICdOWFJSU0VUJ1xuICAgIGNhc2UgOTogcmV0dXJuICdOT1RBVVRIJ1xuICAgIGNhc2UgMTA6IHJldHVybiAnTk9UWk9ORSdcbiAgICBjYXNlIDExOiByZXR1cm4gJ1JDT0RFXzExJ1xuICAgIGNhc2UgMTI6IHJldHVybiAnUkNPREVfMTInXG4gICAgY2FzZSAxMzogcmV0dXJuICdSQ09ERV8xMydcbiAgICBjYXNlIDE0OiByZXR1cm4gJ1JDT0RFXzE0J1xuICAgIGNhc2UgMTU6IHJldHVybiAnUkNPREVfMTUnXG4gIH1cbiAgcmV0dXJuICdSQ09ERV8nICsgcmNvZGVcbn1cblxuZXhwb3J0cy50b1Jjb2RlID0gZnVuY3Rpb24gKGNvZGUpIHtcbiAgc3dpdGNoIChjb2RlLnRvVXBwZXJDYXNlKCkpIHtcbiAgICBjYXNlICdOT0VSUk9SJzogcmV0dXJuIDBcbiAgICBjYXNlICdGT1JNRVJSJzogcmV0dXJuIDFcbiAgICBjYXNlICdTRVJWRkFJTCc6IHJldHVybiAyXG4gICAgY2FzZSAnTlhET01BSU4nOiByZXR1cm4gM1xuICAgIGNhc2UgJ05PVElNUCc6IHJldHVybiA0XG4gICAgY2FzZSAnUkVGVVNFRCc6IHJldHVybiA1XG4gICAgY2FzZSAnWVhET01BSU4nOiByZXR1cm4gNlxuICAgIGNhc2UgJ1lYUlJTRVQnOiByZXR1cm4gN1xuICAgIGNhc2UgJ05YUlJTRVQnOiByZXR1cm4gOFxuICAgIGNhc2UgJ05PVEFVVEgnOiByZXR1cm4gOVxuICAgIGNhc2UgJ05PVFpPTkUnOiByZXR1cm4gMTBcbiAgICBjYXNlICdSQ09ERV8xMSc6IHJldHVybiAxMVxuICAgIGNhc2UgJ1JDT0RFXzEyJzogcmV0dXJuIDEyXG4gICAgY2FzZSAnUkNPREVfMTMnOiByZXR1cm4gMTNcbiAgICBjYXNlICdSQ09ERV8xNCc6IHJldHVybiAxNFxuICAgIGNhc2UgJ1JDT0RFXzE1JzogcmV0dXJuIDE1XG4gIH1cbiAgcmV0dXJuIDBcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///6017
+`)},9082:(__unused_webpack_module,exports)=>{eval(`
+
+exports.toString = function (type) {
+  switch (type) {
+    case 1: return 'A'
+    case 10: return 'NULL'
+    case 28: return 'AAAA'
+    case 18: return 'AFSDB'
+    case 42: return 'APL'
+    case 257: return 'CAA'
+    case 60: return 'CDNSKEY'
+    case 59: return 'CDS'
+    case 37: return 'CERT'
+    case 5: return 'CNAME'
+    case 49: return 'DHCID'
+    case 32769: return 'DLV'
+    case 39: return 'DNAME'
+    case 48: return 'DNSKEY'
+    case 43: return 'DS'
+    case 55: return 'HIP'
+    case 13: return 'HINFO'
+    case 45: return 'IPSECKEY'
+    case 25: return 'KEY'
+    case 36: return 'KX'
+    case 29: return 'LOC'
+    case 15: return 'MX'
+    case 35: return 'NAPTR'
+    case 2: return 'NS'
+    case 47: return 'NSEC'
+    case 50: return 'NSEC3'
+    case 51: return 'NSEC3PARAM'
+    case 12: return 'PTR'
+    case 46: return 'RRSIG'
+    case 17: return 'RP'
+    case 24: return 'SIG'
+    case 6: return 'SOA'
+    case 99: return 'SPF'
+    case 33: return 'SRV'
+    case 44: return 'SSHFP'
+    case 32768: return 'TA'
+    case 249: return 'TKEY'
+    case 52: return 'TLSA'
+    case 250: return 'TSIG'
+    case 16: return 'TXT'
+    case 252: return 'AXFR'
+    case 251: return 'IXFR'
+    case 41: return 'OPT'
+    case 255: return 'ANY'
+  }
+  return 'UNKNOWN_' + type
+}
+
+exports.toType = function (name) {
+  switch (name.toUpperCase()) {
+    case 'A': return 1
+    case 'NULL': return 10
+    case 'AAAA': return 28
+    case 'AFSDB': return 18
+    case 'APL': return 42
+    case 'CAA': return 257
+    case 'CDNSKEY': return 60
+    case 'CDS': return 59
+    case 'CERT': return 37
+    case 'CNAME': return 5
+    case 'DHCID': return 49
+    case 'DLV': return 32769
+    case 'DNAME': return 39
+    case 'DNSKEY': return 48
+    case 'DS': return 43
+    case 'HIP': return 55
+    case 'HINFO': return 13
+    case 'IPSECKEY': return 45
+    case 'KEY': return 25
+    case 'KX': return 36
+    case 'LOC': return 29
+    case 'MX': return 15
+    case 'NAPTR': return 35
+    case 'NS': return 2
+    case 'NSEC': return 47
+    case 'NSEC3': return 50
+    case 'NSEC3PARAM': return 51
+    case 'PTR': return 12
+    case 'RRSIG': return 46
+    case 'RP': return 17
+    case 'SIG': return 24
+    case 'SOA': return 6
+    case 'SPF': return 99
+    case 'SRV': return 33
+    case 'SSHFP': return 44
+    case 'TA': return 32768
+    case 'TKEY': return 249
+    case 'TLSA': return 52
+    case 'TSIG': return 250
+    case 'TXT': return 16
+    case 'AXFR': return 252
+    case 'IXFR': return 251
+    case 'OPT': return 41
+    case 'ANY': return 255
+    case '*': return 255
+  }
+  if (name.toUpperCase().startsWith('UNKNOWN_')) return parseInt(name.slice(8))
+  return 0
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOTA4Mi5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zLy4vbm9kZV9tb2R1bGVzL2Rucy1wYWNrZXQvdHlwZXMuanM/M2M5OSJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCdcblxuZXhwb3J0cy50b1N0cmluZyA9IGZ1bmN0aW9uICh0eXBlKSB7XG4gIHN3aXRjaCAodHlwZSkge1xuICAgIGNhc2UgMTogcmV0dXJuICdBJ1xuICAgIGNhc2UgMTA6IHJldHVybiAnTlVMTCdcbiAgICBjYXNlIDI4OiByZXR1cm4gJ0FBQUEnXG4gICAgY2FzZSAxODogcmV0dXJuICdBRlNEQidcbiAgICBjYXNlIDQyOiByZXR1cm4gJ0FQTCdcbiAgICBjYXNlIDI1NzogcmV0dXJuICdDQUEnXG4gICAgY2FzZSA2MDogcmV0dXJuICdDRE5TS0VZJ1xuICAgIGNhc2UgNTk6IHJldHVybiAnQ0RTJ1xuICAgIGNhc2UgMzc6IHJldHVybiAnQ0VSVCdcbiAgICBjYXNlIDU6IHJldHVybiAnQ05BTUUnXG4gICAgY2FzZSA0OTogcmV0dXJuICdESENJRCdcbiAgICBjYXNlIDMyNzY5OiByZXR1cm4gJ0RMVidcbiAgICBjYXNlIDM5OiByZXR1cm4gJ0ROQU1FJ1xuICAgIGNhc2UgNDg6IHJldHVybiAnRE5TS0VZJ1xuICAgIGNhc2UgNDM6IHJldHVybiAnRFMnXG4gICAgY2FzZSA1NTogcmV0dXJuICdISVAnXG4gICAgY2FzZSAxMzogcmV0dXJuICdISU5GTydcbiAgICBjYXNlIDQ1OiByZXR1cm4gJ0lQU0VDS0VZJ1xuICAgIGNhc2UgMjU6IHJldHVybiAnS0VZJ1xuICAgIGNhc2UgMzY6IHJldHVybiAnS1gnXG4gICAgY2FzZSAyOTogcmV0dXJuICdMT0MnXG4gICAgY2FzZSAxNTogcmV0dXJuICdNWCdcbiAgICBjYXNlIDM1OiByZXR1cm4gJ05BUFRSJ1xuICAgIGNhc2UgMjogcmV0dXJuICdOUydcbiAgICBjYXNlIDQ3OiByZXR1cm4gJ05TRUMnXG4gICAgY2FzZSA1MDogcmV0dXJuICdOU0VDMydcbiAgICBjYXNlIDUxOiByZXR1cm4gJ05TRUMzUEFSQU0nXG4gICAgY2FzZSAxMjogcmV0dXJuICdQVFInXG4gICAgY2FzZSA0NjogcmV0dXJuICdSUlNJRydcbiAgICBjYXNlIDE3OiByZXR1cm4gJ1JQJ1xuICAgIGNhc2UgMjQ6IHJldHVybiAnU0lHJ1xuICAgIGNhc2UgNjogcmV0dXJuICdTT0EnXG4gICAgY2FzZSA5OTogcmV0dXJuICdTUEYnXG4gICAgY2FzZSAzMzogcmV0dXJuICdTUlYnXG4gICAgY2FzZSA0NDogcmV0dXJuICdTU0hGUCdcbiAgICBjYXNlIDMyNzY4OiByZXR1cm4gJ1RBJ1xuICAgIGNhc2UgMjQ5OiByZXR1cm4gJ1RLRVknXG4gICAgY2FzZSA1MjogcmV0dXJuICdUTFNBJ1xuICAgIGNhc2UgMjUwOiByZXR1cm4gJ1RTSUcnXG4gICAgY2FzZSAxNjogcmV0dXJuICdUWFQnXG4gICAgY2FzZSAyNTI6IHJldHVybiAnQVhGUidcbiAgICBjYXNlIDI1MTogcmV0dXJuICdJWEZSJ1xuICAgIGNhc2UgNDE6IHJldHVybiAnT1BUJ1xuICAgIGNhc2UgMjU1OiByZXR1cm4gJ0FOWSdcbiAgfVxuICByZXR1cm4gJ1VOS05PV05fJyArIHR5cGVcbn1cblxuZXhwb3J0cy50b1R5cGUgPSBmdW5jdGlvbiAobmFtZSkge1xuICBzd2l0Y2ggKG5hbWUudG9VcHBlckNhc2UoKSkge1xuICAgIGNhc2UgJ0EnOiByZXR1cm4gMVxuICAgIGNhc2UgJ05VTEwnOiByZXR1cm4gMTBcbiAgICBjYXNlICdBQUFBJzogcmV0dXJuIDI4XG4gICAgY2FzZSAnQUZTREInOiByZXR1cm4gMThcbiAgICBjYXNlICdBUEwnOiByZXR1cm4gNDJcbiAgICBjYXNlICdDQUEnOiByZXR1cm4gMjU3XG4gICAgY2FzZSAnQ0ROU0tFWSc6IHJldHVybiA2MFxuICAgIGNhc2UgJ0NEUyc6IHJldHVybiA1OVxuICAgIGNhc2UgJ0NFUlQnOiByZXR1cm4gMzdcbiAgICBjYXNlICdDTkFNRSc6IHJldHVybiA1XG4gICAgY2FzZSAnREhDSUQnOiByZXR1cm4gNDlcbiAgICBjYXNlICdETFYnOiByZXR1cm4gMzI3NjlcbiAgICBjYXNlICdETkFNRSc6IHJldHVybiAzOVxuICAgIGNhc2UgJ0ROU0tFWSc6IHJldHVybiA0OFxuICAgIGNhc2UgJ0RTJzogcmV0dXJuIDQzXG4gICAgY2FzZSAnSElQJzogcmV0dXJuIDU1XG4gICAgY2FzZSAnSElORk8nOiByZXR1cm4gMTNcbiAgICBjYXNlICdJUFNFQ0tFWSc6IHJldHVybiA0NVxuICAgIGNhc2UgJ0tFWSc6IHJldHVybiAyNVxuICAgIGNhc2UgJ0tYJzogcmV0dXJuIDM2XG4gICAgY2FzZSAnTE9DJzogcmV0dXJuIDI5XG4gICAgY2FzZSAnTVgnOiByZXR1cm4gMTVcbiAgICBjYXNlICdOQVBUUic6IHJldHVybiAzNVxuICAgIGNhc2UgJ05TJzogcmV0dXJuIDJcbiAgICBjYXNlICdOU0VDJzogcmV0dXJuIDQ3XG4gICAgY2FzZSAnTlNFQzMnOiByZXR1cm4gNTBcbiAgICBjYXNlICdOU0VDM1BBUkFNJzogcmV0dXJuIDUxXG4gICAgY2FzZSAnUFRSJzogcmV0dXJuIDEyXG4gICAgY2FzZSAnUlJTSUcnOiByZXR1cm4gNDZcbiAgICBjYXNlICdSUCc6IHJldHVybiAxN1xuICAgIGNhc2UgJ1NJRyc6IHJldHVybiAyNFxuICAgIGNhc2UgJ1NPQSc6IHJldHVybiA2XG4gICAgY2FzZSAnU1BGJzogcmV0dXJuIDk5XG4gICAgY2FzZSAnU1JWJzogcmV0dXJuIDMzXG4gICAgY2FzZSAnU1NIRlAnOiByZXR1cm4gNDRcbiAgICBjYXNlICdUQSc6IHJldHVybiAzMjc2OFxuICAgIGNhc2UgJ1RLRVknOiByZXR1cm4gMjQ5XG4gICAgY2FzZSAnVExTQSc6IHJldHVybiA1MlxuICAgIGNhc2UgJ1RTSUcnOiByZXR1cm4gMjUwXG4gICAgY2FzZSAnVFhUJzogcmV0dXJuIDE2XG4gICAgY2FzZSAnQVhGUic6IHJldHVybiAyNTJcbiAgICBjYXNlICdJWEZSJzogcmV0dXJuIDI1MVxuICAgIGNhc2UgJ09QVCc6IHJldHVybiA0MVxuICAgIGNhc2UgJ0FOWSc6IHJldHVybiAyNTVcbiAgICBjYXNlICcqJzogcmV0dXJuIDI1NVxuICB9XG4gIGlmIChuYW1lLnRvVXBwZXJDYXNlKCkuc3RhcnRzV2l0aCgnVU5LTk9XTl8nKSkgcmV0dXJuIHBhcnNlSW50KG5hbWUuc2xpY2UoOCkpXG4gIHJldHVybiAwXG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///9082
 `)},4331:module=>{eval(`/*!
  * ee-first
  * Copyright(c) 2014 Jonathan Ong
@@ -6942,6 +9912,9 @@ var external_os_ = __webpack_require__(9719);
 // EXTERNAL MODULE: ./node_modules/@koa/router/lib/router.js
 var lib_router = __webpack_require__(9085);
 var router_default = /*#__PURE__*/__webpack_require__.n(lib_router);
+// EXTERNAL MODULE: ./node_modules/bonjour-service/dist/index.js
+var dist = __webpack_require__(5768);
+var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
 ;// CONCATENATED MODULE: ./node_modules/eventmit/dist/eventmit.module.js
 var n=function(){var n=new Set;return{on:function(t){n.add(t)},off:function(t){n.delete(t)},offAll:function(){n.clear()},emit:function(t){n.forEach(function(n){return n(t)})}}};
 //# sourceMappingURL=eventmit.module.js.map
@@ -7151,21 +10124,41 @@ var constants = __webpack_require__(2455);
 
 
 
+
 const Main = async ({ appInfo, packages }) => {
   let server = null;
+  let bonjour = null;
   return {
     ...constants/* RMCN_META */.UE,
     setup: async () => {
+      let service = null;
       const port = await getPorts({ port: 10171 });
+      try {
+        bonjour = new (dist_default())();
+        service = bonjour.publish({
+          name: "miraktest-rmcn",
+          host: "miraktest-rmcn.local",
+          type: "http",
+          port,
+          txt: appInfo
+        });
+        console.info("[rmcn] Published Bonjour service:", service);
+      } catch (error) {
+        console.warn(error, "[rmcn] Bonjour not supported");
+      }
       packages.Electron.ipcMain.handle(constants/* RMCN_GET_PORT */.AP, () => {
         var _a;
         let ip = "unknown";
-        try {
-          const addr = (_a = Object.values((0,external_os_.networkInterfaces)()).flat().find((i) => i && i.family === "IPv4" && !i.internal)) == null ? void 0 : _a.address;
-          if (addr) {
-            ip = addr;
+        if (service && service.host) {
+          ip = service.host;
+        } else {
+          try {
+            const addr = (_a = Object.values((0,external_os_.networkInterfaces)()).flat().find((i) => i && i.family === "IPv4" && !i.internal)) == null ? void 0 : _a.address;
+            if (addr) {
+              ip = addr;
+            }
+          } catch (e) {
           }
-        } catch (e) {
         }
         return \`\${ip}:\${port}\`;
       });
@@ -7179,8 +10172,8 @@ const Main = async ({ appInfo, packages }) => {
       });
       const services = /* @__PURE__ */ new Map();
       packages.Electron.ipcMain.handle(constants/* RMCN_SET_SERVICES */.u8, (_, _services) => {
-        _services.forEach((service) => {
-          services.set(service.id.toString(), service);
+        _services.forEach((service2) => {
+          services.set(service2.id.toString(), service2);
         });
       });
       const koa = new dist_koa();
@@ -7261,6 +10254,9 @@ const Main = async ({ appInfo, packages }) => {
       if (server) {
         server.close();
       }
+      if (bonjour) {
+        bonjour.destroy();
+      }
       packages.Electron.ipcMain.removeHandler(constants/* RMCN_GET_PORT */.AP);
       packages.Electron.ipcMain.removeHandler(constants/* RMCN_SET_CP_STATE */.Yk);
       packages.Electron.ipcMain.removeHandler(constants/* RMCN_SET_SERVICES */.u8);
@@ -7268,7 +10264,7 @@ const Main = async ({ appInfo, packages }) => {
   };
 };
 //# sourceURL=[module]
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDMwLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBO0FBQ0E7OztBQ0RBOztBQ0FBOztBQ0FBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7OztBQ2pMQTtBQUNBO0FBQ0E7QUFDQTs7Ozs7Ozs7QUNIQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFPQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9ldmVudG1pdC9kaXN0L2V2ZW50bWl0Lm1vZHVsZS5qcz81N2RjIiwid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zL2V4dGVybmFsIG5vZGUtY29tbW9uanMgXCJub2RlOm5ldFwiP2U4OGUiLCJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvZXh0ZXJuYWwgbm9kZS1jb21tb25qcyBcIm5vZGU6b3NcIj84MzQ3Iiwid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zLy4vbm9kZV9tb2R1bGVzL2dldC1wb3J0L2luZGV4LmpzPzA5MjQiLCJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMva29hL2Rpc3Qva29hLm1qcz9mM2QyIiwid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zLy4vc3JjL21pcmFrdGVzdC1ybWNuL01haW4udHM/MjhhYiJdLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgbj1mdW5jdGlvbigpe3ZhciBuPW5ldyBTZXQ7cmV0dXJue29uOmZ1bmN0aW9uKHQpe24uYWRkKHQpfSxvZmY6ZnVuY3Rpb24odCl7bi5kZWxldGUodCl9LG9mZkFsbDpmdW5jdGlvbigpe24uY2xlYXIoKX0sZW1pdDpmdW5jdGlvbih0KXtuLmZvckVhY2goZnVuY3Rpb24obil7cmV0dXJuIG4odCl9KX19fTtleHBvcnR7biBhcyBldmVudG1pdH07XG4vLyMgc291cmNlTWFwcGluZ1VSTD1ldmVudG1pdC5tb2R1bGUuanMubWFwXG4iLCJjb25zdCBfX1dFQlBBQ0tfTkFNRVNQQUNFX09CSkVDVF9fID0gX19XRUJQQUNLX0VYVEVSTkFMX2NyZWF0ZVJlcXVpcmUoaW1wb3J0Lm1ldGEudXJsKShcIm5vZGU6bmV0XCIpOyIsImNvbnN0IF9fV0VCUEFDS19OQU1FU1BBQ0VfT0JKRUNUX18gPSBfX1dFQlBBQ0tfRVhURVJOQUxfY3JlYXRlUmVxdWlyZShpbXBvcnQubWV0YS51cmwpKFwibm9kZTpvc1wiKTsiLCJpbXBvcnQgbmV0IGZyb20gJ25vZGU6bmV0JztcbmltcG9ydCBvcyBmcm9tICdub2RlOm9zJztcblxuY2xhc3MgTG9ja2VkIGV4dGVuZHMgRXJyb3Ige1xuXHRjb25zdHJ1Y3Rvcihwb3J0KSB7XG5cdFx0c3VwZXIoYCR7cG9ydH0gaXMgbG9ja2VkYCk7XG5cdH1cbn1cblxuY29uc3QgbG9ja2VkUG9ydHMgPSB7XG5cdG9sZDogbmV3IFNldCgpLFxuXHR5b3VuZzogbmV3IFNldCgpLFxufTtcblxuLy8gT24gdGhpcyBpbnRlcnZhbCwgdGhlIG9sZCBsb2NrZWQgcG9ydHMgYXJlIGRpc2NhcmRlZCxcbi8vIHRoZSB5b3VuZyBsb2NrZWQgcG9ydHMgYXJlIG1vdmVkIHRvIG9sZCBsb2NrZWQgcG9ydHMsXG4vLyBhbmQgYSBuZXcgeW91bmcgc2V0IGZvciBsb2NrZWQgcG9ydHMgYXJlIGNyZWF0ZWQuXG5jb25zdCByZWxlYXNlT2xkTG9ja2VkUG9ydHNJbnRlcnZhbE1zID0gMTAwMCAqIDE1O1xuXG5jb25zdCBtaW5Qb3J0ID0gMTAyNDtcbmNvbnN0IG1heFBvcnQgPSA2NV81MzU7XG5cbi8vIExhemlseSBjcmVhdGUgaW50ZXJ2YWwgb24gZmlyc3QgdXNlXG5sZXQgaW50ZXJ2YWw7XG5cbmNvbnN0IGdldExvY2FsSG9zdHMgPSAoKSA9PiB7XG5cdGNvbnN0IGludGVyZmFjZXMgPSBvcy5uZXR3b3JrSW50ZXJmYWNlcygpO1xuXG5cdC8vIEFkZCB1bmRlZmluZWQgdmFsdWUgZm9yIGNyZWF0ZVNlcnZlciBmdW5jdGlvbiB0byB1c2UgZGVmYXVsdCBob3N0LFxuXHQvLyBhbmQgZGVmYXVsdCBJUHY0IGhvc3QgaW4gY2FzZSBjcmVhdGVTZXJ2ZXIgZGVmYXVsdHMgdG8gSVB2Ni5cblx0Y29uc3QgcmVzdWx0cyA9IG5ldyBTZXQoW3VuZGVmaW5lZCwgJzAuMC4wLjAnXSk7XG5cblx0Zm9yIChjb25zdCBfaW50ZXJmYWNlIG9mIE9iamVjdC52YWx1ZXMoaW50ZXJmYWNlcykpIHtcblx0XHRmb3IgKGNvbnN0IGNvbmZpZyBvZiBfaW50ZXJmYWNlKSB7XG5cdFx0XHRyZXN1bHRzLmFkZChjb25maWcuYWRkcmVzcyk7XG5cdFx0fVxuXHR9XG5cblx0cmV0dXJuIHJlc3VsdHM7XG59O1xuXG5jb25zdCBjaGVja0F2YWlsYWJsZVBvcnQgPSBvcHRpb25zID0+XG5cdG5ldyBQcm9taXNlKChyZXNvbHZlLCByZWplY3QpID0+IHtcblx0XHRjb25zdCBzZXJ2ZXIgPSBuZXQuY3JlYXRlU2VydmVyKCk7XG5cdFx0c2VydmVyLnVucmVmKCk7XG5cdFx0c2VydmVyLm9uKCdlcnJvcicsIHJlamVjdCk7XG5cblx0XHRzZXJ2ZXIubGlzdGVuKG9wdGlvbnMsICgpID0+IHtcblx0XHRcdGNvbnN0IHtwb3J0fSA9IHNlcnZlci5hZGRyZXNzKCk7XG5cdFx0XHRzZXJ2ZXIuY2xvc2UoKCkgPT4ge1xuXHRcdFx0XHRyZXNvbHZlKHBvcnQpO1xuXHRcdFx0fSk7XG5cdFx0fSk7XG5cdH0pO1xuXG5jb25zdCBnZXRBdmFpbGFibGVQb3J0ID0gYXN5bmMgKG9wdGlvbnMsIGhvc3RzKSA9PiB7XG5cdGlmIChvcHRpb25zLmhvc3QgfHwgb3B0aW9ucy5wb3J0ID09PSAwKSB7XG5cdFx0cmV0dXJuIGNoZWNrQXZhaWxhYmxlUG9ydChvcHRpb25zKTtcblx0fVxuXG5cdGZvciAoY29uc3QgaG9zdCBvZiBob3N0cykge1xuXHRcdHRyeSB7XG5cdFx0XHRhd2FpdCBjaGVja0F2YWlsYWJsZVBvcnQoe3BvcnQ6IG9wdGlvbnMucG9ydCwgaG9zdH0pOyAvLyBlc2xpbnQtZGlzYWJsZS1saW5lIG5vLWF3YWl0LWluLWxvb3Bcblx0XHR9IGNhdGNoIChlcnJvcikge1xuXHRcdFx0aWYgKCFbJ0VBRERSTk9UQVZBSUwnLCAnRUlOVkFMJ10uaW5jbHVkZXMoZXJyb3IuY29kZSkpIHtcblx0XHRcdFx0dGhyb3cgZXJyb3I7XG5cdFx0XHR9XG5cdFx0fVxuXHR9XG5cblx0cmV0dXJuIG9wdGlvbnMucG9ydDtcbn07XG5cbmNvbnN0IHBvcnRDaGVja1NlcXVlbmNlID0gZnVuY3Rpb24gKiAocG9ydHMpIHtcblx0aWYgKHBvcnRzKSB7XG5cdFx0eWllbGQgKiBwb3J0cztcblx0fVxuXG5cdHlpZWxkIDA7IC8vIEZhbGwgYmFjayB0byAwIGlmIGFueXRoaW5nIGVsc2UgZmFpbGVkXG59O1xuXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBnZXRQb3J0cyhvcHRpb25zKSB7XG5cdGxldCBwb3J0cztcblx0bGV0IGV4Y2x1ZGUgPSBuZXcgU2V0KCk7XG5cblx0aWYgKG9wdGlvbnMpIHtcblx0XHRpZiAob3B0aW9ucy5wb3J0KSB7XG5cdFx0XHRwb3J0cyA9IHR5cGVvZiBvcHRpb25zLnBvcnQgPT09ICdudW1iZXInID8gW29wdGlvbnMucG9ydF0gOiBvcHRpb25zLnBvcnQ7XG5cdFx0fVxuXG5cdFx0aWYgKG9wdGlvbnMuZXhjbHVkZSkge1xuXHRcdFx0Y29uc3QgZXhjbHVkZUl0ZXJhYmxlID0gb3B0aW9ucy5leGNsdWRlO1xuXG5cdFx0XHRpZiAodHlwZW9mIGV4Y2x1ZGVJdGVyYWJsZVtTeW1ib2wuaXRlcmF0b3JdICE9PSAnZnVuY3Rpb24nKSB7XG5cdFx0XHRcdHRocm93IG5ldyBUeXBlRXJyb3IoJ1RoZSBgZXhjbHVkZWAgb3B0aW9uIG11c3QgYmUgYW4gaXRlcmFibGUuJyk7XG5cdFx0XHR9XG5cblx0XHRcdGZvciAoY29uc3QgZWxlbWVudCBvZiBleGNsdWRlSXRlcmFibGUpIHtcblx0XHRcdFx0aWYgKHR5cGVvZiBlbGVtZW50ICE9PSAnbnVtYmVyJykge1xuXHRcdFx0XHRcdHRocm93IG5ldyBUeXBlRXJyb3IoJ0VhY2ggaXRlbSBpbiB0aGUgYGV4Y2x1ZGVgIG9wdGlvbiBtdXN0IGJlIGEgbnVtYmVyIGNvcnJlc3BvbmRpbmcgdG8gdGhlIHBvcnQgeW91IHdhbnQgZXhjbHVkZWQuJyk7XG5cdFx0XHRcdH1cblxuXHRcdFx0XHRpZiAoIU51bWJlci5pc1NhZmVJbnRlZ2VyKGVsZW1lbnQpKSB7XG5cdFx0XHRcdFx0dGhyb3cgbmV3IFR5cGVFcnJvcihgTnVtYmVyICR7ZWxlbWVudH0gaW4gdGhlIGV4Y2x1ZGUgb3B0aW9uIGlzIG5vdCBhIHNhZmUgaW50ZWdlciBhbmQgY2FuJ3QgYmUgdXNlZGApO1xuXHRcdFx0XHR9XG5cdFx0XHR9XG5cblx0XHRcdGV4Y2x1ZGUgPSBuZXcgU2V0KGV4Y2x1ZGVJdGVyYWJsZSk7XG5cdFx0fVxuXHR9XG5cblx0aWYgKGludGVydmFsID09PSB1bmRlZmluZWQpIHtcblx0XHRpbnRlcnZhbCA9IHNldEludGVydmFsKCgpID0+IHtcblx0XHRcdGxvY2tlZFBvcnRzLm9sZCA9IGxvY2tlZFBvcnRzLnlvdW5nO1xuXHRcdFx0bG9ja2VkUG9ydHMueW91bmcgPSBuZXcgU2V0KCk7XG5cdFx0fSwgcmVsZWFzZU9sZExvY2tlZFBvcnRzSW50ZXJ2YWxNcyk7XG5cblx0XHQvLyBEb2VzIG5vdCBleGlzdCBpbiBzb21lIGVudmlyb25tZW50cyAoRWxlY3Ryb24sIEplc3QganNkb20gZW52LCBicm93c2VyLCBldGMpLlxuXHRcdGlmIChpbnRlcnZhbC51bnJlZikge1xuXHRcdFx0aW50ZXJ2YWwudW5yZWYoKTtcblx0XHR9XG5cdH1cblxuXHRjb25zdCBob3N0cyA9IGdldExvY2FsSG9zdHMoKTtcblxuXHRmb3IgKGNvbnN0IHBvcnQgb2YgcG9ydENoZWNrU2VxdWVuY2UocG9ydHMpKSB7XG5cdFx0dHJ5IHtcblx0XHRcdGlmIChleGNsdWRlLmhhcyhwb3J0KSkge1xuXHRcdFx0XHRjb250aW51ZTtcblx0XHRcdH1cblxuXHRcdFx0bGV0IGF2YWlsYWJsZVBvcnQgPSBhd2FpdCBnZXRBdmFpbGFibGVQb3J0KHsuLi5vcHRpb25zLCBwb3J0fSwgaG9zdHMpOyAvLyBlc2xpbnQtZGlzYWJsZS1saW5lIG5vLWF3YWl0LWluLWxvb3Bcblx0XHRcdHdoaWxlIChsb2NrZWRQb3J0cy5vbGQuaGFzKGF2YWlsYWJsZVBvcnQpIHx8IGxvY2tlZFBvcnRzLnlvdW5nLmhhcyhhdmFpbGFibGVQb3J0KSkge1xuXHRcdFx0XHRpZiAocG9ydCAhPT0gMCkge1xuXHRcdFx0XHRcdHRocm93IG5ldyBMb2NrZWQocG9ydCk7XG5cdFx0XHRcdH1cblxuXHRcdFx0XHRhdmFpbGFibGVQb3J0ID0gYXdhaXQgZ2V0QXZhaWxhYmxlUG9ydCh7Li4ub3B0aW9ucywgcG9ydH0sIGhvc3RzKTsgLy8gZXNsaW50LWRpc2FibGUtbGluZSBuby1hd2FpdC1pbi1sb29wXG5cdFx0XHR9XG5cblx0XHRcdGxvY2tlZFBvcnRzLnlvdW5nLmFkZChhdmFpbGFibGVQb3J0KTtcblxuXHRcdFx0cmV0dXJuIGF2YWlsYWJsZVBvcnQ7XG5cdFx0fSBjYXRjaCAoZXJyb3IpIHtcblx0XHRcdGlmICghWydFQUREUklOVVNFJywgJ0VBQ0NFUyddLmluY2x1ZGVzKGVycm9yLmNvZGUpICYmICEoZXJyb3IgaW5zdGFuY2VvZiBMb2NrZWQpKSB7XG5cdFx0XHRcdHRocm93IGVycm9yO1xuXHRcdFx0fVxuXHRcdH1cblx0fVxuXG5cdHRocm93IG5ldyBFcnJvcignTm8gYXZhaWxhYmxlIHBvcnRzIGZvdW5kJyk7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBwb3J0TnVtYmVycyhmcm9tLCB0bykge1xuXHRpZiAoIU51bWJlci5pc0ludGVnZXIoZnJvbSkgfHwgIU51bWJlci5pc0ludGVnZXIodG8pKSB7XG5cdFx0dGhyb3cgbmV3IFR5cGVFcnJvcignYGZyb21gIGFuZCBgdG9gIG11c3QgYmUgaW50ZWdlciBudW1iZXJzJyk7XG5cdH1cblxuXHRpZiAoZnJvbSA8IG1pblBvcnQgfHwgZnJvbSA+IG1heFBvcnQpIHtcblx0XHR0aHJvdyBuZXcgUmFuZ2VFcnJvcihgJ2Zyb20nIG11c3QgYmUgYmV0d2VlbiAke21pblBvcnR9IGFuZCAke21heFBvcnR9YCk7XG5cdH1cblxuXHRpZiAodG8gPCBtaW5Qb3J0IHx8IHRvID4gbWF4UG9ydCkge1xuXHRcdHRocm93IG5ldyBSYW5nZUVycm9yKGAndG8nIG11c3QgYmUgYmV0d2VlbiAke21pblBvcnR9IGFuZCAke21heFBvcnR9YCk7XG5cdH1cblxuXHRpZiAoZnJvbSA+IHRvKSB7XG5cdFx0dGhyb3cgbmV3IFJhbmdlRXJyb3IoJ2B0b2AgbXVzdCBiZSBncmVhdGVyIHRoYW4gb3IgZXF1YWwgdG8gYGZyb21gJyk7XG5cdH1cblxuXHRjb25zdCBnZW5lcmF0b3IgPSBmdW5jdGlvbiAqIChmcm9tLCB0bykge1xuXHRcdGZvciAobGV0IHBvcnQgPSBmcm9tOyBwb3J0IDw9IHRvOyBwb3J0KyspIHtcblx0XHRcdHlpZWxkIHBvcnQ7XG5cdFx0fVxuXHR9O1xuXG5cdHJldHVybiBnZW5lcmF0b3IoZnJvbSwgdG8pO1xufVxuIiwiaW1wb3J0IG1vZCBmcm9tIFwiLi4vbGliL2FwcGxpY2F0aW9uLmpzXCI7XG5cbmV4cG9ydCBkZWZhdWx0IG1vZDtcbmV4cG9ydCBjb25zdCBIdHRwRXJyb3IgPSBtb2QuSHR0cEVycm9yO1xuIiwiaW1wb3J0IHsgbmV0d29ya0ludGVyZmFjZXMgfSBmcm9tIFwib3NcIjtcbmltcG9ydCBSb3V0ZXIgZnJvbSBcIkBrb2Evcm91dGVyXCI7XG5pbXBvcnQgeyBldmVudG1pdCB9IGZyb20gXCJldmVudG1pdFwiO1xuaW1wb3J0IGdldFBvcnQgZnJvbSBcImdldC1wb3J0XCI7XG5pbXBvcnQgS29hIGZyb20gXCJrb2FcIjtcbmltcG9ydCB3cyBmcm9tIFwia29hLWVhc3ktd3NcIjtcbmltcG9ydCB7XG4gIFJNQ05fR0VUX1BPUlQsXG4gIFJNQ05fTUVUQSxcbiAgUk1DTl9PTl9TRVRfU1RBVEUsXG4gIFJNQ05fU0VUX0NQX1NUQVRFLFxuICBSTUNOX1NFVF9TRVJWSUNFU1xufSBmcm9tIFwiLi9jb25zdGFudHNcIjtcbmV4cG9ydCBjb25zdCBNYWluID0gYXN5bmMgKHsgYXBwSW5mbywgcGFja2FnZXMgfSkgPT4ge1xuICBsZXQgc2VydmVyID0gbnVsbDtcbiAgcmV0dXJuIHtcbiAgICAuLi5STUNOX01FVEEsXG4gICAgc2V0dXA6IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IHBvcnQgPSBhd2FpdCBnZXRQb3J0KHsgcG9ydDogMTAxNzEgfSk7XG4gICAgICBwYWNrYWdlcy5FbGVjdHJvbi5pcGNNYWluLmhhbmRsZShSTUNOX0dFVF9QT1JULCAoKSA9PiB7XG4gICAgICAgIHZhciBfYTtcbiAgICAgICAgbGV0IGlwID0gXCJ1bmtub3duXCI7XG4gICAgICAgIHRyeSB7XG4gICAgICAgICAgY29uc3QgYWRkciA9IChfYSA9IE9iamVjdC52YWx1ZXMobmV0d29ya0ludGVyZmFjZXMoKSkuZmxhdCgpLmZpbmQoKGkpID0+IGkgJiYgaS5mYW1pbHkgPT09IFwiSVB2NFwiICYmICFpLmludGVybmFsKSkgPT0gbnVsbCA/IHZvaWQgMCA6IF9hLmFkZHJlc3M7XG4gICAgICAgICAgaWYgKGFkZHIpIHtcbiAgICAgICAgICAgIGlwID0gYWRkcjtcbiAgICAgICAgICB9XG4gICAgICAgIH0gY2F0Y2ggKGUpIHtcbiAgICAgICAgfVxuICAgICAgICByZXR1cm4gYCR7aXB9OiR7cG9ydH1gO1xuICAgICAgfSk7XG4gICAgICBsZXQgYWN0aXZlV2luZG93SWQgPSAtMTtcbiAgICAgIGNvbnN0IGNvbnRlbnRQbGF5ZXJNYXAgPSAvKiBAX19QVVJFX18gKi8gbmV3IE1hcCgpO1xuICAgICAgY29uc3QgY29udGVudFBsYXllclN0YXRlQ2hhbmdlID0gZXZlbnRtaXQoKTtcbiAgICAgIHBhY2thZ2VzLkVsZWN0cm9uLmlwY01haW4uaGFuZGxlKFJNQ05fU0VUX0NQX1NUQVRFLCAoXywgc3RhdGUpID0+IHtcbiAgICAgICAgY29udGVudFBsYXllck1hcC5zZXQoc3RhdGUud2luZG93SWQudG9TdHJpbmcoKSwgc3RhdGUpO1xuICAgICAgICBjb250ZW50UGxheWVyU3RhdGVDaGFuZ2UuZW1pdChzdGF0ZSk7XG4gICAgICAgIGFjdGl2ZVdpbmRvd0lkID0gc3RhdGUuYWN0aXZlV2luZG93SWQgfHwgLTE7XG4gICAgICB9KTtcbiAgICAgIGNvbnN0IHNlcnZpY2VzID0gLyogQF9fUFVSRV9fICovIG5ldyBNYXAoKTtcbiAgICAgIHBhY2thZ2VzLkVsZWN0cm9uLmlwY01haW4uaGFuZGxlKFJNQ05fU0VUX1NFUlZJQ0VTLCAoXywgX3NlcnZpY2VzKSA9PiB7XG4gICAgICAgIF9zZXJ2aWNlcy5mb3JFYWNoKChzZXJ2aWNlKSA9PiB7XG4gICAgICAgICAgc2VydmljZXMuc2V0KHNlcnZpY2UuaWQudG9TdHJpbmcoKSwgc2VydmljZSk7XG4gICAgICAgIH0pO1xuICAgICAgfSk7XG4gICAgICBjb25zdCBrb2EgPSBuZXcgS29hKCk7XG4gICAgICBrb2EudXNlKHdzKCkpO1xuICAgICAgY29uc3Qgcm91dGVyID0gbmV3IFJvdXRlcigpO1xuICAgICAgcm91dGVyLnVzZShhc3luYyAoY3R4LCBuZXh0KSA9PiB7XG4gICAgICAgIGN0eC5zZXQoXCJBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW5cIiwgXCIqXCIpO1xuICAgICAgICBhd2FpdCBuZXh0KCk7XG4gICAgICB9KTtcbiAgICAgIHJvdXRlci5vcHRpb25zKFwiKC4qKVwiLCBhc3luYyAoY3R4KSA9PiB7XG4gICAgICAgIGN0eC5zZXQoXCJBY2Nlc3MtQ29udHJvbC1BbGxvdy1NZXRob2RzXCIsIFwiT1BUSU9OUywgR0VUXCIpO1xuICAgICAgICBjdHguc2V0KFwiQWNjZXNzLUNvbnRyb2wtQWxsb3ctSGVhZGVyc1wiLCBcIipcIik7XG4gICAgICAgIGN0eC5ib2R5ID0gXCJcIjtcbiAgICAgICAgY3R4LnN0YXR1cyA9IDIwNDtcbiAgICAgIH0pO1xuICAgICAga29hLnVzZShhc3luYyAoY3R4LCBuZXh0KSA9PiB7XG4gICAgICAgIGlmIChjdHgud3MpIHtcbiAgICAgICAgICBjb25zdCB3czIgPSBhd2FpdCBjdHgud3MoKTtcbiAgICAgICAgICBjb25zdCBjb250ZW50UGxheWVyU3RhdGVDaGFuZ2VIYW5kbGVyID0gKHN0YXRlKSA9PiB7XG4gICAgICAgICAgICB3czIuc2VuZChKU09OLnN0cmluZ2lmeSh7IHR5cGU6IFwic3RhdGVVcGRhdGVcIiwgLi4uc3RhdGUgfSkpO1xuICAgICAgICAgIH07XG4gICAgICAgICAgY29udGVudFBsYXllclN0YXRlQ2hhbmdlLm9uKGNvbnRlbnRQbGF5ZXJTdGF0ZUNoYW5nZUhhbmRsZXIpO1xuICAgICAgICAgIHdzMi5hZGRFdmVudExpc3RlbmVyKFwibWVzc2FnZVwiLCBhc3luYyAobXNnKSA9PiB7XG4gICAgICAgICAgICB0cnkge1xuICAgICAgICAgICAgICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShtc2cuZGF0YSk7XG4gICAgICAgICAgICAgIHN3aXRjaCAoZGF0YS50eXBlKSB7XG4gICAgICAgICAgICAgICAgY2FzZSBcInBpbmdcIjoge1xuICAgICAgICAgICAgICAgICAgd3MyLnNlbmQoSlNPTi5zdHJpbmdpZnkoeyB0eXBlOiBcInBvbmdcIiB9KSk7XG4gICAgICAgICAgICAgICAgICBicmVhaztcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgY2FzZSBcImluaXRcIjoge1xuICAgICAgICAgICAgICAgICAgcGFja2FnZXMuRWxlY3Ryb24uYnJvd3NlcldpbmRvdy5nZXRBbGxXaW5kb3dzKCk7XG4gICAgICAgICAgICAgICAgICBjb25zdCBpbml0RGF0YSA9IHtcbiAgICAgICAgICAgICAgICAgICAgdHlwZTogXCJpbml0XCIsXG4gICAgICAgICAgICAgICAgICAgIHZlcnNpb246IFJNQ05fTUVUQS52ZXJzaW9uLFxuICAgICAgICAgICAgICAgICAgICBhcHBWZXJzaW9uOiBhcHBJbmZvLnZlcnNpb24sXG4gICAgICAgICAgICAgICAgICAgIGNvbnRlbnRQbGF5ZXJzOiBBcnJheS5mcm9tKGNvbnRlbnRQbGF5ZXJNYXAudmFsdWVzKCkpLFxuICAgICAgICAgICAgICAgICAgICBzZXJ2aWNlczogQXJyYXkuZnJvbShzZXJ2aWNlcy52YWx1ZXMoKSksXG4gICAgICAgICAgICAgICAgICAgIGFjdGl2ZVdpbmRvd0lkXG4gICAgICAgICAgICAgICAgICB9O1xuICAgICAgICAgICAgICAgICAgd3MyLnNlbmQoSlNPTi5zdHJpbmdpZnkoaW5pdERhdGEpKTtcbiAgICAgICAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICBjYXNlIFwic2V0U3RhdGVcIjoge1xuICAgICAgICAgICAgICAgICAgY29uc3QgeyBrZXksIHZhbHVlIH0gPSBkYXRhO1xuICAgICAgICAgICAgICAgICAgY29uc3Qgd2luZG93SWQgPSBwYXJzZUludChkYXRhLndpbmRvd0lkKTtcbiAgICAgICAgICAgICAgICAgIGlmIChOdW1iZXIuaXNOYU4od2luZG93SWQpKSB7XG4gICAgICAgICAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgY29uc3Qgd2luZG93ID0gcGFja2FnZXMuRWxlY3Ryb24uYnJvd3NlcldpbmRvdy5mcm9tSWQod2luZG93SWQpO1xuICAgICAgICAgICAgICAgICAgaWYgKCF3aW5kb3cpIHtcbiAgICAgICAgICAgICAgICAgICAgYnJlYWs7XG4gICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICB3aW5kb3cud2ViQ29udGVudHMuc2VuZChSTUNOX09OX1NFVF9TVEFURSwgeyBrZXksIHZhbHVlIH0pO1xuICAgICAgICAgICAgICAgICAgYnJlYWs7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIGRlZmF1bHQ6IHtcbiAgICAgICAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgICAgICAgICAgY29uc29sZS5lcnJvcihlcnJvcik7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgfSk7XG4gICAgICAgICAgd3MyLm9uY2xvc2UgPSAoKSA9PiB7XG4gICAgICAgICAgICBjb250ZW50UGxheWVyU3RhdGVDaGFuZ2Uub2ZmKGNvbnRlbnRQbGF5ZXJTdGF0ZUNoYW5nZUhhbmRsZXIpO1xuICAgICAgICAgIH07XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgYXdhaXQgbmV4dCgpO1xuICAgICAgICB9XG4gICAgICB9KTtcbiAgICAgIGtvYS51c2Uocm91dGVyLnJvdXRlcygpKTtcbiAgICAgIHNlcnZlciA9IGtvYS5saXN0ZW4ocG9ydCwgKCkgPT4ge1xuICAgICAgICBjb25zb2xlLmluZm8oXCJSTUNOIEFQSSBTZXJ2ZXIgbGlzdGVuaW5nIG9uIHBvcnQgaHR0cDovL2xvY2FsaG9zdDpcIiArIHBvcnQpO1xuICAgICAgfSk7XG4gICAgfSxcbiAgICBkZXN0cm95OiAoKSA9PiB7XG4gICAgICBpZiAoc2VydmVyKSB7XG4gICAgICAgIHNlcnZlci5jbG9zZSgpO1xuICAgICAgfVxuICAgICAgcGFja2FnZXMuRWxlY3Ryb24uaXBjTWFpbi5yZW1vdmVIYW5kbGVyKFJNQ05fR0VUX1BPUlQpO1xuICAgICAgcGFja2FnZXMuRWxlY3Ryb24uaXBjTWFpbi5yZW1vdmVIYW5kbGVyKFJNQ05fU0VUX0NQX1NUQVRFKTtcbiAgICAgIHBhY2thZ2VzLkVsZWN0cm9uLmlwY01haW4ucmVtb3ZlSGFuZGxlcihSTUNOX1NFVF9TRVJWSUNFUyk7XG4gICAgfVxuICB9O1xufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDMwLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7OztBQUFBO0FBQ0E7OztBQ0RBOztBQ0FBOztBQ0FBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7OztBQ2pMQTtBQUNBO0FBQ0E7QUFDQTs7Ozs7Ozs7QUNIQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQU9BO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvZXZlbnRtaXQvZGlzdC9ldmVudG1pdC5tb2R1bGUuanM/NTdkYyIsIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy9leHRlcm5hbCBub2RlLWNvbW1vbmpzIFwibm9kZTpuZXRcIj9lODhlIiwid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zL2V4dGVybmFsIG5vZGUtY29tbW9uanMgXCJub2RlOm9zXCI/ODM0NyIsIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9nZXQtcG9ydC9pbmRleC5qcz8wOTI0Iiwid2VicGFjazovL21pcmFrdGVzdC1wbHVnaW5zLy4vbm9kZV9tb2R1bGVzL2tvYS9kaXN0L2tvYS5tanM/ZjNkMiIsIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL3NyYy9taXJha3Rlc3Qtcm1jbi9NYWluLnRzPzI4YWIiXSwic291cmNlc0NvbnRlbnQiOlsidmFyIG49ZnVuY3Rpb24oKXt2YXIgbj1uZXcgU2V0O3JldHVybntvbjpmdW5jdGlvbih0KXtuLmFkZCh0KX0sb2ZmOmZ1bmN0aW9uKHQpe24uZGVsZXRlKHQpfSxvZmZBbGw6ZnVuY3Rpb24oKXtuLmNsZWFyKCl9LGVtaXQ6ZnVuY3Rpb24odCl7bi5mb3JFYWNoKGZ1bmN0aW9uKG4pe3JldHVybiBuKHQpfSl9fX07ZXhwb3J0e24gYXMgZXZlbnRtaXR9O1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9ZXZlbnRtaXQubW9kdWxlLmpzLm1hcFxuIiwiY29uc3QgX19XRUJQQUNLX05BTUVTUEFDRV9PQkpFQ1RfXyA9IF9fV0VCUEFDS19FWFRFUk5BTF9jcmVhdGVSZXF1aXJlKGltcG9ydC5tZXRhLnVybCkoXCJub2RlOm5ldFwiKTsiLCJjb25zdCBfX1dFQlBBQ0tfTkFNRVNQQUNFX09CSkVDVF9fID0gX19XRUJQQUNLX0VYVEVSTkFMX2NyZWF0ZVJlcXVpcmUoaW1wb3J0Lm1ldGEudXJsKShcIm5vZGU6b3NcIik7IiwiaW1wb3J0IG5ldCBmcm9tICdub2RlOm5ldCc7XG5pbXBvcnQgb3MgZnJvbSAnbm9kZTpvcyc7XG5cbmNsYXNzIExvY2tlZCBleHRlbmRzIEVycm9yIHtcblx0Y29uc3RydWN0b3IocG9ydCkge1xuXHRcdHN1cGVyKGAke3BvcnR9IGlzIGxvY2tlZGApO1xuXHR9XG59XG5cbmNvbnN0IGxvY2tlZFBvcnRzID0ge1xuXHRvbGQ6IG5ldyBTZXQoKSxcblx0eW91bmc6IG5ldyBTZXQoKSxcbn07XG5cbi8vIE9uIHRoaXMgaW50ZXJ2YWwsIHRoZSBvbGQgbG9ja2VkIHBvcnRzIGFyZSBkaXNjYXJkZWQsXG4vLyB0aGUgeW91bmcgbG9ja2VkIHBvcnRzIGFyZSBtb3ZlZCB0byBvbGQgbG9ja2VkIHBvcnRzLFxuLy8gYW5kIGEgbmV3IHlvdW5nIHNldCBmb3IgbG9ja2VkIHBvcnRzIGFyZSBjcmVhdGVkLlxuY29uc3QgcmVsZWFzZU9sZExvY2tlZFBvcnRzSW50ZXJ2YWxNcyA9IDEwMDAgKiAxNTtcblxuY29uc3QgbWluUG9ydCA9IDEwMjQ7XG5jb25zdCBtYXhQb3J0ID0gNjVfNTM1O1xuXG4vLyBMYXppbHkgY3JlYXRlIGludGVydmFsIG9uIGZpcnN0IHVzZVxubGV0IGludGVydmFsO1xuXG5jb25zdCBnZXRMb2NhbEhvc3RzID0gKCkgPT4ge1xuXHRjb25zdCBpbnRlcmZhY2VzID0gb3MubmV0d29ya0ludGVyZmFjZXMoKTtcblxuXHQvLyBBZGQgdW5kZWZpbmVkIHZhbHVlIGZvciBjcmVhdGVTZXJ2ZXIgZnVuY3Rpb24gdG8gdXNlIGRlZmF1bHQgaG9zdCxcblx0Ly8gYW5kIGRlZmF1bHQgSVB2NCBob3N0IGluIGNhc2UgY3JlYXRlU2VydmVyIGRlZmF1bHRzIHRvIElQdjYuXG5cdGNvbnN0IHJlc3VsdHMgPSBuZXcgU2V0KFt1bmRlZmluZWQsICcwLjAuMC4wJ10pO1xuXG5cdGZvciAoY29uc3QgX2ludGVyZmFjZSBvZiBPYmplY3QudmFsdWVzKGludGVyZmFjZXMpKSB7XG5cdFx0Zm9yIChjb25zdCBjb25maWcgb2YgX2ludGVyZmFjZSkge1xuXHRcdFx0cmVzdWx0cy5hZGQoY29uZmlnLmFkZHJlc3MpO1xuXHRcdH1cblx0fVxuXG5cdHJldHVybiByZXN1bHRzO1xufTtcblxuY29uc3QgY2hlY2tBdmFpbGFibGVQb3J0ID0gb3B0aW9ucyA9PlxuXHRuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG5cdFx0Y29uc3Qgc2VydmVyID0gbmV0LmNyZWF0ZVNlcnZlcigpO1xuXHRcdHNlcnZlci51bnJlZigpO1xuXHRcdHNlcnZlci5vbignZXJyb3InLCByZWplY3QpO1xuXG5cdFx0c2VydmVyLmxpc3RlbihvcHRpb25zLCAoKSA9PiB7XG5cdFx0XHRjb25zdCB7cG9ydH0gPSBzZXJ2ZXIuYWRkcmVzcygpO1xuXHRcdFx0c2VydmVyLmNsb3NlKCgpID0+IHtcblx0XHRcdFx0cmVzb2x2ZShwb3J0KTtcblx0XHRcdH0pO1xuXHRcdH0pO1xuXHR9KTtcblxuY29uc3QgZ2V0QXZhaWxhYmxlUG9ydCA9IGFzeW5jIChvcHRpb25zLCBob3N0cykgPT4ge1xuXHRpZiAob3B0aW9ucy5ob3N0IHx8IG9wdGlvbnMucG9ydCA9PT0gMCkge1xuXHRcdHJldHVybiBjaGVja0F2YWlsYWJsZVBvcnQob3B0aW9ucyk7XG5cdH1cblxuXHRmb3IgKGNvbnN0IGhvc3Qgb2YgaG9zdHMpIHtcblx0XHR0cnkge1xuXHRcdFx0YXdhaXQgY2hlY2tBdmFpbGFibGVQb3J0KHtwb3J0OiBvcHRpb25zLnBvcnQsIGhvc3R9KTsgLy8gZXNsaW50LWRpc2FibGUtbGluZSBuby1hd2FpdC1pbi1sb29wXG5cdFx0fSBjYXRjaCAoZXJyb3IpIHtcblx0XHRcdGlmICghWydFQUREUk5PVEFWQUlMJywgJ0VJTlZBTCddLmluY2x1ZGVzKGVycm9yLmNvZGUpKSB7XG5cdFx0XHRcdHRocm93IGVycm9yO1xuXHRcdFx0fVxuXHRcdH1cblx0fVxuXG5cdHJldHVybiBvcHRpb25zLnBvcnQ7XG59O1xuXG5jb25zdCBwb3J0Q2hlY2tTZXF1ZW5jZSA9IGZ1bmN0aW9uICogKHBvcnRzKSB7XG5cdGlmIChwb3J0cykge1xuXHRcdHlpZWxkICogcG9ydHM7XG5cdH1cblxuXHR5aWVsZCAwOyAvLyBGYWxsIGJhY2sgdG8gMCBpZiBhbnl0aGluZyBlbHNlIGZhaWxlZFxufTtcblxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gZ2V0UG9ydHMob3B0aW9ucykge1xuXHRsZXQgcG9ydHM7XG5cdGxldCBleGNsdWRlID0gbmV3IFNldCgpO1xuXG5cdGlmIChvcHRpb25zKSB7XG5cdFx0aWYgKG9wdGlvbnMucG9ydCkge1xuXHRcdFx0cG9ydHMgPSB0eXBlb2Ygb3B0aW9ucy5wb3J0ID09PSAnbnVtYmVyJyA/IFtvcHRpb25zLnBvcnRdIDogb3B0aW9ucy5wb3J0O1xuXHRcdH1cblxuXHRcdGlmIChvcHRpb25zLmV4Y2x1ZGUpIHtcblx0XHRcdGNvbnN0IGV4Y2x1ZGVJdGVyYWJsZSA9IG9wdGlvbnMuZXhjbHVkZTtcblxuXHRcdFx0aWYgKHR5cGVvZiBleGNsdWRlSXRlcmFibGVbU3ltYm9sLml0ZXJhdG9yXSAhPT0gJ2Z1bmN0aW9uJykge1xuXHRcdFx0XHR0aHJvdyBuZXcgVHlwZUVycm9yKCdUaGUgYGV4Y2x1ZGVgIG9wdGlvbiBtdXN0IGJlIGFuIGl0ZXJhYmxlLicpO1xuXHRcdFx0fVxuXG5cdFx0XHRmb3IgKGNvbnN0IGVsZW1lbnQgb2YgZXhjbHVkZUl0ZXJhYmxlKSB7XG5cdFx0XHRcdGlmICh0eXBlb2YgZWxlbWVudCAhPT0gJ251bWJlcicpIHtcblx0XHRcdFx0XHR0aHJvdyBuZXcgVHlwZUVycm9yKCdFYWNoIGl0ZW0gaW4gdGhlIGBleGNsdWRlYCBvcHRpb24gbXVzdCBiZSBhIG51bWJlciBjb3JyZXNwb25kaW5nIHRvIHRoZSBwb3J0IHlvdSB3YW50IGV4Y2x1ZGVkLicpO1xuXHRcdFx0XHR9XG5cblx0XHRcdFx0aWYgKCFOdW1iZXIuaXNTYWZlSW50ZWdlcihlbGVtZW50KSkge1xuXHRcdFx0XHRcdHRocm93IG5ldyBUeXBlRXJyb3IoYE51bWJlciAke2VsZW1lbnR9IGluIHRoZSBleGNsdWRlIG9wdGlvbiBpcyBub3QgYSBzYWZlIGludGVnZXIgYW5kIGNhbid0IGJlIHVzZWRgKTtcblx0XHRcdFx0fVxuXHRcdFx0fVxuXG5cdFx0XHRleGNsdWRlID0gbmV3IFNldChleGNsdWRlSXRlcmFibGUpO1xuXHRcdH1cblx0fVxuXG5cdGlmIChpbnRlcnZhbCA9PT0gdW5kZWZpbmVkKSB7XG5cdFx0aW50ZXJ2YWwgPSBzZXRJbnRlcnZhbCgoKSA9PiB7XG5cdFx0XHRsb2NrZWRQb3J0cy5vbGQgPSBsb2NrZWRQb3J0cy55b3VuZztcblx0XHRcdGxvY2tlZFBvcnRzLnlvdW5nID0gbmV3IFNldCgpO1xuXHRcdH0sIHJlbGVhc2VPbGRMb2NrZWRQb3J0c0ludGVydmFsTXMpO1xuXG5cdFx0Ly8gRG9lcyBub3QgZXhpc3QgaW4gc29tZSBlbnZpcm9ubWVudHMgKEVsZWN0cm9uLCBKZXN0IGpzZG9tIGVudiwgYnJvd3NlciwgZXRjKS5cblx0XHRpZiAoaW50ZXJ2YWwudW5yZWYpIHtcblx0XHRcdGludGVydmFsLnVucmVmKCk7XG5cdFx0fVxuXHR9XG5cblx0Y29uc3QgaG9zdHMgPSBnZXRMb2NhbEhvc3RzKCk7XG5cblx0Zm9yIChjb25zdCBwb3J0IG9mIHBvcnRDaGVja1NlcXVlbmNlKHBvcnRzKSkge1xuXHRcdHRyeSB7XG5cdFx0XHRpZiAoZXhjbHVkZS5oYXMocG9ydCkpIHtcblx0XHRcdFx0Y29udGludWU7XG5cdFx0XHR9XG5cblx0XHRcdGxldCBhdmFpbGFibGVQb3J0ID0gYXdhaXQgZ2V0QXZhaWxhYmxlUG9ydCh7Li4ub3B0aW9ucywgcG9ydH0sIGhvc3RzKTsgLy8gZXNsaW50LWRpc2FibGUtbGluZSBuby1hd2FpdC1pbi1sb29wXG5cdFx0XHR3aGlsZSAobG9ja2VkUG9ydHMub2xkLmhhcyhhdmFpbGFibGVQb3J0KSB8fCBsb2NrZWRQb3J0cy55b3VuZy5oYXMoYXZhaWxhYmxlUG9ydCkpIHtcblx0XHRcdFx0aWYgKHBvcnQgIT09IDApIHtcblx0XHRcdFx0XHR0aHJvdyBuZXcgTG9ja2VkKHBvcnQpO1xuXHRcdFx0XHR9XG5cblx0XHRcdFx0YXZhaWxhYmxlUG9ydCA9IGF3YWl0IGdldEF2YWlsYWJsZVBvcnQoey4uLm9wdGlvbnMsIHBvcnR9LCBob3N0cyk7IC8vIGVzbGludC1kaXNhYmxlLWxpbmUgbm8tYXdhaXQtaW4tbG9vcFxuXHRcdFx0fVxuXG5cdFx0XHRsb2NrZWRQb3J0cy55b3VuZy5hZGQoYXZhaWxhYmxlUG9ydCk7XG5cblx0XHRcdHJldHVybiBhdmFpbGFibGVQb3J0O1xuXHRcdH0gY2F0Y2ggKGVycm9yKSB7XG5cdFx0XHRpZiAoIVsnRUFERFJJTlVTRScsICdFQUNDRVMnXS5pbmNsdWRlcyhlcnJvci5jb2RlKSAmJiAhKGVycm9yIGluc3RhbmNlb2YgTG9ja2VkKSkge1xuXHRcdFx0XHR0aHJvdyBlcnJvcjtcblx0XHRcdH1cblx0XHR9XG5cdH1cblxuXHR0aHJvdyBuZXcgRXJyb3IoJ05vIGF2YWlsYWJsZSBwb3J0cyBmb3VuZCcpO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gcG9ydE51bWJlcnMoZnJvbSwgdG8pIHtcblx0aWYgKCFOdW1iZXIuaXNJbnRlZ2VyKGZyb20pIHx8ICFOdW1iZXIuaXNJbnRlZ2VyKHRvKSkge1xuXHRcdHRocm93IG5ldyBUeXBlRXJyb3IoJ2Bmcm9tYCBhbmQgYHRvYCBtdXN0IGJlIGludGVnZXIgbnVtYmVycycpO1xuXHR9XG5cblx0aWYgKGZyb20gPCBtaW5Qb3J0IHx8IGZyb20gPiBtYXhQb3J0KSB7XG5cdFx0dGhyb3cgbmV3IFJhbmdlRXJyb3IoYCdmcm9tJyBtdXN0IGJlIGJldHdlZW4gJHttaW5Qb3J0fSBhbmQgJHttYXhQb3J0fWApO1xuXHR9XG5cblx0aWYgKHRvIDwgbWluUG9ydCB8fCB0byA+IG1heFBvcnQpIHtcblx0XHR0aHJvdyBuZXcgUmFuZ2VFcnJvcihgJ3RvJyBtdXN0IGJlIGJldHdlZW4gJHttaW5Qb3J0fSBhbmQgJHttYXhQb3J0fWApO1xuXHR9XG5cblx0aWYgKGZyb20gPiB0bykge1xuXHRcdHRocm93IG5ldyBSYW5nZUVycm9yKCdgdG9gIG11c3QgYmUgZ3JlYXRlciB0aGFuIG9yIGVxdWFsIHRvIGBmcm9tYCcpO1xuXHR9XG5cblx0Y29uc3QgZ2VuZXJhdG9yID0gZnVuY3Rpb24gKiAoZnJvbSwgdG8pIHtcblx0XHRmb3IgKGxldCBwb3J0ID0gZnJvbTsgcG9ydCA8PSB0bzsgcG9ydCsrKSB7XG5cdFx0XHR5aWVsZCBwb3J0O1xuXHRcdH1cblx0fTtcblxuXHRyZXR1cm4gZ2VuZXJhdG9yKGZyb20sIHRvKTtcbn1cbiIsImltcG9ydCBtb2QgZnJvbSBcIi4uL2xpYi9hcHBsaWNhdGlvbi5qc1wiO1xuXG5leHBvcnQgZGVmYXVsdCBtb2Q7XG5leHBvcnQgY29uc3QgSHR0cEVycm9yID0gbW9kLkh0dHBFcnJvcjtcbiIsImltcG9ydCB7IG5ldHdvcmtJbnRlcmZhY2VzIH0gZnJvbSBcIm9zXCI7XG5pbXBvcnQgUm91dGVyIGZyb20gXCJAa29hL3JvdXRlclwiO1xuaW1wb3J0IEJvbmpvdXIgZnJvbSBcImJvbmpvdXItc2VydmljZVwiO1xuaW1wb3J0IHsgZXZlbnRtaXQgfSBmcm9tIFwiZXZlbnRtaXRcIjtcbmltcG9ydCBnZXRQb3J0IGZyb20gXCJnZXQtcG9ydFwiO1xuaW1wb3J0IEtvYSBmcm9tIFwia29hXCI7XG5pbXBvcnQgd3MgZnJvbSBcImtvYS1lYXN5LXdzXCI7XG5pbXBvcnQge1xuICBSTUNOX0dFVF9QT1JULFxuICBSTUNOX01FVEEsXG4gIFJNQ05fT05fU0VUX1NUQVRFLFxuICBSTUNOX1NFVF9DUF9TVEFURSxcbiAgUk1DTl9TRVRfU0VSVklDRVNcbn0gZnJvbSBcIi4vY29uc3RhbnRzXCI7XG5leHBvcnQgY29uc3QgTWFpbiA9IGFzeW5jICh7IGFwcEluZm8sIHBhY2thZ2VzIH0pID0+IHtcbiAgbGV0IHNlcnZlciA9IG51bGw7XG4gIGxldCBib25qb3VyID0gbnVsbDtcbiAgcmV0dXJuIHtcbiAgICAuLi5STUNOX01FVEEsXG4gICAgc2V0dXA6IGFzeW5jICgpID0+IHtcbiAgICAgIGxldCBzZXJ2aWNlID0gbnVsbDtcbiAgICAgIGNvbnN0IHBvcnQgPSBhd2FpdCBnZXRQb3J0KHsgcG9ydDogMTAxNzEgfSk7XG4gICAgICB0cnkge1xuICAgICAgICBib25qb3VyID0gbmV3IEJvbmpvdXIoKTtcbiAgICAgICAgc2VydmljZSA9IGJvbmpvdXIucHVibGlzaCh7XG4gICAgICAgICAgbmFtZTogXCJtaXJha3Rlc3Qtcm1jblwiLFxuICAgICAgICAgIGhvc3Q6IFwibWlyYWt0ZXN0LXJtY24ubG9jYWxcIixcbiAgICAgICAgICB0eXBlOiBcImh0dHBcIixcbiAgICAgICAgICBwb3J0LFxuICAgICAgICAgIHR4dDogYXBwSW5mb1xuICAgICAgICB9KTtcbiAgICAgICAgY29uc29sZS5pbmZvKFwiW3JtY25dIFB1Ymxpc2hlZCBCb25qb3VyIHNlcnZpY2U6XCIsIHNlcnZpY2UpO1xuICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgICAgY29uc29sZS53YXJuKGVycm9yLCBcIltybWNuXSBCb25qb3VyIG5vdCBzdXBwb3J0ZWRcIik7XG4gICAgICB9XG4gICAgICBwYWNrYWdlcy5FbGVjdHJvbi5pcGNNYWluLmhhbmRsZShSTUNOX0dFVF9QT1JULCAoKSA9PiB7XG4gICAgICAgIHZhciBfYTtcbiAgICAgICAgbGV0IGlwID0gXCJ1bmtub3duXCI7XG4gICAgICAgIGlmIChzZXJ2aWNlICYmIHNlcnZpY2UuaG9zdCkge1xuICAgICAgICAgIGlwID0gc2VydmljZS5ob3N0O1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIHRyeSB7XG4gICAgICAgICAgICBjb25zdCBhZGRyID0gKF9hID0gT2JqZWN0LnZhbHVlcyhuZXR3b3JrSW50ZXJmYWNlcygpKS5mbGF0KCkuZmluZCgoaSkgPT4gaSAmJiBpLmZhbWlseSA9PT0gXCJJUHY0XCIgJiYgIWkuaW50ZXJuYWwpKSA9PSBudWxsID8gdm9pZCAwIDogX2EuYWRkcmVzcztcbiAgICAgICAgICAgIGlmIChhZGRyKSB7XG4gICAgICAgICAgICAgIGlwID0gYWRkcjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIHJldHVybiBgJHtpcH06JHtwb3J0fWA7XG4gICAgICB9KTtcbiAgICAgIGxldCBhY3RpdmVXaW5kb3dJZCA9IC0xO1xuICAgICAgY29uc3QgY29udGVudFBsYXllck1hcCA9IC8qIEBfX1BVUkVfXyAqLyBuZXcgTWFwKCk7XG4gICAgICBjb25zdCBjb250ZW50UGxheWVyU3RhdGVDaGFuZ2UgPSBldmVudG1pdCgpO1xuICAgICAgcGFja2FnZXMuRWxlY3Ryb24uaXBjTWFpbi5oYW5kbGUoUk1DTl9TRVRfQ1BfU1RBVEUsIChfLCBzdGF0ZSkgPT4ge1xuICAgICAgICBjb250ZW50UGxheWVyTWFwLnNldChzdGF0ZS53aW5kb3dJZC50b1N0cmluZygpLCBzdGF0ZSk7XG4gICAgICAgIGNvbnRlbnRQbGF5ZXJTdGF0ZUNoYW5nZS5lbWl0KHN0YXRlKTtcbiAgICAgICAgYWN0aXZlV2luZG93SWQgPSBzdGF0ZS5hY3RpdmVXaW5kb3dJZCB8fCAtMTtcbiAgICAgIH0pO1xuICAgICAgY29uc3Qgc2VydmljZXMgPSAvKiBAX19QVVJFX18gKi8gbmV3IE1hcCgpO1xuICAgICAgcGFja2FnZXMuRWxlY3Ryb24uaXBjTWFpbi5oYW5kbGUoUk1DTl9TRVRfU0VSVklDRVMsIChfLCBfc2VydmljZXMpID0+IHtcbiAgICAgICAgX3NlcnZpY2VzLmZvckVhY2goKHNlcnZpY2UyKSA9PiB7XG4gICAgICAgICAgc2VydmljZXMuc2V0KHNlcnZpY2UyLmlkLnRvU3RyaW5nKCksIHNlcnZpY2UyKTtcbiAgICAgICAgfSk7XG4gICAgICB9KTtcbiAgICAgIGNvbnN0IGtvYSA9IG5ldyBLb2EoKTtcbiAgICAgIGtvYS51c2Uod3MoKSk7XG4gICAgICBjb25zdCByb3V0ZXIgPSBuZXcgUm91dGVyKCk7XG4gICAgICByb3V0ZXIudXNlKGFzeW5jIChjdHgsIG5leHQpID0+IHtcbiAgICAgICAgY3R4LnNldChcIkFjY2Vzcy1Db250cm9sLUFsbG93LU9yaWdpblwiLCBcIipcIik7XG4gICAgICAgIGF3YWl0IG5leHQoKTtcbiAgICAgIH0pO1xuICAgICAgcm91dGVyLm9wdGlvbnMoXCIoLiopXCIsIGFzeW5jIChjdHgpID0+IHtcbiAgICAgICAgY3R4LnNldChcIkFjY2Vzcy1Db250cm9sLUFsbG93LU1ldGhvZHNcIiwgXCJPUFRJT05TLCBHRVRcIik7XG4gICAgICAgIGN0eC5zZXQoXCJBY2Nlc3MtQ29udHJvbC1BbGxvdy1IZWFkZXJzXCIsIFwiKlwiKTtcbiAgICAgICAgY3R4LmJvZHkgPSBcIlwiO1xuICAgICAgICBjdHguc3RhdHVzID0gMjA0O1xuICAgICAgfSk7XG4gICAgICBrb2EudXNlKGFzeW5jIChjdHgsIG5leHQpID0+IHtcbiAgICAgICAgaWYgKGN0eC53cykge1xuICAgICAgICAgIGNvbnN0IHdzMiA9IGF3YWl0IGN0eC53cygpO1xuICAgICAgICAgIGNvbnN0IGNvbnRlbnRQbGF5ZXJTdGF0ZUNoYW5nZUhhbmRsZXIgPSAoc3RhdGUpID0+IHtcbiAgICAgICAgICAgIHdzMi5zZW5kKEpTT04uc3RyaW5naWZ5KHsgdHlwZTogXCJzdGF0ZVVwZGF0ZVwiLCAuLi5zdGF0ZSB9KSk7XG4gICAgICAgICAgfTtcbiAgICAgICAgICBjb250ZW50UGxheWVyU3RhdGVDaGFuZ2Uub24oY29udGVudFBsYXllclN0YXRlQ2hhbmdlSGFuZGxlcik7XG4gICAgICAgICAgd3MyLmFkZEV2ZW50TGlzdGVuZXIoXCJtZXNzYWdlXCIsIGFzeW5jIChtc2cpID0+IHtcbiAgICAgICAgICAgIHRyeSB7XG4gICAgICAgICAgICAgIGNvbnN0IGRhdGEgPSBKU09OLnBhcnNlKG1zZy5kYXRhKTtcbiAgICAgICAgICAgICAgc3dpdGNoIChkYXRhLnR5cGUpIHtcbiAgICAgICAgICAgICAgICBjYXNlIFwicGluZ1wiOiB7XG4gICAgICAgICAgICAgICAgICB3czIuc2VuZChKU09OLnN0cmluZ2lmeSh7IHR5cGU6IFwicG9uZ1wiIH0pKTtcbiAgICAgICAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICBjYXNlIFwiaW5pdFwiOiB7XG4gICAgICAgICAgICAgICAgICBwYWNrYWdlcy5FbGVjdHJvbi5icm93c2VyV2luZG93LmdldEFsbFdpbmRvd3MoKTtcbiAgICAgICAgICAgICAgICAgIGNvbnN0IGluaXREYXRhID0ge1xuICAgICAgICAgICAgICAgICAgICB0eXBlOiBcImluaXRcIixcbiAgICAgICAgICAgICAgICAgICAgdmVyc2lvbjogUk1DTl9NRVRBLnZlcnNpb24sXG4gICAgICAgICAgICAgICAgICAgIGFwcFZlcnNpb246IGFwcEluZm8udmVyc2lvbixcbiAgICAgICAgICAgICAgICAgICAgY29udGVudFBsYXllcnM6IEFycmF5LmZyb20oY29udGVudFBsYXllck1hcC52YWx1ZXMoKSksXG4gICAgICAgICAgICAgICAgICAgIHNlcnZpY2VzOiBBcnJheS5mcm9tKHNlcnZpY2VzLnZhbHVlcygpKSxcbiAgICAgICAgICAgICAgICAgICAgYWN0aXZlV2luZG93SWRcbiAgICAgICAgICAgICAgICAgIH07XG4gICAgICAgICAgICAgICAgICB3czIuc2VuZChKU09OLnN0cmluZ2lmeShpbml0RGF0YSkpO1xuICAgICAgICAgICAgICAgICAgYnJlYWs7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIGNhc2UgXCJzZXRTdGF0ZVwiOiB7XG4gICAgICAgICAgICAgICAgICBjb25zdCB7IGtleSwgdmFsdWUgfSA9IGRhdGE7XG4gICAgICAgICAgICAgICAgICBjb25zdCB3aW5kb3dJZCA9IHBhcnNlSW50KGRhdGEud2luZG93SWQpO1xuICAgICAgICAgICAgICAgICAgaWYgKE51bWJlci5pc05hTih3aW5kb3dJZCkpIHtcbiAgICAgICAgICAgICAgICAgICAgYnJlYWs7XG4gICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICBjb25zdCB3aW5kb3cgPSBwYWNrYWdlcy5FbGVjdHJvbi5icm93c2VyV2luZG93LmZyb21JZCh3aW5kb3dJZCk7XG4gICAgICAgICAgICAgICAgICBpZiAoIXdpbmRvdykge1xuICAgICAgICAgICAgICAgICAgICBicmVhaztcbiAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgIHdpbmRvdy53ZWJDb250ZW50cy5zZW5kKFJNQ05fT05fU0VUX1NUQVRFLCB7IGtleSwgdmFsdWUgfSk7XG4gICAgICAgICAgICAgICAgICBicmVhaztcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgZGVmYXVsdDoge1xuICAgICAgICAgICAgICAgICAgYnJlYWs7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgICAgICAgICBjb25zb2xlLmVycm9yKGVycm9yKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICB9KTtcbiAgICAgICAgICB3czIub25jbG9zZSA9ICgpID0+IHtcbiAgICAgICAgICAgIGNvbnRlbnRQbGF5ZXJTdGF0ZUNoYW5nZS5vZmYoY29udGVudFBsYXllclN0YXRlQ2hhbmdlSGFuZGxlcik7XG4gICAgICAgICAgfTtcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICBhd2FpdCBuZXh0KCk7XG4gICAgICAgIH1cbiAgICAgIH0pO1xuICAgICAga29hLnVzZShyb3V0ZXIucm91dGVzKCkpO1xuICAgICAgc2VydmVyID0ga29hLmxpc3Rlbihwb3J0LCAoKSA9PiB7XG4gICAgICAgIGNvbnNvbGUuaW5mbyhcIlJNQ04gQVBJIFNlcnZlciBsaXN0ZW5pbmcgb24gcG9ydCBodHRwOi8vbG9jYWxob3N0OlwiICsgcG9ydCk7XG4gICAgICB9KTtcbiAgICB9LFxuICAgIGRlc3Ryb3k6ICgpID0+IHtcbiAgICAgIGlmIChzZXJ2ZXIpIHtcbiAgICAgICAgc2VydmVyLmNsb3NlKCk7XG4gICAgICB9XG4gICAgICBpZiAoYm9uam91cikge1xuICAgICAgICBib25qb3VyLmRlc3Ryb3koKTtcbiAgICAgIH1cbiAgICAgIHBhY2thZ2VzLkVsZWN0cm9uLmlwY01haW4ucmVtb3ZlSGFuZGxlcihSTUNOX0dFVF9QT1JUKTtcbiAgICAgIHBhY2thZ2VzLkVsZWN0cm9uLmlwY01haW4ucmVtb3ZlSGFuZGxlcihSTUNOX1NFVF9DUF9TVEFURSk7XG4gICAgICBwYWNrYWdlcy5FbGVjdHJvbi5pcGNNYWluLnJlbW92ZUhhbmRsZXIoUk1DTl9TRVRfU0VSVklDRVMpO1xuICAgIH1cbiAgfTtcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
 //# sourceURL=webpack-internal:///430
 `)},3007:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{eval(`
 // EXPORTS
@@ -8906,7 +11902,7 @@ const RMCN_META = {
   id: RMCN_ID,
   name: "rmcn",
   author: "ci7lus",
-  version: "0.0.3",
+  version: "0.1.0",
   description: "\\u30EA\\u30E2\\u30B3\\u30F3\\u7528\\u306EAPI\\u3092\\u751F\\u3084\\u3059\\u30D7\\u30E9\\u30B0\\u30A4\\u30F3",
   authorUrl: "https://github.com/ci7lus",
   url: "https://github.com/ci7lus/miraktest-plugins/tree/master/src/miraktest-rmcn"
@@ -8917,7 +11913,7 @@ const RMCN_SET_CP_STATE = \`\${RMCN_ID}.setCPState\`;
 const RMCN_SET_SERVICES = \`\${RMCN_ID}.setServices\`;
 const RMCN_ON_SET_STATE = \`\${RMCN_ID}.onSetState\`;
 //# sourceURL=[module]
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjQ1NS5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL3NyYy9taXJha3Rlc3Qtcm1jbi9jb25zdGFudHMudHM/ZjZhZCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgUk1DTl9JRCA9IFwiaW8uZ2l0aHViLmNpN2x1cy5taXJha3Rlc3QtcGx1Z2lucy5ybWNuXCI7XG5leHBvcnQgY29uc3QgUk1DTl9NRVRBID0ge1xuICBpZDogUk1DTl9JRCxcbiAgbmFtZTogXCJybWNuXCIsXG4gIGF1dGhvcjogXCJjaTdsdXNcIixcbiAgdmVyc2lvbjogXCIwLjAuM1wiLFxuICBkZXNjcmlwdGlvbjogXCJcXHUzMEVBXFx1MzBFMlxcdTMwQjNcXHUzMEYzXFx1NzUyOFxcdTMwNkVBUElcXHUzMDkyXFx1NzUxRlxcdTMwODRcXHUzMDU5XFx1MzBEN1xcdTMwRTlcXHUzMEIwXFx1MzBBNFxcdTMwRjNcIixcbiAgYXV0aG9yVXJsOiBcImh0dHBzOi8vZ2l0aHViLmNvbS9jaTdsdXNcIixcbiAgdXJsOiBcImh0dHBzOi8vZ2l0aHViLmNvbS9jaTdsdXMvbWlyYWt0ZXN0LXBsdWdpbnMvdHJlZS9tYXN0ZXIvc3JjL21pcmFrdGVzdC1ybWNuXCJcbn07XG5leHBvcnQgY29uc3QgUk1DTl9QUkVGSVggPSBcInBsdWdpbnMuY2k3bHVzLnJtY25cIjtcbmV4cG9ydCBjb25zdCBSTUNOX0dFVF9QT1JUID0gYCR7Uk1DTl9JRH0uZ2V0UG9ydGA7XG5leHBvcnQgY29uc3QgUk1DTl9TRVRfQ1BfU1RBVEUgPSBgJHtSTUNOX0lEfS5zZXRDUFN0YXRlYDtcbmV4cG9ydCBjb25zdCBSTUNOX1NFVF9TRVJWSUNFUyA9IGAke1JNQ05fSUR9LnNldFNlcnZpY2VzYDtcbmV4cG9ydCBjb25zdCBSTUNOX09OX1NFVF9TVEFURSA9IGAke1JNQ05fSUR9Lm9uU2V0U3RhdGVgO1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjQ1NS5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL3NyYy9taXJha3Rlc3Qtcm1jbi9jb25zdGFudHMudHM/ZjZhZCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgUk1DTl9JRCA9IFwiaW8uZ2l0aHViLmNpN2x1cy5taXJha3Rlc3QtcGx1Z2lucy5ybWNuXCI7XG5leHBvcnQgY29uc3QgUk1DTl9NRVRBID0ge1xuICBpZDogUk1DTl9JRCxcbiAgbmFtZTogXCJybWNuXCIsXG4gIGF1dGhvcjogXCJjaTdsdXNcIixcbiAgdmVyc2lvbjogXCIwLjEuMFwiLFxuICBkZXNjcmlwdGlvbjogXCJcXHUzMEVBXFx1MzBFMlxcdTMwQjNcXHUzMEYzXFx1NzUyOFxcdTMwNkVBUElcXHUzMDkyXFx1NzUxRlxcdTMwODRcXHUzMDU5XFx1MzBEN1xcdTMwRTlcXHUzMEIwXFx1MzBBNFxcdTMwRjNcIixcbiAgYXV0aG9yVXJsOiBcImh0dHBzOi8vZ2l0aHViLmNvbS9jaTdsdXNcIixcbiAgdXJsOiBcImh0dHBzOi8vZ2l0aHViLmNvbS9jaTdsdXMvbWlyYWt0ZXN0LXBsdWdpbnMvdHJlZS9tYXN0ZXIvc3JjL21pcmFrdGVzdC1ybWNuXCJcbn07XG5leHBvcnQgY29uc3QgUk1DTl9QUkVGSVggPSBcInBsdWdpbnMuY2k3bHVzLnJtY25cIjtcbmV4cG9ydCBjb25zdCBSTUNOX0dFVF9QT1JUID0gYCR7Uk1DTl9JRH0uZ2V0UG9ydGA7XG5leHBvcnQgY29uc3QgUk1DTl9TRVRfQ1BfU1RBVEUgPSBgJHtSTUNOX0lEfS5zZXRDUFN0YXRlYDtcbmV4cG9ydCBjb25zdCBSTUNOX1NFVF9TRVJWSUNFUyA9IGAke1JNQ05fSUR9LnNldFNlcnZpY2VzYDtcbmV4cG9ydCBjb25zdCBSTUNOX09OX1NFVF9TVEFURSA9IGAke1JNQ05fSUR9Lm9uU2V0U3RhdGVgO1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
 //# sourceURL=webpack-internal:///2455
 `)},6588:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{eval(`/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -9011,6 +12007,81 @@ function escapeHtml(string) {
 //# sourceURL=[module]
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNTU3My5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9lc2NhcGUtaHRtbC9pbmRleC5qcz83NGEwIl0sInNvdXJjZXNDb250ZW50IjpbIi8qIVxuICogZXNjYXBlLWh0bWxcbiAqIENvcHlyaWdodChjKSAyMDEyLTIwMTMgVEogSG9sb3dheWNodWtcbiAqIENvcHlyaWdodChjKSAyMDE1IEFuZHJlYXMgTHViYmVcbiAqIENvcHlyaWdodChjKSAyMDE1IFRpYW5jaGVuZyBcIlRpbW90aHlcIiBHdVxuICogTUlUIExpY2Vuc2VkXG4gKi9cblxuJ3VzZSBzdHJpY3QnO1xuXG4vKipcbiAqIE1vZHVsZSB2YXJpYWJsZXMuXG4gKiBAcHJpdmF0ZVxuICovXG5cbnZhciBtYXRjaEh0bWxSZWdFeHAgPSAvW1wiJyY8Pl0vO1xuXG4vKipcbiAqIE1vZHVsZSBleHBvcnRzLlxuICogQHB1YmxpY1xuICovXG5cbm1vZHVsZS5leHBvcnRzID0gZXNjYXBlSHRtbDtcblxuLyoqXG4gKiBFc2NhcGUgc3BlY2lhbCBjaGFyYWN0ZXJzIGluIHRoZSBnaXZlbiBzdHJpbmcgb2YgaHRtbC5cbiAqXG4gKiBAcGFyYW0gIHtzdHJpbmd9IHN0cmluZyBUaGUgc3RyaW5nIHRvIGVzY2FwZSBmb3IgaW5zZXJ0aW5nIGludG8gSFRNTFxuICogQHJldHVybiB7c3RyaW5nfVxuICogQHB1YmxpY1xuICovXG5cbmZ1bmN0aW9uIGVzY2FwZUh0bWwoc3RyaW5nKSB7XG4gIHZhciBzdHIgPSAnJyArIHN0cmluZztcbiAgdmFyIG1hdGNoID0gbWF0Y2hIdG1sUmVnRXhwLmV4ZWMoc3RyKTtcblxuICBpZiAoIW1hdGNoKSB7XG4gICAgcmV0dXJuIHN0cjtcbiAgfVxuXG4gIHZhciBlc2NhcGU7XG4gIHZhciBodG1sID0gJyc7XG4gIHZhciBpbmRleCA9IDA7XG4gIHZhciBsYXN0SW5kZXggPSAwO1xuXG4gIGZvciAoaW5kZXggPSBtYXRjaC5pbmRleDsgaW5kZXggPCBzdHIubGVuZ3RoOyBpbmRleCsrKSB7XG4gICAgc3dpdGNoIChzdHIuY2hhckNvZGVBdChpbmRleCkpIHtcbiAgICAgIGNhc2UgMzQ6IC8vIFwiXG4gICAgICAgIGVzY2FwZSA9ICcmcXVvdDsnO1xuICAgICAgICBicmVhaztcbiAgICAgIGNhc2UgMzg6IC8vICZcbiAgICAgICAgZXNjYXBlID0gJyZhbXA7JztcbiAgICAgICAgYnJlYWs7XG4gICAgICBjYXNlIDM5OiAvLyAnXG4gICAgICAgIGVzY2FwZSA9ICcmIzM5Oyc7XG4gICAgICAgIGJyZWFrO1xuICAgICAgY2FzZSA2MDogLy8gPFxuICAgICAgICBlc2NhcGUgPSAnJmx0Oyc7XG4gICAgICAgIGJyZWFrO1xuICAgICAgY2FzZSA2MjogLy8gPlxuICAgICAgICBlc2NhcGUgPSAnJmd0Oyc7XG4gICAgICAgIGJyZWFrO1xuICAgICAgZGVmYXVsdDpcbiAgICAgICAgY29udGludWU7XG4gICAgfVxuXG4gICAgaWYgKGxhc3RJbmRleCAhPT0gaW5kZXgpIHtcbiAgICAgIGh0bWwgKz0gc3RyLnN1YnN0cmluZyhsYXN0SW5kZXgsIGluZGV4KTtcbiAgICB9XG5cbiAgICBsYXN0SW5kZXggPSBpbmRleCArIDE7XG4gICAgaHRtbCArPSBlc2NhcGU7XG4gIH1cblxuICByZXR1cm4gbGFzdEluZGV4ICE9PSBpbmRleFxuICAgID8gaHRtbCArIHN0ci5zdWJzdHJpbmcobGFzdEluZGV4LCBpbmRleClcbiAgICA6IGh0bWw7XG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
 //# sourceURL=webpack-internal:///5573
+`)},2991:module=>{eval(`
+
+// do not edit .js files directly - edit src/index.jst
+
+
+  var envHasBigInt64Array = typeof BigInt64Array !== 'undefined';
+
+
+module.exports = function equal(a, b) {
+  if (a === b) return true;
+
+  if (a && b && typeof a == 'object' && typeof b == 'object') {
+    if (a.constructor !== b.constructor) return false;
+
+    var length, i, keys;
+    if (Array.isArray(a)) {
+      length = a.length;
+      if (length != b.length) return false;
+      for (i = length; i-- !== 0;)
+        if (!equal(a[i], b[i])) return false;
+      return true;
+    }
+
+
+    if ((a instanceof Map) && (b instanceof Map)) {
+      if (a.size !== b.size) return false;
+      for (i of a.entries())
+        if (!b.has(i[0])) return false;
+      for (i of a.entries())
+        if (!equal(i[1], b.get(i[0]))) return false;
+      return true;
+    }
+
+    if ((a instanceof Set) && (b instanceof Set)) {
+      if (a.size !== b.size) return false;
+      for (i of a.entries())
+        if (!b.has(i[0])) return false;
+      return true;
+    }
+
+    if (ArrayBuffer.isView(a) && ArrayBuffer.isView(b)) {
+      length = a.length;
+      if (length != b.length) return false;
+      for (i = length; i-- !== 0;)
+        if (a[i] !== b[i]) return false;
+      return true;
+    }
+
+
+    if (a.constructor === RegExp) return a.source === b.source && a.flags === b.flags;
+    if (a.valueOf !== Object.prototype.valueOf) return a.valueOf() === b.valueOf();
+    if (a.toString !== Object.prototype.toString) return a.toString() === b.toString();
+
+    keys = Object.keys(a);
+    length = keys.length;
+    if (length !== Object.keys(b).length) return false;
+
+    for (i = length; i-- !== 0;)
+      if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
+
+    for (i = length; i-- !== 0;) {
+      var key = keys[i];
+
+      if (!equal(a[key], b[key])) return false;
+    }
+
+    return true;
+  }
+
+  // true if both NaN, false otherwise
+  return a!==a && b!==b;
+};
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjk5MS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9mYXN0LWRlZXAtZXF1YWwvZXM2L2luZGV4LmpzPzlmNmEiXSwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnO1xuXG4vLyBkbyBub3QgZWRpdCAuanMgZmlsZXMgZGlyZWN0bHkgLSBlZGl0IHNyYy9pbmRleC5qc3RcblxuXG4gIHZhciBlbnZIYXNCaWdJbnQ2NEFycmF5ID0gdHlwZW9mIEJpZ0ludDY0QXJyYXkgIT09ICd1bmRlZmluZWQnO1xuXG5cbm1vZHVsZS5leHBvcnRzID0gZnVuY3Rpb24gZXF1YWwoYSwgYikge1xuICBpZiAoYSA9PT0gYikgcmV0dXJuIHRydWU7XG5cbiAgaWYgKGEgJiYgYiAmJiB0eXBlb2YgYSA9PSAnb2JqZWN0JyAmJiB0eXBlb2YgYiA9PSAnb2JqZWN0Jykge1xuICAgIGlmIChhLmNvbnN0cnVjdG9yICE9PSBiLmNvbnN0cnVjdG9yKSByZXR1cm4gZmFsc2U7XG5cbiAgICB2YXIgbGVuZ3RoLCBpLCBrZXlzO1xuICAgIGlmIChBcnJheS5pc0FycmF5KGEpKSB7XG4gICAgICBsZW5ndGggPSBhLmxlbmd0aDtcbiAgICAgIGlmIChsZW5ndGggIT0gYi5sZW5ndGgpIHJldHVybiBmYWxzZTtcbiAgICAgIGZvciAoaSA9IGxlbmd0aDsgaS0tICE9PSAwOylcbiAgICAgICAgaWYgKCFlcXVhbChhW2ldLCBiW2ldKSkgcmV0dXJuIGZhbHNlO1xuICAgICAgcmV0dXJuIHRydWU7XG4gICAgfVxuXG5cbiAgICBpZiAoKGEgaW5zdGFuY2VvZiBNYXApICYmIChiIGluc3RhbmNlb2YgTWFwKSkge1xuICAgICAgaWYgKGEuc2l6ZSAhPT0gYi5zaXplKSByZXR1cm4gZmFsc2U7XG4gICAgICBmb3IgKGkgb2YgYS5lbnRyaWVzKCkpXG4gICAgICAgIGlmICghYi5oYXMoaVswXSkpIHJldHVybiBmYWxzZTtcbiAgICAgIGZvciAoaSBvZiBhLmVudHJpZXMoKSlcbiAgICAgICAgaWYgKCFlcXVhbChpWzFdLCBiLmdldChpWzBdKSkpIHJldHVybiBmYWxzZTtcbiAgICAgIHJldHVybiB0cnVlO1xuICAgIH1cblxuICAgIGlmICgoYSBpbnN0YW5jZW9mIFNldCkgJiYgKGIgaW5zdGFuY2VvZiBTZXQpKSB7XG4gICAgICBpZiAoYS5zaXplICE9PSBiLnNpemUpIHJldHVybiBmYWxzZTtcbiAgICAgIGZvciAoaSBvZiBhLmVudHJpZXMoKSlcbiAgICAgICAgaWYgKCFiLmhhcyhpWzBdKSkgcmV0dXJuIGZhbHNlO1xuICAgICAgcmV0dXJuIHRydWU7XG4gICAgfVxuXG4gICAgaWYgKEFycmF5QnVmZmVyLmlzVmlldyhhKSAmJiBBcnJheUJ1ZmZlci5pc1ZpZXcoYikpIHtcbiAgICAgIGxlbmd0aCA9IGEubGVuZ3RoO1xuICAgICAgaWYgKGxlbmd0aCAhPSBiLmxlbmd0aCkgcmV0dXJuIGZhbHNlO1xuICAgICAgZm9yIChpID0gbGVuZ3RoOyBpLS0gIT09IDA7KVxuICAgICAgICBpZiAoYVtpXSAhPT0gYltpXSkgcmV0dXJuIGZhbHNlO1xuICAgICAgcmV0dXJuIHRydWU7XG4gICAgfVxuXG5cbiAgICBpZiAoYS5jb25zdHJ1Y3RvciA9PT0gUmVnRXhwKSByZXR1cm4gYS5zb3VyY2UgPT09IGIuc291cmNlICYmIGEuZmxhZ3MgPT09IGIuZmxhZ3M7XG4gICAgaWYgKGEudmFsdWVPZiAhPT0gT2JqZWN0LnByb3RvdHlwZS52YWx1ZU9mKSByZXR1cm4gYS52YWx1ZU9mKCkgPT09IGIudmFsdWVPZigpO1xuICAgIGlmIChhLnRvU3RyaW5nICE9PSBPYmplY3QucHJvdG90eXBlLnRvU3RyaW5nKSByZXR1cm4gYS50b1N0cmluZygpID09PSBiLnRvU3RyaW5nKCk7XG5cbiAgICBrZXlzID0gT2JqZWN0LmtleXMoYSk7XG4gICAgbGVuZ3RoID0ga2V5cy5sZW5ndGg7XG4gICAgaWYgKGxlbmd0aCAhPT0gT2JqZWN0LmtleXMoYikubGVuZ3RoKSByZXR1cm4gZmFsc2U7XG5cbiAgICBmb3IgKGkgPSBsZW5ndGg7IGktLSAhPT0gMDspXG4gICAgICBpZiAoIU9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChiLCBrZXlzW2ldKSkgcmV0dXJuIGZhbHNlO1xuXG4gICAgZm9yIChpID0gbGVuZ3RoOyBpLS0gIT09IDA7KSB7XG4gICAgICB2YXIga2V5ID0ga2V5c1tpXTtcblxuICAgICAgaWYgKCFlcXVhbChhW2tleV0sIGJba2V5XSkpIHJldHVybiBmYWxzZTtcbiAgICB9XG5cbiAgICByZXR1cm4gdHJ1ZTtcbiAgfVxuXG4gIC8vIHRydWUgaWYgYm90aCBOYU4sIGZhbHNlIG90aGVyd2lzZVxuICByZXR1cm4gYSE9PWEgJiYgYiE9PWI7XG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///2991
 `)},9635:module=>{eval(`/*!
  * fresh
  * Copyright(c) 2012 TJ Holowaychuk
@@ -14074,6 +17145,215 @@ function plural(ms, msAbs, n, name) {
 //# sourceURL=[module]
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNzgyNC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9tcy9pbmRleC5qcz8xNDY4Il0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogSGVscGVycy5cbiAqL1xuXG52YXIgcyA9IDEwMDA7XG52YXIgbSA9IHMgKiA2MDtcbnZhciBoID0gbSAqIDYwO1xudmFyIGQgPSBoICogMjQ7XG52YXIgdyA9IGQgKiA3O1xudmFyIHkgPSBkICogMzY1LjI1O1xuXG4vKipcbiAqIFBhcnNlIG9yIGZvcm1hdCB0aGUgZ2l2ZW4gYHZhbGAuXG4gKlxuICogT3B0aW9uczpcbiAqXG4gKiAgLSBgbG9uZ2AgdmVyYm9zZSBmb3JtYXR0aW5nIFtmYWxzZV1cbiAqXG4gKiBAcGFyYW0ge1N0cmluZ3xOdW1iZXJ9IHZhbFxuICogQHBhcmFtIHtPYmplY3R9IFtvcHRpb25zXVxuICogQHRocm93cyB7RXJyb3J9IHRocm93IGFuIGVycm9yIGlmIHZhbCBpcyBub3QgYSBub24tZW1wdHkgc3RyaW5nIG9yIGEgbnVtYmVyXG4gKiBAcmV0dXJuIHtTdHJpbmd8TnVtYmVyfVxuICogQGFwaSBwdWJsaWNcbiAqL1xuXG5tb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uKHZhbCwgb3B0aW9ucykge1xuICBvcHRpb25zID0gb3B0aW9ucyB8fCB7fTtcbiAgdmFyIHR5cGUgPSB0eXBlb2YgdmFsO1xuICBpZiAodHlwZSA9PT0gJ3N0cmluZycgJiYgdmFsLmxlbmd0aCA+IDApIHtcbiAgICByZXR1cm4gcGFyc2UodmFsKTtcbiAgfSBlbHNlIGlmICh0eXBlID09PSAnbnVtYmVyJyAmJiBpc0Zpbml0ZSh2YWwpKSB7XG4gICAgcmV0dXJuIG9wdGlvbnMubG9uZyA/IGZtdExvbmcodmFsKSA6IGZtdFNob3J0KHZhbCk7XG4gIH1cbiAgdGhyb3cgbmV3IEVycm9yKFxuICAgICd2YWwgaXMgbm90IGEgbm9uLWVtcHR5IHN0cmluZyBvciBhIHZhbGlkIG51bWJlci4gdmFsPScgK1xuICAgICAgSlNPTi5zdHJpbmdpZnkodmFsKVxuICApO1xufTtcblxuLyoqXG4gKiBQYXJzZSB0aGUgZ2l2ZW4gYHN0cmAgYW5kIHJldHVybiBtaWxsaXNlY29uZHMuXG4gKlxuICogQHBhcmFtIHtTdHJpbmd9IHN0clxuICogQHJldHVybiB7TnVtYmVyfVxuICogQGFwaSBwcml2YXRlXG4gKi9cblxuZnVuY3Rpb24gcGFyc2Uoc3RyKSB7XG4gIHN0ciA9IFN0cmluZyhzdHIpO1xuICBpZiAoc3RyLmxlbmd0aCA+IDEwMCkge1xuICAgIHJldHVybjtcbiAgfVxuICB2YXIgbWF0Y2ggPSAvXigtPyg/OlxcZCspP1xcLj9cXGQrKSAqKG1pbGxpc2Vjb25kcz98bXNlY3M/fG1zfHNlY29uZHM/fHNlY3M/fHN8bWludXRlcz98bWlucz98bXxob3Vycz98aHJzP3xofGRheXM/fGR8d2Vla3M/fHd8eWVhcnM/fHlycz98eSk/JC9pLmV4ZWMoXG4gICAgc3RyXG4gICk7XG4gIGlmICghbWF0Y2gpIHtcbiAgICByZXR1cm47XG4gIH1cbiAgdmFyIG4gPSBwYXJzZUZsb2F0KG1hdGNoWzFdKTtcbiAgdmFyIHR5cGUgPSAobWF0Y2hbMl0gfHwgJ21zJykudG9Mb3dlckNhc2UoKTtcbiAgc3dpdGNoICh0eXBlKSB7XG4gICAgY2FzZSAneWVhcnMnOlxuICAgIGNhc2UgJ3llYXInOlxuICAgIGNhc2UgJ3lycyc6XG4gICAgY2FzZSAneXInOlxuICAgIGNhc2UgJ3knOlxuICAgICAgcmV0dXJuIG4gKiB5O1xuICAgIGNhc2UgJ3dlZWtzJzpcbiAgICBjYXNlICd3ZWVrJzpcbiAgICBjYXNlICd3JzpcbiAgICAgIHJldHVybiBuICogdztcbiAgICBjYXNlICdkYXlzJzpcbiAgICBjYXNlICdkYXknOlxuICAgIGNhc2UgJ2QnOlxuICAgICAgcmV0dXJuIG4gKiBkO1xuICAgIGNhc2UgJ2hvdXJzJzpcbiAgICBjYXNlICdob3VyJzpcbiAgICBjYXNlICdocnMnOlxuICAgIGNhc2UgJ2hyJzpcbiAgICBjYXNlICdoJzpcbiAgICAgIHJldHVybiBuICogaDtcbiAgICBjYXNlICdtaW51dGVzJzpcbiAgICBjYXNlICdtaW51dGUnOlxuICAgIGNhc2UgJ21pbnMnOlxuICAgIGNhc2UgJ21pbic6XG4gICAgY2FzZSAnbSc6XG4gICAgICByZXR1cm4gbiAqIG07XG4gICAgY2FzZSAnc2Vjb25kcyc6XG4gICAgY2FzZSAnc2Vjb25kJzpcbiAgICBjYXNlICdzZWNzJzpcbiAgICBjYXNlICdzZWMnOlxuICAgIGNhc2UgJ3MnOlxuICAgICAgcmV0dXJuIG4gKiBzO1xuICAgIGNhc2UgJ21pbGxpc2Vjb25kcyc6XG4gICAgY2FzZSAnbWlsbGlzZWNvbmQnOlxuICAgIGNhc2UgJ21zZWNzJzpcbiAgICBjYXNlICdtc2VjJzpcbiAgICBjYXNlICdtcyc6XG4gICAgICByZXR1cm4gbjtcbiAgICBkZWZhdWx0OlxuICAgICAgcmV0dXJuIHVuZGVmaW5lZDtcbiAgfVxufVxuXG4vKipcbiAqIFNob3J0IGZvcm1hdCBmb3IgYG1zYC5cbiAqXG4gKiBAcGFyYW0ge051bWJlcn0gbXNcbiAqIEByZXR1cm4ge1N0cmluZ31cbiAqIEBhcGkgcHJpdmF0ZVxuICovXG5cbmZ1bmN0aW9uIGZtdFNob3J0KG1zKSB7XG4gIHZhciBtc0FicyA9IE1hdGguYWJzKG1zKTtcbiAgaWYgKG1zQWJzID49IGQpIHtcbiAgICByZXR1cm4gTWF0aC5yb3VuZChtcyAvIGQpICsgJ2QnO1xuICB9XG4gIGlmIChtc0FicyA+PSBoKSB7XG4gICAgcmV0dXJuIE1hdGgucm91bmQobXMgLyBoKSArICdoJztcbiAgfVxuICBpZiAobXNBYnMgPj0gbSkge1xuICAgIHJldHVybiBNYXRoLnJvdW5kKG1zIC8gbSkgKyAnbSc7XG4gIH1cbiAgaWYgKG1zQWJzID49IHMpIHtcbiAgICByZXR1cm4gTWF0aC5yb3VuZChtcyAvIHMpICsgJ3MnO1xuICB9XG4gIHJldHVybiBtcyArICdtcyc7XG59XG5cbi8qKlxuICogTG9uZyBmb3JtYXQgZm9yIGBtc2AuXG4gKlxuICogQHBhcmFtIHtOdW1iZXJ9IG1zXG4gKiBAcmV0dXJuIHtTdHJpbmd9XG4gKiBAYXBpIHByaXZhdGVcbiAqL1xuXG5mdW5jdGlvbiBmbXRMb25nKG1zKSB7XG4gIHZhciBtc0FicyA9IE1hdGguYWJzKG1zKTtcbiAgaWYgKG1zQWJzID49IGQpIHtcbiAgICByZXR1cm4gcGx1cmFsKG1zLCBtc0FicywgZCwgJ2RheScpO1xuICB9XG4gIGlmIChtc0FicyA+PSBoKSB7XG4gICAgcmV0dXJuIHBsdXJhbChtcywgbXNBYnMsIGgsICdob3VyJyk7XG4gIH1cbiAgaWYgKG1zQWJzID49IG0pIHtcbiAgICByZXR1cm4gcGx1cmFsKG1zLCBtc0FicywgbSwgJ21pbnV0ZScpO1xuICB9XG4gIGlmIChtc0FicyA+PSBzKSB7XG4gICAgcmV0dXJuIHBsdXJhbChtcywgbXNBYnMsIHMsICdzZWNvbmQnKTtcbiAgfVxuICByZXR1cm4gbXMgKyAnIG1zJztcbn1cblxuLyoqXG4gKiBQbHVyYWxpemF0aW9uIGhlbHBlci5cbiAqL1xuXG5mdW5jdGlvbiBwbHVyYWwobXMsIG1zQWJzLCBuLCBuYW1lKSB7XG4gIHZhciBpc1BsdXJhbCA9IG1zQWJzID49IG4gKiAxLjU7XG4gIHJldHVybiBNYXRoLnJvdW5kKG1zIC8gbikgKyAnICcgKyBuYW1lICsgKGlzUGx1cmFsID8gJ3MnIDogJycpO1xufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
 //# sourceURL=webpack-internal:///7824
+`)},9040:(module,__unused_webpack_exports,__webpack_require__)=>{eval(`/* provided dependency */ var process = __webpack_require__(7282);
+var packet = __webpack_require__(4568)
+var dgram = __webpack_require__(1891)
+var thunky = __webpack_require__(3781)
+var events = __webpack_require__(2361)
+var os = __webpack_require__(9719)
+
+var noop = function () {}
+
+module.exports = function (opts) {
+  if (!opts) opts = {}
+
+  var that = new events.EventEmitter()
+  var port = typeof opts.port === 'number' ? opts.port : 5353
+  var type = opts.type || 'udp4'
+  var ip = opts.ip || opts.host || (type === 'udp4' ? '224.0.0.251' : null)
+  var me = {address: ip, port: port}
+  var memberships = {}
+  var destroyed = false
+  var interval = null
+
+  if (type === 'udp6' && (!ip || !opts.interface)) {
+    throw new Error('For IPv6 multicast you must specify \`ip\` and \`interface\`')
+  }
+
+  var socket = opts.socket || dgram.createSocket({
+    type: type,
+    reuseAddr: opts.reuseAddr !== false,
+    toString: function () {
+      return type
+    }
+  })
+
+  socket.on('error', function (err) {
+    if (err.code === 'EACCES' || err.code === 'EADDRINUSE') that.emit('error', err)
+    else that.emit('warning', err)
+  })
+
+  socket.on('message', function (message, rinfo) {
+    try {
+      message = packet.decode(message)
+    } catch (err) {
+      that.emit('warning', err)
+      return
+    }
+
+    that.emit('packet', message, rinfo)
+
+    if (message.type === 'query') that.emit('query', message, rinfo)
+    if (message.type === 'response') that.emit('response', message, rinfo)
+  })
+
+  socket.on('listening', function () {
+    if (!port) port = me.port = socket.address().port
+    if (opts.multicast !== false) {
+      that.update()
+      interval = setInterval(that.update, 5000)
+      socket.setMulticastTTL(opts.ttl || 255)
+      socket.setMulticastLoopback(opts.loopback !== false)
+    }
+  })
+
+  var bind = thunky(function (cb) {
+    if (!port || opts.bind === false) return cb(null)
+    socket.once('error', cb)
+    socket.bind(port, opts.bind || opts.interface, function () {
+      socket.removeListener('error', cb)
+      cb(null)
+    })
+  })
+
+  bind(function (err) {
+    if (err) return that.emit('error', err)
+    that.emit('ready')
+  })
+
+  that.send = function (value, rinfo, cb) {
+    if (typeof rinfo === 'function') return that.send(value, null, rinfo)
+    if (!cb) cb = noop
+    if (!rinfo) rinfo = me
+    else if (!rinfo.host && !rinfo.address) rinfo.address = me.address
+
+    bind(onbind)
+
+    function onbind (err) {
+      if (destroyed) return cb()
+      if (err) return cb(err)
+      var message = packet.encode(value)
+      socket.send(message, 0, message.length, rinfo.port, rinfo.address || rinfo.host, cb)
+    }
+  }
+
+  that.response =
+  that.respond = function (res, rinfo, cb) {
+    if (Array.isArray(res)) res = {answers: res}
+
+    res.type = 'response'
+    res.flags = (res.flags || 0) | packet.AUTHORITATIVE_ANSWER
+    that.send(res, rinfo, cb)
+  }
+
+  that.query = function (q, type, rinfo, cb) {
+    if (typeof type === 'function') return that.query(q, null, null, type)
+    if (typeof type === 'object' && type && type.port) return that.query(q, null, type, rinfo)
+    if (typeof rinfo === 'function') return that.query(q, type, null, rinfo)
+    if (!cb) cb = noop
+
+    if (typeof q === 'string') q = [{name: q, type: type || 'ANY'}]
+    if (Array.isArray(q)) q = {type: 'query', questions: q}
+
+    q.type = 'query'
+    that.send(q, rinfo, cb)
+  }
+
+  that.destroy = function (cb) {
+    if (!cb) cb = noop
+    if (destroyed) return process.nextTick(cb)
+    destroyed = true
+    clearInterval(interval)
+
+    // Need to drop memberships by hand and ignore errors.
+    // socket.close() does not cope with errors.
+    for (var iface in memberships) {
+      try {
+        socket.dropMembership(ip, iface)
+      } catch (e) {
+        // eat it
+      }
+    }
+    memberships = {}
+    socket.close(cb)
+  }
+
+  that.update = function () {
+    var ifaces = opts.interface ? [].concat(opts.interface) : allInterfaces()
+    var updated = false
+
+    for (var i = 0; i < ifaces.length; i++) {
+      var addr = ifaces[i]
+      if (memberships[addr]) continue
+
+      try {
+        socket.addMembership(ip, addr)
+        memberships[addr] = true
+        updated = true
+      } catch (err) {
+        that.emit('warning', err)
+      }
+    }
+
+    if (updated) {
+      if (socket.setMulticastInterface) {
+        try {
+          socket.setMulticastInterface(opts.interface || defaultInterface())
+        } catch (err) {
+          that.emit('warning', err)
+        }
+      }
+      that.emit('networkInterface')
+    }
+  }
+
+  return that
+}
+
+function defaultInterface () {
+  var networks = os.networkInterfaces()
+  var names = Object.keys(networks)
+
+  for (var i = 0; i < names.length; i++) {
+    var net = networks[names[i]]
+    for (var j = 0; j < net.length; j++) {
+      var iface = net[j]
+      if (isIPv4(iface.family) && !iface.internal) {
+        if (os.platform() === 'darwin' && names[i] === 'en0') return iface.address
+        return '0.0.0.0'
+      }
+    }
+  }
+
+  return '127.0.0.1'
+}
+
+function allInterfaces () {
+  var networks = os.networkInterfaces()
+  var names = Object.keys(networks)
+  var res = []
+
+  for (var i = 0; i < names.length; i++) {
+    var net = networks[names[i]]
+    for (var j = 0; j < net.length; j++) {
+      var iface = net[j]
+      if (isIPv4(iface.family)) {
+        res.push(iface.address)
+        // could only addMembership once per interface (https://nodejs.org/api/dgram.html#dgram_socket_addmembership_multicastaddress_multicastinterface)
+        break
+      }
+    }
+  }
+
+  return res
+}
+
+function isIPv4 (family) { // for backwards compat
+  return family === 4 || family === 'IPv4'
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOTA0MC5qcyIsIm1hcHBpbmdzIjoiO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy9tdWx0aWNhc3QtZG5zL2luZGV4LmpzPzU3MWMiXSwic291cmNlc0NvbnRlbnQiOlsidmFyIHBhY2tldCA9IHJlcXVpcmUoJ2Rucy1wYWNrZXQnKVxudmFyIGRncmFtID0gcmVxdWlyZSgnZGdyYW0nKVxudmFyIHRodW5reSA9IHJlcXVpcmUoJ3RodW5reScpXG52YXIgZXZlbnRzID0gcmVxdWlyZSgnZXZlbnRzJylcbnZhciBvcyA9IHJlcXVpcmUoJ29zJylcblxudmFyIG5vb3AgPSBmdW5jdGlvbiAoKSB7fVxuXG5tb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uIChvcHRzKSB7XG4gIGlmICghb3B0cykgb3B0cyA9IHt9XG5cbiAgdmFyIHRoYXQgPSBuZXcgZXZlbnRzLkV2ZW50RW1pdHRlcigpXG4gIHZhciBwb3J0ID0gdHlwZW9mIG9wdHMucG9ydCA9PT0gJ251bWJlcicgPyBvcHRzLnBvcnQgOiA1MzUzXG4gIHZhciB0eXBlID0gb3B0cy50eXBlIHx8ICd1ZHA0J1xuICB2YXIgaXAgPSBvcHRzLmlwIHx8IG9wdHMuaG9zdCB8fCAodHlwZSA9PT0gJ3VkcDQnID8gJzIyNC4wLjAuMjUxJyA6IG51bGwpXG4gIHZhciBtZSA9IHthZGRyZXNzOiBpcCwgcG9ydDogcG9ydH1cbiAgdmFyIG1lbWJlcnNoaXBzID0ge31cbiAgdmFyIGRlc3Ryb3llZCA9IGZhbHNlXG4gIHZhciBpbnRlcnZhbCA9IG51bGxcblxuICBpZiAodHlwZSA9PT0gJ3VkcDYnICYmICghaXAgfHwgIW9wdHMuaW50ZXJmYWNlKSkge1xuICAgIHRocm93IG5ldyBFcnJvcignRm9yIElQdjYgbXVsdGljYXN0IHlvdSBtdXN0IHNwZWNpZnkgYGlwYCBhbmQgYGludGVyZmFjZWAnKVxuICB9XG5cbiAgdmFyIHNvY2tldCA9IG9wdHMuc29ja2V0IHx8IGRncmFtLmNyZWF0ZVNvY2tldCh7XG4gICAgdHlwZTogdHlwZSxcbiAgICByZXVzZUFkZHI6IG9wdHMucmV1c2VBZGRyICE9PSBmYWxzZSxcbiAgICB0b1N0cmluZzogZnVuY3Rpb24gKCkge1xuICAgICAgcmV0dXJuIHR5cGVcbiAgICB9XG4gIH0pXG5cbiAgc29ja2V0Lm9uKCdlcnJvcicsIGZ1bmN0aW9uIChlcnIpIHtcbiAgICBpZiAoZXJyLmNvZGUgPT09ICdFQUNDRVMnIHx8IGVyci5jb2RlID09PSAnRUFERFJJTlVTRScpIHRoYXQuZW1pdCgnZXJyb3InLCBlcnIpXG4gICAgZWxzZSB0aGF0LmVtaXQoJ3dhcm5pbmcnLCBlcnIpXG4gIH0pXG5cbiAgc29ja2V0Lm9uKCdtZXNzYWdlJywgZnVuY3Rpb24gKG1lc3NhZ2UsIHJpbmZvKSB7XG4gICAgdHJ5IHtcbiAgICAgIG1lc3NhZ2UgPSBwYWNrZXQuZGVjb2RlKG1lc3NhZ2UpXG4gICAgfSBjYXRjaCAoZXJyKSB7XG4gICAgICB0aGF0LmVtaXQoJ3dhcm5pbmcnLCBlcnIpXG4gICAgICByZXR1cm5cbiAgICB9XG5cbiAgICB0aGF0LmVtaXQoJ3BhY2tldCcsIG1lc3NhZ2UsIHJpbmZvKVxuXG4gICAgaWYgKG1lc3NhZ2UudHlwZSA9PT0gJ3F1ZXJ5JykgdGhhdC5lbWl0KCdxdWVyeScsIG1lc3NhZ2UsIHJpbmZvKVxuICAgIGlmIChtZXNzYWdlLnR5cGUgPT09ICdyZXNwb25zZScpIHRoYXQuZW1pdCgncmVzcG9uc2UnLCBtZXNzYWdlLCByaW5mbylcbiAgfSlcblxuICBzb2NrZXQub24oJ2xpc3RlbmluZycsIGZ1bmN0aW9uICgpIHtcbiAgICBpZiAoIXBvcnQpIHBvcnQgPSBtZS5wb3J0ID0gc29ja2V0LmFkZHJlc3MoKS5wb3J0XG4gICAgaWYgKG9wdHMubXVsdGljYXN0ICE9PSBmYWxzZSkge1xuICAgICAgdGhhdC51cGRhdGUoKVxuICAgICAgaW50ZXJ2YWwgPSBzZXRJbnRlcnZhbCh0aGF0LnVwZGF0ZSwgNTAwMClcbiAgICAgIHNvY2tldC5zZXRNdWx0aWNhc3RUVEwob3B0cy50dGwgfHwgMjU1KVxuICAgICAgc29ja2V0LnNldE11bHRpY2FzdExvb3BiYWNrKG9wdHMubG9vcGJhY2sgIT09IGZhbHNlKVxuICAgIH1cbiAgfSlcblxuICB2YXIgYmluZCA9IHRodW5reShmdW5jdGlvbiAoY2IpIHtcbiAgICBpZiAoIXBvcnQgfHwgb3B0cy5iaW5kID09PSBmYWxzZSkgcmV0dXJuIGNiKG51bGwpXG4gICAgc29ja2V0Lm9uY2UoJ2Vycm9yJywgY2IpXG4gICAgc29ja2V0LmJpbmQocG9ydCwgb3B0cy5iaW5kIHx8IG9wdHMuaW50ZXJmYWNlLCBmdW5jdGlvbiAoKSB7XG4gICAgICBzb2NrZXQucmVtb3ZlTGlzdGVuZXIoJ2Vycm9yJywgY2IpXG4gICAgICBjYihudWxsKVxuICAgIH0pXG4gIH0pXG5cbiAgYmluZChmdW5jdGlvbiAoZXJyKSB7XG4gICAgaWYgKGVycikgcmV0dXJuIHRoYXQuZW1pdCgnZXJyb3InLCBlcnIpXG4gICAgdGhhdC5lbWl0KCdyZWFkeScpXG4gIH0pXG5cbiAgdGhhdC5zZW5kID0gZnVuY3Rpb24gKHZhbHVlLCByaW5mbywgY2IpIHtcbiAgICBpZiAodHlwZW9mIHJpbmZvID09PSAnZnVuY3Rpb24nKSByZXR1cm4gdGhhdC5zZW5kKHZhbHVlLCBudWxsLCByaW5mbylcbiAgICBpZiAoIWNiKSBjYiA9IG5vb3BcbiAgICBpZiAoIXJpbmZvKSByaW5mbyA9IG1lXG4gICAgZWxzZSBpZiAoIXJpbmZvLmhvc3QgJiYgIXJpbmZvLmFkZHJlc3MpIHJpbmZvLmFkZHJlc3MgPSBtZS5hZGRyZXNzXG5cbiAgICBiaW5kKG9uYmluZClcblxuICAgIGZ1bmN0aW9uIG9uYmluZCAoZXJyKSB7XG4gICAgICBpZiAoZGVzdHJveWVkKSByZXR1cm4gY2IoKVxuICAgICAgaWYgKGVycikgcmV0dXJuIGNiKGVycilcbiAgICAgIHZhciBtZXNzYWdlID0gcGFja2V0LmVuY29kZSh2YWx1ZSlcbiAgICAgIHNvY2tldC5zZW5kKG1lc3NhZ2UsIDAsIG1lc3NhZ2UubGVuZ3RoLCByaW5mby5wb3J0LCByaW5mby5hZGRyZXNzIHx8IHJpbmZvLmhvc3QsIGNiKVxuICAgIH1cbiAgfVxuXG4gIHRoYXQucmVzcG9uc2UgPVxuICB0aGF0LnJlc3BvbmQgPSBmdW5jdGlvbiAocmVzLCByaW5mbywgY2IpIHtcbiAgICBpZiAoQXJyYXkuaXNBcnJheShyZXMpKSByZXMgPSB7YW5zd2VyczogcmVzfVxuXG4gICAgcmVzLnR5cGUgPSAncmVzcG9uc2UnXG4gICAgcmVzLmZsYWdzID0gKHJlcy5mbGFncyB8fCAwKSB8IHBhY2tldC5BVVRIT1JJVEFUSVZFX0FOU1dFUlxuICAgIHRoYXQuc2VuZChyZXMsIHJpbmZvLCBjYilcbiAgfVxuXG4gIHRoYXQucXVlcnkgPSBmdW5jdGlvbiAocSwgdHlwZSwgcmluZm8sIGNiKSB7XG4gICAgaWYgKHR5cGVvZiB0eXBlID09PSAnZnVuY3Rpb24nKSByZXR1cm4gdGhhdC5xdWVyeShxLCBudWxsLCBudWxsLCB0eXBlKVxuICAgIGlmICh0eXBlb2YgdHlwZSA9PT0gJ29iamVjdCcgJiYgdHlwZSAmJiB0eXBlLnBvcnQpIHJldHVybiB0aGF0LnF1ZXJ5KHEsIG51bGwsIHR5cGUsIHJpbmZvKVxuICAgIGlmICh0eXBlb2YgcmluZm8gPT09ICdmdW5jdGlvbicpIHJldHVybiB0aGF0LnF1ZXJ5KHEsIHR5cGUsIG51bGwsIHJpbmZvKVxuICAgIGlmICghY2IpIGNiID0gbm9vcFxuXG4gICAgaWYgKHR5cGVvZiBxID09PSAnc3RyaW5nJykgcSA9IFt7bmFtZTogcSwgdHlwZTogdHlwZSB8fCAnQU5ZJ31dXG4gICAgaWYgKEFycmF5LmlzQXJyYXkocSkpIHEgPSB7dHlwZTogJ3F1ZXJ5JywgcXVlc3Rpb25zOiBxfVxuXG4gICAgcS50eXBlID0gJ3F1ZXJ5J1xuICAgIHRoYXQuc2VuZChxLCByaW5mbywgY2IpXG4gIH1cblxuICB0aGF0LmRlc3Ryb3kgPSBmdW5jdGlvbiAoY2IpIHtcbiAgICBpZiAoIWNiKSBjYiA9IG5vb3BcbiAgICBpZiAoZGVzdHJveWVkKSByZXR1cm4gcHJvY2Vzcy5uZXh0VGljayhjYilcbiAgICBkZXN0cm95ZWQgPSB0cnVlXG4gICAgY2xlYXJJbnRlcnZhbChpbnRlcnZhbClcblxuICAgIC8vIE5lZWQgdG8gZHJvcCBtZW1iZXJzaGlwcyBieSBoYW5kIGFuZCBpZ25vcmUgZXJyb3JzLlxuICAgIC8vIHNvY2tldC5jbG9zZSgpIGRvZXMgbm90IGNvcGUgd2l0aCBlcnJvcnMuXG4gICAgZm9yICh2YXIgaWZhY2UgaW4gbWVtYmVyc2hpcHMpIHtcbiAgICAgIHRyeSB7XG4gICAgICAgIHNvY2tldC5kcm9wTWVtYmVyc2hpcChpcCwgaWZhY2UpXG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIC8vIGVhdCBpdFxuICAgICAgfVxuICAgIH1cbiAgICBtZW1iZXJzaGlwcyA9IHt9XG4gICAgc29ja2V0LmNsb3NlKGNiKVxuICB9XG5cbiAgdGhhdC51cGRhdGUgPSBmdW5jdGlvbiAoKSB7XG4gICAgdmFyIGlmYWNlcyA9IG9wdHMuaW50ZXJmYWNlID8gW10uY29uY2F0KG9wdHMuaW50ZXJmYWNlKSA6IGFsbEludGVyZmFjZXMoKVxuICAgIHZhciB1cGRhdGVkID0gZmFsc2VcblxuICAgIGZvciAodmFyIGkgPSAwOyBpIDwgaWZhY2VzLmxlbmd0aDsgaSsrKSB7XG4gICAgICB2YXIgYWRkciA9IGlmYWNlc1tpXVxuICAgICAgaWYgKG1lbWJlcnNoaXBzW2FkZHJdKSBjb250aW51ZVxuXG4gICAgICB0cnkge1xuICAgICAgICBzb2NrZXQuYWRkTWVtYmVyc2hpcChpcCwgYWRkcilcbiAgICAgICAgbWVtYmVyc2hpcHNbYWRkcl0gPSB0cnVlXG4gICAgICAgIHVwZGF0ZWQgPSB0cnVlXG4gICAgICB9IGNhdGNoIChlcnIpIHtcbiAgICAgICAgdGhhdC5lbWl0KCd3YXJuaW5nJywgZXJyKVxuICAgICAgfVxuICAgIH1cblxuICAgIGlmICh1cGRhdGVkKSB7XG4gICAgICBpZiAoc29ja2V0LnNldE11bHRpY2FzdEludGVyZmFjZSkge1xuICAgICAgICB0cnkge1xuICAgICAgICAgIHNvY2tldC5zZXRNdWx0aWNhc3RJbnRlcmZhY2Uob3B0cy5pbnRlcmZhY2UgfHwgZGVmYXVsdEludGVyZmFjZSgpKVxuICAgICAgICB9IGNhdGNoIChlcnIpIHtcbiAgICAgICAgICB0aGF0LmVtaXQoJ3dhcm5pbmcnLCBlcnIpXG4gICAgICAgIH1cbiAgICAgIH1cbiAgICAgIHRoYXQuZW1pdCgnbmV0d29ya0ludGVyZmFjZScpXG4gICAgfVxuICB9XG5cbiAgcmV0dXJuIHRoYXRcbn1cblxuZnVuY3Rpb24gZGVmYXVsdEludGVyZmFjZSAoKSB7XG4gIHZhciBuZXR3b3JrcyA9IG9zLm5ldHdvcmtJbnRlcmZhY2VzKClcbiAgdmFyIG5hbWVzID0gT2JqZWN0LmtleXMobmV0d29ya3MpXG5cbiAgZm9yICh2YXIgaSA9IDA7IGkgPCBuYW1lcy5sZW5ndGg7IGkrKykge1xuICAgIHZhciBuZXQgPSBuZXR3b3Jrc1tuYW1lc1tpXV1cbiAgICBmb3IgKHZhciBqID0gMDsgaiA8IG5ldC5sZW5ndGg7IGorKykge1xuICAgICAgdmFyIGlmYWNlID0gbmV0W2pdXG4gICAgICBpZiAoaXNJUHY0KGlmYWNlLmZhbWlseSkgJiYgIWlmYWNlLmludGVybmFsKSB7XG4gICAgICAgIGlmIChvcy5wbGF0Zm9ybSgpID09PSAnZGFyd2luJyAmJiBuYW1lc1tpXSA9PT0gJ2VuMCcpIHJldHVybiBpZmFjZS5hZGRyZXNzXG4gICAgICAgIHJldHVybiAnMC4wLjAuMCdcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICByZXR1cm4gJzEyNy4wLjAuMSdcbn1cblxuZnVuY3Rpb24gYWxsSW50ZXJmYWNlcyAoKSB7XG4gIHZhciBuZXR3b3JrcyA9IG9zLm5ldHdvcmtJbnRlcmZhY2VzKClcbiAgdmFyIG5hbWVzID0gT2JqZWN0LmtleXMobmV0d29ya3MpXG4gIHZhciByZXMgPSBbXVxuXG4gIGZvciAodmFyIGkgPSAwOyBpIDwgbmFtZXMubGVuZ3RoOyBpKyspIHtcbiAgICB2YXIgbmV0ID0gbmV0d29ya3NbbmFtZXNbaV1dXG4gICAgZm9yICh2YXIgaiA9IDA7IGogPCBuZXQubGVuZ3RoOyBqKyspIHtcbiAgICAgIHZhciBpZmFjZSA9IG5ldFtqXVxuICAgICAgaWYgKGlzSVB2NChpZmFjZS5mYW1pbHkpKSB7XG4gICAgICAgIHJlcy5wdXNoKGlmYWNlLmFkZHJlc3MpXG4gICAgICAgIC8vIGNvdWxkIG9ubHkgYWRkTWVtYmVyc2hpcCBvbmNlIHBlciBpbnRlcmZhY2UgKGh0dHBzOi8vbm9kZWpzLm9yZy9hcGkvZGdyYW0uaHRtbCNkZ3JhbV9zb2NrZXRfYWRkbWVtYmVyc2hpcF9tdWx0aWNhc3RhZGRyZXNzX211bHRpY2FzdGludGVyZmFjZSlcbiAgICAgICAgYnJlYWtcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICByZXR1cm4gcmVzXG59XG5cbmZ1bmN0aW9uIGlzSVB2NCAoZmFtaWx5KSB7IC8vIGZvciBiYWNrd2FyZHMgY29tcGF0XG4gIHJldHVybiBmYW1pbHkgPT09IDQgfHwgZmFtaWx5ID09PSAnSVB2NCdcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///9040
 `)},159:(module,__unused_webpack_exports,__webpack_require__)=>{eval(`/*!
  * negotiator
  * Copyright(c) 2012 Federico Romero
@@ -16164,6 +19444,65 @@ module.exports = {
 //# sourceURL=[module]
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjEzMC5qcyIsIm1hcHBpbmdzIjoiO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvc3VwcG9ydHMtY29sb3IvaW5kZXguanM/NmMwYiJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG5jb25zdCBvcyA9IHJlcXVpcmUoJ29zJyk7XG5jb25zdCB0dHkgPSByZXF1aXJlKCd0dHknKTtcbmNvbnN0IGhhc0ZsYWcgPSByZXF1aXJlKCdoYXMtZmxhZycpO1xuXG5jb25zdCB7ZW52fSA9IHByb2Nlc3M7XG5cbmxldCBmb3JjZUNvbG9yO1xuaWYgKGhhc0ZsYWcoJ25vLWNvbG9yJykgfHxcblx0aGFzRmxhZygnbm8tY29sb3JzJykgfHxcblx0aGFzRmxhZygnY29sb3I9ZmFsc2UnKSB8fFxuXHRoYXNGbGFnKCdjb2xvcj1uZXZlcicpKSB7XG5cdGZvcmNlQ29sb3IgPSAwO1xufSBlbHNlIGlmIChoYXNGbGFnKCdjb2xvcicpIHx8XG5cdGhhc0ZsYWcoJ2NvbG9ycycpIHx8XG5cdGhhc0ZsYWcoJ2NvbG9yPXRydWUnKSB8fFxuXHRoYXNGbGFnKCdjb2xvcj1hbHdheXMnKSkge1xuXHRmb3JjZUNvbG9yID0gMTtcbn1cblxuaWYgKCdGT1JDRV9DT0xPUicgaW4gZW52KSB7XG5cdGlmIChlbnYuRk9SQ0VfQ09MT1IgPT09ICd0cnVlJykge1xuXHRcdGZvcmNlQ29sb3IgPSAxO1xuXHR9IGVsc2UgaWYgKGVudi5GT1JDRV9DT0xPUiA9PT0gJ2ZhbHNlJykge1xuXHRcdGZvcmNlQ29sb3IgPSAwO1xuXHR9IGVsc2Uge1xuXHRcdGZvcmNlQ29sb3IgPSBlbnYuRk9SQ0VfQ09MT1IubGVuZ3RoID09PSAwID8gMSA6IE1hdGgubWluKHBhcnNlSW50KGVudi5GT1JDRV9DT0xPUiwgMTApLCAzKTtcblx0fVxufVxuXG5mdW5jdGlvbiB0cmFuc2xhdGVMZXZlbChsZXZlbCkge1xuXHRpZiAobGV2ZWwgPT09IDApIHtcblx0XHRyZXR1cm4gZmFsc2U7XG5cdH1cblxuXHRyZXR1cm4ge1xuXHRcdGxldmVsLFxuXHRcdGhhc0Jhc2ljOiB0cnVlLFxuXHRcdGhhczI1NjogbGV2ZWwgPj0gMixcblx0XHRoYXMxNm06IGxldmVsID49IDNcblx0fTtcbn1cblxuZnVuY3Rpb24gc3VwcG9ydHNDb2xvcihoYXZlU3RyZWFtLCBzdHJlYW1Jc1RUWSkge1xuXHRpZiAoZm9yY2VDb2xvciA9PT0gMCkge1xuXHRcdHJldHVybiAwO1xuXHR9XG5cblx0aWYgKGhhc0ZsYWcoJ2NvbG9yPTE2bScpIHx8XG5cdFx0aGFzRmxhZygnY29sb3I9ZnVsbCcpIHx8XG5cdFx0aGFzRmxhZygnY29sb3I9dHJ1ZWNvbG9yJykpIHtcblx0XHRyZXR1cm4gMztcblx0fVxuXG5cdGlmIChoYXNGbGFnKCdjb2xvcj0yNTYnKSkge1xuXHRcdHJldHVybiAyO1xuXHR9XG5cblx0aWYgKGhhdmVTdHJlYW0gJiYgIXN0cmVhbUlzVFRZICYmIGZvcmNlQ29sb3IgPT09IHVuZGVmaW5lZCkge1xuXHRcdHJldHVybiAwO1xuXHR9XG5cblx0Y29uc3QgbWluID0gZm9yY2VDb2xvciB8fCAwO1xuXG5cdGlmIChlbnYuVEVSTSA9PT0gJ2R1bWInKSB7XG5cdFx0cmV0dXJuIG1pbjtcblx0fVxuXG5cdGlmIChwcm9jZXNzLnBsYXRmb3JtID09PSAnd2luMzInKSB7XG5cdFx0Ly8gV2luZG93cyAxMCBidWlsZCAxMDU4NiBpcyB0aGUgZmlyc3QgV2luZG93cyByZWxlYXNlIHRoYXQgc3VwcG9ydHMgMjU2IGNvbG9ycy5cblx0XHQvLyBXaW5kb3dzIDEwIGJ1aWxkIDE0OTMxIGlzIHRoZSBmaXJzdCByZWxlYXNlIHRoYXQgc3VwcG9ydHMgMTZtL1RydWVDb2xvci5cblx0XHRjb25zdCBvc1JlbGVhc2UgPSBvcy5yZWxlYXNlKCkuc3BsaXQoJy4nKTtcblx0XHRpZiAoXG5cdFx0XHROdW1iZXIob3NSZWxlYXNlWzBdKSA+PSAxMCAmJlxuXHRcdFx0TnVtYmVyKG9zUmVsZWFzZVsyXSkgPj0gMTA1ODZcblx0XHQpIHtcblx0XHRcdHJldHVybiBOdW1iZXIob3NSZWxlYXNlWzJdKSA+PSAxNDkzMSA/IDMgOiAyO1xuXHRcdH1cblxuXHRcdHJldHVybiAxO1xuXHR9XG5cblx0aWYgKCdDSScgaW4gZW52KSB7XG5cdFx0aWYgKFsnVFJBVklTJywgJ0NJUkNMRUNJJywgJ0FQUFZFWU9SJywgJ0dJVExBQl9DSScsICdHSVRIVUJfQUNUSU9OUycsICdCVUlMREtJVEUnXS5zb21lKHNpZ24gPT4gc2lnbiBpbiBlbnYpIHx8IGVudi5DSV9OQU1FID09PSAnY29kZXNoaXAnKSB7XG5cdFx0XHRyZXR1cm4gMTtcblx0XHR9XG5cblx0XHRyZXR1cm4gbWluO1xuXHR9XG5cblx0aWYgKCdURUFNQ0lUWV9WRVJTSU9OJyBpbiBlbnYpIHtcblx0XHRyZXR1cm4gL14oOVxcLigwKlsxLTldXFxkKilcXC58XFxkezIsfVxcLikvLnRlc3QoZW52LlRFQU1DSVRZX1ZFUlNJT04pID8gMSA6IDA7XG5cdH1cblxuXHRpZiAoZW52LkNPTE9SVEVSTSA9PT0gJ3RydWVjb2xvcicpIHtcblx0XHRyZXR1cm4gMztcblx0fVxuXG5cdGlmICgnVEVSTV9QUk9HUkFNJyBpbiBlbnYpIHtcblx0XHRjb25zdCB2ZXJzaW9uID0gcGFyc2VJbnQoKGVudi5URVJNX1BST0dSQU1fVkVSU0lPTiB8fCAnJykuc3BsaXQoJy4nKVswXSwgMTApO1xuXG5cdFx0c3dpdGNoIChlbnYuVEVSTV9QUk9HUkFNKSB7XG5cdFx0XHRjYXNlICdpVGVybS5hcHAnOlxuXHRcdFx0XHRyZXR1cm4gdmVyc2lvbiA+PSAzID8gMyA6IDI7XG5cdFx0XHRjYXNlICdBcHBsZV9UZXJtaW5hbCc6XG5cdFx0XHRcdHJldHVybiAyO1xuXHRcdFx0Ly8gTm8gZGVmYXVsdFxuXHRcdH1cblx0fVxuXG5cdGlmICgvLTI1Nihjb2xvcik/JC9pLnRlc3QoZW52LlRFUk0pKSB7XG5cdFx0cmV0dXJuIDI7XG5cdH1cblxuXHRpZiAoL15zY3JlZW58Xnh0ZXJtfF52dDEwMHxednQyMjB8XnJ4dnR8Y29sb3J8YW5zaXxjeWd3aW58bGludXgvaS50ZXN0KGVudi5URVJNKSkge1xuXHRcdHJldHVybiAxO1xuXHR9XG5cblx0aWYgKCdDT0xPUlRFUk0nIGluIGVudikge1xuXHRcdHJldHVybiAxO1xuXHR9XG5cblx0cmV0dXJuIG1pbjtcbn1cblxuZnVuY3Rpb24gZ2V0U3VwcG9ydExldmVsKHN0cmVhbSkge1xuXHRjb25zdCBsZXZlbCA9IHN1cHBvcnRzQ29sb3Ioc3RyZWFtLCBzdHJlYW0gJiYgc3RyZWFtLmlzVFRZKTtcblx0cmV0dXJuIHRyYW5zbGF0ZUxldmVsKGxldmVsKTtcbn1cblxubW9kdWxlLmV4cG9ydHMgPSB7XG5cdHN1cHBvcnRzQ29sb3I6IGdldFN1cHBvcnRMZXZlbCxcblx0c3Rkb3V0OiB0cmFuc2xhdGVMZXZlbChzdXBwb3J0c0NvbG9yKHRydWUsIHR0eS5pc2F0dHkoMSkpKSxcblx0c3RkZXJyOiB0cmFuc2xhdGVMZXZlbChzdXBwb3J0c0NvbG9yKHRydWUsIHR0eS5pc2F0dHkoMikpKVxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
 //# sourceURL=webpack-internal:///2130
+`)},3781:(module,__unused_webpack_exports,__webpack_require__)=>{eval(`/* provided dependency */ var process = __webpack_require__(7282);
+
+
+var nextTick = nextTickArgs
+process.nextTick(upgrade, 42) // pass 42 and see if upgrade is called with it
+
+module.exports = thunky
+
+function thunky (fn) {
+  var state = run
+  return thunk
+
+  function thunk (callback) {
+    state(callback || noop)
+  }
+
+  function run (callback) {
+    var stack = [callback]
+    state = wait
+    fn(done)
+
+    function wait (callback) {
+      stack.push(callback)
+    }
+
+    function done (err) {
+      var args = arguments
+      state = isError(err) ? run : finished
+      while (stack.length) finished(stack.shift())
+
+      function finished (callback) {
+        nextTick(apply, callback, args)
+      }
+    }
+  }
+}
+
+function isError (err) { // inlined from util so this works in the browser
+  return Object.prototype.toString.call(err) === '[object Error]'
+}
+
+function noop () {}
+
+function apply (callback, args) {
+  callback.apply(null, args)
+}
+
+function upgrade (val) {
+  if (val === 42) nextTick = process.nextTick
+}
+
+function nextTickArgs (fn, a, b) {
+  process.nextTick(function () {
+    fn(a, b)
+  })
+}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzc4MS5qcyIsIm1hcHBpbmdzIjoiO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9taXJha3Rlc3QtcGx1Z2lucy8uL25vZGVfbW9kdWxlcy90aHVua3kvaW5kZXguanM/ZGEzZSJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCdcblxudmFyIG5leHRUaWNrID0gbmV4dFRpY2tBcmdzXG5wcm9jZXNzLm5leHRUaWNrKHVwZ3JhZGUsIDQyKSAvLyBwYXNzIDQyIGFuZCBzZWUgaWYgdXBncmFkZSBpcyBjYWxsZWQgd2l0aCBpdFxuXG5tb2R1bGUuZXhwb3J0cyA9IHRodW5reVxuXG5mdW5jdGlvbiB0aHVua3kgKGZuKSB7XG4gIHZhciBzdGF0ZSA9IHJ1blxuICByZXR1cm4gdGh1bmtcblxuICBmdW5jdGlvbiB0aHVuayAoY2FsbGJhY2spIHtcbiAgICBzdGF0ZShjYWxsYmFjayB8fCBub29wKVxuICB9XG5cbiAgZnVuY3Rpb24gcnVuIChjYWxsYmFjaykge1xuICAgIHZhciBzdGFjayA9IFtjYWxsYmFja11cbiAgICBzdGF0ZSA9IHdhaXRcbiAgICBmbihkb25lKVxuXG4gICAgZnVuY3Rpb24gd2FpdCAoY2FsbGJhY2spIHtcbiAgICAgIHN0YWNrLnB1c2goY2FsbGJhY2spXG4gICAgfVxuXG4gICAgZnVuY3Rpb24gZG9uZSAoZXJyKSB7XG4gICAgICB2YXIgYXJncyA9IGFyZ3VtZW50c1xuICAgICAgc3RhdGUgPSBpc0Vycm9yKGVycikgPyBydW4gOiBmaW5pc2hlZFxuICAgICAgd2hpbGUgKHN0YWNrLmxlbmd0aCkgZmluaXNoZWQoc3RhY2suc2hpZnQoKSlcblxuICAgICAgZnVuY3Rpb24gZmluaXNoZWQgKGNhbGxiYWNrKSB7XG4gICAgICAgIG5leHRUaWNrKGFwcGx5LCBjYWxsYmFjaywgYXJncylcbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cblxuZnVuY3Rpb24gaXNFcnJvciAoZXJyKSB7IC8vIGlubGluZWQgZnJvbSB1dGlsIHNvIHRoaXMgd29ya3MgaW4gdGhlIGJyb3dzZXJcbiAgcmV0dXJuIE9iamVjdC5wcm90b3R5cGUudG9TdHJpbmcuY2FsbChlcnIpID09PSAnW29iamVjdCBFcnJvcl0nXG59XG5cbmZ1bmN0aW9uIG5vb3AgKCkge31cblxuZnVuY3Rpb24gYXBwbHkgKGNhbGxiYWNrLCBhcmdzKSB7XG4gIGNhbGxiYWNrLmFwcGx5KG51bGwsIGFyZ3MpXG59XG5cbmZ1bmN0aW9uIHVwZ3JhZGUgKHZhbCkge1xuICBpZiAodmFsID09PSA0MikgbmV4dFRpY2sgPSBwcm9jZXNzLm5leHRUaWNrXG59XG5cbmZ1bmN0aW9uIG5leHRUaWNrQXJncyAoZm4sIGEsIGIpIHtcbiAgcHJvY2Vzcy5uZXh0VGljayhmdW5jdGlvbiAoKSB7XG4gICAgZm4oYSwgYilcbiAgfSlcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///3781
 `)},2953:module=>{eval(`/*!
  * toidentifier
  * Copyright(c) 2016 Douglas Christopher Wilson
@@ -21284,4 +24623,258 @@ module.exports = LRU;
 //# sourceURL=[module]
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOTMxLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMveWxydS9pbmRleC5qcz84NjZiIl0sInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcblxuY2xhc3MgTFJVIHtcbiAgY29uc3RydWN0b3IobWF4KSB7XG4gICAgdGhpcy5tYXggPSBtYXg7XG4gICAgdGhpcy5zaXplID0gMDtcbiAgICB0aGlzLmNhY2hlID0gbmV3IE1hcCgpO1xuICAgIHRoaXMuX2NhY2hlID0gbmV3IE1hcCgpO1xuICB9XG5cbiAgZ2V0KGtleSwgb3B0aW9ucykge1xuICAgIGxldCBpdGVtID0gdGhpcy5jYWNoZS5nZXQoa2V5KTtcbiAgICBjb25zdCBtYXhBZ2UgPSBvcHRpb25zICYmIG9wdGlvbnMubWF4QWdlO1xuICAgIC8vIG9ubHkgY2FsbCBEYXRlLm5vdygpIHdoZW4gbmVjZXNzYXJ5XG4gICAgbGV0IG5vdztcbiAgICBmdW5jdGlvbiBnZXROb3coKSB7XG4gICAgICBub3cgPSBub3cgfHwgRGF0ZS5ub3coKTtcbiAgICAgIHJldHVybiBub3c7XG4gICAgfVxuICAgIGlmIChpdGVtKSB7XG4gICAgICAvLyBjaGVjayBleHBpcmVkXG4gICAgICBpZiAoaXRlbS5leHBpcmVkICYmIGdldE5vdygpID4gaXRlbS5leHBpcmVkKSB7XG4gICAgICAgIGl0ZW0uZXhwaXJlZCA9IDA7XG4gICAgICAgIGl0ZW0udmFsdWUgPSB1bmRlZmluZWQ7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICAvLyB1cGRhdGUgZXhwaXJlZCBpbiBnZXRcbiAgICAgICAgaWYgKG1heEFnZSAhPT0gdW5kZWZpbmVkKSB7XG4gICAgICAgICAgY29uc3QgZXhwaXJlZCA9IG1heEFnZSA/IGdldE5vdygpICsgbWF4QWdlIDogMDtcbiAgICAgICAgICBpdGVtLmV4cGlyZWQgPSBleHBpcmVkO1xuICAgICAgICB9XG4gICAgICB9XG4gICAgICByZXR1cm4gaXRlbS52YWx1ZTtcbiAgICB9XG5cbiAgICAvLyB0cnkgdG8gcmVhZCBmcm9tIF9jYWNoZVxuICAgIGl0ZW0gPSB0aGlzLl9jYWNoZS5nZXQoa2V5KTtcbiAgICBpZiAoaXRlbSkge1xuICAgICAgLy8gY2hlY2sgZXhwaXJlZFxuICAgICAgaWYgKGl0ZW0uZXhwaXJlZCAmJiBnZXROb3coKSA+IGl0ZW0uZXhwaXJlZCkge1xuICAgICAgICBpdGVtLmV4cGlyZWQgPSAwO1xuICAgICAgICBpdGVtLnZhbHVlID0gdW5kZWZpbmVkO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgLy8gbm90IGV4cGlyZWQsIHNhdmUgdG8gY2FjaGVcbiAgICAgICAgdGhpcy5fdXBkYXRlKGtleSwgaXRlbSk7XG4gICAgICAgIC8vIHVwZGF0ZSBleHBpcmVkIGluIGdldFxuICAgICAgICBpZiAobWF4QWdlICE9PSB1bmRlZmluZWQpIHtcbiAgICAgICAgICBjb25zdCBleHBpcmVkID0gbWF4QWdlID8gZ2V0Tm93KCkgKyBtYXhBZ2UgOiAwO1xuICAgICAgICAgIGl0ZW0uZXhwaXJlZCA9IGV4cGlyZWQ7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICAgIHJldHVybiBpdGVtLnZhbHVlO1xuICAgIH1cbiAgfVxuXG4gIHNldChrZXksIHZhbHVlLCBvcHRpb25zKSB7XG4gICAgY29uc3QgbWF4QWdlID0gb3B0aW9ucyAmJiBvcHRpb25zLm1heEFnZTtcbiAgICBjb25zdCBleHBpcmVkID0gbWF4QWdlID8gRGF0ZS5ub3coKSArIG1heEFnZSA6IDA7XG4gICAgbGV0IGl0ZW0gPSB0aGlzLmNhY2hlLmdldChrZXkpO1xuICAgIGlmIChpdGVtKSB7XG4gICAgICBpdGVtLmV4cGlyZWQgPSBleHBpcmVkO1xuICAgICAgaXRlbS52YWx1ZSA9IHZhbHVlO1xuICAgIH0gZWxzZSB7XG4gICAgICBpdGVtID0ge1xuICAgICAgICB2YWx1ZSxcbiAgICAgICAgZXhwaXJlZCxcbiAgICAgIH07XG4gICAgICB0aGlzLl91cGRhdGUoa2V5LCBpdGVtKTtcbiAgICB9XG4gIH1cblxuICBrZXlzKCkge1xuICAgIGNvbnN0IGNhY2hlS2V5cyA9IG5ldyBTZXQoKTtcbiAgICBjb25zdCBub3cgPSBEYXRlLm5vdygpO1xuXG4gICAgZm9yIChjb25zdCBlbnRyeSBvZiB0aGlzLmNhY2hlLmVudHJpZXMoKSkge1xuICAgICAgY2hlY2tFbnRyeShlbnRyeSk7XG4gICAgfVxuXG4gICAgZm9yIChjb25zdCBlbnRyeSBvZiB0aGlzLl9jYWNoZS5lbnRyaWVzKCkpIHtcbiAgICAgIGNoZWNrRW50cnkoZW50cnkpO1xuICAgIH1cblxuICAgIGZ1bmN0aW9uIGNoZWNrRW50cnkoZW50cnkpIHtcbiAgICAgIGNvbnN0IGtleSA9IGVudHJ5WzBdO1xuICAgICAgY29uc3QgaXRlbSA9IGVudHJ5WzFdO1xuICAgICAgaWYgKGVudHJ5WzFdLnZhbHVlICYmICghZW50cnlbMV0uZXhwaXJlZCkgfHwgaXRlbS5leHBpcmVkID49IG5vdykge1xuICAgICAgICBjYWNoZUtleXMuYWRkKGtleSk7XG4gICAgICB9XG4gICAgfVxuXG4gICAgcmV0dXJuIEFycmF5LmZyb20oY2FjaGVLZXlzLmtleXMoKSk7XG4gIH1cblxuICBfdXBkYXRlKGtleSwgaXRlbSkge1xuICAgIHRoaXMuY2FjaGUuc2V0KGtleSwgaXRlbSk7XG4gICAgdGhpcy5zaXplKys7XG4gICAgaWYgKHRoaXMuc2l6ZSA+PSB0aGlzLm1heCkge1xuICAgICAgdGhpcy5zaXplID0gMDtcbiAgICAgIHRoaXMuX2NhY2hlID0gdGhpcy5jYWNoZTtcbiAgICAgIHRoaXMuY2FjaGUgPSBuZXcgTWFwKCk7XG4gICAgfVxuICB9XG59XG5cbm1vZHVsZS5leHBvcnRzID0gTFJVO1xuXG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
 //# sourceURL=webpack-internal:///931
-`)},1810:e=>{e.exports="data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e"},133:e=>{e.exports="data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e"},1686:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 16 16%27%3e%3cpath stroke=%27white%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M4 8h8%27/%3e%3c/svg%3e"},909:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 20 20%27%3e%3cpath stroke=%27%236b7280%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271.5%27 d=%27M6 8l4 4 4-4%27/%3e%3c/svg%3e"},6231:e=>{e.exports=require("fs")},9719:e=>{e.exports=require("os")},9491:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("assert")},852:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("async_hooks")},4300:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("buffer")},6113:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("crypto")},2361:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("events")},3685:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("http")},5687:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("https")},1808:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("net")},1017:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("path")},7282:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("process")},3477:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("querystring")},2781:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("stream")},4404:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("tls")},6224:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("tty")},7310:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("url")},3837:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("util")},9796:e=>{e.exports=__WEBPACK_EXTERNAL_createRequire(n.url)("zlib")},1512:e=>{e.exports=JSON.parse(`{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I'm a Teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Too Early","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"}`)},3765:e=>{e.exports=JSON.parse('{"application/1d-interleaved-parityfec":{"source":"iana"},"application/3gpdash-qoe-report+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/3gpp-ims+xml":{"source":"iana","compressible":true},"application/3gpphal+json":{"source":"iana","compressible":true},"application/3gpphalforms+json":{"source":"iana","compressible":true},"application/a2l":{"source":"iana"},"application/ace+cbor":{"source":"iana"},"application/activemessage":{"source":"iana"},"application/activity+json":{"source":"iana","compressible":true},"application/alto-costmap+json":{"source":"iana","compressible":true},"application/alto-costmapfilter+json":{"source":"iana","compressible":true},"application/alto-directory+json":{"source":"iana","compressible":true},"application/alto-endpointcost+json":{"source":"iana","compressible":true},"application/alto-endpointcostparams+json":{"source":"iana","compressible":true},"application/alto-endpointprop+json":{"source":"iana","compressible":true},"application/alto-endpointpropparams+json":{"source":"iana","compressible":true},"application/alto-error+json":{"source":"iana","compressible":true},"application/alto-networkmap+json":{"source":"iana","compressible":true},"application/alto-networkmapfilter+json":{"source":"iana","compressible":true},"application/alto-updatestreamcontrol+json":{"source":"iana","compressible":true},"application/alto-updatestreamparams+json":{"source":"iana","compressible":true},"application/aml":{"source":"iana"},"application/andrew-inset":{"source":"iana","extensions":["ez"]},"application/applefile":{"source":"iana"},"application/applixware":{"source":"apache","extensions":["aw"]},"application/at+jwt":{"source":"iana"},"application/atf":{"source":"iana"},"application/atfx":{"source":"iana"},"application/atom+xml":{"source":"iana","compressible":true,"extensions":["atom"]},"application/atomcat+xml":{"source":"iana","compressible":true,"extensions":["atomcat"]},"application/atomdeleted+xml":{"source":"iana","compressible":true,"extensions":["atomdeleted"]},"application/atomicmail":{"source":"iana"},"application/atomsvc+xml":{"source":"iana","compressible":true,"extensions":["atomsvc"]},"application/atsc-dwd+xml":{"source":"iana","compressible":true,"extensions":["dwd"]},"application/atsc-dynamic-event-message":{"source":"iana"},"application/atsc-held+xml":{"source":"iana","compressible":true,"extensions":["held"]},"application/atsc-rdt+json":{"source":"iana","compressible":true},"application/atsc-rsat+xml":{"source":"iana","compressible":true,"extensions":["rsat"]},"application/atxml":{"source":"iana"},"application/auth-policy+xml":{"source":"iana","compressible":true},"application/bacnet-xdd+zip":{"source":"iana","compressible":false},"application/batch-smtp":{"source":"iana"},"application/bdoc":{"compressible":false,"extensions":["bdoc"]},"application/beep+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/calendar+json":{"source":"iana","compressible":true},"application/calendar+xml":{"source":"iana","compressible":true,"extensions":["xcs"]},"application/call-completion":{"source":"iana"},"application/cals-1840":{"source":"iana"},"application/captive+json":{"source":"iana","compressible":true},"application/cbor":{"source":"iana"},"application/cbor-seq":{"source":"iana"},"application/cccex":{"source":"iana"},"application/ccmp+xml":{"source":"iana","compressible":true},"application/ccxml+xml":{"source":"iana","compressible":true,"extensions":["ccxml"]},"application/cdfx+xml":{"source":"iana","compressible":true,"extensions":["cdfx"]},"application/cdmi-capability":{"source":"iana","extensions":["cdmia"]},"application/cdmi-container":{"source":"iana","extensions":["cdmic"]},"application/cdmi-domain":{"source":"iana","extensions":["cdmid"]},"application/cdmi-object":{"source":"iana","extensions":["cdmio"]},"application/cdmi-queue":{"source":"iana","extensions":["cdmiq"]},"application/cdni":{"source":"iana"},"application/cea":{"source":"iana"},"application/cea-2018+xml":{"source":"iana","compressible":true},"application/cellml+xml":{"source":"iana","compressible":true},"application/cfw":{"source":"iana"},"application/city+json":{"source":"iana","compressible":true},"application/clr":{"source":"iana"},"application/clue+xml":{"source":"iana","compressible":true},"application/clue_info+xml":{"source":"iana","compressible":true},"application/cms":{"source":"iana"},"application/cnrp+xml":{"source":"iana","compressible":true},"application/coap-group+json":{"source":"iana","compressible":true},"application/coap-payload":{"source":"iana"},"application/commonground":{"source":"iana"},"application/conference-info+xml":{"source":"iana","compressible":true},"application/cose":{"source":"iana"},"application/cose-key":{"source":"iana"},"application/cose-key-set":{"source":"iana"},"application/cpl+xml":{"source":"iana","compressible":true,"extensions":["cpl"]},"application/csrattrs":{"source":"iana"},"application/csta+xml":{"source":"iana","compressible":true},"application/cstadata+xml":{"source":"iana","compressible":true},"application/csvm+json":{"source":"iana","compressible":true},"application/cu-seeme":{"source":"apache","extensions":["cu"]},"application/cwt":{"source":"iana"},"application/cybercash":{"source":"iana"},"application/dart":{"compressible":true},"application/dash+xml":{"source":"iana","compressible":true,"extensions":["mpd"]},"application/dash-patch+xml":{"source":"iana","compressible":true,"extensions":["mpp"]},"application/dashdelta":{"source":"iana"},"application/davmount+xml":{"source":"iana","compressible":true,"extensions":["davmount"]},"application/dca-rft":{"source":"iana"},"application/dcd":{"source":"iana"},"application/dec-dx":{"source":"iana"},"application/dialog-info+xml":{"source":"iana","compressible":true},"application/dicom":{"source":"iana"},"application/dicom+json":{"source":"iana","compressible":true},"application/dicom+xml":{"source":"iana","compressible":true},"application/dii":{"source":"iana"},"application/dit":{"source":"iana"},"application/dns":{"source":"iana"},"application/dns+json":{"source":"iana","compressible":true},"application/dns-message":{"source":"iana"},"application/docbook+xml":{"source":"apache","compressible":true,"extensions":["dbk"]},"application/dots+cbor":{"source":"iana"},"application/dskpp+xml":{"source":"iana","compressible":true},"application/dssc+der":{"source":"iana","extensions":["dssc"]},"application/dssc+xml":{"source":"iana","compressible":true,"extensions":["xdssc"]},"application/dvcs":{"source":"iana"},"application/ecmascript":{"source":"iana","compressible":true,"extensions":["es","ecma"]},"application/edi-consent":{"source":"iana"},"application/edi-x12":{"source":"iana","compressible":false},"application/edifact":{"source":"iana","compressible":false},"application/efi":{"source":"iana"},"application/elm+json":{"source":"iana","charset":"UTF-8","compressible":true},"application/elm+xml":{"source":"iana","compressible":true},"application/emergencycalldata.cap+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/emergencycalldata.comment+xml":{"source":"iana","compressible":true},"application/emergencycalldata.control+xml":{"source":"iana","compressible":true},"application/emergencycalldata.deviceinfo+xml":{"source":"iana","compressible":true},"application/emergencycalldata.ecall.msd":{"source":"iana"},"application/emergencycalldata.providerinfo+xml":{"source":"iana","compressible":true},"application/emergencycalldata.serviceinfo+xml":{"source":"iana","compressible":true},"application/emergencycalldata.subscriberinfo+xml":{"source":"iana","compressible":true},"application/emergencycalldata.veds+xml":{"source":"iana","compressible":true},"application/emma+xml":{"source":"iana","compressible":true,"extensions":["emma"]},"application/emotionml+xml":{"source":"iana","compressible":true,"extensions":["emotionml"]},"application/encaprtp":{"source":"iana"},"application/epp+xml":{"source":"iana","compressible":true},"application/epub+zip":{"source":"iana","compressible":false,"extensions":["epub"]},"application/eshop":{"source":"iana"},"application/exi":{"source":"iana","extensions":["exi"]},"application/expect-ct-report+json":{"source":"iana","compressible":true},"application/express":{"source":"iana","extensions":["exp"]},"application/fastinfoset":{"source":"iana"},"application/fastsoap":{"source":"iana"},"application/fdt+xml":{"source":"iana","compressible":true,"extensions":["fdt"]},"application/fhir+json":{"source":"iana","charset":"UTF-8","compressible":true},"application/fhir+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/fido.trusted-apps+json":{"compressible":true},"application/fits":{"source":"iana"},"application/flexfec":{"source":"iana"},"application/font-sfnt":{"source":"iana"},"application/font-tdpfr":{"source":"iana","extensions":["pfr"]},"application/font-woff":{"source":"iana","compressible":false},"application/framework-attributes+xml":{"source":"iana","compressible":true},"application/geo+json":{"source":"iana","compressible":true,"extensions":["geojson"]},"application/geo+json-seq":{"source":"iana"},"application/geopackage+sqlite3":{"source":"iana"},"application/geoxacml+xml":{"source":"iana","compressible":true},"application/gltf-buffer":{"source":"iana"},"application/gml+xml":{"source":"iana","compressible":true,"extensions":["gml"]},"application/gpx+xml":{"source":"apache","compressible":true,"extensions":["gpx"]},"application/gxf":{"source":"apache","extensions":["gxf"]},"application/gzip":{"source":"iana","compressible":false,"extensions":["gz"]},"application/h224":{"source":"iana"},"application/held+xml":{"source":"iana","compressible":true},"application/hjson":{"extensions":["hjson"]},"application/http":{"source":"iana"},"application/hyperstudio":{"source":"iana","extensions":["stk"]},"application/ibe-key-request+xml":{"source":"iana","compressible":true},"application/ibe-pkg-reply+xml":{"source":"iana","compressible":true},"application/ibe-pp-data":{"source":"iana"},"application/iges":{"source":"iana"},"application/im-iscomposing+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/index":{"source":"iana"},"application/index.cmd":{"source":"iana"},"application/index.obj":{"source":"iana"},"application/index.response":{"source":"iana"},"application/index.vnd":{"source":"iana"},"application/inkml+xml":{"source":"iana","compressible":true,"extensions":["ink","inkml"]},"application/iotp":{"source":"iana"},"application/ipfix":{"source":"iana","extensions":["ipfix"]},"application/ipp":{"source":"iana"},"application/isup":{"source":"iana"},"application/its+xml":{"source":"iana","compressible":true,"extensions":["its"]},"application/java-archive":{"source":"apache","compressible":false,"extensions":["jar","war","ear"]},"application/java-serialized-object":{"source":"apache","compressible":false,"extensions":["ser"]},"application/java-vm":{"source":"apache","compressible":false,"extensions":["class"]},"application/javascript":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["js","mjs"]},"application/jf2feed+json":{"source":"iana","compressible":true},"application/jose":{"source":"iana"},"application/jose+json":{"source":"iana","compressible":true},"application/jrd+json":{"source":"iana","compressible":true},"application/jscalendar+json":{"source":"iana","compressible":true},"application/json":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["json","map"]},"application/json-patch+json":{"source":"iana","compressible":true},"application/json-seq":{"source":"iana"},"application/json5":{"extensions":["json5"]},"application/jsonml+json":{"source":"apache","compressible":true,"extensions":["jsonml"]},"application/jwk+json":{"source":"iana","compressible":true},"application/jwk-set+json":{"source":"iana","compressible":true},"application/jwt":{"source":"iana"},"application/kpml-request+xml":{"source":"iana","compressible":true},"application/kpml-response+xml":{"source":"iana","compressible":true},"application/ld+json":{"source":"iana","compressible":true,"extensions":["jsonld"]},"application/lgr+xml":{"source":"iana","compressible":true,"extensions":["lgr"]},"application/link-format":{"source":"iana"},"application/load-control+xml":{"source":"iana","compressible":true},"application/lost+xml":{"source":"iana","compressible":true,"extensions":["lostxml"]},"application/lostsync+xml":{"source":"iana","compressible":true},"application/lpf+zip":{"source":"iana","compressible":false},"application/lxf":{"source":"iana"},"application/mac-binhex40":{"source":"iana","extensions":["hqx"]},"application/mac-compactpro":{"source":"apache","extensions":["cpt"]},"application/macwriteii":{"source":"iana"},"application/mads+xml":{"source":"iana","compressible":true,"extensions":["mads"]},"application/manifest+json":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["webmanifest"]},"application/marc":{"source":"iana","extensions":["mrc"]},"application/marcxml+xml":{"source":"iana","compressible":true,"extensions":["mrcx"]},"application/mathematica":{"source":"iana","extensions":["ma","nb","mb"]},"application/mathml+xml":{"source":"iana","compressible":true,"extensions":["mathml"]},"application/mathml-content+xml":{"source":"iana","compressible":true},"application/mathml-presentation+xml":{"source":"iana","compressible":true},"application/mbms-associated-procedure-description+xml":{"source":"iana","compressible":true},"application/mbms-deregister+xml":{"source":"iana","compressible":true},"application/mbms-envelope+xml":{"source":"iana","compressible":true},"application/mbms-msk+xml":{"source":"iana","compressible":true},"application/mbms-msk-response+xml":{"source":"iana","compressible":true},"application/mbms-protection-description+xml":{"source":"iana","compressible":true},"application/mbms-reception-report+xml":{"source":"iana","compressible":true},"application/mbms-register+xml":{"source":"iana","compressible":true},"application/mbms-register-response+xml":{"source":"iana","compressible":true},"application/mbms-schedule+xml":{"source":"iana","compressible":true},"application/mbms-user-service-description+xml":{"source":"iana","compressible":true},"application/mbox":{"source":"iana","extensions":["mbox"]},"application/media-policy-dataset+xml":{"source":"iana","compressible":true,"extensions":["mpf"]},"application/media_control+xml":{"source":"iana","compressible":true},"application/mediaservercontrol+xml":{"source":"iana","compressible":true,"extensions":["mscml"]},"application/merge-patch+json":{"source":"iana","compressible":true},"application/metalink+xml":{"source":"apache","compressible":true,"extensions":["metalink"]},"application/metalink4+xml":{"source":"iana","compressible":true,"extensions":["meta4"]},"application/mets+xml":{"source":"iana","compressible":true,"extensions":["mets"]},"application/mf4":{"source":"iana"},"application/mikey":{"source":"iana"},"application/mipc":{"source":"iana"},"application/missing-blocks+cbor-seq":{"source":"iana"},"application/mmt-aei+xml":{"source":"iana","compressible":true,"extensions":["maei"]},"application/mmt-usd+xml":{"source":"iana","compressible":true,"extensions":["musd"]},"application/mods+xml":{"source":"iana","compressible":true,"extensions":["mods"]},"application/moss-keys":{"source":"iana"},"application/moss-signature":{"source":"iana"},"application/mosskey-data":{"source":"iana"},"application/mosskey-request":{"source":"iana"},"application/mp21":{"source":"iana","extensions":["m21","mp21"]},"application/mp4":{"source":"iana","extensions":["mp4s","m4p"]},"application/mpeg4-generic":{"source":"iana"},"application/mpeg4-iod":{"source":"iana"},"application/mpeg4-iod-xmt":{"source":"iana"},"application/mrb-consumer+xml":{"source":"iana","compressible":true},"application/mrb-publish+xml":{"source":"iana","compressible":true},"application/msc-ivr+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/msc-mixer+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/msword":{"source":"iana","compressible":false,"extensions":["doc","dot"]},"application/mud+json":{"source":"iana","compressible":true},"application/multipart-core":{"source":"iana"},"application/mxf":{"source":"iana","extensions":["mxf"]},"application/n-quads":{"source":"iana","extensions":["nq"]},"application/n-triples":{"source":"iana","extensions":["nt"]},"application/nasdata":{"source":"iana"},"application/news-checkgroups":{"source":"iana","charset":"US-ASCII"},"application/news-groupinfo":{"source":"iana","charset":"US-ASCII"},"application/news-transmission":{"source":"iana"},"application/nlsml+xml":{"source":"iana","compressible":true},"application/node":{"source":"iana","extensions":["cjs"]},"application/nss":{"source":"iana"},"application/oauth-authz-req+jwt":{"source":"iana"},"application/oblivious-dns-message":{"source":"iana"},"application/ocsp-request":{"source":"iana"},"application/ocsp-response":{"source":"iana"},"application/octet-stream":{"source":"iana","compressible":false,"extensions":["bin","dms","lrf","mar","so","dist","distz","pkg","bpk","dump","elc","deploy","exe","dll","deb","dmg","iso","img","msi","msp","msm","buffer"]},"application/oda":{"source":"iana","extensions":["oda"]},"application/odm+xml":{"source":"iana","compressible":true},"application/odx":{"source":"iana"},"application/oebps-package+xml":{"source":"iana","compressible":true,"extensions":["opf"]},"application/ogg":{"source":"iana","compressible":false,"extensions":["ogx"]},"application/omdoc+xml":{"source":"apache","compressible":true,"extensions":["omdoc"]},"application/onenote":{"source":"apache","extensions":["onetoc","onetoc2","onetmp","onepkg"]},"application/opc-nodeset+xml":{"source":"iana","compressible":true},"application/oscore":{"source":"iana"},"application/oxps":{"source":"iana","extensions":["oxps"]},"application/p21":{"source":"iana"},"application/p21+zip":{"source":"iana","compressible":false},"application/p2p-overlay+xml":{"source":"iana","compressible":true,"extensions":["relo"]},"application/parityfec":{"source":"iana"},"application/passport":{"source":"iana"},"application/patch-ops-error+xml":{"source":"iana","compressible":true,"extensions":["xer"]},"application/pdf":{"source":"iana","compressible":false,"extensions":["pdf"]},"application/pdx":{"source":"iana"},"application/pem-certificate-chain":{"source":"iana"},"application/pgp-encrypted":{"source":"iana","compressible":false,"extensions":["pgp"]},"application/pgp-keys":{"source":"iana","extensions":["asc"]},"application/pgp-signature":{"source":"iana","extensions":["asc","sig"]},"application/pics-rules":{"source":"apache","extensions":["prf"]},"application/pidf+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/pidf-diff+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/pkcs10":{"source":"iana","extensions":["p10"]},"application/pkcs12":{"source":"iana"},"application/pkcs7-mime":{"source":"iana","extensions":["p7m","p7c"]},"application/pkcs7-signature":{"source":"iana","extensions":["p7s"]},"application/pkcs8":{"source":"iana","extensions":["p8"]},"application/pkcs8-encrypted":{"source":"iana"},"application/pkix-attr-cert":{"source":"iana","extensions":["ac"]},"application/pkix-cert":{"source":"iana","extensions":["cer"]},"application/pkix-crl":{"source":"iana","extensions":["crl"]},"application/pkix-pkipath":{"source":"iana","extensions":["pkipath"]},"application/pkixcmp":{"source":"iana","extensions":["pki"]},"application/pls+xml":{"source":"iana","compressible":true,"extensions":["pls"]},"application/poc-settings+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/postscript":{"source":"iana","compressible":true,"extensions":["ai","eps","ps"]},"application/ppsp-tracker+json":{"source":"iana","compressible":true},"application/problem+json":{"source":"iana","compressible":true},"application/problem+xml":{"source":"iana","compressible":true},"application/provenance+xml":{"source":"iana","compressible":true,"extensions":["provx"]},"application/prs.alvestrand.titrax-sheet":{"source":"iana"},"application/prs.cww":{"source":"iana","extensions":["cww"]},"application/prs.cyn":{"source":"iana","charset":"7-BIT"},"application/prs.hpub+zip":{"source":"iana","compressible":false},"application/prs.nprend":{"source":"iana"},"application/prs.plucker":{"source":"iana"},"application/prs.rdf-xml-crypt":{"source":"iana"},"application/prs.xsf+xml":{"source":"iana","compressible":true},"application/pskc+xml":{"source":"iana","compressible":true,"extensions":["pskcxml"]},"application/pvd+json":{"source":"iana","compressible":true},"application/qsig":{"source":"iana"},"application/raml+yaml":{"compressible":true,"extensions":["raml"]},"application/raptorfec":{"source":"iana"},"application/rdap+json":{"source":"iana","compressible":true},"application/rdf+xml":{"source":"iana","compressible":true,"extensions":["rdf","owl"]},"application/reginfo+xml":{"source":"iana","compressible":true,"extensions":["rif"]},"application/relax-ng-compact-syntax":{"source":"iana","extensions":["rnc"]},"application/remote-printing":{"source":"iana"},"application/reputon+json":{"source":"iana","compressible":true},"application/resource-lists+xml":{"source":"iana","compressible":true,"extensions":["rl"]},"application/resource-lists-diff+xml":{"source":"iana","compressible":true,"extensions":["rld"]},"application/rfc+xml":{"source":"iana","compressible":true},"application/riscos":{"source":"iana"},"application/rlmi+xml":{"source":"iana","compressible":true},"application/rls-services+xml":{"source":"iana","compressible":true,"extensions":["rs"]},"application/route-apd+xml":{"source":"iana","compressible":true,"extensions":["rapd"]},"application/route-s-tsid+xml":{"source":"iana","compressible":true,"extensions":["sls"]},"application/route-usd+xml":{"source":"iana","compressible":true,"extensions":["rusd"]},"application/rpki-ghostbusters":{"source":"iana","extensions":["gbr"]},"application/rpki-manifest":{"source":"iana","extensions":["mft"]},"application/rpki-publication":{"source":"iana"},"application/rpki-roa":{"source":"iana","extensions":["roa"]},"application/rpki-updown":{"source":"iana"},"application/rsd+xml":{"source":"apache","compressible":true,"extensions":["rsd"]},"application/rss+xml":{"source":"apache","compressible":true,"extensions":["rss"]},"application/rtf":{"source":"iana","compressible":true,"extensions":["rtf"]},"application/rtploopback":{"source":"iana"},"application/rtx":{"source":"iana"},"application/samlassertion+xml":{"source":"iana","compressible":true},"application/samlmetadata+xml":{"source":"iana","compressible":true},"application/sarif+json":{"source":"iana","compressible":true},"application/sarif-external-properties+json":{"source":"iana","compressible":true},"application/sbe":{"source":"iana"},"application/sbml+xml":{"source":"iana","compressible":true,"extensions":["sbml"]},"application/scaip+xml":{"source":"iana","compressible":true},"application/scim+json":{"source":"iana","compressible":true},"application/scvp-cv-request":{"source":"iana","extensions":["scq"]},"application/scvp-cv-response":{"source":"iana","extensions":["scs"]},"application/scvp-vp-request":{"source":"iana","extensions":["spq"]},"application/scvp-vp-response":{"source":"iana","extensions":["spp"]},"application/sdp":{"source":"iana","extensions":["sdp"]},"application/secevent+jwt":{"source":"iana"},"application/senml+cbor":{"source":"iana"},"application/senml+json":{"source":"iana","compressible":true},"application/senml+xml":{"source":"iana","compressible":true,"extensions":["senmlx"]},"application/senml-etch+cbor":{"source":"iana"},"application/senml-etch+json":{"source":"iana","compressible":true},"application/senml-exi":{"source":"iana"},"application/sensml+cbor":{"source":"iana"},"application/sensml+json":{"source":"iana","compressible":true},"application/sensml+xml":{"source":"iana","compressible":true,"extensions":["sensmlx"]},"application/sensml-exi":{"source":"iana"},"application/sep+xml":{"source":"iana","compressible":true},"application/sep-exi":{"source":"iana"},"application/session-info":{"source":"iana"},"application/set-payment":{"source":"iana"},"application/set-payment-initiation":{"source":"iana","extensions":["setpay"]},"application/set-registration":{"source":"iana"},"application/set-registration-initiation":{"source":"iana","extensions":["setreg"]},"application/sgml":{"source":"iana"},"application/sgml-open-catalog":{"source":"iana"},"application/shf+xml":{"source":"iana","compressible":true,"extensions":["shf"]},"application/sieve":{"source":"iana","extensions":["siv","sieve"]},"application/simple-filter+xml":{"source":"iana","compressible":true},"application/simple-message-summary":{"source":"iana"},"application/simplesymbolcontainer":{"source":"iana"},"application/sipc":{"source":"iana"},"application/slate":{"source":"iana"},"application/smil":{"source":"iana"},"application/smil+xml":{"source":"iana","compressible":true,"extensions":["smi","smil"]},"application/smpte336m":{"source":"iana"},"application/soap+fastinfoset":{"source":"iana"},"application/soap+xml":{"source":"iana","compressible":true},"application/sparql-query":{"source":"iana","extensions":["rq"]},"application/sparql-results+xml":{"source":"iana","compressible":true,"extensions":["srx"]},"application/spdx+json":{"source":"iana","compressible":true},"application/spirits-event+xml":{"source":"iana","compressible":true},"application/sql":{"source":"iana"},"application/srgs":{"source":"iana","extensions":["gram"]},"application/srgs+xml":{"source":"iana","compressible":true,"extensions":["grxml"]},"application/sru+xml":{"source":"iana","compressible":true,"extensions":["sru"]},"application/ssdl+xml":{"source":"apache","compressible":true,"extensions":["ssdl"]},"application/ssml+xml":{"source":"iana","compressible":true,"extensions":["ssml"]},"application/stix+json":{"source":"iana","compressible":true},"application/swid+xml":{"source":"iana","compressible":true,"extensions":["swidtag"]},"application/tamp-apex-update":{"source":"iana"},"application/tamp-apex-update-confirm":{"source":"iana"},"application/tamp-community-update":{"source":"iana"},"application/tamp-community-update-confirm":{"source":"iana"},"application/tamp-error":{"source":"iana"},"application/tamp-sequence-adjust":{"source":"iana"},"application/tamp-sequence-adjust-confirm":{"source":"iana"},"application/tamp-status-query":{"source":"iana"},"application/tamp-status-response":{"source":"iana"},"application/tamp-update":{"source":"iana"},"application/tamp-update-confirm":{"source":"iana"},"application/tar":{"compressible":true},"application/taxii+json":{"source":"iana","compressible":true},"application/td+json":{"source":"iana","compressible":true},"application/tei+xml":{"source":"iana","compressible":true,"extensions":["tei","teicorpus"]},"application/tetra_isi":{"source":"iana"},"application/thraud+xml":{"source":"iana","compressible":true,"extensions":["tfi"]},"application/timestamp-query":{"source":"iana"},"application/timestamp-reply":{"source":"iana"},"application/timestamped-data":{"source":"iana","extensions":["tsd"]},"application/tlsrpt+gzip":{"source":"iana"},"application/tlsrpt+json":{"source":"iana","compressible":true},"application/tnauthlist":{"source":"iana"},"application/token-introspection+jwt":{"source":"iana"},"application/toml":{"compressible":true,"extensions":["toml"]},"application/trickle-ice-sdpfrag":{"source":"iana"},"application/trig":{"source":"iana","extensions":["trig"]},"application/ttml+xml":{"source":"iana","compressible":true,"extensions":["ttml"]},"application/tve-trigger":{"source":"iana"},"application/tzif":{"source":"iana"},"application/tzif-leap":{"source":"iana"},"application/ubjson":{"compressible":false,"extensions":["ubj"]},"application/ulpfec":{"source":"iana"},"application/urc-grpsheet+xml":{"source":"iana","compressible":true},"application/urc-ressheet+xml":{"source":"iana","compressible":true,"extensions":["rsheet"]},"application/urc-targetdesc+xml":{"source":"iana","compressible":true,"extensions":["td"]},"application/urc-uisocketdesc+xml":{"source":"iana","compressible":true},"application/vcard+json":{"source":"iana","compressible":true},"application/vcard+xml":{"source":"iana","compressible":true},"application/vemmi":{"source":"iana"},"application/vividence.scriptfile":{"source":"apache"},"application/vnd.1000minds.decision-model+xml":{"source":"iana","compressible":true,"extensions":["1km"]},"application/vnd.3gpp-prose+xml":{"source":"iana","compressible":true},"application/vnd.3gpp-prose-pc3ch+xml":{"source":"iana","compressible":true},"application/vnd.3gpp-v2x-local-service-information":{"source":"iana"},"application/vnd.3gpp.5gnas":{"source":"iana"},"application/vnd.3gpp.access-transfer-events+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.bsf+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.gmop+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.gtpc":{"source":"iana"},"application/vnd.3gpp.interworking-data":{"source":"iana"},"application/vnd.3gpp.lpp":{"source":"iana"},"application/vnd.3gpp.mc-signalling-ear":{"source":"iana"},"application/vnd.3gpp.mcdata-affiliation-command+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcdata-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcdata-payload":{"source":"iana"},"application/vnd.3gpp.mcdata-service-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcdata-signalling":{"source":"iana"},"application/vnd.3gpp.mcdata-ue-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcdata-user-profile+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-affiliation-command+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-floor-request+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-location-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-mbms-usage-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-service-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-signed+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-ue-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-ue-init-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-user-profile+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-affiliation-command+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-affiliation-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-location-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-mbms-usage-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-service-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-transmission-request+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-ue-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-user-profile+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mid-call+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.ngap":{"source":"iana"},"application/vnd.3gpp.pfcp":{"source":"iana"},"application/vnd.3gpp.pic-bw-large":{"source":"iana","extensions":["plb"]},"application/vnd.3gpp.pic-bw-small":{"source":"iana","extensions":["psb"]},"application/vnd.3gpp.pic-bw-var":{"source":"iana","extensions":["pvb"]},"application/vnd.3gpp.s1ap":{"source":"iana"},"application/vnd.3gpp.sms":{"source":"iana"},"application/vnd.3gpp.sms+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.srvcc-ext+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.srvcc-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.state-and-event-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.ussd+xml":{"source":"iana","compressible":true},"application/vnd.3gpp2.bcmcsinfo+xml":{"source":"iana","compressible":true},"application/vnd.3gpp2.sms":{"source":"iana"},"application/vnd.3gpp2.tcap":{"source":"iana","extensions":["tcap"]},"application/vnd.3lightssoftware.imagescal":{"source":"iana"},"application/vnd.3m.post-it-notes":{"source":"iana","extensions":["pwn"]},"application/vnd.accpac.simply.aso":{"source":"iana","extensions":["aso"]},"application/vnd.accpac.simply.imp":{"source":"iana","extensions":["imp"]},"application/vnd.acucobol":{"source":"iana","extensions":["acu"]},"application/vnd.acucorp":{"source":"iana","extensions":["atc","acutc"]},"application/vnd.adobe.air-application-installer-package+zip":{"source":"apache","compressible":false,"extensions":["air"]},"application/vnd.adobe.flash.movie":{"source":"iana"},"application/vnd.adobe.formscentral.fcdt":{"source":"iana","extensions":["fcdt"]},"application/vnd.adobe.fxp":{"source":"iana","extensions":["fxp","fxpl"]},"application/vnd.adobe.partial-upload":{"source":"iana"},"application/vnd.adobe.xdp+xml":{"source":"iana","compressible":true,"extensions":["xdp"]},"application/vnd.adobe.xfdf":{"source":"iana","extensions":["xfdf"]},"application/vnd.aether.imp":{"source":"iana"},"application/vnd.afpc.afplinedata":{"source":"iana"},"application/vnd.afpc.afplinedata-pagedef":{"source":"iana"},"application/vnd.afpc.cmoca-cmresource":{"source":"iana"},"application/vnd.afpc.foca-charset":{"source":"iana"},"application/vnd.afpc.foca-codedfont":{"source":"iana"},"application/vnd.afpc.foca-codepage":{"source":"iana"},"application/vnd.afpc.modca":{"source":"iana"},"application/vnd.afpc.modca-cmtable":{"source":"iana"},"application/vnd.afpc.modca-formdef":{"source":"iana"},"application/vnd.afpc.modca-mediummap":{"source":"iana"},"application/vnd.afpc.modca-objectcontainer":{"source":"iana"},"application/vnd.afpc.modca-overlay":{"source":"iana"},"application/vnd.afpc.modca-pagesegment":{"source":"iana"},"application/vnd.age":{"source":"iana","extensions":["age"]},"application/vnd.ah-barcode":{"source":"iana"},"application/vnd.ahead.space":{"source":"iana","extensions":["ahead"]},"application/vnd.airzip.filesecure.azf":{"source":"iana","extensions":["azf"]},"application/vnd.airzip.filesecure.azs":{"source":"iana","extensions":["azs"]},"application/vnd.amadeus+json":{"source":"iana","compressible":true},"application/vnd.amazon.ebook":{"source":"apache","extensions":["azw"]},"application/vnd.amazon.mobi8-ebook":{"source":"iana"},"application/vnd.americandynamics.acc":{"source":"iana","extensions":["acc"]},"application/vnd.amiga.ami":{"source":"iana","extensions":["ami"]},"application/vnd.amundsen.maze+xml":{"source":"iana","compressible":true},"application/vnd.android.ota":{"source":"iana"},"application/vnd.android.package-archive":{"source":"apache","compressible":false,"extensions":["apk"]},"application/vnd.anki":{"source":"iana"},"application/vnd.anser-web-certificate-issue-initiation":{"source":"iana","extensions":["cii"]},"application/vnd.anser-web-funds-transfer-initiation":{"source":"apache","extensions":["fti"]},"application/vnd.antix.game-component":{"source":"iana","extensions":["atx"]},"application/vnd.apache.arrow.file":{"source":"iana"},"application/vnd.apache.arrow.stream":{"source":"iana"},"application/vnd.apache.thrift.binary":{"source":"iana"},"application/vnd.apache.thrift.compact":{"source":"iana"},"application/vnd.apache.thrift.json":{"source":"iana"},"application/vnd.api+json":{"source":"iana","compressible":true},"application/vnd.aplextor.warrp+json":{"source":"iana","compressible":true},"application/vnd.apothekende.reservation+json":{"source":"iana","compressible":true},"application/vnd.apple.installer+xml":{"source":"iana","compressible":true,"extensions":["mpkg"]},"application/vnd.apple.keynote":{"source":"iana","extensions":["key"]},"application/vnd.apple.mpegurl":{"source":"iana","extensions":["m3u8"]},"application/vnd.apple.numbers":{"source":"iana","extensions":["numbers"]},"application/vnd.apple.pages":{"source":"iana","extensions":["pages"]},"application/vnd.apple.pkpass":{"compressible":false,"extensions":["pkpass"]},"application/vnd.arastra.swi":{"source":"iana"},"application/vnd.aristanetworks.swi":{"source":"iana","extensions":["swi"]},"application/vnd.artisan+json":{"source":"iana","compressible":true},"application/vnd.artsquare":{"source":"iana"},"application/vnd.astraea-software.iota":{"source":"iana","extensions":["iota"]},"application/vnd.audiograph":{"source":"iana","extensions":["aep"]},"application/vnd.autopackage":{"source":"iana"},"application/vnd.avalon+json":{"source":"iana","compressible":true},"application/vnd.avistar+xml":{"source":"iana","compressible":true},"application/vnd.balsamiq.bmml+xml":{"source":"iana","compressible":true,"extensions":["bmml"]},"application/vnd.balsamiq.bmpr":{"source":"iana"},"application/vnd.banana-accounting":{"source":"iana"},"application/vnd.bbf.usp.error":{"source":"iana"},"application/vnd.bbf.usp.msg":{"source":"iana"},"application/vnd.bbf.usp.msg+json":{"source":"iana","compressible":true},"application/vnd.bekitzur-stech+json":{"source":"iana","compressible":true},"application/vnd.bint.med-content":{"source":"iana"},"application/vnd.biopax.rdf+xml":{"source":"iana","compressible":true},"application/vnd.blink-idb-value-wrapper":{"source":"iana"},"application/vnd.blueice.multipass":{"source":"iana","extensions":["mpm"]},"application/vnd.bluetooth.ep.oob":{"source":"iana"},"application/vnd.bluetooth.le.oob":{"source":"iana"},"application/vnd.bmi":{"source":"iana","extensions":["bmi"]},"application/vnd.bpf":{"source":"iana"},"application/vnd.bpf3":{"source":"iana"},"application/vnd.businessobjects":{"source":"iana","extensions":["rep"]},"application/vnd.byu.uapi+json":{"source":"iana","compressible":true},"application/vnd.cab-jscript":{"source":"iana"},"application/vnd.canon-cpdl":{"source":"iana"},"application/vnd.canon-lips":{"source":"iana"},"application/vnd.capasystems-pg+json":{"source":"iana","compressible":true},"application/vnd.cendio.thinlinc.clientconf":{"source":"iana"},"application/vnd.century-systems.tcp_stream":{"source":"iana"},"application/vnd.chemdraw+xml":{"source":"iana","compressible":true,"extensions":["cdxml"]},"application/vnd.chess-pgn":{"source":"iana"},"application/vnd.chipnuts.karaoke-mmd":{"source":"iana","extensions":["mmd"]},"application/vnd.ciedi":{"source":"iana"},"application/vnd.cinderella":{"source":"iana","extensions":["cdy"]},"application/vnd.cirpack.isdn-ext":{"source":"iana"},"application/vnd.citationstyles.style+xml":{"source":"iana","compressible":true,"extensions":["csl"]},"application/vnd.claymore":{"source":"iana","extensions":["cla"]},"application/vnd.cloanto.rp9":{"source":"iana","extensions":["rp9"]},"application/vnd.clonk.c4group":{"source":"iana","extensions":["c4g","c4d","c4f","c4p","c4u"]},"application/vnd.cluetrust.cartomobile-config":{"source":"iana","extensions":["c11amc"]},"application/vnd.cluetrust.cartomobile-config-pkg":{"source":"iana","extensions":["c11amz"]},"application/vnd.coffeescript":{"source":"iana"},"application/vnd.collabio.xodocuments.document":{"source":"iana"},"application/vnd.collabio.xodocuments.document-template":{"source":"iana"},"application/vnd.collabio.xodocuments.presentation":{"source":"iana"},"application/vnd.collabio.xodocuments.presentation-template":{"source":"iana"},"application/vnd.collabio.xodocuments.spreadsheet":{"source":"iana"},"application/vnd.collabio.xodocuments.spreadsheet-template":{"source":"iana"},"application/vnd.collection+json":{"source":"iana","compressible":true},"application/vnd.collection.doc+json":{"source":"iana","compressible":true},"application/vnd.collection.next+json":{"source":"iana","compressible":true},"application/vnd.comicbook+zip":{"source":"iana","compressible":false},"application/vnd.comicbook-rar":{"source":"iana"},"application/vnd.commerce-battelle":{"source":"iana"},"application/vnd.commonspace":{"source":"iana","extensions":["csp"]},"application/vnd.contact.cmsg":{"source":"iana","extensions":["cdbcmsg"]},"application/vnd.coreos.ignition+json":{"source":"iana","compressible":true},"application/vnd.cosmocaller":{"source":"iana","extensions":["cmc"]},"application/vnd.crick.clicker":{"source":"iana","extensions":["clkx"]},"application/vnd.crick.clicker.keyboard":{"source":"iana","extensions":["clkk"]},"application/vnd.crick.clicker.palette":{"source":"iana","extensions":["clkp"]},"application/vnd.crick.clicker.template":{"source":"iana","extensions":["clkt"]},"application/vnd.crick.clicker.wordbank":{"source":"iana","extensions":["clkw"]},"application/vnd.criticaltools.wbs+xml":{"source":"iana","compressible":true,"extensions":["wbs"]},"application/vnd.cryptii.pipe+json":{"source":"iana","compressible":true},"application/vnd.crypto-shade-file":{"source":"iana"},"application/vnd.cryptomator.encrypted":{"source":"iana"},"application/vnd.cryptomator.vault":{"source":"iana"},"application/vnd.ctc-posml":{"source":"iana","extensions":["pml"]},"application/vnd.ctct.ws+xml":{"source":"iana","compressible":true},"application/vnd.cups-pdf":{"source":"iana"},"application/vnd.cups-postscript":{"source":"iana"},"application/vnd.cups-ppd":{"source":"iana","extensions":["ppd"]},"application/vnd.cups-raster":{"source":"iana"},"application/vnd.cups-raw":{"source":"iana"},"application/vnd.curl":{"source":"iana"},"application/vnd.curl.car":{"source":"apache","extensions":["car"]},"application/vnd.curl.pcurl":{"source":"apache","extensions":["pcurl"]},"application/vnd.cyan.dean.root+xml":{"source":"iana","compressible":true},"application/vnd.cybank":{"source":"iana"},"application/vnd.cyclonedx+json":{"source":"iana","compressible":true},"application/vnd.cyclonedx+xml":{"source":"iana","compressible":true},"application/vnd.d2l.coursepackage1p0+zip":{"source":"iana","compressible":false},"application/vnd.d3m-dataset":{"source":"iana"},"application/vnd.d3m-problem":{"source":"iana"},"application/vnd.dart":{"source":"iana","compressible":true,"extensions":["dart"]},"application/vnd.data-vision.rdz":{"source":"iana","extensions":["rdz"]},"application/vnd.datapackage+json":{"source":"iana","compressible":true},"application/vnd.dataresource+json":{"source":"iana","compressible":true},"application/vnd.dbf":{"source":"iana","extensions":["dbf"]},"application/vnd.debian.binary-package":{"source":"iana"},"application/vnd.dece.data":{"source":"iana","extensions":["uvf","uvvf","uvd","uvvd"]},"application/vnd.dece.ttml+xml":{"source":"iana","compressible":true,"extensions":["uvt","uvvt"]},"application/vnd.dece.unspecified":{"source":"iana","extensions":["uvx","uvvx"]},"application/vnd.dece.zip":{"source":"iana","extensions":["uvz","uvvz"]},"application/vnd.denovo.fcselayout-link":{"source":"iana","extensions":["fe_launch"]},"application/vnd.desmume.movie":{"source":"iana"},"application/vnd.dir-bi.plate-dl-nosuffix":{"source":"iana"},"application/vnd.dm.delegation+xml":{"source":"iana","compressible":true},"application/vnd.dna":{"source":"iana","extensions":["dna"]},"application/vnd.document+json":{"source":"iana","compressible":true},"application/vnd.dolby.mlp":{"source":"apache","extensions":["mlp"]},"application/vnd.dolby.mobile.1":{"source":"iana"},"application/vnd.dolby.mobile.2":{"source":"iana"},"application/vnd.doremir.scorecloud-binary-document":{"source":"iana"},"application/vnd.dpgraph":{"source":"iana","extensions":["dpg"]},"application/vnd.dreamfactory":{"source":"iana","extensions":["dfac"]},"application/vnd.drive+json":{"source":"iana","compressible":true},"application/vnd.ds-keypoint":{"source":"apache","extensions":["kpxx"]},"application/vnd.dtg.local":{"source":"iana"},"application/vnd.dtg.local.flash":{"source":"iana"},"application/vnd.dtg.local.html":{"source":"iana"},"application/vnd.dvb.ait":{"source":"iana","extensions":["ait"]},"application/vnd.dvb.dvbisl+xml":{"source":"iana","compressible":true},"application/vnd.dvb.dvbj":{"source":"iana"},"application/vnd.dvb.esgcontainer":{"source":"iana"},"application/vnd.dvb.ipdcdftnotifaccess":{"source":"iana"},"application/vnd.dvb.ipdcesgaccess":{"source":"iana"},"application/vnd.dvb.ipdcesgaccess2":{"source":"iana"},"application/vnd.dvb.ipdcesgpdd":{"source":"iana"},"application/vnd.dvb.ipdcroaming":{"source":"iana"},"application/vnd.dvb.iptv.alfec-base":{"source":"iana"},"application/vnd.dvb.iptv.alfec-enhancement":{"source":"iana"},"application/vnd.dvb.notif-aggregate-root+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-container+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-generic+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-ia-msglist+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-ia-registration-request+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-ia-registration-response+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-init+xml":{"source":"iana","compressible":true},"application/vnd.dvb.pfr":{"source":"iana"},"application/vnd.dvb.service":{"source":"iana","extensions":["svc"]},"application/vnd.dxr":{"source":"iana"},"application/vnd.dynageo":{"source":"iana","extensions":["geo"]},"application/vnd.dzr":{"source":"iana"},"application/vnd.easykaraoke.cdgdownload":{"source":"iana"},"application/vnd.ecdis-update":{"source":"iana"},"application/vnd.ecip.rlp":{"source":"iana"},"application/vnd.eclipse.ditto+json":{"source":"iana","compressible":true},"application/vnd.ecowin.chart":{"source":"iana","extensions":["mag"]},"application/vnd.ecowin.filerequest":{"source":"iana"},"application/vnd.ecowin.fileupdate":{"source":"iana"},"application/vnd.ecowin.series":{"source":"iana"},"application/vnd.ecowin.seriesrequest":{"source":"iana"},"application/vnd.ecowin.seriesupdate":{"source":"iana"},"application/vnd.efi.img":{"source":"iana"},"application/vnd.efi.iso":{"source":"iana"},"application/vnd.emclient.accessrequest+xml":{"source":"iana","compressible":true},"application/vnd.enliven":{"source":"iana","extensions":["nml"]},"application/vnd.enphase.envoy":{"source":"iana"},"application/vnd.eprints.data+xml":{"source":"iana","compressible":true},"application/vnd.epson.esf":{"source":"iana","extensions":["esf"]},"application/vnd.epson.msf":{"source":"iana","extensions":["msf"]},"application/vnd.epson.quickanime":{"source":"iana","extensions":["qam"]},"application/vnd.epson.salt":{"source":"iana","extensions":["slt"]},"application/vnd.epson.ssf":{"source":"iana","extensions":["ssf"]},"application/vnd.ericsson.quickcall":{"source":"iana"},"application/vnd.espass-espass+zip":{"source":"iana","compressible":false},"application/vnd.eszigno3+xml":{"source":"iana","compressible":true,"extensions":["es3","et3"]},"application/vnd.etsi.aoc+xml":{"source":"iana","compressible":true},"application/vnd.etsi.asic-e+zip":{"source":"iana","compressible":false},"application/vnd.etsi.asic-s+zip":{"source":"iana","compressible":false},"application/vnd.etsi.cug+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvcommand+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvdiscovery+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvprofile+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvsad-bc+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvsad-cod+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvsad-npvr+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvservice+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvsync+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvueprofile+xml":{"source":"iana","compressible":true},"application/vnd.etsi.mcid+xml":{"source":"iana","compressible":true},"application/vnd.etsi.mheg5":{"source":"iana"},"application/vnd.etsi.overload-control-policy-dataset+xml":{"source":"iana","compressible":true},"application/vnd.etsi.pstn+xml":{"source":"iana","compressible":true},"application/vnd.etsi.sci+xml":{"source":"iana","compressible":true},"application/vnd.etsi.simservs+xml":{"source":"iana","compressible":true},"application/vnd.etsi.timestamp-token":{"source":"iana"},"application/vnd.etsi.tsl+xml":{"source":"iana","compressible":true},"application/vnd.etsi.tsl.der":{"source":"iana"},"application/vnd.eu.kasparian.car+json":{"source":"iana","compressible":true},"application/vnd.eudora.data":{"source":"iana"},"application/vnd.evolv.ecig.profile":{"source":"iana"},"application/vnd.evolv.ecig.settings":{"source":"iana"},"application/vnd.evolv.ecig.theme":{"source":"iana"},"application/vnd.exstream-empower+zip":{"source":"iana","compressible":false},"application/vnd.exstream-package":{"source":"iana"},"application/vnd.ezpix-album":{"source":"iana","extensions":["ez2"]},"application/vnd.ezpix-package":{"source":"iana","extensions":["ez3"]},"application/vnd.f-secure.mobile":{"source":"iana"},"application/vnd.familysearch.gedcom+zip":{"source":"iana","compressible":false},"application/vnd.fastcopy-disk-image":{"source":"iana"},"application/vnd.fdf":{"source":"iana","extensions":["fdf"]},"application/vnd.fdsn.mseed":{"source":"iana","extensions":["mseed"]},"application/vnd.fdsn.seed":{"source":"iana","extensions":["seed","dataless"]},"application/vnd.ffsns":{"source":"iana"},"application/vnd.ficlab.flb+zip":{"source":"iana","compressible":false},"application/vnd.filmit.zfc":{"source":"iana"},"application/vnd.fints":{"source":"iana"},"application/vnd.firemonkeys.cloudcell":{"source":"iana"},"application/vnd.flographit":{"source":"iana","extensions":["gph"]},"application/vnd.fluxtime.clip":{"source":"iana","extensions":["ftc"]},"application/vnd.font-fontforge-sfd":{"source":"iana"},"application/vnd.framemaker":{"source":"iana","extensions":["fm","frame","maker","book"]},"application/vnd.frogans.fnc":{"source":"iana","extensions":["fnc"]},"application/vnd.frogans.ltf":{"source":"iana","extensions":["ltf"]},"application/vnd.fsc.weblaunch":{"source":"iana","extensions":["fsc"]},"application/vnd.fujifilm.fb.docuworks":{"source":"iana"},"application/vnd.fujifilm.fb.docuworks.binder":{"source":"iana"},"application/vnd.fujifilm.fb.docuworks.container":{"source":"iana"},"application/vnd.fujifilm.fb.jfi+xml":{"source":"iana","compressible":true},"application/vnd.fujitsu.oasys":{"source":"iana","extensions":["oas"]},"application/vnd.fujitsu.oasys2":{"source":"iana","extensions":["oa2"]},"application/vnd.fujitsu.oasys3":{"source":"iana","extensions":["oa3"]},"application/vnd.fujitsu.oasysgp":{"source":"iana","extensions":["fg5"]},"application/vnd.fujitsu.oasysprs":{"source":"iana","extensions":["bh2"]},"application/vnd.fujixerox.art-ex":{"source":"iana"},"application/vnd.fujixerox.art4":{"source":"iana"},"application/vnd.fujixerox.ddd":{"source":"iana","extensions":["ddd"]},"application/vnd.fujixerox.docuworks":{"source":"iana","extensions":["xdw"]},"application/vnd.fujixerox.docuworks.binder":{"source":"iana","extensions":["xbd"]},"application/vnd.fujixerox.docuworks.container":{"source":"iana"},"application/vnd.fujixerox.hbpl":{"source":"iana"},"application/vnd.fut-misnet":{"source":"iana"},"application/vnd.futoin+cbor":{"source":"iana"},"application/vnd.futoin+json":{"source":"iana","compressible":true},"application/vnd.fuzzysheet":{"source":"iana","extensions":["fzs"]},"application/vnd.genomatix.tuxedo":{"source":"iana","extensions":["txd"]},"application/vnd.gentics.grd+json":{"source":"iana","compressible":true},"application/vnd.geo+json":{"source":"iana","compressible":true},"application/vnd.geocube+xml":{"source":"iana","compressible":true},"application/vnd.geogebra.file":{"source":"iana","extensions":["ggb"]},"application/vnd.geogebra.slides":{"source":"iana"},"application/vnd.geogebra.tool":{"source":"iana","extensions":["ggt"]},"application/vnd.geometry-explorer":{"source":"iana","extensions":["gex","gre"]},"application/vnd.geonext":{"source":"iana","extensions":["gxt"]},"application/vnd.geoplan":{"source":"iana","extensions":["g2w"]},"application/vnd.geospace":{"source":"iana","extensions":["g3w"]},"application/vnd.gerber":{"source":"iana"},"application/vnd.globalplatform.card-content-mgt":{"source":"iana"},"application/vnd.globalplatform.card-content-mgt-response":{"source":"iana"},"application/vnd.gmx":{"source":"iana","extensions":["gmx"]},"application/vnd.google-apps.document":{"compressible":false,"extensions":["gdoc"]},"application/vnd.google-apps.presentation":{"compressible":false,"extensions":["gslides"]},"application/vnd.google-apps.spreadsheet":{"compressible":false,"extensions":["gsheet"]},"application/vnd.google-earth.kml+xml":{"source":"iana","compressible":true,"extensions":["kml"]},"application/vnd.google-earth.kmz":{"source":"iana","compressible":false,"extensions":["kmz"]},"application/vnd.gov.sk.e-form+xml":{"source":"iana","compressible":true},"application/vnd.gov.sk.e-form+zip":{"source":"iana","compressible":false},"application/vnd.gov.sk.xmldatacontainer+xml":{"source":"iana","compressible":true},"application/vnd.grafeq":{"source":"iana","extensions":["gqf","gqs"]},"application/vnd.gridmp":{"source":"iana"},"application/vnd.groove-account":{"source":"iana","extensions":["gac"]},"application/vnd.groove-help":{"source":"iana","extensions":["ghf"]},"application/vnd.groove-identity-message":{"source":"iana","extensions":["gim"]},"application/vnd.groove-injector":{"source":"iana","extensions":["grv"]},"application/vnd.groove-tool-message":{"source":"iana","extensions":["gtm"]},"application/vnd.groove-tool-template":{"source":"iana","extensions":["tpl"]},"application/vnd.groove-vcard":{"source":"iana","extensions":["vcg"]},"application/vnd.hal+json":{"source":"iana","compressible":true},"application/vnd.hal+xml":{"source":"iana","compressible":true,"extensions":["hal"]},"application/vnd.handheld-entertainment+xml":{"source":"iana","compressible":true,"extensions":["zmm"]},"application/vnd.hbci":{"source":"iana","extensions":["hbci"]},"application/vnd.hc+json":{"source":"iana","compressible":true},"application/vnd.hcl-bireports":{"source":"iana"},"application/vnd.hdt":{"source":"iana"},"application/vnd.heroku+json":{"source":"iana","compressible":true},"application/vnd.hhe.lesson-player":{"source":"iana","extensions":["les"]},"application/vnd.hl7cda+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.hl7v2+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.hp-hpgl":{"source":"iana","extensions":["hpgl"]},"application/vnd.hp-hpid":{"source":"iana","extensions":["hpid"]},"application/vnd.hp-hps":{"source":"iana","extensions":["hps"]},"application/vnd.hp-jlyt":{"source":"iana","extensions":["jlt"]},"application/vnd.hp-pcl":{"source":"iana","extensions":["pcl"]},"application/vnd.hp-pclxl":{"source":"iana","extensions":["pclxl"]},"application/vnd.httphone":{"source":"iana"},"application/vnd.hydrostatix.sof-data":{"source":"iana","extensions":["sfd-hdstx"]},"application/vnd.hyper+json":{"source":"iana","compressible":true},"application/vnd.hyper-item+json":{"source":"iana","compressible":true},"application/vnd.hyperdrive+json":{"source":"iana","compressible":true},"application/vnd.hzn-3d-crossword":{"source":"iana"},"application/vnd.ibm.afplinedata":{"source":"iana"},"application/vnd.ibm.electronic-media":{"source":"iana"},"application/vnd.ibm.minipay":{"source":"iana","extensions":["mpy"]},"application/vnd.ibm.modcap":{"source":"iana","extensions":["afp","listafp","list3820"]},"application/vnd.ibm.rights-management":{"source":"iana","extensions":["irm"]},"application/vnd.ibm.secure-container":{"source":"iana","extensions":["sc"]},"application/vnd.iccprofile":{"source":"iana","extensions":["icc","icm"]},"application/vnd.ieee.1905":{"source":"iana"},"application/vnd.igloader":{"source":"iana","extensions":["igl"]},"application/vnd.imagemeter.folder+zip":{"source":"iana","compressible":false},"application/vnd.imagemeter.image+zip":{"source":"iana","compressible":false},"application/vnd.immervision-ivp":{"source":"iana","extensions":["ivp"]},"application/vnd.immervision-ivu":{"source":"iana","extensions":["ivu"]},"application/vnd.ims.imsccv1p1":{"source":"iana"},"application/vnd.ims.imsccv1p2":{"source":"iana"},"application/vnd.ims.imsccv1p3":{"source":"iana"},"application/vnd.ims.lis.v2.result+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolconsumerprofile+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolproxy+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolproxy.id+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolsettings+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolsettings.simple+json":{"source":"iana","compressible":true},"application/vnd.informedcontrol.rms+xml":{"source":"iana","compressible":true},"application/vnd.informix-visionary":{"source":"iana"},"application/vnd.infotech.project":{"source":"iana"},"application/vnd.infotech.project+xml":{"source":"iana","compressible":true},"application/vnd.innopath.wamp.notification":{"source":"iana"},"application/vnd.insors.igm":{"source":"iana","extensions":["igm"]},"application/vnd.intercon.formnet":{"source":"iana","extensions":["xpw","xpx"]},"application/vnd.intergeo":{"source":"iana","extensions":["i2g"]},"application/vnd.intertrust.digibox":{"source":"iana"},"application/vnd.intertrust.nncp":{"source":"iana"},"application/vnd.intu.qbo":{"source":"iana","extensions":["qbo"]},"application/vnd.intu.qfx":{"source":"iana","extensions":["qfx"]},"application/vnd.iptc.g2.catalogitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.conceptitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.knowledgeitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.newsitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.newsmessage+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.packageitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.planningitem+xml":{"source":"iana","compressible":true},"application/vnd.ipunplugged.rcprofile":{"source":"iana","extensions":["rcprofile"]},"application/vnd.irepository.package+xml":{"source":"iana","compressible":true,"extensions":["irp"]},"application/vnd.is-xpr":{"source":"iana","extensions":["xpr"]},"application/vnd.isac.fcs":{"source":"iana","extensions":["fcs"]},"application/vnd.iso11783-10+zip":{"source":"iana","compressible":false},"application/vnd.jam":{"source":"iana","extensions":["jam"]},"application/vnd.japannet-directory-service":{"source":"iana"},"application/vnd.japannet-jpnstore-wakeup":{"source":"iana"},"application/vnd.japannet-payment-wakeup":{"source":"iana"},"application/vnd.japannet-registration":{"source":"iana"},"application/vnd.japannet-registration-wakeup":{"source":"iana"},"application/vnd.japannet-setstore-wakeup":{"source":"iana"},"application/vnd.japannet-verification":{"source":"iana"},"application/vnd.japannet-verification-wakeup":{"source":"iana"},"application/vnd.jcp.javame.midlet-rms":{"source":"iana","extensions":["rms"]},"application/vnd.jisp":{"source":"iana","extensions":["jisp"]},"application/vnd.joost.joda-archive":{"source":"iana","extensions":["joda"]},"application/vnd.jsk.isdn-ngn":{"source":"iana"},"application/vnd.kahootz":{"source":"iana","extensions":["ktz","ktr"]},"application/vnd.kde.karbon":{"source":"iana","extensions":["karbon"]},"application/vnd.kde.kchart":{"source":"iana","extensions":["chrt"]},"application/vnd.kde.kformula":{"source":"iana","extensions":["kfo"]},"application/vnd.kde.kivio":{"source":"iana","extensions":["flw"]},"application/vnd.kde.kontour":{"source":"iana","extensions":["kon"]},"application/vnd.kde.kpresenter":{"source":"iana","extensions":["kpr","kpt"]},"application/vnd.kde.kspread":{"source":"iana","extensions":["ksp"]},"application/vnd.kde.kword":{"source":"iana","extensions":["kwd","kwt"]},"application/vnd.kenameaapp":{"source":"iana","extensions":["htke"]},"application/vnd.kidspiration":{"source":"iana","extensions":["kia"]},"application/vnd.kinar":{"source":"iana","extensions":["kne","knp"]},"application/vnd.koan":{"source":"iana","extensions":["skp","skd","skt","skm"]},"application/vnd.kodak-descriptor":{"source":"iana","extensions":["sse"]},"application/vnd.las":{"source":"iana"},"application/vnd.las.las+json":{"source":"iana","compressible":true},"application/vnd.las.las+xml":{"source":"iana","compressible":true,"extensions":["lasxml"]},"application/vnd.laszip":{"source":"iana"},"application/vnd.leap+json":{"source":"iana","compressible":true},"application/vnd.liberty-request+xml":{"source":"iana","compressible":true},"application/vnd.llamagraphics.life-balance.desktop":{"source":"iana","extensions":["lbd"]},"application/vnd.llamagraphics.life-balance.exchange+xml":{"source":"iana","compressible":true,"extensions":["lbe"]},"application/vnd.logipipe.circuit+zip":{"source":"iana","compressible":false},"application/vnd.loom":{"source":"iana"},"application/vnd.lotus-1-2-3":{"source":"iana","extensions":["123"]},"application/vnd.lotus-approach":{"source":"iana","extensions":["apr"]},"application/vnd.lotus-freelance":{"source":"iana","extensions":["pre"]},"application/vnd.lotus-notes":{"source":"iana","extensions":["nsf"]},"application/vnd.lotus-organizer":{"source":"iana","extensions":["org"]},"application/vnd.lotus-screencam":{"source":"iana","extensions":["scm"]},"application/vnd.lotus-wordpro":{"source":"iana","extensions":["lwp"]},"application/vnd.macports.portpkg":{"source":"iana","extensions":["portpkg"]},"application/vnd.mapbox-vector-tile":{"source":"iana","extensions":["mvt"]},"application/vnd.marlin.drm.actiontoken+xml":{"source":"iana","compressible":true},"application/vnd.marlin.drm.conftoken+xml":{"source":"iana","compressible":true},"application/vnd.marlin.drm.license+xml":{"source":"iana","compressible":true},"application/vnd.marlin.drm.mdcf":{"source":"iana"},"application/vnd.mason+json":{"source":"iana","compressible":true},"application/vnd.maxar.archive.3tz+zip":{"source":"iana","compressible":false},"application/vnd.maxmind.maxmind-db":{"source":"iana"},"application/vnd.mcd":{"source":"iana","extensions":["mcd"]},"application/vnd.medcalcdata":{"source":"iana","extensions":["mc1"]},"application/vnd.mediastation.cdkey":{"source":"iana","extensions":["cdkey"]},"application/vnd.meridian-slingshot":{"source":"iana"},"application/vnd.mfer":{"source":"iana","extensions":["mwf"]},"application/vnd.mfmp":{"source":"iana","extensions":["mfm"]},"application/vnd.micro+json":{"source":"iana","compressible":true},"application/vnd.micrografx.flo":{"source":"iana","extensions":["flo"]},"application/vnd.micrografx.igx":{"source":"iana","extensions":["igx"]},"application/vnd.microsoft.portable-executable":{"source":"iana"},"application/vnd.microsoft.windows.thumbnail-cache":{"source":"iana"},"application/vnd.miele+json":{"source":"iana","compressible":true},"application/vnd.mif":{"source":"iana","extensions":["mif"]},"application/vnd.minisoft-hp3000-save":{"source":"iana"},"application/vnd.mitsubishi.misty-guard.trustweb":{"source":"iana"},"application/vnd.mobius.daf":{"source":"iana","extensions":["daf"]},"application/vnd.mobius.dis":{"source":"iana","extensions":["dis"]},"application/vnd.mobius.mbk":{"source":"iana","extensions":["mbk"]},"application/vnd.mobius.mqy":{"source":"iana","extensions":["mqy"]},"application/vnd.mobius.msl":{"source":"iana","extensions":["msl"]},"application/vnd.mobius.plc":{"source":"iana","extensions":["plc"]},"application/vnd.mobius.txf":{"source":"iana","extensions":["txf"]},"application/vnd.mophun.application":{"source":"iana","extensions":["mpn"]},"application/vnd.mophun.certificate":{"source":"iana","extensions":["mpc"]},"application/vnd.motorola.flexsuite":{"source":"iana"},"application/vnd.motorola.flexsuite.adsi":{"source":"iana"},"application/vnd.motorola.flexsuite.fis":{"source":"iana"},"application/vnd.motorola.flexsuite.gotap":{"source":"iana"},"application/vnd.motorola.flexsuite.kmr":{"source":"iana"},"application/vnd.motorola.flexsuite.ttc":{"source":"iana"},"application/vnd.motorola.flexsuite.wem":{"source":"iana"},"application/vnd.motorola.iprm":{"source":"iana"},"application/vnd.mozilla.xul+xml":{"source":"iana","compressible":true,"extensions":["xul"]},"application/vnd.ms-3mfdocument":{"source":"iana"},"application/vnd.ms-artgalry":{"source":"iana","extensions":["cil"]},"application/vnd.ms-asf":{"source":"iana"},"application/vnd.ms-cab-compressed":{"source":"iana","extensions":["cab"]},"application/vnd.ms-color.iccprofile":{"source":"apache"},"application/vnd.ms-excel":{"source":"iana","compressible":false,"extensions":["xls","xlm","xla","xlc","xlt","xlw"]},"application/vnd.ms-excel.addin.macroenabled.12":{"source":"iana","extensions":["xlam"]},"application/vnd.ms-excel.sheet.binary.macroenabled.12":{"source":"iana","extensions":["xlsb"]},"application/vnd.ms-excel.sheet.macroenabled.12":{"source":"iana","extensions":["xlsm"]},"application/vnd.ms-excel.template.macroenabled.12":{"source":"iana","extensions":["xltm"]},"application/vnd.ms-fontobject":{"source":"iana","compressible":true,"extensions":["eot"]},"application/vnd.ms-htmlhelp":{"source":"iana","extensions":["chm"]},"application/vnd.ms-ims":{"source":"iana","extensions":["ims"]},"application/vnd.ms-lrm":{"source":"iana","extensions":["lrm"]},"application/vnd.ms-office.activex+xml":{"source":"iana","compressible":true},"application/vnd.ms-officetheme":{"source":"iana","extensions":["thmx"]},"application/vnd.ms-opentype":{"source":"apache","compressible":true},"application/vnd.ms-outlook":{"compressible":false,"extensions":["msg"]},"application/vnd.ms-package.obfuscated-opentype":{"source":"apache"},"application/vnd.ms-pki.seccat":{"source":"apache","extensions":["cat"]},"application/vnd.ms-pki.stl":{"source":"apache","extensions":["stl"]},"application/vnd.ms-playready.initiator+xml":{"source":"iana","compressible":true},"application/vnd.ms-powerpoint":{"source":"iana","compressible":false,"extensions":["ppt","pps","pot"]},"application/vnd.ms-powerpoint.addin.macroenabled.12":{"source":"iana","extensions":["ppam"]},"application/vnd.ms-powerpoint.presentation.macroenabled.12":{"source":"iana","extensions":["pptm"]},"application/vnd.ms-powerpoint.slide.macroenabled.12":{"source":"iana","extensions":["sldm"]},"application/vnd.ms-powerpoint.slideshow.macroenabled.12":{"source":"iana","extensions":["ppsm"]},"application/vnd.ms-powerpoint.template.macroenabled.12":{"source":"iana","extensions":["potm"]},"application/vnd.ms-printdevicecapabilities+xml":{"source":"iana","compressible":true},"application/vnd.ms-printing.printticket+xml":{"source":"apache","compressible":true},"application/vnd.ms-printschematicket+xml":{"source":"iana","compressible":true},"application/vnd.ms-project":{"source":"iana","extensions":["mpp","mpt"]},"application/vnd.ms-tnef":{"source":"iana"},"application/vnd.ms-windows.devicepairing":{"source":"iana"},"application/vnd.ms-windows.nwprinting.oob":{"source":"iana"},"application/vnd.ms-windows.printerpairing":{"source":"iana"},"application/vnd.ms-windows.wsd.oob":{"source":"iana"},"application/vnd.ms-wmdrm.lic-chlg-req":{"source":"iana"},"application/vnd.ms-wmdrm.lic-resp":{"source":"iana"},"application/vnd.ms-wmdrm.meter-chlg-req":{"source":"iana"},"application/vnd.ms-wmdrm.meter-resp":{"source":"iana"},"application/vnd.ms-word.document.macroenabled.12":{"source":"iana","extensions":["docm"]},"application/vnd.ms-word.template.macroenabled.12":{"source":"iana","extensions":["dotm"]},"application/vnd.ms-works":{"source":"iana","extensions":["wps","wks","wcm","wdb"]},"application/vnd.ms-wpl":{"source":"iana","extensions":["wpl"]},"application/vnd.ms-xpsdocument":{"source":"iana","compressible":false,"extensions":["xps"]},"application/vnd.msa-disk-image":{"source":"iana"},"application/vnd.mseq":{"source":"iana","extensions":["mseq"]},"application/vnd.msign":{"source":"iana"},"application/vnd.multiad.creator":{"source":"iana"},"application/vnd.multiad.creator.cif":{"source":"iana"},"application/vnd.music-niff":{"source":"iana"},"application/vnd.musician":{"source":"iana","extensions":["mus"]},"application/vnd.muvee.style":{"source":"iana","extensions":["msty"]},"application/vnd.mynfc":{"source":"iana","extensions":["taglet"]},"application/vnd.nacamar.ybrid+json":{"source":"iana","compressible":true},"application/vnd.ncd.control":{"source":"iana"},"application/vnd.ncd.reference":{"source":"iana"},"application/vnd.nearst.inv+json":{"source":"iana","compressible":true},"application/vnd.nebumind.line":{"source":"iana"},"application/vnd.nervana":{"source":"iana"},"application/vnd.netfpx":{"source":"iana"},"application/vnd.neurolanguage.nlu":{"source":"iana","extensions":["nlu"]},"application/vnd.nimn":{"source":"iana"},"application/vnd.nintendo.nitro.rom":{"source":"iana"},"application/vnd.nintendo.snes.rom":{"source":"iana"},"application/vnd.nitf":{"source":"iana","extensions":["ntf","nitf"]},"application/vnd.noblenet-directory":{"source":"iana","extensions":["nnd"]},"application/vnd.noblenet-sealer":{"source":"iana","extensions":["nns"]},"application/vnd.noblenet-web":{"source":"iana","extensions":["nnw"]},"application/vnd.nokia.catalogs":{"source":"iana"},"application/vnd.nokia.conml+wbxml":{"source":"iana"},"application/vnd.nokia.conml+xml":{"source":"iana","compressible":true},"application/vnd.nokia.iptv.config+xml":{"source":"iana","compressible":true},"application/vnd.nokia.isds-radio-presets":{"source":"iana"},"application/vnd.nokia.landmark+wbxml":{"source":"iana"},"application/vnd.nokia.landmark+xml":{"source":"iana","compressible":true},"application/vnd.nokia.landmarkcollection+xml":{"source":"iana","compressible":true},"application/vnd.nokia.n-gage.ac+xml":{"source":"iana","compressible":true,"extensions":["ac"]},"application/vnd.nokia.n-gage.data":{"source":"iana","extensions":["ngdat"]},"application/vnd.nokia.n-gage.symbian.install":{"source":"iana","extensions":["n-gage"]},"application/vnd.nokia.ncd":{"source":"iana"},"application/vnd.nokia.pcd+wbxml":{"source":"iana"},"application/vnd.nokia.pcd+xml":{"source":"iana","compressible":true},"application/vnd.nokia.radio-preset":{"source":"iana","extensions":["rpst"]},"application/vnd.nokia.radio-presets":{"source":"iana","extensions":["rpss"]},"application/vnd.novadigm.edm":{"source":"iana","extensions":["edm"]},"application/vnd.novadigm.edx":{"source":"iana","extensions":["edx"]},"application/vnd.novadigm.ext":{"source":"iana","extensions":["ext"]},"application/vnd.ntt-local.content-share":{"source":"iana"},"application/vnd.ntt-local.file-transfer":{"source":"iana"},"application/vnd.ntt-local.ogw_remote-access":{"source":"iana"},"application/vnd.ntt-local.sip-ta_remote":{"source":"iana"},"application/vnd.ntt-local.sip-ta_tcp_stream":{"source":"iana"},"application/vnd.oasis.opendocument.chart":{"source":"iana","extensions":["odc"]},"application/vnd.oasis.opendocument.chart-template":{"source":"iana","extensions":["otc"]},"application/vnd.oasis.opendocument.database":{"source":"iana","extensions":["odb"]},"application/vnd.oasis.opendocument.formula":{"source":"iana","extensions":["odf"]},"application/vnd.oasis.opendocument.formula-template":{"source":"iana","extensions":["odft"]},"application/vnd.oasis.opendocument.graphics":{"source":"iana","compressible":false,"extensions":["odg"]},"application/vnd.oasis.opendocument.graphics-template":{"source":"iana","extensions":["otg"]},"application/vnd.oasis.opendocument.image":{"source":"iana","extensions":["odi"]},"application/vnd.oasis.opendocument.image-template":{"source":"iana","extensions":["oti"]},"application/vnd.oasis.opendocument.presentation":{"source":"iana","compressible":false,"extensions":["odp"]},"application/vnd.oasis.opendocument.presentation-template":{"source":"iana","extensions":["otp"]},"application/vnd.oasis.opendocument.spreadsheet":{"source":"iana","compressible":false,"extensions":["ods"]},"application/vnd.oasis.opendocument.spreadsheet-template":{"source":"iana","extensions":["ots"]},"application/vnd.oasis.opendocument.text":{"source":"iana","compressible":false,"extensions":["odt"]},"application/vnd.oasis.opendocument.text-master":{"source":"iana","extensions":["odm"]},"application/vnd.oasis.opendocument.text-template":{"source":"iana","extensions":["ott"]},"application/vnd.oasis.opendocument.text-web":{"source":"iana","extensions":["oth"]},"application/vnd.obn":{"source":"iana"},"application/vnd.ocf+cbor":{"source":"iana"},"application/vnd.oci.image.manifest.v1+json":{"source":"iana","compressible":true},"application/vnd.oftn.l10n+json":{"source":"iana","compressible":true},"application/vnd.oipf.contentaccessdownload+xml":{"source":"iana","compressible":true},"application/vnd.oipf.contentaccessstreaming+xml":{"source":"iana","compressible":true},"application/vnd.oipf.cspg-hexbinary":{"source":"iana"},"application/vnd.oipf.dae.svg+xml":{"source":"iana","compressible":true},"application/vnd.oipf.dae.xhtml+xml":{"source":"iana","compressible":true},"application/vnd.oipf.mippvcontrolmessage+xml":{"source":"iana","compressible":true},"application/vnd.oipf.pae.gem":{"source":"iana"},"application/vnd.oipf.spdiscovery+xml":{"source":"iana","compressible":true},"application/vnd.oipf.spdlist+xml":{"source":"iana","compressible":true},"application/vnd.oipf.ueprofile+xml":{"source":"iana","compressible":true},"application/vnd.oipf.userprofile+xml":{"source":"iana","compressible":true},"application/vnd.olpc-sugar":{"source":"iana","extensions":["xo"]},"application/vnd.oma-scws-config":{"source":"iana"},"application/vnd.oma-scws-http-request":{"source":"iana"},"application/vnd.oma-scws-http-response":{"source":"iana"},"application/vnd.oma.bcast.associated-procedure-parameter+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.drm-trigger+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.imd+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.ltkm":{"source":"iana"},"application/vnd.oma.bcast.notification+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.provisioningtrigger":{"source":"iana"},"application/vnd.oma.bcast.sgboot":{"source":"iana"},"application/vnd.oma.bcast.sgdd+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.sgdu":{"source":"iana"},"application/vnd.oma.bcast.simple-symbol-container":{"source":"iana"},"application/vnd.oma.bcast.smartcard-trigger+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.sprov+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.stkm":{"source":"iana"},"application/vnd.oma.cab-address-book+xml":{"source":"iana","compressible":true},"application/vnd.oma.cab-feature-handler+xml":{"source":"iana","compressible":true},"application/vnd.oma.cab-pcc+xml":{"source":"iana","compressible":true},"application/vnd.oma.cab-subs-invite+xml":{"source":"iana","compressible":true},"application/vnd.oma.cab-user-prefs+xml":{"source":"iana","compressible":true},"application/vnd.oma.dcd":{"source":"iana"},"application/vnd.oma.dcdc":{"source":"iana"},"application/vnd.oma.dd2+xml":{"source":"iana","compressible":true,"extensions":["dd2"]},"application/vnd.oma.drm.risd+xml":{"source":"iana","compressible":true},"application/vnd.oma.group-usage-list+xml":{"source":"iana","compressible":true},"application/vnd.oma.lwm2m+cbor":{"source":"iana"},"application/vnd.oma.lwm2m+json":{"source":"iana","compressible":true},"application/vnd.oma.lwm2m+tlv":{"source":"iana"},"application/vnd.oma.pal+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.detailed-progress-report+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.final-report+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.groups+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.invocation-descriptor+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.optimized-progress-report+xml":{"source":"iana","compressible":true},"application/vnd.oma.push":{"source":"iana"},"application/vnd.oma.scidm.messages+xml":{"source":"iana","compressible":true},"application/vnd.oma.xcap-directory+xml":{"source":"iana","compressible":true},"application/vnd.omads-email+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.omads-file+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.omads-folder+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.omaloc-supl-init":{"source":"iana"},"application/vnd.onepager":{"source":"iana"},"application/vnd.onepagertamp":{"source":"iana"},"application/vnd.onepagertamx":{"source":"iana"},"application/vnd.onepagertat":{"source":"iana"},"application/vnd.onepagertatp":{"source":"iana"},"application/vnd.onepagertatx":{"source":"iana"},"application/vnd.openblox.game+xml":{"source":"iana","compressible":true,"extensions":["obgx"]},"application/vnd.openblox.game-binary":{"source":"iana"},"application/vnd.openeye.oeb":{"source":"iana"},"application/vnd.openofficeorg.extension":{"source":"apache","extensions":["oxt"]},"application/vnd.openstreetmap.data+xml":{"source":"iana","compressible":true,"extensions":["osm"]},"application/vnd.opentimestamps.ots":{"source":"iana"},"application/vnd.openxmlformats-officedocument.custom-properties+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.customxmlproperties+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawing+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.chart+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.diagramcolors+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.diagramdata+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.diagramlayout+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.diagramstyle+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.extended-properties+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.commentauthors+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.comments+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.handoutmaster+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.notesmaster+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.notesslide+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.presentation":{"source":"iana","compressible":false,"extensions":["pptx"]},"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.presprops+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slide":{"source":"iana","extensions":["sldx"]},"application/vnd.openxmlformats-officedocument.presentationml.slide+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slidelayout+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slidemaster+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slideshow":{"source":"iana","extensions":["ppsx"]},"application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slideupdateinfo+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.tablestyles+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.tags+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.template":{"source":"iana","extensions":["potx"]},"application/vnd.openxmlformats-officedocument.presentationml.template.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.viewprops+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.calcchain+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.connections+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.externallink+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.pivotcachedefinition+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.pivotcacherecords+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.pivottable+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.querytable+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.revisionheaders+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.revisionlog+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.sharedstrings+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":{"source":"iana","compressible":false,"extensions":["xlsx"]},"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.sheetmetadata+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.tablesinglecells+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.template":{"source":"iana","extensions":["xltx"]},"application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.usernames+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.volatiledependencies+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.theme+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.themeoverride+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.vmldrawing":{"source":"iana"},"application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.document":{"source":"iana","compressible":false,"extensions":["docx"]},"application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.fonttable+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.template":{"source":"iana","extensions":["dotx"]},"application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.websettings+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-package.core-properties+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-package.relationships+xml":{"source":"iana","compressible":true},"application/vnd.oracle.resource+json":{"source":"iana","compressible":true},"application/vnd.orange.indata":{"source":"iana"},"application/vnd.osa.netdeploy":{"source":"iana"},"application/vnd.osgeo.mapguide.package":{"source":"iana","extensions":["mgp"]},"application/vnd.osgi.bundle":{"source":"iana"},"application/vnd.osgi.dp":{"source":"iana","extensions":["dp"]},"application/vnd.osgi.subsystem":{"source":"iana","extensions":["esa"]},"application/vnd.otps.ct-kip+xml":{"source":"iana","compressible":true},"application/vnd.oxli.countgraph":{"source":"iana"},"application/vnd.pagerduty+json":{"source":"iana","compressible":true},"application/vnd.palm":{"source":"iana","extensions":["pdb","pqa","oprc"]},"application/vnd.panoply":{"source":"iana"},"application/vnd.paos.xml":{"source":"iana"},"application/vnd.patentdive":{"source":"iana"},"application/vnd.patientecommsdoc":{"source":"iana"},"application/vnd.pawaafile":{"source":"iana","extensions":["paw"]},"application/vnd.pcos":{"source":"iana"},"application/vnd.pg.format":{"source":"iana","extensions":["str"]},"application/vnd.pg.osasli":{"source":"iana","extensions":["ei6"]},"application/vnd.piaccess.application-licence":{"source":"iana"},"application/vnd.picsel":{"source":"iana","extensions":["efif"]},"application/vnd.pmi.widget":{"source":"iana","extensions":["wg"]},"application/vnd.poc.group-advertisement+xml":{"source":"iana","compressible":true},"application/vnd.pocketlearn":{"source":"iana","extensions":["plf"]},"application/vnd.powerbuilder6":{"source":"iana","extensions":["pbd"]},"application/vnd.powerbuilder6-s":{"source":"iana"},"application/vnd.powerbuilder7":{"source":"iana"},"application/vnd.powerbuilder7-s":{"source":"iana"},"application/vnd.powerbuilder75":{"source":"iana"},"application/vnd.powerbuilder75-s":{"source":"iana"},"application/vnd.preminet":{"source":"iana"},"application/vnd.previewsystems.box":{"source":"iana","extensions":["box"]},"application/vnd.proteus.magazine":{"source":"iana","extensions":["mgz"]},"application/vnd.psfs":{"source":"iana"},"application/vnd.publishare-delta-tree":{"source":"iana","extensions":["qps"]},"application/vnd.pvi.ptid1":{"source":"iana","extensions":["ptid"]},"application/vnd.pwg-multiplexed":{"source":"iana"},"application/vnd.pwg-xhtml-print+xml":{"source":"iana","compressible":true},"application/vnd.qualcomm.brew-app-res":{"source":"iana"},"application/vnd.quarantainenet":{"source":"iana"},"application/vnd.quark.quarkxpress":{"source":"iana","extensions":["qxd","qxt","qwd","qwt","qxl","qxb"]},"application/vnd.quobject-quoxdocument":{"source":"iana"},"application/vnd.radisys.moml+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit-conf+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit-conn+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit-dialog+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit-stream+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-conf+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-base+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-fax-detect+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-fax-sendrecv+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-group+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-speech+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-transform+xml":{"source":"iana","compressible":true},"application/vnd.rainstor.data":{"source":"iana"},"application/vnd.rapid":{"source":"iana"},"application/vnd.rar":{"source":"iana","extensions":["rar"]},"application/vnd.realvnc.bed":{"source":"iana","extensions":["bed"]},"application/vnd.recordare.musicxml":{"source":"iana","extensions":["mxl"]},"application/vnd.recordare.musicxml+xml":{"source":"iana","compressible":true,"extensions":["musicxml"]},"application/vnd.renlearn.rlprint":{"source":"iana"},"application/vnd.resilient.logic":{"source":"iana"},"application/vnd.restful+json":{"source":"iana","compressible":true},"application/vnd.rig.cryptonote":{"source":"iana","extensions":["cryptonote"]},"application/vnd.rim.cod":{"source":"apache","extensions":["cod"]},"application/vnd.rn-realmedia":{"source":"apache","extensions":["rm"]},"application/vnd.rn-realmedia-vbr":{"source":"apache","extensions":["rmvb"]},"application/vnd.route66.link66+xml":{"source":"iana","compressible":true,"extensions":["link66"]},"application/vnd.rs-274x":{"source":"iana"},"application/vnd.ruckus.download":{"source":"iana"},"application/vnd.s3sms":{"source":"iana"},"application/vnd.sailingtracker.track":{"source":"iana","extensions":["st"]},"application/vnd.sar":{"source":"iana"},"application/vnd.sbm.cid":{"source":"iana"},"application/vnd.sbm.mid2":{"source":"iana"},"application/vnd.scribus":{"source":"iana"},"application/vnd.sealed.3df":{"source":"iana"},"application/vnd.sealed.csf":{"source":"iana"},"application/vnd.sealed.doc":{"source":"iana"},"application/vnd.sealed.eml":{"source":"iana"},"application/vnd.sealed.mht":{"source":"iana"},"application/vnd.sealed.net":{"source":"iana"},"application/vnd.sealed.ppt":{"source":"iana"},"application/vnd.sealed.tiff":{"source":"iana"},"application/vnd.sealed.xls":{"source":"iana"},"application/vnd.sealedmedia.softseal.html":{"source":"iana"},"application/vnd.sealedmedia.softseal.pdf":{"source":"iana"},"application/vnd.seemail":{"source":"iana","extensions":["see"]},"application/vnd.seis+json":{"source":"iana","compressible":true},"application/vnd.sema":{"source":"iana","extensions":["sema"]},"application/vnd.semd":{"source":"iana","extensions":["semd"]},"application/vnd.semf":{"source":"iana","extensions":["semf"]},"application/vnd.shade-save-file":{"source":"iana"},"application/vnd.shana.informed.formdata":{"source":"iana","extensions":["ifm"]},"application/vnd.shana.informed.formtemplate":{"source":"iana","extensions":["itp"]},"application/vnd.shana.informed.interchange":{"source":"iana","extensions":["iif"]},"application/vnd.shana.informed.package":{"source":"iana","extensions":["ipk"]},"application/vnd.shootproof+json":{"source":"iana","compressible":true},"application/vnd.shopkick+json":{"source":"iana","compressible":true},"application/vnd.shp":{"source":"iana"},"application/vnd.shx":{"source":"iana"},"application/vnd.sigrok.session":{"source":"iana"},"application/vnd.simtech-mindmapper":{"source":"iana","extensions":["twd","twds"]},"application/vnd.siren+json":{"source":"iana","compressible":true},"application/vnd.smaf":{"source":"iana","extensions":["mmf"]},"application/vnd.smart.notebook":{"source":"iana"},"application/vnd.smart.teacher":{"source":"iana","extensions":["teacher"]},"application/vnd.snesdev-page-table":{"source":"iana"},"application/vnd.software602.filler.form+xml":{"source":"iana","compressible":true,"extensions":["fo"]},"application/vnd.software602.filler.form-xml-zip":{"source":"iana"},"application/vnd.solent.sdkm+xml":{"source":"iana","compressible":true,"extensions":["sdkm","sdkd"]},"application/vnd.spotfire.dxp":{"source":"iana","extensions":["dxp"]},"application/vnd.spotfire.sfs":{"source":"iana","extensions":["sfs"]},"application/vnd.sqlite3":{"source":"iana"},"application/vnd.sss-cod":{"source":"iana"},"application/vnd.sss-dtf":{"source":"iana"},"application/vnd.sss-ntf":{"source":"iana"},"application/vnd.stardivision.calc":{"source":"apache","extensions":["sdc"]},"application/vnd.stardivision.draw":{"source":"apache","extensions":["sda"]},"application/vnd.stardivision.impress":{"source":"apache","extensions":["sdd"]},"application/vnd.stardivision.math":{"source":"apache","extensions":["smf"]},"application/vnd.stardivision.writer":{"source":"apache","extensions":["sdw","vor"]},"application/vnd.stardivision.writer-global":{"source":"apache","extensions":["sgl"]},"application/vnd.stepmania.package":{"source":"iana","extensions":["smzip"]},"application/vnd.stepmania.stepchart":{"source":"iana","extensions":["sm"]},"application/vnd.street-stream":{"source":"iana"},"application/vnd.sun.wadl+xml":{"source":"iana","compressible":true,"extensions":["wadl"]},"application/vnd.sun.xml.calc":{"source":"apache","extensions":["sxc"]},"application/vnd.sun.xml.calc.template":{"source":"apache","extensions":["stc"]},"application/vnd.sun.xml.draw":{"source":"apache","extensions":["sxd"]},"application/vnd.sun.xml.draw.template":{"source":"apache","extensions":["std"]},"application/vnd.sun.xml.impress":{"source":"apache","extensions":["sxi"]},"application/vnd.sun.xml.impress.template":{"source":"apache","extensions":["sti"]},"application/vnd.sun.xml.math":{"source":"apache","extensions":["sxm"]},"application/vnd.sun.xml.writer":{"source":"apache","extensions":["sxw"]},"application/vnd.sun.xml.writer.global":{"source":"apache","extensions":["sxg"]},"application/vnd.sun.xml.writer.template":{"source":"apache","extensions":["stw"]},"application/vnd.sus-calendar":{"source":"iana","extensions":["sus","susp"]},"application/vnd.svd":{"source":"iana","extensions":["svd"]},"application/vnd.swiftview-ics":{"source":"iana"},"application/vnd.sycle+xml":{"source":"iana","compressible":true},"application/vnd.syft+json":{"source":"iana","compressible":true},"application/vnd.symbian.install":{"source":"apache","extensions":["sis","sisx"]},"application/vnd.syncml+xml":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["xsm"]},"application/vnd.syncml.dm+wbxml":{"source":"iana","charset":"UTF-8","extensions":["bdm"]},"application/vnd.syncml.dm+xml":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["xdm"]},"application/vnd.syncml.dm.notification":{"source":"iana"},"application/vnd.syncml.dmddf+wbxml":{"source":"iana"},"application/vnd.syncml.dmddf+xml":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["ddf"]},"application/vnd.syncml.dmtnds+wbxml":{"source":"iana"},"application/vnd.syncml.dmtnds+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.syncml.ds.notification":{"source":"iana"},"application/vnd.tableschema+json":{"source":"iana","compressible":true},"application/vnd.tao.intent-module-archive":{"source":"iana","extensions":["tao"]},"application/vnd.tcpdump.pcap":{"source":"iana","extensions":["pcap","cap","dmp"]},"application/vnd.think-cell.ppttc+json":{"source":"iana","compressible":true},"application/vnd.tmd.mediaflex.api+xml":{"source":"iana","compressible":true},"application/vnd.tml":{"source":"iana"},"application/vnd.tmobile-livetv":{"source":"iana","extensions":["tmo"]},"application/vnd.tri.onesource":{"source":"iana"},"application/vnd.trid.tpt":{"source":"iana","extensions":["tpt"]},"application/vnd.triscape.mxs":{"source":"iana","extensions":["mxs"]},"application/vnd.trueapp":{"source":"iana","extensions":["tra"]},"application/vnd.truedoc":{"source":"iana"},"application/vnd.ubisoft.webplayer":{"source":"iana"},"application/vnd.ufdl":{"source":"iana","extensions":["ufd","ufdl"]},"application/vnd.uiq.theme":{"source":"iana","extensions":["utz"]},"application/vnd.umajin":{"source":"iana","extensions":["umj"]},"application/vnd.unity":{"source":"iana","extensions":["unityweb"]},"application/vnd.uoml+xml":{"source":"iana","compressible":true,"extensions":["uoml"]},"application/vnd.uplanet.alert":{"source":"iana"},"application/vnd.uplanet.alert-wbxml":{"source":"iana"},"application/vnd.uplanet.bearer-choice":{"source":"iana"},"application/vnd.uplanet.bearer-choice-wbxml":{"source":"iana"},"application/vnd.uplanet.cacheop":{"source":"iana"},"application/vnd.uplanet.cacheop-wbxml":{"source":"iana"},"application/vnd.uplanet.channel":{"source":"iana"},"application/vnd.uplanet.channel-wbxml":{"source":"iana"},"application/vnd.uplanet.list":{"source":"iana"},"application/vnd.uplanet.list-wbxml":{"source":"iana"},"application/vnd.uplanet.listcmd":{"source":"iana"},"application/vnd.uplanet.listcmd-wbxml":{"source":"iana"},"application/vnd.uplanet.signal":{"source":"iana"},"application/vnd.uri-map":{"source":"iana"},"application/vnd.valve.source.material":{"source":"iana"},"application/vnd.vcx":{"source":"iana","extensions":["vcx"]},"application/vnd.vd-study":{"source":"iana"},"application/vnd.vectorworks":{"source":"iana"},"application/vnd.vel+json":{"source":"iana","compressible":true},"application/vnd.verimatrix.vcas":{"source":"iana"},"application/vnd.veritone.aion+json":{"source":"iana","compressible":true},"application/vnd.veryant.thin":{"source":"iana"},"application/vnd.ves.encrypted":{"source":"iana"},"application/vnd.vidsoft.vidconference":{"source":"iana"},"application/vnd.visio":{"source":"iana","extensions":["vsd","vst","vss","vsw"]},"application/vnd.visionary":{"source":"iana","extensions":["vis"]},"application/vnd.vividence.scriptfile":{"source":"iana"},"application/vnd.vsf":{"source":"iana","extensions":["vsf"]},"application/vnd.wap.sic":{"source":"iana"},"application/vnd.wap.slc":{"source":"iana"},"application/vnd.wap.wbxml":{"source":"iana","charset":"UTF-8","extensions":["wbxml"]},"application/vnd.wap.wmlc":{"source":"iana","extensions":["wmlc"]},"application/vnd.wap.wmlscriptc":{"source":"iana","extensions":["wmlsc"]},"application/vnd.webturbo":{"source":"iana","extensions":["wtb"]},"application/vnd.wfa.dpp":{"source":"iana"},"application/vnd.wfa.p2p":{"source":"iana"},"application/vnd.wfa.wsc":{"source":"iana"},"application/vnd.windows.devicepairing":{"source":"iana"},"application/vnd.wmc":{"source":"iana"},"application/vnd.wmf.bootstrap":{"source":"iana"},"application/vnd.wolfram.mathematica":{"source":"iana"},"application/vnd.wolfram.mathematica.package":{"source":"iana"},"application/vnd.wolfram.player":{"source":"iana","extensions":["nbp"]},"application/vnd.wordperfect":{"source":"iana","extensions":["wpd"]},"application/vnd.wqd":{"source":"iana","extensions":["wqd"]},"application/vnd.wrq-hp3000-labelled":{"source":"iana"},"application/vnd.wt.stf":{"source":"iana","extensions":["stf"]},"application/vnd.wv.csp+wbxml":{"source":"iana"},"application/vnd.wv.csp+xml":{"source":"iana","compressible":true},"application/vnd.wv.ssp+xml":{"source":"iana","compressible":true},"application/vnd.xacml+json":{"source":"iana","compressible":true},"application/vnd.xara":{"source":"iana","extensions":["xar"]},"application/vnd.xfdl":{"source":"iana","extensions":["xfdl"]},"application/vnd.xfdl.webform":{"source":"iana"},"application/vnd.xmi+xml":{"source":"iana","compressible":true},"application/vnd.xmpie.cpkg":{"source":"iana"},"application/vnd.xmpie.dpkg":{"source":"iana"},"application/vnd.xmpie.plan":{"source":"iana"},"application/vnd.xmpie.ppkg":{"source":"iana"},"application/vnd.xmpie.xlim":{"source":"iana"},"application/vnd.yamaha.hv-dic":{"source":"iana","extensions":["hvd"]},"application/vnd.yamaha.hv-script":{"source":"iana","extensions":["hvs"]},"application/vnd.yamaha.hv-voice":{"source":"iana","extensions":["hvp"]},"application/vnd.yamaha.openscoreformat":{"source":"iana","extensions":["osf"]},"application/vnd.yamaha.openscoreformat.osfpvg+xml":{"source":"iana","compressible":true,"extensions":["osfpvg"]},"application/vnd.yamaha.remote-setup":{"source":"iana"},"application/vnd.yamaha.smaf-audio":{"source":"iana","extensions":["saf"]},"application/vnd.yamaha.smaf-phrase":{"source":"iana","extensions":["spf"]},"application/vnd.yamaha.through-ngn":{"source":"iana"},"application/vnd.yamaha.tunnel-udpencap":{"source":"iana"},"application/vnd.yaoweme":{"source":"iana"},"application/vnd.yellowriver-custom-menu":{"source":"iana","extensions":["cmp"]},"application/vnd.youtube.yt":{"source":"iana"},"application/vnd.zul":{"source":"iana","extensions":["zir","zirz"]},"application/vnd.zzazz.deck+xml":{"source":"iana","compressible":true,"extensions":["zaz"]},"application/voicexml+xml":{"source":"iana","compressible":true,"extensions":["vxml"]},"application/voucher-cms+json":{"source":"iana","compressible":true},"application/vq-rtcpxr":{"source":"iana"},"application/wasm":{"source":"iana","compressible":true,"extensions":["wasm"]},"application/watcherinfo+xml":{"source":"iana","compressible":true,"extensions":["wif"]},"application/webpush-options+json":{"source":"iana","compressible":true},"application/whoispp-query":{"source":"iana"},"application/whoispp-response":{"source":"iana"},"application/widget":{"source":"iana","extensions":["wgt"]},"application/winhlp":{"source":"apache","extensions":["hlp"]},"application/wita":{"source":"iana"},"application/wordperfect5.1":{"source":"iana"},"application/wsdl+xml":{"source":"iana","compressible":true,"extensions":["wsdl"]},"application/wspolicy+xml":{"source":"iana","compressible":true,"extensions":["wspolicy"]},"application/x-7z-compressed":{"source":"apache","compressible":false,"extensions":["7z"]},"application/x-abiword":{"source":"apache","extensions":["abw"]},"application/x-ace-compressed":{"source":"apache","extensions":["ace"]},"application/x-amf":{"source":"apache"},"application/x-apple-diskimage":{"source":"apache","extensions":["dmg"]},"application/x-arj":{"compressible":false,"extensions":["arj"]},"application/x-authorware-bin":{"source":"apache","extensions":["aab","x32","u32","vox"]},"application/x-authorware-map":{"source":"apache","extensions":["aam"]},"application/x-authorware-seg":{"source":"apache","extensions":["aas"]},"application/x-bcpio":{"source":"apache","extensions":["bcpio"]},"application/x-bdoc":{"compressible":false,"extensions":["bdoc"]},"application/x-bittorrent":{"source":"apache","extensions":["torrent"]},"application/x-blorb":{"source":"apache","extensions":["blb","blorb"]},"application/x-bzip":{"source":"apache","compressible":false,"extensions":["bz"]},"application/x-bzip2":{"source":"apache","compressible":false,"extensions":["bz2","boz"]},"application/x-cbr":{"source":"apache","extensions":["cbr","cba","cbt","cbz","cb7"]},"application/x-cdlink":{"source":"apache","extensions":["vcd"]},"application/x-cfs-compressed":{"source":"apache","extensions":["cfs"]},"application/x-chat":{"source":"apache","extensions":["chat"]},"application/x-chess-pgn":{"source":"apache","extensions":["pgn"]},"application/x-chrome-extension":{"extensions":["crx"]},"application/x-cocoa":{"source":"nginx","extensions":["cco"]},"application/x-compress":{"source":"apache"},"application/x-conference":{"source":"apache","extensions":["nsc"]},"application/x-cpio":{"source":"apache","extensions":["cpio"]},"application/x-csh":{"source":"apache","extensions":["csh"]},"application/x-deb":{"compressible":false},"application/x-debian-package":{"source":"apache","extensions":["deb","udeb"]},"application/x-dgc-compressed":{"source":"apache","extensions":["dgc"]},"application/x-director":{"source":"apache","extensions":["dir","dcr","dxr","cst","cct","cxt","w3d","fgd","swa"]},"application/x-doom":{"source":"apache","extensions":["wad"]},"application/x-dtbncx+xml":{"source":"apache","compressible":true,"extensions":["ncx"]},"application/x-dtbook+xml":{"source":"apache","compressible":true,"extensions":["dtb"]},"application/x-dtbresource+xml":{"source":"apache","compressible":true,"extensions":["res"]},"application/x-dvi":{"source":"apache","compressible":false,"extensions":["dvi"]},"application/x-envoy":{"source":"apache","extensions":["evy"]},"application/x-eva":{"source":"apache","extensions":["eva"]},"application/x-font-bdf":{"source":"apache","extensions":["bdf"]},"application/x-font-dos":{"source":"apache"},"application/x-font-framemaker":{"source":"apache"},"application/x-font-ghostscript":{"source":"apache","extensions":["gsf"]},"application/x-font-libgrx":{"source":"apache"},"application/x-font-linux-psf":{"source":"apache","extensions":["psf"]},"application/x-font-pcf":{"source":"apache","extensions":["pcf"]},"application/x-font-snf":{"source":"apache","extensions":["snf"]},"application/x-font-speedo":{"source":"apache"},"application/x-font-sunos-news":{"source":"apache"},"application/x-font-type1":{"source":"apache","extensions":["pfa","pfb","pfm","afm"]},"application/x-font-vfont":{"source":"apache"},"application/x-freearc":{"source":"apache","extensions":["arc"]},"application/x-futuresplash":{"source":"apache","extensions":["spl"]},"application/x-gca-compressed":{"source":"apache","extensions":["gca"]},"application/x-glulx":{"source":"apache","extensions":["ulx"]},"application/x-gnumeric":{"source":"apache","extensions":["gnumeric"]},"application/x-gramps-xml":{"source":"apache","extensions":["gramps"]},"application/x-gtar":{"source":"apache","extensions":["gtar"]},"application/x-gzip":{"source":"apache"},"application/x-hdf":{"source":"apache","extensions":["hdf"]},"application/x-httpd-php":{"compressible":true,"extensions":["php"]},"application/x-install-instructions":{"source":"apache","extensions":["install"]},"application/x-iso9660-image":{"source":"apache","extensions":["iso"]},"application/x-iwork-keynote-sffkey":{"extensions":["key"]},"application/x-iwork-numbers-sffnumbers":{"extensions":["numbers"]},"application/x-iwork-pages-sffpages":{"extensions":["pages"]},"application/x-java-archive-diff":{"source":"nginx","extensions":["jardiff"]},"application/x-java-jnlp-file":{"source":"apache","compressible":false,"extensions":["jnlp"]},"application/x-javascript":{"compressible":true},"application/x-keepass2":{"extensions":["kdbx"]},"application/x-latex":{"source":"apache","compressible":false,"extensions":["latex"]},"application/x-lua-bytecode":{"extensions":["luac"]},"application/x-lzh-compressed":{"source":"apache","extensions":["lzh","lha"]},"application/x-makeself":{"source":"nginx","extensions":["run"]},"application/x-mie":{"source":"apache","extensions":["mie"]},"application/x-mobipocket-ebook":{"source":"apache","extensions":["prc","mobi"]},"application/x-mpegurl":{"compressible":false},"application/x-ms-application":{"source":"apache","extensions":["application"]},"application/x-ms-shortcut":{"source":"apache","extensions":["lnk"]},"application/x-ms-wmd":{"source":"apache","extensions":["wmd"]},"application/x-ms-wmz":{"source":"apache","extensions":["wmz"]},"application/x-ms-xbap":{"source":"apache","extensions":["xbap"]},"application/x-msaccess":{"source":"apache","extensions":["mdb"]},"application/x-msbinder":{"source":"apache","extensions":["obd"]},"application/x-mscardfile":{"source":"apache","extensions":["crd"]},"application/x-msclip":{"source":"apache","extensions":["clp"]},"application/x-msdos-program":{"extensions":["exe"]},"application/x-msdownload":{"source":"apache","extensions":["exe","dll","com","bat","msi"]},"application/x-msmediaview":{"source":"apache","extensions":["mvb","m13","m14"]},"application/x-msmetafile":{"source":"apache","extensions":["wmf","wmz","emf","emz"]},"application/x-msmoney":{"source":"apache","extensions":["mny"]},"application/x-mspublisher":{"source":"apache","extensions":["pub"]},"application/x-msschedule":{"source":"apache","extensions":["scd"]},"application/x-msterminal":{"source":"apache","extensions":["trm"]},"application/x-mswrite":{"source":"apache","extensions":["wri"]},"application/x-netcdf":{"source":"apache","extensions":["nc","cdf"]},"application/x-ns-proxy-autoconfig":{"compressible":true,"extensions":["pac"]},"application/x-nzb":{"source":"apache","extensions":["nzb"]},"application/x-perl":{"source":"nginx","extensions":["pl","pm"]},"application/x-pilot":{"source":"nginx","extensions":["prc","pdb"]},"application/x-pkcs12":{"source":"apache","compressible":false,"extensions":["p12","pfx"]},"application/x-pkcs7-certificates":{"source":"apache","extensions":["p7b","spc"]},"application/x-pkcs7-certreqresp":{"source":"apache","extensions":["p7r"]},"application/x-pki-message":{"source":"iana"},"application/x-rar-compressed":{"source":"apache","compressible":false,"extensions":["rar"]},"application/x-redhat-package-manager":{"source":"nginx","extensions":["rpm"]},"application/x-research-info-systems":{"source":"apache","extensions":["ris"]},"application/x-sea":{"source":"nginx","extensions":["sea"]},"application/x-sh":{"source":"apache","compressible":true,"extensions":["sh"]},"application/x-shar":{"source":"apache","extensions":["shar"]},"application/x-shockwave-flash":{"source":"apache","compressible":false,"extensions":["swf"]},"application/x-silverlight-app":{"source":"apache","extensions":["xap"]},"application/x-sql":{"source":"apache","extensions":["sql"]},"application/x-stuffit":{"source":"apache","compressible":false,"extensions":["sit"]},"application/x-stuffitx":{"source":"apache","extensions":["sitx"]},"application/x-subrip":{"source":"apache","extensions":["srt"]},"application/x-sv4cpio":{"source":"apache","extensions":["sv4cpio"]},"application/x-sv4crc":{"source":"apache","extensions":["sv4crc"]},"application/x-t3vm-image":{"source":"apache","extensions":["t3"]},"application/x-tads":{"source":"apache","extensions":["gam"]},"application/x-tar":{"source":"apache","compressible":true,"extensions":["tar"]},"application/x-tcl":{"source":"apache","extensions":["tcl","tk"]},"application/x-tex":{"source":"apache","extensions":["tex"]},"application/x-tex-tfm":{"source":"apache","extensions":["tfm"]},"application/x-texinfo":{"source":"apache","extensions":["texinfo","texi"]},"application/x-tgif":{"source":"apache","extensions":["obj"]},"application/x-ustar":{"source":"apache","extensions":["ustar"]},"application/x-virtualbox-hdd":{"compressible":true,"extensions":["hdd"]},"application/x-virtualbox-ova":{"compressible":true,"extensions":["ova"]},"application/x-virtualbox-ovf":{"compressible":true,"extensions":["ovf"]},"application/x-virtualbox-vbox":{"compressible":true,"extensions":["vbox"]},"application/x-virtualbox-vbox-extpack":{"compressible":false,"extensions":["vbox-extpack"]},"application/x-virtualbox-vdi":{"compressible":true,"extensions":["vdi"]},"application/x-virtualbox-vhd":{"compressible":true,"extensions":["vhd"]},"application/x-virtualbox-vmdk":{"compressible":true,"extensions":["vmdk"]},"application/x-wais-source":{"source":"apache","extensions":["src"]},"application/x-web-app-manifest+json":{"compressible":true,"extensions":["webapp"]},"application/x-www-form-urlencoded":{"source":"iana","compressible":true},"application/x-x509-ca-cert":{"source":"iana","extensions":["der","crt","pem"]},"application/x-x509-ca-ra-cert":{"source":"iana"},"application/x-x509-next-ca-cert":{"source":"iana"},"application/x-xfig":{"source":"apache","extensions":["fig"]},"application/x-xliff+xml":{"source":"apache","compressible":true,"extensions":["xlf"]},"application/x-xpinstall":{"source":"apache","compressible":false,"extensions":["xpi"]},"application/x-xz":{"source":"apache","extensions":["xz"]},"application/x-zmachine":{"source":"apache","extensions":["z1","z2","z3","z4","z5","z6","z7","z8"]},"application/x400-bp":{"source":"iana"},"application/xacml+xml":{"source":"iana","compressible":true},"application/xaml+xml":{"source":"apache","compressible":true,"extensions":["xaml"]},"application/xcap-att+xml":{"source":"iana","compressible":true,"extensions":["xav"]},"application/xcap-caps+xml":{"source":"iana","compressible":true,"extensions":["xca"]},"application/xcap-diff+xml":{"source":"iana","compressible":true,"extensions":["xdf"]},"application/xcap-el+xml":{"source":"iana","compressible":true,"extensions":["xel"]},"application/xcap-error+xml":{"source":"iana","compressible":true},"application/xcap-ns+xml":{"source":"iana","compressible":true,"extensions":["xns"]},"application/xcon-conference-info+xml":{"source":"iana","compressible":true},"application/xcon-conference-info-diff+xml":{"source":"iana","compressible":true},"application/xenc+xml":{"source":"iana","compressible":true,"extensions":["xenc"]},"application/xhtml+xml":{"source":"iana","compressible":true,"extensions":["xhtml","xht"]},"application/xhtml-voice+xml":{"source":"apache","compressible":true},"application/xliff+xml":{"source":"iana","compressible":true,"extensions":["xlf"]},"application/xml":{"source":"iana","compressible":true,"extensions":["xml","xsl","xsd","rng"]},"application/xml-dtd":{"source":"iana","compressible":true,"extensions":["dtd"]},"application/xml-external-parsed-entity":{"source":"iana"},"application/xml-patch+xml":{"source":"iana","compressible":true},"application/xmpp+xml":{"source":"iana","compressible":true},"application/xop+xml":{"source":"iana","compressible":true,"extensions":["xop"]},"application/xproc+xml":{"source":"apache","compressible":true,"extensions":["xpl"]},"application/xslt+xml":{"source":"iana","compressible":true,"extensions":["xsl","xslt"]},"application/xspf+xml":{"source":"apache","compressible":true,"extensions":["xspf"]},"application/xv+xml":{"source":"iana","compressible":true,"extensions":["mxml","xhvml","xvml","xvm"]},"application/yang":{"source":"iana","extensions":["yang"]},"application/yang-data+json":{"source":"iana","compressible":true},"application/yang-data+xml":{"source":"iana","compressible":true},"application/yang-patch+json":{"source":"iana","compressible":true},"application/yang-patch+xml":{"source":"iana","compressible":true},"application/yin+xml":{"source":"iana","compressible":true,"extensions":["yin"]},"application/zip":{"source":"iana","compressible":false,"extensions":["zip"]},"application/zlib":{"source":"iana"},"application/zstd":{"source":"iana"},"audio/1d-interleaved-parityfec":{"source":"iana"},"audio/32kadpcm":{"source":"iana"},"audio/3gpp":{"source":"iana","compressible":false,"extensions":["3gpp"]},"audio/3gpp2":{"source":"iana"},"audio/aac":{"source":"iana"},"audio/ac3":{"source":"iana"},"audio/adpcm":{"source":"apache","extensions":["adp"]},"audio/amr":{"source":"iana","extensions":["amr"]},"audio/amr-wb":{"source":"iana"},"audio/amr-wb+":{"source":"iana"},"audio/aptx":{"source":"iana"},"audio/asc":{"source":"iana"},"audio/atrac-advanced-lossless":{"source":"iana"},"audio/atrac-x":{"source":"iana"},"audio/atrac3":{"source":"iana"},"audio/basic":{"source":"iana","compressible":false,"extensions":["au","snd"]},"audio/bv16":{"source":"iana"},"audio/bv32":{"source":"iana"},"audio/clearmode":{"source":"iana"},"audio/cn":{"source":"iana"},"audio/dat12":{"source":"iana"},"audio/dls":{"source":"iana"},"audio/dsr-es201108":{"source":"iana"},"audio/dsr-es202050":{"source":"iana"},"audio/dsr-es202211":{"source":"iana"},"audio/dsr-es202212":{"source":"iana"},"audio/dv":{"source":"iana"},"audio/dvi4":{"source":"iana"},"audio/eac3":{"source":"iana"},"audio/encaprtp":{"source":"iana"},"audio/evrc":{"source":"iana"},"audio/evrc-qcp":{"source":"iana"},"audio/evrc0":{"source":"iana"},"audio/evrc1":{"source":"iana"},"audio/evrcb":{"source":"iana"},"audio/evrcb0":{"source":"iana"},"audio/evrcb1":{"source":"iana"},"audio/evrcnw":{"source":"iana"},"audio/evrcnw0":{"source":"iana"},"audio/evrcnw1":{"source":"iana"},"audio/evrcwb":{"source":"iana"},"audio/evrcwb0":{"source":"iana"},"audio/evrcwb1":{"source":"iana"},"audio/evs":{"source":"iana"},"audio/flexfec":{"source":"iana"},"audio/fwdred":{"source":"iana"},"audio/g711-0":{"source":"iana"},"audio/g719":{"source":"iana"},"audio/g722":{"source":"iana"},"audio/g7221":{"source":"iana"},"audio/g723":{"source":"iana"},"audio/g726-16":{"source":"iana"},"audio/g726-24":{"source":"iana"},"audio/g726-32":{"source":"iana"},"audio/g726-40":{"source":"iana"},"audio/g728":{"source":"iana"},"audio/g729":{"source":"iana"},"audio/g7291":{"source":"iana"},"audio/g729d":{"source":"iana"},"audio/g729e":{"source":"iana"},"audio/gsm":{"source":"iana"},"audio/gsm-efr":{"source":"iana"},"audio/gsm-hr-08":{"source":"iana"},"audio/ilbc":{"source":"iana"},"audio/ip-mr_v2.5":{"source":"iana"},"audio/isac":{"source":"apache"},"audio/l16":{"source":"iana"},"audio/l20":{"source":"iana"},"audio/l24":{"source":"iana","compressible":false},"audio/l8":{"source":"iana"},"audio/lpc":{"source":"iana"},"audio/melp":{"source":"iana"},"audio/melp1200":{"source":"iana"},"audio/melp2400":{"source":"iana"},"audio/melp600":{"source":"iana"},"audio/mhas":{"source":"iana"},"audio/midi":{"source":"apache","extensions":["mid","midi","kar","rmi"]},"audio/mobile-xmf":{"source":"iana","extensions":["mxmf"]},"audio/mp3":{"compressible":false,"extensions":["mp3"]},"audio/mp4":{"source":"iana","compressible":false,"extensions":["m4a","mp4a"]},"audio/mp4a-latm":{"source":"iana"},"audio/mpa":{"source":"iana"},"audio/mpa-robust":{"source":"iana"},"audio/mpeg":{"source":"iana","compressible":false,"extensions":["mpga","mp2","mp2a","mp3","m2a","m3a"]},"audio/mpeg4-generic":{"source":"iana"},"audio/musepack":{"source":"apache"},"audio/ogg":{"source":"iana","compressible":false,"extensions":["oga","ogg","spx","opus"]},"audio/opus":{"source":"iana"},"audio/parityfec":{"source":"iana"},"audio/pcma":{"source":"iana"},"audio/pcma-wb":{"source":"iana"},"audio/pcmu":{"source":"iana"},"audio/pcmu-wb":{"source":"iana"},"audio/prs.sid":{"source":"iana"},"audio/qcelp":{"source":"iana"},"audio/raptorfec":{"source":"iana"},"audio/red":{"source":"iana"},"audio/rtp-enc-aescm128":{"source":"iana"},"audio/rtp-midi":{"source":"iana"},"audio/rtploopback":{"source":"iana"},"audio/rtx":{"source":"iana"},"audio/s3m":{"source":"apache","extensions":["s3m"]},"audio/scip":{"source":"iana"},"audio/silk":{"source":"apache","extensions":["sil"]},"audio/smv":{"source":"iana"},"audio/smv-qcp":{"source":"iana"},"audio/smv0":{"source":"iana"},"audio/sofa":{"source":"iana"},"audio/sp-midi":{"source":"iana"},"audio/speex":{"source":"iana"},"audio/t140c":{"source":"iana"},"audio/t38":{"source":"iana"},"audio/telephone-event":{"source":"iana"},"audio/tetra_acelp":{"source":"iana"},"audio/tetra_acelp_bb":{"source":"iana"},"audio/tone":{"source":"iana"},"audio/tsvcis":{"source":"iana"},"audio/uemclip":{"source":"iana"},"audio/ulpfec":{"source":"iana"},"audio/usac":{"source":"iana"},"audio/vdvi":{"source":"iana"},"audio/vmr-wb":{"source":"iana"},"audio/vnd.3gpp.iufp":{"source":"iana"},"audio/vnd.4sb":{"source":"iana"},"audio/vnd.audiokoz":{"source":"iana"},"audio/vnd.celp":{"source":"iana"},"audio/vnd.cisco.nse":{"source":"iana"},"audio/vnd.cmles.radio-events":{"source":"iana"},"audio/vnd.cns.anp1":{"source":"iana"},"audio/vnd.cns.inf1":{"source":"iana"},"audio/vnd.dece.audio":{"source":"iana","extensions":["uva","uvva"]},"audio/vnd.digital-winds":{"source":"iana","extensions":["eol"]},"audio/vnd.dlna.adts":{"source":"iana"},"audio/vnd.dolby.heaac.1":{"source":"iana"},"audio/vnd.dolby.heaac.2":{"source":"iana"},"audio/vnd.dolby.mlp":{"source":"iana"},"audio/vnd.dolby.mps":{"source":"iana"},"audio/vnd.dolby.pl2":{"source":"iana"},"audio/vnd.dolby.pl2x":{"source":"iana"},"audio/vnd.dolby.pl2z":{"source":"iana"},"audio/vnd.dolby.pulse.1":{"source":"iana"},"audio/vnd.dra":{"source":"iana","extensions":["dra"]},"audio/vnd.dts":{"source":"iana","extensions":["dts"]},"audio/vnd.dts.hd":{"source":"iana","extensions":["dtshd"]},"audio/vnd.dts.uhd":{"source":"iana"},"audio/vnd.dvb.file":{"source":"iana"},"audio/vnd.everad.plj":{"source":"iana"},"audio/vnd.hns.audio":{"source":"iana"},"audio/vnd.lucent.voice":{"source":"iana","extensions":["lvp"]},"audio/vnd.ms-playready.media.pya":{"source":"iana","extensions":["pya"]},"audio/vnd.nokia.mobile-xmf":{"source":"iana"},"audio/vnd.nortel.vbk":{"source":"iana"},"audio/vnd.nuera.ecelp4800":{"source":"iana","extensions":["ecelp4800"]},"audio/vnd.nuera.ecelp7470":{"source":"iana","extensions":["ecelp7470"]},"audio/vnd.nuera.ecelp9600":{"source":"iana","extensions":["ecelp9600"]},"audio/vnd.octel.sbc":{"source":"iana"},"audio/vnd.presonus.multitrack":{"source":"iana"},"audio/vnd.qcelp":{"source":"iana"},"audio/vnd.rhetorex.32kadpcm":{"source":"iana"},"audio/vnd.rip":{"source":"iana","extensions":["rip"]},"audio/vnd.rn-realaudio":{"compressible":false},"audio/vnd.sealedmedia.softseal.mpeg":{"source":"iana"},"audio/vnd.vmx.cvsd":{"source":"iana"},"audio/vnd.wave":{"compressible":false},"audio/vorbis":{"source":"iana","compressible":false},"audio/vorbis-config":{"source":"iana"},"audio/wav":{"compressible":false,"extensions":["wav"]},"audio/wave":{"compressible":false,"extensions":["wav"]},"audio/webm":{"source":"apache","compressible":false,"extensions":["weba"]},"audio/x-aac":{"source":"apache","compressible":false,"extensions":["aac"]},"audio/x-aiff":{"source":"apache","extensions":["aif","aiff","aifc"]},"audio/x-caf":{"source":"apache","compressible":false,"extensions":["caf"]},"audio/x-flac":{"source":"apache","extensions":["flac"]},"audio/x-m4a":{"source":"nginx","extensions":["m4a"]},"audio/x-matroska":{"source":"apache","extensions":["mka"]},"audio/x-mpegurl":{"source":"apache","extensions":["m3u"]},"audio/x-ms-wax":{"source":"apache","extensions":["wax"]},"audio/x-ms-wma":{"source":"apache","extensions":["wma"]},"audio/x-pn-realaudio":{"source":"apache","extensions":["ram","ra"]},"audio/x-pn-realaudio-plugin":{"source":"apache","extensions":["rmp"]},"audio/x-realaudio":{"source":"nginx","extensions":["ra"]},"audio/x-tta":{"source":"apache"},"audio/x-wav":{"source":"apache","extensions":["wav"]},"audio/xm":{"source":"apache","extensions":["xm"]},"chemical/x-cdx":{"source":"apache","extensions":["cdx"]},"chemical/x-cif":{"source":"apache","extensions":["cif"]},"chemical/x-cmdf":{"source":"apache","extensions":["cmdf"]},"chemical/x-cml":{"source":"apache","extensions":["cml"]},"chemical/x-csml":{"source":"apache","extensions":["csml"]},"chemical/x-pdb":{"source":"apache"},"chemical/x-xyz":{"source":"apache","extensions":["xyz"]},"font/collection":{"source":"iana","extensions":["ttc"]},"font/otf":{"source":"iana","compressible":true,"extensions":["otf"]},"font/sfnt":{"source":"iana"},"font/ttf":{"source":"iana","compressible":true,"extensions":["ttf"]},"font/woff":{"source":"iana","extensions":["woff"]},"font/woff2":{"source":"iana","extensions":["woff2"]},"image/aces":{"source":"iana","extensions":["exr"]},"image/apng":{"compressible":false,"extensions":["apng"]},"image/avci":{"source":"iana","extensions":["avci"]},"image/avcs":{"source":"iana","extensions":["avcs"]},"image/avif":{"source":"iana","compressible":false,"extensions":["avif"]},"image/bmp":{"source":"iana","compressible":true,"extensions":["bmp"]},"image/cgm":{"source":"iana","extensions":["cgm"]},"image/dicom-rle":{"source":"iana","extensions":["drle"]},"image/emf":{"source":"iana","extensions":["emf"]},"image/fits":{"source":"iana","extensions":["fits"]},"image/g3fax":{"source":"iana","extensions":["g3"]},"image/gif":{"source":"iana","compressible":false,"extensions":["gif"]},"image/heic":{"source":"iana","extensions":["heic"]},"image/heic-sequence":{"source":"iana","extensions":["heics"]},"image/heif":{"source":"iana","extensions":["heif"]},"image/heif-sequence":{"source":"iana","extensions":["heifs"]},"image/hej2k":{"source":"iana","extensions":["hej2"]},"image/hsj2":{"source":"iana","extensions":["hsj2"]},"image/ief":{"source":"iana","extensions":["ief"]},"image/jls":{"source":"iana","extensions":["jls"]},"image/jp2":{"source":"iana","compressible":false,"extensions":["jp2","jpg2"]},"image/jpeg":{"source":"iana","compressible":false,"extensions":["jpeg","jpg","jpe"]},"image/jph":{"source":"iana","extensions":["jph"]},"image/jphc":{"source":"iana","extensions":["jhc"]},"image/jpm":{"source":"iana","compressible":false,"extensions":["jpm"]},"image/jpx":{"source":"iana","compressible":false,"extensions":["jpx","jpf"]},"image/jxr":{"source":"iana","extensions":["jxr"]},"image/jxra":{"source":"iana","extensions":["jxra"]},"image/jxrs":{"source":"iana","extensions":["jxrs"]},"image/jxs":{"source":"iana","extensions":["jxs"]},"image/jxsc":{"source":"iana","extensions":["jxsc"]},"image/jxsi":{"source":"iana","extensions":["jxsi"]},"image/jxss":{"source":"iana","extensions":["jxss"]},"image/ktx":{"source":"iana","extensions":["ktx"]},"image/ktx2":{"source":"iana","extensions":["ktx2"]},"image/naplps":{"source":"iana"},"image/pjpeg":{"compressible":false},"image/png":{"source":"iana","compressible":false,"extensions":["png"]},"image/prs.btif":{"source":"iana","extensions":["btif"]},"image/prs.pti":{"source":"iana","extensions":["pti"]},"image/pwg-raster":{"source":"iana"},"image/sgi":{"source":"apache","extensions":["sgi"]},"image/svg+xml":{"source":"iana","compressible":true,"extensions":["svg","svgz"]},"image/t38":{"source":"iana","extensions":["t38"]},"image/tiff":{"source":"iana","compressible":false,"extensions":["tif","tiff"]},"image/tiff-fx":{"source":"iana","extensions":["tfx"]},"image/vnd.adobe.photoshop":{"source":"iana","compressible":true,"extensions":["psd"]},"image/vnd.airzip.accelerator.azv":{"source":"iana","extensions":["azv"]},"image/vnd.cns.inf2":{"source":"iana"},"image/vnd.dece.graphic":{"source":"iana","extensions":["uvi","uvvi","uvg","uvvg"]},"image/vnd.djvu":{"source":"iana","extensions":["djvu","djv"]},"image/vnd.dvb.subtitle":{"source":"iana","extensions":["sub"]},"image/vnd.dwg":{"source":"iana","extensions":["dwg"]},"image/vnd.dxf":{"source":"iana","extensions":["dxf"]},"image/vnd.fastbidsheet":{"source":"iana","extensions":["fbs"]},"image/vnd.fpx":{"source":"iana","extensions":["fpx"]},"image/vnd.fst":{"source":"iana","extensions":["fst"]},"image/vnd.fujixerox.edmics-mmr":{"source":"iana","extensions":["mmr"]},"image/vnd.fujixerox.edmics-rlc":{"source":"iana","extensions":["rlc"]},"image/vnd.globalgraphics.pgb":{"source":"iana"},"image/vnd.microsoft.icon":{"source":"iana","compressible":true,"extensions":["ico"]},"image/vnd.mix":{"source":"iana"},"image/vnd.mozilla.apng":{"source":"iana"},"image/vnd.ms-dds":{"compressible":true,"extensions":["dds"]},"image/vnd.ms-modi":{"source":"iana","extensions":["mdi"]},"image/vnd.ms-photo":{"source":"apache","extensions":["wdp"]},"image/vnd.net-fpx":{"source":"iana","extensions":["npx"]},"image/vnd.pco.b16":{"source":"iana","extensions":["b16"]},"image/vnd.radiance":{"source":"iana"},"image/vnd.sealed.png":{"source":"iana"},"image/vnd.sealedmedia.softseal.gif":{"source":"iana"},"image/vnd.sealedmedia.softseal.jpg":{"source":"iana"},"image/vnd.svf":{"source":"iana"},"image/vnd.tencent.tap":{"source":"iana","extensions":["tap"]},"image/vnd.valve.source.texture":{"source":"iana","extensions":["vtf"]},"image/vnd.wap.wbmp":{"source":"iana","extensions":["wbmp"]},"image/vnd.xiff":{"source":"iana","extensions":["xif"]},"image/vnd.zbrush.pcx":{"source":"iana","extensions":["pcx"]},"image/webp":{"source":"apache","extensions":["webp"]},"image/wmf":{"source":"iana","extensions":["wmf"]},"image/x-3ds":{"source":"apache","extensions":["3ds"]},"image/x-cmu-raster":{"source":"apache","extensions":["ras"]},"image/x-cmx":{"source":"apache","extensions":["cmx"]},"image/x-freehand":{"source":"apache","extensions":["fh","fhc","fh4","fh5","fh7"]},"image/x-icon":{"source":"apache","compressible":true,"extensions":["ico"]},"image/x-jng":{"source":"nginx","extensions":["jng"]},"image/x-mrsid-image":{"source":"apache","extensions":["sid"]},"image/x-ms-bmp":{"source":"nginx","compressible":true,"extensions":["bmp"]},"image/x-pcx":{"source":"apache","extensions":["pcx"]},"image/x-pict":{"source":"apache","extensions":["pic","pct"]},"image/x-portable-anymap":{"source":"apache","extensions":["pnm"]},"image/x-portable-bitmap":{"source":"apache","extensions":["pbm"]},"image/x-portable-graymap":{"source":"apache","extensions":["pgm"]},"image/x-portable-pixmap":{"source":"apache","extensions":["ppm"]},"image/x-rgb":{"source":"apache","extensions":["rgb"]},"image/x-tga":{"source":"apache","extensions":["tga"]},"image/x-xbitmap":{"source":"apache","extensions":["xbm"]},"image/x-xcf":{"compressible":false},"image/x-xpixmap":{"source":"apache","extensions":["xpm"]},"image/x-xwindowdump":{"source":"apache","extensions":["xwd"]},"message/cpim":{"source":"iana"},"message/delivery-status":{"source":"iana"},"message/disposition-notification":{"source":"iana","extensions":["disposition-notification"]},"message/external-body":{"source":"iana"},"message/feedback-report":{"source":"iana"},"message/global":{"source":"iana","extensions":["u8msg"]},"message/global-delivery-status":{"source":"iana","extensions":["u8dsn"]},"message/global-disposition-notification":{"source":"iana","extensions":["u8mdn"]},"message/global-headers":{"source":"iana","extensions":["u8hdr"]},"message/http":{"source":"iana","compressible":false},"message/imdn+xml":{"source":"iana","compressible":true},"message/news":{"source":"iana"},"message/partial":{"source":"iana","compressible":false},"message/rfc822":{"source":"iana","compressible":true,"extensions":["eml","mime"]},"message/s-http":{"source":"iana"},"message/sip":{"source":"iana"},"message/sipfrag":{"source":"iana"},"message/tracking-status":{"source":"iana"},"message/vnd.si.simp":{"source":"iana"},"message/vnd.wfa.wsc":{"source":"iana","extensions":["wsc"]},"model/3mf":{"source":"iana","extensions":["3mf"]},"model/e57":{"source":"iana"},"model/gltf+json":{"source":"iana","compressible":true,"extensions":["gltf"]},"model/gltf-binary":{"source":"iana","compressible":true,"extensions":["glb"]},"model/iges":{"source":"iana","compressible":false,"extensions":["igs","iges"]},"model/mesh":{"source":"iana","compressible":false,"extensions":["msh","mesh","silo"]},"model/mtl":{"source":"iana","extensions":["mtl"]},"model/obj":{"source":"iana","extensions":["obj"]},"model/step":{"source":"iana"},"model/step+xml":{"source":"iana","compressible":true,"extensions":["stpx"]},"model/step+zip":{"source":"iana","compressible":false,"extensions":["stpz"]},"model/step-xml+zip":{"source":"iana","compressible":false,"extensions":["stpxz"]},"model/stl":{"source":"iana","extensions":["stl"]},"model/vnd.collada+xml":{"source":"iana","compressible":true,"extensions":["dae"]},"model/vnd.dwf":{"source":"iana","extensions":["dwf"]},"model/vnd.flatland.3dml":{"source":"iana"},"model/vnd.gdl":{"source":"iana","extensions":["gdl"]},"model/vnd.gs-gdl":{"source":"apache"},"model/vnd.gs.gdl":{"source":"iana"},"model/vnd.gtw":{"source":"iana","extensions":["gtw"]},"model/vnd.moml+xml":{"source":"iana","compressible":true},"model/vnd.mts":{"source":"iana","extensions":["mts"]},"model/vnd.opengex":{"source":"iana","extensions":["ogex"]},"model/vnd.parasolid.transmit.binary":{"source":"iana","extensions":["x_b"]},"model/vnd.parasolid.transmit.text":{"source":"iana","extensions":["x_t"]},"model/vnd.pytha.pyox":{"source":"iana"},"model/vnd.rosette.annotated-data-model":{"source":"iana"},"model/vnd.sap.vds":{"source":"iana","extensions":["vds"]},"model/vnd.usdz+zip":{"source":"iana","compressible":false,"extensions":["usdz"]},"model/vnd.valve.source.compiled-map":{"source":"iana","extensions":["bsp"]},"model/vnd.vtu":{"source":"iana","extensions":["vtu"]},"model/vrml":{"source":"iana","compressible":false,"extensions":["wrl","vrml"]},"model/x3d+binary":{"source":"apache","compressible":false,"extensions":["x3db","x3dbz"]},"model/x3d+fastinfoset":{"source":"iana","extensions":["x3db"]},"model/x3d+vrml":{"source":"apache","compressible":false,"extensions":["x3dv","x3dvz"]},"model/x3d+xml":{"source":"iana","compressible":true,"extensions":["x3d","x3dz"]},"model/x3d-vrml":{"source":"iana","extensions":["x3dv"]},"multipart/alternative":{"source":"iana","compressible":false},"multipart/appledouble":{"source":"iana"},"multipart/byteranges":{"source":"iana"},"multipart/digest":{"source":"iana"},"multipart/encrypted":{"source":"iana","compressible":false},"multipart/form-data":{"source":"iana","compressible":false},"multipart/header-set":{"source":"iana"},"multipart/mixed":{"source":"iana"},"multipart/multilingual":{"source":"iana"},"multipart/parallel":{"source":"iana"},"multipart/related":{"source":"iana","compressible":false},"multipart/report":{"source":"iana"},"multipart/signed":{"source":"iana","compressible":false},"multipart/vnd.bint.med-plus":{"source":"iana"},"multipart/voice-message":{"source":"iana"},"multipart/x-mixed-replace":{"source":"iana"},"text/1d-interleaved-parityfec":{"source":"iana"},"text/cache-manifest":{"source":"iana","compressible":true,"extensions":["appcache","manifest"]},"text/calendar":{"source":"iana","extensions":["ics","ifb"]},"text/calender":{"compressible":true},"text/cmd":{"compressible":true},"text/coffeescript":{"extensions":["coffee","litcoffee"]},"text/cql":{"source":"iana"},"text/cql-expression":{"source":"iana"},"text/cql-identifier":{"source":"iana"},"text/css":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["css"]},"text/csv":{"source":"iana","compressible":true,"extensions":["csv"]},"text/csv-schema":{"source":"iana"},"text/directory":{"source":"iana"},"text/dns":{"source":"iana"},"text/ecmascript":{"source":"iana"},"text/encaprtp":{"source":"iana"},"text/enriched":{"source":"iana"},"text/fhirpath":{"source":"iana"},"text/flexfec":{"source":"iana"},"text/fwdred":{"source":"iana"},"text/gff3":{"source":"iana"},"text/grammar-ref-list":{"source":"iana"},"text/html":{"source":"iana","compressible":true,"extensions":["html","htm","shtml"]},"text/jade":{"extensions":["jade"]},"text/javascript":{"source":"iana","compressible":true},"text/jcr-cnd":{"source":"iana"},"text/jsx":{"compressible":true,"extensions":["jsx"]},"text/less":{"compressible":true,"extensions":["less"]},"text/markdown":{"source":"iana","compressible":true,"extensions":["markdown","md"]},"text/mathml":{"source":"nginx","extensions":["mml"]},"text/mdx":{"compressible":true,"extensions":["mdx"]},"text/mizar":{"source":"iana"},"text/n3":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["n3"]},"text/parameters":{"source":"iana","charset":"UTF-8"},"text/parityfec":{"source":"iana"},"text/plain":{"source":"iana","compressible":true,"extensions":["txt","text","conf","def","list","log","in","ini"]},"text/provenance-notation":{"source":"iana","charset":"UTF-8"},"text/prs.fallenstein.rst":{"source":"iana"},"text/prs.lines.tag":{"source":"iana","extensions":["dsc"]},"text/prs.prop.logic":{"source":"iana"},"text/raptorfec":{"source":"iana"},"text/red":{"source":"iana"},"text/rfc822-headers":{"source":"iana"},"text/richtext":{"source":"iana","compressible":true,"extensions":["rtx"]},"text/rtf":{"source":"iana","compressible":true,"extensions":["rtf"]},"text/rtp-enc-aescm128":{"source":"iana"},"text/rtploopback":{"source":"iana"},"text/rtx":{"source":"iana"},"text/sgml":{"source":"iana","extensions":["sgml","sgm"]},"text/shaclc":{"source":"iana"},"text/shex":{"source":"iana","extensions":["shex"]},"text/slim":{"extensions":["slim","slm"]},"text/spdx":{"source":"iana","extensions":["spdx"]},"text/strings":{"source":"iana"},"text/stylus":{"extensions":["stylus","styl"]},"text/t140":{"source":"iana"},"text/tab-separated-values":{"source":"iana","compressible":true,"extensions":["tsv"]},"text/troff":{"source":"iana","extensions":["t","tr","roff","man","me","ms"]},"text/turtle":{"source":"iana","charset":"UTF-8","extensions":["ttl"]},"text/ulpfec":{"source":"iana"},"text/uri-list":{"source":"iana","compressible":true,"extensions":["uri","uris","urls"]},"text/vcard":{"source":"iana","compressible":true,"extensions":["vcard"]},"text/vnd.a":{"source":"iana"},"text/vnd.abc":{"source":"iana"},"text/vnd.ascii-art":{"source":"iana"},"text/vnd.curl":{"source":"iana","extensions":["curl"]},"text/vnd.curl.dcurl":{"source":"apache","extensions":["dcurl"]},"text/vnd.curl.mcurl":{"source":"apache","extensions":["mcurl"]},"text/vnd.curl.scurl":{"source":"apache","extensions":["scurl"]},"text/vnd.debian.copyright":{"source":"iana","charset":"UTF-8"},"text/vnd.dmclientscript":{"source":"iana"},"text/vnd.dvb.subtitle":{"source":"iana","extensions":["sub"]},"text/vnd.esmertec.theme-descriptor":{"source":"iana","charset":"UTF-8"},"text/vnd.familysearch.gedcom":{"source":"iana","extensions":["ged"]},"text/vnd.ficlab.flt":{"source":"iana"},"text/vnd.fly":{"source":"iana","extensions":["fly"]},"text/vnd.fmi.flexstor":{"source":"iana","extensions":["flx"]},"text/vnd.gml":{"source":"iana"},"text/vnd.graphviz":{"source":"iana","extensions":["gv"]},"text/vnd.hans":{"source":"iana"},"text/vnd.hgl":{"source":"iana"},"text/vnd.in3d.3dml":{"source":"iana","extensions":["3dml"]},"text/vnd.in3d.spot":{"source":"iana","extensions":["spot"]},"text/vnd.iptc.newsml":{"source":"iana"},"text/vnd.iptc.nitf":{"source":"iana"},"text/vnd.latex-z":{"source":"iana"},"text/vnd.motorola.reflex":{"source":"iana"},"text/vnd.ms-mediapackage":{"source":"iana"},"text/vnd.net2phone.commcenter.command":{"source":"iana"},"text/vnd.radisys.msml-basic-layout":{"source":"iana"},"text/vnd.senx.warpscript":{"source":"iana"},"text/vnd.si.uricatalogue":{"source":"iana"},"text/vnd.sosi":{"source":"iana"},"text/vnd.sun.j2me.app-descriptor":{"source":"iana","charset":"UTF-8","extensions":["jad"]},"text/vnd.trolltech.linguist":{"source":"iana","charset":"UTF-8"},"text/vnd.wap.si":{"source":"iana"},"text/vnd.wap.sl":{"source":"iana"},"text/vnd.wap.wml":{"source":"iana","extensions":["wml"]},"text/vnd.wap.wmlscript":{"source":"iana","extensions":["wmls"]},"text/vtt":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["vtt"]},"text/x-asm":{"source":"apache","extensions":["s","asm"]},"text/x-c":{"source":"apache","extensions":["c","cc","cxx","cpp","h","hh","dic"]},"text/x-component":{"source":"nginx","extensions":["htc"]},"text/x-fortran":{"source":"apache","extensions":["f","for","f77","f90"]},"text/x-gwt-rpc":{"compressible":true},"text/x-handlebars-template":{"extensions":["hbs"]},"text/x-java-source":{"source":"apache","extensions":["java"]},"text/x-jquery-tmpl":{"compressible":true},"text/x-lua":{"extensions":["lua"]},"text/x-markdown":{"compressible":true,"extensions":["mkd"]},"text/x-nfo":{"source":"apache","extensions":["nfo"]},"text/x-opml":{"source":"apache","extensions":["opml"]},"text/x-org":{"compressible":true,"extensions":["org"]},"text/x-pascal":{"source":"apache","extensions":["p","pas"]},"text/x-processing":{"compressible":true,"extensions":["pde"]},"text/x-sass":{"extensions":["sass"]},"text/x-scss":{"extensions":["scss"]},"text/x-setext":{"source":"apache","extensions":["etx"]},"text/x-sfv":{"source":"apache","extensions":["sfv"]},"text/x-suse-ymp":{"compressible":true,"extensions":["ymp"]},"text/x-uuencode":{"source":"apache","extensions":["uu"]},"text/x-vcalendar":{"source":"apache","extensions":["vcs"]},"text/x-vcard":{"source":"apache","extensions":["vcf"]},"text/xml":{"source":"iana","compressible":true,"extensions":["xml"]},"text/xml-external-parsed-entity":{"source":"iana"},"text/yaml":{"compressible":true,"extensions":["yaml","yml"]},"video/1d-interleaved-parityfec":{"source":"iana"},"video/3gpp":{"source":"iana","extensions":["3gp","3gpp"]},"video/3gpp-tt":{"source":"iana"},"video/3gpp2":{"source":"iana","extensions":["3g2"]},"video/av1":{"source":"iana"},"video/bmpeg":{"source":"iana"},"video/bt656":{"source":"iana"},"video/celb":{"source":"iana"},"video/dv":{"source":"iana"},"video/encaprtp":{"source":"iana"},"video/ffv1":{"source":"iana"},"video/flexfec":{"source":"iana"},"video/h261":{"source":"iana","extensions":["h261"]},"video/h263":{"source":"iana","extensions":["h263"]},"video/h263-1998":{"source":"iana"},"video/h263-2000":{"source":"iana"},"video/h264":{"source":"iana","extensions":["h264"]},"video/h264-rcdo":{"source":"iana"},"video/h264-svc":{"source":"iana"},"video/h265":{"source":"iana"},"video/iso.segment":{"source":"iana","extensions":["m4s"]},"video/jpeg":{"source":"iana","extensions":["jpgv"]},"video/jpeg2000":{"source":"iana"},"video/jpm":{"source":"apache","extensions":["jpm","jpgm"]},"video/jxsv":{"source":"iana"},"video/mj2":{"source":"iana","extensions":["mj2","mjp2"]},"video/mp1s":{"source":"iana"},"video/mp2p":{"source":"iana"},"video/mp2t":{"source":"iana","extensions":["ts"]},"video/mp4":{"source":"iana","compressible":false,"extensions":["mp4","mp4v","mpg4"]},"video/mp4v-es":{"source":"iana"},"video/mpeg":{"source":"iana","compressible":false,"extensions":["mpeg","mpg","mpe","m1v","m2v"]},"video/mpeg4-generic":{"source":"iana"},"video/mpv":{"source":"iana"},"video/nv":{"source":"iana"},"video/ogg":{"source":"iana","compressible":false,"extensions":["ogv"]},"video/parityfec":{"source":"iana"},"video/pointer":{"source":"iana"},"video/quicktime":{"source":"iana","compressible":false,"extensions":["qt","mov"]},"video/raptorfec":{"source":"iana"},"video/raw":{"source":"iana"},"video/rtp-enc-aescm128":{"source":"iana"},"video/rtploopback":{"source":"iana"},"video/rtx":{"source":"iana"},"video/scip":{"source":"iana"},"video/smpte291":{"source":"iana"},"video/smpte292m":{"source":"iana"},"video/ulpfec":{"source":"iana"},"video/vc1":{"source":"iana"},"video/vc2":{"source":"iana"},"video/vnd.cctv":{"source":"iana"},"video/vnd.dece.hd":{"source":"iana","extensions":["uvh","uvvh"]},"video/vnd.dece.mobile":{"source":"iana","extensions":["uvm","uvvm"]},"video/vnd.dece.mp4":{"source":"iana"},"video/vnd.dece.pd":{"source":"iana","extensions":["uvp","uvvp"]},"video/vnd.dece.sd":{"source":"iana","extensions":["uvs","uvvs"]},"video/vnd.dece.video":{"source":"iana","extensions":["uvv","uvvv"]},"video/vnd.directv.mpeg":{"source":"iana"},"video/vnd.directv.mpeg-tts":{"source":"iana"},"video/vnd.dlna.mpeg-tts":{"source":"iana"},"video/vnd.dvb.file":{"source":"iana","extensions":["dvb"]},"video/vnd.fvt":{"source":"iana","extensions":["fvt"]},"video/vnd.hns.video":{"source":"iana"},"video/vnd.iptvforum.1dparityfec-1010":{"source":"iana"},"video/vnd.iptvforum.1dparityfec-2005":{"source":"iana"},"video/vnd.iptvforum.2dparityfec-1010":{"source":"iana"},"video/vnd.iptvforum.2dparityfec-2005":{"source":"iana"},"video/vnd.iptvforum.ttsavc":{"source":"iana"},"video/vnd.iptvforum.ttsmpeg2":{"source":"iana"},"video/vnd.motorola.video":{"source":"iana"},"video/vnd.motorola.videop":{"source":"iana"},"video/vnd.mpegurl":{"source":"iana","extensions":["mxu","m4u"]},"video/vnd.ms-playready.media.pyv":{"source":"iana","extensions":["pyv"]},"video/vnd.nokia.interleaved-multimedia":{"source":"iana"},"video/vnd.nokia.mp4vr":{"source":"iana"},"video/vnd.nokia.videovoip":{"source":"iana"},"video/vnd.objectvideo":{"source":"iana"},"video/vnd.radgamettools.bink":{"source":"iana"},"video/vnd.radgamettools.smacker":{"source":"iana"},"video/vnd.sealed.mpeg1":{"source":"iana"},"video/vnd.sealed.mpeg4":{"source":"iana"},"video/vnd.sealed.swf":{"source":"iana"},"video/vnd.sealedmedia.softseal.mov":{"source":"iana"},"video/vnd.uvvu.mp4":{"source":"iana","extensions":["uvu","uvvu"]},"video/vnd.vivo":{"source":"iana","extensions":["viv"]},"video/vnd.youtube.yt":{"source":"iana"},"video/vp8":{"source":"iana"},"video/vp9":{"source":"iana"},"video/webm":{"source":"apache","compressible":false,"extensions":["webm"]},"video/x-f4v":{"source":"apache","extensions":["f4v"]},"video/x-fli":{"source":"apache","extensions":["fli"]},"video/x-flv":{"source":"apache","compressible":false,"extensions":["flv"]},"video/x-m4v":{"source":"apache","extensions":["m4v"]},"video/x-matroska":{"source":"apache","compressible":false,"extensions":["mkv","mk3d","mks"]},"video/x-mng":{"source":"apache","extensions":["mng"]},"video/x-ms-asf":{"source":"apache","extensions":["asf","asx"]},"video/x-ms-vob":{"source":"apache","extensions":["vob"]},"video/x-ms-wm":{"source":"apache","extensions":["wm"]},"video/x-ms-wmv":{"source":"apache","compressible":false,"extensions":["wmv"]},"video/x-ms-wmx":{"source":"apache","extensions":["wmx"]},"video/x-ms-wvx":{"source":"apache","extensions":["wvx"]},"video/x-msvideo":{"source":"apache","extensions":["avi"]},"video/x-sgi-movie":{"source":"apache","extensions":["movie"]},"video/x-smv":{"source":"apache","extensions":["smv"]},"x-conference/x-cooltalk":{"source":"apache","extensions":["ice"]},"x-shader/x-fragment":{"compressible":true},"x-shader/x-vertex":{"compressible":true}}')},855:e=>{e.exports=JSON.parse(`{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","306":"(Unused)","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I'm a teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Unordered Collection","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"}`)}},__webpack_module_cache__={};function __webpack_require__(e){var t=__webpack_module_cache__[e];if(t!==void 0)return t.exports;var c=__webpack_module_cache__[e]={id:e,exports:{}};return __webpack_modules__[e].call(c.exports,c,c.exports,__webpack_require__),c.exports}__webpack_require__.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return __webpack_require__.d(t,{a:t}),t},__webpack_require__.d=(e,t)=>{for(var c in t)__webpack_require__.o(t,c)&&!__webpack_require__.o(e,c)&&Object.defineProperty(e,c,{enumerable:!0,get:t[c]})},__webpack_require__.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),__webpack_require__.r=e=>{typeof Symbol!="undefined"&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},__webpack_require__.b=void 0;var __webpack_exports__=__webpack_require__(6588),__webpack_exports__default=__webpack_exports__.Z;export{__webpack_exports__default as default};
+`)},1810:n=>{n.exports="data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e"},133:n=>{n.exports="data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e"},1686:n=>{n.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 16 16%27%3e%3cpath stroke=%27white%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M4 8h8%27/%3e%3c/svg%3e"},909:n=>{n.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 20 20%27%3e%3cpath stroke=%27%236b7280%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271.5%27 d=%27M6 8l4 4 4-4%27/%3e%3c/svg%3e"},6231:n=>{n.exports=require("fs")},9719:n=>{n.exports=require("os")},9491:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("assert")},852:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("async_hooks")},4300:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("buffer")},6113:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("crypto")},1891:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("dgram")},2361:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("events")},3685:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("http")},5687:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("https")},1808:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("net")},1017:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("path")},7282:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("process")},3477:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("querystring")},2781:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("stream")},4404:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("tls")},6224:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("tty")},7310:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("url")},3837:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("util")},9796:n=>{n.exports=__WEBPACK_EXTERNAL_createRequire(e.url)("zlib")},9526:(module,exports)=>{eval(`var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// GENERATED FILE. DO NOT EDIT.
+var ipCodec = (function(exports) {
+  "use strict";
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.decode = decode;
+  exports.encode = encode;
+  exports.familyOf = familyOf;
+  exports.name = void 0;
+  exports.sizeOf = sizeOf;
+  exports.v6 = exports.v4 = void 0;
+  const v4Regex = /^(\\d{1,3}\\.){3,3}\\d{1,3}$/;
+  const v4Size = 4;
+  const v6Regex = /^(::)?(((\\d{1,3}\\.){3}(\\d{1,3}){1})?([0-9a-f]){0,4}:{0,2}){1,8}(::)?$/i;
+  const v6Size = 16;
+  const v4 = {
+    name: 'v4',
+    size: v4Size,
+    isFormat: ip => v4Regex.test(ip),
+  
+    encode(ip, buff, offset) {
+      offset = ~~offset;
+      buff = buff || new Uint8Array(offset + v4Size);
+      const max = ip.length;
+      let n = 0;
+  
+      for (let i = 0; i < max;) {
+        const c = ip.charCodeAt(i++);
+  
+        if (c === 46) {
+          // "."
+          buff[offset++] = n;
+          n = 0;
+        } else {
+          n = n * 10 + (c - 48);
+        }
+      }
+  
+      buff[offset] = n;
+      return buff;
+    },
+  
+    decode(buff, offset) {
+      offset = ~~offset;
+      return \`\${buff[offset++]}.\${buff[offset++]}.\${buff[offset++]}.\${buff[offset]}\`;
+    }
+  
+  };
+  exports.v4 = v4;
+  const v6 = {
+    name: 'v6',
+    size: v6Size,
+    isFormat: ip => ip.length > 0 && v6Regex.test(ip),
+  
+    encode(ip, buff, offset) {
+      offset = ~~offset;
+      let end = offset + v6Size;
+      let fill = -1;
+      let hexN = 0;
+      let decN = 0;
+      let prevColon = true;
+      let useDec = false;
+      buff = buff || new Uint8Array(offset + v6Size); // Note: This algorithm needs to check if the offset
+      // could exceed the buffer boundaries as it supports
+      // non-standard compliant encodings that may go beyond
+      // the boundary limits. if (offset < end) checks should
+      // not be necessary...
+  
+      for (let i = 0; i < ip.length; i++) {
+        let c = ip.charCodeAt(i);
+  
+        if (c === 58) {
+          // :
+          if (prevColon) {
+            if (fill !== -1) {
+              // Not Standard! (standard doesn't allow multiple ::)
+              // We need to treat
+              if (offset < end) buff[offset] = 0;
+              if (offset < end - 1) buff[offset + 1] = 0;
+              offset += 2;
+            } else if (offset < end) {
+              // :: in the middle
+              fill = offset;
+            }
+          } else {
+            // : ends the previous number
+            if (useDec === true) {
+              // Non-standard! (ipv4 should be at end only)
+              // A ipv4 address should not be found anywhere else but at
+              // the end. This codec also support putting characters
+              // after the ipv4 address..
+              if (offset < end) buff[offset] = decN;
+              offset++;
+            } else {
+              if (offset < end) buff[offset] = hexN >> 8;
+              if (offset < end - 1) buff[offset + 1] = hexN & 0xff;
+              offset += 2;
+            }
+  
+            hexN = 0;
+            decN = 0;
+          }
+  
+          prevColon = true;
+          useDec = false;
+        } else if (c === 46) {
+          // . indicates IPV4 notation
+          if (offset < end) buff[offset] = decN;
+          offset++;
+          decN = 0;
+          hexN = 0;
+          prevColon = false;
+          useDec = true;
+        } else {
+          prevColon = false;
+  
+          if (c >= 97) {
+            c -= 87; // a-f ... 97~102 -87 => 10~15
+          } else if (c >= 65) {
+            c -= 55; // A-F ... 65~70 -55 => 10~15
+          } else {
+            c -= 48; // 0-9 ... starting from charCode 48
+  
+            decN = decN * 10 + c;
+          } // We don't know yet if its a dec or hex number
+  
+  
+          hexN = (hexN << 4) + c;
+        }
+      }
+  
+      if (prevColon === false) {
+        // Commiting last number
+        if (useDec === true) {
+          if (offset < end) buff[offset] = decN;
+          offset++;
+        } else {
+          if (offset < end) buff[offset] = hexN >> 8;
+          if (offset < end - 1) buff[offset + 1] = hexN & 0xff;
+          offset += 2;
+        }
+      } else if (fill === 0) {
+        // Not Standard! (standard doesn't allow multiple ::)
+        // This means that a : was found at the start AND end which means the
+        // end needs to be treated as 0 entry...
+        if (offset < end) buff[offset] = 0;
+        if (offset < end - 1) buff[offset + 1] = 0;
+        offset += 2;
+      } else if (fill !== -1) {
+        // Non-standard! (standard doens't allow multiple ::)
+        // Here we find that there has been a :: somewhere in the middle
+        // and the end. To treat the end with priority we need to move all
+        // written data two bytes to the right.
+        offset += 2;
+  
+        for (let i = Math.min(offset - 1, end - 1); i >= fill + 2; i--) {
+          buff[i] = buff[i - 2];
+        }
+  
+        buff[fill] = 0;
+        buff[fill + 1] = 0;
+        fill = offset;
+      }
+  
+      if (fill !== offset && fill !== -1) {
+        // Move the written numbers to the end while filling the everything
+        // "fill" to the bytes with zeros.
+        if (offset > end - 2) {
+          // Non Standard support, when the cursor exceeds bounds.
+          offset = end - 2;
+        }
+  
+        while (end > fill) {
+          buff[--end] = offset < end && offset > fill ? buff[--offset] : 0;
+        }
+      } else {
+        // Fill the rest with zeros
+        while (offset < end) {
+          buff[offset++] = 0;
+        }
+      }
+  
+      return buff;
+    },
+  
+    decode(buff, offset) {
+      offset = ~~offset;
+      let result = '';
+  
+      for (let i = 0; i < v6Size; i += 2) {
+        if (i !== 0) {
+          result += ':';
+        }
+  
+        result += (buff[offset + i] << 8 | buff[offset + i + 1]).toString(16);
+      }
+  
+      return result.replace(/(^|:)0(:0)*:0(:|$)/, '$1::$3').replace(/:{3,4}/, '::');
+    }
+  
+  };
+  exports.v6 = v6;
+  const name = 'ip';
+  exports.name = name;
+  
+  function sizeOf(ip) {
+    if (v4.isFormat(ip)) return v4.size;
+    if (v6.isFormat(ip)) return v6.size;
+    throw Error(\`Invalid ip address: \${ip}\`);
+  }
+  
+  function familyOf(string) {
+    return sizeOf(string) === v4.size ? 1 : 2;
+  }
+  
+  function encode(ip, buff, offset) {
+    offset = ~~offset;
+    const size = sizeOf(ip);
+  
+    if (typeof buff === 'function') {
+      buff = buff(offset + size);
+    }
+  
+    if (size === v4.size) {
+      return v4.encode(ip, buff, offset);
+    }
+  
+    return v6.encode(ip, buff, offset);
+  }
+  
+  function decode(buff, offset, length) {
+    offset = ~~offset;
+    length = length || buff.length - offset;
+  
+    if (length === v4.size) {
+      return v4.decode(buff, offset, length);
+    }
+  
+    if (length === v6.size) {
+      return v6.decode(buff, offset, length);
+    }
+  
+    throw Error(\`Invalid buffer size needs to be \${v4.size} for v4 or \${v6.size} for v6.\`);
+  }
+  return "default" in exports ? exports.default : exports;
+})({});
+if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function() { return ipCodec; }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+else {}
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOTUyNi5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlyYWt0ZXN0LXBsdWdpbnMvLi9ub2RlX21vZHVsZXMvQGxlaWNodGdld2ljaHQvaXAtY29kZWMvaW5kZXguY2pzPzU0NzciXSwic291cmNlc0NvbnRlbnQiOlsiLy8gR0VORVJBVEVEIEZJTEUuIERPIE5PVCBFRElULlxudmFyIGlwQ29kZWMgPSAoZnVuY3Rpb24oZXhwb3J0cykge1xuICBcInVzZSBzdHJpY3RcIjtcbiAgXG4gIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwge1xuICAgIHZhbHVlOiB0cnVlXG4gIH0pO1xuICBleHBvcnRzLmRlY29kZSA9IGRlY29kZTtcbiAgZXhwb3J0cy5lbmNvZGUgPSBlbmNvZGU7XG4gIGV4cG9ydHMuZmFtaWx5T2YgPSBmYW1pbHlPZjtcbiAgZXhwb3J0cy5uYW1lID0gdm9pZCAwO1xuICBleHBvcnRzLnNpemVPZiA9IHNpemVPZjtcbiAgZXhwb3J0cy52NiA9IGV4cG9ydHMudjQgPSB2b2lkIDA7XG4gIGNvbnN0IHY0UmVnZXggPSAvXihcXGR7MSwzfVxcLil7MywzfVxcZHsxLDN9JC87XG4gIGNvbnN0IHY0U2l6ZSA9IDQ7XG4gIGNvbnN0IHY2UmVnZXggPSAvXig6Oik/KCgoXFxkezEsM31cXC4pezN9KFxcZHsxLDN9KXsxfSk/KFswLTlhLWZdKXswLDR9OnswLDJ9KXsxLDh9KDo6KT8kL2k7XG4gIGNvbnN0IHY2U2l6ZSA9IDE2O1xuICBjb25zdCB2NCA9IHtcbiAgICBuYW1lOiAndjQnLFxuICAgIHNpemU6IHY0U2l6ZSxcbiAgICBpc0Zvcm1hdDogaXAgPT4gdjRSZWdleC50ZXN0KGlwKSxcbiAgXG4gICAgZW5jb2RlKGlwLCBidWZmLCBvZmZzZXQpIHtcbiAgICAgIG9mZnNldCA9IH5+b2Zmc2V0O1xuICAgICAgYnVmZiA9IGJ1ZmYgfHwgbmV3IFVpbnQ4QXJyYXkob2Zmc2V0ICsgdjRTaXplKTtcbiAgICAgIGNvbnN0IG1heCA9IGlwLmxlbmd0aDtcbiAgICAgIGxldCBuID0gMDtcbiAgXG4gICAgICBmb3IgKGxldCBpID0gMDsgaSA8IG1heDspIHtcbiAgICAgICAgY29uc3QgYyA9IGlwLmNoYXJDb2RlQXQoaSsrKTtcbiAgXG4gICAgICAgIGlmIChjID09PSA0Nikge1xuICAgICAgICAgIC8vIFwiLlwiXG4gICAgICAgICAgYnVmZltvZmZzZXQrK10gPSBuO1xuICAgICAgICAgIG4gPSAwO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIG4gPSBuICogMTAgKyAoYyAtIDQ4KTtcbiAgICAgICAgfVxuICAgICAgfVxuICBcbiAgICAgIGJ1ZmZbb2Zmc2V0XSA9IG47XG4gICAgICByZXR1cm4gYnVmZjtcbiAgICB9LFxuICBcbiAgICBkZWNvZGUoYnVmZiwgb2Zmc2V0KSB7XG4gICAgICBvZmZzZXQgPSB+fm9mZnNldDtcbiAgICAgIHJldHVybiBgJHtidWZmW29mZnNldCsrXX0uJHtidWZmW29mZnNldCsrXX0uJHtidWZmW29mZnNldCsrXX0uJHtidWZmW29mZnNldF19YDtcbiAgICB9XG4gIFxuICB9O1xuICBleHBvcnRzLnY0ID0gdjQ7XG4gIGNvbnN0IHY2ID0ge1xuICAgIG5hbWU6ICd2NicsXG4gICAgc2l6ZTogdjZTaXplLFxuICAgIGlzRm9ybWF0OiBpcCA9PiBpcC5sZW5ndGggPiAwICYmIHY2UmVnZXgudGVzdChpcCksXG4gIFxuICAgIGVuY29kZShpcCwgYnVmZiwgb2Zmc2V0KSB7XG4gICAgICBvZmZzZXQgPSB+fm9mZnNldDtcbiAgICAgIGxldCBlbmQgPSBvZmZzZXQgKyB2NlNpemU7XG4gICAgICBsZXQgZmlsbCA9IC0xO1xuICAgICAgbGV0IGhleE4gPSAwO1xuICAgICAgbGV0IGRlY04gPSAwO1xuICAgICAgbGV0IHByZXZDb2xvbiA9IHRydWU7XG4gICAgICBsZXQgdXNlRGVjID0gZmFsc2U7XG4gICAgICBidWZmID0gYnVmZiB8fCBuZXcgVWludDhBcnJheShvZmZzZXQgKyB2NlNpemUpOyAvLyBOb3RlOiBUaGlzIGFsZ29yaXRobSBuZWVkcyB0byBjaGVjayBpZiB0aGUgb2Zmc2V0XG4gICAgICAvLyBjb3VsZCBleGNlZWQgdGhlIGJ1ZmZlciBib3VuZGFyaWVzIGFzIGl0IHN1cHBvcnRzXG4gICAgICAvLyBub24tc3RhbmRhcmQgY29tcGxpYW50IGVuY29kaW5ncyB0aGF0IG1heSBnbyBiZXlvbmRcbiAgICAgIC8vIHRoZSBib3VuZGFyeSBsaW1pdHMuIGlmIChvZmZzZXQgPCBlbmQpIGNoZWNrcyBzaG91bGRcbiAgICAgIC8vIG5vdCBiZSBuZWNlc3NhcnkuLi5cbiAgXG4gICAgICBmb3IgKGxldCBpID0gMDsgaSA8IGlwLmxlbmd0aDsgaSsrKSB7XG4gICAgICAgIGxldCBjID0gaXAuY2hhckNvZGVBdChpKTtcbiAgXG4gICAgICAgIGlmIChjID09PSA1OCkge1xuICAgICAgICAgIC8vIDpcbiAgICAgICAgICBpZiAocHJldkNvbG9uKSB7XG4gICAgICAgICAgICBpZiAoZmlsbCAhPT0gLTEpIHtcbiAgICAgICAgICAgICAgLy8gTm90IFN0YW5kYXJkISAoc3RhbmRhcmQgZG9lc24ndCBhbGxvdyBtdWx0aXBsZSA6OilcbiAgICAgICAgICAgICAgLy8gV2UgbmVlZCB0byB0cmVhdFxuICAgICAgICAgICAgICBpZiAob2Zmc2V0IDwgZW5kKSBidWZmW29mZnNldF0gPSAwO1xuICAgICAgICAgICAgICBpZiAob2Zmc2V0IDwgZW5kIC0gMSkgYnVmZltvZmZzZXQgKyAxXSA9IDA7XG4gICAgICAgICAgICAgIG9mZnNldCArPSAyO1xuICAgICAgICAgICAgfSBlbHNlIGlmIChvZmZzZXQgPCBlbmQpIHtcbiAgICAgICAgICAgICAgLy8gOjogaW4gdGhlIG1pZGRsZVxuICAgICAgICAgICAgICBmaWxsID0gb2Zmc2V0O1xuICAgICAgICAgICAgfVxuICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAvLyA6IGVuZHMgdGhlIHByZXZpb3VzIG51bWJlclxuICAgICAgICAgICAgaWYgKHVzZURlYyA9PT0gdHJ1ZSkge1xuICAgICAgICAgICAgICAvLyBOb24tc3RhbmRhcmQhIChpcHY0IHNob3VsZCBiZSBhdCBlbmQgb25seSlcbiAgICAgICAgICAgICAgLy8gQSBpcHY0IGFkZHJlc3Mgc2hvdWxkIG5vdCBiZSBmb3VuZCBhbnl3aGVyZSBlbHNlIGJ1dCBhdFxuICAgICAgICAgICAgICAvLyB0aGUgZW5kLiBUaGlzIGNvZGVjIGFsc28gc3VwcG9ydCBwdXR0aW5nIGNoYXJhY3RlcnNcbiAgICAgICAgICAgICAgLy8gYWZ0ZXIgdGhlIGlwdjQgYWRkcmVzcy4uXG4gICAgICAgICAgICAgIGlmIChvZmZzZXQgPCBlbmQpIGJ1ZmZbb2Zmc2V0XSA9IGRlY047XG4gICAgICAgICAgICAgIG9mZnNldCsrO1xuICAgICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgICAgaWYgKG9mZnNldCA8IGVuZCkgYnVmZltvZmZzZXRdID0gaGV4TiA+PiA4O1xuICAgICAgICAgICAgICBpZiAob2Zmc2V0IDwgZW5kIC0gMSkgYnVmZltvZmZzZXQgKyAxXSA9IGhleE4gJiAweGZmO1xuICAgICAgICAgICAgICBvZmZzZXQgKz0gMjtcbiAgICAgICAgICAgIH1cbiAgXG4gICAgICAgICAgICBoZXhOID0gMDtcbiAgICAgICAgICAgIGRlY04gPSAwO1xuICAgICAgICAgIH1cbiAgXG4gICAgICAgICAgcHJldkNvbG9uID0gdHJ1ZTtcbiAgICAgICAgICB1c2VEZWMgPSBmYWxzZTtcbiAgICAgICAgfSBlbHNlIGlmIChjID09PSA0Nikge1xuICAgICAgICAgIC8vIC4gaW5kaWNhdGVzIElQVjQgbm90YXRpb25cbiAgICAgICAgICBpZiAob2Zmc2V0IDwgZW5kKSBidWZmW29mZnNldF0gPSBkZWNOO1xuICAgICAgICAgIG9mZnNldCsrO1xuICAgICAgICAgIGRlY04gPSAwO1xuICAgICAgICAgIGhleE4gPSAwO1xuICAgICAgICAgIHByZXZDb2xvbiA9IGZhbHNlO1xuICAgICAgICAgIHVzZURlYyA9IHRydWU7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgcHJldkNvbG9uID0gZmFsc2U7XG4gIFxuICAgICAgICAgIGlmIChjID49IDk3KSB7XG4gICAgICAgICAgICBjIC09IDg3OyAvLyBhLWYgLi4uIDk3fjEwMiAtODcgPT4gMTB+MTVcbiAgICAgICAgICB9IGVsc2UgaWYgKGMgPj0gNjUpIHtcbiAgICAgICAgICAgIGMgLT0gNTU7IC8vIEEtRiAuLi4gNjV+NzAgLTU1ID0+IDEwfjE1XG4gICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgIGMgLT0gNDg7IC8vIDAtOSAuLi4gc3RhcnRpbmcgZnJvbSBjaGFyQ29kZSA0OFxuICBcbiAgICAgICAgICAgIGRlY04gPSBkZWNOICogMTAgKyBjO1xuICAgICAgICAgIH0gLy8gV2UgZG9uJ3Qga25vdyB5ZXQgaWYgaXRzIGEgZGVjIG9yIGhleCBudW1iZXJcbiAgXG4gIFxuICAgICAgICAgIGhleE4gPSAoaGV4TiA8PCA0KSArIGM7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgXG4gICAgICBpZiAocHJldkNvbG9uID09PSBmYWxzZSkge1xuICAgICAgICAvLyBDb21taXRpbmcgbGFzdCBudW1iZXJcbiAgICAgICAgaWYgKHVzZURlYyA9PT0gdHJ1ZSkge1xuICAgICAgICAgIGlmIChvZmZzZXQgPCBlbmQpIGJ1ZmZbb2Zmc2V0XSA9IGRlY047XG4gICAgICAgICAgb2Zmc2V0Kys7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgaWYgKG9mZnNldCA8IGVuZCkgYnVmZltvZmZzZXRdID0gaGV4TiA+PiA4O1xuICAgICAgICAgIGlmIChvZmZzZXQgPCBlbmQgLSAxKSBidWZmW29mZnNldCArIDFdID0gaGV4TiAmIDB4ZmY7XG4gICAgICAgICAgb2Zmc2V0ICs9IDI7XG4gICAgICAgIH1cbiAgICAgIH0gZWxzZSBpZiAoZmlsbCA9PT0gMCkge1xuICAgICAgICAvLyBOb3QgU3RhbmRhcmQhIChzdGFuZGFyZCBkb2Vzbid0IGFsbG93IG11bHRpcGxlIDo6KVxuICAgICAgICAvLyBUaGlzIG1lYW5zIHRoYXQgYSA6IHdhcyBmb3VuZCBhdCB0aGUgc3RhcnQgQU5EIGVuZCB3aGljaCBtZWFucyB0aGVcbiAgICAgICAgLy8gZW5kIG5lZWRzIHRvIGJlIHRyZWF0ZWQgYXMgMCBlbnRyeS4uLlxuICAgICAgICBpZiAob2Zmc2V0IDwgZW5kKSBidWZmW29mZnNldF0gPSAwO1xuICAgICAgICBpZiAob2Zmc2V0IDwgZW5kIC0gMSkgYnVmZltvZmZzZXQgKyAxXSA9IDA7XG4gICAgICAgIG9mZnNldCArPSAyO1xuICAgICAgfSBlbHNlIGlmIChmaWxsICE9PSAtMSkge1xuICAgICAgICAvLyBOb24tc3RhbmRhcmQhIChzdGFuZGFyZCBkb2Vucyd0IGFsbG93IG11bHRpcGxlIDo6KVxuICAgICAgICAvLyBIZXJlIHdlIGZpbmQgdGhhdCB0aGVyZSBoYXMgYmVlbiBhIDo6IHNvbWV3aGVyZSBpbiB0aGUgbWlkZGxlXG4gICAgICAgIC8vIGFuZCB0aGUgZW5kLiBUbyB0cmVhdCB0aGUgZW5kIHdpdGggcHJpb3JpdHkgd2UgbmVlZCB0byBtb3ZlIGFsbFxuICAgICAgICAvLyB3cml0dGVuIGRhdGEgdHdvIGJ5dGVzIHRvIHRoZSByaWdodC5cbiAgICAgICAgb2Zmc2V0ICs9IDI7XG4gIFxuICAgICAgICBmb3IgKGxldCBpID0gTWF0aC5taW4ob2Zmc2V0IC0gMSwgZW5kIC0gMSk7IGkgPj0gZmlsbCArIDI7IGktLSkge1xuICAgICAgICAgIGJ1ZmZbaV0gPSBidWZmW2kgLSAyXTtcbiAgICAgICAgfVxuICBcbiAgICAgICAgYnVmZltmaWxsXSA9IDA7XG4gICAgICAgIGJ1ZmZbZmlsbCArIDFdID0gMDtcbiAgICAgICAgZmlsbCA9IG9mZnNldDtcbiAgICAgIH1cbiAgXG4gICAgICBpZiAoZmlsbCAhPT0gb2Zmc2V0ICYmIGZpbGwgIT09IC0xKSB7XG4gICAgICAgIC8vIE1vdmUgdGhlIHdyaXR0ZW4gbnVtYmVycyB0byB0aGUgZW5kIHdoaWxlIGZpbGxpbmcgdGhlIGV2ZXJ5dGhpbmdcbiAgICAgICAgLy8gXCJmaWxsXCIgdG8gdGhlIGJ5dGVzIHdpdGggemVyb3MuXG4gICAgICAgIGlmIChvZmZzZXQgPiBlbmQgLSAyKSB7XG4gICAgICAgICAgLy8gTm9uIFN0YW5kYXJkIHN1cHBvcnQsIHdoZW4gdGhlIGN1cnNvciBleGNlZWRzIGJvdW5kcy5cbiAgICAgICAgICBvZmZzZXQgPSBlbmQgLSAyO1xuICAgICAgICB9XG4gIFxuICAgICAgICB3aGlsZSAoZW5kID4gZmlsbCkge1xuICAgICAgICAgIGJ1ZmZbLS1lbmRdID0gb2Zmc2V0IDwgZW5kICYmIG9mZnNldCA+IGZpbGwgPyBidWZmWy0tb2Zmc2V0XSA6IDA7XG4gICAgICAgIH1cbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIC8vIEZpbGwgdGhlIHJlc3Qgd2l0aCB6ZXJvc1xuICAgICAgICB3aGlsZSAob2Zmc2V0IDwgZW5kKSB7XG4gICAgICAgICAgYnVmZltvZmZzZXQrK10gPSAwO1xuICAgICAgICB9XG4gICAgICB9XG4gIFxuICAgICAgcmV0dXJuIGJ1ZmY7XG4gICAgfSxcbiAgXG4gICAgZGVjb2RlKGJ1ZmYsIG9mZnNldCkge1xuICAgICAgb2Zmc2V0ID0gfn5vZmZzZXQ7XG4gICAgICBsZXQgcmVzdWx0ID0gJyc7XG4gIFxuICAgICAgZm9yIChsZXQgaSA9IDA7IGkgPCB2NlNpemU7IGkgKz0gMikge1xuICAgICAgICBpZiAoaSAhPT0gMCkge1xuICAgICAgICAgIHJlc3VsdCArPSAnOic7XG4gICAgICAgIH1cbiAgXG4gICAgICAgIHJlc3VsdCArPSAoYnVmZltvZmZzZXQgKyBpXSA8PCA4IHwgYnVmZltvZmZzZXQgKyBpICsgMV0pLnRvU3RyaW5nKDE2KTtcbiAgICAgIH1cbiAgXG4gICAgICByZXR1cm4gcmVzdWx0LnJlcGxhY2UoLyhefDopMCg6MCkqOjAoOnwkKS8sICckMTo6JDMnKS5yZXBsYWNlKC86ezMsNH0vLCAnOjonKTtcbiAgICB9XG4gIFxuICB9O1xuICBleHBvcnRzLnY2ID0gdjY7XG4gIGNvbnN0IG5hbWUgPSAnaXAnO1xuICBleHBvcnRzLm5hbWUgPSBuYW1lO1xuICBcbiAgZnVuY3Rpb24gc2l6ZU9mKGlwKSB7XG4gICAgaWYgKHY0LmlzRm9ybWF0KGlwKSkgcmV0dXJuIHY0LnNpemU7XG4gICAgaWYgKHY2LmlzRm9ybWF0KGlwKSkgcmV0dXJuIHY2LnNpemU7XG4gICAgdGhyb3cgRXJyb3IoYEludmFsaWQgaXAgYWRkcmVzczogJHtpcH1gKTtcbiAgfVxuICBcbiAgZnVuY3Rpb24gZmFtaWx5T2Yoc3RyaW5nKSB7XG4gICAgcmV0dXJuIHNpemVPZihzdHJpbmcpID09PSB2NC5zaXplID8gMSA6IDI7XG4gIH1cbiAgXG4gIGZ1bmN0aW9uIGVuY29kZShpcCwgYnVmZiwgb2Zmc2V0KSB7XG4gICAgb2Zmc2V0ID0gfn5vZmZzZXQ7XG4gICAgY29uc3Qgc2l6ZSA9IHNpemVPZihpcCk7XG4gIFxuICAgIGlmICh0eXBlb2YgYnVmZiA9PT0gJ2Z1bmN0aW9uJykge1xuICAgICAgYnVmZiA9IGJ1ZmYob2Zmc2V0ICsgc2l6ZSk7XG4gICAgfVxuICBcbiAgICBpZiAoc2l6ZSA9PT0gdjQuc2l6ZSkge1xuICAgICAgcmV0dXJuIHY0LmVuY29kZShpcCwgYnVmZiwgb2Zmc2V0KTtcbiAgICB9XG4gIFxuICAgIHJldHVybiB2Ni5lbmNvZGUoaXAsIGJ1ZmYsIG9mZnNldCk7XG4gIH1cbiAgXG4gIGZ1bmN0aW9uIGRlY29kZShidWZmLCBvZmZzZXQsIGxlbmd0aCkge1xuICAgIG9mZnNldCA9IH5+b2Zmc2V0O1xuICAgIGxlbmd0aCA9IGxlbmd0aCB8fCBidWZmLmxlbmd0aCAtIG9mZnNldDtcbiAgXG4gICAgaWYgKGxlbmd0aCA9PT0gdjQuc2l6ZSkge1xuICAgICAgcmV0dXJuIHY0LmRlY29kZShidWZmLCBvZmZzZXQsIGxlbmd0aCk7XG4gICAgfVxuICBcbiAgICBpZiAobGVuZ3RoID09PSB2Ni5zaXplKSB7XG4gICAgICByZXR1cm4gdjYuZGVjb2RlKGJ1ZmYsIG9mZnNldCwgbGVuZ3RoKTtcbiAgICB9XG4gIFxuICAgIHRocm93IEVycm9yKGBJbnZhbGlkIGJ1ZmZlciBzaXplIG5lZWRzIHRvIGJlICR7djQuc2l6ZX0gZm9yIHY0IG9yICR7djYuc2l6ZX0gZm9yIHY2LmApO1xuICB9XG4gIHJldHVybiBcImRlZmF1bHRcIiBpbiBleHBvcnRzID8gZXhwb3J0cy5kZWZhdWx0IDogZXhwb3J0cztcbn0pKHt9KTtcbmlmICh0eXBlb2YgZGVmaW5lID09PSAnZnVuY3Rpb24nICYmIGRlZmluZS5hbWQpIGRlZmluZShbXSwgZnVuY3Rpb24oKSB7IHJldHVybiBpcENvZGVjOyB9KTtcbmVsc2UgaWYgKHR5cGVvZiBtb2R1bGUgPT09ICdvYmplY3QnICYmIHR5cGVvZiBleHBvcnRzPT09J29iamVjdCcpIG1vZHVsZS5leHBvcnRzID0gaXBDb2RlYztcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///9526
+`)},1512:n=>{n.exports=JSON.parse(`{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I'm a Teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Too Early","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"}`)},3765:n=>{n.exports=JSON.parse('{"application/1d-interleaved-parityfec":{"source":"iana"},"application/3gpdash-qoe-report+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/3gpp-ims+xml":{"source":"iana","compressible":true},"application/3gpphal+json":{"source":"iana","compressible":true},"application/3gpphalforms+json":{"source":"iana","compressible":true},"application/a2l":{"source":"iana"},"application/ace+cbor":{"source":"iana"},"application/activemessage":{"source":"iana"},"application/activity+json":{"source":"iana","compressible":true},"application/alto-costmap+json":{"source":"iana","compressible":true},"application/alto-costmapfilter+json":{"source":"iana","compressible":true},"application/alto-directory+json":{"source":"iana","compressible":true},"application/alto-endpointcost+json":{"source":"iana","compressible":true},"application/alto-endpointcostparams+json":{"source":"iana","compressible":true},"application/alto-endpointprop+json":{"source":"iana","compressible":true},"application/alto-endpointpropparams+json":{"source":"iana","compressible":true},"application/alto-error+json":{"source":"iana","compressible":true},"application/alto-networkmap+json":{"source":"iana","compressible":true},"application/alto-networkmapfilter+json":{"source":"iana","compressible":true},"application/alto-updatestreamcontrol+json":{"source":"iana","compressible":true},"application/alto-updatestreamparams+json":{"source":"iana","compressible":true},"application/aml":{"source":"iana"},"application/andrew-inset":{"source":"iana","extensions":["ez"]},"application/applefile":{"source":"iana"},"application/applixware":{"source":"apache","extensions":["aw"]},"application/at+jwt":{"source":"iana"},"application/atf":{"source":"iana"},"application/atfx":{"source":"iana"},"application/atom+xml":{"source":"iana","compressible":true,"extensions":["atom"]},"application/atomcat+xml":{"source":"iana","compressible":true,"extensions":["atomcat"]},"application/atomdeleted+xml":{"source":"iana","compressible":true,"extensions":["atomdeleted"]},"application/atomicmail":{"source":"iana"},"application/atomsvc+xml":{"source":"iana","compressible":true,"extensions":["atomsvc"]},"application/atsc-dwd+xml":{"source":"iana","compressible":true,"extensions":["dwd"]},"application/atsc-dynamic-event-message":{"source":"iana"},"application/atsc-held+xml":{"source":"iana","compressible":true,"extensions":["held"]},"application/atsc-rdt+json":{"source":"iana","compressible":true},"application/atsc-rsat+xml":{"source":"iana","compressible":true,"extensions":["rsat"]},"application/atxml":{"source":"iana"},"application/auth-policy+xml":{"source":"iana","compressible":true},"application/bacnet-xdd+zip":{"source":"iana","compressible":false},"application/batch-smtp":{"source":"iana"},"application/bdoc":{"compressible":false,"extensions":["bdoc"]},"application/beep+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/calendar+json":{"source":"iana","compressible":true},"application/calendar+xml":{"source":"iana","compressible":true,"extensions":["xcs"]},"application/call-completion":{"source":"iana"},"application/cals-1840":{"source":"iana"},"application/captive+json":{"source":"iana","compressible":true},"application/cbor":{"source":"iana"},"application/cbor-seq":{"source":"iana"},"application/cccex":{"source":"iana"},"application/ccmp+xml":{"source":"iana","compressible":true},"application/ccxml+xml":{"source":"iana","compressible":true,"extensions":["ccxml"]},"application/cdfx+xml":{"source":"iana","compressible":true,"extensions":["cdfx"]},"application/cdmi-capability":{"source":"iana","extensions":["cdmia"]},"application/cdmi-container":{"source":"iana","extensions":["cdmic"]},"application/cdmi-domain":{"source":"iana","extensions":["cdmid"]},"application/cdmi-object":{"source":"iana","extensions":["cdmio"]},"application/cdmi-queue":{"source":"iana","extensions":["cdmiq"]},"application/cdni":{"source":"iana"},"application/cea":{"source":"iana"},"application/cea-2018+xml":{"source":"iana","compressible":true},"application/cellml+xml":{"source":"iana","compressible":true},"application/cfw":{"source":"iana"},"application/city+json":{"source":"iana","compressible":true},"application/clr":{"source":"iana"},"application/clue+xml":{"source":"iana","compressible":true},"application/clue_info+xml":{"source":"iana","compressible":true},"application/cms":{"source":"iana"},"application/cnrp+xml":{"source":"iana","compressible":true},"application/coap-group+json":{"source":"iana","compressible":true},"application/coap-payload":{"source":"iana"},"application/commonground":{"source":"iana"},"application/conference-info+xml":{"source":"iana","compressible":true},"application/cose":{"source":"iana"},"application/cose-key":{"source":"iana"},"application/cose-key-set":{"source":"iana"},"application/cpl+xml":{"source":"iana","compressible":true,"extensions":["cpl"]},"application/csrattrs":{"source":"iana"},"application/csta+xml":{"source":"iana","compressible":true},"application/cstadata+xml":{"source":"iana","compressible":true},"application/csvm+json":{"source":"iana","compressible":true},"application/cu-seeme":{"source":"apache","extensions":["cu"]},"application/cwt":{"source":"iana"},"application/cybercash":{"source":"iana"},"application/dart":{"compressible":true},"application/dash+xml":{"source":"iana","compressible":true,"extensions":["mpd"]},"application/dash-patch+xml":{"source":"iana","compressible":true,"extensions":["mpp"]},"application/dashdelta":{"source":"iana"},"application/davmount+xml":{"source":"iana","compressible":true,"extensions":["davmount"]},"application/dca-rft":{"source":"iana"},"application/dcd":{"source":"iana"},"application/dec-dx":{"source":"iana"},"application/dialog-info+xml":{"source":"iana","compressible":true},"application/dicom":{"source":"iana"},"application/dicom+json":{"source":"iana","compressible":true},"application/dicom+xml":{"source":"iana","compressible":true},"application/dii":{"source":"iana"},"application/dit":{"source":"iana"},"application/dns":{"source":"iana"},"application/dns+json":{"source":"iana","compressible":true},"application/dns-message":{"source":"iana"},"application/docbook+xml":{"source":"apache","compressible":true,"extensions":["dbk"]},"application/dots+cbor":{"source":"iana"},"application/dskpp+xml":{"source":"iana","compressible":true},"application/dssc+der":{"source":"iana","extensions":["dssc"]},"application/dssc+xml":{"source":"iana","compressible":true,"extensions":["xdssc"]},"application/dvcs":{"source":"iana"},"application/ecmascript":{"source":"iana","compressible":true,"extensions":["es","ecma"]},"application/edi-consent":{"source":"iana"},"application/edi-x12":{"source":"iana","compressible":false},"application/edifact":{"source":"iana","compressible":false},"application/efi":{"source":"iana"},"application/elm+json":{"source":"iana","charset":"UTF-8","compressible":true},"application/elm+xml":{"source":"iana","compressible":true},"application/emergencycalldata.cap+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/emergencycalldata.comment+xml":{"source":"iana","compressible":true},"application/emergencycalldata.control+xml":{"source":"iana","compressible":true},"application/emergencycalldata.deviceinfo+xml":{"source":"iana","compressible":true},"application/emergencycalldata.ecall.msd":{"source":"iana"},"application/emergencycalldata.providerinfo+xml":{"source":"iana","compressible":true},"application/emergencycalldata.serviceinfo+xml":{"source":"iana","compressible":true},"application/emergencycalldata.subscriberinfo+xml":{"source":"iana","compressible":true},"application/emergencycalldata.veds+xml":{"source":"iana","compressible":true},"application/emma+xml":{"source":"iana","compressible":true,"extensions":["emma"]},"application/emotionml+xml":{"source":"iana","compressible":true,"extensions":["emotionml"]},"application/encaprtp":{"source":"iana"},"application/epp+xml":{"source":"iana","compressible":true},"application/epub+zip":{"source":"iana","compressible":false,"extensions":["epub"]},"application/eshop":{"source":"iana"},"application/exi":{"source":"iana","extensions":["exi"]},"application/expect-ct-report+json":{"source":"iana","compressible":true},"application/express":{"source":"iana","extensions":["exp"]},"application/fastinfoset":{"source":"iana"},"application/fastsoap":{"source":"iana"},"application/fdt+xml":{"source":"iana","compressible":true,"extensions":["fdt"]},"application/fhir+json":{"source":"iana","charset":"UTF-8","compressible":true},"application/fhir+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/fido.trusted-apps+json":{"compressible":true},"application/fits":{"source":"iana"},"application/flexfec":{"source":"iana"},"application/font-sfnt":{"source":"iana"},"application/font-tdpfr":{"source":"iana","extensions":["pfr"]},"application/font-woff":{"source":"iana","compressible":false},"application/framework-attributes+xml":{"source":"iana","compressible":true},"application/geo+json":{"source":"iana","compressible":true,"extensions":["geojson"]},"application/geo+json-seq":{"source":"iana"},"application/geopackage+sqlite3":{"source":"iana"},"application/geoxacml+xml":{"source":"iana","compressible":true},"application/gltf-buffer":{"source":"iana"},"application/gml+xml":{"source":"iana","compressible":true,"extensions":["gml"]},"application/gpx+xml":{"source":"apache","compressible":true,"extensions":["gpx"]},"application/gxf":{"source":"apache","extensions":["gxf"]},"application/gzip":{"source":"iana","compressible":false,"extensions":["gz"]},"application/h224":{"source":"iana"},"application/held+xml":{"source":"iana","compressible":true},"application/hjson":{"extensions":["hjson"]},"application/http":{"source":"iana"},"application/hyperstudio":{"source":"iana","extensions":["stk"]},"application/ibe-key-request+xml":{"source":"iana","compressible":true},"application/ibe-pkg-reply+xml":{"source":"iana","compressible":true},"application/ibe-pp-data":{"source":"iana"},"application/iges":{"source":"iana"},"application/im-iscomposing+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/index":{"source":"iana"},"application/index.cmd":{"source":"iana"},"application/index.obj":{"source":"iana"},"application/index.response":{"source":"iana"},"application/index.vnd":{"source":"iana"},"application/inkml+xml":{"source":"iana","compressible":true,"extensions":["ink","inkml"]},"application/iotp":{"source":"iana"},"application/ipfix":{"source":"iana","extensions":["ipfix"]},"application/ipp":{"source":"iana"},"application/isup":{"source":"iana"},"application/its+xml":{"source":"iana","compressible":true,"extensions":["its"]},"application/java-archive":{"source":"apache","compressible":false,"extensions":["jar","war","ear"]},"application/java-serialized-object":{"source":"apache","compressible":false,"extensions":["ser"]},"application/java-vm":{"source":"apache","compressible":false,"extensions":["class"]},"application/javascript":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["js","mjs"]},"application/jf2feed+json":{"source":"iana","compressible":true},"application/jose":{"source":"iana"},"application/jose+json":{"source":"iana","compressible":true},"application/jrd+json":{"source":"iana","compressible":true},"application/jscalendar+json":{"source":"iana","compressible":true},"application/json":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["json","map"]},"application/json-patch+json":{"source":"iana","compressible":true},"application/json-seq":{"source":"iana"},"application/json5":{"extensions":["json5"]},"application/jsonml+json":{"source":"apache","compressible":true,"extensions":["jsonml"]},"application/jwk+json":{"source":"iana","compressible":true},"application/jwk-set+json":{"source":"iana","compressible":true},"application/jwt":{"source":"iana"},"application/kpml-request+xml":{"source":"iana","compressible":true},"application/kpml-response+xml":{"source":"iana","compressible":true},"application/ld+json":{"source":"iana","compressible":true,"extensions":["jsonld"]},"application/lgr+xml":{"source":"iana","compressible":true,"extensions":["lgr"]},"application/link-format":{"source":"iana"},"application/load-control+xml":{"source":"iana","compressible":true},"application/lost+xml":{"source":"iana","compressible":true,"extensions":["lostxml"]},"application/lostsync+xml":{"source":"iana","compressible":true},"application/lpf+zip":{"source":"iana","compressible":false},"application/lxf":{"source":"iana"},"application/mac-binhex40":{"source":"iana","extensions":["hqx"]},"application/mac-compactpro":{"source":"apache","extensions":["cpt"]},"application/macwriteii":{"source":"iana"},"application/mads+xml":{"source":"iana","compressible":true,"extensions":["mads"]},"application/manifest+json":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["webmanifest"]},"application/marc":{"source":"iana","extensions":["mrc"]},"application/marcxml+xml":{"source":"iana","compressible":true,"extensions":["mrcx"]},"application/mathematica":{"source":"iana","extensions":["ma","nb","mb"]},"application/mathml+xml":{"source":"iana","compressible":true,"extensions":["mathml"]},"application/mathml-content+xml":{"source":"iana","compressible":true},"application/mathml-presentation+xml":{"source":"iana","compressible":true},"application/mbms-associated-procedure-description+xml":{"source":"iana","compressible":true},"application/mbms-deregister+xml":{"source":"iana","compressible":true},"application/mbms-envelope+xml":{"source":"iana","compressible":true},"application/mbms-msk+xml":{"source":"iana","compressible":true},"application/mbms-msk-response+xml":{"source":"iana","compressible":true},"application/mbms-protection-description+xml":{"source":"iana","compressible":true},"application/mbms-reception-report+xml":{"source":"iana","compressible":true},"application/mbms-register+xml":{"source":"iana","compressible":true},"application/mbms-register-response+xml":{"source":"iana","compressible":true},"application/mbms-schedule+xml":{"source":"iana","compressible":true},"application/mbms-user-service-description+xml":{"source":"iana","compressible":true},"application/mbox":{"source":"iana","extensions":["mbox"]},"application/media-policy-dataset+xml":{"source":"iana","compressible":true,"extensions":["mpf"]},"application/media_control+xml":{"source":"iana","compressible":true},"application/mediaservercontrol+xml":{"source":"iana","compressible":true,"extensions":["mscml"]},"application/merge-patch+json":{"source":"iana","compressible":true},"application/metalink+xml":{"source":"apache","compressible":true,"extensions":["metalink"]},"application/metalink4+xml":{"source":"iana","compressible":true,"extensions":["meta4"]},"application/mets+xml":{"source":"iana","compressible":true,"extensions":["mets"]},"application/mf4":{"source":"iana"},"application/mikey":{"source":"iana"},"application/mipc":{"source":"iana"},"application/missing-blocks+cbor-seq":{"source":"iana"},"application/mmt-aei+xml":{"source":"iana","compressible":true,"extensions":["maei"]},"application/mmt-usd+xml":{"source":"iana","compressible":true,"extensions":["musd"]},"application/mods+xml":{"source":"iana","compressible":true,"extensions":["mods"]},"application/moss-keys":{"source":"iana"},"application/moss-signature":{"source":"iana"},"application/mosskey-data":{"source":"iana"},"application/mosskey-request":{"source":"iana"},"application/mp21":{"source":"iana","extensions":["m21","mp21"]},"application/mp4":{"source":"iana","extensions":["mp4s","m4p"]},"application/mpeg4-generic":{"source":"iana"},"application/mpeg4-iod":{"source":"iana"},"application/mpeg4-iod-xmt":{"source":"iana"},"application/mrb-consumer+xml":{"source":"iana","compressible":true},"application/mrb-publish+xml":{"source":"iana","compressible":true},"application/msc-ivr+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/msc-mixer+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/msword":{"source":"iana","compressible":false,"extensions":["doc","dot"]},"application/mud+json":{"source":"iana","compressible":true},"application/multipart-core":{"source":"iana"},"application/mxf":{"source":"iana","extensions":["mxf"]},"application/n-quads":{"source":"iana","extensions":["nq"]},"application/n-triples":{"source":"iana","extensions":["nt"]},"application/nasdata":{"source":"iana"},"application/news-checkgroups":{"source":"iana","charset":"US-ASCII"},"application/news-groupinfo":{"source":"iana","charset":"US-ASCII"},"application/news-transmission":{"source":"iana"},"application/nlsml+xml":{"source":"iana","compressible":true},"application/node":{"source":"iana","extensions":["cjs"]},"application/nss":{"source":"iana"},"application/oauth-authz-req+jwt":{"source":"iana"},"application/oblivious-dns-message":{"source":"iana"},"application/ocsp-request":{"source":"iana"},"application/ocsp-response":{"source":"iana"},"application/octet-stream":{"source":"iana","compressible":false,"extensions":["bin","dms","lrf","mar","so","dist","distz","pkg","bpk","dump","elc","deploy","exe","dll","deb","dmg","iso","img","msi","msp","msm","buffer"]},"application/oda":{"source":"iana","extensions":["oda"]},"application/odm+xml":{"source":"iana","compressible":true},"application/odx":{"source":"iana"},"application/oebps-package+xml":{"source":"iana","compressible":true,"extensions":["opf"]},"application/ogg":{"source":"iana","compressible":false,"extensions":["ogx"]},"application/omdoc+xml":{"source":"apache","compressible":true,"extensions":["omdoc"]},"application/onenote":{"source":"apache","extensions":["onetoc","onetoc2","onetmp","onepkg"]},"application/opc-nodeset+xml":{"source":"iana","compressible":true},"application/oscore":{"source":"iana"},"application/oxps":{"source":"iana","extensions":["oxps"]},"application/p21":{"source":"iana"},"application/p21+zip":{"source":"iana","compressible":false},"application/p2p-overlay+xml":{"source":"iana","compressible":true,"extensions":["relo"]},"application/parityfec":{"source":"iana"},"application/passport":{"source":"iana"},"application/patch-ops-error+xml":{"source":"iana","compressible":true,"extensions":["xer"]},"application/pdf":{"source":"iana","compressible":false,"extensions":["pdf"]},"application/pdx":{"source":"iana"},"application/pem-certificate-chain":{"source":"iana"},"application/pgp-encrypted":{"source":"iana","compressible":false,"extensions":["pgp"]},"application/pgp-keys":{"source":"iana","extensions":["asc"]},"application/pgp-signature":{"source":"iana","extensions":["asc","sig"]},"application/pics-rules":{"source":"apache","extensions":["prf"]},"application/pidf+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/pidf-diff+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/pkcs10":{"source":"iana","extensions":["p10"]},"application/pkcs12":{"source":"iana"},"application/pkcs7-mime":{"source":"iana","extensions":["p7m","p7c"]},"application/pkcs7-signature":{"source":"iana","extensions":["p7s"]},"application/pkcs8":{"source":"iana","extensions":["p8"]},"application/pkcs8-encrypted":{"source":"iana"},"application/pkix-attr-cert":{"source":"iana","extensions":["ac"]},"application/pkix-cert":{"source":"iana","extensions":["cer"]},"application/pkix-crl":{"source":"iana","extensions":["crl"]},"application/pkix-pkipath":{"source":"iana","extensions":["pkipath"]},"application/pkixcmp":{"source":"iana","extensions":["pki"]},"application/pls+xml":{"source":"iana","compressible":true,"extensions":["pls"]},"application/poc-settings+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/postscript":{"source":"iana","compressible":true,"extensions":["ai","eps","ps"]},"application/ppsp-tracker+json":{"source":"iana","compressible":true},"application/problem+json":{"source":"iana","compressible":true},"application/problem+xml":{"source":"iana","compressible":true},"application/provenance+xml":{"source":"iana","compressible":true,"extensions":["provx"]},"application/prs.alvestrand.titrax-sheet":{"source":"iana"},"application/prs.cww":{"source":"iana","extensions":["cww"]},"application/prs.cyn":{"source":"iana","charset":"7-BIT"},"application/prs.hpub+zip":{"source":"iana","compressible":false},"application/prs.nprend":{"source":"iana"},"application/prs.plucker":{"source":"iana"},"application/prs.rdf-xml-crypt":{"source":"iana"},"application/prs.xsf+xml":{"source":"iana","compressible":true},"application/pskc+xml":{"source":"iana","compressible":true,"extensions":["pskcxml"]},"application/pvd+json":{"source":"iana","compressible":true},"application/qsig":{"source":"iana"},"application/raml+yaml":{"compressible":true,"extensions":["raml"]},"application/raptorfec":{"source":"iana"},"application/rdap+json":{"source":"iana","compressible":true},"application/rdf+xml":{"source":"iana","compressible":true,"extensions":["rdf","owl"]},"application/reginfo+xml":{"source":"iana","compressible":true,"extensions":["rif"]},"application/relax-ng-compact-syntax":{"source":"iana","extensions":["rnc"]},"application/remote-printing":{"source":"iana"},"application/reputon+json":{"source":"iana","compressible":true},"application/resource-lists+xml":{"source":"iana","compressible":true,"extensions":["rl"]},"application/resource-lists-diff+xml":{"source":"iana","compressible":true,"extensions":["rld"]},"application/rfc+xml":{"source":"iana","compressible":true},"application/riscos":{"source":"iana"},"application/rlmi+xml":{"source":"iana","compressible":true},"application/rls-services+xml":{"source":"iana","compressible":true,"extensions":["rs"]},"application/route-apd+xml":{"source":"iana","compressible":true,"extensions":["rapd"]},"application/route-s-tsid+xml":{"source":"iana","compressible":true,"extensions":["sls"]},"application/route-usd+xml":{"source":"iana","compressible":true,"extensions":["rusd"]},"application/rpki-ghostbusters":{"source":"iana","extensions":["gbr"]},"application/rpki-manifest":{"source":"iana","extensions":["mft"]},"application/rpki-publication":{"source":"iana"},"application/rpki-roa":{"source":"iana","extensions":["roa"]},"application/rpki-updown":{"source":"iana"},"application/rsd+xml":{"source":"apache","compressible":true,"extensions":["rsd"]},"application/rss+xml":{"source":"apache","compressible":true,"extensions":["rss"]},"application/rtf":{"source":"iana","compressible":true,"extensions":["rtf"]},"application/rtploopback":{"source":"iana"},"application/rtx":{"source":"iana"},"application/samlassertion+xml":{"source":"iana","compressible":true},"application/samlmetadata+xml":{"source":"iana","compressible":true},"application/sarif+json":{"source":"iana","compressible":true},"application/sarif-external-properties+json":{"source":"iana","compressible":true},"application/sbe":{"source":"iana"},"application/sbml+xml":{"source":"iana","compressible":true,"extensions":["sbml"]},"application/scaip+xml":{"source":"iana","compressible":true},"application/scim+json":{"source":"iana","compressible":true},"application/scvp-cv-request":{"source":"iana","extensions":["scq"]},"application/scvp-cv-response":{"source":"iana","extensions":["scs"]},"application/scvp-vp-request":{"source":"iana","extensions":["spq"]},"application/scvp-vp-response":{"source":"iana","extensions":["spp"]},"application/sdp":{"source":"iana","extensions":["sdp"]},"application/secevent+jwt":{"source":"iana"},"application/senml+cbor":{"source":"iana"},"application/senml+json":{"source":"iana","compressible":true},"application/senml+xml":{"source":"iana","compressible":true,"extensions":["senmlx"]},"application/senml-etch+cbor":{"source":"iana"},"application/senml-etch+json":{"source":"iana","compressible":true},"application/senml-exi":{"source":"iana"},"application/sensml+cbor":{"source":"iana"},"application/sensml+json":{"source":"iana","compressible":true},"application/sensml+xml":{"source":"iana","compressible":true,"extensions":["sensmlx"]},"application/sensml-exi":{"source":"iana"},"application/sep+xml":{"source":"iana","compressible":true},"application/sep-exi":{"source":"iana"},"application/session-info":{"source":"iana"},"application/set-payment":{"source":"iana"},"application/set-payment-initiation":{"source":"iana","extensions":["setpay"]},"application/set-registration":{"source":"iana"},"application/set-registration-initiation":{"source":"iana","extensions":["setreg"]},"application/sgml":{"source":"iana"},"application/sgml-open-catalog":{"source":"iana"},"application/shf+xml":{"source":"iana","compressible":true,"extensions":["shf"]},"application/sieve":{"source":"iana","extensions":["siv","sieve"]},"application/simple-filter+xml":{"source":"iana","compressible":true},"application/simple-message-summary":{"source":"iana"},"application/simplesymbolcontainer":{"source":"iana"},"application/sipc":{"source":"iana"},"application/slate":{"source":"iana"},"application/smil":{"source":"iana"},"application/smil+xml":{"source":"iana","compressible":true,"extensions":["smi","smil"]},"application/smpte336m":{"source":"iana"},"application/soap+fastinfoset":{"source":"iana"},"application/soap+xml":{"source":"iana","compressible":true},"application/sparql-query":{"source":"iana","extensions":["rq"]},"application/sparql-results+xml":{"source":"iana","compressible":true,"extensions":["srx"]},"application/spdx+json":{"source":"iana","compressible":true},"application/spirits-event+xml":{"source":"iana","compressible":true},"application/sql":{"source":"iana"},"application/srgs":{"source":"iana","extensions":["gram"]},"application/srgs+xml":{"source":"iana","compressible":true,"extensions":["grxml"]},"application/sru+xml":{"source":"iana","compressible":true,"extensions":["sru"]},"application/ssdl+xml":{"source":"apache","compressible":true,"extensions":["ssdl"]},"application/ssml+xml":{"source":"iana","compressible":true,"extensions":["ssml"]},"application/stix+json":{"source":"iana","compressible":true},"application/swid+xml":{"source":"iana","compressible":true,"extensions":["swidtag"]},"application/tamp-apex-update":{"source":"iana"},"application/tamp-apex-update-confirm":{"source":"iana"},"application/tamp-community-update":{"source":"iana"},"application/tamp-community-update-confirm":{"source":"iana"},"application/tamp-error":{"source":"iana"},"application/tamp-sequence-adjust":{"source":"iana"},"application/tamp-sequence-adjust-confirm":{"source":"iana"},"application/tamp-status-query":{"source":"iana"},"application/tamp-status-response":{"source":"iana"},"application/tamp-update":{"source":"iana"},"application/tamp-update-confirm":{"source":"iana"},"application/tar":{"compressible":true},"application/taxii+json":{"source":"iana","compressible":true},"application/td+json":{"source":"iana","compressible":true},"application/tei+xml":{"source":"iana","compressible":true,"extensions":["tei","teicorpus"]},"application/tetra_isi":{"source":"iana"},"application/thraud+xml":{"source":"iana","compressible":true,"extensions":["tfi"]},"application/timestamp-query":{"source":"iana"},"application/timestamp-reply":{"source":"iana"},"application/timestamped-data":{"source":"iana","extensions":["tsd"]},"application/tlsrpt+gzip":{"source":"iana"},"application/tlsrpt+json":{"source":"iana","compressible":true},"application/tnauthlist":{"source":"iana"},"application/token-introspection+jwt":{"source":"iana"},"application/toml":{"compressible":true,"extensions":["toml"]},"application/trickle-ice-sdpfrag":{"source":"iana"},"application/trig":{"source":"iana","extensions":["trig"]},"application/ttml+xml":{"source":"iana","compressible":true,"extensions":["ttml"]},"application/tve-trigger":{"source":"iana"},"application/tzif":{"source":"iana"},"application/tzif-leap":{"source":"iana"},"application/ubjson":{"compressible":false,"extensions":["ubj"]},"application/ulpfec":{"source":"iana"},"application/urc-grpsheet+xml":{"source":"iana","compressible":true},"application/urc-ressheet+xml":{"source":"iana","compressible":true,"extensions":["rsheet"]},"application/urc-targetdesc+xml":{"source":"iana","compressible":true,"extensions":["td"]},"application/urc-uisocketdesc+xml":{"source":"iana","compressible":true},"application/vcard+json":{"source":"iana","compressible":true},"application/vcard+xml":{"source":"iana","compressible":true},"application/vemmi":{"source":"iana"},"application/vividence.scriptfile":{"source":"apache"},"application/vnd.1000minds.decision-model+xml":{"source":"iana","compressible":true,"extensions":["1km"]},"application/vnd.3gpp-prose+xml":{"source":"iana","compressible":true},"application/vnd.3gpp-prose-pc3ch+xml":{"source":"iana","compressible":true},"application/vnd.3gpp-v2x-local-service-information":{"source":"iana"},"application/vnd.3gpp.5gnas":{"source":"iana"},"application/vnd.3gpp.access-transfer-events+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.bsf+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.gmop+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.gtpc":{"source":"iana"},"application/vnd.3gpp.interworking-data":{"source":"iana"},"application/vnd.3gpp.lpp":{"source":"iana"},"application/vnd.3gpp.mc-signalling-ear":{"source":"iana"},"application/vnd.3gpp.mcdata-affiliation-command+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcdata-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcdata-payload":{"source":"iana"},"application/vnd.3gpp.mcdata-service-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcdata-signalling":{"source":"iana"},"application/vnd.3gpp.mcdata-ue-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcdata-user-profile+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-affiliation-command+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-floor-request+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-location-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-mbms-usage-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-service-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-signed+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-ue-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-ue-init-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcptt-user-profile+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-affiliation-command+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-affiliation-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-location-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-mbms-usage-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-service-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-transmission-request+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-ue-config+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mcvideo-user-profile+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.mid-call+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.ngap":{"source":"iana"},"application/vnd.3gpp.pfcp":{"source":"iana"},"application/vnd.3gpp.pic-bw-large":{"source":"iana","extensions":["plb"]},"application/vnd.3gpp.pic-bw-small":{"source":"iana","extensions":["psb"]},"application/vnd.3gpp.pic-bw-var":{"source":"iana","extensions":["pvb"]},"application/vnd.3gpp.s1ap":{"source":"iana"},"application/vnd.3gpp.sms":{"source":"iana"},"application/vnd.3gpp.sms+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.srvcc-ext+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.srvcc-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.state-and-event-info+xml":{"source":"iana","compressible":true},"application/vnd.3gpp.ussd+xml":{"source":"iana","compressible":true},"application/vnd.3gpp2.bcmcsinfo+xml":{"source":"iana","compressible":true},"application/vnd.3gpp2.sms":{"source":"iana"},"application/vnd.3gpp2.tcap":{"source":"iana","extensions":["tcap"]},"application/vnd.3lightssoftware.imagescal":{"source":"iana"},"application/vnd.3m.post-it-notes":{"source":"iana","extensions":["pwn"]},"application/vnd.accpac.simply.aso":{"source":"iana","extensions":["aso"]},"application/vnd.accpac.simply.imp":{"source":"iana","extensions":["imp"]},"application/vnd.acucobol":{"source":"iana","extensions":["acu"]},"application/vnd.acucorp":{"source":"iana","extensions":["atc","acutc"]},"application/vnd.adobe.air-application-installer-package+zip":{"source":"apache","compressible":false,"extensions":["air"]},"application/vnd.adobe.flash.movie":{"source":"iana"},"application/vnd.adobe.formscentral.fcdt":{"source":"iana","extensions":["fcdt"]},"application/vnd.adobe.fxp":{"source":"iana","extensions":["fxp","fxpl"]},"application/vnd.adobe.partial-upload":{"source":"iana"},"application/vnd.adobe.xdp+xml":{"source":"iana","compressible":true,"extensions":["xdp"]},"application/vnd.adobe.xfdf":{"source":"iana","extensions":["xfdf"]},"application/vnd.aether.imp":{"source":"iana"},"application/vnd.afpc.afplinedata":{"source":"iana"},"application/vnd.afpc.afplinedata-pagedef":{"source":"iana"},"application/vnd.afpc.cmoca-cmresource":{"source":"iana"},"application/vnd.afpc.foca-charset":{"source":"iana"},"application/vnd.afpc.foca-codedfont":{"source":"iana"},"application/vnd.afpc.foca-codepage":{"source":"iana"},"application/vnd.afpc.modca":{"source":"iana"},"application/vnd.afpc.modca-cmtable":{"source":"iana"},"application/vnd.afpc.modca-formdef":{"source":"iana"},"application/vnd.afpc.modca-mediummap":{"source":"iana"},"application/vnd.afpc.modca-objectcontainer":{"source":"iana"},"application/vnd.afpc.modca-overlay":{"source":"iana"},"application/vnd.afpc.modca-pagesegment":{"source":"iana"},"application/vnd.age":{"source":"iana","extensions":["age"]},"application/vnd.ah-barcode":{"source":"iana"},"application/vnd.ahead.space":{"source":"iana","extensions":["ahead"]},"application/vnd.airzip.filesecure.azf":{"source":"iana","extensions":["azf"]},"application/vnd.airzip.filesecure.azs":{"source":"iana","extensions":["azs"]},"application/vnd.amadeus+json":{"source":"iana","compressible":true},"application/vnd.amazon.ebook":{"source":"apache","extensions":["azw"]},"application/vnd.amazon.mobi8-ebook":{"source":"iana"},"application/vnd.americandynamics.acc":{"source":"iana","extensions":["acc"]},"application/vnd.amiga.ami":{"source":"iana","extensions":["ami"]},"application/vnd.amundsen.maze+xml":{"source":"iana","compressible":true},"application/vnd.android.ota":{"source":"iana"},"application/vnd.android.package-archive":{"source":"apache","compressible":false,"extensions":["apk"]},"application/vnd.anki":{"source":"iana"},"application/vnd.anser-web-certificate-issue-initiation":{"source":"iana","extensions":["cii"]},"application/vnd.anser-web-funds-transfer-initiation":{"source":"apache","extensions":["fti"]},"application/vnd.antix.game-component":{"source":"iana","extensions":["atx"]},"application/vnd.apache.arrow.file":{"source":"iana"},"application/vnd.apache.arrow.stream":{"source":"iana"},"application/vnd.apache.thrift.binary":{"source":"iana"},"application/vnd.apache.thrift.compact":{"source":"iana"},"application/vnd.apache.thrift.json":{"source":"iana"},"application/vnd.api+json":{"source":"iana","compressible":true},"application/vnd.aplextor.warrp+json":{"source":"iana","compressible":true},"application/vnd.apothekende.reservation+json":{"source":"iana","compressible":true},"application/vnd.apple.installer+xml":{"source":"iana","compressible":true,"extensions":["mpkg"]},"application/vnd.apple.keynote":{"source":"iana","extensions":["key"]},"application/vnd.apple.mpegurl":{"source":"iana","extensions":["m3u8"]},"application/vnd.apple.numbers":{"source":"iana","extensions":["numbers"]},"application/vnd.apple.pages":{"source":"iana","extensions":["pages"]},"application/vnd.apple.pkpass":{"compressible":false,"extensions":["pkpass"]},"application/vnd.arastra.swi":{"source":"iana"},"application/vnd.aristanetworks.swi":{"source":"iana","extensions":["swi"]},"application/vnd.artisan+json":{"source":"iana","compressible":true},"application/vnd.artsquare":{"source":"iana"},"application/vnd.astraea-software.iota":{"source":"iana","extensions":["iota"]},"application/vnd.audiograph":{"source":"iana","extensions":["aep"]},"application/vnd.autopackage":{"source":"iana"},"application/vnd.avalon+json":{"source":"iana","compressible":true},"application/vnd.avistar+xml":{"source":"iana","compressible":true},"application/vnd.balsamiq.bmml+xml":{"source":"iana","compressible":true,"extensions":["bmml"]},"application/vnd.balsamiq.bmpr":{"source":"iana"},"application/vnd.banana-accounting":{"source":"iana"},"application/vnd.bbf.usp.error":{"source":"iana"},"application/vnd.bbf.usp.msg":{"source":"iana"},"application/vnd.bbf.usp.msg+json":{"source":"iana","compressible":true},"application/vnd.bekitzur-stech+json":{"source":"iana","compressible":true},"application/vnd.bint.med-content":{"source":"iana"},"application/vnd.biopax.rdf+xml":{"source":"iana","compressible":true},"application/vnd.blink-idb-value-wrapper":{"source":"iana"},"application/vnd.blueice.multipass":{"source":"iana","extensions":["mpm"]},"application/vnd.bluetooth.ep.oob":{"source":"iana"},"application/vnd.bluetooth.le.oob":{"source":"iana"},"application/vnd.bmi":{"source":"iana","extensions":["bmi"]},"application/vnd.bpf":{"source":"iana"},"application/vnd.bpf3":{"source":"iana"},"application/vnd.businessobjects":{"source":"iana","extensions":["rep"]},"application/vnd.byu.uapi+json":{"source":"iana","compressible":true},"application/vnd.cab-jscript":{"source":"iana"},"application/vnd.canon-cpdl":{"source":"iana"},"application/vnd.canon-lips":{"source":"iana"},"application/vnd.capasystems-pg+json":{"source":"iana","compressible":true},"application/vnd.cendio.thinlinc.clientconf":{"source":"iana"},"application/vnd.century-systems.tcp_stream":{"source":"iana"},"application/vnd.chemdraw+xml":{"source":"iana","compressible":true,"extensions":["cdxml"]},"application/vnd.chess-pgn":{"source":"iana"},"application/vnd.chipnuts.karaoke-mmd":{"source":"iana","extensions":["mmd"]},"application/vnd.ciedi":{"source":"iana"},"application/vnd.cinderella":{"source":"iana","extensions":["cdy"]},"application/vnd.cirpack.isdn-ext":{"source":"iana"},"application/vnd.citationstyles.style+xml":{"source":"iana","compressible":true,"extensions":["csl"]},"application/vnd.claymore":{"source":"iana","extensions":["cla"]},"application/vnd.cloanto.rp9":{"source":"iana","extensions":["rp9"]},"application/vnd.clonk.c4group":{"source":"iana","extensions":["c4g","c4d","c4f","c4p","c4u"]},"application/vnd.cluetrust.cartomobile-config":{"source":"iana","extensions":["c11amc"]},"application/vnd.cluetrust.cartomobile-config-pkg":{"source":"iana","extensions":["c11amz"]},"application/vnd.coffeescript":{"source":"iana"},"application/vnd.collabio.xodocuments.document":{"source":"iana"},"application/vnd.collabio.xodocuments.document-template":{"source":"iana"},"application/vnd.collabio.xodocuments.presentation":{"source":"iana"},"application/vnd.collabio.xodocuments.presentation-template":{"source":"iana"},"application/vnd.collabio.xodocuments.spreadsheet":{"source":"iana"},"application/vnd.collabio.xodocuments.spreadsheet-template":{"source":"iana"},"application/vnd.collection+json":{"source":"iana","compressible":true},"application/vnd.collection.doc+json":{"source":"iana","compressible":true},"application/vnd.collection.next+json":{"source":"iana","compressible":true},"application/vnd.comicbook+zip":{"source":"iana","compressible":false},"application/vnd.comicbook-rar":{"source":"iana"},"application/vnd.commerce-battelle":{"source":"iana"},"application/vnd.commonspace":{"source":"iana","extensions":["csp"]},"application/vnd.contact.cmsg":{"source":"iana","extensions":["cdbcmsg"]},"application/vnd.coreos.ignition+json":{"source":"iana","compressible":true},"application/vnd.cosmocaller":{"source":"iana","extensions":["cmc"]},"application/vnd.crick.clicker":{"source":"iana","extensions":["clkx"]},"application/vnd.crick.clicker.keyboard":{"source":"iana","extensions":["clkk"]},"application/vnd.crick.clicker.palette":{"source":"iana","extensions":["clkp"]},"application/vnd.crick.clicker.template":{"source":"iana","extensions":["clkt"]},"application/vnd.crick.clicker.wordbank":{"source":"iana","extensions":["clkw"]},"application/vnd.criticaltools.wbs+xml":{"source":"iana","compressible":true,"extensions":["wbs"]},"application/vnd.cryptii.pipe+json":{"source":"iana","compressible":true},"application/vnd.crypto-shade-file":{"source":"iana"},"application/vnd.cryptomator.encrypted":{"source":"iana"},"application/vnd.cryptomator.vault":{"source":"iana"},"application/vnd.ctc-posml":{"source":"iana","extensions":["pml"]},"application/vnd.ctct.ws+xml":{"source":"iana","compressible":true},"application/vnd.cups-pdf":{"source":"iana"},"application/vnd.cups-postscript":{"source":"iana"},"application/vnd.cups-ppd":{"source":"iana","extensions":["ppd"]},"application/vnd.cups-raster":{"source":"iana"},"application/vnd.cups-raw":{"source":"iana"},"application/vnd.curl":{"source":"iana"},"application/vnd.curl.car":{"source":"apache","extensions":["car"]},"application/vnd.curl.pcurl":{"source":"apache","extensions":["pcurl"]},"application/vnd.cyan.dean.root+xml":{"source":"iana","compressible":true},"application/vnd.cybank":{"source":"iana"},"application/vnd.cyclonedx+json":{"source":"iana","compressible":true},"application/vnd.cyclonedx+xml":{"source":"iana","compressible":true},"application/vnd.d2l.coursepackage1p0+zip":{"source":"iana","compressible":false},"application/vnd.d3m-dataset":{"source":"iana"},"application/vnd.d3m-problem":{"source":"iana"},"application/vnd.dart":{"source":"iana","compressible":true,"extensions":["dart"]},"application/vnd.data-vision.rdz":{"source":"iana","extensions":["rdz"]},"application/vnd.datapackage+json":{"source":"iana","compressible":true},"application/vnd.dataresource+json":{"source":"iana","compressible":true},"application/vnd.dbf":{"source":"iana","extensions":["dbf"]},"application/vnd.debian.binary-package":{"source":"iana"},"application/vnd.dece.data":{"source":"iana","extensions":["uvf","uvvf","uvd","uvvd"]},"application/vnd.dece.ttml+xml":{"source":"iana","compressible":true,"extensions":["uvt","uvvt"]},"application/vnd.dece.unspecified":{"source":"iana","extensions":["uvx","uvvx"]},"application/vnd.dece.zip":{"source":"iana","extensions":["uvz","uvvz"]},"application/vnd.denovo.fcselayout-link":{"source":"iana","extensions":["fe_launch"]},"application/vnd.desmume.movie":{"source":"iana"},"application/vnd.dir-bi.plate-dl-nosuffix":{"source":"iana"},"application/vnd.dm.delegation+xml":{"source":"iana","compressible":true},"application/vnd.dna":{"source":"iana","extensions":["dna"]},"application/vnd.document+json":{"source":"iana","compressible":true},"application/vnd.dolby.mlp":{"source":"apache","extensions":["mlp"]},"application/vnd.dolby.mobile.1":{"source":"iana"},"application/vnd.dolby.mobile.2":{"source":"iana"},"application/vnd.doremir.scorecloud-binary-document":{"source":"iana"},"application/vnd.dpgraph":{"source":"iana","extensions":["dpg"]},"application/vnd.dreamfactory":{"source":"iana","extensions":["dfac"]},"application/vnd.drive+json":{"source":"iana","compressible":true},"application/vnd.ds-keypoint":{"source":"apache","extensions":["kpxx"]},"application/vnd.dtg.local":{"source":"iana"},"application/vnd.dtg.local.flash":{"source":"iana"},"application/vnd.dtg.local.html":{"source":"iana"},"application/vnd.dvb.ait":{"source":"iana","extensions":["ait"]},"application/vnd.dvb.dvbisl+xml":{"source":"iana","compressible":true},"application/vnd.dvb.dvbj":{"source":"iana"},"application/vnd.dvb.esgcontainer":{"source":"iana"},"application/vnd.dvb.ipdcdftnotifaccess":{"source":"iana"},"application/vnd.dvb.ipdcesgaccess":{"source":"iana"},"application/vnd.dvb.ipdcesgaccess2":{"source":"iana"},"application/vnd.dvb.ipdcesgpdd":{"source":"iana"},"application/vnd.dvb.ipdcroaming":{"source":"iana"},"application/vnd.dvb.iptv.alfec-base":{"source":"iana"},"application/vnd.dvb.iptv.alfec-enhancement":{"source":"iana"},"application/vnd.dvb.notif-aggregate-root+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-container+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-generic+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-ia-msglist+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-ia-registration-request+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-ia-registration-response+xml":{"source":"iana","compressible":true},"application/vnd.dvb.notif-init+xml":{"source":"iana","compressible":true},"application/vnd.dvb.pfr":{"source":"iana"},"application/vnd.dvb.service":{"source":"iana","extensions":["svc"]},"application/vnd.dxr":{"source":"iana"},"application/vnd.dynageo":{"source":"iana","extensions":["geo"]},"application/vnd.dzr":{"source":"iana"},"application/vnd.easykaraoke.cdgdownload":{"source":"iana"},"application/vnd.ecdis-update":{"source":"iana"},"application/vnd.ecip.rlp":{"source":"iana"},"application/vnd.eclipse.ditto+json":{"source":"iana","compressible":true},"application/vnd.ecowin.chart":{"source":"iana","extensions":["mag"]},"application/vnd.ecowin.filerequest":{"source":"iana"},"application/vnd.ecowin.fileupdate":{"source":"iana"},"application/vnd.ecowin.series":{"source":"iana"},"application/vnd.ecowin.seriesrequest":{"source":"iana"},"application/vnd.ecowin.seriesupdate":{"source":"iana"},"application/vnd.efi.img":{"source":"iana"},"application/vnd.efi.iso":{"source":"iana"},"application/vnd.emclient.accessrequest+xml":{"source":"iana","compressible":true},"application/vnd.enliven":{"source":"iana","extensions":["nml"]},"application/vnd.enphase.envoy":{"source":"iana"},"application/vnd.eprints.data+xml":{"source":"iana","compressible":true},"application/vnd.epson.esf":{"source":"iana","extensions":["esf"]},"application/vnd.epson.msf":{"source":"iana","extensions":["msf"]},"application/vnd.epson.quickanime":{"source":"iana","extensions":["qam"]},"application/vnd.epson.salt":{"source":"iana","extensions":["slt"]},"application/vnd.epson.ssf":{"source":"iana","extensions":["ssf"]},"application/vnd.ericsson.quickcall":{"source":"iana"},"application/vnd.espass-espass+zip":{"source":"iana","compressible":false},"application/vnd.eszigno3+xml":{"source":"iana","compressible":true,"extensions":["es3","et3"]},"application/vnd.etsi.aoc+xml":{"source":"iana","compressible":true},"application/vnd.etsi.asic-e+zip":{"source":"iana","compressible":false},"application/vnd.etsi.asic-s+zip":{"source":"iana","compressible":false},"application/vnd.etsi.cug+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvcommand+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvdiscovery+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvprofile+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvsad-bc+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvsad-cod+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvsad-npvr+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvservice+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvsync+xml":{"source":"iana","compressible":true},"application/vnd.etsi.iptvueprofile+xml":{"source":"iana","compressible":true},"application/vnd.etsi.mcid+xml":{"source":"iana","compressible":true},"application/vnd.etsi.mheg5":{"source":"iana"},"application/vnd.etsi.overload-control-policy-dataset+xml":{"source":"iana","compressible":true},"application/vnd.etsi.pstn+xml":{"source":"iana","compressible":true},"application/vnd.etsi.sci+xml":{"source":"iana","compressible":true},"application/vnd.etsi.simservs+xml":{"source":"iana","compressible":true},"application/vnd.etsi.timestamp-token":{"source":"iana"},"application/vnd.etsi.tsl+xml":{"source":"iana","compressible":true},"application/vnd.etsi.tsl.der":{"source":"iana"},"application/vnd.eu.kasparian.car+json":{"source":"iana","compressible":true},"application/vnd.eudora.data":{"source":"iana"},"application/vnd.evolv.ecig.profile":{"source":"iana"},"application/vnd.evolv.ecig.settings":{"source":"iana"},"application/vnd.evolv.ecig.theme":{"source":"iana"},"application/vnd.exstream-empower+zip":{"source":"iana","compressible":false},"application/vnd.exstream-package":{"source":"iana"},"application/vnd.ezpix-album":{"source":"iana","extensions":["ez2"]},"application/vnd.ezpix-package":{"source":"iana","extensions":["ez3"]},"application/vnd.f-secure.mobile":{"source":"iana"},"application/vnd.familysearch.gedcom+zip":{"source":"iana","compressible":false},"application/vnd.fastcopy-disk-image":{"source":"iana"},"application/vnd.fdf":{"source":"iana","extensions":["fdf"]},"application/vnd.fdsn.mseed":{"source":"iana","extensions":["mseed"]},"application/vnd.fdsn.seed":{"source":"iana","extensions":["seed","dataless"]},"application/vnd.ffsns":{"source":"iana"},"application/vnd.ficlab.flb+zip":{"source":"iana","compressible":false},"application/vnd.filmit.zfc":{"source":"iana"},"application/vnd.fints":{"source":"iana"},"application/vnd.firemonkeys.cloudcell":{"source":"iana"},"application/vnd.flographit":{"source":"iana","extensions":["gph"]},"application/vnd.fluxtime.clip":{"source":"iana","extensions":["ftc"]},"application/vnd.font-fontforge-sfd":{"source":"iana"},"application/vnd.framemaker":{"source":"iana","extensions":["fm","frame","maker","book"]},"application/vnd.frogans.fnc":{"source":"iana","extensions":["fnc"]},"application/vnd.frogans.ltf":{"source":"iana","extensions":["ltf"]},"application/vnd.fsc.weblaunch":{"source":"iana","extensions":["fsc"]},"application/vnd.fujifilm.fb.docuworks":{"source":"iana"},"application/vnd.fujifilm.fb.docuworks.binder":{"source":"iana"},"application/vnd.fujifilm.fb.docuworks.container":{"source":"iana"},"application/vnd.fujifilm.fb.jfi+xml":{"source":"iana","compressible":true},"application/vnd.fujitsu.oasys":{"source":"iana","extensions":["oas"]},"application/vnd.fujitsu.oasys2":{"source":"iana","extensions":["oa2"]},"application/vnd.fujitsu.oasys3":{"source":"iana","extensions":["oa3"]},"application/vnd.fujitsu.oasysgp":{"source":"iana","extensions":["fg5"]},"application/vnd.fujitsu.oasysprs":{"source":"iana","extensions":["bh2"]},"application/vnd.fujixerox.art-ex":{"source":"iana"},"application/vnd.fujixerox.art4":{"source":"iana"},"application/vnd.fujixerox.ddd":{"source":"iana","extensions":["ddd"]},"application/vnd.fujixerox.docuworks":{"source":"iana","extensions":["xdw"]},"application/vnd.fujixerox.docuworks.binder":{"source":"iana","extensions":["xbd"]},"application/vnd.fujixerox.docuworks.container":{"source":"iana"},"application/vnd.fujixerox.hbpl":{"source":"iana"},"application/vnd.fut-misnet":{"source":"iana"},"application/vnd.futoin+cbor":{"source":"iana"},"application/vnd.futoin+json":{"source":"iana","compressible":true},"application/vnd.fuzzysheet":{"source":"iana","extensions":["fzs"]},"application/vnd.genomatix.tuxedo":{"source":"iana","extensions":["txd"]},"application/vnd.gentics.grd+json":{"source":"iana","compressible":true},"application/vnd.geo+json":{"source":"iana","compressible":true},"application/vnd.geocube+xml":{"source":"iana","compressible":true},"application/vnd.geogebra.file":{"source":"iana","extensions":["ggb"]},"application/vnd.geogebra.slides":{"source":"iana"},"application/vnd.geogebra.tool":{"source":"iana","extensions":["ggt"]},"application/vnd.geometry-explorer":{"source":"iana","extensions":["gex","gre"]},"application/vnd.geonext":{"source":"iana","extensions":["gxt"]},"application/vnd.geoplan":{"source":"iana","extensions":["g2w"]},"application/vnd.geospace":{"source":"iana","extensions":["g3w"]},"application/vnd.gerber":{"source":"iana"},"application/vnd.globalplatform.card-content-mgt":{"source":"iana"},"application/vnd.globalplatform.card-content-mgt-response":{"source":"iana"},"application/vnd.gmx":{"source":"iana","extensions":["gmx"]},"application/vnd.google-apps.document":{"compressible":false,"extensions":["gdoc"]},"application/vnd.google-apps.presentation":{"compressible":false,"extensions":["gslides"]},"application/vnd.google-apps.spreadsheet":{"compressible":false,"extensions":["gsheet"]},"application/vnd.google-earth.kml+xml":{"source":"iana","compressible":true,"extensions":["kml"]},"application/vnd.google-earth.kmz":{"source":"iana","compressible":false,"extensions":["kmz"]},"application/vnd.gov.sk.e-form+xml":{"source":"iana","compressible":true},"application/vnd.gov.sk.e-form+zip":{"source":"iana","compressible":false},"application/vnd.gov.sk.xmldatacontainer+xml":{"source":"iana","compressible":true},"application/vnd.grafeq":{"source":"iana","extensions":["gqf","gqs"]},"application/vnd.gridmp":{"source":"iana"},"application/vnd.groove-account":{"source":"iana","extensions":["gac"]},"application/vnd.groove-help":{"source":"iana","extensions":["ghf"]},"application/vnd.groove-identity-message":{"source":"iana","extensions":["gim"]},"application/vnd.groove-injector":{"source":"iana","extensions":["grv"]},"application/vnd.groove-tool-message":{"source":"iana","extensions":["gtm"]},"application/vnd.groove-tool-template":{"source":"iana","extensions":["tpl"]},"application/vnd.groove-vcard":{"source":"iana","extensions":["vcg"]},"application/vnd.hal+json":{"source":"iana","compressible":true},"application/vnd.hal+xml":{"source":"iana","compressible":true,"extensions":["hal"]},"application/vnd.handheld-entertainment+xml":{"source":"iana","compressible":true,"extensions":["zmm"]},"application/vnd.hbci":{"source":"iana","extensions":["hbci"]},"application/vnd.hc+json":{"source":"iana","compressible":true},"application/vnd.hcl-bireports":{"source":"iana"},"application/vnd.hdt":{"source":"iana"},"application/vnd.heroku+json":{"source":"iana","compressible":true},"application/vnd.hhe.lesson-player":{"source":"iana","extensions":["les"]},"application/vnd.hl7cda+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.hl7v2+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.hp-hpgl":{"source":"iana","extensions":["hpgl"]},"application/vnd.hp-hpid":{"source":"iana","extensions":["hpid"]},"application/vnd.hp-hps":{"source":"iana","extensions":["hps"]},"application/vnd.hp-jlyt":{"source":"iana","extensions":["jlt"]},"application/vnd.hp-pcl":{"source":"iana","extensions":["pcl"]},"application/vnd.hp-pclxl":{"source":"iana","extensions":["pclxl"]},"application/vnd.httphone":{"source":"iana"},"application/vnd.hydrostatix.sof-data":{"source":"iana","extensions":["sfd-hdstx"]},"application/vnd.hyper+json":{"source":"iana","compressible":true},"application/vnd.hyper-item+json":{"source":"iana","compressible":true},"application/vnd.hyperdrive+json":{"source":"iana","compressible":true},"application/vnd.hzn-3d-crossword":{"source":"iana"},"application/vnd.ibm.afplinedata":{"source":"iana"},"application/vnd.ibm.electronic-media":{"source":"iana"},"application/vnd.ibm.minipay":{"source":"iana","extensions":["mpy"]},"application/vnd.ibm.modcap":{"source":"iana","extensions":["afp","listafp","list3820"]},"application/vnd.ibm.rights-management":{"source":"iana","extensions":["irm"]},"application/vnd.ibm.secure-container":{"source":"iana","extensions":["sc"]},"application/vnd.iccprofile":{"source":"iana","extensions":["icc","icm"]},"application/vnd.ieee.1905":{"source":"iana"},"application/vnd.igloader":{"source":"iana","extensions":["igl"]},"application/vnd.imagemeter.folder+zip":{"source":"iana","compressible":false},"application/vnd.imagemeter.image+zip":{"source":"iana","compressible":false},"application/vnd.immervision-ivp":{"source":"iana","extensions":["ivp"]},"application/vnd.immervision-ivu":{"source":"iana","extensions":["ivu"]},"application/vnd.ims.imsccv1p1":{"source":"iana"},"application/vnd.ims.imsccv1p2":{"source":"iana"},"application/vnd.ims.imsccv1p3":{"source":"iana"},"application/vnd.ims.lis.v2.result+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolconsumerprofile+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolproxy+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolproxy.id+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolsettings+json":{"source":"iana","compressible":true},"application/vnd.ims.lti.v2.toolsettings.simple+json":{"source":"iana","compressible":true},"application/vnd.informedcontrol.rms+xml":{"source":"iana","compressible":true},"application/vnd.informix-visionary":{"source":"iana"},"application/vnd.infotech.project":{"source":"iana"},"application/vnd.infotech.project+xml":{"source":"iana","compressible":true},"application/vnd.innopath.wamp.notification":{"source":"iana"},"application/vnd.insors.igm":{"source":"iana","extensions":["igm"]},"application/vnd.intercon.formnet":{"source":"iana","extensions":["xpw","xpx"]},"application/vnd.intergeo":{"source":"iana","extensions":["i2g"]},"application/vnd.intertrust.digibox":{"source":"iana"},"application/vnd.intertrust.nncp":{"source":"iana"},"application/vnd.intu.qbo":{"source":"iana","extensions":["qbo"]},"application/vnd.intu.qfx":{"source":"iana","extensions":["qfx"]},"application/vnd.iptc.g2.catalogitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.conceptitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.knowledgeitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.newsitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.newsmessage+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.packageitem+xml":{"source":"iana","compressible":true},"application/vnd.iptc.g2.planningitem+xml":{"source":"iana","compressible":true},"application/vnd.ipunplugged.rcprofile":{"source":"iana","extensions":["rcprofile"]},"application/vnd.irepository.package+xml":{"source":"iana","compressible":true,"extensions":["irp"]},"application/vnd.is-xpr":{"source":"iana","extensions":["xpr"]},"application/vnd.isac.fcs":{"source":"iana","extensions":["fcs"]},"application/vnd.iso11783-10+zip":{"source":"iana","compressible":false},"application/vnd.jam":{"source":"iana","extensions":["jam"]},"application/vnd.japannet-directory-service":{"source":"iana"},"application/vnd.japannet-jpnstore-wakeup":{"source":"iana"},"application/vnd.japannet-payment-wakeup":{"source":"iana"},"application/vnd.japannet-registration":{"source":"iana"},"application/vnd.japannet-registration-wakeup":{"source":"iana"},"application/vnd.japannet-setstore-wakeup":{"source":"iana"},"application/vnd.japannet-verification":{"source":"iana"},"application/vnd.japannet-verification-wakeup":{"source":"iana"},"application/vnd.jcp.javame.midlet-rms":{"source":"iana","extensions":["rms"]},"application/vnd.jisp":{"source":"iana","extensions":["jisp"]},"application/vnd.joost.joda-archive":{"source":"iana","extensions":["joda"]},"application/vnd.jsk.isdn-ngn":{"source":"iana"},"application/vnd.kahootz":{"source":"iana","extensions":["ktz","ktr"]},"application/vnd.kde.karbon":{"source":"iana","extensions":["karbon"]},"application/vnd.kde.kchart":{"source":"iana","extensions":["chrt"]},"application/vnd.kde.kformula":{"source":"iana","extensions":["kfo"]},"application/vnd.kde.kivio":{"source":"iana","extensions":["flw"]},"application/vnd.kde.kontour":{"source":"iana","extensions":["kon"]},"application/vnd.kde.kpresenter":{"source":"iana","extensions":["kpr","kpt"]},"application/vnd.kde.kspread":{"source":"iana","extensions":["ksp"]},"application/vnd.kde.kword":{"source":"iana","extensions":["kwd","kwt"]},"application/vnd.kenameaapp":{"source":"iana","extensions":["htke"]},"application/vnd.kidspiration":{"source":"iana","extensions":["kia"]},"application/vnd.kinar":{"source":"iana","extensions":["kne","knp"]},"application/vnd.koan":{"source":"iana","extensions":["skp","skd","skt","skm"]},"application/vnd.kodak-descriptor":{"source":"iana","extensions":["sse"]},"application/vnd.las":{"source":"iana"},"application/vnd.las.las+json":{"source":"iana","compressible":true},"application/vnd.las.las+xml":{"source":"iana","compressible":true,"extensions":["lasxml"]},"application/vnd.laszip":{"source":"iana"},"application/vnd.leap+json":{"source":"iana","compressible":true},"application/vnd.liberty-request+xml":{"source":"iana","compressible":true},"application/vnd.llamagraphics.life-balance.desktop":{"source":"iana","extensions":["lbd"]},"application/vnd.llamagraphics.life-balance.exchange+xml":{"source":"iana","compressible":true,"extensions":["lbe"]},"application/vnd.logipipe.circuit+zip":{"source":"iana","compressible":false},"application/vnd.loom":{"source":"iana"},"application/vnd.lotus-1-2-3":{"source":"iana","extensions":["123"]},"application/vnd.lotus-approach":{"source":"iana","extensions":["apr"]},"application/vnd.lotus-freelance":{"source":"iana","extensions":["pre"]},"application/vnd.lotus-notes":{"source":"iana","extensions":["nsf"]},"application/vnd.lotus-organizer":{"source":"iana","extensions":["org"]},"application/vnd.lotus-screencam":{"source":"iana","extensions":["scm"]},"application/vnd.lotus-wordpro":{"source":"iana","extensions":["lwp"]},"application/vnd.macports.portpkg":{"source":"iana","extensions":["portpkg"]},"application/vnd.mapbox-vector-tile":{"source":"iana","extensions":["mvt"]},"application/vnd.marlin.drm.actiontoken+xml":{"source":"iana","compressible":true},"application/vnd.marlin.drm.conftoken+xml":{"source":"iana","compressible":true},"application/vnd.marlin.drm.license+xml":{"source":"iana","compressible":true},"application/vnd.marlin.drm.mdcf":{"source":"iana"},"application/vnd.mason+json":{"source":"iana","compressible":true},"application/vnd.maxar.archive.3tz+zip":{"source":"iana","compressible":false},"application/vnd.maxmind.maxmind-db":{"source":"iana"},"application/vnd.mcd":{"source":"iana","extensions":["mcd"]},"application/vnd.medcalcdata":{"source":"iana","extensions":["mc1"]},"application/vnd.mediastation.cdkey":{"source":"iana","extensions":["cdkey"]},"application/vnd.meridian-slingshot":{"source":"iana"},"application/vnd.mfer":{"source":"iana","extensions":["mwf"]},"application/vnd.mfmp":{"source":"iana","extensions":["mfm"]},"application/vnd.micro+json":{"source":"iana","compressible":true},"application/vnd.micrografx.flo":{"source":"iana","extensions":["flo"]},"application/vnd.micrografx.igx":{"source":"iana","extensions":["igx"]},"application/vnd.microsoft.portable-executable":{"source":"iana"},"application/vnd.microsoft.windows.thumbnail-cache":{"source":"iana"},"application/vnd.miele+json":{"source":"iana","compressible":true},"application/vnd.mif":{"source":"iana","extensions":["mif"]},"application/vnd.minisoft-hp3000-save":{"source":"iana"},"application/vnd.mitsubishi.misty-guard.trustweb":{"source":"iana"},"application/vnd.mobius.daf":{"source":"iana","extensions":["daf"]},"application/vnd.mobius.dis":{"source":"iana","extensions":["dis"]},"application/vnd.mobius.mbk":{"source":"iana","extensions":["mbk"]},"application/vnd.mobius.mqy":{"source":"iana","extensions":["mqy"]},"application/vnd.mobius.msl":{"source":"iana","extensions":["msl"]},"application/vnd.mobius.plc":{"source":"iana","extensions":["plc"]},"application/vnd.mobius.txf":{"source":"iana","extensions":["txf"]},"application/vnd.mophun.application":{"source":"iana","extensions":["mpn"]},"application/vnd.mophun.certificate":{"source":"iana","extensions":["mpc"]},"application/vnd.motorola.flexsuite":{"source":"iana"},"application/vnd.motorola.flexsuite.adsi":{"source":"iana"},"application/vnd.motorola.flexsuite.fis":{"source":"iana"},"application/vnd.motorola.flexsuite.gotap":{"source":"iana"},"application/vnd.motorola.flexsuite.kmr":{"source":"iana"},"application/vnd.motorola.flexsuite.ttc":{"source":"iana"},"application/vnd.motorola.flexsuite.wem":{"source":"iana"},"application/vnd.motorola.iprm":{"source":"iana"},"application/vnd.mozilla.xul+xml":{"source":"iana","compressible":true,"extensions":["xul"]},"application/vnd.ms-3mfdocument":{"source":"iana"},"application/vnd.ms-artgalry":{"source":"iana","extensions":["cil"]},"application/vnd.ms-asf":{"source":"iana"},"application/vnd.ms-cab-compressed":{"source":"iana","extensions":["cab"]},"application/vnd.ms-color.iccprofile":{"source":"apache"},"application/vnd.ms-excel":{"source":"iana","compressible":false,"extensions":["xls","xlm","xla","xlc","xlt","xlw"]},"application/vnd.ms-excel.addin.macroenabled.12":{"source":"iana","extensions":["xlam"]},"application/vnd.ms-excel.sheet.binary.macroenabled.12":{"source":"iana","extensions":["xlsb"]},"application/vnd.ms-excel.sheet.macroenabled.12":{"source":"iana","extensions":["xlsm"]},"application/vnd.ms-excel.template.macroenabled.12":{"source":"iana","extensions":["xltm"]},"application/vnd.ms-fontobject":{"source":"iana","compressible":true,"extensions":["eot"]},"application/vnd.ms-htmlhelp":{"source":"iana","extensions":["chm"]},"application/vnd.ms-ims":{"source":"iana","extensions":["ims"]},"application/vnd.ms-lrm":{"source":"iana","extensions":["lrm"]},"application/vnd.ms-office.activex+xml":{"source":"iana","compressible":true},"application/vnd.ms-officetheme":{"source":"iana","extensions":["thmx"]},"application/vnd.ms-opentype":{"source":"apache","compressible":true},"application/vnd.ms-outlook":{"compressible":false,"extensions":["msg"]},"application/vnd.ms-package.obfuscated-opentype":{"source":"apache"},"application/vnd.ms-pki.seccat":{"source":"apache","extensions":["cat"]},"application/vnd.ms-pki.stl":{"source":"apache","extensions":["stl"]},"application/vnd.ms-playready.initiator+xml":{"source":"iana","compressible":true},"application/vnd.ms-powerpoint":{"source":"iana","compressible":false,"extensions":["ppt","pps","pot"]},"application/vnd.ms-powerpoint.addin.macroenabled.12":{"source":"iana","extensions":["ppam"]},"application/vnd.ms-powerpoint.presentation.macroenabled.12":{"source":"iana","extensions":["pptm"]},"application/vnd.ms-powerpoint.slide.macroenabled.12":{"source":"iana","extensions":["sldm"]},"application/vnd.ms-powerpoint.slideshow.macroenabled.12":{"source":"iana","extensions":["ppsm"]},"application/vnd.ms-powerpoint.template.macroenabled.12":{"source":"iana","extensions":["potm"]},"application/vnd.ms-printdevicecapabilities+xml":{"source":"iana","compressible":true},"application/vnd.ms-printing.printticket+xml":{"source":"apache","compressible":true},"application/vnd.ms-printschematicket+xml":{"source":"iana","compressible":true},"application/vnd.ms-project":{"source":"iana","extensions":["mpp","mpt"]},"application/vnd.ms-tnef":{"source":"iana"},"application/vnd.ms-windows.devicepairing":{"source":"iana"},"application/vnd.ms-windows.nwprinting.oob":{"source":"iana"},"application/vnd.ms-windows.printerpairing":{"source":"iana"},"application/vnd.ms-windows.wsd.oob":{"source":"iana"},"application/vnd.ms-wmdrm.lic-chlg-req":{"source":"iana"},"application/vnd.ms-wmdrm.lic-resp":{"source":"iana"},"application/vnd.ms-wmdrm.meter-chlg-req":{"source":"iana"},"application/vnd.ms-wmdrm.meter-resp":{"source":"iana"},"application/vnd.ms-word.document.macroenabled.12":{"source":"iana","extensions":["docm"]},"application/vnd.ms-word.template.macroenabled.12":{"source":"iana","extensions":["dotm"]},"application/vnd.ms-works":{"source":"iana","extensions":["wps","wks","wcm","wdb"]},"application/vnd.ms-wpl":{"source":"iana","extensions":["wpl"]},"application/vnd.ms-xpsdocument":{"source":"iana","compressible":false,"extensions":["xps"]},"application/vnd.msa-disk-image":{"source":"iana"},"application/vnd.mseq":{"source":"iana","extensions":["mseq"]},"application/vnd.msign":{"source":"iana"},"application/vnd.multiad.creator":{"source":"iana"},"application/vnd.multiad.creator.cif":{"source":"iana"},"application/vnd.music-niff":{"source":"iana"},"application/vnd.musician":{"source":"iana","extensions":["mus"]},"application/vnd.muvee.style":{"source":"iana","extensions":["msty"]},"application/vnd.mynfc":{"source":"iana","extensions":["taglet"]},"application/vnd.nacamar.ybrid+json":{"source":"iana","compressible":true},"application/vnd.ncd.control":{"source":"iana"},"application/vnd.ncd.reference":{"source":"iana"},"application/vnd.nearst.inv+json":{"source":"iana","compressible":true},"application/vnd.nebumind.line":{"source":"iana"},"application/vnd.nervana":{"source":"iana"},"application/vnd.netfpx":{"source":"iana"},"application/vnd.neurolanguage.nlu":{"source":"iana","extensions":["nlu"]},"application/vnd.nimn":{"source":"iana"},"application/vnd.nintendo.nitro.rom":{"source":"iana"},"application/vnd.nintendo.snes.rom":{"source":"iana"},"application/vnd.nitf":{"source":"iana","extensions":["ntf","nitf"]},"application/vnd.noblenet-directory":{"source":"iana","extensions":["nnd"]},"application/vnd.noblenet-sealer":{"source":"iana","extensions":["nns"]},"application/vnd.noblenet-web":{"source":"iana","extensions":["nnw"]},"application/vnd.nokia.catalogs":{"source":"iana"},"application/vnd.nokia.conml+wbxml":{"source":"iana"},"application/vnd.nokia.conml+xml":{"source":"iana","compressible":true},"application/vnd.nokia.iptv.config+xml":{"source":"iana","compressible":true},"application/vnd.nokia.isds-radio-presets":{"source":"iana"},"application/vnd.nokia.landmark+wbxml":{"source":"iana"},"application/vnd.nokia.landmark+xml":{"source":"iana","compressible":true},"application/vnd.nokia.landmarkcollection+xml":{"source":"iana","compressible":true},"application/vnd.nokia.n-gage.ac+xml":{"source":"iana","compressible":true,"extensions":["ac"]},"application/vnd.nokia.n-gage.data":{"source":"iana","extensions":["ngdat"]},"application/vnd.nokia.n-gage.symbian.install":{"source":"iana","extensions":["n-gage"]},"application/vnd.nokia.ncd":{"source":"iana"},"application/vnd.nokia.pcd+wbxml":{"source":"iana"},"application/vnd.nokia.pcd+xml":{"source":"iana","compressible":true},"application/vnd.nokia.radio-preset":{"source":"iana","extensions":["rpst"]},"application/vnd.nokia.radio-presets":{"source":"iana","extensions":["rpss"]},"application/vnd.novadigm.edm":{"source":"iana","extensions":["edm"]},"application/vnd.novadigm.edx":{"source":"iana","extensions":["edx"]},"application/vnd.novadigm.ext":{"source":"iana","extensions":["ext"]},"application/vnd.ntt-local.content-share":{"source":"iana"},"application/vnd.ntt-local.file-transfer":{"source":"iana"},"application/vnd.ntt-local.ogw_remote-access":{"source":"iana"},"application/vnd.ntt-local.sip-ta_remote":{"source":"iana"},"application/vnd.ntt-local.sip-ta_tcp_stream":{"source":"iana"},"application/vnd.oasis.opendocument.chart":{"source":"iana","extensions":["odc"]},"application/vnd.oasis.opendocument.chart-template":{"source":"iana","extensions":["otc"]},"application/vnd.oasis.opendocument.database":{"source":"iana","extensions":["odb"]},"application/vnd.oasis.opendocument.formula":{"source":"iana","extensions":["odf"]},"application/vnd.oasis.opendocument.formula-template":{"source":"iana","extensions":["odft"]},"application/vnd.oasis.opendocument.graphics":{"source":"iana","compressible":false,"extensions":["odg"]},"application/vnd.oasis.opendocument.graphics-template":{"source":"iana","extensions":["otg"]},"application/vnd.oasis.opendocument.image":{"source":"iana","extensions":["odi"]},"application/vnd.oasis.opendocument.image-template":{"source":"iana","extensions":["oti"]},"application/vnd.oasis.opendocument.presentation":{"source":"iana","compressible":false,"extensions":["odp"]},"application/vnd.oasis.opendocument.presentation-template":{"source":"iana","extensions":["otp"]},"application/vnd.oasis.opendocument.spreadsheet":{"source":"iana","compressible":false,"extensions":["ods"]},"application/vnd.oasis.opendocument.spreadsheet-template":{"source":"iana","extensions":["ots"]},"application/vnd.oasis.opendocument.text":{"source":"iana","compressible":false,"extensions":["odt"]},"application/vnd.oasis.opendocument.text-master":{"source":"iana","extensions":["odm"]},"application/vnd.oasis.opendocument.text-template":{"source":"iana","extensions":["ott"]},"application/vnd.oasis.opendocument.text-web":{"source":"iana","extensions":["oth"]},"application/vnd.obn":{"source":"iana"},"application/vnd.ocf+cbor":{"source":"iana"},"application/vnd.oci.image.manifest.v1+json":{"source":"iana","compressible":true},"application/vnd.oftn.l10n+json":{"source":"iana","compressible":true},"application/vnd.oipf.contentaccessdownload+xml":{"source":"iana","compressible":true},"application/vnd.oipf.contentaccessstreaming+xml":{"source":"iana","compressible":true},"application/vnd.oipf.cspg-hexbinary":{"source":"iana"},"application/vnd.oipf.dae.svg+xml":{"source":"iana","compressible":true},"application/vnd.oipf.dae.xhtml+xml":{"source":"iana","compressible":true},"application/vnd.oipf.mippvcontrolmessage+xml":{"source":"iana","compressible":true},"application/vnd.oipf.pae.gem":{"source":"iana"},"application/vnd.oipf.spdiscovery+xml":{"source":"iana","compressible":true},"application/vnd.oipf.spdlist+xml":{"source":"iana","compressible":true},"application/vnd.oipf.ueprofile+xml":{"source":"iana","compressible":true},"application/vnd.oipf.userprofile+xml":{"source":"iana","compressible":true},"application/vnd.olpc-sugar":{"source":"iana","extensions":["xo"]},"application/vnd.oma-scws-config":{"source":"iana"},"application/vnd.oma-scws-http-request":{"source":"iana"},"application/vnd.oma-scws-http-response":{"source":"iana"},"application/vnd.oma.bcast.associated-procedure-parameter+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.drm-trigger+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.imd+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.ltkm":{"source":"iana"},"application/vnd.oma.bcast.notification+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.provisioningtrigger":{"source":"iana"},"application/vnd.oma.bcast.sgboot":{"source":"iana"},"application/vnd.oma.bcast.sgdd+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.sgdu":{"source":"iana"},"application/vnd.oma.bcast.simple-symbol-container":{"source":"iana"},"application/vnd.oma.bcast.smartcard-trigger+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.sprov+xml":{"source":"iana","compressible":true},"application/vnd.oma.bcast.stkm":{"source":"iana"},"application/vnd.oma.cab-address-book+xml":{"source":"iana","compressible":true},"application/vnd.oma.cab-feature-handler+xml":{"source":"iana","compressible":true},"application/vnd.oma.cab-pcc+xml":{"source":"iana","compressible":true},"application/vnd.oma.cab-subs-invite+xml":{"source":"iana","compressible":true},"application/vnd.oma.cab-user-prefs+xml":{"source":"iana","compressible":true},"application/vnd.oma.dcd":{"source":"iana"},"application/vnd.oma.dcdc":{"source":"iana"},"application/vnd.oma.dd2+xml":{"source":"iana","compressible":true,"extensions":["dd2"]},"application/vnd.oma.drm.risd+xml":{"source":"iana","compressible":true},"application/vnd.oma.group-usage-list+xml":{"source":"iana","compressible":true},"application/vnd.oma.lwm2m+cbor":{"source":"iana"},"application/vnd.oma.lwm2m+json":{"source":"iana","compressible":true},"application/vnd.oma.lwm2m+tlv":{"source":"iana"},"application/vnd.oma.pal+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.detailed-progress-report+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.final-report+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.groups+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.invocation-descriptor+xml":{"source":"iana","compressible":true},"application/vnd.oma.poc.optimized-progress-report+xml":{"source":"iana","compressible":true},"application/vnd.oma.push":{"source":"iana"},"application/vnd.oma.scidm.messages+xml":{"source":"iana","compressible":true},"application/vnd.oma.xcap-directory+xml":{"source":"iana","compressible":true},"application/vnd.omads-email+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.omads-file+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.omads-folder+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.omaloc-supl-init":{"source":"iana"},"application/vnd.onepager":{"source":"iana"},"application/vnd.onepagertamp":{"source":"iana"},"application/vnd.onepagertamx":{"source":"iana"},"application/vnd.onepagertat":{"source":"iana"},"application/vnd.onepagertatp":{"source":"iana"},"application/vnd.onepagertatx":{"source":"iana"},"application/vnd.openblox.game+xml":{"source":"iana","compressible":true,"extensions":["obgx"]},"application/vnd.openblox.game-binary":{"source":"iana"},"application/vnd.openeye.oeb":{"source":"iana"},"application/vnd.openofficeorg.extension":{"source":"apache","extensions":["oxt"]},"application/vnd.openstreetmap.data+xml":{"source":"iana","compressible":true,"extensions":["osm"]},"application/vnd.opentimestamps.ots":{"source":"iana"},"application/vnd.openxmlformats-officedocument.custom-properties+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.customxmlproperties+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawing+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.chart+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.diagramcolors+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.diagramdata+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.diagramlayout+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.drawingml.diagramstyle+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.extended-properties+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.commentauthors+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.comments+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.handoutmaster+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.notesmaster+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.notesslide+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.presentation":{"source":"iana","compressible":false,"extensions":["pptx"]},"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.presprops+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slide":{"source":"iana","extensions":["sldx"]},"application/vnd.openxmlformats-officedocument.presentationml.slide+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slidelayout+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slidemaster+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slideshow":{"source":"iana","extensions":["ppsx"]},"application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.slideupdateinfo+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.tablestyles+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.tags+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.template":{"source":"iana","extensions":["potx"]},"application/vnd.openxmlformats-officedocument.presentationml.template.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.presentationml.viewprops+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.calcchain+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.connections+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.externallink+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.pivotcachedefinition+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.pivotcacherecords+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.pivottable+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.querytable+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.revisionheaders+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.revisionlog+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.sharedstrings+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":{"source":"iana","compressible":false,"extensions":["xlsx"]},"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.sheetmetadata+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.tablesinglecells+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.template":{"source":"iana","extensions":["xltx"]},"application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.usernames+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.volatiledependencies+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.theme+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.themeoverride+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.vmldrawing":{"source":"iana"},"application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.document":{"source":"iana","compressible":false,"extensions":["docx"]},"application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.fonttable+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.template":{"source":"iana","extensions":["dotx"]},"application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-officedocument.wordprocessingml.websettings+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-package.core-properties+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml":{"source":"iana","compressible":true},"application/vnd.openxmlformats-package.relationships+xml":{"source":"iana","compressible":true},"application/vnd.oracle.resource+json":{"source":"iana","compressible":true},"application/vnd.orange.indata":{"source":"iana"},"application/vnd.osa.netdeploy":{"source":"iana"},"application/vnd.osgeo.mapguide.package":{"source":"iana","extensions":["mgp"]},"application/vnd.osgi.bundle":{"source":"iana"},"application/vnd.osgi.dp":{"source":"iana","extensions":["dp"]},"application/vnd.osgi.subsystem":{"source":"iana","extensions":["esa"]},"application/vnd.otps.ct-kip+xml":{"source":"iana","compressible":true},"application/vnd.oxli.countgraph":{"source":"iana"},"application/vnd.pagerduty+json":{"source":"iana","compressible":true},"application/vnd.palm":{"source":"iana","extensions":["pdb","pqa","oprc"]},"application/vnd.panoply":{"source":"iana"},"application/vnd.paos.xml":{"source":"iana"},"application/vnd.patentdive":{"source":"iana"},"application/vnd.patientecommsdoc":{"source":"iana"},"application/vnd.pawaafile":{"source":"iana","extensions":["paw"]},"application/vnd.pcos":{"source":"iana"},"application/vnd.pg.format":{"source":"iana","extensions":["str"]},"application/vnd.pg.osasli":{"source":"iana","extensions":["ei6"]},"application/vnd.piaccess.application-licence":{"source":"iana"},"application/vnd.picsel":{"source":"iana","extensions":["efif"]},"application/vnd.pmi.widget":{"source":"iana","extensions":["wg"]},"application/vnd.poc.group-advertisement+xml":{"source":"iana","compressible":true},"application/vnd.pocketlearn":{"source":"iana","extensions":["plf"]},"application/vnd.powerbuilder6":{"source":"iana","extensions":["pbd"]},"application/vnd.powerbuilder6-s":{"source":"iana"},"application/vnd.powerbuilder7":{"source":"iana"},"application/vnd.powerbuilder7-s":{"source":"iana"},"application/vnd.powerbuilder75":{"source":"iana"},"application/vnd.powerbuilder75-s":{"source":"iana"},"application/vnd.preminet":{"source":"iana"},"application/vnd.previewsystems.box":{"source":"iana","extensions":["box"]},"application/vnd.proteus.magazine":{"source":"iana","extensions":["mgz"]},"application/vnd.psfs":{"source":"iana"},"application/vnd.publishare-delta-tree":{"source":"iana","extensions":["qps"]},"application/vnd.pvi.ptid1":{"source":"iana","extensions":["ptid"]},"application/vnd.pwg-multiplexed":{"source":"iana"},"application/vnd.pwg-xhtml-print+xml":{"source":"iana","compressible":true},"application/vnd.qualcomm.brew-app-res":{"source":"iana"},"application/vnd.quarantainenet":{"source":"iana"},"application/vnd.quark.quarkxpress":{"source":"iana","extensions":["qxd","qxt","qwd","qwt","qxl","qxb"]},"application/vnd.quobject-quoxdocument":{"source":"iana"},"application/vnd.radisys.moml+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit-conf+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit-conn+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit-dialog+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-audit-stream+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-conf+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-base+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-fax-detect+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-fax-sendrecv+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-group+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-speech+xml":{"source":"iana","compressible":true},"application/vnd.radisys.msml-dialog-transform+xml":{"source":"iana","compressible":true},"application/vnd.rainstor.data":{"source":"iana"},"application/vnd.rapid":{"source":"iana"},"application/vnd.rar":{"source":"iana","extensions":["rar"]},"application/vnd.realvnc.bed":{"source":"iana","extensions":["bed"]},"application/vnd.recordare.musicxml":{"source":"iana","extensions":["mxl"]},"application/vnd.recordare.musicxml+xml":{"source":"iana","compressible":true,"extensions":["musicxml"]},"application/vnd.renlearn.rlprint":{"source":"iana"},"application/vnd.resilient.logic":{"source":"iana"},"application/vnd.restful+json":{"source":"iana","compressible":true},"application/vnd.rig.cryptonote":{"source":"iana","extensions":["cryptonote"]},"application/vnd.rim.cod":{"source":"apache","extensions":["cod"]},"application/vnd.rn-realmedia":{"source":"apache","extensions":["rm"]},"application/vnd.rn-realmedia-vbr":{"source":"apache","extensions":["rmvb"]},"application/vnd.route66.link66+xml":{"source":"iana","compressible":true,"extensions":["link66"]},"application/vnd.rs-274x":{"source":"iana"},"application/vnd.ruckus.download":{"source":"iana"},"application/vnd.s3sms":{"source":"iana"},"application/vnd.sailingtracker.track":{"source":"iana","extensions":["st"]},"application/vnd.sar":{"source":"iana"},"application/vnd.sbm.cid":{"source":"iana"},"application/vnd.sbm.mid2":{"source":"iana"},"application/vnd.scribus":{"source":"iana"},"application/vnd.sealed.3df":{"source":"iana"},"application/vnd.sealed.csf":{"source":"iana"},"application/vnd.sealed.doc":{"source":"iana"},"application/vnd.sealed.eml":{"source":"iana"},"application/vnd.sealed.mht":{"source":"iana"},"application/vnd.sealed.net":{"source":"iana"},"application/vnd.sealed.ppt":{"source":"iana"},"application/vnd.sealed.tiff":{"source":"iana"},"application/vnd.sealed.xls":{"source":"iana"},"application/vnd.sealedmedia.softseal.html":{"source":"iana"},"application/vnd.sealedmedia.softseal.pdf":{"source":"iana"},"application/vnd.seemail":{"source":"iana","extensions":["see"]},"application/vnd.seis+json":{"source":"iana","compressible":true},"application/vnd.sema":{"source":"iana","extensions":["sema"]},"application/vnd.semd":{"source":"iana","extensions":["semd"]},"application/vnd.semf":{"source":"iana","extensions":["semf"]},"application/vnd.shade-save-file":{"source":"iana"},"application/vnd.shana.informed.formdata":{"source":"iana","extensions":["ifm"]},"application/vnd.shana.informed.formtemplate":{"source":"iana","extensions":["itp"]},"application/vnd.shana.informed.interchange":{"source":"iana","extensions":["iif"]},"application/vnd.shana.informed.package":{"source":"iana","extensions":["ipk"]},"application/vnd.shootproof+json":{"source":"iana","compressible":true},"application/vnd.shopkick+json":{"source":"iana","compressible":true},"application/vnd.shp":{"source":"iana"},"application/vnd.shx":{"source":"iana"},"application/vnd.sigrok.session":{"source":"iana"},"application/vnd.simtech-mindmapper":{"source":"iana","extensions":["twd","twds"]},"application/vnd.siren+json":{"source":"iana","compressible":true},"application/vnd.smaf":{"source":"iana","extensions":["mmf"]},"application/vnd.smart.notebook":{"source":"iana"},"application/vnd.smart.teacher":{"source":"iana","extensions":["teacher"]},"application/vnd.snesdev-page-table":{"source":"iana"},"application/vnd.software602.filler.form+xml":{"source":"iana","compressible":true,"extensions":["fo"]},"application/vnd.software602.filler.form-xml-zip":{"source":"iana"},"application/vnd.solent.sdkm+xml":{"source":"iana","compressible":true,"extensions":["sdkm","sdkd"]},"application/vnd.spotfire.dxp":{"source":"iana","extensions":["dxp"]},"application/vnd.spotfire.sfs":{"source":"iana","extensions":["sfs"]},"application/vnd.sqlite3":{"source":"iana"},"application/vnd.sss-cod":{"source":"iana"},"application/vnd.sss-dtf":{"source":"iana"},"application/vnd.sss-ntf":{"source":"iana"},"application/vnd.stardivision.calc":{"source":"apache","extensions":["sdc"]},"application/vnd.stardivision.draw":{"source":"apache","extensions":["sda"]},"application/vnd.stardivision.impress":{"source":"apache","extensions":["sdd"]},"application/vnd.stardivision.math":{"source":"apache","extensions":["smf"]},"application/vnd.stardivision.writer":{"source":"apache","extensions":["sdw","vor"]},"application/vnd.stardivision.writer-global":{"source":"apache","extensions":["sgl"]},"application/vnd.stepmania.package":{"source":"iana","extensions":["smzip"]},"application/vnd.stepmania.stepchart":{"source":"iana","extensions":["sm"]},"application/vnd.street-stream":{"source":"iana"},"application/vnd.sun.wadl+xml":{"source":"iana","compressible":true,"extensions":["wadl"]},"application/vnd.sun.xml.calc":{"source":"apache","extensions":["sxc"]},"application/vnd.sun.xml.calc.template":{"source":"apache","extensions":["stc"]},"application/vnd.sun.xml.draw":{"source":"apache","extensions":["sxd"]},"application/vnd.sun.xml.draw.template":{"source":"apache","extensions":["std"]},"application/vnd.sun.xml.impress":{"source":"apache","extensions":["sxi"]},"application/vnd.sun.xml.impress.template":{"source":"apache","extensions":["sti"]},"application/vnd.sun.xml.math":{"source":"apache","extensions":["sxm"]},"application/vnd.sun.xml.writer":{"source":"apache","extensions":["sxw"]},"application/vnd.sun.xml.writer.global":{"source":"apache","extensions":["sxg"]},"application/vnd.sun.xml.writer.template":{"source":"apache","extensions":["stw"]},"application/vnd.sus-calendar":{"source":"iana","extensions":["sus","susp"]},"application/vnd.svd":{"source":"iana","extensions":["svd"]},"application/vnd.swiftview-ics":{"source":"iana"},"application/vnd.sycle+xml":{"source":"iana","compressible":true},"application/vnd.syft+json":{"source":"iana","compressible":true},"application/vnd.symbian.install":{"source":"apache","extensions":["sis","sisx"]},"application/vnd.syncml+xml":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["xsm"]},"application/vnd.syncml.dm+wbxml":{"source":"iana","charset":"UTF-8","extensions":["bdm"]},"application/vnd.syncml.dm+xml":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["xdm"]},"application/vnd.syncml.dm.notification":{"source":"iana"},"application/vnd.syncml.dmddf+wbxml":{"source":"iana"},"application/vnd.syncml.dmddf+xml":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["ddf"]},"application/vnd.syncml.dmtnds+wbxml":{"source":"iana"},"application/vnd.syncml.dmtnds+xml":{"source":"iana","charset":"UTF-8","compressible":true},"application/vnd.syncml.ds.notification":{"source":"iana"},"application/vnd.tableschema+json":{"source":"iana","compressible":true},"application/vnd.tao.intent-module-archive":{"source":"iana","extensions":["tao"]},"application/vnd.tcpdump.pcap":{"source":"iana","extensions":["pcap","cap","dmp"]},"application/vnd.think-cell.ppttc+json":{"source":"iana","compressible":true},"application/vnd.tmd.mediaflex.api+xml":{"source":"iana","compressible":true},"application/vnd.tml":{"source":"iana"},"application/vnd.tmobile-livetv":{"source":"iana","extensions":["tmo"]},"application/vnd.tri.onesource":{"source":"iana"},"application/vnd.trid.tpt":{"source":"iana","extensions":["tpt"]},"application/vnd.triscape.mxs":{"source":"iana","extensions":["mxs"]},"application/vnd.trueapp":{"source":"iana","extensions":["tra"]},"application/vnd.truedoc":{"source":"iana"},"application/vnd.ubisoft.webplayer":{"source":"iana"},"application/vnd.ufdl":{"source":"iana","extensions":["ufd","ufdl"]},"application/vnd.uiq.theme":{"source":"iana","extensions":["utz"]},"application/vnd.umajin":{"source":"iana","extensions":["umj"]},"application/vnd.unity":{"source":"iana","extensions":["unityweb"]},"application/vnd.uoml+xml":{"source":"iana","compressible":true,"extensions":["uoml"]},"application/vnd.uplanet.alert":{"source":"iana"},"application/vnd.uplanet.alert-wbxml":{"source":"iana"},"application/vnd.uplanet.bearer-choice":{"source":"iana"},"application/vnd.uplanet.bearer-choice-wbxml":{"source":"iana"},"application/vnd.uplanet.cacheop":{"source":"iana"},"application/vnd.uplanet.cacheop-wbxml":{"source":"iana"},"application/vnd.uplanet.channel":{"source":"iana"},"application/vnd.uplanet.channel-wbxml":{"source":"iana"},"application/vnd.uplanet.list":{"source":"iana"},"application/vnd.uplanet.list-wbxml":{"source":"iana"},"application/vnd.uplanet.listcmd":{"source":"iana"},"application/vnd.uplanet.listcmd-wbxml":{"source":"iana"},"application/vnd.uplanet.signal":{"source":"iana"},"application/vnd.uri-map":{"source":"iana"},"application/vnd.valve.source.material":{"source":"iana"},"application/vnd.vcx":{"source":"iana","extensions":["vcx"]},"application/vnd.vd-study":{"source":"iana"},"application/vnd.vectorworks":{"source":"iana"},"application/vnd.vel+json":{"source":"iana","compressible":true},"application/vnd.verimatrix.vcas":{"source":"iana"},"application/vnd.veritone.aion+json":{"source":"iana","compressible":true},"application/vnd.veryant.thin":{"source":"iana"},"application/vnd.ves.encrypted":{"source":"iana"},"application/vnd.vidsoft.vidconference":{"source":"iana"},"application/vnd.visio":{"source":"iana","extensions":["vsd","vst","vss","vsw"]},"application/vnd.visionary":{"source":"iana","extensions":["vis"]},"application/vnd.vividence.scriptfile":{"source":"iana"},"application/vnd.vsf":{"source":"iana","extensions":["vsf"]},"application/vnd.wap.sic":{"source":"iana"},"application/vnd.wap.slc":{"source":"iana"},"application/vnd.wap.wbxml":{"source":"iana","charset":"UTF-8","extensions":["wbxml"]},"application/vnd.wap.wmlc":{"source":"iana","extensions":["wmlc"]},"application/vnd.wap.wmlscriptc":{"source":"iana","extensions":["wmlsc"]},"application/vnd.webturbo":{"source":"iana","extensions":["wtb"]},"application/vnd.wfa.dpp":{"source":"iana"},"application/vnd.wfa.p2p":{"source":"iana"},"application/vnd.wfa.wsc":{"source":"iana"},"application/vnd.windows.devicepairing":{"source":"iana"},"application/vnd.wmc":{"source":"iana"},"application/vnd.wmf.bootstrap":{"source":"iana"},"application/vnd.wolfram.mathematica":{"source":"iana"},"application/vnd.wolfram.mathematica.package":{"source":"iana"},"application/vnd.wolfram.player":{"source":"iana","extensions":["nbp"]},"application/vnd.wordperfect":{"source":"iana","extensions":["wpd"]},"application/vnd.wqd":{"source":"iana","extensions":["wqd"]},"application/vnd.wrq-hp3000-labelled":{"source":"iana"},"application/vnd.wt.stf":{"source":"iana","extensions":["stf"]},"application/vnd.wv.csp+wbxml":{"source":"iana"},"application/vnd.wv.csp+xml":{"source":"iana","compressible":true},"application/vnd.wv.ssp+xml":{"source":"iana","compressible":true},"application/vnd.xacml+json":{"source":"iana","compressible":true},"application/vnd.xara":{"source":"iana","extensions":["xar"]},"application/vnd.xfdl":{"source":"iana","extensions":["xfdl"]},"application/vnd.xfdl.webform":{"source":"iana"},"application/vnd.xmi+xml":{"source":"iana","compressible":true},"application/vnd.xmpie.cpkg":{"source":"iana"},"application/vnd.xmpie.dpkg":{"source":"iana"},"application/vnd.xmpie.plan":{"source":"iana"},"application/vnd.xmpie.ppkg":{"source":"iana"},"application/vnd.xmpie.xlim":{"source":"iana"},"application/vnd.yamaha.hv-dic":{"source":"iana","extensions":["hvd"]},"application/vnd.yamaha.hv-script":{"source":"iana","extensions":["hvs"]},"application/vnd.yamaha.hv-voice":{"source":"iana","extensions":["hvp"]},"application/vnd.yamaha.openscoreformat":{"source":"iana","extensions":["osf"]},"application/vnd.yamaha.openscoreformat.osfpvg+xml":{"source":"iana","compressible":true,"extensions":["osfpvg"]},"application/vnd.yamaha.remote-setup":{"source":"iana"},"application/vnd.yamaha.smaf-audio":{"source":"iana","extensions":["saf"]},"application/vnd.yamaha.smaf-phrase":{"source":"iana","extensions":["spf"]},"application/vnd.yamaha.through-ngn":{"source":"iana"},"application/vnd.yamaha.tunnel-udpencap":{"source":"iana"},"application/vnd.yaoweme":{"source":"iana"},"application/vnd.yellowriver-custom-menu":{"source":"iana","extensions":["cmp"]},"application/vnd.youtube.yt":{"source":"iana"},"application/vnd.zul":{"source":"iana","extensions":["zir","zirz"]},"application/vnd.zzazz.deck+xml":{"source":"iana","compressible":true,"extensions":["zaz"]},"application/voicexml+xml":{"source":"iana","compressible":true,"extensions":["vxml"]},"application/voucher-cms+json":{"source":"iana","compressible":true},"application/vq-rtcpxr":{"source":"iana"},"application/wasm":{"source":"iana","compressible":true,"extensions":["wasm"]},"application/watcherinfo+xml":{"source":"iana","compressible":true,"extensions":["wif"]},"application/webpush-options+json":{"source":"iana","compressible":true},"application/whoispp-query":{"source":"iana"},"application/whoispp-response":{"source":"iana"},"application/widget":{"source":"iana","extensions":["wgt"]},"application/winhlp":{"source":"apache","extensions":["hlp"]},"application/wita":{"source":"iana"},"application/wordperfect5.1":{"source":"iana"},"application/wsdl+xml":{"source":"iana","compressible":true,"extensions":["wsdl"]},"application/wspolicy+xml":{"source":"iana","compressible":true,"extensions":["wspolicy"]},"application/x-7z-compressed":{"source":"apache","compressible":false,"extensions":["7z"]},"application/x-abiword":{"source":"apache","extensions":["abw"]},"application/x-ace-compressed":{"source":"apache","extensions":["ace"]},"application/x-amf":{"source":"apache"},"application/x-apple-diskimage":{"source":"apache","extensions":["dmg"]},"application/x-arj":{"compressible":false,"extensions":["arj"]},"application/x-authorware-bin":{"source":"apache","extensions":["aab","x32","u32","vox"]},"application/x-authorware-map":{"source":"apache","extensions":["aam"]},"application/x-authorware-seg":{"source":"apache","extensions":["aas"]},"application/x-bcpio":{"source":"apache","extensions":["bcpio"]},"application/x-bdoc":{"compressible":false,"extensions":["bdoc"]},"application/x-bittorrent":{"source":"apache","extensions":["torrent"]},"application/x-blorb":{"source":"apache","extensions":["blb","blorb"]},"application/x-bzip":{"source":"apache","compressible":false,"extensions":["bz"]},"application/x-bzip2":{"source":"apache","compressible":false,"extensions":["bz2","boz"]},"application/x-cbr":{"source":"apache","extensions":["cbr","cba","cbt","cbz","cb7"]},"application/x-cdlink":{"source":"apache","extensions":["vcd"]},"application/x-cfs-compressed":{"source":"apache","extensions":["cfs"]},"application/x-chat":{"source":"apache","extensions":["chat"]},"application/x-chess-pgn":{"source":"apache","extensions":["pgn"]},"application/x-chrome-extension":{"extensions":["crx"]},"application/x-cocoa":{"source":"nginx","extensions":["cco"]},"application/x-compress":{"source":"apache"},"application/x-conference":{"source":"apache","extensions":["nsc"]},"application/x-cpio":{"source":"apache","extensions":["cpio"]},"application/x-csh":{"source":"apache","extensions":["csh"]},"application/x-deb":{"compressible":false},"application/x-debian-package":{"source":"apache","extensions":["deb","udeb"]},"application/x-dgc-compressed":{"source":"apache","extensions":["dgc"]},"application/x-director":{"source":"apache","extensions":["dir","dcr","dxr","cst","cct","cxt","w3d","fgd","swa"]},"application/x-doom":{"source":"apache","extensions":["wad"]},"application/x-dtbncx+xml":{"source":"apache","compressible":true,"extensions":["ncx"]},"application/x-dtbook+xml":{"source":"apache","compressible":true,"extensions":["dtb"]},"application/x-dtbresource+xml":{"source":"apache","compressible":true,"extensions":["res"]},"application/x-dvi":{"source":"apache","compressible":false,"extensions":["dvi"]},"application/x-envoy":{"source":"apache","extensions":["evy"]},"application/x-eva":{"source":"apache","extensions":["eva"]},"application/x-font-bdf":{"source":"apache","extensions":["bdf"]},"application/x-font-dos":{"source":"apache"},"application/x-font-framemaker":{"source":"apache"},"application/x-font-ghostscript":{"source":"apache","extensions":["gsf"]},"application/x-font-libgrx":{"source":"apache"},"application/x-font-linux-psf":{"source":"apache","extensions":["psf"]},"application/x-font-pcf":{"source":"apache","extensions":["pcf"]},"application/x-font-snf":{"source":"apache","extensions":["snf"]},"application/x-font-speedo":{"source":"apache"},"application/x-font-sunos-news":{"source":"apache"},"application/x-font-type1":{"source":"apache","extensions":["pfa","pfb","pfm","afm"]},"application/x-font-vfont":{"source":"apache"},"application/x-freearc":{"source":"apache","extensions":["arc"]},"application/x-futuresplash":{"source":"apache","extensions":["spl"]},"application/x-gca-compressed":{"source":"apache","extensions":["gca"]},"application/x-glulx":{"source":"apache","extensions":["ulx"]},"application/x-gnumeric":{"source":"apache","extensions":["gnumeric"]},"application/x-gramps-xml":{"source":"apache","extensions":["gramps"]},"application/x-gtar":{"source":"apache","extensions":["gtar"]},"application/x-gzip":{"source":"apache"},"application/x-hdf":{"source":"apache","extensions":["hdf"]},"application/x-httpd-php":{"compressible":true,"extensions":["php"]},"application/x-install-instructions":{"source":"apache","extensions":["install"]},"application/x-iso9660-image":{"source":"apache","extensions":["iso"]},"application/x-iwork-keynote-sffkey":{"extensions":["key"]},"application/x-iwork-numbers-sffnumbers":{"extensions":["numbers"]},"application/x-iwork-pages-sffpages":{"extensions":["pages"]},"application/x-java-archive-diff":{"source":"nginx","extensions":["jardiff"]},"application/x-java-jnlp-file":{"source":"apache","compressible":false,"extensions":["jnlp"]},"application/x-javascript":{"compressible":true},"application/x-keepass2":{"extensions":["kdbx"]},"application/x-latex":{"source":"apache","compressible":false,"extensions":["latex"]},"application/x-lua-bytecode":{"extensions":["luac"]},"application/x-lzh-compressed":{"source":"apache","extensions":["lzh","lha"]},"application/x-makeself":{"source":"nginx","extensions":["run"]},"application/x-mie":{"source":"apache","extensions":["mie"]},"application/x-mobipocket-ebook":{"source":"apache","extensions":["prc","mobi"]},"application/x-mpegurl":{"compressible":false},"application/x-ms-application":{"source":"apache","extensions":["application"]},"application/x-ms-shortcut":{"source":"apache","extensions":["lnk"]},"application/x-ms-wmd":{"source":"apache","extensions":["wmd"]},"application/x-ms-wmz":{"source":"apache","extensions":["wmz"]},"application/x-ms-xbap":{"source":"apache","extensions":["xbap"]},"application/x-msaccess":{"source":"apache","extensions":["mdb"]},"application/x-msbinder":{"source":"apache","extensions":["obd"]},"application/x-mscardfile":{"source":"apache","extensions":["crd"]},"application/x-msclip":{"source":"apache","extensions":["clp"]},"application/x-msdos-program":{"extensions":["exe"]},"application/x-msdownload":{"source":"apache","extensions":["exe","dll","com","bat","msi"]},"application/x-msmediaview":{"source":"apache","extensions":["mvb","m13","m14"]},"application/x-msmetafile":{"source":"apache","extensions":["wmf","wmz","emf","emz"]},"application/x-msmoney":{"source":"apache","extensions":["mny"]},"application/x-mspublisher":{"source":"apache","extensions":["pub"]},"application/x-msschedule":{"source":"apache","extensions":["scd"]},"application/x-msterminal":{"source":"apache","extensions":["trm"]},"application/x-mswrite":{"source":"apache","extensions":["wri"]},"application/x-netcdf":{"source":"apache","extensions":["nc","cdf"]},"application/x-ns-proxy-autoconfig":{"compressible":true,"extensions":["pac"]},"application/x-nzb":{"source":"apache","extensions":["nzb"]},"application/x-perl":{"source":"nginx","extensions":["pl","pm"]},"application/x-pilot":{"source":"nginx","extensions":["prc","pdb"]},"application/x-pkcs12":{"source":"apache","compressible":false,"extensions":["p12","pfx"]},"application/x-pkcs7-certificates":{"source":"apache","extensions":["p7b","spc"]},"application/x-pkcs7-certreqresp":{"source":"apache","extensions":["p7r"]},"application/x-pki-message":{"source":"iana"},"application/x-rar-compressed":{"source":"apache","compressible":false,"extensions":["rar"]},"application/x-redhat-package-manager":{"source":"nginx","extensions":["rpm"]},"application/x-research-info-systems":{"source":"apache","extensions":["ris"]},"application/x-sea":{"source":"nginx","extensions":["sea"]},"application/x-sh":{"source":"apache","compressible":true,"extensions":["sh"]},"application/x-shar":{"source":"apache","extensions":["shar"]},"application/x-shockwave-flash":{"source":"apache","compressible":false,"extensions":["swf"]},"application/x-silverlight-app":{"source":"apache","extensions":["xap"]},"application/x-sql":{"source":"apache","extensions":["sql"]},"application/x-stuffit":{"source":"apache","compressible":false,"extensions":["sit"]},"application/x-stuffitx":{"source":"apache","extensions":["sitx"]},"application/x-subrip":{"source":"apache","extensions":["srt"]},"application/x-sv4cpio":{"source":"apache","extensions":["sv4cpio"]},"application/x-sv4crc":{"source":"apache","extensions":["sv4crc"]},"application/x-t3vm-image":{"source":"apache","extensions":["t3"]},"application/x-tads":{"source":"apache","extensions":["gam"]},"application/x-tar":{"source":"apache","compressible":true,"extensions":["tar"]},"application/x-tcl":{"source":"apache","extensions":["tcl","tk"]},"application/x-tex":{"source":"apache","extensions":["tex"]},"application/x-tex-tfm":{"source":"apache","extensions":["tfm"]},"application/x-texinfo":{"source":"apache","extensions":["texinfo","texi"]},"application/x-tgif":{"source":"apache","extensions":["obj"]},"application/x-ustar":{"source":"apache","extensions":["ustar"]},"application/x-virtualbox-hdd":{"compressible":true,"extensions":["hdd"]},"application/x-virtualbox-ova":{"compressible":true,"extensions":["ova"]},"application/x-virtualbox-ovf":{"compressible":true,"extensions":["ovf"]},"application/x-virtualbox-vbox":{"compressible":true,"extensions":["vbox"]},"application/x-virtualbox-vbox-extpack":{"compressible":false,"extensions":["vbox-extpack"]},"application/x-virtualbox-vdi":{"compressible":true,"extensions":["vdi"]},"application/x-virtualbox-vhd":{"compressible":true,"extensions":["vhd"]},"application/x-virtualbox-vmdk":{"compressible":true,"extensions":["vmdk"]},"application/x-wais-source":{"source":"apache","extensions":["src"]},"application/x-web-app-manifest+json":{"compressible":true,"extensions":["webapp"]},"application/x-www-form-urlencoded":{"source":"iana","compressible":true},"application/x-x509-ca-cert":{"source":"iana","extensions":["der","crt","pem"]},"application/x-x509-ca-ra-cert":{"source":"iana"},"application/x-x509-next-ca-cert":{"source":"iana"},"application/x-xfig":{"source":"apache","extensions":["fig"]},"application/x-xliff+xml":{"source":"apache","compressible":true,"extensions":["xlf"]},"application/x-xpinstall":{"source":"apache","compressible":false,"extensions":["xpi"]},"application/x-xz":{"source":"apache","extensions":["xz"]},"application/x-zmachine":{"source":"apache","extensions":["z1","z2","z3","z4","z5","z6","z7","z8"]},"application/x400-bp":{"source":"iana"},"application/xacml+xml":{"source":"iana","compressible":true},"application/xaml+xml":{"source":"apache","compressible":true,"extensions":["xaml"]},"application/xcap-att+xml":{"source":"iana","compressible":true,"extensions":["xav"]},"application/xcap-caps+xml":{"source":"iana","compressible":true,"extensions":["xca"]},"application/xcap-diff+xml":{"source":"iana","compressible":true,"extensions":["xdf"]},"application/xcap-el+xml":{"source":"iana","compressible":true,"extensions":["xel"]},"application/xcap-error+xml":{"source":"iana","compressible":true},"application/xcap-ns+xml":{"source":"iana","compressible":true,"extensions":["xns"]},"application/xcon-conference-info+xml":{"source":"iana","compressible":true},"application/xcon-conference-info-diff+xml":{"source":"iana","compressible":true},"application/xenc+xml":{"source":"iana","compressible":true,"extensions":["xenc"]},"application/xhtml+xml":{"source":"iana","compressible":true,"extensions":["xhtml","xht"]},"application/xhtml-voice+xml":{"source":"apache","compressible":true},"application/xliff+xml":{"source":"iana","compressible":true,"extensions":["xlf"]},"application/xml":{"source":"iana","compressible":true,"extensions":["xml","xsl","xsd","rng"]},"application/xml-dtd":{"source":"iana","compressible":true,"extensions":["dtd"]},"application/xml-external-parsed-entity":{"source":"iana"},"application/xml-patch+xml":{"source":"iana","compressible":true},"application/xmpp+xml":{"source":"iana","compressible":true},"application/xop+xml":{"source":"iana","compressible":true,"extensions":["xop"]},"application/xproc+xml":{"source":"apache","compressible":true,"extensions":["xpl"]},"application/xslt+xml":{"source":"iana","compressible":true,"extensions":["xsl","xslt"]},"application/xspf+xml":{"source":"apache","compressible":true,"extensions":["xspf"]},"application/xv+xml":{"source":"iana","compressible":true,"extensions":["mxml","xhvml","xvml","xvm"]},"application/yang":{"source":"iana","extensions":["yang"]},"application/yang-data+json":{"source":"iana","compressible":true},"application/yang-data+xml":{"source":"iana","compressible":true},"application/yang-patch+json":{"source":"iana","compressible":true},"application/yang-patch+xml":{"source":"iana","compressible":true},"application/yin+xml":{"source":"iana","compressible":true,"extensions":["yin"]},"application/zip":{"source":"iana","compressible":false,"extensions":["zip"]},"application/zlib":{"source":"iana"},"application/zstd":{"source":"iana"},"audio/1d-interleaved-parityfec":{"source":"iana"},"audio/32kadpcm":{"source":"iana"},"audio/3gpp":{"source":"iana","compressible":false,"extensions":["3gpp"]},"audio/3gpp2":{"source":"iana"},"audio/aac":{"source":"iana"},"audio/ac3":{"source":"iana"},"audio/adpcm":{"source":"apache","extensions":["adp"]},"audio/amr":{"source":"iana","extensions":["amr"]},"audio/amr-wb":{"source":"iana"},"audio/amr-wb+":{"source":"iana"},"audio/aptx":{"source":"iana"},"audio/asc":{"source":"iana"},"audio/atrac-advanced-lossless":{"source":"iana"},"audio/atrac-x":{"source":"iana"},"audio/atrac3":{"source":"iana"},"audio/basic":{"source":"iana","compressible":false,"extensions":["au","snd"]},"audio/bv16":{"source":"iana"},"audio/bv32":{"source":"iana"},"audio/clearmode":{"source":"iana"},"audio/cn":{"source":"iana"},"audio/dat12":{"source":"iana"},"audio/dls":{"source":"iana"},"audio/dsr-es201108":{"source":"iana"},"audio/dsr-es202050":{"source":"iana"},"audio/dsr-es202211":{"source":"iana"},"audio/dsr-es202212":{"source":"iana"},"audio/dv":{"source":"iana"},"audio/dvi4":{"source":"iana"},"audio/eac3":{"source":"iana"},"audio/encaprtp":{"source":"iana"},"audio/evrc":{"source":"iana"},"audio/evrc-qcp":{"source":"iana"},"audio/evrc0":{"source":"iana"},"audio/evrc1":{"source":"iana"},"audio/evrcb":{"source":"iana"},"audio/evrcb0":{"source":"iana"},"audio/evrcb1":{"source":"iana"},"audio/evrcnw":{"source":"iana"},"audio/evrcnw0":{"source":"iana"},"audio/evrcnw1":{"source":"iana"},"audio/evrcwb":{"source":"iana"},"audio/evrcwb0":{"source":"iana"},"audio/evrcwb1":{"source":"iana"},"audio/evs":{"source":"iana"},"audio/flexfec":{"source":"iana"},"audio/fwdred":{"source":"iana"},"audio/g711-0":{"source":"iana"},"audio/g719":{"source":"iana"},"audio/g722":{"source":"iana"},"audio/g7221":{"source":"iana"},"audio/g723":{"source":"iana"},"audio/g726-16":{"source":"iana"},"audio/g726-24":{"source":"iana"},"audio/g726-32":{"source":"iana"},"audio/g726-40":{"source":"iana"},"audio/g728":{"source":"iana"},"audio/g729":{"source":"iana"},"audio/g7291":{"source":"iana"},"audio/g729d":{"source":"iana"},"audio/g729e":{"source":"iana"},"audio/gsm":{"source":"iana"},"audio/gsm-efr":{"source":"iana"},"audio/gsm-hr-08":{"source":"iana"},"audio/ilbc":{"source":"iana"},"audio/ip-mr_v2.5":{"source":"iana"},"audio/isac":{"source":"apache"},"audio/l16":{"source":"iana"},"audio/l20":{"source":"iana"},"audio/l24":{"source":"iana","compressible":false},"audio/l8":{"source":"iana"},"audio/lpc":{"source":"iana"},"audio/melp":{"source":"iana"},"audio/melp1200":{"source":"iana"},"audio/melp2400":{"source":"iana"},"audio/melp600":{"source":"iana"},"audio/mhas":{"source":"iana"},"audio/midi":{"source":"apache","extensions":["mid","midi","kar","rmi"]},"audio/mobile-xmf":{"source":"iana","extensions":["mxmf"]},"audio/mp3":{"compressible":false,"extensions":["mp3"]},"audio/mp4":{"source":"iana","compressible":false,"extensions":["m4a","mp4a"]},"audio/mp4a-latm":{"source":"iana"},"audio/mpa":{"source":"iana"},"audio/mpa-robust":{"source":"iana"},"audio/mpeg":{"source":"iana","compressible":false,"extensions":["mpga","mp2","mp2a","mp3","m2a","m3a"]},"audio/mpeg4-generic":{"source":"iana"},"audio/musepack":{"source":"apache"},"audio/ogg":{"source":"iana","compressible":false,"extensions":["oga","ogg","spx","opus"]},"audio/opus":{"source":"iana"},"audio/parityfec":{"source":"iana"},"audio/pcma":{"source":"iana"},"audio/pcma-wb":{"source":"iana"},"audio/pcmu":{"source":"iana"},"audio/pcmu-wb":{"source":"iana"},"audio/prs.sid":{"source":"iana"},"audio/qcelp":{"source":"iana"},"audio/raptorfec":{"source":"iana"},"audio/red":{"source":"iana"},"audio/rtp-enc-aescm128":{"source":"iana"},"audio/rtp-midi":{"source":"iana"},"audio/rtploopback":{"source":"iana"},"audio/rtx":{"source":"iana"},"audio/s3m":{"source":"apache","extensions":["s3m"]},"audio/scip":{"source":"iana"},"audio/silk":{"source":"apache","extensions":["sil"]},"audio/smv":{"source":"iana"},"audio/smv-qcp":{"source":"iana"},"audio/smv0":{"source":"iana"},"audio/sofa":{"source":"iana"},"audio/sp-midi":{"source":"iana"},"audio/speex":{"source":"iana"},"audio/t140c":{"source":"iana"},"audio/t38":{"source":"iana"},"audio/telephone-event":{"source":"iana"},"audio/tetra_acelp":{"source":"iana"},"audio/tetra_acelp_bb":{"source":"iana"},"audio/tone":{"source":"iana"},"audio/tsvcis":{"source":"iana"},"audio/uemclip":{"source":"iana"},"audio/ulpfec":{"source":"iana"},"audio/usac":{"source":"iana"},"audio/vdvi":{"source":"iana"},"audio/vmr-wb":{"source":"iana"},"audio/vnd.3gpp.iufp":{"source":"iana"},"audio/vnd.4sb":{"source":"iana"},"audio/vnd.audiokoz":{"source":"iana"},"audio/vnd.celp":{"source":"iana"},"audio/vnd.cisco.nse":{"source":"iana"},"audio/vnd.cmles.radio-events":{"source":"iana"},"audio/vnd.cns.anp1":{"source":"iana"},"audio/vnd.cns.inf1":{"source":"iana"},"audio/vnd.dece.audio":{"source":"iana","extensions":["uva","uvva"]},"audio/vnd.digital-winds":{"source":"iana","extensions":["eol"]},"audio/vnd.dlna.adts":{"source":"iana"},"audio/vnd.dolby.heaac.1":{"source":"iana"},"audio/vnd.dolby.heaac.2":{"source":"iana"},"audio/vnd.dolby.mlp":{"source":"iana"},"audio/vnd.dolby.mps":{"source":"iana"},"audio/vnd.dolby.pl2":{"source":"iana"},"audio/vnd.dolby.pl2x":{"source":"iana"},"audio/vnd.dolby.pl2z":{"source":"iana"},"audio/vnd.dolby.pulse.1":{"source":"iana"},"audio/vnd.dra":{"source":"iana","extensions":["dra"]},"audio/vnd.dts":{"source":"iana","extensions":["dts"]},"audio/vnd.dts.hd":{"source":"iana","extensions":["dtshd"]},"audio/vnd.dts.uhd":{"source":"iana"},"audio/vnd.dvb.file":{"source":"iana"},"audio/vnd.everad.plj":{"source":"iana"},"audio/vnd.hns.audio":{"source":"iana"},"audio/vnd.lucent.voice":{"source":"iana","extensions":["lvp"]},"audio/vnd.ms-playready.media.pya":{"source":"iana","extensions":["pya"]},"audio/vnd.nokia.mobile-xmf":{"source":"iana"},"audio/vnd.nortel.vbk":{"source":"iana"},"audio/vnd.nuera.ecelp4800":{"source":"iana","extensions":["ecelp4800"]},"audio/vnd.nuera.ecelp7470":{"source":"iana","extensions":["ecelp7470"]},"audio/vnd.nuera.ecelp9600":{"source":"iana","extensions":["ecelp9600"]},"audio/vnd.octel.sbc":{"source":"iana"},"audio/vnd.presonus.multitrack":{"source":"iana"},"audio/vnd.qcelp":{"source":"iana"},"audio/vnd.rhetorex.32kadpcm":{"source":"iana"},"audio/vnd.rip":{"source":"iana","extensions":["rip"]},"audio/vnd.rn-realaudio":{"compressible":false},"audio/vnd.sealedmedia.softseal.mpeg":{"source":"iana"},"audio/vnd.vmx.cvsd":{"source":"iana"},"audio/vnd.wave":{"compressible":false},"audio/vorbis":{"source":"iana","compressible":false},"audio/vorbis-config":{"source":"iana"},"audio/wav":{"compressible":false,"extensions":["wav"]},"audio/wave":{"compressible":false,"extensions":["wav"]},"audio/webm":{"source":"apache","compressible":false,"extensions":["weba"]},"audio/x-aac":{"source":"apache","compressible":false,"extensions":["aac"]},"audio/x-aiff":{"source":"apache","extensions":["aif","aiff","aifc"]},"audio/x-caf":{"source":"apache","compressible":false,"extensions":["caf"]},"audio/x-flac":{"source":"apache","extensions":["flac"]},"audio/x-m4a":{"source":"nginx","extensions":["m4a"]},"audio/x-matroska":{"source":"apache","extensions":["mka"]},"audio/x-mpegurl":{"source":"apache","extensions":["m3u"]},"audio/x-ms-wax":{"source":"apache","extensions":["wax"]},"audio/x-ms-wma":{"source":"apache","extensions":["wma"]},"audio/x-pn-realaudio":{"source":"apache","extensions":["ram","ra"]},"audio/x-pn-realaudio-plugin":{"source":"apache","extensions":["rmp"]},"audio/x-realaudio":{"source":"nginx","extensions":["ra"]},"audio/x-tta":{"source":"apache"},"audio/x-wav":{"source":"apache","extensions":["wav"]},"audio/xm":{"source":"apache","extensions":["xm"]},"chemical/x-cdx":{"source":"apache","extensions":["cdx"]},"chemical/x-cif":{"source":"apache","extensions":["cif"]},"chemical/x-cmdf":{"source":"apache","extensions":["cmdf"]},"chemical/x-cml":{"source":"apache","extensions":["cml"]},"chemical/x-csml":{"source":"apache","extensions":["csml"]},"chemical/x-pdb":{"source":"apache"},"chemical/x-xyz":{"source":"apache","extensions":["xyz"]},"font/collection":{"source":"iana","extensions":["ttc"]},"font/otf":{"source":"iana","compressible":true,"extensions":["otf"]},"font/sfnt":{"source":"iana"},"font/ttf":{"source":"iana","compressible":true,"extensions":["ttf"]},"font/woff":{"source":"iana","extensions":["woff"]},"font/woff2":{"source":"iana","extensions":["woff2"]},"image/aces":{"source":"iana","extensions":["exr"]},"image/apng":{"compressible":false,"extensions":["apng"]},"image/avci":{"source":"iana","extensions":["avci"]},"image/avcs":{"source":"iana","extensions":["avcs"]},"image/avif":{"source":"iana","compressible":false,"extensions":["avif"]},"image/bmp":{"source":"iana","compressible":true,"extensions":["bmp"]},"image/cgm":{"source":"iana","extensions":["cgm"]},"image/dicom-rle":{"source":"iana","extensions":["drle"]},"image/emf":{"source":"iana","extensions":["emf"]},"image/fits":{"source":"iana","extensions":["fits"]},"image/g3fax":{"source":"iana","extensions":["g3"]},"image/gif":{"source":"iana","compressible":false,"extensions":["gif"]},"image/heic":{"source":"iana","extensions":["heic"]},"image/heic-sequence":{"source":"iana","extensions":["heics"]},"image/heif":{"source":"iana","extensions":["heif"]},"image/heif-sequence":{"source":"iana","extensions":["heifs"]},"image/hej2k":{"source":"iana","extensions":["hej2"]},"image/hsj2":{"source":"iana","extensions":["hsj2"]},"image/ief":{"source":"iana","extensions":["ief"]},"image/jls":{"source":"iana","extensions":["jls"]},"image/jp2":{"source":"iana","compressible":false,"extensions":["jp2","jpg2"]},"image/jpeg":{"source":"iana","compressible":false,"extensions":["jpeg","jpg","jpe"]},"image/jph":{"source":"iana","extensions":["jph"]},"image/jphc":{"source":"iana","extensions":["jhc"]},"image/jpm":{"source":"iana","compressible":false,"extensions":["jpm"]},"image/jpx":{"source":"iana","compressible":false,"extensions":["jpx","jpf"]},"image/jxr":{"source":"iana","extensions":["jxr"]},"image/jxra":{"source":"iana","extensions":["jxra"]},"image/jxrs":{"source":"iana","extensions":["jxrs"]},"image/jxs":{"source":"iana","extensions":["jxs"]},"image/jxsc":{"source":"iana","extensions":["jxsc"]},"image/jxsi":{"source":"iana","extensions":["jxsi"]},"image/jxss":{"source":"iana","extensions":["jxss"]},"image/ktx":{"source":"iana","extensions":["ktx"]},"image/ktx2":{"source":"iana","extensions":["ktx2"]},"image/naplps":{"source":"iana"},"image/pjpeg":{"compressible":false},"image/png":{"source":"iana","compressible":false,"extensions":["png"]},"image/prs.btif":{"source":"iana","extensions":["btif"]},"image/prs.pti":{"source":"iana","extensions":["pti"]},"image/pwg-raster":{"source":"iana"},"image/sgi":{"source":"apache","extensions":["sgi"]},"image/svg+xml":{"source":"iana","compressible":true,"extensions":["svg","svgz"]},"image/t38":{"source":"iana","extensions":["t38"]},"image/tiff":{"source":"iana","compressible":false,"extensions":["tif","tiff"]},"image/tiff-fx":{"source":"iana","extensions":["tfx"]},"image/vnd.adobe.photoshop":{"source":"iana","compressible":true,"extensions":["psd"]},"image/vnd.airzip.accelerator.azv":{"source":"iana","extensions":["azv"]},"image/vnd.cns.inf2":{"source":"iana"},"image/vnd.dece.graphic":{"source":"iana","extensions":["uvi","uvvi","uvg","uvvg"]},"image/vnd.djvu":{"source":"iana","extensions":["djvu","djv"]},"image/vnd.dvb.subtitle":{"source":"iana","extensions":["sub"]},"image/vnd.dwg":{"source":"iana","extensions":["dwg"]},"image/vnd.dxf":{"source":"iana","extensions":["dxf"]},"image/vnd.fastbidsheet":{"source":"iana","extensions":["fbs"]},"image/vnd.fpx":{"source":"iana","extensions":["fpx"]},"image/vnd.fst":{"source":"iana","extensions":["fst"]},"image/vnd.fujixerox.edmics-mmr":{"source":"iana","extensions":["mmr"]},"image/vnd.fujixerox.edmics-rlc":{"source":"iana","extensions":["rlc"]},"image/vnd.globalgraphics.pgb":{"source":"iana"},"image/vnd.microsoft.icon":{"source":"iana","compressible":true,"extensions":["ico"]},"image/vnd.mix":{"source":"iana"},"image/vnd.mozilla.apng":{"source":"iana"},"image/vnd.ms-dds":{"compressible":true,"extensions":["dds"]},"image/vnd.ms-modi":{"source":"iana","extensions":["mdi"]},"image/vnd.ms-photo":{"source":"apache","extensions":["wdp"]},"image/vnd.net-fpx":{"source":"iana","extensions":["npx"]},"image/vnd.pco.b16":{"source":"iana","extensions":["b16"]},"image/vnd.radiance":{"source":"iana"},"image/vnd.sealed.png":{"source":"iana"},"image/vnd.sealedmedia.softseal.gif":{"source":"iana"},"image/vnd.sealedmedia.softseal.jpg":{"source":"iana"},"image/vnd.svf":{"source":"iana"},"image/vnd.tencent.tap":{"source":"iana","extensions":["tap"]},"image/vnd.valve.source.texture":{"source":"iana","extensions":["vtf"]},"image/vnd.wap.wbmp":{"source":"iana","extensions":["wbmp"]},"image/vnd.xiff":{"source":"iana","extensions":["xif"]},"image/vnd.zbrush.pcx":{"source":"iana","extensions":["pcx"]},"image/webp":{"source":"apache","extensions":["webp"]},"image/wmf":{"source":"iana","extensions":["wmf"]},"image/x-3ds":{"source":"apache","extensions":["3ds"]},"image/x-cmu-raster":{"source":"apache","extensions":["ras"]},"image/x-cmx":{"source":"apache","extensions":["cmx"]},"image/x-freehand":{"source":"apache","extensions":["fh","fhc","fh4","fh5","fh7"]},"image/x-icon":{"source":"apache","compressible":true,"extensions":["ico"]},"image/x-jng":{"source":"nginx","extensions":["jng"]},"image/x-mrsid-image":{"source":"apache","extensions":["sid"]},"image/x-ms-bmp":{"source":"nginx","compressible":true,"extensions":["bmp"]},"image/x-pcx":{"source":"apache","extensions":["pcx"]},"image/x-pict":{"source":"apache","extensions":["pic","pct"]},"image/x-portable-anymap":{"source":"apache","extensions":["pnm"]},"image/x-portable-bitmap":{"source":"apache","extensions":["pbm"]},"image/x-portable-graymap":{"source":"apache","extensions":["pgm"]},"image/x-portable-pixmap":{"source":"apache","extensions":["ppm"]},"image/x-rgb":{"source":"apache","extensions":["rgb"]},"image/x-tga":{"source":"apache","extensions":["tga"]},"image/x-xbitmap":{"source":"apache","extensions":["xbm"]},"image/x-xcf":{"compressible":false},"image/x-xpixmap":{"source":"apache","extensions":["xpm"]},"image/x-xwindowdump":{"source":"apache","extensions":["xwd"]},"message/cpim":{"source":"iana"},"message/delivery-status":{"source":"iana"},"message/disposition-notification":{"source":"iana","extensions":["disposition-notification"]},"message/external-body":{"source":"iana"},"message/feedback-report":{"source":"iana"},"message/global":{"source":"iana","extensions":["u8msg"]},"message/global-delivery-status":{"source":"iana","extensions":["u8dsn"]},"message/global-disposition-notification":{"source":"iana","extensions":["u8mdn"]},"message/global-headers":{"source":"iana","extensions":["u8hdr"]},"message/http":{"source":"iana","compressible":false},"message/imdn+xml":{"source":"iana","compressible":true},"message/news":{"source":"iana"},"message/partial":{"source":"iana","compressible":false},"message/rfc822":{"source":"iana","compressible":true,"extensions":["eml","mime"]},"message/s-http":{"source":"iana"},"message/sip":{"source":"iana"},"message/sipfrag":{"source":"iana"},"message/tracking-status":{"source":"iana"},"message/vnd.si.simp":{"source":"iana"},"message/vnd.wfa.wsc":{"source":"iana","extensions":["wsc"]},"model/3mf":{"source":"iana","extensions":["3mf"]},"model/e57":{"source":"iana"},"model/gltf+json":{"source":"iana","compressible":true,"extensions":["gltf"]},"model/gltf-binary":{"source":"iana","compressible":true,"extensions":["glb"]},"model/iges":{"source":"iana","compressible":false,"extensions":["igs","iges"]},"model/mesh":{"source":"iana","compressible":false,"extensions":["msh","mesh","silo"]},"model/mtl":{"source":"iana","extensions":["mtl"]},"model/obj":{"source":"iana","extensions":["obj"]},"model/step":{"source":"iana"},"model/step+xml":{"source":"iana","compressible":true,"extensions":["stpx"]},"model/step+zip":{"source":"iana","compressible":false,"extensions":["stpz"]},"model/step-xml+zip":{"source":"iana","compressible":false,"extensions":["stpxz"]},"model/stl":{"source":"iana","extensions":["stl"]},"model/vnd.collada+xml":{"source":"iana","compressible":true,"extensions":["dae"]},"model/vnd.dwf":{"source":"iana","extensions":["dwf"]},"model/vnd.flatland.3dml":{"source":"iana"},"model/vnd.gdl":{"source":"iana","extensions":["gdl"]},"model/vnd.gs-gdl":{"source":"apache"},"model/vnd.gs.gdl":{"source":"iana"},"model/vnd.gtw":{"source":"iana","extensions":["gtw"]},"model/vnd.moml+xml":{"source":"iana","compressible":true},"model/vnd.mts":{"source":"iana","extensions":["mts"]},"model/vnd.opengex":{"source":"iana","extensions":["ogex"]},"model/vnd.parasolid.transmit.binary":{"source":"iana","extensions":["x_b"]},"model/vnd.parasolid.transmit.text":{"source":"iana","extensions":["x_t"]},"model/vnd.pytha.pyox":{"source":"iana"},"model/vnd.rosette.annotated-data-model":{"source":"iana"},"model/vnd.sap.vds":{"source":"iana","extensions":["vds"]},"model/vnd.usdz+zip":{"source":"iana","compressible":false,"extensions":["usdz"]},"model/vnd.valve.source.compiled-map":{"source":"iana","extensions":["bsp"]},"model/vnd.vtu":{"source":"iana","extensions":["vtu"]},"model/vrml":{"source":"iana","compressible":false,"extensions":["wrl","vrml"]},"model/x3d+binary":{"source":"apache","compressible":false,"extensions":["x3db","x3dbz"]},"model/x3d+fastinfoset":{"source":"iana","extensions":["x3db"]},"model/x3d+vrml":{"source":"apache","compressible":false,"extensions":["x3dv","x3dvz"]},"model/x3d+xml":{"source":"iana","compressible":true,"extensions":["x3d","x3dz"]},"model/x3d-vrml":{"source":"iana","extensions":["x3dv"]},"multipart/alternative":{"source":"iana","compressible":false},"multipart/appledouble":{"source":"iana"},"multipart/byteranges":{"source":"iana"},"multipart/digest":{"source":"iana"},"multipart/encrypted":{"source":"iana","compressible":false},"multipart/form-data":{"source":"iana","compressible":false},"multipart/header-set":{"source":"iana"},"multipart/mixed":{"source":"iana"},"multipart/multilingual":{"source":"iana"},"multipart/parallel":{"source":"iana"},"multipart/related":{"source":"iana","compressible":false},"multipart/report":{"source":"iana"},"multipart/signed":{"source":"iana","compressible":false},"multipart/vnd.bint.med-plus":{"source":"iana"},"multipart/voice-message":{"source":"iana"},"multipart/x-mixed-replace":{"source":"iana"},"text/1d-interleaved-parityfec":{"source":"iana"},"text/cache-manifest":{"source":"iana","compressible":true,"extensions":["appcache","manifest"]},"text/calendar":{"source":"iana","extensions":["ics","ifb"]},"text/calender":{"compressible":true},"text/cmd":{"compressible":true},"text/coffeescript":{"extensions":["coffee","litcoffee"]},"text/cql":{"source":"iana"},"text/cql-expression":{"source":"iana"},"text/cql-identifier":{"source":"iana"},"text/css":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["css"]},"text/csv":{"source":"iana","compressible":true,"extensions":["csv"]},"text/csv-schema":{"source":"iana"},"text/directory":{"source":"iana"},"text/dns":{"source":"iana"},"text/ecmascript":{"source":"iana"},"text/encaprtp":{"source":"iana"},"text/enriched":{"source":"iana"},"text/fhirpath":{"source":"iana"},"text/flexfec":{"source":"iana"},"text/fwdred":{"source":"iana"},"text/gff3":{"source":"iana"},"text/grammar-ref-list":{"source":"iana"},"text/html":{"source":"iana","compressible":true,"extensions":["html","htm","shtml"]},"text/jade":{"extensions":["jade"]},"text/javascript":{"source":"iana","compressible":true},"text/jcr-cnd":{"source":"iana"},"text/jsx":{"compressible":true,"extensions":["jsx"]},"text/less":{"compressible":true,"extensions":["less"]},"text/markdown":{"source":"iana","compressible":true,"extensions":["markdown","md"]},"text/mathml":{"source":"nginx","extensions":["mml"]},"text/mdx":{"compressible":true,"extensions":["mdx"]},"text/mizar":{"source":"iana"},"text/n3":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["n3"]},"text/parameters":{"source":"iana","charset":"UTF-8"},"text/parityfec":{"source":"iana"},"text/plain":{"source":"iana","compressible":true,"extensions":["txt","text","conf","def","list","log","in","ini"]},"text/provenance-notation":{"source":"iana","charset":"UTF-8"},"text/prs.fallenstein.rst":{"source":"iana"},"text/prs.lines.tag":{"source":"iana","extensions":["dsc"]},"text/prs.prop.logic":{"source":"iana"},"text/raptorfec":{"source":"iana"},"text/red":{"source":"iana"},"text/rfc822-headers":{"source":"iana"},"text/richtext":{"source":"iana","compressible":true,"extensions":["rtx"]},"text/rtf":{"source":"iana","compressible":true,"extensions":["rtf"]},"text/rtp-enc-aescm128":{"source":"iana"},"text/rtploopback":{"source":"iana"},"text/rtx":{"source":"iana"},"text/sgml":{"source":"iana","extensions":["sgml","sgm"]},"text/shaclc":{"source":"iana"},"text/shex":{"source":"iana","extensions":["shex"]},"text/slim":{"extensions":["slim","slm"]},"text/spdx":{"source":"iana","extensions":["spdx"]},"text/strings":{"source":"iana"},"text/stylus":{"extensions":["stylus","styl"]},"text/t140":{"source":"iana"},"text/tab-separated-values":{"source":"iana","compressible":true,"extensions":["tsv"]},"text/troff":{"source":"iana","extensions":["t","tr","roff","man","me","ms"]},"text/turtle":{"source":"iana","charset":"UTF-8","extensions":["ttl"]},"text/ulpfec":{"source":"iana"},"text/uri-list":{"source":"iana","compressible":true,"extensions":["uri","uris","urls"]},"text/vcard":{"source":"iana","compressible":true,"extensions":["vcard"]},"text/vnd.a":{"source":"iana"},"text/vnd.abc":{"source":"iana"},"text/vnd.ascii-art":{"source":"iana"},"text/vnd.curl":{"source":"iana","extensions":["curl"]},"text/vnd.curl.dcurl":{"source":"apache","extensions":["dcurl"]},"text/vnd.curl.mcurl":{"source":"apache","extensions":["mcurl"]},"text/vnd.curl.scurl":{"source":"apache","extensions":["scurl"]},"text/vnd.debian.copyright":{"source":"iana","charset":"UTF-8"},"text/vnd.dmclientscript":{"source":"iana"},"text/vnd.dvb.subtitle":{"source":"iana","extensions":["sub"]},"text/vnd.esmertec.theme-descriptor":{"source":"iana","charset":"UTF-8"},"text/vnd.familysearch.gedcom":{"source":"iana","extensions":["ged"]},"text/vnd.ficlab.flt":{"source":"iana"},"text/vnd.fly":{"source":"iana","extensions":["fly"]},"text/vnd.fmi.flexstor":{"source":"iana","extensions":["flx"]},"text/vnd.gml":{"source":"iana"},"text/vnd.graphviz":{"source":"iana","extensions":["gv"]},"text/vnd.hans":{"source":"iana"},"text/vnd.hgl":{"source":"iana"},"text/vnd.in3d.3dml":{"source":"iana","extensions":["3dml"]},"text/vnd.in3d.spot":{"source":"iana","extensions":["spot"]},"text/vnd.iptc.newsml":{"source":"iana"},"text/vnd.iptc.nitf":{"source":"iana"},"text/vnd.latex-z":{"source":"iana"},"text/vnd.motorola.reflex":{"source":"iana"},"text/vnd.ms-mediapackage":{"source":"iana"},"text/vnd.net2phone.commcenter.command":{"source":"iana"},"text/vnd.radisys.msml-basic-layout":{"source":"iana"},"text/vnd.senx.warpscript":{"source":"iana"},"text/vnd.si.uricatalogue":{"source":"iana"},"text/vnd.sosi":{"source":"iana"},"text/vnd.sun.j2me.app-descriptor":{"source":"iana","charset":"UTF-8","extensions":["jad"]},"text/vnd.trolltech.linguist":{"source":"iana","charset":"UTF-8"},"text/vnd.wap.si":{"source":"iana"},"text/vnd.wap.sl":{"source":"iana"},"text/vnd.wap.wml":{"source":"iana","extensions":["wml"]},"text/vnd.wap.wmlscript":{"source":"iana","extensions":["wmls"]},"text/vtt":{"source":"iana","charset":"UTF-8","compressible":true,"extensions":["vtt"]},"text/x-asm":{"source":"apache","extensions":["s","asm"]},"text/x-c":{"source":"apache","extensions":["c","cc","cxx","cpp","h","hh","dic"]},"text/x-component":{"source":"nginx","extensions":["htc"]},"text/x-fortran":{"source":"apache","extensions":["f","for","f77","f90"]},"text/x-gwt-rpc":{"compressible":true},"text/x-handlebars-template":{"extensions":["hbs"]},"text/x-java-source":{"source":"apache","extensions":["java"]},"text/x-jquery-tmpl":{"compressible":true},"text/x-lua":{"extensions":["lua"]},"text/x-markdown":{"compressible":true,"extensions":["mkd"]},"text/x-nfo":{"source":"apache","extensions":["nfo"]},"text/x-opml":{"source":"apache","extensions":["opml"]},"text/x-org":{"compressible":true,"extensions":["org"]},"text/x-pascal":{"source":"apache","extensions":["p","pas"]},"text/x-processing":{"compressible":true,"extensions":["pde"]},"text/x-sass":{"extensions":["sass"]},"text/x-scss":{"extensions":["scss"]},"text/x-setext":{"source":"apache","extensions":["etx"]},"text/x-sfv":{"source":"apache","extensions":["sfv"]},"text/x-suse-ymp":{"compressible":true,"extensions":["ymp"]},"text/x-uuencode":{"source":"apache","extensions":["uu"]},"text/x-vcalendar":{"source":"apache","extensions":["vcs"]},"text/x-vcard":{"source":"apache","extensions":["vcf"]},"text/xml":{"source":"iana","compressible":true,"extensions":["xml"]},"text/xml-external-parsed-entity":{"source":"iana"},"text/yaml":{"compressible":true,"extensions":["yaml","yml"]},"video/1d-interleaved-parityfec":{"source":"iana"},"video/3gpp":{"source":"iana","extensions":["3gp","3gpp"]},"video/3gpp-tt":{"source":"iana"},"video/3gpp2":{"source":"iana","extensions":["3g2"]},"video/av1":{"source":"iana"},"video/bmpeg":{"source":"iana"},"video/bt656":{"source":"iana"},"video/celb":{"source":"iana"},"video/dv":{"source":"iana"},"video/encaprtp":{"source":"iana"},"video/ffv1":{"source":"iana"},"video/flexfec":{"source":"iana"},"video/h261":{"source":"iana","extensions":["h261"]},"video/h263":{"source":"iana","extensions":["h263"]},"video/h263-1998":{"source":"iana"},"video/h263-2000":{"source":"iana"},"video/h264":{"source":"iana","extensions":["h264"]},"video/h264-rcdo":{"source":"iana"},"video/h264-svc":{"source":"iana"},"video/h265":{"source":"iana"},"video/iso.segment":{"source":"iana","extensions":["m4s"]},"video/jpeg":{"source":"iana","extensions":["jpgv"]},"video/jpeg2000":{"source":"iana"},"video/jpm":{"source":"apache","extensions":["jpm","jpgm"]},"video/jxsv":{"source":"iana"},"video/mj2":{"source":"iana","extensions":["mj2","mjp2"]},"video/mp1s":{"source":"iana"},"video/mp2p":{"source":"iana"},"video/mp2t":{"source":"iana","extensions":["ts"]},"video/mp4":{"source":"iana","compressible":false,"extensions":["mp4","mp4v","mpg4"]},"video/mp4v-es":{"source":"iana"},"video/mpeg":{"source":"iana","compressible":false,"extensions":["mpeg","mpg","mpe","m1v","m2v"]},"video/mpeg4-generic":{"source":"iana"},"video/mpv":{"source":"iana"},"video/nv":{"source":"iana"},"video/ogg":{"source":"iana","compressible":false,"extensions":["ogv"]},"video/parityfec":{"source":"iana"},"video/pointer":{"source":"iana"},"video/quicktime":{"source":"iana","compressible":false,"extensions":["qt","mov"]},"video/raptorfec":{"source":"iana"},"video/raw":{"source":"iana"},"video/rtp-enc-aescm128":{"source":"iana"},"video/rtploopback":{"source":"iana"},"video/rtx":{"source":"iana"},"video/scip":{"source":"iana"},"video/smpte291":{"source":"iana"},"video/smpte292m":{"source":"iana"},"video/ulpfec":{"source":"iana"},"video/vc1":{"source":"iana"},"video/vc2":{"source":"iana"},"video/vnd.cctv":{"source":"iana"},"video/vnd.dece.hd":{"source":"iana","extensions":["uvh","uvvh"]},"video/vnd.dece.mobile":{"source":"iana","extensions":["uvm","uvvm"]},"video/vnd.dece.mp4":{"source":"iana"},"video/vnd.dece.pd":{"source":"iana","extensions":["uvp","uvvp"]},"video/vnd.dece.sd":{"source":"iana","extensions":["uvs","uvvs"]},"video/vnd.dece.video":{"source":"iana","extensions":["uvv","uvvv"]},"video/vnd.directv.mpeg":{"source":"iana"},"video/vnd.directv.mpeg-tts":{"source":"iana"},"video/vnd.dlna.mpeg-tts":{"source":"iana"},"video/vnd.dvb.file":{"source":"iana","extensions":["dvb"]},"video/vnd.fvt":{"source":"iana","extensions":["fvt"]},"video/vnd.hns.video":{"source":"iana"},"video/vnd.iptvforum.1dparityfec-1010":{"source":"iana"},"video/vnd.iptvforum.1dparityfec-2005":{"source":"iana"},"video/vnd.iptvforum.2dparityfec-1010":{"source":"iana"},"video/vnd.iptvforum.2dparityfec-2005":{"source":"iana"},"video/vnd.iptvforum.ttsavc":{"source":"iana"},"video/vnd.iptvforum.ttsmpeg2":{"source":"iana"},"video/vnd.motorola.video":{"source":"iana"},"video/vnd.motorola.videop":{"source":"iana"},"video/vnd.mpegurl":{"source":"iana","extensions":["mxu","m4u"]},"video/vnd.ms-playready.media.pyv":{"source":"iana","extensions":["pyv"]},"video/vnd.nokia.interleaved-multimedia":{"source":"iana"},"video/vnd.nokia.mp4vr":{"source":"iana"},"video/vnd.nokia.videovoip":{"source":"iana"},"video/vnd.objectvideo":{"source":"iana"},"video/vnd.radgamettools.bink":{"source":"iana"},"video/vnd.radgamettools.smacker":{"source":"iana"},"video/vnd.sealed.mpeg1":{"source":"iana"},"video/vnd.sealed.mpeg4":{"source":"iana"},"video/vnd.sealed.swf":{"source":"iana"},"video/vnd.sealedmedia.softseal.mov":{"source":"iana"},"video/vnd.uvvu.mp4":{"source":"iana","extensions":["uvu","uvvu"]},"video/vnd.vivo":{"source":"iana","extensions":["viv"]},"video/vnd.youtube.yt":{"source":"iana"},"video/vp8":{"source":"iana"},"video/vp9":{"source":"iana"},"video/webm":{"source":"apache","compressible":false,"extensions":["webm"]},"video/x-f4v":{"source":"apache","extensions":["f4v"]},"video/x-fli":{"source":"apache","extensions":["fli"]},"video/x-flv":{"source":"apache","compressible":false,"extensions":["flv"]},"video/x-m4v":{"source":"apache","extensions":["m4v"]},"video/x-matroska":{"source":"apache","compressible":false,"extensions":["mkv","mk3d","mks"]},"video/x-mng":{"source":"apache","extensions":["mng"]},"video/x-ms-asf":{"source":"apache","extensions":["asf","asx"]},"video/x-ms-vob":{"source":"apache","extensions":["vob"]},"video/x-ms-wm":{"source":"apache","extensions":["wm"]},"video/x-ms-wmv":{"source":"apache","compressible":false,"extensions":["wmv"]},"video/x-ms-wmx":{"source":"apache","extensions":["wmx"]},"video/x-ms-wvx":{"source":"apache","extensions":["wvx"]},"video/x-msvideo":{"source":"apache","extensions":["avi"]},"video/x-sgi-movie":{"source":"apache","extensions":["movie"]},"video/x-smv":{"source":"apache","extensions":["smv"]},"x-conference/x-cooltalk":{"source":"apache","extensions":["ice"]},"x-shader/x-fragment":{"compressible":true},"x-shader/x-vertex":{"compressible":true}}')},855:n=>{n.exports=JSON.parse(`{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","306":"(Unused)","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I'm a teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Unordered Collection","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"}`)}},__webpack_module_cache__={};function __webpack_require__(n){var t=__webpack_module_cache__[n];if(t!==void 0)return t.exports;var c=__webpack_module_cache__[n]={id:n,exports:{}};return __webpack_modules__[n].call(c.exports,c,c.exports,__webpack_require__),c.exports}__webpack_require__.n=n=>{var t=n&&n.__esModule?()=>n.default:()=>n;return __webpack_require__.d(t,{a:t}),t},__webpack_require__.d=(n,t)=>{for(var c in t)__webpack_require__.o(t,c)&&!__webpack_require__.o(n,c)&&Object.defineProperty(n,c,{enumerable:!0,get:t[c]})},__webpack_require__.o=(n,t)=>Object.prototype.hasOwnProperty.call(n,t),__webpack_require__.r=n=>{typeof Symbol!="undefined"&&Symbol.toStringTag&&Object.defineProperty(n,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(n,"__esModule",{value:!0})},__webpack_require__.b=void 0;var __webpack_exports__=__webpack_require__(6588),__webpack_exports__default=__webpack_exports__.Z;export{__webpack_exports__default as default};

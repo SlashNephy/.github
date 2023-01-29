@@ -2,14 +2,14 @@
  * @name ActivityIcons
  * @author Neodymium
  * @description Improves the default icons next to statuses
- * @version 1.2.9
+ * @version 1.2.10
  * @source https://github.com/Neodymium7/BetterDiscordStuff/blob/main/ActivityIcons/ActivityIcons.plugin.js
  * @invite fRbsqH87Av
  */
 
 /*@cc_on
 @if (@_jscript)
-
+    
     // Offer to self-install for clueless users that try to run this directly.
     var shell = WScript.CreateObject("WScript.Shell");
     var fs = new ActiveXObject("Scripting.FileSystemObject");
@@ -39,7 +39,7 @@ const config = {
 				name: "Neodymium"
 			}
 		],
-		version: "1.2.9",
+		version: "1.2.10",
 		description: "Improves the default icons next to statuses",
 		github: "https://github.com/Neodymium7/BetterDiscordStuff/blob/main/ActivityIcons/ActivityIcons.plugin.js",
 		github_raw: "https://raw.githubusercontent.com/Neodymium7/BetterDiscordStuff/main/ActivityIcons/ActivityIcons.plugin.js"
@@ -49,7 +49,7 @@ const config = {
 			title: "Fixed",
 			type: "fixed",
 			items: [
-				"Fixed settings panel not opening."
+				"Fixed settings on latest Discord update."
 			]
 		}
 	]
@@ -71,7 +71,7 @@ if (!global.ZeresPluginLibrary) {
 function buildPlugin([BasePlugin, Library]) {
     var Plugin = (function (betterdiscord, zlibrary, BasePlugin, react) {
 		'use strict';
-
+	
 		// bundlebd
 		function createSettings(defaultSettings) {
 			let settings = betterdiscord.Data.load("settings");
@@ -170,7 +170,7 @@ function buildPlugin([BasePlugin, Library]) {
 				return [target.exports, key];
 			}
 		};
-
+	
 		// utils.ts
 		const Settings = createSettings({ normalIconBehavior: 0 });
 		function forceUpdateAll(selector) {
@@ -178,10 +178,10 @@ function buildPlugin([BasePlugin, Library]) {
 				zlibrary.ReactTools.getStateNodes(node).forEach((e) => e.forceUpdate());
 			});
 		}
-
+	
 		// styles.css
 		var css = ".activity-icon {\n\twidth: 16px;\n\theight: 16px;\n\tmargin-left: 4px;\n\t-webkit-box-flex: 0;\n\tflex: 0 0 auto;\n}\n.activity-icon-small {\n\tmargin: 1px;\n}\n.rich-activity-icon {\n\tmargin-left: 2px;\n\tmargin-right: -2px;\n}\n.activity-icon > div {\n\twidth: inherit;\n\theight: inherit;\n}\n";
-
+	
 		// assets/playstation.svg
 		const SvgPlaystation = (props) => BdApi.React.createElement("svg", {
 			xmlns: "http://www.w3.org/2000/svg",
@@ -191,7 +191,7 @@ function buildPlugin([BasePlugin, Library]) {
 			d: "M23.669 17.155c-.464.586-1.602 1.004-1.602 1.004l-8.459 3.038v-2.24l6.226-2.219c.706-.253.815-.61.24-.798-.573-.189-1.61-.135-2.318.12l-4.148 1.46v-2.325l.24-.081s1.198-.424 2.884-.611c1.685-.186 3.749.025 5.369.64 1.826.576 2.031 1.427 1.568 2.012Zm-9.255-3.815V7.61c0-.673-.124-1.293-.756-1.468-.483-.155-.783.294-.783.966v14.35l-3.87-1.228V3.12c1.645.305 4.042 1.028 5.331 1.462 3.277 1.125 4.389 2.526 4.389 5.681 0 3.076-1.899 4.242-4.311 3.077Zm-12.51 5.382C.028 18.194-.284 17.094.571 16.461c.79-.585 2.132-1.025 2.132-1.025l5.549-1.974v2.25L4.26 17.14c-.706.253-.814.611-.241.8.574.187 1.612.134 2.318-.12l1.916-.695v2.012c-.122.022-.257.043-.382.064a12.556 12.556 0 0 1-5.968-.48Z",
 			fill: "currentColor"
 		}));
-
+	
 		// assets/xbox.svg
 		const SvgXbox = (props) => BdApi.React.createElement("svg", {
 			xmlns: "http://www.w3.org/2000/svg",
@@ -201,7 +201,7 @@ function buildPlugin([BasePlugin, Library]) {
 			d: "M11.004 21.959c-1.54-.147-3.099-.7-4.44-1.575-1.124-.733-1.378-1.033-1.378-1.635 0-1.206 1.329-3.32 3.598-5.727 1.29-1.368 3.086-2.972 3.28-2.93.378.085 3.397 3.03 4.527 4.413 1.789 2.194 2.612 3.989 2.194 4.789-.318.608-2.287 1.796-3.733 2.251-1.193.378-2.76.538-4.048.413Zm-7.333-4.462c-.932-1.43-1.404-2.84-1.633-4.877-.075-.673-.049-1.057.172-2.439.273-1.72 1.252-3.71 2.431-4.937.503-.522.548-.535 1.16-.328.743.25 1.535.797 2.765 1.91l.719.648-.392.482c-1.822 2.234-3.742 5.401-4.465 7.36-.394 1.064-.552 2.134-.383 2.578.113.3.009.19-.374-.397Zm16.375.242c.091-.449-.024-1.275-.298-2.108-.59-1.803-2.567-5.161-4.383-7.442l-.572-.717.619-.569c.807-.741 1.368-1.186 1.973-1.56.479-.298 1.16-.56 1.453-.56.18 0 .817.659 1.33 1.38.797 1.116 1.382 2.47 1.678 3.878.192.911.207 2.859.031 3.765-.144.744-.451 1.71-.75 2.367-.224.491-.78 1.444-1.025 1.755-.125.155-.125.155-.056-.19ZM11.17 4.44c-.839-.426-2.131-.881-2.846-1.006a5.333 5.333 0 0 0-.95-.053c-.59.029-.562 0 .383-.446a9.717 9.717 0 0 1 2.332-.775c1.001-.211 2.881-.214 3.867-.005 1.063.225 2.316.69 3.021 1.124l.21.129-.482-.025c-.956-.049-2.349.338-3.846 1.066-.452.22-.844.396-.872.389a15.527 15.527 0 0 1-.817-.398Z",
 			fill: "currentColor"
 		}));
-
+	
 		// components/ActivityIcon.tsx
 		const {
 			Filters: { byPrototypeFields: byPrototypeFields$1, byStrings: byStrings$2 },
@@ -269,7 +269,7 @@ function buildPlugin([BasePlugin, Library]) {
 				className: hasRP ? "activity-icon rich-activity-icon" : "activity-icon"
 			}, icon);
 		}
-
+	
 		// components/ListeningIcon.tsx
 		const {
 			Filters: { byPrototypeFields, byStrings: byStrings$1 },
@@ -297,16 +297,16 @@ function buildPlugin([BasePlugin, Library]) {
 				height: "14"
 			})));
 		}
-
+	
 		// components/SettingsPanel.tsx
 		const {
 			getModule: getModule$1,
 			Filters: { byProps: byProps$1 }
 		} = betterdiscord.Webpack;
 		const Margins = getModule$1(byProps$1("marginXSmall"));
-		const RadioGroup = getModule$1((m) => m.Sizes && m.toString().includes("radioItemClassName"));
-		const SettingsItem = getModule$1((m) => m.render?.toString().includes("required"));
-		const SettingsNote = getModule$1((m) => m.Types && m.toString().includes("selectable"));
+		const RadioGroup = getModule$1((m) => m.Sizes && m.toString().includes("radioItemClassName"), { searchExports: true });
+		const SettingsItem = getModule$1((m) => m.render?.toString().includes("required"), { searchExports: true });
+		const SettingsNote = getModule$1((m) => m.Types && m.toString().includes("selectable"), { searchExports: true });
 		function SettingsPanel() {
 			const settings = Settings.useSettingsState();
 			return BdApi.React.createElement(SettingsItem, {
@@ -324,7 +324,7 @@ function buildPlugin([BasePlugin, Library]) {
 				value: settings.normalIconBehavior
 			}));
 		}
-
+	
 		// index.tsx
 		const {
 			Filters: { byProps, byStrings },
@@ -367,9 +367,9 @@ function buildPlugin([BasePlugin, Library]) {
 				return BdApi.React.createElement(SettingsPanel, null);
 			}
 		}
-
+	
 		return ActivityIcons;
-
+	
 	})(new BdApi("ActivityIcons"), Library, BasePlugin, BdApi.React);
 
 	return Plugin;
