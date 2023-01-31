@@ -170,6 +170,8 @@ const typescript: Linter.Config = {
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
+    // Deprecated されたコードの使用を禁止
+    'deprecation/deprecation': 'warn',
   },
 }
 
