@@ -2312,19 +2312,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/pep440@npm:2.1.11":
-  version: 2.1.11
-  resolution: "@renovatebot/pep440@npm:2.1.11"
-  checksum: 64b1dc643a66b73b4659a514d66c09433b7521a962b355fdb6b0c98ea1a2510bc94749186a84f5cf2195340cc69bf458bbf3996a9693e5b4905df5b3de33de11
+"@renovatebot/pep440@npm:2.1.12":
+  version: 2.1.12
+  resolution: "@renovatebot/pep440@npm:2.1.12"
+  checksum: ea2682d8c620e7a5007bf5d3c1956845c044e24ed3671ca2326c0e050a6bb1e1174b6ab6fec1fc0889ab738c90ee5857f4d2c4cc7313d160ac059243790430ed
   languageName: node
   linkType: hard
 
-"@renovatebot/ruby-semver@npm:2.1.5":
-  version: 2.1.5
-  resolution: "@renovatebot/ruby-semver@npm:2.1.5"
+"@renovatebot/ruby-semver@npm:2.1.6":
+  version: 2.1.6
+  resolution: "@renovatebot/ruby-semver@npm:2.1.6"
   dependencies:
     tslib: ^2.4.1
-  checksum: c9771cb27ba61032f3260ff70ad3ed5ae61b63bba16da62e148364fd89be7a7f9421e5a812d0aae0b9b981a04f0a2923029e9a8df3faab048d09fb26fc91a1ba
+  checksum: 7da4ad773de17638438a68444296d954872ef48f86552591a8992569a6c1a76a9d4df8e4e0be7b7df4b52744708e5aa9b295d8c44b17c097b3f6874fa9e302c2
   languageName: node
   linkType: hard
 
@@ -2416,7 +2416,7 @@ __metadata:
     eslint: 8.33.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.3
-    renovate: 34.118.0
+    renovate: 34.118.2
     ts-node: 10.9.1
     typescript: 4.9.5
   languageName: unknown
@@ -8203,9 +8203,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.118.0":
-  version: 34.118.0
-  resolution: "renovate@npm:34.118.0"
+"renovate@npm:34.118.2":
+  version: 34.118.2
+  resolution: "renovate@npm:34.118.2"
   dependencies:
     "@aws-sdk/client-codecommit": 3.256.0
     "@aws-sdk/client-ec2": 3.256.0
@@ -8228,8 +8228,8 @@ __metadata:
     "@opentelemetry/semantic-conventions": 1.9.0
     "@qnighy/marshal": 0.1.3
     "@renovatebot/osv-offline": 1.1.5
-    "@renovatebot/pep440": 2.1.11
-    "@renovatebot/ruby-semver": 2.1.5
+    "@renovatebot/pep440": 2.1.12
+    "@renovatebot/ruby-semver": 2.1.6
     "@sindresorhus/is": 4.6.0
     "@types/tmp": 0.2.3
     "@yarnpkg/core": 3.3.1
@@ -8304,7 +8304,7 @@ __metadata:
     slugify: 1.6.5
     source-map-support: 0.5.21
     traverse: 0.6.7
-    tslib: 2.4.1
+    tslib: 2.5.0
     upath: 2.0.1
     url-join: 4.0.1
     validate-npm-package-name: 5.0.0
@@ -8316,7 +8316,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: a652ce680107c6329189cf4df5fbea62d135761d1e0b0a97add8534e9bca092312cb5bda585e1d33bd4869d8e88282c14cc3d4de724c8d081ff7f854c5eb6a01
+  checksum: 17886c5d87d5d9df0f0a7c0846ba2735429e87770bbc6c081c61ccb8ad5df3e62fa140bd39398bb55491805b84d8d7d8b86a3ede4921ba525f014d39baa9a7cb
   languageName: node
   linkType: hard
 
@@ -9295,10 +9295,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.4.1, tslib@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "tslib@npm:2.4.1"
-  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
+"tslib@npm:2.5.0":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0"
+  checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
   languageName: node
   linkType: hard
 
@@ -9313,6 +9313,13 @@ __metadata:
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "tslib@npm:2.4.1"
+  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
   languageName: node
   linkType: hard
 
