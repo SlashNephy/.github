@@ -16,13 +16,13 @@ const config: Linter.Config = {
       files: '**/*.{ts,mts,cts,tsx}',
       extends: resolve(__dirname, 'typescript.js'),
     },
-    // jest 共通ルール
+    // jest / vitest 共通ルール
     {
       files: [
         '**/*.test.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
         '**/test/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       ],
-      extends: resolve(__dirname, 'jest.js'),
+      extends: [resolve(__dirname, 'jest.js'), resolve(__dirname, 'vitest.js')],
     },
     // React 共通ルール
     {

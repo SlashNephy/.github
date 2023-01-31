@@ -305,8 +305,6 @@ cask "appcleaner"
 cask "audacity"
 # Managed client-based VPN service to securely access AWS resources
 cask "aws-vpn-client"
-# Menu bar icon organizer
-cask "bartender"
 # Installer for BetterDiscord
 cask "betterdiscord-installer"
 # Virtual Audio Driver
