@@ -1948,13 +1948,13 @@ __metadata:
     "@rollup/plugin-babel": 6.0.3
     "@rollup/plugin-typescript": 11.0.0
     "@slashnephy/eslint-config": 0.2.43
-    "@slashnephy/prettier-config": 0.1.9
+    "@slashnephy/prettier-config": 0.1.10
     "@types/babel__core": 7.20.0
     "@types/babel__preset-env": 7.9.2
     concurrently: 7.6.0
     eslint: 8.33.0
     prettier: 2.8.3
-    rollup: 3.12.0
+    rollup: 3.12.1
     typescript: 4.9.5
   languageName: unknown
   linkType: soft
@@ -1993,12 +1993,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/prettier-config@npm:0.1.9":
-  version: 0.1.9
-  resolution: "@slashnephy/prettier-config@npm:0.1.9"
+"@slashnephy/prettier-config@npm:0.1.10":
+  version: 0.1.10
+  resolution: "@slashnephy/prettier-config@npm:0.1.10"
   peerDependencies:
     prettier: ^2
-  checksum: 79ea8c98f12d1c5d13e38b6e175f9e6f9d64428d6fd0dfdba9bc0cf0cdc49f45e3d94a4479fd56c6c84181b1f0fc6c5fc90631745833cb69f858e3c031c2808f
+  checksum: 47a78ca282259bcc1de0355aaf0a76b6e2d46d6fa2ab775291b029ec28fb715d03a23149b845ff797a470baea456f3a1097037f7f5528b08c711be2dbf90094f
   languageName: node
   linkType: hard
 
@@ -5620,9 +5620,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:3.12.0":
-  version: 3.12.0
-  resolution: "rollup@npm:3.12.0"
+"rollup@npm:3.12.1":
+  version: 3.12.1
+  resolution: "rollup@npm:3.12.1"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -5630,7 +5630,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 66182947ea74bd4777e1a02514124f49eacc6b123e23738cf31342f8e73b79e43da05671aebe6d5f55b5830ebf3dd11f2eaba1b98b8fc6a9e6d96fd4c3ecc534
+  checksum: b6b3aa4bcc13b1f15c1945201f3837be07b249854ed8a73bd67411ffe56f691b808d5b563246b78ecea4110afdb9e9e6cc7d5a3f82965a5592187dbb10d3671f
   languageName: node
   linkType: hard
 
