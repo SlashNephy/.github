@@ -114,38 +114,52 @@ const addStyle = (css) => {
 const CANVAS_UPDATE_INTERVAL = 1000 / 30,
   CANVAS_WIDTH = 1280,
   CANVAS_HEIGHT = 720,
-  CANVAS_FILTER = 'blur(6px)'
+  CANVAS_FILTER = 'blur(4px)'
 if (isReady()) {
   const canvas = document.createElement('canvas')
-  canvas.classList.add('background-canvas')
+  const ctx = canvas.getContext('2d')
+  if (ctx === null) {
+    throw new Error('Your browser does not support CanvasRenderingContext2D')
+  }
   canvas.width = CANVAS_WIDTH
   canvas.height = CANVAS_HEIGHT
+  canvas.style.position = 'fixed'
+  canvas.style.top = '0'
+  canvas.style.left = '0'
+  canvas.style.width = '100%'
+  canvas.style.height = '100%'
   document.body.insertAdjacentElement('afterbegin', canvas)
+  const video = document.createElement('video')
+  video.style.display = 'none'
+  video.muted = true
+  video.loop = true
+  document.body.insertAdjacentElement('afterbegin', video)
+  const getCurrentQuizVideo = () => {
+    const quizPlayer = unsafeWindow.quizVideoController.getCurrentPlayer()
+    if (quizPlayer === undefined || quizPlayer.player.hasClass('vjs-hidden')) {
+      return [video, false]
+    }
+    return [quizPlayer.$player[0], true]
+  }
   setInterval(() => {
-    const player = unsafeWindow.quizVideoController.getCurrentPlayer()
-    if (player === undefined) {
-      return
-    }
-    if (player.player.hasClass('vjs-hidden')) {
-      return
-    }
-    const ctx = canvas.getContext('2d')
-    if (ctx === null) {
-      return
+    const [quizVideo, isQuizVideoPlayable] = getCurrentQuizVideo()
+    if (isQuizVideoPlayable) {
+      video.pause()
+      if (video.src !== quizVideo.src) {
+        video.src = quizVideo.src
+      }
+      video.currentTime = quizVideo.currentTime
+    } else {
+      if (video.src === '') {
+        return
+      }
+      if (video.paused) {
+        void video.play()
+      }
     }
     ctx.filter = CANVAS_FILTER
-    const video = player.$player[0]
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
+    ctx.drawImage(quizVideo, 0, 0, canvas.width, canvas.height)
   }, CANVAS_UPDATE_INTERVAL)
-  addStyle(`
-  .background-canvas {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-  }
-  `)
   addScriptData({
     name: 'Dynamic Background',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
