@@ -383,6 +383,8 @@ cask "keka"
 cask "keybase"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
+# Interface for reading and syncing eBooks
+cask "kindle"
 # Kubernetes IDE
 cask "lens"
 # Open-source firewall to block unknown outgoing connections
