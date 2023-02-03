@@ -2319,12 +2319,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/ruby-semver@npm:2.1.7":
-  version: 2.1.7
-  resolution: "@renovatebot/ruby-semver@npm:2.1.7"
+"@renovatebot/ruby-semver@npm:2.1.8":
+  version: 2.1.8
+  resolution: "@renovatebot/ruby-semver@npm:2.1.8"
   dependencies:
-    tslib: ^2.4.1
-  checksum: 94de18b66cac7b45d0b7665c2411030705a02cbef07a802ddbf8e2e909989f7e177522b4839460248782e1e59df4768b8e56e025be6a92e8ae3e955bb9bd792a
+    tslib: ^2.5.0
+  checksum: d385f9aa11b79ae6e306d9f7a5ebb19b9be0a66b75dbb1c465c4284a40476172b8c4eaa86bf8d850ce78ff5db31e42d504757c22453986946ccb51f197e5d82a
   languageName: node
   linkType: hard
 
@@ -2416,7 +2416,7 @@ __metadata:
     eslint: 8.33.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.3
-    renovate: 34.120.0
+    renovate: 34.121.0
     ts-node: 10.9.1
     typescript: 4.9.5
   languageName: unknown
@@ -8203,9 +8203,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.120.0":
-  version: 34.120.0
-  resolution: "renovate@npm:34.120.0"
+"renovate@npm:34.121.0":
+  version: 34.121.0
+  resolution: "renovate@npm:34.121.0"
   dependencies:
     "@aws-sdk/client-codecommit": 3.256.0
     "@aws-sdk/client-ec2": 3.256.0
@@ -8229,7 +8229,7 @@ __metadata:
     "@qnighy/marshal": 0.1.3
     "@renovatebot/osv-offline": 1.1.5
     "@renovatebot/pep440": 2.1.13
-    "@renovatebot/ruby-semver": 2.1.7
+    "@renovatebot/ruby-semver": 2.1.8
     "@sindresorhus/is": 4.6.0
     "@types/tmp": 0.2.3
     "@yarnpkg/core": 3.3.1
@@ -8316,7 +8316,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: e44fc3887bfb3ff3b56bad40a36e071f46f6977ca92a12fb87847f9d45420b20cdd56d181b9d0384013f377a234809ea8af06981649d210eed654b6a2d67b52e
+  checksum: a0c944f955a390e5e603afbb909c77b31e73bf29b2c0ec096bfaba9f367ec4575e051339e0eebc4320324b45af1d4e00928115e3d11735d5d519b87074a01b56
   languageName: node
   linkType: hard
 
@@ -9295,7 +9295,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.5.0":
+"tslib@npm:2.5.0, tslib@npm:^2.5.0":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
@@ -9313,13 +9313,6 @@ __metadata:
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "tslib@npm:2.4.1"
-  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
   languageName: node
   linkType: hard
 
