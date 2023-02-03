@@ -138,12 +138,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/prettier-config@npm:0.1.9":
-  version: 0.1.9
-  resolution: "@slashnephy/prettier-config@npm:0.1.9"
+"@slashnephy/prettier-config@npm:0.1.10":
+  version: 0.1.10
+  resolution: "@slashnephy/prettier-config@npm:0.1.10"
   peerDependencies:
     prettier: ^2
-  checksum: 79ea8c98f12d1c5d13e38b6e175f9e6f9d64428d6fd0dfdba9bc0cf0cdc49f45e3d94a4479fd56c6c84181b1f0fc6c5fc90631745833cb69f858e3c031c2808f
+  checksum: 47a78ca282259bcc1de0355aaf0a76b6e2d46d6fa2ab775291b029ec28fb715d03a23149b845ff797a470baea456f3a1097037f7f5528b08c711be2dbf90094f
   languageName: node
   linkType: hard
 
@@ -163,7 +163,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/userstyle@workspace:."
   dependencies:
-    "@slashnephy/prettier-config": 0.1.9
+    "@slashnephy/prettier-config": 0.1.10
     "@slashnephy/stylelint-config": 0.1.1
     autoprefixer: 10.4.13
     concurrently: 7.6.0
@@ -172,7 +172,7 @@ __metadata:
     postcss-cli: 10.1.0
     postcss-scss: 4.0.6
     prettier: 2.8.3
-    sass: 1.57.1
+    sass: 1.58.0
     stylelint: 14.16.1
   languageName: unknown
   linkType: soft
@@ -2602,16 +2602,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.57.1":
-  version: 1.57.1
-  resolution: "sass@npm:1.57.1"
+"sass@npm:1.58.0":
+  version: 1.58.0
+  resolution: "sass@npm:1.58.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 734a08781bcbe0e8defb2d54864e7012014ed3e68ba5fcb766189b002929019fc37b2f83a18d4be0b5f69ad77317c92396ce6112447ab47a194ed600ae1afb27
+  checksum: a7219634881d2de6441fb619787fb1a02e3fa0333fb715be26aa335ba49d6bdb4f1105d9df70a80a67200893022b08346745783dc49046095d94fc6e044492d6
   languageName: node
   linkType: hard
 
