@@ -135,7 +135,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-detailed-song-info',
     name: 'AMQ Detailed Song Info',
-    version: '0.6.6',
+    version: '0.6.7',
     description: {
       en: 'Display detailed information on the side panel of the song.',
       ja: '曲のサイドパネルに詳細な情報を表示します。',
@@ -268,7 +268,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-dynamic-background',
     name: 'AMQ Dynamic Background',
-    version: '0.1.0',
+    version: '0.2.0',
     description: {
       en: 'Set the currently playing video surface as the background image.',
       ja: '現在再生中の動画を背景画像に設定します。',
