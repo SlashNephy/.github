@@ -239,7 +239,7 @@ const rows = [
       }
       if (title !== null && navigator.language === 'ja') {
         const element = document.getElementById('qpAnimeName')
-        if (element !== null) {
+        if (element !== null && title !== element.textContent?.trim()) {
           element.innerHTML = `${title}<br/>(${element.textContent})`
           unsafeWindow.quiz.infoContainer.fitTextToContainer()
         }
