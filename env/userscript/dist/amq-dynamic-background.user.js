@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Dynamic Background
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Set the currently playing video surface as the background image.
 // @description:ja  現在再生中の動画を背景画像に設定します。
@@ -114,7 +114,7 @@ const addStyle = (css) => {
 const CANVAS_UPDATE_INTERVAL = 1000 / 30,
   CANVAS_WIDTH = 1280,
   CANVAS_HEIGHT = 720,
-  CANVAS_FILTER = 'blur(4px)'
+  CANVAS_FILTER = 'blur(2px)'
 if (isReady()) {
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
@@ -145,10 +145,12 @@ if (isReady()) {
     const [quizVideo, isQuizVideoPlayable] = getCurrentQuizVideo()
     if (isQuizVideoPlayable) {
       video.pause()
-      if (video.src !== quizVideo.src) {
-        video.src = quizVideo.src
+      if (!quizVideo.src.endsWith('.mp3')) {
+        if (video.src !== quizVideo.src) {
+          video.src = quizVideo.src
+        }
+        video.currentTime = quizVideo.currentTime
       }
-      video.currentTime = quizVideo.currentTime
     } else {
       if (video.src === '') {
         return
