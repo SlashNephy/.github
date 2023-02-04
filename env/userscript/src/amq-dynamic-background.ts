@@ -5,7 +5,7 @@ import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 const CANVAS_UPDATE_INTERVAL = 1000 / 30,
   CANVAS_WIDTH = 1280,
   CANVAS_HEIGHT = 720,
-  CANVAS_FILTER = 'blur(4px)'
+  CANVAS_FILTER = 'blur(2px)'
 /* eslint-enable @typescript-eslint/naming-convention */
 
 if (isReady()) {
@@ -43,18 +43,24 @@ if (isReady()) {
     const [quizVideo, isQuizVideoPlayable] = getCurrentQuizVideo()
 
     if (isQuizVideoPlayable) {
+      // パフォーマンスのため参照しないときは止めておく
       video.pause()
 
-      if (video.src !== quizVideo.src) {
-        video.src = quizVideo.src
-      }
+      // mp3 の時は video をコピーしない
+      if (!quizVideo.src.endsWith('.mp3')) {
+        if (video.src !== quizVideo.src) {
+          video.src = quizVideo.src
+        }
 
-      video.currentTime = quizVideo.currentTime
+        video.currentTime = quizVideo.currentTime
+      }
     } else {
+      // video が未設定の場合は draw しない
       if (video.src === '') {
         return
       }
 
+      // video をリジュームする
       if (video.paused) {
         void video.play()
       }
