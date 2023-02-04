@@ -2242,14 +2242,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redis/client@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@redis/client@npm:1.5.2"
+"@redis/client@npm:1.5.3":
+  version: 1.5.3
+  resolution: "@redis/client@npm:1.5.3"
   dependencies:
     cluster-key-slot: 1.1.2
     generic-pool: 3.9.0
     yallist: 4.0.0
-  checksum: b23af6e82da02d6e079218c5e39ce35900d4001581d893446a9138e9d4a0a6c8348d34eec083743e602ec3ce9419bfbd06fe68497f93b97424d45093850da25f
+  checksum: 5d0934d13b1a9b955d6ffc66992404886c45aa99d288557fadad423a3c7a74d6229c86320058213f38d800aad05dc897ee754329dd75c5ca6880335c70f52677
   languageName: node
   linkType: hard
 
@@ -2416,7 +2416,7 @@ __metadata:
     eslint: 8.33.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.3
-    renovate: 34.121.0
+    renovate: 34.122.0
     ts-node: 10.9.1
     typescript: 4.9.5
   languageName: unknown
@@ -8110,17 +8110,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redis@npm:4.6.1":
-  version: 4.6.1
-  resolution: "redis@npm:4.6.1"
+"redis@npm:4.6.2":
+  version: 4.6.2
+  resolution: "redis@npm:4.6.2"
   dependencies:
     "@redis/bloom": 1.2.0
-    "@redis/client": 1.5.2
+    "@redis/client": 1.5.3
     "@redis/graph": 1.1.0
     "@redis/json": 1.0.4
     "@redis/search": 1.1.1
     "@redis/time-series": 1.0.4
-  checksum: 0fc9811f4ebe32ff15085f10323db578da433ad90a6e8d209262b20f5a5d1402418c12773f8650eab5a7a0efd7128dd911e8700a56fea4ec0fcba618dd048e89
+  checksum: 5230877c2fb7c68eaafe266e41355a562d8ec85988e0f8c41d21a954677428348c0db325f637db9810cef12555a5d5e488616d23c3f62899f7e9b5a6798e9aa7
   languageName: node
   linkType: hard
 
@@ -8203,9 +8203,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.121.0":
-  version: 34.121.0
-  resolution: "renovate@npm:34.121.0"
+"renovate@npm:34.122.0":
+  version: 34.122.0
+  resolution: "renovate@npm:34.122.0"
   dependencies:
     "@aws-sdk/client-codecommit": 3.256.0
     "@aws-sdk/client-ec2": 3.256.0
@@ -8292,7 +8292,7 @@ __metadata:
     prettier: 2.8.3
     quick-lru: 5.1.1
     re2: 1.18.0
-    redis: 4.6.1
+    redis: 4.6.2
     remark: 13.0.0
     remark-github: 10.1.0
     safe-stable-stringify: 2.4.2
@@ -8316,7 +8316,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: a0c944f955a390e5e603afbb909c77b31e73bf29b2c0ec096bfaba9f367ec4575e051339e0eebc4320324b45af1d4e00928115e3d11735d5d519b87074a01b56
+  checksum: ef0ee8bc625b6d71bce7d0c0417c8ae8d05792b8d7ddb585c59cd6cf57200b7821dce89704f2819be927bb583dc6f9f4bdc7b972e282e1bac261f6c9c262af12
   languageName: node
   linkType: hard
 

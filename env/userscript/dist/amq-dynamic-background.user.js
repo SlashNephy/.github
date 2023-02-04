@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Dynamic Background
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.2.0
 // @author          SlashNephy
 // @description     Set the currently playing video surface as the background image.
 // @description:ja  現在再生中の動画を背景画像に設定します。

@@ -248,7 +248,7 @@ __metadata:
     prettier: 2.8.3
     textlint-filter-rule-allowlist: 4.0.0
     textlint-rule-no-todo: 2.0.1
-    textlint-rule-preset-ja-spacing: 2.2.0
+    textlint-rule-preset-ja-spacing: 2.3.0
     textlint-rule-preset-ja-technical-writing: 7.0.0
     textlint-rule-preset-jtf-style: 2.3.13
     typescript: 4.9.5
@@ -4298,13 +4298,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-ja-space-between-half-and-full-width@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "textlint-rule-ja-space-between-half-and-full-width@npm:2.2.0"
+"textlint-rule-ja-space-between-half-and-full-width@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "textlint-rule-ja-space-between-half-and-full-width@npm:2.3.0"
   dependencies:
     match-index: ^1.0.1
     textlint-rule-helper: ^2.2.0
-  checksum: 8a4f4b81192f66af80c32d6cad7e7ac8e941b0c3374ccbdcd444b31e6015ece02312415adbd3379955e5a0099fc904cbad7f276421e47cbdf8b50064e2bb4547
+  checksum: 6945cc939d166565b783406a6dac2b25d95ec16f2d40d7278c063fe112559be674108e5606ef1a42177d749f8b23ae8b1ac58e08357581daec8105e0f10577dc
   languageName: node
   linkType: hard
 
@@ -4467,9 +4467,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-preset-ja-spacing@npm:2.2.0":
-  version: 2.2.0
-  resolution: "textlint-rule-preset-ja-spacing@npm:2.2.0"
+"textlint-rule-preset-ja-spacing@npm:2.3.0":
+  version: 2.3.0
+  resolution: "textlint-rule-preset-ja-spacing@npm:2.3.0"
   dependencies:
     textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana: ^2.2.0
     textlint-rule-ja-no-space-around-parentheses: ^2.2.0
@@ -4477,8 +4477,8 @@ __metadata:
     textlint-rule-ja-space-after-exclamation: ^2.2.0
     textlint-rule-ja-space-after-question: ^2.2.0
     textlint-rule-ja-space-around-code: ^2.2.0
-    textlint-rule-ja-space-between-half-and-full-width: ^2.2.0
-  checksum: 56a5935722630436f4ed29644d88a75c5359bc82860d4c09f5d2acd29a186c87d8df308b581d3b8fb62d78550c219c019566ac6e4c2d0267bd163010705f590f
+    textlint-rule-ja-space-between-half-and-full-width: ^2.3.0
+  checksum: fb74d5a211f70a7735c3507356a2d31d30e6bffcbc3f7dc580e9864175297f322dabb8ec4019617f32ecaac2a896d2000ebc09507e08ada87c6b7a61937140ed
   languageName: node
   linkType: hard
 

@@ -17,7 +17,7 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | Google Remove Redirection Warning | 0.1.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js |
 | Annict Hide Future Programs       | 0.1.5          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js       |
 | AMQ Private Session               | 0.2.5          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js               |
-| AMQ Detailed Song Info            | 0.6.6          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js            |
+| AMQ Detailed Song Info            | 0.6.7          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js            |
 | AMQ Hide Annoying Dialog          | 0.1.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js          |
 | AMQ Readable Watching Status      | 0.1.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-readable-watching-status.user.js      |
 | AMQ Clear Answer                  | 1.0.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-clear-answer.user.js                  |
@@ -26,7 +26,7 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | AMQ Display Answer Time 2         | 0.2.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js         |
 | AMQ Auto Continue Login           | 0.1.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js           |
 | AKASHI Show Remaining Hours       | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/akashi-show-remaining-hours.user.js       |
-| AMQ Dynamic Background            | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
+| AMQ Dynamic Background            | 0.2.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
 
 ### Annict Work Links (v0.3.0)
 
@@ -82,7 +82,7 @@ Hide programs for the next day or later in Annict track page. In addition, it hi
 
 Set invisible status automatically on login.
 
-### AMQ Detailed Song Info (v0.6.6)
+### AMQ Detailed Song Info (v0.6.7)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-detailed-song-info.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E6%9B%B2%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%AB%E8%A9%B3%E7%B4%B0%E6%83%85%E5%A0%B1%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
@@ -136,7 +136,7 @@ Press the Continue Login button automatically in Login Page.
 
 Display the remaining required working hours in attendance page.
 
-### AMQ Dynamic Background (v0.1.0)
+### AMQ Dynamic Background (v0.2.0)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-dynamic-background.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E8%83%8C%E6%99%AF%E3%81%AB%E5%8B%95%E7%94%BB%E3%82%92%E6%B5%81%E3%81%99_UserScript)
 
