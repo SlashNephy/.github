@@ -26,7 +26,7 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 | AMQ Display Answer Time 2         | 0.2.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js         |
 | AMQ Auto Continue Login           | 0.1.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js           |
 | AKASHI Show Remaining Hours       | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/akashi-show-remaining-hours.user.js       |
-| AMQ Dynamic Background            | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
+| AMQ Dynamic Background            | 0.2.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
 
 ### Annict Work Links (v0.3.0)
 
@@ -136,7 +136,7 @@ Delete キーを押下することで解答欄のテキストをクリアする�
 
 出勤簿ページに残り必要な労働時間を表示します。
 
-### AMQ Dynamic Background (v0.2.0)
+### AMQ Dynamic Background (v0.2.1)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-dynamic-background.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E8%83%8C%E6%99%AF%E3%81%AB%E5%8B%95%E7%94%BB%E3%82%92%E6%B5%81%E3%81%99_UserScript)
 
