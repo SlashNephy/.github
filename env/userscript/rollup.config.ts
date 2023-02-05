@@ -240,7 +240,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-auto-continue-login',
     name: 'AMQ Auto Continue Login',
-    version: '0.1.1',
+    version: '0.1.2',
     description: {
       en: 'Press the Continue Login button automatically in Login Page.',
       ja: 'ログインページの「Continue Login」ボタンを自動で押下します。',
@@ -248,7 +248,7 @@ export const banners: Banner[] = [
     homepage:
       'https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%87%AA%E5%8B%95%E3%81%A7_Continue_Login_%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99_UserScript',
     author: 'SlashNephy',
-    match: ['https://animemusicquiz.com'],
+    match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
   },
@@ -268,7 +268,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-dynamic-background',
     name: 'AMQ Dynamic Background',
-    version: '0.2.1',
+    version: '0.2.2',
     description: {
       en: 'Set the currently playing video surface as the background image.',
       ja: '現在再生中の動画を背景画像に設定します。',
@@ -276,7 +276,7 @@ export const banners: Banner[] = [
     homepage:
       'https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E8%83%8C%E6%99%AF%E3%81%AB%E5%8B%95%E7%94%BB%E3%82%92%E6%B5%81%E3%81%99_UserScript',
     author: 'SlashNephy',
-    match: ['https://animemusicquiz.com'],
+    match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
   },
