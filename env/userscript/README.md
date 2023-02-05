@@ -24,9 +24,9 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | AMQ Song Guess Rate               | 0.2.4          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-song-guess-rate.user.js               |
 | AMQ sanime Link                   | 0.1.3          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js                   |
 | AMQ Display Answer Time 2         | 0.2.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js         |
-| AMQ Auto Continue Login           | 0.1.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js           |
+| AMQ Auto Continue Login           | 0.1.2          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js           |
 | AKASHI Show Remaining Hours       | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/akashi-show-remaining-hours.user.js       |
-| AMQ Dynamic Background            | 0.2.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
+| AMQ Dynamic Background            | 0.2.2          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
 
 ### Annict Work Links (v0.3.0)
 
@@ -124,7 +124,7 @@ Display links to sanime and "i(lyl)2m" in the player list.
 
 Display player answer time in seconds.
 
-### AMQ Auto Continue Login (v0.1.1)
+### AMQ Auto Continue Login (v0.1.2)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-auto-continue-login.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%87%AA%E5%8B%95%E3%81%A7_Continue_Login_%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99_UserScript)
 
@@ -136,7 +136,7 @@ Press the Continue Login button automatically in Login Page.
 
 Display the remaining required working hours in attendance page.
 
-### AMQ Dynamic Background (v0.2.1)
+### AMQ Dynamic Background (v0.2.2)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-dynamic-background.ts) / [📖 Article](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E8%83%8C%E6%99%AF%E3%81%AB%E5%8B%95%E7%94%BB%E3%82%92%E6%B5%81%E3%81%99_UserScript)
 
