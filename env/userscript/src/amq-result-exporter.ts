@@ -3,7 +3,6 @@ import { PlayerAnswerTimeManager } from '../lib/amq/PlayerAnswerTimeManager'
 import { executeXhr } from '../lib/api'
 import { fetchArmEntries } from '../lib/arm'
 import { GM_Value } from '../lib/GM_Value'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { ArmEntry } from '../lib/arm'
 
@@ -170,7 +169,7 @@ onReady(() => {
     executeGas(row).catch(console.error)
   }).bindListener()
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Result Exporter',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Export song results to Google Spreadsheet!',

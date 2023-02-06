@@ -1,5 +1,4 @@
 import { onReady } from '../lib/amq/onReady'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 /* eslint-disable @typescript-eslint/naming-convention */
 const CANVAS_UPDATE_INTERVAL = 1000 / 30,
@@ -70,7 +69,7 @@ onReady(() => {
     ctx.drawImage(quizVideo, 0, 0, canvas.width, canvas.height)
   }, CANVAS_UPDATE_INTERVAL)
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Dynamic Background',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Set the currently playing video surface as the background image.',

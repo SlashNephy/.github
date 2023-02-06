@@ -1,5 +1,4 @@
 import { onReady } from '../lib/amq/onReady'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 onReady(() => {
   document.addEventListener('DOMNodeInserted', () => {
@@ -14,7 +13,7 @@ onReady(() => {
     }
   })
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Private Session',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Set invisible status automatically.',

@@ -1,6 +1,5 @@
 import { onReady } from '../lib/amq/onReady'
 import { PlayerAnswerTimeManager } from '../lib/amq/PlayerAnswerTimeManager'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 onReady(() => {
   const ignoredPlayerIds: number[] = []
@@ -64,7 +63,7 @@ onReady(() => {
     unsafeWindow.quiz.videoTimerBar.updateState(event.progressBarState)
   })
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Display Answer Time 2',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Display player answer time in seconds.',

@@ -2,7 +2,6 @@ import { getDetailedSongInfo } from '../lib/amq/getDetailedSongInfo'
 import { onReady } from '../lib/amq/onReady'
 import { GM_Value } from '../lib/GM_Value'
 import { makeSha256HexDigest } from '../lib/hash'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { AnswerResultsEvent } from '../types/amq'
 
@@ -63,7 +62,7 @@ onReady(() => {
 
   migrate().catch(console.error)
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Song Guess Rate',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description:

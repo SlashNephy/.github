@@ -1,6 +1,5 @@
 import { onReady } from '../lib/amq/onReady'
 import { awaitFor } from '../lib/awaitFor'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 awaitFor(() => document.getElementById('loginFormContainer') !== null)
   .then(() => {
@@ -12,7 +11,7 @@ awaitFor(() => document.getElementById('loginFormContainer') !== null)
   .catch(console.error)
 
 onReady(() => {
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Auto Continue Login',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Press the Continue Login button automatically in Login Page.',
