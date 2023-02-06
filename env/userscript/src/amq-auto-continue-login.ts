@@ -1,9 +1,11 @@
 import { onReady } from '../lib/amq/onReady'
 import { awaitFor } from '../lib/awaitFor'
 
-awaitFor(() => document.getElementById('loginFormContainer') !== null)
+const selector = '#loginFormContainer > div > a'
+
+awaitFor(() => document.querySelector(selector) !== null)
   .then(() => {
-    const element = document.querySelector<HTMLAnchorElement>('#loginFormContainer > div > a')
+    const element = document.querySelector<HTMLAnchorElement>(selector)
     if (element !== null) {
       element.click()
     }
