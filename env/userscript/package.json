@@ -21,6 +21,7 @@
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
+    "serve": "serve dist/",
     "watch": "yarn build:rollup -w",
     "watch:private": "yarn build:rollup:private -w"
   },
@@ -47,6 +48,7 @@
     "prettier": "2.8.3",
     "rollup": "3.14.0",
     "rollup-plugin-node-externals": "5.1.2",
+    "serve": "14.2.0",
     "ts-node": "10.9.1",
     "typescript": "4.9.5"
   },

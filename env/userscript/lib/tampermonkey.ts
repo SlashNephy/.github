@@ -7,13 +7,15 @@ import { externals } from 'rollup-plugin-node-externals'
 
 import type { RollupOptions } from 'rollup'
 
+type RenderMode = 'dist' | 'dev-chrome' | 'dev-firefox'
+
 export const buildOptions = (banner: Banner): RollupOptions => {
   void createDevScript(banner)
 
   return {
     input: banner.private === true ? join('src', 'private', `${banner.id}.ts`) : join('src', `${banner.id}.ts`),
     output: {
-      banner: renderBanner(banner, false),
+      banner: renderBanner(banner, 'dist'),
       file:
         banner.private === true
           ? join('dist', 'private', `${banner.id}.user.js`)
@@ -32,12 +34,13 @@ export const buildOptions = (banner: Banner): RollupOptions => {
 }
 
 const createDevScript = async (banner: Banner) => {
-  const path =
-    banner.private === true
-      ? join('dist', 'private', `${banner.id}.dev.user.js`)
-      : join('dist', `${banner.id}.dev.user.js`)
+  const promises = (['dev-chrome', 'dev-firefox'] as RenderMode[]).map(async (mode) => {
+    const filename = `${banner.id}.${mode}.user.js`
+    const path = banner.private === true ? join('dist', 'private', filename) : join('dist', filename)
 
-  await writeFile(path, renderBanner(banner, true))
+    return writeFile(path, renderBanner(banner, mode))
+  })
+  await Promise.all(promises)
 }
 
 export type Banner = BuildConfig & TampermonkeyHeader
@@ -111,23 +114,23 @@ type TampermonkeyHeader = {
 
 const headers: {
   key: string
-  render(banner: Banner, isDev: boolean): string | string[] | undefined
+  render(banner: Banner, mode: RenderMode): string | string[] | undefined
 }[] = [
   {
     key: 'name',
-    render: (b, isDev) => {
+    render: (b, mode) => {
       if (typeof b.name === 'string') {
-        return `${isDev ? '[Dev] ' : ''}${b.name}`
+        return `${mode !== 'dist' ? '[Dev] ' : ''}${b.name}`
       } else {
-        return `${isDev ? '[Dev] ' : ''}${b.name.en}`
+        return `${mode !== 'dist' ? '[Dev] ' : ''}${b.name.en}`
       }
     },
   },
   {
     key: 'name:ja',
-    render: (b, isDev) => {
+    render: (b, mode) => {
       if (typeof b.name !== 'string') {
-        return `${isDev ? '[Dev] ' : ''}${b.name.ja}`
+        return `${mode !== 'dist' ? '[Dev] ' : ''}${b.name.ja}`
       }
     },
   },
@@ -197,26 +200,36 @@ const headers: {
   },
   {
     key: 'updateURL',
-    render: (b, isDev) => {
-      if (isDev) {
-        return b.private === true
-          ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.dev.user.js`)}`
-          : `file://${join(process.cwd(), 'dist', `${b.id}.dev.user.js`)}`
+    render: (b, mode) => {
+      switch (mode) {
+        case 'dist':
+          return b.updateUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`
+        case 'dev-chrome':
+          return b.private === true
+            ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.dev.user.js`)}`
+            : `file://${join(process.cwd(), 'dist', `${b.id}.dev.user.js`)}`
+        case 'dev-firefox':
+          return b.private === true
+            ? `http://localhost:3000/private/${b.id}.dev.user.js`
+            : `http://localhost:3000/${b.id}.dev.user.js`
       }
-
-      return b.updateUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`
     },
   },
   {
     key: 'downloadURL',
-    render: (b, isDev) => {
-      if (isDev) {
-        return b.private === true
-          ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.dev.user.js`)}`
-          : `file://${join(process.cwd(), 'dist', `${b.id}.dev.user.js`)}`
+    render: (b, mode) => {
+      switch (mode) {
+        case 'dist':
+          return b.downloadUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`
+        case 'dev-chrome':
+          return b.private === true
+            ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.dev.user.js`)}`
+            : `file://${join(process.cwd(), 'dist', `${b.id}.dev.user.js`)}`
+        case 'dev-firefox':
+          return b.private === true
+            ? `http://localhost:3000/private/${b.id}.dev.user.js`
+            : `http://localhost:3000/${b.id}.dev.user.js`
       }
-
-      return b.downloadUrl ?? `https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/${b.id}.user.js`
     },
   },
   {
@@ -243,20 +256,34 @@ const headers: {
   },
   {
     key: 'require',
-    render: (b, isDev) => {
-      if (!isDev) {
-        return b.require
-      }
-
-      const require = b.require ?? []
-      const path =
-        b.private === true
-          ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.user.js`)}`
-          : `file://${join(process.cwd(), 'dist', `${b.id}.user.js`)}`
-      if (typeof require === 'string') {
-        return [path]
-      } else {
-        return [...require, path]
+    render: (b, mode) => {
+      switch (mode) {
+        case 'dist':
+          return b.require
+        case 'dev-chrome': {
+          const require = b.require ?? []
+          const path =
+            b.private === true
+              ? `file://${join(process.cwd(), 'dist', 'private', `${b.id}.user.js`)}`
+              : `file://${join(process.cwd(), 'dist', `${b.id}.user.js`)}`
+          if (typeof require === 'string') {
+            return [path]
+          } else {
+            return [...require, path]
+          }
+        }
+        case 'dev-firefox': {
+          const require = b.require ?? []
+          const path =
+            b.private === true
+              ? `http://localhost:3000/private/${b.id}.user.js`
+              : `http://localhost:3000/${b.id}.user.js`
+          if (typeof require === 'string') {
+            return [path]
+          } else {
+            return [...require, path]
+          }
+        }
       }
     },
   },
@@ -308,11 +335,11 @@ const headers: {
   },
 ]
 
-const renderBanner = (banner: Banner, isDev: boolean): string => {
+const renderBanner = (banner: Banner, mode: RenderMode): string => {
   const evaluated = headers
     .map((header) => ({
       key: header.key,
-      value: header.render(banner, isDev),
+      value: header.render(banner, mode),
     }))
     .filter((x) => x.value !== undefined)
 
