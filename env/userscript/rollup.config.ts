@@ -166,7 +166,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-readable-watching-status',
     name: 'AMQ Readable Watching Status',
-    version: '0.1.1',
+    version: '0.1.2',
     description: {
       en: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
       ja: '解答欄の幅を狭め、視聴状況のインジケーターを読みやすくします。',
@@ -176,7 +176,7 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
-    grant: 'unsafeWindow',
+    grant: ['unsafeWindow', 'GM_addStyle'],
   },
   {
     id: 'amq-clear-answer',
