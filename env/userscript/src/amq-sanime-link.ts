@@ -1,4 +1,4 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { GameStartingEvent, PlayerProfileEvent } from '../types/amq'
@@ -233,7 +233,7 @@ const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
   }
 }
 
-if (isReady()) {
+onReady(() => {
   new Listener('Game Starting', handleGameStarting).bindListener()
   new Listener('answer results', handleAnswerResults).bindListener()
 
@@ -242,4 +242,4 @@ if (isReady()) {
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Display links to sanime and "i(lyl)2m" in the player list.',
   })
-}
+})

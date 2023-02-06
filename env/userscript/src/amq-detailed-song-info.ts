@@ -1,4 +1,4 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
 import { GM_Value } from '../lib/GM_Value'
 import { getAnimeById } from '../lib/jikan'
 import { getAnimeScoreById } from '../lib/mal'
@@ -313,7 +313,7 @@ unsafeWindow.detailedSongInfo = {
   },
 }
 
-if (isReady()) {
+onReady(() => {
   new Listener('answer results', handle).bindListener()
 
   addScriptData({
@@ -327,4 +327,4 @@ if (isReady()) {
       padding: 50% 0;
     }
   `)
-}
+})

@@ -1,15 +1,20 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
+import { awaitFor } from '../lib/awaitFor'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
-const element = document.querySelector<HTMLAnchorElement>('#loginFormContainer > div > a')
-if (element !== null) {
-  element.click()
-}
+awaitFor(() => document.getElementById('loginFormContainer') !== null)
+  .then(() => {
+    const element = document.querySelector<HTMLAnchorElement>('#loginFormContainer > div > a')
+    if (element !== null) {
+      element.click()
+    }
+  })
+  .catch(console.error)
 
-if (isReady()) {
+onReady(() => {
   addScriptData({
     name: 'Auto Continue Login',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Press the Continue Login button automatically in Login Page.',
   })
-}
+})

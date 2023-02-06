@@ -1,4 +1,4 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 declare global {
@@ -8,7 +8,7 @@ declare global {
   }
 }
 
-if (isReady()) {
+onReady(() => {
   const originalDisplayMessage = displayMessage
   unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {
     if (title === 'Disconnected from server' || title === 'Successfully  Reconnected') {
@@ -30,4 +30,4 @@ if (isReady()) {
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Hide annoying message dialogs when disconnecting and reconnecting.',
   })
-}
+})

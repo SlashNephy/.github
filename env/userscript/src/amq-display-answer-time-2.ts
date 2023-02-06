@@ -1,8 +1,8 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
 import { PlayerAnswerTimeManager } from '../lib/amq/PlayerAnswerTimeManager'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
-if (isReady()) {
+onReady(() => {
   const ignoredPlayerIds: number[] = []
   const playerAnswers = new PlayerAnswerTimeManager()
 
@@ -69,4 +69,4 @@ if (isReady()) {
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Display player answer time in seconds.',
   })
-}
+})

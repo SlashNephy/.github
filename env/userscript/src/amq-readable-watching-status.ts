@@ -1,7 +1,7 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
-if (isReady()) {
+onReady(() => {
   GM_addStyle(`
     .qpAvatarAnswerText {
       width: calc(100% - 1em);
@@ -17,4 +17,4 @@ if (isReady()) {
     author: 'SlashNephy',
     description: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
   })
-}
+})
