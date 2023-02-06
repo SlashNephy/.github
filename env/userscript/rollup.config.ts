@@ -63,7 +63,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-preload-video',
     name: 'AMQ Preload Video',
-    version: '0.2.4',
+    version: '0.3.0',
     description: {
       en: 'Just enable media preloading. Buffering may be faster.',
       ja: 'プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。',
@@ -74,11 +74,14 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.4.7',
+    version: '0.5.0',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',
@@ -90,6 +93,9 @@ export const banners: Banner[] = [
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     connect: ['script.google.com', 'raw.githubusercontent.com'],
     grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue', 'unsafeWindow'],
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'google-remove-redirection-warning',
@@ -120,7 +126,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-private-session',
     name: 'AMQ Private Session',
-    version: '0.2.5',
+    version: '0.3.0',
     description: {
       en: 'Set invisible status automatically on login.',
       ja: 'ログイン時に Invisible ステータスを設定します。',
@@ -131,11 +137,14 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-detailed-song-info',
     name: 'AMQ Detailed Song Info',
-    version: '0.6.7',
+    version: '0.7.0',
     description: {
       en: 'Display detailed information on the side panel of the song.',
       ja: '曲のサイドパネルに詳細な情報を表示します。',
@@ -147,11 +156,14 @@ export const banners: Banner[] = [
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     connect: ['api.jikan.moe', 'api.myanimelist.net'],
     grant: ['unsafeWindow', 'GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue'],
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-hide-annoying-dialog',
     name: 'AMQ Hide Annoying Dialog',
-    version: '0.1.1',
+    version: '0.2.0',
     description: {
       en: 'Hide annoying message dialogs when disconnecting and reconnecting.',
       ja: 'コネクションの切断や再接続時の邪魔なメッセージダイアログを非表示にします。',
@@ -162,11 +174,14 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-readable-watching-status',
     name: 'AMQ Readable Watching Status',
-    version: '0.1.2',
+    version: '0.2.0',
     description: {
       en: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
       ja: '解答欄の幅を狭め、視聴状況のインジケーターを読みやすくします。',
@@ -176,12 +191,15 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
-    grant: ['unsafeWindow', 'GM_addStyle'],
+    grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-clear-answer',
     name: 'AMQ Clear Answer',
-    version: '1.0.1',
+    version: '1.1.0',
     description: {
       en: 'Add a feature to clear text in the answer column with Delete key.',
       ja: 'Delete キーを押下することで解答欄のテキストをクリアする機能を追加します。',
@@ -191,11 +209,14 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-song-guess-rate',
     name: 'AMQ Song Guess Rate',
-    version: '0.2.4',
+    version: '0.3.0',
     description: {
       en: 'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
       ja: '曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)',
@@ -206,11 +227,14 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: ['GM_getValue', 'GM_setValue', 'unsafeWindow', 'GM_deleteValue', 'GM_listValues'],
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-sanime-link',
     name: 'AMQ sanime Link',
-    version: '0.1.3',
+    version: '0.2.0',
     description: {
       en: 'Display links to sanime and "i(lyl)2m" in the player list.',
       ja: 'プレイヤーリストに sanime や "i(lyl)2m" へのリンクを表示します。',
@@ -221,11 +245,14 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-display-answer-time-2',
     name: 'AMQ Display Answer Time 2',
-    version: '0.2.1',
+    version: '0.3.0',
     description: {
       en: 'Display player answer time in seconds.',
       ja: 'プレイヤーの解答時間を秒単位で表示します。',
@@ -236,11 +263,14 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'amq-auto-continue-login',
     name: 'AMQ Auto Continue Login',
-    version: '0.1.2',
+    version: '0.2.0',
     description: {
       en: 'Press the Continue Login button automatically in Login Page.',
       ja: 'ログインページの「Continue Login」ボタンを自動で押下します。',
@@ -248,9 +278,12 @@ export const banners: Banner[] = [
     homepage:
       'https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E8%87%AA%E5%8B%95%E3%81%A7_Continue_Login_%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99_UserScript',
     author: 'SlashNephy',
-    match: ['https://animemusicquiz.com/*'],
+    match: ['https://animemusicquiz.com', 'https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
   {
     id: 'akashi-show-remaining-hours',
@@ -268,7 +301,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-dynamic-background',
     name: 'AMQ Dynamic Background',
-    version: '0.2.2',
+    version: '0.3.0',
     description: {
       en: 'Set the currently playing video surface as the background image.',
       ja: '現在再生中の動画を背景画像に設定します。',
@@ -279,6 +312,9 @@ export const banners: Banner[] = [
     match: ['https://animemusicquiz.com/*'],
     icon: 'https://animemusicquiz.com/favicon-32x32.png',
     grant: 'unsafeWindow',
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
   },
 ]
 
