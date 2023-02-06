@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Clear Answer
 // @namespace       https://github.com/SlashNephy
-// @version         1.0.1
+// @version         1.1.0
 // @author          SlashNephy
 // @description     Add a feature to clear text in the answer column with Delete key.
 // @description:ja  Delete キーを押下することで解答欄のテキストをクリアする機能を追加します。
@@ -12,103 +12,38 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-clear-answer.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
+// @require         https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js
 // @grant           unsafeWindow
 // @license         MIT license
 // ==/UserScript==
 
-const isReady = () => unsafeWindow.setupDocumentDone === true
+const awaitFor = async (predicate, timeout) => {
+  return new Promise((resolve, reject) => {
+    let timer
+    const interval = window.setInterval(() => {
+      if (predicate()) {
+        clearInterval(interval)
+        clearTimeout(timer)
+        resolve()
+      }
+    }, 500)
+    if (timeout !== undefined) {
+      timer = setTimeout(() => {
+        clearInterval(interval)
+        clearTimeout(timer)
+        reject(new Error('timeout'))
+      }, timeout)
+    }
+  })
+}
 
-const createInstalledWindow = () => {
-  if (!isReady()) return
-  if ($('#installedModal').length === 0) {
-    $('#gameContainer').append(
-      $(`
-            <div class="modal fade" id="installedModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                            <h2 class="modal-title">Installed Userscripts</h2>
-                        </div>
-                        <div class="modal-body" style="overflow-y: auto;max-height: calc(100vh - 150px);">
-                            <div id="installedContainer">
-                                You have the following scripts installed (click on each of them to learn more)<br>
-                                This window can also be opened by going to AMQ settings (the gear icon on bottom right) and clicking "Installed Userscripts"
-                                <div id="installedListContainer"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `)
-    )
-    $('#mainMenu')
-      .prepend(
-        $(`
-            <div class="button floatingContainer mainMenuButton" id="mpInstalled" data-toggle="modal" data-target="#installedModal">
-                <h1>Installed Userscripts</h1>
-            </div>
-        `)
-      )
-      .css('margin-top', '20vh')
-    $('#optionsContainer > ul').prepend(
-      $(`
-            <li class="clickAble" data-toggle="modal" data-target="#installedModal">Installed Userscripts</li>
-        `)
-    )
-    addStyle(`
-            .descriptionContainer {
-                width: 95%;
-                margin: auto;
-            }
-            .descriptionContainer img {
-                width: 80%;
-                margin: 10px 10%;
-            }
-        `)
+const onReady = (callback) => {
+  if (document.getElementById('startPage')) {
+    return
   }
-}
-const addScriptData = (metadata) => {
-  if (!isReady()) return
-  createInstalledWindow()
-  $('#installedListContainer').append(
-    $('<div></div>')
-      .append(
-        $('<h4></h4>')
-          .html(
-            `<i class="fa fa-caret-right"></i> ${metadata.name !== undefined ? metadata.name : 'Unknown'} by ${
-              metadata.author !== undefined ? metadata.author : 'Unknown'
-            }`
-          )
-          .css('font-weight', 'bold')
-          .css('cursor', 'pointer')
-          .click(function () {
-            const selector = $(this).next()
-            if (selector.is(':visible')) {
-              selector.slideUp()
-              $(this).find('.fa-caret-down').addClass('fa-caret-right').removeClass('fa-caret-down')
-            } else {
-              selector.slideDown()
-              $(this).find('.fa-caret-right').addClass('fa-caret-down').removeClass('fa-caret-right')
-            }
-          })
-      )
-      .append(
-        $('<div></div>')
-          .addClass('descriptionContainer')
-          .html(metadata.description !== undefined ? metadata.description : 'No description provided')
-          .hide()
-      )
-  )
-}
-const addStyle = (css) => {
-  if (!isReady()) return
-  const head = document.head
-  const style = document.createElement('style')
-  head.appendChild(style)
-  style.appendChild(document.createTextNode(css))
+  awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+    .then(callback)
+    .catch(console.error)
 }
 
 const handleKeydown = (event) => {
@@ -120,13 +55,13 @@ const handleKeydown = (event) => {
     target.value = ''
   }
 }
-if (isReady()) {
+onReady(() => {
   for (const input of document.querySelectorAll('input.flatTextInput')) {
     input.addEventListener('keydown', handleKeydown)
   }
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Clear Answer',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Add a feature to clear text in the answer column with delete key.',
   })
-}
+})
