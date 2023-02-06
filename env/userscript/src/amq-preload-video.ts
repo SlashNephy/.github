@@ -1,7 +1,7 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
-if (isReady()) {
+onReady(() => {
   document.addEventListener('DOMNodeInserted', () => {
     for (const element of document.querySelectorAll<HTMLVideoElement>('video')) {
       element.preload = 'auto'
@@ -14,4 +14,4 @@ if (isReady()) {
     description:
       'Just enable media preloading. Speed up buffering. Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!',
   })
-}
+})

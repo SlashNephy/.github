@@ -1,4 +1,4 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
 import { PlayerAnswerTimeManager } from '../lib/amq/PlayerAnswerTimeManager'
 import { executeXhr } from '../lib/api'
 import { fetchArmEntries } from '../lib/arm'
@@ -11,9 +11,6 @@ const gasUrl = new GM_Value('GAS_URL', '')
 const dryRun = new GM_Value('DRY_RUN', false)
 
 const armEntries: ArmEntry[] = []
-fetchArmEntries()
-  .then((entries) => armEntries.push(...entries))
-  .catch(console.error)
 
 const executeGas = async (row: (string | number | boolean)[]) => {
   const url = gasUrl.get()
@@ -37,7 +34,11 @@ const executeGas = async (row: (string | number | boolean)[]) => {
   })
 }
 
-if (isReady()) {
+onReady(() => {
+  fetchArmEntries()
+    .then((entries) => armEntries.push(...entries))
+    .catch(console.error)
+
   const playerAnswerTimes = new PlayerAnswerTimeManager()
   new Listener('answer results', (event) => {
     const { quiz, quizVideoController } = unsafeWindow
@@ -174,4 +175,4 @@ if (isReady()) {
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Export song results to Google Spreadsheet!',
   })
-}
+})

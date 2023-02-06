@@ -1,4 +1,5 @@
-import { isReady } from '../lib/amq/isReady'
+import { getDetailedSongInfo } from '../lib/amq/getDetailedSongInfo'
+import { onReady } from '../lib/amq/onReady'
 import { GM_Value } from '../lib/GM_Value'
 import { makeSha256HexDigest } from '../lib/hash'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
@@ -44,12 +45,8 @@ const migrate = async () => {
   )
 }
 
-if (isReady()) {
-  if (unsafeWindow.detailedSongInfo === undefined) {
-    throw new Error('AMQ Detailed Song Info plugin is not installed.')
-  }
-
-  unsafeWindow.detailedSongInfo.register({
+onReady(() => {
+  getDetailedSongInfo().register({
     id: 'guess-rate-row',
     title: 'Guess Rate',
     async content(event: AnswerResultsEvent): Promise<string | null> {
@@ -72,4 +69,4 @@ if (isReady()) {
     description:
       'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
   })
-}
+})

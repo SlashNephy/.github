@@ -1,4 +1,4 @@
-import { isReady } from '../lib/amq/isReady'
+import { onReady } from '../lib/amq/onReady'
 import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 /* eslint-disable @typescript-eslint/naming-convention */
@@ -8,7 +8,7 @@ const CANVAS_UPDATE_INTERVAL = 1000 / 30,
   CANVAS_FILTER = 'blur(2px)'
 /* eslint-enable @typescript-eslint/naming-convention */
 
-if (isReady()) {
+onReady(() => {
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
   if (ctx === null) {
@@ -75,4 +75,4 @@ if (isReady()) {
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Set the currently playing video surface as the background image.',
   })
-}
+})
