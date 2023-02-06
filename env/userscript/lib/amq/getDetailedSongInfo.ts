@@ -1,3 +1,4 @@
+import { awaitFor } from '../awaitFor'
 import { LocalizableString } from '../LocalizableString'
 
 const message = new LocalizableString({
@@ -7,10 +8,13 @@ const message = new LocalizableString({
 
 export type DetailedSongInfo = NonNullable<typeof unsafeWindow.detailedSongInfo>
 
-export const getDetailedSongInfo = (): DetailedSongInfo => {
-  if (unsafeWindow.detailedSongInfo === undefined) {
-    throw message.toError()
-  }
-
-  return unsafeWindow.detailedSongInfo
+export const getDetailedSongInfo = async (): Promise<DetailedSongInfo> => {
+  return (
+    awaitFor(() => unsafeWindow.detailedSongInfo !== undefined, 10000)
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      .then(() => unsafeWindow.detailedSongInfo!)
+      .catch(() => {
+        throw message.toError()
+      })
+  )
 }
