@@ -120,4 +120,5 @@ dist/private
 lib/private
 src/private
 rollup.config.private.ts
-dist/*.dev.user.js
+dist/*.dev-chrome.user.js
+dist/*.dev-firefox.user.js
