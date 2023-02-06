@@ -157,6 +157,7 @@ declare class MoeVideoPlayer {
   public $player: JQuery<HTMLVideoElement>
   public player: {
     hasClass(name: string): boolean
+    isAudio(): boolean
   }
 }
 
