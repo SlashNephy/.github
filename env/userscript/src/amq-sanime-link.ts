@@ -1,5 +1,4 @@
 import { onReady } from '../lib/amq/onReady'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 import type { GameStartingEvent, PlayerProfileEvent } from '../types/amq'
 
@@ -237,7 +236,7 @@ onReady(() => {
   new Listener('Game Starting', handleGameStarting).bindListener()
   new Listener('answer results', handleAnswerResults).bindListener()
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'sanime Link',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Display links to sanime and "i(lyl)2m" in the player list.',

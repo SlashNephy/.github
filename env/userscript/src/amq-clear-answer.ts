@@ -1,5 +1,4 @@
 import { onReady } from '../lib/amq/onReady'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 const handleKeydown = (event: KeyboardEvent) => {
   // eslint-disable-next-line xss/no-mixed-html
@@ -20,7 +19,7 @@ onReady(() => {
     input.addEventListener('keydown', handleKeydown)
   }
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Clear Answer',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Add a feature to clear text in the answer column with delete key.',

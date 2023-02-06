@@ -1,5 +1,4 @@
 import { onReady } from '../lib/amq/onReady'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
@@ -25,7 +24,7 @@ onReady(() => {
     )
   }
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Hide Annoying Dialog',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Hide annoying message dialogs when disconnecting and reconnecting.',

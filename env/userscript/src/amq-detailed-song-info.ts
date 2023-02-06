@@ -2,7 +2,6 @@ import { onReady } from '../lib/amq/onReady'
 import { GM_Value } from '../lib/GM_Value'
 import { getAnimeById } from '../lib/jikan'
 import { getAnimeScoreById } from '../lib/mal'
-import { addScriptData, addStyle } from '../lib/thirdparty/amqScriptInfo'
 
 import type { AnswerResultsEvent } from '../types/amq'
 import type { CustomLink, CustomRow } from '../types/amq-detailed-song-info'
@@ -316,13 +315,13 @@ unsafeWindow.detailedSongInfo = {
 onReady(() => {
   new Listener('answer results', handle).bindListener()
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Detailed Song Info',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description: 'Display detailed information on the side panel of the song.',
   })
 
-  addStyle(`
+  AMQ_addStyle(`
     .custom-hider {
       padding: 50% 0;
     }

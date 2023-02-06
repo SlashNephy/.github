@@ -1,5 +1,4 @@
 import { onReady } from '../lib/amq/onReady'
-import { addScriptData } from '../lib/thirdparty/amqScriptInfo'
 
 onReady(() => {
   document.addEventListener('DOMNodeInserted', () => {
@@ -8,7 +7,7 @@ onReady(() => {
     }
   })
 
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Preload Video',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description:
