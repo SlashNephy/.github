@@ -45,20 +45,24 @@ const migrate = async () => {
 }
 
 onReady(() => {
-  getDetailedSongInfo().register({
-    id: 'guess-rate-row',
-    title: 'Guess Rate',
-    async content(event: AnswerResultsEvent): Promise<string | null> {
-      const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
-      if (self === undefined) {
-        return null
-      }
+  getDetailedSongInfo()
+    .then(({ register }) => {
+      register({
+        id: 'guess-rate-row',
+        title: 'Guess Rate',
+        async content(event: AnswerResultsEvent): Promise<string | null> {
+          const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
+          if (self === undefined) {
+            return null
+          }
 
-      const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
-      const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
-      return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
-    },
-  })
+          const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
+          const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
+          return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
+        },
+      })
+    })
+    .catch(console.error)
 
   migrate().catch(console.error)
 
