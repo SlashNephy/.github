@@ -31,7 +31,7 @@
     "jest": "^28 || ^29"
   },
   "devDependencies": {
-    "@jest/types": "29.4.1",
+    "@jest/types": "29.4.2",
     "@slashnephy/eslint-config": "0.2.43",
     "@slashnephy/prettier-config": "0.1.11",
     "@types/node": "18.13.0",
