@@ -52,6 +52,12 @@ const react: Linter.Config = {
     ],
     // ハンドラーの名前規則
     'react/jsx-handler-names': 'error',
+    // useState の分解宣言 & setXXX という名前を強制
+    'react/hook-use-state': 'error',
+    // <React.Fragment /> 👉 </>
+    'react/jsx-fragments': 'error',
+    // ステートレス関数を優先
+    'react/prefer-stateless-function': 'error',
   },
   overrides: [
     {

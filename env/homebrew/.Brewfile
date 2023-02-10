@@ -13,6 +13,7 @@ tap "k1low/tap"
 tap "ktr0731/evans"
 tap "minacle/chntpw"
 tap "motemen/furoshiki2"
+tap "potatolabs/git-redate"
 tap "reviewdog/tap"
 tap "romkatv/powerlevel10k"
 tap "teamookla/speedtest"
@@ -276,6 +277,8 @@ brew "ktr0731/evans/evans"
 # The Offline NT Password Editor
 brew "minacle/chntpw/chntpw"
 brew "motemen/furoshiki2/furoshiki2", args: ["HEAD"]
+# Change the dates of several git commits with a single command
+brew "potatolabs/git-redate/git-redate"
 # Automated code review tool integrated with any code analysis tools regardless of programming language.
 brew "reviewdog/tap/reviewdog"
 # A Zsh Theme
