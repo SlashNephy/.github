@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Song Guess Rate
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.4
+// @version         0.3.0
 // @author          SlashNephy
 // @description     Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)
 // @description:ja  曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)
@@ -12,6 +12,7 @@
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-song-guess-rate.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animemusicquiz.com/*
+// @require         https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js
 // @grant           GM_getValue
 // @grant           GM_setValue
 // @grant           unsafeWindow
@@ -20,7 +21,72 @@
 // @license         MIT license
 // ==/UserScript==
 
-const isReady = () => unsafeWindow.setupDocumentDone === true
+const awaitFor = async (predicate, timeout) => {
+  return new Promise((resolve, reject) => {
+    let timer
+    const interval = window.setInterval(() => {
+      if (predicate()) {
+        clearInterval(interval)
+        clearTimeout(timer)
+        resolve()
+      }
+    }, 500)
+    if (timeout !== undefined) {
+      timer = setTimeout(() => {
+        clearInterval(interval)
+        clearTimeout(timer)
+        reject(new Error('timeout'))
+      }, timeout)
+    }
+  })
+}
+
+class LocalizableString {
+  localization
+  constructor(localization) {
+    this.localization = localization
+  }
+  static _orEmpty(a, b) {
+    return a !== undefined && a.length > 0 ? a : b
+  }
+  toString() {
+    switch (navigator.language) {
+      case 'ja':
+        return LocalizableString._orEmpty(this.localization.ja, this.localization.en)
+      default:
+        return this.localization.en
+    }
+  }
+  format(...args) {
+    return toString().replace(/{(\d+)}/g, (match, index) => {
+      return args[index]?.toString() ?? 'undefined'
+    })
+  }
+  toError() {
+    return new Error(toString())
+  }
+}
+
+const message = new LocalizableString({
+  en: 'Detailed Song Info could not be detected, either Detailed Song Info is not installed or this UserScript is loaded before Detailed Song Info.',
+  ja: 'Detailed Song Info を検出できませんでした。Detailed Song Info がインストールされていないか、この UserScript が Detailed Song Info よりも先に読み込まれています。',
+})
+const getDetailedSongInfo = async () => {
+  return awaitFor(() => unsafeWindow.detailedSongInfo !== undefined, 10000)
+    .then(() => unsafeWindow.detailedSongInfo)
+    .catch(() => {
+      throw message.toError()
+    })
+}
+
+const onReady = (callback) => {
+  if (document.getElementById('startPage')) {
+    return
+  }
+  awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+    .then(callback)
+    .catch(console.error)
+}
 
 class GM_Value {
   key
@@ -51,99 +117,6 @@ const makeSha256HexDigest = async (message) => {
   return arrayBuffer.map((b) => b.toString(16).padStart(2, '0')).join('')
 }
 
-const createInstalledWindow = () => {
-  if (!isReady()) return
-  if ($('#installedModal').length === 0) {
-    $('#gameContainer').append(
-      $(`
-            <div class="modal fade" id="installedModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                            <h2 class="modal-title">Installed Userscripts</h2>
-                        </div>
-                        <div class="modal-body" style="overflow-y: auto;max-height: calc(100vh - 150px);">
-                            <div id="installedContainer">
-                                You have the following scripts installed (click on each of them to learn more)<br>
-                                This window can also be opened by going to AMQ settings (the gear icon on bottom right) and clicking "Installed Userscripts"
-                                <div id="installedListContainer"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `)
-    )
-    $('#mainMenu')
-      .prepend(
-        $(`
-            <div class="button floatingContainer mainMenuButton" id="mpInstalled" data-toggle="modal" data-target="#installedModal">
-                <h1>Installed Userscripts</h1>
-            </div>
-        `)
-      )
-      .css('margin-top', '20vh')
-    $('#optionsContainer > ul').prepend(
-      $(`
-            <li class="clickAble" data-toggle="modal" data-target="#installedModal">Installed Userscripts</li>
-        `)
-    )
-    addStyle(`
-            .descriptionContainer {
-                width: 95%;
-                margin: auto;
-            }
-            .descriptionContainer img {
-                width: 80%;
-                margin: 10px 10%;
-            }
-        `)
-  }
-}
-const addScriptData = (metadata) => {
-  if (!isReady()) return
-  createInstalledWindow()
-  $('#installedListContainer').append(
-    $('<div></div>')
-      .append(
-        $('<h4></h4>')
-          .html(
-            `<i class="fa fa-caret-right"></i> ${metadata.name !== undefined ? metadata.name : 'Unknown'} by ${
-              metadata.author !== undefined ? metadata.author : 'Unknown'
-            }`
-          )
-          .css('font-weight', 'bold')
-          .css('cursor', 'pointer')
-          .click(function () {
-            const selector = $(this).next()
-            if (selector.is(':visible')) {
-              selector.slideUp()
-              $(this).find('.fa-caret-down').addClass('fa-caret-right').removeClass('fa-caret-down')
-            } else {
-              selector.slideDown()
-              $(this).find('.fa-caret-right').addClass('fa-caret-down').removeClass('fa-caret-right')
-            }
-          })
-      )
-      .append(
-        $('<div></div>')
-          .addClass('descriptionContainer')
-          .html(metadata.description !== undefined ? metadata.description : 'No description provided')
-          .hide()
-      )
-  )
-}
-const addStyle = (css) => {
-  if (!isReady()) return
-  const head = document.head
-  const style = document.createElement('style')
-  head.appendChild(style)
-  style.appendChild(document.createTextNode(css))
-}
-
 const increment = async (key, isCorrect) => {
   const hashKey = await makeSha256HexDigest(key)
   const value = new GM_Value(hashKey, { correct: 0, total: 0 })
@@ -172,28 +145,29 @@ const migrate = async () => {
     })
   )
 }
-if (isReady()) {
-  if (unsafeWindow.detailedSongInfo === undefined) {
-    throw new Error('AMQ Detailed Song Info plugin is not installed.')
-  }
-  unsafeWindow.detailedSongInfo.register({
-    id: 'guess-rate-row',
-    title: 'Guess Rate',
-    async content(event) {
-      const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
-      if (self === undefined) {
-        return null
-      }
-      const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
-      const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
-      return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
-    },
-  })
+onReady(() => {
+  getDetailedSongInfo()
+    .then(({ register }) => {
+      register({
+        id: 'guess-rate-row',
+        title: 'Guess Rate',
+        async content(event) {
+          const self = Object.values(unsafeWindow.quiz.players).find((p) => p.isSelf && p._inGame)
+          if (self === undefined) {
+            return null
+          }
+          const isCorrect = event.players.find((p) => p.gamePlayerId === self.gamePlayerId)?.correct === true
+          const count = await increment(`${event.songInfo.songName}_${event.songInfo.artist}`, isCorrect)
+          return `${count.correct} / ${count.total} (${((count.correct / count.total) * 100).toFixed(1)} %)`
+        },
+      })
+    })
+    .catch(console.error)
   migrate().catch(console.error)
-  addScriptData({
+  AMQ_addScriptData({
     name: 'Song Guess Rate',
     author: 'SlashNephy &lt;spica@starry.blue&gt;',
     description:
       'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
   })
-}
+})

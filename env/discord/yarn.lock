@@ -1948,13 +1948,13 @@ __metadata:
     "@rollup/plugin-babel": 6.0.3
     "@rollup/plugin-typescript": 11.0.0
     "@slashnephy/eslint-config": 0.2.43
-    "@slashnephy/prettier-config": 0.1.10
+    "@slashnephy/prettier-config": 0.1.12
     "@types/babel__core": 7.20.0
     "@types/babel__preset-env": 7.9.2
     concurrently: 7.6.0
     eslint: 8.33.0
-    prettier: 2.8.3
-    rollup: 3.14.0
+    prettier: 2.8.4
+    rollup: 3.15.0
     typescript: 4.9.5
   languageName: unknown
   linkType: soft
@@ -1993,12 +1993,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/prettier-config@npm:0.1.10":
-  version: 0.1.10
-  resolution: "@slashnephy/prettier-config@npm:0.1.10"
+"@slashnephy/prettier-config@npm:0.1.12":
+  version: 0.1.12
+  resolution: "@slashnephy/prettier-config@npm:0.1.12"
   peerDependencies:
     prettier: ^2
-  checksum: 47a78ca282259bcc1de0355aaf0a76b6e2d46d6fa2ab775291b029ec28fb715d03a23149b845ff797a470baea456f3a1097037f7f5528b08c711be2dbf90094f
+  checksum: 8d52b96432c6a970394e0ed8ebb8640386eeeef2c684dd6cad22b64f13e233ef6ab1cb3da4bad52c8c5fa9e1e35ae63d15bce0e13d12bd451a15339191dcb45b
   languageName: node
   linkType: hard
 
@@ -5357,12 +5357,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.3":
-  version: 2.8.3
-  resolution: "prettier@npm:2.8.3"
+"prettier@npm:2.8.4":
+  version: 2.8.4
+  resolution: "prettier@npm:2.8.4"
   bin:
     prettier: bin-prettier.js
-  checksum: 92f2ceb522d454370e02082aa74ad27388672f7cee8975028b59517c069fe643bdc73e322675c8faf2ff173d7a626d1a6389f26b474000308e793aa25fff46e5
+  checksum: c173064bf3df57b6d93d19aa98753b9b9dd7657212e33b41ada8e2e9f9884066bb9ca0b4005b89b3ab137efffdf8fbe0b462785aba20364798ff4303aadda57e
   languageName: node
   linkType: hard
 
@@ -5620,9 +5620,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:3.14.0":
-  version: 3.14.0
-  resolution: "rollup@npm:3.14.0"
+"rollup@npm:3.15.0":
+  version: 3.15.0
+  resolution: "rollup@npm:3.15.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -5630,7 +5630,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 48f4da224753b8022529256243b74b3f6f41d9b4358ba079ac42f2a2cf07e4bd01b5d94579338194238e3c575487974ca508e144cf6195123293e7fdf82506cb
+  checksum: 1a75b09503f705b594dcfebf65b9e1ca4536e3facdf5716e10d4272697b4bb7e6bd8ab35be1b3fe1271f864d4c4a75d012bd77cbe7a55579d5138258b9e85c23
   languageName: node
   linkType: hard
 
