@@ -2416,7 +2416,7 @@ __metadata:
     eslint: 8.34.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.4
-    renovate: 34.130.0
+    renovate: 34.131.0
     ts-node: 10.9.1
     typescript: 4.9.5
   languageName: unknown
@@ -3851,7 +3851,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:10.0.0":
+"commander@npm:10.0.0, commander@npm:^10.0.0":
   version: 10.0.0
   resolution: "commander@npm:10.0.0"
   checksum: 9f6495651f878213005ac744dd87a85fa3d9f2b8b90d1c19d0866d666bda7f735adfd7c2f10dfff345782e2f80ea258f98bb4efcef58e4e502f25f883940acfd
@@ -3862,13 +3862,6 @@ __metadata:
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
   checksum: ab8c07884e42c3a8dbc5dd9592c606176c7eb5c1ca5ff274bcf907039b2c41de3626f684ea75ccf4d361ba004bbaff1f577d5384c155f3871e456bdf27becf9e
-  languageName: node
-  linkType: hard
-
-"commander@npm:^9.4.1":
-  version: 9.4.1
-  resolution: "commander@npm:9.4.1"
-  checksum: bfb18e325a5bdf772763c2213d5c7d9e77144d944124e988bcd8e5e65fb6d45d5d4e86b09155d0f2556c9a59c31e428720e57968bcd050b2306e910a0bf3cf13
   languageName: node
   linkType: hard
 
@@ -4270,17 +4263,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"editorconfig@npm:1.0.1":
-  version: 1.0.1
-  resolution: "editorconfig@npm:1.0.1"
+"editorconfig@npm:1.0.2":
+  version: 1.0.2
+  resolution: "editorconfig@npm:1.0.2"
   dependencies:
     "@one-ini/wasm": 0.1.1
-    commander: ^9.4.1
-    minimatch: 5.1.0
+    commander: ^10.0.0
+    minimatch: 6.1.6
     semver: ^7.3.8
   bin:
     editorconfig: bin/editorconfig
-  checksum: 9dbd988d4fbd62c4324a2af1ad9d62e009ff73b9c5bf32b6f64127e75f8edfa3d6715f879ab4821c0f3c62541f3e369cd56a77957ee4e66b2252b2f51e9efecc
+  checksum: 21d0b40705957c207afd8cf829082ba432fbcc563130ab684eba276e8c22151deab80879d95d517df2db9a111d0023dafa2a26983b442fc327f5e1123a514da1
   languageName: node
   linkType: hard
 
@@ -6996,21 +6989,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:5.1.0, minimatch@npm:^5.0.1":
-  version: 5.1.0
-  resolution: "minimatch@npm:5.1.0"
-  dependencies:
-    brace-expansion: ^2.0.1
-  checksum: 15ce53d31a06361e8b7a629501b5c75491bc2b59712d53e802b1987121d91b433d73fcc5be92974fde66b2b51d8fb28d75a9ae900d249feb792bb1ba2a4f0a90
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:5.1.6":
   version: 5.1.6
   resolution: "minimatch@npm:5.1.6"
   dependencies:
     brace-expansion: ^2.0.1
   checksum: 7564208ef81d7065a370f788d337cd80a689e981042cb9a1d0e6580b6c6a8c9279eba80010516e258835a988363f99f54a6f711a315089b8b42694f5da9d0d77
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:6.1.6":
+  version: 6.1.6
+  resolution: "minimatch@npm:6.1.6"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: 707b026e0adc610be6c02f24173d84811e5b8cc2e434881e47ef00a72be5fbea9323b7158d7bf065782b1e1d5c50d7d80cd72f2602255f2fddfb1d2f02e9092c
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^5.0.1":
+  version: 5.1.0
+  resolution: "minimatch@npm:5.1.0"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: 15ce53d31a06361e8b7a629501b5c75491bc2b59712d53e802b1987121d91b433d73fcc5be92974fde66b2b51d8fb28d75a9ae900d249feb792bb1ba2a4f0a90
   languageName: node
   linkType: hard
 
@@ -8217,9 +8219,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.130.0":
-  version: 34.130.0
-  resolution: "renovate@npm:34.130.0"
+"renovate@npm:34.131.0":
+  version: 34.131.0
+  resolution: "renovate@npm:34.131.0"
   dependencies:
     "@aws-sdk/client-codecommit": 3.256.0
     "@aws-sdk/client-ec2": 3.256.0
@@ -8267,7 +8269,7 @@ __metadata:
     delay: 5.0.0
     dequal: 2.0.3
     detect-indent: 6.1.0
-    editorconfig: 1.0.1
+    editorconfig: 1.0.2
     email-addresses: 5.0.0
     emoji-regex: 10.2.1
     emojibase: 6.1.0
@@ -8333,7 +8335,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 616be8c6c7887bafff021a119996a8f604f00311f928253c4c9b313e2684d07a50e313a4598ef95b83f64376c8662f678259fa6f101c34bac8573db25a658e18
+  checksum: 11fa1096f3de43e541528b52b8d9e2d54379e2768bb6c451327a82f63bc59703b2825f77f32110b26e5b1d718f7308f2be731ea3afc2364eb1312630f81fcd00
   languageName: node
   linkType: hard
 
