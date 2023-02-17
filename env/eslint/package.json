@@ -60,7 +60,7 @@
     "typescript": "^4"
   },
   "devDependencies": {
-    "@slashnephy/prettier-config": "0.1.12",
+    "@slashnephy/prettier-config": "0.1.13",
     "@types/eslint": "8.21.1",
     "@types/node": "18.13.0",
     "@types/prettier": "2.7.2",
