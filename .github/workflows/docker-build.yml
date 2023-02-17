@@ -74,7 +74,7 @@ jobs:
             type=sha
 
       - name: Build Image & Push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           push: true
           context: '${{ inputs.context }}'
