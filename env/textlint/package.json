@@ -34,7 +34,7 @@
     "textlint-rule-preset-jtf-style": "2.3.13"
   },
   "peerDependencies": {
-    "textlint": "^12"
+    "textlint": "^12 || ^13.0.0"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.2.43",
