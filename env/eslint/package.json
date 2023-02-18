@@ -52,7 +52,7 @@
     "eslint-plugin-userscripts": "0.2.10",
     "eslint-plugin-vitest": "0.0.32",
     "eslint-plugin-xss": "0.1.12",
-    "eslint-plugin-yml": "1.4.0"
+    "eslint-plugin-yml": "1.5.0"
   },
   "peerDependencies": {
     "eslint": "^8",
