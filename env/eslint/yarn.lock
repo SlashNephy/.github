@@ -222,7 +222,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.6.0
     eslint-plugin-unused-imports: 2.0.0
     eslint-plugin-userscripts: 0.2.10
-    eslint-plugin-vitest: 0.0.32
+    eslint-plugin-vitest: 0.0.34
     eslint-plugin-xss: 0.1.12
     eslint-plugin-yml: 1.5.0
     prettier: 2.8.4
@@ -1654,14 +1654,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vitest@npm:0.0.32":
-  version: 0.0.32
-  resolution: "eslint-plugin-vitest@npm:0.0.32"
+"eslint-plugin-vitest@npm:0.0.34":
+  version: 0.0.34
+  resolution: "eslint-plugin-vitest@npm:0.0.34"
   dependencies:
     "@typescript-eslint/utils": ^5.48.1
   peerDependencies:
     eslint: ">=8.0.0"
-  checksum: 566b267150e802558ddc3e857963f0f9608f10631df59d756d88ba1f3633760f1ddafffa06967a8ac2e305ab6f8c174fc05b703cb2f19bce5a25899d9c880129
+  checksum: 19f056d387e30ba49c35bea739cfd22d2fb50fdacbc29be09842d667473226b02ef9274e73e58157502e29f2b29b8164c4fd82bfb84115c92f053dc9c7d7b30c
   languageName: node
   linkType: hard
 
