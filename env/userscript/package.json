@@ -54,7 +54,7 @@
   },
   "packageManager": "yarn@3.4.1",
   "engines": {
-    "node": "18.14.1"
+    "node": "18.14.2"
   },
   "eslintConfig": {
     "extends": [
