@@ -3,14 +3,6 @@ name: 'go run'
 on:
   workflow_call:
     inputs:
-      go-version:
-        required: false
-        type: string
-        default: ''
-      go-version-file:
-        required: false
-        type: string
-        default: 'go.mod'
       working-directory:
         required: false
         type: string
@@ -59,18 +51,10 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: 'echo "${{ inputs.env }}" > .env'
 
-      - name: Setup Go (via go-version-file)
-        if: inputs.go-version == ''
+      - name: Setup Go
         uses: actions/setup-go@v3
         with:
-          go-version-file: '${{ inputs.go-version-file }}'
-          cache: true
-          cache-dependency-path: '${{ inputs.working-directory }}/go.sum'
-      - name: Setup Go (via go-version)
-        if: inputs.go-version != ''
-        uses: actions/setup-go@v3
-        with:
-          go-version: '${{ inputs.go-version }}'
+          go-version-file: '${{ inputs.working-directory }}/go.mod'
           cache: true
           cache-dependency-path: '${{ inputs.working-directory }}/go.sum'
 
