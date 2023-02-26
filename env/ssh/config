@@ -1,11 +1,6 @@
 Host github.com
   User git
 
-Host bot.github.com
-  User git
-  HostName github.com
-  IdentityFile ~/.ssh/bot.github.com/id_ed25519
-
 Host direct.starry.blue
   User spica
   Port 3340
