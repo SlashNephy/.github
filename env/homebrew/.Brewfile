@@ -120,12 +120,18 @@ brew "gnu-tar"
 brew "gnu-which"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Development kit for the Java programming language
+brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # GNU grep, egrep and fgrep
 brew "grep"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Next generation open source RPC library and framework
 brew "grpc"
+# Like cURL, but for gRPC
+brew "grpcurl"
 # Popular GNU data compression program
 brew "gzip"
 # Smarter Dockerfile linter to validate best practices
@@ -146,6 +152,8 @@ brew "ios-webkit-debug-proxy"
 brew "jq"
 # Static analysis tool for Kubernetes YAML files and Helm charts
 brew "kube-linter"
+# FAST Kubernetes manifests validator, with support for Custom Resources!
+brew "kubeconform"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
@@ -186,8 +194,6 @@ brew "nss"
 brew "nvm"
 # Reverse proxy for authenticating users via OAuth 2 providers
 brew "oauth2_proxy"
-# Development kit for the Java programming language
-brew "openjdk"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Command-line tool to generate, analyze, convert and manipulate colors
@@ -202,6 +208,12 @@ brew "pipenv"
 brew "plenv"
 # Coreutils progress viewer
 brew "progress"
+# Go support for Google's protocol buffers
+brew "protoc-gen-go"
+# Protoc plugin that generates code for gRPC-Go clients
+brew "protoc-gen-go-grpc"
+# Protoc plugin that generates code for gRPC-Web clients
+brew "protoc-gen-grpc-web"
 # Ruby version manager
 brew "rbenv"
 # Rsync for cloud storage
@@ -234,12 +246,16 @@ brew "tldr"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Vulnerability scanner for container images, file systems, and Git repos
+brew "trivy"
 # Command-line interface for Vercel
 brew "vercel-cli"
 # Next generation frontend tooling. It's fast!
 brew "vite"
 # Pager/text based browser
 brew "w3m"
+# Internet file retriever
+brew "wget"
 # Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
 # Automatic workarounds for problems in Wine
@@ -252,6 +268,8 @@ brew "yarn"
 brew "ykman"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
 # Fork of youtube-dl with additional features and fixes
 brew "yt-dlp", link: false
 # Next-generation plugin manager for zsh

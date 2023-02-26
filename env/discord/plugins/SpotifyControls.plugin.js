@@ -2,7 +2,7 @@
  * @name SpotifyControls
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.3.1
+ * @version 1.3.2
  * @description Adds a Control Panel while listening to Spotify on a connected Account
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -14,7 +14,7 @@
 
 module.exports = (_ => {
 	const changeLog = {
-
+		
 	};
 
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
@@ -23,14 +23,14 @@ module.exports = (_ => {
 		getAuthor () {return this.author;}
 		getVersion () {return this.version;}
 		getDescription () {return `The Library Plugin needed for ${this.name} is missing. Open the Plugin Settings to download it. \n\n${this.description}`;}
-
+		
 		downloadLibrary () {
 			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
 				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Finished downloading BDFDB Library", {type: "success"}));
 				else BdApi.alert("Error", "Could not download BDFDB Library Plugin. Try again later or download it manually from GitHub: https://mwittrien.github.io/downloader/?library");
 			});
 		}
-
+		
 		load () {
 			if (!window.BDFDB_Global || !Array.isArray(window.BDFDB_Global.pluginQueue)) window.BDFDB_Global = Object.assign({}, window.BDFDB_Global, {pluginQueue: []});
 			if (!window.BDFDB_Global.downloadModal) {
@@ -61,13 +61,13 @@ module.exports = (_ => {
 		var starting, lastSong, showActivity, currentVolume, lastVolume, stopTime, previousIsClicked, previousDoubleTimeout;
 		var timelineTimeout, timelineDragging, updateInterval;
 		var playbackState = {};
-
+		
 		const repeatStates = [
 			"off",
 			"context",
 			"track"
 		];
-
+	
 		const SpotifyControlsComponent = class SpotifyControls extends BdApi.React.Component {
 			componentDidMount() {
 				controls = this;
@@ -127,7 +127,7 @@ module.exports = (_ => {
 					stopTime = new Date();
 				}
 				if (!lastSong) return null;
-
+				
 				let coverSrc = BDFDB.LibraryModules.ApplicationAssetUtils.getAssetImage(lastSong.application_id, lastSong.assets.large_image);
 				let connection = (BDFDB.LibraryStores.ConnectedAccountsStore.getAccounts().find(n => n.type == "spotify") || {});
 				showActivity = showActivity != undefined ? showActivity : (connection.show_activity || connection.showActivity);
@@ -355,7 +355,7 @@ module.exports = (_ => {
 					children: _this.defaults.buttons[this.props.type] && _this.defaults.buttons[this.props.type].icons ? (_this.defaults.buttons[this.props.type].icons[this.props.icon] || _this.defaults.buttons[this.props.type].icons[0]) : "?",
 					onClick: this.props.disabled ? _ => {} : this.props.onClick,
 					onContextMenu: this.props.disabled ? _ => {} : this.props.onContextMenu,
-				}), "active", "disabled", "renderPopout", "icon", "type"));
+				}), "active", "disabled", "renderPopout", "icon", "type", "player"));
 				return !this.props.disabled && typeof this.props.renderPopout == "function" ? BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.PopoutContainer, {
 					children: button,
 					animation: BDFDB.LibraryComponents.PopoutContainer.Animation.SCALE,
@@ -430,11 +430,11 @@ module.exports = (_ => {
 				});
 			}
 		};
-
+	
 		return class SpotifyControls extends Plugin {
 			onLoad () {
 				_this = this;
-
+				
 				this.defaults = {
 					general: {
 						addBy: 				{value: true,		description: "Adds the Word 'by' infront of the Author Name"},
@@ -452,13 +452,13 @@ module.exports = (_ => {
 						volume: 			{value: {small: false, big: true},		icons: ["", "", "", ""],		description: "Volume"}
 					}
 				};
-
+				
 				this.modulePatches = {
 					after: [
 						"ChannelSidebar"
 					]
 				};
-
+				
 				this.css = `
 					@font-face {
 						font-family: glue1-spoticon;
@@ -467,7 +467,7 @@ module.exports = (_ => {
 						font-style: normal
 					}
 					:root {
-						--SC-spotify-green: ${BDFDB.DiscordConstants.Colors.SPOTIFY};
+						--SC-spotify-green: ${BDFDB.DiscordConstants.Colors.SPOTIFY || "#1db954"};
 					}
 					${BDFDB.dotCN.channelpanels} {
 						display: flex;
@@ -668,7 +668,7 @@ module.exports = (_ => {
 					}
 				`;
 			}
-
+			
 			onStart () {
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryStores.SpotifyStore, "getActivity", {after: e => {
 					if (e.methodArguments[0] !== false) {
@@ -684,21 +684,21 @@ module.exports = (_ => {
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.SpotifyUtils, "pause", {instead: e => {
 					return false;
 				}});
-
+				
 				BDFDB.DiscordUtils.rerenderAll();
 			}
-
+			
 			onStop () {
 				BDFDB.DiscordUtils.rerenderAll();
 			}
 
-			getSettingsPanel (collapseStates = {}) {
+			getSettingsPanel (collapseStates = {}) {				
 				let settingsPanel;
 				return settingsPanel = BDFDB.PluginUtils.createSettingsPanel(this, {
 					collapseStates: collapseStates,
 					children: _ => {
 						let settingsItems = [];
-
+						
 						if (!BDFDB.LibraryStores.SpotifyStore.hasConnectedAccount()) BDFDB.ModalUtils.open(this, {
 							size: "SMALL",
 							header: `${this.name}: ${this.labels.noaccount_header}...`,
@@ -711,7 +711,7 @@ module.exports = (_ => {
 								onClick: _ => BDFDB.LibraryModules.UserSettingsUtils.open(BDFDB.DiscordConstants.UserSettingsSections.CONNECTIONS)
 							}]
 						});
-
+						
 						settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.CollapseContainer, {
 							title: "Settings",
 							collapseStates: collapseStates,
@@ -723,7 +723,7 @@ module.exports = (_ => {
 								value: this.settings.general[key]
 							}))
 						}));
-
+						
 						settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.CollapseContainer, {
 							title: "Button Settings",
 							collapseStates: collapseStates,
@@ -765,7 +765,7 @@ module.exports = (_ => {
 								}
 							}))
 						}));
-
+						
 						return settingsItems;
 					}
 				});
@@ -789,7 +789,7 @@ module.exports = (_ => {
 					activityToggle: this.settings.general.addActivityButton
 				}, true));
 			}
-
+			
 			updatePlayer (song) {
 				if (controls) {
 					controls.props.song = song;
