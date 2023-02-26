@@ -31,16 +31,16 @@
     "jest": "^28 || ^29"
   },
   "devDependencies": {
-    "@jest/types": "29.4.2",
+    "@jest/types": "29.4.3",
     "@slashnephy/eslint-config": "0.2.43",
-    "@slashnephy/prettier-config": "0.1.12",
-    "@types/node": "18.13.0",
+    "@slashnephy/prettier-config": "0.1.14",
+    "@types/node": "18.14.1",
     "concurrently": "7.6.0",
-    "eslint": "8.33.0",
+    "eslint": "8.35.0",
     "prettier": "2.8.4",
     "typescript": "4.9.5"
   },
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@3.4.1",
   "eslintConfig": {
     "extends": [
       "@slashnephy/eslint-config"
