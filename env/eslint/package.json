@@ -1,6 +1,8 @@
 {
   "name": "@slashnephy/eslint-config",
   "version": "0.3.0",
+  "type": "commonjs",
+  "main": "dist/index.js",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
     "type": "git",
@@ -8,10 +10,9 @@
     "directory": "env/eslint"
   },
   "license": "MIT",
-  "main": "dist/src/index.js",
   "files": [
     "package.json",
-    "dist/src/*.js"
+    "dist/*.js"
   ],
   "publishConfig": {
     "access": "public"
@@ -75,7 +76,15 @@
   "packageManager": "yarn@3.4.1",
   "eslintConfig": {
     "extends": [
-      "./dist/src/index.js"
+      "./dist/index.js"
+    ],
+    "overrides": [
+      {
+        "files": "bin/*.ts",
+        "parserOptions": {
+          "project": "./tsconfig.node.json"
+        }
+      }
     ]
   }
 }

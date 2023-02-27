@@ -11,7 +11,7 @@ const typescript: Linter.Config = {
     'plugin:import/typescript',
     'plugin:no-void-return-type/recommended',
   ],
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'deprecation'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
@@ -171,7 +171,7 @@ const typescript: Linter.Config = {
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
     // Deprecated されたコードの使用を禁止
-    'deprecation/deprecation': 'warn',
+    'deprecation/deprecation': 'error',
   },
 }
 
