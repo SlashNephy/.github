@@ -1,13 +1,13 @@
 {
   "name": "@slashnephy/textlint-config",
   "version": "0.1.0",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/textlint"
   },
   "license": "MIT",
-  "main": "dist/index.js",
   "files": [
     "package.json",
     "dist/*.js"
