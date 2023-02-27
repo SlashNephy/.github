@@ -90,6 +90,7 @@ const javascript: Linter.Config = {
     'node/no-missing-import': 'off',
     'node/no-extraneous-import': 'off',
     'node/no-unpublished-import': 'off',
+    'import/no-import-module-exports': 'off',
     // foo["bar"] 👉 foo.bar
     'dot-notation': 'error',
     // {foo: foo} 👉 {foo}

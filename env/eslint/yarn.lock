@@ -221,9 +221,9 @@ __metadata:
   resolution: "@slashnephy/eslint-config@workspace:."
   dependencies:
     "@emotion/eslint-plugin": 11.10.0
-    "@slashnephy/prettier-config": 0.1.14
+    "@slashnephy/prettier-config": 0.1.15
     "@types/eslint": 8.21.1
-    "@types/node": 18.14.1
+    "@types/node": 18.14.2
     "@typescript-eslint/eslint-plugin": 5.52.0
     "@typescript-eslint/parser": 5.52.0
     concurrently: 7.6.0
@@ -249,8 +249,8 @@ __metadata:
     eslint-plugin-react: 7.32.2
     eslint-plugin-react-hooks: 4.6.0
     eslint-plugin-unused-imports: 2.0.0
-    eslint-plugin-userscripts: 0.2.10
-    eslint-plugin-vitest: 0.0.34
+    eslint-plugin-userscripts: 0.2.11
+    eslint-plugin-vitest: 0.0.46
     eslint-plugin-xss: 0.1.12
     eslint-plugin-yml: 1.5.0
     prettier: 2.8.4
@@ -262,12 +262,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@slashnephy/prettier-config@npm:0.1.14":
-  version: 0.1.14
-  resolution: "@slashnephy/prettier-config@npm:0.1.14"
+"@slashnephy/prettier-config@npm:0.1.15":
+  version: 0.1.15
+  resolution: "@slashnephy/prettier-config@npm:0.1.15"
   peerDependencies:
     prettier: ^2
-  checksum: 57a671591353299b9df54898ff250519d4ecd1ff25525f6ea77a68dc0deb747555eeaab176e7d969200c061ab2dad05be6176b50daca665e3beab98007269e80
+  checksum: 3db83633c1033a527b7b2f56551a2bb83e4ea33a939628ec5f0a02215569eb053a23020b309ea2257217f2be44f6f3c9bf7be181dc2cdcd78038c0fb3da01351
   languageName: node
   linkType: hard
 
@@ -330,10 +330,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.14.1":
-  version: 18.14.1
-  resolution: "@types/node@npm:18.14.1"
-  checksum: 58556bbdb0050e44a4934742c1da2530812782c06d266a758e669e44c5aa196166c5fce45fdb03f016876717e3840478b3220129bb77367f979607564047f0a3
+"@types/node@npm:18.14.2":
+  version: 18.14.2
+  resolution: "@types/node@npm:18.14.2"
+  checksum: 53c07e721f6ae33de71306f6a0b75dae6066a4f55bd5484c93bd59ff25f0c5f004ceafeef509a4d0cb9e24a247efc34d50489bcc1b05a53ecc68e2fc088e65cb
   languageName: node
   linkType: hard
 
@@ -1813,26 +1813,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-userscripts@npm:0.2.10":
-  version: 0.2.10
-  resolution: "eslint-plugin-userscripts@npm:0.2.10"
+"eslint-plugin-userscripts@npm:0.2.11":
+  version: 0.2.11
+  resolution: "eslint-plugin-userscripts@npm:0.2.11"
   dependencies:
     requireindex: ~1.2.0
     semver: ^7.3.5
   peerDependencies:
     eslint: ">=6.0.0 <9"
-  checksum: 7d71c5790aae02091145359a0714659e0ed9c068b865f5e7ad4da710cabb5274e5edbfe2ea28e221a78ae5eba911b5ec37016355dc34421a20651db61318d448
+  checksum: baf16bece978bc18046bac82e488686bc9847b6bbbc27a4de2f367861d9a97036855346b96fa92b6f84165337e7aba99267e3f4b29f8417ddee8f4a0a796ba5b
   languageName: node
   linkType: hard
 
-"eslint-plugin-vitest@npm:0.0.34":
-  version: 0.0.34
-  resolution: "eslint-plugin-vitest@npm:0.0.34"
+"eslint-plugin-vitest@npm:0.0.46":
+  version: 0.0.46
+  resolution: "eslint-plugin-vitest@npm:0.0.46"
   dependencies:
     "@typescript-eslint/utils": ^5.48.1
   peerDependencies:
     eslint: ">=8.0.0"
-  checksum: 19f056d387e30ba49c35bea739cfd22d2fb50fdacbc29be09842d667473226b02ef9274e73e58157502e29f2b29b8164c4fd82bfb84115c92f053dc9c7d7b30c
+  checksum: e4431cd2a971c4f614b713d3f301869a89db995ff820ae1bc042d467d06803795ec66e95542a76294e76e42c1552e05401aff63f502b2bb084bb7dc0364dc0b9
   languageName: node
   linkType: hard
 
