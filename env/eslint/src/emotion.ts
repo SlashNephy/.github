@@ -10,6 +10,12 @@ const emotion: Linter.Config = {
     '@emotion/styled-import': 'error',
     '@emotion/syntax-preference': 'error',
     'css-reorder/property-reorder': 'error',
+    'react/no-unknown-property': [
+      'error',
+      {
+        ignore: ['css'],
+      },
+    ],
   },
 }
 

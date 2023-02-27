@@ -91,6 +91,7 @@ const javascript: Linter.Config = {
     'node/no-extraneous-import': 'off',
     'node/no-unpublished-import': 'off',
     'import/no-import-module-exports': 'off',
+    'import/extensions': 'off',
     // foo["bar"] 👉 foo.bar
     'dot-notation': 'error',
     // {foo: foo} 👉 {foo}
@@ -122,6 +123,12 @@ const javascript: Linter.Config = {
     'func-call-spacing': ['error', 'never'],
     // ペアになっていない setter を禁止
     'accessor-pairs': 'error',
+    // キャメルケースに強制しない
+    camelcase: 'off',
+    // switch 文で default を強制しない
+    'default-case': 'off',
+    // default export を優先しない
+    'import/prefer-default-export': 'off',
   },
 }
 

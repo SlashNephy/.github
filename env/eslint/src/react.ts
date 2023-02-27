@@ -6,8 +6,6 @@ import type { Linter } from 'eslint'
 const react: Linter.Config = {
   extends: [
     'airbnb/hooks',
-    // https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js
-    'next/core-web-vitals',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:css-import-order/recommended',
@@ -70,6 +68,15 @@ const react: Linter.Config = {
         reservedFirst: true,
       },
     ],
+    // JSX を .tsx でも使えるように
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.jsx', '.tsx'],
+      },
+    ],
+    // props に対してスプレッド演算子を使えるように
+    'react/jsx-props-no-spreading': 'off',
   },
   overrides: [
     {
