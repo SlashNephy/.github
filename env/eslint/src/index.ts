@@ -4,7 +4,7 @@ import type { Linter } from 'eslint'
 
 const config: Linter.Config = {
   root: true,
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'airbnb'],
   overrides: [
     // JavaScript / TypeScript 共通ルール
     {
@@ -29,6 +29,11 @@ const config: Linter.Config = {
       files: '**/*.{jsx,tsx}',
       extends: resolve(__dirname, 'react.js'),
     },
+    // Emotion 共通ルール
+    {
+      files: '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+      extends: resolve(__dirname, 'emotion.js'),
+    },
     // JSON 共通ルール
     {
       files: '**/*.json',
@@ -49,6 +54,11 @@ const config: Linter.Config = {
       files: '**/*.user.js',
       extends: resolve(__dirname, 'userscript.js'),
     },
+    // Vite
+    {
+      files: '**/vite.config.{js,ts}',
+      extends: resolve(__dirname, 'vite.js'),
+    },
     // default export を例外的に許可
     {
       files: [
@@ -56,6 +66,8 @@ const config: Linter.Config = {
         '**/webpack.config.{js,ts}',
         // rollup
         '**/rollup.config.{js,ts}',
+        // Vite
+        '**/vite.config.{js,ts}',
         // Next.js
         '**/pages/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       ],

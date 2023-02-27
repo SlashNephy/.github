@@ -58,14 +58,14 @@ const typescript: Linter.Config = {
       // 変数名は camelCase
       {
         selector: ['variableLike'],
-        format: ['strictCamelCase'],
+        format: ['strictCamelCase', 'StrictPascalCase'],
         leadingUnderscore: 'allow',
       },
-      // export された定数は UPPER_CASE / PascalCase を許容
+      // export された定数は UPPER_CASE を許容
       {
         selector: ['variable'],
         modifiers: ['const', 'global', 'exported'],
-        format: ['strictCamelCase', 'UPPER_CASE', 'StrictPascalCase'],
+        format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
       },
       // プロパティーに snake_case / UPPER_CASE を許容
       {
