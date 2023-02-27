@@ -77,6 +77,10 @@ const react: Linter.Config = {
     ],
     // props に対してスプレッド演算子を使えるように
     'react/jsx-props-no-spreading': 'off',
+    // <></> を使えるように
+    'react/jsx-no-useless-fragment': 'off',
+    // defaultProps を使わない
+    'react/require-default-props': 'off',
   },
   overrides: [
     {

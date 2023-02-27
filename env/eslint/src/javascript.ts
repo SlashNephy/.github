@@ -129,6 +129,10 @@ const javascript: Linter.Config = {
     'default-case': 'off',
     // default export を優先しない
     'import/prefer-default-export': 'off',
+    // continue 文を許可
+    'no-continue': 'off',
+    // _ で始まるメンバー名を許可
+    'no-underscore-dangle': 'off',
   },
 }
 
