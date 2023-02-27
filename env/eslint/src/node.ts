@@ -1,12 +1,10 @@
 import type { Linter } from 'eslint'
 
-/**
- * Vite 関連の eslint プリセット
- */
-const vite: Linter.Config = {
+const config: Linter.Config = {
   parserOptions: {
+    // Node.js 用の tsconfig.json を参照
     project: './tsconfig.node.json',
   },
 }
 
-module.exports = vite
+module.exports = config

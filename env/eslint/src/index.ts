@@ -6,17 +6,17 @@ const config: Linter.Config = {
   root: true,
   extends: ['eslint:recommended', 'airbnb'],
   overrides: [
-    // JavaScript / TypeScript 共通ルール
+    // JavaScript / TypeScript
     {
       files: '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       extends: resolve(__dirname, 'javascript.js'),
     },
-    // TypeScript 共通ルール
+    // TypeScript
     {
       files: '**/*.{ts,mts,cts,tsx}',
       extends: resolve(__dirname, 'typescript.js'),
     },
-    // jest / vitest 共通ルール
+    // jest / vitest
     {
       files: [
         '**/*.test.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
@@ -24,15 +24,20 @@ const config: Linter.Config = {
       ],
       extends: [resolve(__dirname, 'jest.js'), resolve(__dirname, 'vitest.js')],
     },
-    // React 共通ルール
+    // React
     {
       files: '**/*.{jsx,tsx}',
       extends: resolve(__dirname, 'react.js'),
     },
-    // Emotion 共通ルール
+    // Emotion
     {
-      files: '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+      files: '**/*.{jsx,tsx}',
       extends: resolve(__dirname, 'emotion.js'),
+    },
+    // Next.js
+    {
+      files: '**/pages/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+      extends: resolve(__dirname, 'next.js.js'),
     },
     // JSON 共通ルール
     {
@@ -54,26 +59,18 @@ const config: Linter.Config = {
       files: '**/*.user.js',
       extends: resolve(__dirname, 'userscript.js'),
     },
-    // Vite
-    {
-      files: '**/vite.config.{js,ts}',
-      extends: resolve(__dirname, 'vite.js'),
-    },
-    // default export を例外的に許可
+    // Node.js
     {
       files: [
-        // Webpack
-        '**/webpack.config.{js,ts}',
-        // rollup
-        '**/rollup.config.{js,ts}',
-        // Vite
-        '**/vite.config.{js,ts}',
-        // Next.js
-        '**/pages/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+        '**/bin/**/*.{js,mjs,cjs,ts,mts,cts}',
+        '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
       ],
-      rules: {
-        'import/no-default-export': 'off',
-      },
+      extends: resolve(__dirname, 'node.js'),
+    },
+    // 構成ファイル
+    {
+      files: '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
+      extends: resolve(__dirname, 'config.js'),
     },
     // 最後に prettier を適用
     {

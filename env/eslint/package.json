@@ -77,14 +77,6 @@
   "eslintConfig": {
     "extends": [
       "./dist/index.js"
-    ],
-    "overrides": [
-      {
-        "files": "bin/*.ts",
-        "parserOptions": {
-          "project": "./tsconfig.node.json"
-        }
-      }
     ]
   }
 }

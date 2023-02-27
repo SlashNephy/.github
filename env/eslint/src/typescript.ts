@@ -74,7 +74,7 @@ const typescript: Linter.Config = {
       },
       // Boolean は特定のプレフィックスを強制
       {
-        selector: ['variableLike'],
+        selector: ['variable'],
         types: ['boolean'],
         format: ['StrictPascalCase'],
         prefix: [
