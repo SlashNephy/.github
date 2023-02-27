@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/prettier-config",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.2.43",
-    "@types/node": "18.14.1",
+    "@types/node": "18.14.2",
     "@types/prettier": "2.7.2",
     "concurrently": "7.6.0",
     "eslint": "8.35.0",

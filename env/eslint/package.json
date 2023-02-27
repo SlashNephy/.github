@@ -53,8 +53,8 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-unused-imports": "2.0.0",
-    "eslint-plugin-userscripts": "0.2.10",
-    "eslint-plugin-vitest": "0.0.34",
+    "eslint-plugin-userscripts": "0.2.11",
+    "eslint-plugin-vitest": "0.0.46",
     "eslint-plugin-xss": "0.1.12",
     "eslint-plugin-yml": "1.5.0",
     "typescript": "4.9.5"
@@ -64,9 +64,9 @@
     "prettier": "^2"
   },
   "devDependencies": {
-    "@slashnephy/prettier-config": "0.1.14",
+    "@slashnephy/prettier-config": "0.1.15",
     "@types/eslint": "8.21.1",
-    "@types/node": "18.14.1",
+    "@types/node": "18.14.2",
     "concurrently": "7.6.0",
     "eslint": "8.35.0",
     "prettier": "2.8.4",
