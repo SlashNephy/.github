@@ -1,6 +1,7 @@
 {
   "name": "@slashnephy/jest-config",
   "version": "0.1.0",
+  "main": "dist/index.js",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
     "type": "git",
@@ -8,7 +9,6 @@
     "directory": "env/jest"
   },
   "license": "MIT",
-  "main": "dist/index.js",
   "files": [
     "package.json",
     "dist/**/*.js"
