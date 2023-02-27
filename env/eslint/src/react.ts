@@ -5,11 +5,13 @@ import type { Linter } from 'eslint'
  */
 const react: Linter.Config = {
   extends: [
+    'airbnb/hooks',
     // https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js
     'next/core-web-vitals',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:css-import-order/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
   plugins: ['css-import-order'],
   parserOptions: {
@@ -58,6 +60,16 @@ const react: Linter.Config = {
     'react/jsx-fragments': 'error',
     // ステートレス関数を優先
     'react/prefer-stateless-function': 'error',
+    // props を並び替える
+    'react/jsx-sort-props': [
+      'error',
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+        multiline: 'last',
+        reservedFirst: true,
+      },
+    ],
   },
   overrides: [
     {
