@@ -34,7 +34,7 @@
     "@jest/types": "29.4.3",
     "@slashnephy/eslint-config": "0.3.4",
     "@slashnephy/prettier-config": "0.1.16",
-    "@types/node": "18.14.2",
+    "@types/node": "18.14.3",
     "concurrently": "7.6.0",
     "eslint": "8.35.0",
     "prettier": "2.8.4",
