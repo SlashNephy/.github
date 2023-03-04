@@ -2225,14 +2225,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redis/client@npm:1.5.5":
-  version: 1.5.5
-  resolution: "@redis/client@npm:1.5.5"
+"@redis/client@npm:1.5.6":
+  version: 1.5.6
+  resolution: "@redis/client@npm:1.5.6"
   dependencies:
     cluster-key-slot: 1.1.2
     generic-pool: 3.9.0
     yallist: 4.0.0
-  checksum: 16ae814ea1eb28cb7f30d4fda1aa3b0ab81de515e5c23e54092ecfaded3a30f261d5b2171eb63f153f059b69e885c5d86d802368b52c741eca443885d14c4b79
+  checksum: df03f77d43e95fa4016b0c434cbdbc1822d2f30b2bfba1b046f7f4d0a6ee9ad15f350e56d6f8030b82b47e1cfa1444e7c43d659e27777ac8b66a1d95e6707f6b
   languageName: node
   linkType: hard
 
@@ -2254,12 +2254,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redis/search@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@redis/search@npm:1.1.1"
+"@redis/search@npm:1.1.2":
+  version: 1.1.2
+  resolution: "@redis/search@npm:1.1.2"
   peerDependencies:
     "@redis/client": ^1.0.0
-  checksum: 5c574679e803530d0b1a704eb7c22292849e0a36dfc9a84a5359051f9da6e0dab72e11ade5654a69d9984bb45d2f7cdf901111135247670824013145cf28d326
+  checksum: fc3c0bd62c150ea7f8b3f08b0e67893b4e8df71b4820d750de6ba00ccff3720fdc5d4f50618e385c9e183c784635185e2e98a3e6c3d20ac30f2c60996f38b992
   languageName: node
   linkType: hard
 
@@ -2405,7 +2405,7 @@ __metadata:
     eslint: 8.35.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.4
-    renovate: 34.154.6
+    renovate: 34.154.7
     ts-node: 10.9.1
     typescript: 4.9.5
   languageName: unknown
@@ -8430,17 +8430,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redis@npm:4.6.4":
-  version: 4.6.4
-  resolution: "redis@npm:4.6.4"
+"redis@npm:4.6.5":
+  version: 4.6.5
+  resolution: "redis@npm:4.6.5"
   dependencies:
     "@redis/bloom": 1.2.0
-    "@redis/client": 1.5.5
+    "@redis/client": 1.5.6
     "@redis/graph": 1.1.0
     "@redis/json": 1.0.4
-    "@redis/search": 1.1.1
+    "@redis/search": 1.1.2
     "@redis/time-series": 1.0.4
-  checksum: b9263985de512a381d419b471bf040989dda80df070d7f548669e6c241a33ca789273ed7834a74e2408b610bb20089ab210fe4493415cf269b8549a29824ccb2
+  checksum: 81696673a4c3acefcde310289ac83f40fe974af76f6d2f2a682befd6486128f8870f48b9e6fee1213cecfba9ac705649d27b750e853809d734cccce05868f1b7
   languageName: node
   linkType: hard
 
@@ -8523,9 +8523,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:34.154.6":
-  version: 34.154.6
-  resolution: "renovate@npm:34.154.6"
+"renovate@npm:34.154.7":
+  version: 34.154.7
+  resolution: "renovate@npm:34.154.7"
   dependencies:
     "@aws-sdk/client-codecommit": 3.282.0
     "@aws-sdk/client-ec2": 3.282.0
@@ -8614,7 +8614,7 @@ __metadata:
     prettier: 2.8.4
     quick-lru: 5.1.1
     re2: 1.18.0
-    redis: 4.6.4
+    redis: 4.6.5
     remark: 13.0.0
     remark-github: 10.1.0
     safe-stable-stringify: 2.4.2
@@ -8639,7 +8639,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: cd42a0f9cf3d7ed5494828394568fad7343705eaf7eb2287db1d3c1de1ef3576c13d26df52e7ccdb516edfd76b7d18efc5565cbd057ebfe4dcb56ff24d3bb54a
+  checksum: d2126e652ad4506b283065f9e48bd692b30c9f81e78724b58708cd912920bce79e8fc89994eb5f335b8f27517d198b4f2386b62e89f578065b583f95f94179c2
   languageName: node
   linkType: hard
 
