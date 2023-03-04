@@ -306,7 +306,7 @@ __metadata:
     eslint: 8.35.0
     prettier: 2.8.4
     stylelint: 15.2.0
-    stylelint-config-property-sort-order-smacss: 9.0.0
+    stylelint-config-property-sort-order-smacss: 9.1.0
     stylelint-config-recommended: 10.0.1
     typescript: 4.9.5
   peerDependencies:
@@ -3807,21 +3807,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-sorting@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "postcss-sorting@npm:8.0.1"
+  peerDependencies:
+    postcss: ^8.4.20
+  checksum: 044d1dcbe04458a3d0fbd90854d408afae3fb90474d3b70021828f7b6fc0820133ad6b8d194268847e2afee50524686b70dee930ed19039469ff828283331af1
+  languageName: node
+  linkType: hard
+
 "postcss-value-parser@npm:^4.2.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
   checksum: 819ffab0c9d51cf0acbabf8996dffbfafbafa57afc0e4c98db88b67f2094cb44488758f06e5da95d7036f19556a4a732525e84289a425f4f6fd8e412a9d7442f
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.3.11":
-  version: 8.4.14
-  resolution: "postcss@npm:8.4.14"
-  dependencies:
-    nanoid: ^3.3.4
-    picocolors: ^1.0.0
-    source-map-js: ^1.0.2
-  checksum: fe58766ff32e4becf65a7d57678995cfd239df6deed2fe0557f038b47c94e4132e7e5f68b5aa820c13adfec32e523b693efaeb65798efb995ce49ccd83953816
   languageName: node
   linkType: hard
 
@@ -4413,15 +4411,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-property-sort-order-smacss@npm:9.0.0":
-  version: 9.0.0
-  resolution: "stylelint-config-property-sort-order-smacss@npm:9.0.0"
+"stylelint-config-property-sort-order-smacss@npm:9.1.0":
+  version: 9.1.0
+  resolution: "stylelint-config-property-sort-order-smacss@npm:9.1.0"
   dependencies:
     css-property-sort-order-smacss: ~2.2.0
-    stylelint-order: ^5.0.0
+    stylelint-order: ^6.0.2
   peerDependencies:
-    stylelint: ^14.0.0
-  checksum: 31581e51351c51464849ca1597872028be3c9c98c7b3ebd027a83dd1a71e920602969e66c093da6d63a1e2645e647be310ce2c9497882121f039b5c6673a6379
+    stylelint: ^14.0.0 || ^15.0.0
+  checksum: 7a7c5ebb9ed9d8d0a6428001a5e9fd255bacd1c079c077e14ff4becbb9ed772c68da0a6e00688e516abdfe406531fa4a599d3a92ab3f123ac6169208c6554969
   languageName: node
   linkType: hard
 
@@ -4434,15 +4432,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-order@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "stylelint-order@npm:5.0.0"
+"stylelint-order@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "stylelint-order@npm:6.0.2"
   dependencies:
-    postcss: ^8.3.11
-    postcss-sorting: ^7.0.1
+    postcss: ^8.4.21
+    postcss-sorting: ^8.0.1
   peerDependencies:
-    stylelint: ^14.0.0
-  checksum: fa3ace3cc65486b9f94165603bd04983636fda5ac959cd29bf87847a95b32f366b16faf612bd49e3b9f96073f8fe28a22a5c5727cc08c8f9d7327c89084b3f30
+    stylelint: ^14.0.0 || ^15.0.0
+  checksum: 0895dcc28050214aa6c062f358edb8f8b7693c918ffe6b40645c8af64017b55d31ae9bc1fe156e83d7d6a57a783f1a0c3311c5bdbb0618d426ac866e03ac0f80
   languageName: node
   linkType: hard
 
