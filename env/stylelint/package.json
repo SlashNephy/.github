@@ -27,7 +27,7 @@
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
   "dependencies": {
-    "stylelint-config-property-sort-order-smacss": "9.0.0",
+    "stylelint-config-property-sort-order-smacss": "9.1.0",
     "stylelint-config-recommended": "10.0.1"
   },
   "peerDependencies": {
