@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Hide Future Programs
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.5
+// @version         0.1.6
 // @author          SlashNephy
 // @description     Hide programs for the next day or later in Annict track page. In addition, it hides works that have no unwatched episodes.
 // @description:ja  Annict の「記録するページ」で翌日以降の番組を非表示にします。さらに未視聴エピソードがない作品を非表示にします。
@@ -17,7 +17,7 @@
 // ==/UserScript==
 
 const main = () => {
-  if (!location.href.startsWith('https://annict.com/track')) {
+  if (!window.location.href.startsWith('https://annict.com/track')) {
     return
   }
   for (const card of document.querySelectorAll('div.card.u-card-flat')) {
@@ -37,7 +37,6 @@ const main = () => {
     }
   }
 }
-main()
 document.addEventListener('turbo:load', () => {
   main()
 })

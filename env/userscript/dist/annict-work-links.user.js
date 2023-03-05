@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Work Links
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.0
+// @version         0.3.1
 // @author          SlashNephy
 // @description     Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.
 // @description:ja  Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。
@@ -17,8 +17,8 @@
 // @license         MIT license
 // ==/UserScript==
 
-const executeXhr = async (request) => {
-  return new Promise((resolve, reject) => {
+const executeXhr = async (request) =>
+  new Promise((resolve, reject) => {
     GM_xmlhttpRequest({
       ...request,
       onload: (response) => {
@@ -29,7 +29,6 @@ const executeXhr = async (request) => {
       },
     })
   })
-}
 
 const fetchArmEntries = async () => {
   const response = await executeXhr({
@@ -42,11 +41,11 @@ const fetchArmEntries = async () => {
 const annictWorkPageUrlPattern = /^https:\/\/annict\.com\/works\/(\d+)/
 const cachedEntries = []
 const main = async () => {
-  const match = annictWorkPageUrlPattern.exec(location.href)
+  const match = annictWorkPageUrlPattern.exec(window.location.href)
   if (!match) {
     return
   }
-  const annictId = parseInt(match[1])
+  const annictId = parseInt(match[1], 10)
   if (!annictId) {
     throw new Error('Failed to extract Annict work id')
   }
@@ -87,7 +86,6 @@ const main = async () => {
     links.appendChild(link)
   }
 }
-main().catch(console.error)
 document.addEventListener('turbo:load', () => {
   main().catch(console.error)
 })
