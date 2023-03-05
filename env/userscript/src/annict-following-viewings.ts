@@ -210,63 +210,69 @@ const renderSectionBodyContent = (statuses: FollowingState[]): HTMLElement => {
   row.classList.add('row', 'g-3')
 
   for (const status of statuses) {
-    const avatarCol = document.createElement('div')
-    avatarCol.classList.add('col-auto', 'pe-0')
-    row.appendChild(avatarCol)
+    const col = document.createElement('div')
+    col.classList.add('col-6', 'col-sm-3')
+    col.style.display = 'flex'
+    row.appendChild(col)
     {
-      const a = document.createElement('a')
-      a.href = `/@${status.username}`
-      avatarCol.appendChild(a)
-      {
-        const img = document.createElement('img')
-        img.classList.add('img-thumbnail', 'rounded-circle')
-        img.style.width = '50px'
-        img.style.height = '50px'
-        img.style.marginRight = '1em'
-        img.src = status.avatarUrl
-        a.appendChild(img)
-      }
-    }
-
-    const userCol = document.createElement('div')
-    userCol.classList.add('col')
-    row.appendChild(userCol)
-    {
-      const div1 = document.createElement('div')
-      userCol.appendChild(div1)
+      const avatarCol = document.createElement('div')
+      avatarCol.classList.add('col-auto', 'pe-0')
+      col.appendChild(avatarCol)
       {
         const a = document.createElement('a')
-        a.classList.add('fw-bold', 'me-1', 'text-body')
         a.href = `/@${status.username}`
-        div1.appendChild(a)
+        avatarCol.appendChild(a)
         {
-          const span = document.createElement('span')
-          span.classList.add('me-1')
-          span.textContent = status.name
-          a.appendChild(span)
+          const img = document.createElement('img')
+          img.classList.add('img-thumbnail', 'rounded-circle')
+          img.style.width = '50px'
+          img.style.height = '50px'
+          img.style.marginRight = '1em'
+          img.src = status.avatarUrl
+          a.appendChild(img)
+        }
+      }
+
+      const userCol = document.createElement('div')
+      userCol.classList.add('col')
+      col.appendChild(userCol)
+      {
+        const div1 = document.createElement('div')
+        userCol.appendChild(div1)
+        {
+          const a = document.createElement('a')
+          a.classList.add('fw-bold', 'me-1', 'text-body')
+          a.href = `/@${status.username}`
+          div1.appendChild(a)
+          {
+            const span = document.createElement('span')
+            span.classList.add('me-1')
+            span.textContent = status.name
+            a.appendChild(span)
+          }
+          {
+            const small = document.createElement('small')
+            small.style.marginRight = '1em'
+            small.classList.add('text-muted')
+            small.textContent = `@${status.username}`
+            a.appendChild(small)
+          }
+        }
+
+        const div2 = document.createElement('div')
+        div2.classList.add('small', 'text-body')
+        userCol.appendChild(div2)
+        {
+          const i = document.createElement('i')
+          i.classList.add(...status.iconClasses)
+          div2.appendChild(i)
         }
         {
           const small = document.createElement('small')
-          small.style.marginRight = '1em'
-          small.classList.add('text-muted')
-          small.textContent = `@${status.username}`
-          a.appendChild(small)
+          small.style.marginLeft = '5px'
+          small.textContent = status.label
+          div2.appendChild(small)
         }
-      }
-
-      const div2 = document.createElement('div')
-      div2.classList.add('small', 'text-body')
-      userCol.appendChild(div2)
-      {
-        const i = document.createElement('i')
-        i.classList.add(...status.iconClasses)
-        div2.appendChild(i)
-      }
-      {
-        const small = document.createElement('small')
-        small.style.marginLeft = '5px'
-        small.textContent = status.label
-        div2.appendChild(small)
       }
     }
   }
