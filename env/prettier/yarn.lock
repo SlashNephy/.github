@@ -216,9 +216,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:0.3.2":
-  version: 0.3.2
-  resolution: "@slashnephy/eslint-config@npm:0.3.2"
+"@slashnephy/eslint-config@npm:0.3.5":
+  version: 0.3.5
+  resolution: "@slashnephy/eslint-config@npm:0.3.5"
   dependencies:
     "@emotion/eslint-plugin": 11.10.0
     "@typescript-eslint/eslint-plugin": 5.53.0
@@ -252,7 +252,7 @@ __metadata:
   peerDependencies:
     eslint: ^8
     prettier: ^2
-  checksum: fce2aac427c3344a5ed620e998afc296873e6be1435d2b873c1c47beaf752c174c9299c5685fb3e557f7a5599818f000ebf85981d64ddaae7255e57ea9e352ac
+  checksum: fb5ef07682482cc40360a5e9627503cbc9fb3878db86ea54a7bd146604cb96bdd18e24ead5db8766d7bf1b3f22b6646b14e62194ba9ece796af82b6648d2e471
   languageName: node
   linkType: hard
 
@@ -260,8 +260,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/prettier-config@workspace:."
   dependencies:
-    "@slashnephy/eslint-config": 0.3.2
-    "@types/node": 18.14.2
+    "@slashnephy/eslint-config": 0.3.5
+    "@types/node": 18.14.6
     "@types/prettier": 2.7.2
     concurrently: 7.6.0
     eslint: 8.35.0
@@ -315,10 +315,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.14.2":
-  version: 18.14.2
-  resolution: "@types/node@npm:18.14.2"
-  checksum: 53c07e721f6ae33de71306f6a0b75dae6066a4f55bd5484c93bd59ff25f0c5f004ceafeef509a4d0cb9e24a247efc34d50489bcc1b05a53ecc68e2fc088e65cb
+"@types/node@npm:18.14.6":
+  version: 18.14.6
+  resolution: "@types/node@npm:18.14.6"
+  checksum: 2f88f482cabadc6dbddd627a1674239e68c3c9beab56eb4ae2309fb96fd17fc3a509d99b0309bafe13b58529574f49ecf3a583f2ebe2896dd32fe4be436dc96e
   languageName: node
   linkType: hard
 
