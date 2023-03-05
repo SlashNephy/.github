@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Following Viewings
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Display following viewings on Annict work page.
 // @description:ja  Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。
@@ -60,15 +60,15 @@ class GM_Value {
 }
 
 const annictTokenRef = new GM_Value('ANNICT_TOKEN')
-const fetchFollowingStatuses = async (workId, token) => {
+const fetchFollowingStatuses = async (workId, cursor, token) => {
   const response = await executeXhr({
     url: 'https://api.annict.com/graphql',
     method: 'POST',
     data: JSON.stringify({
       query: `
-        query($workId: Int!) {
+        query($workId: Int!, $cursor: String) {
           viewer {
-            following {
+            following(after: $cursor) {
               nodes {
                 name
                 username
@@ -109,6 +109,7 @@ const fetchFollowingStatuses = async (workId, token) => {
       `,
       variables: {
         workId,
+        cursor,
       },
     }),
     headers: {
@@ -118,26 +119,48 @@ const fetchFollowingStatuses = async (workId, token) => {
   })
   return JSON.parse(response.responseText)
 }
+const fetchPaginatedFollowingStatuses = async (workId, token) => {
+  const results = []
+  let cursor = null
+  while (true) {
+    const response = await fetchFollowingStatuses(workId, cursor, token)
+    if ('errors' in response) {
+      return response
+    }
+    results.push(response)
+    if (!response.data.viewer.following.pageInfo.hasNextPage) {
+      break
+    }
+    cursor = response.data.viewer.following.pageInfo.endCursor
+  }
+  return results
+}
 const parseFollowingStatuses = (response) =>
   response.data.viewer.following.nodes
     .map((u) => {
       let label
       let iconClasses
+      let iconColor
       if (u.watched.nodes.length > 0) {
         label = '見た'
         iconClasses = ['far', 'fa-check']
+        iconColor = '--ann-status-completed-color'
       } else if (u.watching.nodes.length > 0) {
         label = '見てる'
         iconClasses = ['far', 'fa-play']
+        iconColor = '--ann-status-watching-color'
       } else if (u.stopWatching.nodes.length > 0) {
         label = '視聴停止'
         iconClasses = ['far', 'fa-stop']
+        iconColor = '--ann-status-dropped-color'
       } else if (u.onHold.nodes.length > 0) {
         label = '一時中断'
         iconClasses = ['far', 'fa-pause']
+        iconColor = '--ann-status-on-hold-color'
       } else if (u.wannaWatch.nodes.length > 0) {
         label = '見たい'
         iconClasses = ['far', 'fa-circle']
+        iconColor = '--ann-status-plan-to-watch-color'
       } else {
         return null
       }
@@ -147,6 +170,7 @@ const parseFollowingStatuses = (response) =>
         avatarUrl: u.avatarUrl,
         label,
         iconClasses,
+        iconColor,
       }
     })
     .filter((x) => !!x)
@@ -187,61 +211,68 @@ const renderSectionBodyContent = (statuses) => {
   const row = document.createElement('div')
   row.classList.add('row', 'g-3')
   for (const status of statuses) {
-    const avatarCol = document.createElement('div')
-    avatarCol.classList.add('col-auto', 'pe-0')
-    row.appendChild(avatarCol)
+    const col = document.createElement('div')
+    col.classList.add('col-6', 'col-sm-3')
+    col.style.display = 'flex'
+    row.appendChild(col)
     {
-      const a = document.createElement('a')
-      a.href = `/@${status.username}`
-      avatarCol.appendChild(a)
-      {
-        const img = document.createElement('img')
-        img.classList.add('img-thumbnail', 'rounded-circle')
-        img.style.width = '50px'
-        img.style.height = '50px'
-        img.style.marginRight = '1em'
-        img.src = status.avatarUrl
-        a.appendChild(img)
-      }
-    }
-    const userCol = document.createElement('div')
-    userCol.classList.add('col')
-    row.appendChild(userCol)
-    {
-      const div1 = document.createElement('div')
-      userCol.appendChild(div1)
+      const avatarCol = document.createElement('div')
+      avatarCol.classList.add('col-auto', 'pe-0')
+      col.appendChild(avatarCol)
       {
         const a = document.createElement('a')
-        a.classList.add('fw-bold', 'me-1', 'text-body')
         a.href = `/@${status.username}`
-        div1.appendChild(a)
+        avatarCol.appendChild(a)
         {
-          const span = document.createElement('span')
-          span.classList.add('me-1')
-          span.textContent = status.name
-          a.appendChild(span)
+          const img = document.createElement('img')
+          img.classList.add('img-thumbnail', 'rounded-circle')
+          img.style.width = '50px'
+          img.style.height = '50px'
+          img.style.marginRight = '1em'
+          img.src = status.avatarUrl
+          a.appendChild(img)
+        }
+      }
+      const userCol = document.createElement('div')
+      userCol.classList.add('col')
+      col.appendChild(userCol)
+      {
+        const div1 = document.createElement('div')
+        userCol.appendChild(div1)
+        {
+          const a = document.createElement('a')
+          a.classList.add('fw-bold', 'me-1', 'text-body')
+          a.href = `/@${status.username}`
+          div1.appendChild(a)
+          {
+            const span = document.createElement('span')
+            span.classList.add('me-1')
+            span.textContent = status.name
+            a.appendChild(span)
+          }
+          {
+            const small = document.createElement('small')
+            small.style.marginRight = '1em'
+            small.classList.add('text-muted')
+            small.textContent = `@${status.username}`
+            a.appendChild(small)
+          }
+        }
+        const div2 = document.createElement('div')
+        div2.classList.add('small', 'text-body')
+        userCol.appendChild(div2)
+        {
+          const i = document.createElement('i')
+          i.classList.add(...status.iconClasses)
+          i.style.color = `var(${status.iconColor})`
+          div2.appendChild(i)
         }
         {
           const small = document.createElement('small')
-          small.style.marginRight = '1em'
-          small.classList.add('text-muted')
-          small.textContent = `@${status.username}`
-          a.appendChild(small)
+          small.style.marginLeft = '5px'
+          small.textContent = status.label
+          div2.appendChild(small)
         }
-      }
-      const div2 = document.createElement('div')
-      div2.classList.add('small', 'text-body')
-      userCol.appendChild(div2)
-      {
-        const i = document.createElement('i')
-        i.classList.add(...status.iconClasses)
-        div2.appendChild(i)
-      }
-      {
-        const small = document.createElement('small')
-        small.style.marginLeft = '5px'
-        small.textContent = status.label
-        div2.appendChild(small)
       }
     }
   }
@@ -279,17 +310,21 @@ const handle = async () => {
     )
     return
   }
-  const response = await fetchFollowingStatuses(workId, token)
-  if ('errors' in response) {
-    const error = response.errors.map(({ message }) => message).join('\n')
+  const responses = await fetchPaginatedFollowingStatuses(workId, token)
+  if ('errors' in responses) {
+    const error = responses.errors.map(({ message }) => message).join('\n')
     card.textContent = ''
     card.append(`Annict GraphQL API がエラーを返しました。\n${error}`)
     return
   }
-  const statuses = parseFollowingStatuses(response)
-  const content = renderSectionBodyContent(statuses)
-  card.textContent = ''
-  card.appendChild(content)
+  const statuses = responses.map((r) => parseFollowingStatuses(r)).flat()
+  if (statuses.length > 0) {
+    const content = renderSectionBodyContent(statuses)
+    card.textContent = ''
+    card.appendChild(content)
+    return
+  }
+  card.textContent = 'フォロー中のユーザーの視聴状況はありません。'
 }
 document.addEventListener('turbo:load', () => {
   handle().catch(console.error)
