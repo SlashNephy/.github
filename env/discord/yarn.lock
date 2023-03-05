@@ -2081,21 +2081,21 @@ __metadata:
     "@babel/preset-typescript": 7.21.0
     "@rollup/plugin-babel": 6.0.3
     "@rollup/plugin-typescript": 11.0.0
-    "@slashnephy/eslint-config": 0.3.2
+    "@slashnephy/eslint-config": 0.3.5
     "@slashnephy/prettier-config": 0.1.16
     "@types/babel__core": 7.20.0
     "@types/babel__preset-env": 7.9.2
     concurrently: 7.6.0
     eslint: 8.35.0
     prettier: 2.8.4
-    rollup: 3.17.3
+    rollup: 3.18.0
     typescript: 4.9.5
   languageName: unknown
   linkType: soft
 
-"@slashnephy/eslint-config@npm:0.3.2":
-  version: 0.3.2
-  resolution: "@slashnephy/eslint-config@npm:0.3.2"
+"@slashnephy/eslint-config@npm:0.3.5":
+  version: 0.3.5
+  resolution: "@slashnephy/eslint-config@npm:0.3.5"
   dependencies:
     "@emotion/eslint-plugin": 11.10.0
     "@typescript-eslint/eslint-plugin": 5.53.0
@@ -2129,7 +2129,7 @@ __metadata:
   peerDependencies:
     eslint: ^8
     prettier: ^2
-  checksum: fce2aac427c3344a5ed620e998afc296873e6be1435d2b873c1c47beaf752c174c9299c5685fb3e557f7a5599818f000ebf85981d64ddaae7255e57ea9e352ac
+  checksum: fb5ef07682482cc40360a5e9627503cbc9fb3878db86ea54a7bd146604cb96bdd18e24ead5db8766d7bf1b3f22b6646b14e62194ba9ece796af82b6648d2e471
   languageName: node
   linkType: hard
 
@@ -6126,9 +6126,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:3.17.3":
-  version: 3.17.3
-  resolution: "rollup@npm:3.17.3"
+"rollup@npm:3.18.0":
+  version: 3.18.0
+  resolution: "rollup@npm:3.18.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -6136,7 +6136,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: afce20a6ef4a613e5803eff7fb17a3efe740e326257b43f48bdbe10783f3eae79587d7e455234bc68f3c3154a50f2c29c85d4d2a42cdebcc17a5abeaeb04e0ed
+  checksum: 0bcd1abb1cc383abdd09b5594de862ecb2f946e950954bb472a370289bdc4499aea8d04477be55ce205450d973d38ad255f0dc6926162500a251d73bf0e60e6f
   languageName: node
   linkType: hard
 

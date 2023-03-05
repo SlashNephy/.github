@@ -1,6 +1,7 @@
 {
   "name": "@slashnephy/jest-config",
   "version": "0.1.0",
+  "main": "dist/index.js",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
     "type": "git",
@@ -8,7 +9,6 @@
     "directory": "env/jest"
   },
   "license": "MIT",
-  "main": "dist/index.js",
   "files": [
     "package.json",
     "dist/**/*.js"
@@ -32,9 +32,9 @@
   },
   "devDependencies": {
     "@jest/types": "29.4.3",
-    "@slashnephy/eslint-config": "0.3.2",
+    "@slashnephy/eslint-config": "0.3.5",
     "@slashnephy/prettier-config": "0.1.16",
-    "@types/node": "18.14.2",
+    "@types/node": "18.14.6",
     "concurrently": "7.6.0",
     "eslint": "8.35.0",
     "prettier": "2.8.4",
