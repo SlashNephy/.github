@@ -34,6 +34,8 @@ brew "autoconf"
 brew "automake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Platform built on V8 to build network applications
@@ -60,6 +62,8 @@ brew "cabextract"
 brew "glib"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Perl module dependency manager (aka Bundler for Perl)
+brew "carton"
 # CD/DVD/Blu-ray premastering and recording software
 brew "cdrtools"
 # CLI tool for Cloudflare Workers
@@ -144,12 +148,16 @@ brew "htop"
 brew "httpie"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Image loading and rendering library
+brew "imlib2"
 # GNU utilities for networking
 brew "inetutils"
 # DevTools proxy for iOS devices
 brew "ios-webkit-debug-proxy"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Tool to move from `docker-compose` to Kubernetes
+brew "kompose"
 # Static analysis tool for Kubernetes YAML files and Helm charts
 brew "kube-linter"
 # FAST Kubernetes manifests validator, with support for Custom Resources!
