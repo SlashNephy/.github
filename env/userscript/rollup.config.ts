@@ -316,6 +316,20 @@ export const banners: Banner[] = [
       'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
     ],
   },
+  {
+    id: 'annict-following-viewings',
+    name: 'Annict Following Viewings',
+    version: '0.1.0',
+    description: {
+      en: 'Display following viewings on Annict work page.',
+      ja: 'Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。',
+    },
+    homepage: 'https://scrapbox.io/slashnephy',
+    author: 'SlashNephy',
+    match: ['https://annict.com/*'],
+    connect: ['api.annict.com'],
+    grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue'],
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
