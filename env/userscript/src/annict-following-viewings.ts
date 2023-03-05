@@ -132,6 +132,7 @@ type FollowingState = {
   avatarUrl: string
   label: string
   iconClasses: string[]
+  iconColor: string
 }
 
 const parseFollowingStatuses = (response: FollowingStatusesResponse): FollowingState[] =>
@@ -139,21 +140,27 @@ const parseFollowingStatuses = (response: FollowingStatusesResponse): FollowingS
     .map((u) => {
       let label: string
       let iconClasses: string[]
+      let iconColor: string
       if (u.watched.nodes.length > 0) {
         label = '見た'
         iconClasses = ['far', 'fa-check']
+        iconColor = '--ann-status-completed-color'
       } else if (u.watching.nodes.length > 0) {
         label = '見てる'
         iconClasses = ['far', 'fa-play']
+        iconColor = '--ann-status-watching-color'
       } else if (u.stopWatching.nodes.length > 0) {
         label = '視聴停止'
         iconClasses = ['far', 'fa-stop']
+        iconColor = '--ann-status-dropped-color'
       } else if (u.onHold.nodes.length > 0) {
         label = '一時中断'
         iconClasses = ['far', 'fa-pause']
+        iconColor = '--ann-status-on-hold-color'
       } else if (u.wannaWatch.nodes.length > 0) {
         label = '見たい'
         iconClasses = ['far', 'fa-circle']
+        iconColor = '--ann-status-plan-to-watch-color'
       } else {
         return null
       }
@@ -164,6 +171,7 @@ const parseFollowingStatuses = (response: FollowingStatusesResponse): FollowingS
         avatarUrl: u.avatarUrl,
         label,
         iconClasses,
+        iconColor,
       }
     })
     .filter((x): x is Exclude<typeof x, null> => !!x)
@@ -265,6 +273,7 @@ const renderSectionBodyContent = (statuses: FollowingState[]): HTMLElement => {
         {
           const i = document.createElement('i')
           i.classList.add(...status.iconClasses)
+          i.style.color = `var(${status.iconColor})`
           div2.appendChild(i)
         }
         {
