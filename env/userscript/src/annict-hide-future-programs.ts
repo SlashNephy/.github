@@ -1,5 +1,5 @@
 const main = () => {
-  if (!location.href.startsWith('https://annict.com/track')) {
+  if (!window.location.href.startsWith('https://annict.com/track')) {
     return
   }
 
@@ -26,8 +26,6 @@ const main = () => {
     }
   }
 }
-
-main()
 
 document.addEventListener('turbo:load', () => {
   main()

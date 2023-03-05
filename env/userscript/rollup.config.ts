@@ -7,7 +7,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-work-links',
     name: 'Annict Work Links',
-    version: '0.3.0',
+    version: '0.3.1',
     description: {
       en: 'Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.',
       ja: 'Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。',
@@ -113,7 +113,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-hide-future-programs',
     name: 'Annict Hide Future Programs',
-    version: '0.1.5',
+    version: '0.1.6',
     description: {
       en: 'Hide programs for the next day or later in Annict track page. In addition, it hides works that have no unwatched episodes.',
       ja: 'Annict の「記録するページ」で翌日以降の番組を非表示にします。さらに未視聴エピソードがない作品を非表示にします。',

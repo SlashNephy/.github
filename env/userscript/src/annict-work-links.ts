@@ -7,12 +7,12 @@ const annictWorkPageUrlPattern = /^https:\/\/annict\.com\/works\/(\d+)/
 const cachedEntries: ArmEntry[] = []
 
 const main = async () => {
-  const match = annictWorkPageUrlPattern.exec(location.href)
+  const match = annictWorkPageUrlPattern.exec(window.location.href)
   if (!match) {
     return
   }
 
-  const annictId = parseInt(match[1])
+  const annictId = parseInt(match[1], 10)
   if (!annictId) {
     throw new Error('Failed to extract Annict work id')
   }
@@ -59,8 +59,6 @@ const main = async () => {
     links.appendChild(link)
   }
 }
-
-main().catch(console.error)
 
 document.addEventListener('turbo:load', () => {
   main().catch(console.error)
