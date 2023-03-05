@@ -54,6 +54,7 @@ type ErrorResponse = {
 
 const fetchFollowingStatuses = async (
   workId: number,
+  cursor: string | null,
   token: string
 ): Promise<FollowingStatusesResponse | ErrorResponse> => {
   const response = await executeXhr({
@@ -72,9 +73,9 @@ const fetchFollowingStatuses = async (
        * }
        */
       query: `
-        query($workId: Int!) {
+        query($workId: Int!, $cursor: String) {
           viewer {
-            following {
+            following(after: $cursor) {
               nodes {
                 name
                 username
@@ -113,9 +114,9 @@ const fetchFollowingStatuses = async (
           }
         }
       `,
-      // 本当はページングすべきだけどページングが必要なほどフォローイングが多いケースはなさそう
       variables: {
         workId,
+        cursor,
       },
     }),
     headers: {
@@ -124,6 +125,32 @@ const fetchFollowingStatuses = async (
     },
   })
   return JSON.parse(response.responseText)
+}
+
+const fetchPaginatedFollowingStatuses = async (
+  workId: number,
+  token: string
+): Promise<FollowingStatusesResponse[] | ErrorResponse> => {
+  const results: FollowingStatusesResponse[] = []
+  let cursor: string | null = null
+
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition,no-constant-condition
+  while (true) {
+    // eslint-disable-next-line no-await-in-loop
+    const response: FollowingStatusesResponse | ErrorResponse = await fetchFollowingStatuses(workId, cursor, token)
+    if ('errors' in response) {
+      return response
+    }
+
+    results.push(response)
+
+    if (!response.data.viewer.following.pageInfo.hasNextPage) {
+      break
+    }
+    cursor = response.data.viewer.following.pageInfo.endCursor
+  }
+
+  return results
 }
 
 type FollowingState = {
@@ -328,15 +355,15 @@ const handle = async () => {
     return
   }
 
-  const response = await fetchFollowingStatuses(workId, token)
-  if ('errors' in response) {
-    const error = response.errors.map(({ message }) => message).join('\n')
+  const responses = await fetchPaginatedFollowingStatuses(workId, token)
+  if ('errors' in responses) {
+    const error = responses.errors.map(({ message }) => message).join('\n')
     card.textContent = ''
     card.append(`Annict GraphQL API がエラーを返しました。\n${error}`)
     return
   }
 
-  const statuses = parseFollowingStatuses(response)
+  const statuses = responses.map((r) => parseFollowingStatuses(r)).flat()
   const content = renderSectionBodyContent(statuses)
   card.textContent = ''
   card.appendChild(content)
