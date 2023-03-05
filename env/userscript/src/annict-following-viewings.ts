@@ -364,9 +364,14 @@ const handle = async () => {
   }
 
   const statuses = responses.map((r) => parseFollowingStatuses(r)).flat()
-  const content = renderSectionBodyContent(statuses)
-  card.textContent = ''
-  card.appendChild(content)
+  if (statuses.length > 0) {
+    const content = renderSectionBodyContent(statuses)
+    card.textContent = ''
+    card.appendChild(content)
+    return
+  }
+
+  card.textContent = 'フォロー中のユーザーの視聴状況はありません。'
 }
 
 document.addEventListener('turbo:load', () => {
