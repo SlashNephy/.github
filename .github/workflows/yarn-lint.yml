@@ -6,7 +6,7 @@ on:
       node-version:
         required: false
         type: string
-        default: '18.13'  # https://github.com/EPMatt/reviewdog-action-prettier/pull/35
+        default: '18'
       node-version-file:
         required: false
         type: string
