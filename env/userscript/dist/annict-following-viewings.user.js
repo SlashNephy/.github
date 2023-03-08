@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name            Annict Following Viewings
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.1
+// @version         0.1.2
 // @author          SlashNephy
 // @description     Display following viewings on Annict work page.
 // @description:ja  Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。
-// @homepage        https://scrapbox.io/slashnephy
-// @homepageURL     https://scrapbox.io/slashnephy
+// @homepage        https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
+// @homepageURL     https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
 // @icon            https://www.google.com/s2/favicons?sz=64&domain=annict.com
 // @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js
