@@ -319,16 +319,30 @@ export const banners: Banner[] = [
   {
     id: 'annict-following-viewings',
     name: 'Annict Following Viewings',
-    version: '0.1.1',
+    version: '0.1.2',
     description: {
       en: 'Display following viewings on Annict work page.',
       ja: 'Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。',
     },
-    homepage: 'https://scrapbox.io/slashnephy',
+    homepage:
+      'https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript',
     author: 'SlashNephy',
     match: ['https://annict.com/*'],
     connect: ['api.annict.com'],
     grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue'],
+  },
+  {
+    id: 'anilist-status-filter',
+    name: 'AniList Status Filter',
+    version: '0.1.0',
+    description: {
+      en: 'Filter anime by your status on AniList search page.',
+      ja: 'AniListの作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。',
+    },
+    homepage:
+      'https://scrapbox.io/slashnephy/AniList_%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E8%A6%96%E8%81%B4%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%81%AB%E5%BF%9C%E3%81%98%E3%81%A6%E4%BD%9C%E5%93%81%E3%82%92%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%81%99%E3%82%8B_UserScript',
+    author: 'SlashNephy',
+    match: ['https://anilist.co/search/*'],
   },
 ]
 
