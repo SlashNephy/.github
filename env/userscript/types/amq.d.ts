@@ -1,5 +1,5 @@
 // eslint-disable-next-line eslint-comments/disable-enable-pair
-/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @typescript-eslint/naming-convention,max-classes-per-file */
 // noinspection JSUnusedGlobalSymbols
 
 declare global {
@@ -29,6 +29,7 @@ declare global {
   declare class Quiz {
     // incomplete
     public gameMode: string
+
     public players: Record<
       number,
       {
@@ -59,21 +60,27 @@ declare global {
         toggleTeamAnswerSharing(flag: boolean): void
       }
     >
+
     public isSpectator: boolean
+
     public answerInput: {
       $input: JQuery
       showSubmitedAnswer(): void
       resetAnswerState(): void
       submitAnswer()
     }
+
     public videoTimerBar: {
       updateState(state: unknown): void
     }
+
     public _playerAnswerListner: ReturnType<Window['Listener']>
+
     public infoContainer: {
       $extraAnimeNameContent: HTMLElement | string
       fitTextToContainer()
     }
+
     public nextSongPlayLength: number
   }
 }
@@ -82,14 +89,18 @@ declare global {
 declare global {
   declare class SocialStatus {
     public currentStatus: number
+
     public STATUS_IDS: {
       ONLINE: number
       DO_NO_DISTURB: number
       AWAY: number
       INVISIBLE: number
     }
+
     public constructor(public $entry: JQuery)
+
     public changeSocialStatus(status: number): void
+
     public getSocialStatusInfo(status: number): string
   }
 }
@@ -106,13 +117,21 @@ declare global {
 declare global {
   declare class Socket {
     public _socket: unknown
+
     public listners: { [command in keyof EventMap]: (event: EventMap[command]) => void }
+
     public _disconnected: boolean
+
     public _sessionId: number | undefined
+
     public _attempReconect: boolean
+
     public setup(): void
+
     public addListerner<C extends keyof EventMap>(command: C, listener: (event: EventMap[C]) => void): void
+
     public removeListener<C extends keyof EventMap>(command: C, listener: (event: EventMap[C]) => void): void
+
     public sendCommand<C extends keyof EventMap>(
       content: { command: C } & Record<string, unknown>,
       responseHandler?: (event: EventMap[C]) => void
@@ -124,9 +143,13 @@ declare global {
 declare global {
   declare class Listener<C extends keyof EventMap> {
     public bound: boolean
+
     public constructor(public command: C, public callback: (event: EventMap[C]) => void)
+
     public fire(event: EventMap[C]): void
+
     public bindListener(): void
+
     public unbindListener(): void
   }
 }
@@ -136,6 +159,7 @@ declare global {
   declare class Options {
     // incomplete
     public $SETTING_TABS: JQuery
+
     public $SETTING_CONTAINERS: JQuery
   }
 }
@@ -143,6 +167,7 @@ declare global {
 declare class QuizVideoController {
   // incomplete
   public currentMoePlayerId: string
+
   public moePlayers: Record<
     string,
     {
@@ -150,11 +175,13 @@ declare class QuizVideoController {
       startPoint: number
     }
   >
+
   public getCurrentPlayer(): MoeVideoPlayer | undefined
 }
 
 declare class MoeVideoPlayer {
   public $player: JQuery<HTMLVideoElement>
+
   public player: {
     hasClass(name: string): boolean
     isAudio(): boolean
@@ -163,79 +190,134 @@ declare class MoeVideoPlayer {
 
 declare class QuizAnswerState {
   public $SENDING_CONTAINER: JQuery
+
   public $ANSWER_CHECK: JQuery
+
   public $OUTER_CONTAINER: JQuery
+
   public $INNER_CONTAINER: JQuery
+
   public $INPUT: JQuery
+
   public loadingInterval?: number
+
   public currentAnswer: null | undefined
+
   public submittedAnswer: null
+
   public popoverContent: unknown
+
   public answerListener: ReturnType<Exclude<Window['Listener'], undefined>>
 
   public constructor($input: JQuery)
+
   public startListner()
+
   public stopListener()
+
   public startLoad()
+
   public stopLoad()
+
   public show()
+
   public hide()
+
   public showCheck()
+
   public hideCheck()
+
   public submitAnswer(answer: unknown, showState: boolean, noLoad: boolean)
+
   public reset()
+
   public toggleFade(on: boolean)
+
   public setInputToAnswer()
+
   public answerSubmited()
 }
 
 declare class AmqAwesomeplete {
   public searchId: number
+
   public currentSubList: unknown[] | null
+
   public _list: unknown[] | null
+
   public letterLists: Record<string, unknown[]>
+
   public currentQuery: string
+
   public $ul: JQuery
+
   public minChars: number
+
   public index: number
+
   public constructor(input: unknown, o: unknown, scrollable: boolean)
+
   public item(text: string, input: string, item_id: string): HTMLLIElement
+
   public evaluate()
 }
 
 declare class AutoCompleteController {
   public list: unknown[]
+
   public version: unknown
+
   public awesomepleteInstance?: AmqAwesomeplete
 
   public constructor(public $input: JQuery)
+
   public updateList()
+
   public newList()
+
   public hide()
 }
 
 declare class QuizAnswerInput {
   public $input: JQuery
+
   public $inputContainer: JQuery
+
   public quizAnswerState: QuizAnswerState
+
   public autoCompleteController: AutoCompleteController
+
   public gotTeamAnswer: boolean
+
   public _inFocus: boolean
 
   public constructor(public skipController: unknown)
+
   public get inFocus(): boolean
+
   public set inFocus(newValue: boolean)
+
   // eslint-disable-next-line accessor-pairs
   public set active(newValue: boolean)
+
   public displayAnswer(answer: unknown)
+
   public setNewAnswer(answer: unknown)
+
   public submitAnswer(showState: boolean)
+
   public showSubmitedAnswer()
+
   public handleGuessPhaseOver()
+
   public disable()
+
   public enable()
+
   public clear()
+
   public updateAutocomplete()
+
   public resetAnswerState()
 }
 

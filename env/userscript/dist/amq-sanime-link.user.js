@@ -17,8 +17,8 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => {
-  return new Promise((resolve, reject) => {
+const awaitFor = async (predicate, timeout) =>
+  new Promise((resolve, reject) => {
     let timer
     const interval = window.setInterval(() => {
       if (predicate()) {
@@ -35,7 +35,6 @@ const awaitFor = async (predicate, timeout) => {
       }, timeout)
     }
   })
-}
 
 const onReady = (callback) => {
   if (document.getElementById('startPage')) {
@@ -145,8 +144,8 @@ const cache = {
   playerNames: [],
   lists: [],
 }
-const fetchPlayerAnimeLists = async (playerNames) => {
-  return new Promise((resolve) => {
+const fetchPlayerAnimeLists = async (playerNames) =>
+  new Promise((resolve) => {
     if (contentEquals(cache.playerNames, playerNames)) {
       resolve(cache.lists)
       return
@@ -162,7 +161,6 @@ const fetchPlayerAnimeLists = async (playerNames) => {
         cache.playerNames = playerNames
         cache.lists = lists
         resolve(lists)
-        return
       }
     })
     listener.bindListener()
@@ -176,7 +174,6 @@ const fetchPlayerAnimeLists = async (playerNames) => {
       })
     }
   })
-}
 const contentEquals = (a, b) => {
   const setA = new Set(a)
   const setB = new Set(b)
@@ -203,11 +200,11 @@ const getOrCreateLinkContainer = (id) => {
   container.insertBefore(element, target.nextElementSibling)
   return element
 }
-const renderLinks = (element, links) => {
+const renderLinks = (element, ls) => {
   const b = document.createElement('b')
   element.append(b)
-  const lastIndex = links.length - 1
-  for (const [index, link] of links.entries()) {
+  const lastIndex = ls.length - 1
+  for (const [index, link] of ls.entries()) {
     const a = document.createElement('a')
     b.append(a)
     a.href = link.href

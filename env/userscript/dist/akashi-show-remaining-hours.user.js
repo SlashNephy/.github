@@ -32,8 +32,8 @@ document.addEventListener('DOMNodeInserted', () => {
       .querySelector('#time-card-accordion-02 > div > div > table > tbody > tr > td:nth-child(3) > span')
       ?.textContent?.trim()
       .split(':') ?? []
-  let h = parseInt(a1) - parseInt(b1) - parseInt(c1)
-  let m = parseInt(a2) - parseInt(b2) - parseInt(c2)
+  let h = parseInt(a1, 10) - parseInt(b1, 10) - parseInt(c1, 10)
+  let m = parseInt(a2, 10) - parseInt(b2, 10) - parseInt(c2, 10)
   if (m < 0) {
     h -= Math.ceil(-m / 60)
     m = 60 + (m % 60)

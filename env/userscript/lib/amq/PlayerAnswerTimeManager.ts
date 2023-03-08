@@ -2,7 +2,9 @@ import { isReady } from './isReady'
 
 export class PlayerAnswerTimeManager {
   #songStartTime = 0
+
   #playerTimes: number[] = []
+
   #firstPlayers: number[] = []
 
   public constructor() {

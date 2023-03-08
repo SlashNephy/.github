@@ -23,6 +23,7 @@ const applySettings = () => {
     .querySelector<HTMLDivElement>('div.game-options div.table-toggle-container:nth-child(3) > div.switch-button')
     ?.click()
 
+  // eslint-disable-next-line no-alert
   alert('Table settings applied!')
 }
 

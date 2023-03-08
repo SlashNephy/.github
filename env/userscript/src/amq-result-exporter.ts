@@ -50,7 +50,7 @@ onReady(() => {
 
     const result = {
       time: Date.now(),
-      number: parseInt($('#qpCurrentSongCount').text()),
+      number: parseInt($('#qpCurrentSongCount').text(), 10),
       gameMode: quiz.gameMode,
       song: {
         name: event.songInfo.songName,

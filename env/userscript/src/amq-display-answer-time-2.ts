@@ -24,7 +24,7 @@ onReady(() => {
     }
 
     // チーム戦ではなければプレイヤーを除外しない
-    const teamNumber = player.teamNumber
+    const { teamNumber } = player
     if (teamNumber === null) {
       return
     }
