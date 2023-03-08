@@ -1,3 +1,6 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable import/no-extraneous-dependencies */
+
 import { writeFile } from 'fs/promises'
 import { join } from 'path'
 
@@ -10,7 +13,7 @@ import type { RollupOptions } from 'rollup'
 type RenderMode = 'dist' | 'dev-chrome' | 'dev-firefox'
 
 export const buildOptions = (banner: Banner): RollupOptions => {
-  void createDevScript(banner)
+  createDevScript(banner).catch(console.error)
 
   return {
     input: banner.private === true ? join('src', 'private', `${banner.id}.ts`) : join('src', `${banner.id}.ts`),
@@ -121,9 +124,8 @@ const headers: {
     render: (b, mode) => {
       if (typeof b.name === 'string') {
         return `${mode !== 'dist' ? '[Dev] ' : ''}${b.name}`
-      } else {
-        return `${mode !== 'dist' ? '[Dev] ' : ''}${b.name.en}`
       }
+      return `${mode !== 'dist' ? '[Dev] ' : ''}${b.name.en}`
     },
   },
   {
@@ -151,9 +153,8 @@ const headers: {
     render: (b) => {
       if (typeof b.description === 'string') {
         return b.description
-      } else {
-        return b.description.en
       }
+      return b.description.en
     },
   },
   {
@@ -268,9 +269,8 @@ const headers: {
               : `file://${join(process.cwd(), 'dist', `${b.id}.user.js`)}`
           if (typeof require === 'string') {
             return [path]
-          } else {
-            return [...require, path]
           }
+          return [...require, path]
         }
         case 'dev-firefox': {
           const require = b.require ?? []
@@ -280,9 +280,8 @@ const headers: {
               : `http://localhost:3000/${b.id}.user.js`
           if (typeof require === 'string') {
             return [path]
-          } else {
-            return [...require, path]
           }
+          return [...require, path]
         }
       }
     },

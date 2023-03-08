@@ -19,12 +19,13 @@ export class LocalizableString {
   }
 
   public format(...args: unknown[]): string {
-    return toString().replace(/{(\d+)}/g, (match: string, index: number): string => {
-      return args[index]?.toString() ?? 'undefined'
-    })
+    return this.toString().replace(
+      /{(\d+)}/g,
+      (match: string, index: number): string => args[index]?.toString() ?? 'undefined'
+    )
   }
 
   public toError(): Error {
-    return new Error(toString())
+    return new Error(this.toString())
   }
 }

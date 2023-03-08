@@ -18,8 +18,8 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => {
-  return new Promise((resolve, reject) => {
+const awaitFor = async (predicate, timeout) =>
+  new Promise((resolve, reject) => {
     let timer
     const interval = window.setInterval(() => {
       if (predicate()) {
@@ -36,7 +36,6 @@ const awaitFor = async (predicate, timeout) => {
       }, timeout)
     }
   })
-}
 
 const onReady = (callback) => {
   if (document.getElementById('startPage')) {

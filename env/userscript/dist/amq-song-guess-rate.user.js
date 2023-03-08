@@ -21,8 +21,8 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => {
-  return new Promise((resolve, reject) => {
+const awaitFor = async (predicate, timeout) =>
+  new Promise((resolve, reject) => {
     let timer
     const interval = window.setInterval(() => {
       if (predicate()) {
@@ -39,7 +39,6 @@ const awaitFor = async (predicate, timeout) => {
       }, timeout)
     }
   })
-}
 
 class LocalizableString {
   localization
@@ -58,12 +57,10 @@ class LocalizableString {
     }
   }
   format(...args) {
-    return toString().replace(/{(\d+)}/g, (match, index) => {
-      return args[index]?.toString() ?? 'undefined'
-    })
+    return this.toString().replace(/{(\d+)}/g, (match, index) => args[index]?.toString() ?? 'undefined')
   }
   toError() {
-    return new Error(toString())
+    return new Error(this.toString())
   }
 }
 
@@ -71,13 +68,12 @@ const message = new LocalizableString({
   en: 'Detailed Song Info could not be detected, either Detailed Song Info is not installed or this UserScript is loaded before Detailed Song Info.',
   ja: 'Detailed Song Info を検出できませんでした。Detailed Song Info がインストールされていないか、この UserScript が Detailed Song Info よりも先に読み込まれています。',
 })
-const getDetailedSongInfo = async () => {
-  return awaitFor(() => unsafeWindow.detailedSongInfo !== undefined, 10000)
+const getDetailedSongInfo = async () =>
+  awaitFor(() => unsafeWindow.detailedSongInfo !== undefined, 10000)
     .then(() => unsafeWindow.detailedSongInfo)
     .catch(() => {
       throw message.toError()
     })
-}
 
 const onReady = (callback) => {
   if (document.getElementById('startPage')) {

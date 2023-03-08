@@ -22,8 +22,8 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => {
-  return new Promise((resolve, reject) => {
+const awaitFor = async (predicate, timeout) =>
+  new Promise((resolve, reject) => {
     let timer
     const interval = window.setInterval(() => {
       if (predicate()) {
@@ -40,7 +40,6 @@ const awaitFor = async (predicate, timeout) => {
       }, timeout)
     }
   })
-}
 
 const onReady = (callback) => {
   if (document.getElementById('startPage')) {
@@ -89,8 +88,8 @@ class PlayerAnswerTimeManager {
   }
 }
 
-const executeXhr = async (request) => {
-  return new Promise((resolve, reject) => {
+const executeXhr = async (request) =>
+  new Promise((resolve, reject) => {
     GM_xmlhttpRequest({
       ...request,
       onload: (response) => {
@@ -101,7 +100,6 @@ const executeXhr = async (request) => {
       },
     })
   })
-}
 
 const fetchArmEntries = async () => {
   const response = await executeXhr({
@@ -168,7 +166,7 @@ onReady(() => {
     }
     const result = {
       time: Date.now(),
-      number: parseInt($('#qpCurrentSongCount').text()),
+      number: parseInt($('#qpCurrentSongCount').text(), 10),
       gameMode: quiz.gameMode,
       song: {
         name: event.songInfo.songName,

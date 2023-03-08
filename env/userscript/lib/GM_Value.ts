@@ -1,9 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export class GM_Value<T> {
   private readonly key: string
+
   private readonly defaultValue: T | undefined
 
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   public constructor(key: string, defaultValue?: T, initialize = true) {
     this.key = key
     this.defaultValue = defaultValue

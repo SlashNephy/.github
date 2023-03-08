@@ -34,9 +34,7 @@ const executeXhr = async (request) =>
 
 class GM_Value {
   key
-
   defaultValue
-
   constructor(key, defaultValue, initialize = true) {
     this.key = key
     this.defaultValue = defaultValue
@@ -45,15 +43,12 @@ class GM_Value {
       GM_setValue(key, defaultValue)
     }
   }
-
   get() {
     return GM_getValue(this.key, this.defaultValue)
   }
-
   set(value) {
     GM_setValue(this.key, value)
   }
-
   delete() {
     GM_deleteValue(this.key)
   }

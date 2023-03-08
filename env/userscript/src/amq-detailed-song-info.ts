@@ -58,7 +58,7 @@ const rows: CustomRow[] = [
       return showRatingRow.get()
     },
     async content(event: AnswerResultsEvent) {
-      const malId = event.songInfo.siteIds.malId
+      const { malId } = event.songInfo.siteIds
       let score = scoreCache.get(malId)
       let title = titleCache.get(malId)
       if (score === undefined || title === undefined) {
@@ -67,13 +67,13 @@ const rows: CustomRow[] = [
           const result = await getAnimeById(malId)
           score = result.data.score
           title = result.data.title_japanese
-        } catch (e: unknown) {
+        } catch {
           try {
             // MyAnimeList API
             const result = await getAnimeScoreById(malId)
             score = result.mean
             title = result.alternative_titles.ja
-          } catch (e: unknown) {
+          } catch {
             score = null
             title = null
           }
@@ -266,12 +266,12 @@ const getOrCreateLinkContainer = (container: Element, id: string) => {
   return element
 }
 
-const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
+const renderLinks = (element: HTMLElement, ls: EvaluatedCustomLink[]) => {
   const b = document.createElement('b')
   element.append(b)
 
-  const lastIndex = links.length - 1
-  for (const [index, link] of links.entries()) {
+  const lastIndex = ls.length - 1
+  for (const [index, link] of ls.entries()) {
     const a = document.createElement('a')
     b.append(a)
 

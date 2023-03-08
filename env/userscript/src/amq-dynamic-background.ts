@@ -24,7 +24,7 @@ onReady(() => {
     if (video.src !== quizVideo.src) {
       video.src = quizVideo.src
       video.currentTime = quizVideo.currentTime
-      void video.play()
+      video.play().catch(console.error)
     }
   }).bindListener()
 

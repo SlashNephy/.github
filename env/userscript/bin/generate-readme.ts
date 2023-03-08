@@ -1,5 +1,6 @@
 import { writeFile } from 'fs/promises'
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import markdown, { MarkdownTableBuilder } from 'markdown-doc-builder'
 
 import { banners } from '../rollup.config'

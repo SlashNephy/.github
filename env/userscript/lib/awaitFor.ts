@@ -1,7 +1,7 @@
 export type Predicate = () => boolean
 
-export const awaitFor = async (predicate: Predicate, timeout?: number): Promise<void> => {
-  return new Promise((resolve, reject) => {
+export const awaitFor = async (predicate: Predicate, timeout?: number): Promise<void> =>
+  new Promise((resolve, reject) => {
     let timer: number | NodeJS.Timer
 
     const interval = window.setInterval(() => {
@@ -20,4 +20,3 @@ export const awaitFor = async (predicate: Predicate, timeout?: number): Promise<
       }, timeout)
     }
   })
-}

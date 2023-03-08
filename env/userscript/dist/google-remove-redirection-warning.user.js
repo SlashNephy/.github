@@ -19,5 +19,5 @@
 
 const anchor = document.querySelector('body > div > a')
 if (anchor) {
-  location.href = anchor.href
+  window.location.href = anchor.href
 }

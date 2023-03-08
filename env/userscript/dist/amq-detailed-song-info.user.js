@@ -22,8 +22,8 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => {
-  return new Promise((resolve, reject) => {
+const awaitFor = async (predicate, timeout) =>
+  new Promise((resolve, reject) => {
     let timer
     const interval = window.setInterval(() => {
       if (predicate()) {
@@ -40,7 +40,6 @@ const awaitFor = async (predicate, timeout) => {
       }, timeout)
     }
   })
-}
 
 const onReady = (callback) => {
   if (document.getElementById('startPage')) {
@@ -73,8 +72,8 @@ class GM_Value {
   }
 }
 
-const executeXhr = async (request) => {
-  return new Promise((resolve, reject) => {
+const executeXhr = async (request) =>
+  new Promise((resolve, reject) => {
     GM_xmlhttpRequest({
       ...request,
       onload: (response) => {
@@ -85,7 +84,6 @@ const executeXhr = async (request) => {
       },
     })
   })
-}
 
 const getAnimeById = async (id) => {
   const content = await executeXhr({
@@ -151,7 +149,7 @@ const rows = [
       return showRatingRow.get()
     },
     async content(event) {
-      const malId = event.songInfo.siteIds.malId
+      const { malId } = event.songInfo.siteIds
       let score = scoreCache.get(malId)
       let title = titleCache.get(malId)
       if (score === undefined || title === undefined) {
@@ -159,12 +157,12 @@ const rows = [
           const result = await getAnimeById(malId)
           score = result.data.score
           title = result.data.title_japanese
-        } catch (e) {
+        } catch {
           try {
             const result = await getAnimeScoreById(malId)
             score = result.mean
             title = result.alternative_titles.ja
-          } catch (e) {
+          } catch {
             score = null
             title = null
           }
@@ -325,11 +323,11 @@ const getOrCreateLinkContainer = (container, id) => {
   container.insertBefore(element, hider)
   return element
 }
-const renderLinks = (element, links) => {
+const renderLinks = (element, ls) => {
   const b = document.createElement('b')
   element.append(b)
-  const lastIndex = links.length - 1
-  for (const [index, link] of links.entries()) {
+  const lastIndex = ls.length - 1
+  for (const [index, link] of ls.entries()) {
     const a = document.createElement('a')
     b.append(a)
     a.href = link.href

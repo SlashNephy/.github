@@ -139,8 +139,8 @@ const cache: { playerNames: string[]; lists: PlayerAnimeList[] } = {
   lists: [],
 }
 
-const fetchPlayerAnimeLists = async (playerNames: string[]) => {
-  return new Promise<PlayerAnimeList[]>((resolve) => {
+const fetchPlayerAnimeLists = async (playerNames: string[]) =>
+  new Promise<PlayerAnimeList[]>((resolve) => {
     if (contentEquals(cache.playerNames, playerNames)) {
       resolve(cache.lists)
       return
@@ -158,7 +158,6 @@ const fetchPlayerAnimeLists = async (playerNames: string[]) => {
         cache.playerNames = playerNames
         cache.lists = lists
         resolve(lists)
-        return
       }
     })
     listener.bindListener()
@@ -173,7 +172,6 @@ const fetchPlayerAnimeLists = async (playerNames: string[]) => {
       })
     }
   })
-}
 
 const contentEquals = <T>(a: T[], b: T[]) => {
   const setA = new Set(a)
@@ -210,12 +208,12 @@ const getOrCreateLinkContainer = (id: string) => {
   return element
 }
 
-const renderLinks = (element: HTMLElement, links: EvaluatedCustomLink[]) => {
+const renderLinks = (element: HTMLElement, ls: EvaluatedCustomLink[]) => {
   const b = document.createElement('b')
   element.append(b)
 
-  const lastIndex = links.length - 1
-  for (const [index, link] of links.entries()) {
+  const lastIndex = ls.length - 1
+  for (const [index, link] of ls.entries()) {
     const a = document.createElement('a')
     b.append(a)
 
