@@ -133,6 +133,8 @@ const javascript: Linter.Config = {
     'no-continue': 'off',
     // _ で始まるメンバー名を許可
     'no-underscore-dangle': 'off',
+    // 自身より後に宣言されたメンバーの使用を許可
+    'no-use-before-define': 'off',
   },
 }
 
