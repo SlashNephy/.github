@@ -11,6 +11,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "k1low/tap"
 tap "ktr0731/evans"
+tap "mackerelio/mackerel-agent"
 tap "minacle/chntpw"
 tap "motemen/furoshiki2"
 tap "potatolabs/git-redate"
@@ -300,6 +301,7 @@ brew "gromgit/fuse/sshfs-mac"
 brew "k1low/tap/tbls"
 # Evans: more expressive universal gRPC client
 brew "ktr0731/evans/evans"
+brew "mackerelio/mackerel-agent/mackerel-agent"
 # The Offline NT Password Editor
 brew "minacle/chntpw/chntpw"
 brew "motemen/furoshiki2/furoshiki2", args: ["HEAD"]

@@ -135,6 +135,14 @@ const javascript: Linter.Config = {
     'no-underscore-dangle': 'off',
     // 自身より後に宣言されたメンバーの使用を許可
     'no-use-before-define': 'off',
+    // console.* の使用を許可
+    'no-console': 'off',
+    // 深い三項演算子を許可
+    'no-nested-ternary': 'off',
+    // i++ インクリメントを許可
+    'no-plusplus': 'off',
+    // return の省略などを許可
+    'consistent-return': 'off',
   },
 }
 
