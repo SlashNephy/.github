@@ -8,14 +8,14 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 
 | ⚙ スクリプト                      | バージョン | 📥 インストール                                                                                                |
 | :-------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------- |
-| Annict Work Links                 | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js                 |
+| Annict Work Links                 | 0.3.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js                 |
 | dominion.games Auto Table Setter  | 0.4.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js |
 | FF14Angler Bypass AdBlocker Check | 0.2.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js   |
 | Feedly Auto Refresh               | 0.2.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js               |
 | AMQ Preload Video                 | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js                 |
 | AMQ Result Exporter               | 0.5.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js               |
 | Google Remove Redirection Warning | 0.1.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js |
-| Annict Hide Future Programs       | 0.1.5      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js       |
+| Annict Hide Future Programs       | 0.1.6      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js       |
 | AMQ Private Session               | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js               |
 | AMQ Detailed Song Info            | 0.7.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js            |
 | AMQ Hide Annoying Dialog          | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js          |
@@ -27,8 +27,10 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 | AMQ Auto Continue Login           | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js           |
 | AKASHI Show Remaining Hours       | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/akashi-show-remaining-hours.user.js       |
 | AMQ Dynamic Background            | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
+| Annict Following Viewings         | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js         |
+| AniList Status Filter             | 0.1.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js             |
 
-### Annict Work Links (v0.3.0)
+### Annict Work Links (v0.3.1)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/annict-work-links.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%90%84%E7%A8%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
@@ -70,7 +72,7 @@ Google スプレッドシートに AMQ のリザルト (正誤、タイトル、
 
 https://google.com/url のリダイレクト警告をスキップします。
 
-### Annict Hide Future Programs (v0.1.5)
+### Annict Hide Future Programs (v0.1.6)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/annict-hide-future-programs.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E8%A8%98%E9%8C%B2%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7%E6%9C%AA%E6%9D%A5%E3%81%AE%E6%94%BE%E9%80%81%E4%BA%88%E5%AE%9A%E3%82%92%E9%9D%9E%E8%A1%A8%E7%A4%BA%E3%81%AB%E3%81%99%E3%82%8B_UserScript)
 
@@ -141,3 +143,15 @@ Delete キーを押下することで解答欄のテキストをクリアする�
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-dynamic-background.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E8%83%8C%E6%99%AF%E3%81%AB%E5%8B%95%E7%94%BB%E3%82%92%E6%B5%81%E3%81%99_UserScript)
 
 現在再生中の動画を背景画像に設定します。
+
+### Annict Following Viewings (v0.2.0)
+
+[📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/annict-following-viewings.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
+
+Annict の作品ページにフォロー中のユーザーの視聴状況を表示します。
+
+### AniList Status Filter (v0.1.1)
+
+[📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/anilist-status-filter.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AniList_%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E8%A6%96%E8%81%B4%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%81%AB%E5%BF%9C%E3%81%98%E3%81%A6%E4%BD%9C%E5%93%81%E3%82%92%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%81%99%E3%82%8B_UserScript)
+
+AniList の作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。
