@@ -96,8 +96,12 @@ const toggleCheckbox = (e, key) => {
     }
     check.style.display = hiddenStatuses[key] ? 'none' : 'initial';
 };
-const extraFiltersWrap = document.querySelector('.extra-filters-wrap');
-if (extraFiltersWrap !== null) {
+const attach = () => {
+    const extraFiltersWrap = document.querySelector('.extra-filters-wrap');
+    const attribute = 'anilist-status-filter-attached';
+    if (extraFiltersWrap === null || extraFiltersWrap.hasAttribute(attribute)) {
+        return;
+    }
     extraFiltersWrap.insertAdjacentElement('afterend', renderFilters([
         renderCheckbox('Watching', (e) => {
             toggleCheckbox(e, 'Watching');
@@ -115,4 +119,7 @@ if (extraFiltersWrap !== null) {
             toggleCheckbox(e, 'Dropped');
         }),
     ]));
-}
+    extraFiltersWrap.toggleAttribute(attribute);
+};
+window.addEventListener('load', attach);
+window.addEventListener('click', attach);
