@@ -17,44 +17,42 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) =>
-  new Promise((resolve, reject) => {
-    let timer
+const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+    let timer;
     const interval = window.setInterval(() => {
-      if (predicate()) {
-        clearInterval(interval)
-        clearTimeout(timer)
-        resolve()
-      }
-    }, 500)
+        if (predicate()) {
+            clearInterval(interval);
+            clearTimeout(timer);
+            resolve();
+        }
+    }, 500);
     if (timeout !== undefined) {
-      timer = setTimeout(() => {
-        clearInterval(interval)
-        clearTimeout(timer)
-        reject(new Error('timeout'))
-      }, timeout)
+        timer = setTimeout(() => {
+            clearInterval(interval);
+            clearTimeout(timer);
+            reject(new Error('timeout'));
+        }, timeout);
     }
-  })
+});
 
 const onReady = (callback) => {
-  if (document.getElementById('startPage')) {
-    return
-  }
-  awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
-    .then(callback)
-    .catch(console.error)
-}
+    if (document.getElementById('startPage')) {
+        return;
+    }
+    awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+        .then(callback)
+        .catch(console.error);
+};
 
 onReady(() => {
-  document.addEventListener('DOMNodeInserted', () => {
-    for (const element of document.querySelectorAll('video')) {
-      element.preload = 'auto'
-    }
-  })
-  AMQ_addScriptData({
-    name: 'Preload Video',
-    author: 'SlashNephy &lt;spica@starry.blue&gt;',
-    description:
-      'Just enable media preloading. Speed up buffering. Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!',
-  })
-})
+    document.addEventListener('DOMNodeInserted', () => {
+        for (const element of document.querySelectorAll('video')) {
+            element.preload = 'auto';
+        }
+    });
+    AMQ_addScriptData({
+        name: 'Preload Video',
+        author: 'SlashNephy &lt;spica@starry.blue&gt;',
+        description: 'Just enable media preloading. Speed up buffering. Disclaimer: This script may violate terms of service, USE AT YOUR OWN RISK!',
+    });
+});

@@ -17,45 +17,44 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) =>
-  new Promise((resolve, reject) => {
-    let timer
+const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+    let timer;
     const interval = window.setInterval(() => {
-      if (predicate()) {
-        clearInterval(interval)
-        clearTimeout(timer)
-        resolve()
-      }
-    }, 500)
+        if (predicate()) {
+            clearInterval(interval);
+            clearTimeout(timer);
+            resolve();
+        }
+    }, 500);
     if (timeout !== undefined) {
-      timer = setTimeout(() => {
-        clearInterval(interval)
-        clearTimeout(timer)
-        reject(new Error('timeout'))
-      }, timeout)
+        timer = setTimeout(() => {
+            clearInterval(interval);
+            clearTimeout(timer);
+            reject(new Error('timeout'));
+        }, timeout);
     }
-  })
+});
 
 const onReady = (callback) => {
-  if (document.getElementById('startPage')) {
-    return
-  }
-  awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
-    .then(callback)
-    .catch(console.error)
-}
+    if (document.getElementById('startPage')) {
+        return;
+    }
+    awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+        .then(callback)
+        .catch(console.error);
+};
 
 onReady(() => {
-  const originalDisplayMessage = displayMessage
-  unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {
-    if (title === 'Disconnected from server' || title === 'Successfully  Reconnected') {
-      return
-    }
-    originalDisplayMessage(title, message, callback ?? (() => {}), isOutsideDismiss ?? true, disableSwal ?? false)
-  }
-  AMQ_addScriptData({
-    name: 'Hide Annoying Dialog',
-    author: 'SlashNephy &lt;spica@starry.blue&gt;',
-    description: 'Hide annoying message dialogs when disconnecting and reconnecting.',
-  })
-})
+    const originalDisplayMessage = displayMessage;
+    unsafeWindow.displayMessage = (title, message, callback, isOutsideDismiss, disableSwal) => {
+        if (title === 'Disconnected from server' || title === 'Successfully  Reconnected') {
+            return;
+        }
+        originalDisplayMessage(title, message, callback ?? (() => { }), isOutsideDismiss ?? true, disableSwal ?? false);
+    };
+    AMQ_addScriptData({
+        name: 'Hide Annoying Dialog',
+        author: 'SlashNephy &lt;spica@starry.blue&gt;',
+        description: 'Hide annoying message dialogs when disconnecting and reconnecting.',
+    });
+});

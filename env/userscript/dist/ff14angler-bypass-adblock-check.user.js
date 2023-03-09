@@ -17,5 +17,5 @@
 // @license         MIT license
 // ==/UserScript==
 
-document.head.className = 'adsbygoogle'
-unsafeWindow.$.prototype.remove = () => void 0
+document.head.className = 'adsbygoogle';
+unsafeWindow.$.prototype.remove = () => void 0;

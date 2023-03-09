@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AniList Status Filter
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Filter anime by your status on AniList search page.
 // @description:ja  AniListの作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。
@@ -16,106 +16,103 @@
 // @license         MIT license
 // ==/UserScript==
 
-const style = document.createElement('style')
-document.head.appendChild(style)
+const style = document.createElement('style');
+document.head.appendChild(style);
 const hiddenStatuses = {
-  Watching: false,
-  Completed: false,
-  Planning: false,
-  Paused: false,
-  Dropped: false,
-}
+    Watching: false,
+    Completed: false,
+    Planning: false,
+    Paused: false,
+    Dropped: false,
+};
 const renderCheckbox = (title, onClick) => {
-  const box = document.createElement('div')
-  box.classList.add('filter', 'checkbox-wrap')
-  box.toggleAttribute('data-v-acf5fe42')
-  {
-    const wrapper = document.createElement('div')
-    wrapper.classList.add('checkbox-wrap')
-    wrapper.toggleAttribute('data-v-acf5fe42')
-    wrapper.toggleAttribute('data-v-32107ecb')
-    wrapper.addEventListener('click', onClick)
-    box.appendChild(wrapper)
+    const box = document.createElement('div');
+    box.classList.add('filter', 'checkbox-wrap');
+    box.toggleAttribute('data-v-acf5fe42');
     {
-      const checkbox = document.createElement('div')
-      checkbox.classList.add('checkbox')
-      checkbox.toggleAttribute('data-v-32107ecb')
-      wrapper.appendChild(checkbox)
-      {
-        const check = document.createElement('div')
-        check.classList.add('check')
-        check.toggleAttribute('data-v-32107ecb')
-        checkbox.appendChild(check)
-      }
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('checkbox-wrap');
+        wrapper.toggleAttribute('data-v-acf5fe42');
+        wrapper.toggleAttribute('data-v-32107ecb');
+        wrapper.addEventListener('click', onClick);
+        box.appendChild(wrapper);
+        {
+            const checkbox = document.createElement('div');
+            checkbox.classList.add('checkbox');
+            checkbox.toggleAttribute('data-v-32107ecb');
+            wrapper.appendChild(checkbox);
+            {
+                const check = document.createElement('div');
+                check.classList.add('check');
+                check.toggleAttribute('data-v-32107ecb');
+                checkbox.appendChild(check);
+            }
+        }
+        {
+            const label = document.createElement('div');
+            label.classList.add('label');
+            label.toggleAttribute('data-v-32107ecb');
+            label.textContent = title;
+            wrapper.appendChild(label);
+        }
     }
-    {
-      const label = document.createElement('div')
-      label.classList.add('label')
-      label.toggleAttribute('data-v-32107ecb')
-      label.textContent = title
-      wrapper.appendChild(label)
-    }
-  }
-  return box
-}
+    return box;
+};
 const renderCss = () => {
-  const statuses = Object.entries(hiddenStatuses)
-    .filter(([_, hide]) => hide)
-    .map(([key, _]) => key)
-  if (statuses.length === 0) {
-    return ''
-  }
-  const selectors = statuses.map((s) => `.media-card:has(> a div[status="${s}"])`).join(',')
-  return `${selectors} { display: none; }`
-}
+    const statuses = Object.entries(hiddenStatuses)
+        .filter(([_, hide]) => hide)
+        .map(([key, _]) => key);
+    if (statuses.length === 0) {
+        return '';
+    }
+    const selectors = statuses.map((s) => `.media-card:has(> a div[status="${s}"])`).join(',');
+    return `${selectors} { display: none; }`;
+};
 const renderFilters = (children) => {
-  const filters = document.createElement('div')
-  {
-    const name = document.createElement('div')
-    name.classList.add('name')
-    name.toggleAttribute('data-v-84c4e64c')
-    name.textContent = 'my status'
-    filters.appendChild(name)
-  }
-  {
-    const wrapper = document.createElement('div')
-    wrapper.classList.add('filters-wrap', 'checkbox')
-    wrapper.toggleAttribute('data-v-acf5fe42')
-    wrapper.append(...children)
-    filters.appendChild(wrapper)
-  }
-  return filters
-}
+    const filters = document.createElement('div');
+    {
+        const name = document.createElement('div');
+        name.classList.add('name');
+        name.toggleAttribute('data-v-84c4e64c');
+        name.textContent = 'my status';
+        filters.appendChild(name);
+    }
+    {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('filters-wrap', 'checkbox');
+        wrapper.toggleAttribute('data-v-acf5fe42');
+        wrapper.append(...children);
+        filters.appendChild(wrapper);
+    }
+    return filters;
+};
 const toggleCheckbox = (e, key) => {
-  hiddenStatuses[key] = !hiddenStatuses[key]
-  style.textContent = renderCss()
-  const element = e.currentTarget
-  const check = element?.querySelector('.check')
-  if (check === null || check === undefined) {
-    return
-  }
-  check.style.display = hiddenStatuses[key] ? 'none' : 'initial'
-}
-const extraFiltersWrap = document.querySelector('.extra-filters-wrap')
+    hiddenStatuses[key] = !hiddenStatuses[key];
+    style.textContent = renderCss();
+    const element = e.currentTarget;
+    const check = element?.querySelector('.check');
+    if (check === null || check === undefined) {
+        return;
+    }
+    check.style.display = hiddenStatuses[key] ? 'none' : 'initial';
+};
+const extraFiltersWrap = document.querySelector('.extra-filters-wrap');
 if (extraFiltersWrap !== null) {
-  extraFiltersWrap.insertAdjacentElement(
-    'afterend',
-    renderFilters([
-      renderCheckbox('Watching', (e) => {
-        toggleCheckbox(e, 'Watching')
-      }),
-      renderCheckbox('Completed', (e) => {
-        toggleCheckbox(e, 'Completed')
-      }),
-      renderCheckbox('Planning', (e) => {
-        toggleCheckbox(e, 'Planning')
-      }),
-      renderCheckbox('Paused', (e) => {
-        toggleCheckbox(e, 'Paused')
-      }),
-      renderCheckbox('Dropped', (e) => {
-        toggleCheckbox(e, 'Dropped')
-      }),
-    ])
-  )
+    extraFiltersWrap.insertAdjacentElement('afterend', renderFilters([
+        renderCheckbox('Watching', (e) => {
+            toggleCheckbox(e, 'Watching');
+        }),
+        renderCheckbox('Completed', (e) => {
+            toggleCheckbox(e, 'Completed');
+        }),
+        renderCheckbox('Planning', (e) => {
+            toggleCheckbox(e, 'Planning');
+        }),
+        renderCheckbox('Paused', (e) => {
+            toggleCheckbox(e, 'Paused');
+        }),
+        renderCheckbox('Dropped', (e) => {
+            toggleCheckbox(e, 'Dropped');
+        }),
+    ]));
 }
