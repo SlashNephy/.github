@@ -11,7 +11,7 @@
 // @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js
 // @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js
 // @supportURL      https://github.com/SlashNephy/.github/issues
-// @match           https://anilist.co/search/*
+// @match           https://anilist.co/*
 // @grant           none
 // @license         MIT license
 // ==/UserScript==
@@ -20,6 +20,7 @@ const style = document.createElement('style');
 document.head.appendChild(style);
 const hiddenStatuses = {
     Watching: false,
+    Reading: false,
     Completed: false,
     Planning: false,
     Paused: false,
@@ -96,15 +97,34 @@ const toggleCheckbox = (e, key) => {
     }
     check.style.display = hiddenStatuses[key] ? 'none' : 'initial';
 };
+const detectCategory = () => {
+    if (window.location.pathname.startsWith('/search/anime')) {
+        return 'anime';
+    }
+    if (window.location.pathname.startsWith('/search/manga')) {
+        return 'manga';
+    }
+    return null;
+};
 const attach = () => {
+    const category = detectCategory();
+    if (category === null) {
+        return;
+    }
     const extraFiltersWrap = document.querySelector('.extra-filters-wrap');
     const attribute = 'anilist-status-filter-attached';
     if (extraFiltersWrap === null || extraFiltersWrap.hasAttribute(attribute)) {
         return;
     }
     extraFiltersWrap.insertAdjacentElement('afterend', renderFilters([
-        renderCheckbox('Watching', (e) => {
-            toggleCheckbox(e, 'Watching');
+        renderCheckbox(category === 'anime' ? 'Watching' : 'Reading', (e) => {
+            switch (detectCategory()) {
+                case 'anime':
+                    toggleCheckbox(e, 'Watching');
+                    return;
+                case 'manga':
+                    toggleCheckbox(e, 'Reading');
+            }
         }),
         renderCheckbox('Completed', (e) => {
             toggleCheckbox(e, 'Completed');
