@@ -1,17 +1,15 @@
 const style = document.createElement('style')
 document.head.appendChild(style)
 
-const hiddenStatuses: Record<'Watching' | 'Completed' | 'Planning' | 'Paused' | 'Dropped', boolean> = {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
+const hiddenStatuses: Record<'Watching' | 'Reading' | 'Completed' | 'Planning' | 'Paused' | 'Dropped', boolean> = {
+  /* eslint-disable @typescript-eslint/naming-convention */
   Watching: false,
-  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Reading: false,
   Completed: false,
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   Planning: false,
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   Paused: false,
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   Dropped: false,
+  /* eslint-enable @typescript-eslint/naming-convention */
 }
 
 const renderCheckbox = (title: string, onClick: (e: MouseEvent) => void): HTMLElement => {
@@ -117,8 +115,13 @@ const toggleCheckbox = (e: MouseEvent, key: keyof typeof hiddenStatuses): void =
   check.style.display = hiddenStatuses[key] ? 'none' : 'initial'
 }
 
-const extraFiltersWrap = document.querySelector('.extra-filters-wrap')
-if (extraFiltersWrap !== null) {
+const attach = () => {
+  const extraFiltersWrap = document.querySelector('.extra-filters-wrap')
+  const attribute = 'anilist-status-filter-attached'
+  if (extraFiltersWrap === null || extraFiltersWrap.hasAttribute(attribute)) {
+    return
+  }
+
   extraFiltersWrap.insertAdjacentElement(
     'afterend',
     renderFilters([
@@ -139,4 +142,8 @@ if (extraFiltersWrap !== null) {
       }),
     ])
   )
+  extraFiltersWrap.toggleAttribute(attribute)
 }
+
+window.addEventListener('load', attach)
+window.addEventListener('click', attach)
