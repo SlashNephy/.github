@@ -1,6 +1,7 @@
 const style = document.createElement('style')
 document.head.appendChild(style)
 
+type Category = 'anime' | 'manga'
 const hiddenStatuses: Record<'Watching' | 'Reading' | 'Completed' | 'Planning' | 'Paused' | 'Dropped', boolean> = {
   /* eslint-disable @typescript-eslint/naming-convention */
   Watching: false,
@@ -115,7 +116,22 @@ const toggleCheckbox = (e: MouseEvent, key: keyof typeof hiddenStatuses): void =
   check.style.display = hiddenStatuses[key] ? 'none' : 'initial'
 }
 
+const detectCategory = (): Category | null => {
+  if (window.location.pathname.startsWith('/search/anime')) {
+    return 'anime'
+  }
+  if (window.location.pathname.startsWith('/search/manga')) {
+    return 'manga'
+  }
+  return null
+}
+
 const attach = () => {
+  const category = detectCategory()
+  if (category === null) {
+    return
+  }
+
   const extraFiltersWrap = document.querySelector('.extra-filters-wrap')
   const attribute = 'anilist-status-filter-attached'
   if (extraFiltersWrap === null || extraFiltersWrap.hasAttribute(attribute)) {
@@ -125,8 +141,15 @@ const attach = () => {
   extraFiltersWrap.insertAdjacentElement(
     'afterend',
     renderFilters([
-      renderCheckbox('Watching', (e) => {
-        toggleCheckbox(e, 'Watching')
+      renderCheckbox(category === 'anime' ? 'Watching' : 'Reading', (e) => {
+        // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
+        switch (detectCategory()) {
+          case 'anime':
+            toggleCheckbox(e, 'Watching')
+            return
+          case 'manga':
+            toggleCheckbox(e, 'Reading')
+        }
       }),
       renderCheckbox('Completed', (e) => {
         toggleCheckbox(e, 'Completed')
