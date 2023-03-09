@@ -1,7 +1,114 @@
 import { executeXhr } from '../lib/api'
 import { GM_Value } from '../lib/GM_Value'
 
-const annictTokenRef = new GM_Value<string | undefined>('ANNICT_TOKEN')
+const annictTokenKey = 'annict_token'
+
+const style = document.createElement('style')
+document.head.appendChild(style)
+
+GM_config.init({
+  id: 'annict_following_viewings',
+  title: 'Annict Following Viewings 設定',
+  fields: {
+    [annictTokenKey]: {
+      label: 'Annict 個人用アクセストークン',
+      type: 'text',
+      default: '',
+    },
+  },
+  events: {
+    open() {
+      style.textContent = `
+        .l-default {
+          filter: blur(10px);
+        }
+        iframe#annict_following_viewings {
+          border: 0 !important;
+          border-radius: 20px;
+          height: 30% !important;
+          width: 50% !important;
+          left: 25% !important;
+          top: 33% !important;
+          opacity: 0.9 !important;
+        }
+      `
+    },
+    close() {
+      style.textContent = ''
+    },
+    save() {
+      window.location.reload()
+    },
+  },
+  css: `
+    body {
+      background: #33363a !important;
+      color: #e9ecef !important;
+      -webkit-font-smoothing: antialiased !important;
+      text-rendering: optimizeSpeed !important;
+    }
+    .config_header {
+      font-weight: 700 !important;
+      font-size: 1.75rem !important;
+      padding: 1em !important;
+    }
+    .config_var {
+      padding: 2em !important;
+    }
+    .field_label {
+      font-weight: normal !important;
+      font-size: 1.2rem !important;
+    }
+    input {
+      background-color: #212529 !important;
+      color: #e9ecef;
+      display: block;
+      width: 100%;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      background-clip: padding-box;
+      border: 1px solid #495057;
+      appearance: none;
+      border-radius: 0.3rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    div:has(> .saveclose_buttons) {
+      text-align: center !important;
+    }
+    .saveclose_buttons {
+      box-sizing: border-box;
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      vertical-align: middle;
+      cursor: pointer;
+      user-select: none;
+      border: 1px solid transparent;
+      padding: 0.375rem 0.75rem !important;
+      font-size: 1rem;
+      border-radius: 50rem;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      color: #fff;
+      background-color: #d51c5b;
+      border-color: #d51c5b;
+      -webkit-appearance: button;
+    }
+    .reset {
+      color: #e9ecef !important;
+    }
+  `,
+})
+
+const migrate = () => {
+  // もう使わないので設定を移行する
+  const annictTokenRef = new GM_Value<string | undefined>('ANNICT_TOKEN')
+  const annictToken = annictTokenRef.pop()
+  if (annictToken !== undefined) {
+    GM_config.set(annictTokenKey, annictToken)
+  }
+}
 
 type FollowingStatusesResponse = {
   data: {
@@ -338,19 +445,30 @@ const handle = async () => {
   const [body, card] = renderSectionBody()
   title.insertAdjacentElement('afterend', body)
 
-  const token = annictTokenRef.get()
-  if (token === undefined) {
+  const token = GM_config.get(annictTokenKey)
+  if (typeof token !== 'string' || token.length === 0) {
     const guideAnchor = document.createElement('a')
     guideAnchor.href =
       'https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript'
     guideAnchor.textContent = 'ガイド'
     guideAnchor.target = '_blank'
 
+    const settingsAnchor = document.createElement('a')
+    settingsAnchor.href = 'about:blank'
+    settingsAnchor.textContent = 'こちら'
+    settingsAnchor.addEventListener('click', (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      GM_config.open()
+    })
+
     card.textContent = ''
     card.append(
-      'この UserScript の動作には Annict の個人用アクセストークンの設定が必要です。こちらの',
+      'Annict Following Viewings の動作には Annict の個人用アクセストークンの設定が必要です。',
       guideAnchor,
-      'を参考に設定を行ってください。'
+      'を参考に',
+      settingsAnchor,
+      'から設定を行ってください。'
     )
     return
   }
@@ -373,6 +491,8 @@ const handle = async () => {
 
   card.textContent = 'フォロー中のユーザーの視聴状況はありません。'
 }
+
+migrate()
 
 document.addEventListener('turbo:load', () => {
   handle().catch(console.error)

@@ -319,7 +319,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-following-viewings',
     name: 'Annict Following Viewings',
-    version: '0.1.2',
+    version: '0.2.0',
     description: {
       en: 'Display following viewings on Annict work page.',
       ja: 'Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。',
@@ -329,7 +329,10 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://annict.com/*'],
     connect: ['api.annict.com'],
-    grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue'],
+    grant: ['GM_xmlhttpRequest', 'GM_getValue', 'GM_setValue', 'GM_deleteValue'],
+    require: [
+      'https://cdn.jsdelivr.net/gh/sizzlemctwizzle/GM_config@2207c5c1322ebb56e401f03c2e581719f909762a/gm_config.js',
+    ],
   },
   {
     id: 'anilist-status-filter',

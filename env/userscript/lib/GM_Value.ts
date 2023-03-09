@@ -25,4 +25,10 @@ export class GM_Value<T> {
   public delete(): void {
     GM_deleteValue(this.key)
   }
+
+  public pop(): T {
+    const value = this.get()
+    this.delete()
+    return value
+  }
 }
