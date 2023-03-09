@@ -424,6 +424,8 @@ cask "lulu"
 cask "macfuse"
 # Create digital art and comics
 cask "medibangpaintpro"
+# Shows the next meeting in the menu bar
+cask "meetingbar"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Web browser
