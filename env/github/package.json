@@ -21,7 +21,7 @@
   "dependencies": {
     "@octokit/rest": "19.0.7",
     "dotenv": "16.0.3",
-    "zod": "3.20.6"
+    "zod": "3.21.0"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.3.8",
