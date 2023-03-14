@@ -31,7 +31,7 @@
     "postcss-cli": "10.1.0",
     "postcss-scss": "4.0.6",
     "prettier": "2.8.4",
-    "sass": "1.59.2",
+    "sass": "1.59.3",
     "stylelint": "15.2.0"
   },
   "packageManager": "yarn@3.4.1"
