@@ -2423,7 +2423,7 @@ __metadata:
     eslint: 8.36.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.4
-    renovate: 35.3.0
+    renovate: 35.4.1
     ts-node: 10.9.1
     typescript: 4.9.5
   languageName: unknown
@@ -8696,9 +8696,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.3.0":
-  version: 35.3.0
-  resolution: "renovate@npm:35.3.0"
+"renovate@npm:35.4.1":
+  version: 35.4.1
+  resolution: "renovate@npm:35.4.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.282.0
     "@aws-sdk/client-ec2": 3.282.0
@@ -8805,14 +8805,14 @@ __metadata:
     validate-npm-package-name: 5.0.0
     vuln-vects: 1.1.0
     xmldoc: 1.2.0
-    zod: 3.21.3
+    zod: 3.21.4
   dependenciesMeta:
     re2:
       optional: true
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 1a5a5d88bd3c19b40d8671258a7ccaacee3cf950fc790390e8746baf1e87389f4005eb1b3e2e4d0c085205e56dab23a417fa02014bd62a98ada6a7bace591a22
+  checksum: 1d0657f9d38db353041fbfd4eee1b39474f783cda2282deddbea37a6a20d4ad2ff7671f7fe17f4cd7e4b1c0d3503fd62ad54b6e9fd73fe6dcf8918463ecd2ead
   languageName: node
   linkType: hard
 
@@ -10501,10 +10501,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:3.21.3":
-  version: 3.21.3
-  resolution: "zod@npm:3.21.3"
-  checksum: 499b392cde880c523dd0e83c89b7aeab2c59d6cdeb121981a2e2304de2d895041ec5f37b265c7b54a156feed26569c22130b904f600b7c64ad28fe3e7731e102
+"zod@npm:3.21.4":
+  version: 3.21.4
+  resolution: "zod@npm:3.21.4"
+  checksum: f185ba87342ff16f7a06686767c2b2a7af41110c7edf7c1974095d8db7a73792696bcb4a00853de0d2edeb34a5b2ea6a55871bc864227dace682a0a28de33e1f
   languageName: node
   linkType: hard
 
