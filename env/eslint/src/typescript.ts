@@ -147,7 +147,6 @@ const typescript: Linter.Config = {
     // Promise<T> を返す関数では async のマークを強制
     '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/require-array-sort-compare': 'off',
-    '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/unbound-method': 'off',
@@ -170,6 +169,7 @@ const typescript: Linter.Config = {
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     // Deprecated されたコードの使用を禁止
     'deprecation/deprecation': 'error',
   },
