@@ -38,7 +38,7 @@ jobs:
       contents: 'write'
 
   publish:
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     needs: lint
     uses: ./.github/workflows/yarn-publish.yml
     with:
