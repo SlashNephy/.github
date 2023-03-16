@@ -1,4 +1,5 @@
 import {
+  archiveRepository,
   createWebhook,
   deleteWebhook,
   getAuthenticatedUser,
@@ -6,6 +7,7 @@ import {
   listOwnerRepos,
   listRepoWebhooks,
   listUserRepos,
+  unarchiveRepository,
 } from '../lib/api'
 import { env } from '../lib/env'
 
@@ -23,19 +25,6 @@ const main = async () => {
   ]).then((result) => result.flat())
 
   const promises = repos.map(async (repo) => {
-    if (repo.archived === true) {
-      console.debug(
-        `[${repo.owner.login}/${repo.name}] This repository is archived. Skipping...`
-      )
-      return
-    }
-    if (repo.permissions?.admin !== true) {
-      console.debug(
-        `[${repo.owner.login}/${repo.name}] Cannot edit Webhook because you do not have admin privileges. Skipping...`
-      )
-      return
-    }
-
     const eventsWebhookUrl = env.TARGET_USERS.includes(repo.owner.login)
       ? env.USER_WEBHOOK_URLS[env.TARGET_USERS.indexOf(repo.owner.login)]
       : env.ORG_WEBHOOK_URLS[env.TARGET_ORGS.indexOf(repo.owner.login)]
@@ -43,6 +32,7 @@ const main = async () => {
     let hasEvents = false,
       hasStar = false,
       hasIssue = false
+    const oldIds = [] as number[]
     for (const webhook of await listRepoWebhooks(repo.owner.login, repo.name)) {
       if (webhook.config.url === undefined) {
         continue
@@ -50,7 +40,7 @@ const main = async () => {
 
       if (
         webhook.last_response.code !== null &&
-        (200 < webhook.last_response.code ||
+        (webhook.last_response.code < 200 ||
           webhook.last_response.code >= 300) &&
         // Too Many Requests は許可
         webhook.last_response.code !== 429
@@ -79,51 +69,88 @@ const main = async () => {
             `[${repo.owner.login}/${repo.name}] Found obsolete webhook: ${webhook.config.url}`
           )
 
-          if (env.DELETE_OLD_WEBHOOK) {
-            if (!env.DRY_RUN) {
-              // eslint-disable-next-line no-await-in-loop
-              await deleteWebhook(repo.owner.login, repo.name, webhook.id)
-            }
+          oldIds.push(webhook.id)
+      }
+    }
 
-            console.info(
-              `[${repo.owner.login}/${repo.name}] Deleted webhook: ${webhook.id}`
-            )
-          }
+    if (repo.permissions?.admin !== true) {
+      console.debug(
+        `[${repo.owner.login}/${repo.name}] Cannot edit Webhook because you do not have admin privileges. Skipping...`
+      )
+      return
+    }
+
+    const updates: (() => Promise<void>)[] = []
+    if (env.DELETE_OLD_WEBHOOK) {
+      for (const oldId of oldIds) {
+        updates.push(async () => {
+          await deleteWebhook(repo.owner.login, repo.name, oldId)
+        })
+
+        console.info(
+          `[${repo.owner.login}/${repo.name}] Delete webhook: ${oldId}`
+        )
       }
     }
 
     if (!hasEvents) {
-      if (!env.DRY_RUN) {
+      updates.push(async () => {
         await createWebhook(repo.owner.login, repo.name, eventsWebhookUrl, [
           '*',
         ])
-      }
+      })
 
-      console.info(`[${repo.owner.login}/${repo.name}] Created events webhook`)
+      console.info(`[${repo.owner.login}/${repo.name}] Create events webhook`)
     }
 
     // https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads
     if (!hasStar && env.STAR_WEBHOOK_URL !== undefined) {
-      if (!env.DRY_RUN) {
-        await createWebhook(repo.owner.login, repo.name, env.STAR_WEBHOOK_URL, [
-          'watch',
-        ])
-      }
-
-      console.info(`[${repo.owner.login}/${repo.name}] Created star webhook`)
-    }
-
-    if (!hasIssue && env.ISSUE_WEBHOOK_URL !== undefined) {
-      if (!env.DRY_RUN) {
+      updates.push(async () => {
         await createWebhook(
           repo.owner.login,
           repo.name,
-          env.ISSUE_WEBHOOK_URL,
+          env.STAR_WEBHOOK_URL ?? '',
+          ['watch']
+        )
+      })
+
+      console.info(`[${repo.owner.login}/${repo.name}] Create star webhook`)
+    }
+
+    if (!hasIssue && env.ISSUE_WEBHOOK_URL !== undefined) {
+      updates.push(async () => {
+        await createWebhook(
+          repo.owner.login,
+          repo.name,
+          env.ISSUE_WEBHOOK_URL ?? '',
           ['issues', 'issue_comment']
         )
+      })
+
+      console.info(`[${repo.owner.login}/${repo.name}] Create issue webhook`)
+    }
+
+    if (!env.DRY_RUN) {
+      if (repo.archived === true) {
+        console.debug(
+          `[${repo.owner.login}/${repo.name}] This repository is archived. Unarchiving...`
+        )
+
+        await unarchiveRepository(repo.owner.login, repo.name)
       }
 
-      console.info(`[${repo.owner.login}/${repo.name}] Created issue webhook`)
+      for (const updater of updates) {
+        // eslint-disable-next-line no-await-in-loop
+        await updater()
+      }
+
+      if (repo.archived === true) {
+        console.debug(
+          `[${repo.owner.login}/${repo.name}] This repository is originally archived. Archiving...`
+        )
+
+        await archiveRepository(repo.owner.login, repo.name)
+      }
     }
   })
 

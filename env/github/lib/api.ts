@@ -169,3 +169,25 @@ export const createWebhook = async (
     },
   })
 }
+
+export const archiveRepository = async (
+  owner: string,
+  repo: string
+): Promise<void> => {
+  await octokit.repos.update({
+    owner,
+    repo,
+    archived: true,
+  })
+}
+
+export const unarchiveRepository = async (
+  owner: string,
+  repo: string
+): Promise<void> => {
+  await octokit.repos.update({
+    owner,
+    repo,
+    archived: false,
+  })
+}
