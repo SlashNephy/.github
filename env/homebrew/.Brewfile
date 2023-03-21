@@ -65,6 +65,8 @@ brew "glib"
 brew "python@3.9"
 # Perl module dependency manager (aka Bundler for Perl)
 brew "carton"
+# Define k8s native apps and abstractions using object-oriented programming
+brew "cdk8s"
 # CD/DVD/Blu-ray premastering and recording software
 brew "cdrtools"
 # CLI tool for Cloudflare Workers
@@ -90,7 +92,7 @@ brew "docker-compose"
 # Command-line DNS client
 brew "dog"
 # AST-based pattern checker for JavaScript
-brew "eslint", link: false
+brew "eslint"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Validating, recursive, caching DNS resolver
@@ -215,6 +217,10 @@ brew "php"
 brew "pipenv"
 # Perl binary manager
 brew "plenv"
+# 📦🚀 Fast, disk space efficient package manager
+brew "pnpm"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
+brew "prettier"
 # Coreutils progress viewer
 brew "progress"
 # Go support for Google's protocol buffers
@@ -241,6 +247,8 @@ brew "skaffold"
 brew "sl"
 # Proxy server that works as a poor man's VPN
 brew "sshuttle"
+# Modern CSS linter
+brew "stylelint"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Graphical network analyzer and capture tool
@@ -442,6 +450,8 @@ cask "mysqlworkbench"
 cask "ngrok"
 # Client-side GUI application for modern database development and operations
 cask "nosql-workbench"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Monitors computer mic and webcam
 cask "oversight"
 # Desktop virtualization software
