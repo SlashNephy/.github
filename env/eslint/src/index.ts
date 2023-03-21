@@ -4,7 +4,7 @@ import type { Linter } from 'eslint'
 
 const config: Linter.Config = {
   root: true,
-  extends: ['eslint:recommended', 'airbnb'],
+  extends: ['eslint:recommended', 'standard', 'airbnb'],
   overrides: [
     // JavaScript / TypeScript
     {
