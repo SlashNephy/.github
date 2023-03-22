@@ -43,6 +43,7 @@
     "stylelint": "15.3.0",
     "typescript": "5.0.2"
   },
+  "packageManager": "yarn@3.4.1",
   "eslintConfig": {
     "extends": [
       "@slashnephy/eslint-config"
