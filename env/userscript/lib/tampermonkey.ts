@@ -1,6 +1,3 @@
-// eslint-disable-next-line eslint-comments/disable-enable-pair
-/* eslint-disable import/no-extraneous-dependencies */
-
 import { writeFile } from 'fs/promises'
 import { join } from 'path'
 
@@ -37,7 +34,7 @@ export const buildOptions = (banner: Banner): RollupOptions => {
 }
 
 const createDevScript = async (banner: Banner) => {
-  const promises = (['dev-chrome', 'dev-firefox'] as RenderMode[]).map(async (mode) => {
+  const promises = (['dev-chrome', 'dev-firefox'] as RenderMode[]).map((mode) => {
     const filename = `${banner.id}.${mode}.user.js`
     const path = banner.private === true ? join('dist', 'private', filename) : join('dist', filename)
 
