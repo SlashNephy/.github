@@ -63,8 +63,9 @@ declare global {
 
     public isSpectator: boolean
 
-    public answerInput: {
+    public answerInput?: {
       $input: JQuery
+      typingInput: QuizTypeAnswerInput
       showSubmitedAnswer(): void
       resetAnswerState(): void
       submitAnswer()
@@ -82,6 +83,12 @@ declare global {
     }
 
     public nextSongPlayLength: number
+  }
+}
+
+declare global {
+  declare class QuizTypeAnswerInput {
+    public autoCompleteController: AutoCompleteController
   }
 }
 
@@ -263,9 +270,9 @@ declare class AmqAwesomeplete {
 }
 
 declare class AutoCompleteController {
-  public list: unknown[]
+  public list: string[]
 
-  public version: unknown
+  public version: number
 
   public awesomepleteInstance?: AmqAwesomeplete
 
@@ -330,6 +337,7 @@ export type EventMap = Record<string, never> & {
   'player profile': PlayerProfileEvent
   'play next song': unknown
   'expandLibrary questions': ExpandLibraryQuestionsEvent
+  'get all song names': GetAllSongNamesEvent
 }
 
 export type AnswerResultsEvent = {
@@ -503,4 +511,9 @@ export type ExpandLibraryQuestionsEvent = {
       }
     }[]
   }[]
+}
+
+export type GetAllSongNamesEvent = {
+  names: string[]
+  version: number
 }
