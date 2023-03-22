@@ -126,8 +126,8 @@ onReady(() => {
             player.toggleTeamAnswerSharing(false);
         }
         if (!unsafeWindow.quiz.isSpectator) {
-            unsafeWindow.quiz.answerInput.showSubmitedAnswer();
-            unsafeWindow.quiz.answerInput.resetAnswerState();
+            unsafeWindow.quiz.answerInput?.showSubmitedAnswer();
+            unsafeWindow.quiz.answerInput?.resetAnswerState();
         }
         unsafeWindow.quiz.videoTimerBar.updateState(event.progressBarState);
     });
