@@ -34,6 +34,7 @@ export const buildOptions = (banner: Banner): RollupOptions => {
 }
 
 const createDevScript = async (banner: Banner) => {
+  // eslint-disable-next-line @typescript-eslint/promise-function-async
   const promises = (['dev-chrome', 'dev-firefox'] as RenderMode[]).map((mode) => {
     const filename = `${banner.id}.${mode}.user.js`
     const path = banner.private === true ? join('dist', 'private', filename) : join('dist', filename)

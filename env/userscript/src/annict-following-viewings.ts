@@ -241,7 +241,7 @@ const fetchPaginatedFollowingStatuses = async (
   const results: FollowingStatusesResponse[] = []
   let cursor: string | null = null
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition,no-constant-condition
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   while (true) {
     // eslint-disable-next-line no-await-in-loop
     const response: FollowingStatusesResponse | ErrorResponse = await fetchFollowingStatuses(workId, cursor, token)
