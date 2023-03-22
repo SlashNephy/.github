@@ -1,3 +1,4 @@
 .yarn/
 dist/
 rollup.config-*.mjs
+bin/collect-mal-data/results/
