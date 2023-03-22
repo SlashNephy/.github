@@ -64,7 +64,9 @@ const fetchTitles = async () => {
     });
     return JSON.parse(responseText);
 };
-const localizeTitle = (titles, target) => Object.entries(titles).find(([k]) => k.toLowerCase() === target.toLowerCase())?.at(1)
+const localizeTitle = (titles, target) => Object.entries(titles)
+    .find(([k]) => k.toLowerCase() === target.toLowerCase())
+    ?.at(1)
     ?.at(0);
 onReady(async () => {
     const titles = await fetchTitles();
