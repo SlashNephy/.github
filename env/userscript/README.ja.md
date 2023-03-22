@@ -29,6 +29,7 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 | AMQ Dynamic Background            | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
 | Annict Following Viewings         | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js         |
 | AniList Status Filter             | 0.1.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js             |
+| AMQ i18n Titles                   | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-i18n-titles.user.js                   |
 
 ### Annict Work Links (v0.3.1)
 
@@ -155,3 +156,9 @@ Annict の作品ページにフォロー中のユーザーの視聴状況を表�
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/anilist-status-filter.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AniList_%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E8%A6%96%E8%81%B4%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%81%AB%E5%BF%9C%E3%81%98%E3%81%A6%E4%BD%9C%E5%93%81%E3%82%92%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%81%99%E3%82%8B_UserScript)
 
 AniList の作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。
+
+### AMQ i18n Titles (v0.1.0)
+
+[📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-i18n-titles.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-i18n-titles.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E3%82%A2%E3%83%8B%E3%83%A1%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%99%E3%82%8B_UserScript)
+
+選択肢やドロップダウンに表示されているアニメのタイトルを日本語に置換します。
