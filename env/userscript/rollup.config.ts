@@ -347,6 +347,25 @@ export const banners: Banner[] = [
     author: 'SlashNephy',
     match: ['https://anilist.co/*'],
   },
+  {
+    id: 'amq-i18n-titles',
+    name: 'AMQ i18n Titles',
+    version: '0.1.0',
+    description: {
+      en: 'Display localized anime titles. (Currently support only Japanese.)',
+      ja: '選択肢やドロップダウンに表示されているアニメのタイトルを日本語に置換します。',
+    },
+    homepage:
+      'https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E3%82%A2%E3%83%8B%E3%83%A1%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%99%E3%82%8B_UserScript',
+    author: 'SlashNephy',
+    match: ['https://animemusicquiz.com/*'],
+    icon: 'https://animemusicquiz.com/favicon-32x32.png',
+    grant: ['unsafeWindow', 'GM_xmlhttpRequest'],
+    connect: ['raw.githubusercontent.com'],
+    require: [
+      'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
+    ],
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
