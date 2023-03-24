@@ -2437,7 +2437,7 @@ __metadata:
     eslint: 8.36.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.6
-    renovate: 35.19.0
+    renovate: 35.19.1
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -4239,10 +4239,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:4.3.0":
-  version: 4.3.0
-  resolution: "deepmerge@npm:4.3.0"
-  checksum: c7980eb5c5be040b371f1df0d566473875cfabed9f672ccc177b81ba8eee5686ce2478de2f1d0076391621cbe729e5eacda397179a59ef0f68901849647db126
+"deepmerge@npm:4.3.1":
+  version: 4.3.1
+  resolution: "deepmerge@npm:4.3.1"
+  checksum: 2024c6a980a1b7128084170c4cf56b0fd58a63f2da1660dcfe977415f27b17dbe5888668b59d0b063753f3220719d5e400b7f113609489c90160bb9a5518d052
   languageName: node
   linkType: hard
 
@@ -8698,9 +8698,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.19.0":
-  version: 35.19.0
-  resolution: "renovate@npm:35.19.0"
+"renovate@npm:35.19.1":
+  version: 35.19.1
+  resolution: "renovate@npm:35.19.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.290.0
     "@aws-sdk/client-ec2": 3.291.0
@@ -8744,7 +8744,7 @@ __metadata:
     commander: 10.0.0
     conventional-commits-detector: 1.0.3
     crypto-random-string: 3.3.1
-    deepmerge: 4.3.0
+    deepmerge: 4.3.1
     delay: 5.0.0
     dequal: 2.0.3
     detect-indent: 6.1.0
@@ -8814,7 +8814,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 01dba43d0354066f019b2ec408ae590731abdb34a8b6d6af51d1a9d8de7166f518d28f98f9a20656775f0693a76488d9b78f51ec879ff7bf0d2d23e9264d2633
+  checksum: 34ddaa867f82bb439a7fbbfe91608842ec3493f639748cddb0434797dda0040aa74f82536fbfa071a1d5a454fb06fd10a6e9a2cf9b250db9641ca0ec499c6550
   languageName: node
   linkType: hard
 
