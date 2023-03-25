@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ i18n Titles
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Display localized anime titles. (Currently support only Japanese.)
 // @description:ja  選択肢やドロップダウンに表示されているアニメのタイトルを日本語に置換します。
@@ -60,7 +60,7 @@ const executeXhr = async (request) => new Promise((resolve, reject) => {
 
 const fetchTitles = async () => {
     const { responseText } = await executeXhr({
-        url: 'https://raw.githubusercontent.com/SlashNephy/.github/master/env/userscript/bin/collect-mal-data/results/titles.json',
+        url: 'https://raw.githubusercontent.com/SlashNephy/.github/master/env/userscript/bin/collect-anime-data/dist/titles.json',
     });
     return JSON.parse(responseText);
 };
@@ -72,15 +72,15 @@ onReady(async () => {
     const titles = await fetchTitles();
     const { setName } = QuizMultipleChoiceAnswerOption.prototype;
     QuizMultipleChoiceAnswerOption.prototype.setName = function (name) {
-        setName.apply(this, [name]);
-        const english = localizeTitle(titles, name.english);
-        if (english) {
-            this.$text.text(english);
-            return;
-        }
-        const romaji = localizeTitle(titles, name.romaji);
-        if (romaji) {
-            this.$text.text(romaji);
+        setName.call(this, name);
+        const localized = localizeTitle(titles, name.english) ?? localizeTitle(titles, name.romaji);
+        if (localized) {
+            this.$text.text(localized);
         }
     };
+    AMQ_addScriptData({
+        name: 'i18n Titles',
+        author: 'SlashNephy &lt;spica@starry.blue&gt;',
+        description: 'Display localized anime titles. (Currently support only Japanese.)',
+    });
 });
