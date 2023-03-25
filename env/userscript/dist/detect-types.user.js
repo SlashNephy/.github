@@ -37,14 +37,13 @@ const getTypeString = (value) => {
         return `${types.at(0)}[]`;
     }
     switch (typeof value) {
-        case 'object':
-            {
-                const entries = Object.entries(value);
-                if (entries.length === 0) {
-                    return 'Record<string, unknown>';
-                }
-                return `{${entries.map(([k, v]) => `${escapeKey(k)}: ${getTypeString(v)}`).join(', ')}}`;
+        case 'object': {
+            const entries = Object.entries(value);
+            if (entries.length === 0) {
+                return 'Record<string, unknown>';
             }
+            return `{${entries.map(([k, v]) => `${escapeKey(k)}: ${getTypeString(v)}`).join(', ')}}`;
+        }
         case 'function':
             return 'Function';
         default:
