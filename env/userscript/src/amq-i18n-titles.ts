@@ -9,7 +9,7 @@ declare class QuizMultipleChoiceAnswerOption {
 
 const fetchTitles = async (): Promise<Record<string, string[]>> => {
   const { responseText } = await executeXhr({
-    url: 'https://raw.githubusercontent.com/SlashNephy/.github/master/env/userscript/bin/collect-mal-data/results/titles.json',
+    url: 'https://raw.githubusercontent.com/SlashNephy/.github/master/env/userscript/bin/collect-anime-data/dist/titles.json',
   })
 
   return JSON.parse(responseText)
@@ -26,18 +26,18 @@ onReady(async () => {
 
   const { setName } = QuizMultipleChoiceAnswerOption.prototype
   // eslint-disable-next-line func-names
-  QuizMultipleChoiceAnswerOption.prototype.setName = function (name: { english: string; romaji: string }) {
-    setName.apply(this, [name])
+  QuizMultipleChoiceAnswerOption.prototype.setName = function (name) {
+    setName.call(this, name)
 
-    const english = localizeTitle(titles, name.english)
-    if (english) {
-      this.$text.text(english)
-      return
-    }
-
-    const romaji = localizeTitle(titles, name.romaji)
-    if (romaji) {
-      this.$text.text(romaji)
+    const localized = localizeTitle(titles, name.english) ?? localizeTitle(titles, name.romaji)
+    if (localized) {
+      this.$text.text(localized)
     }
   }
+
+  AMQ_addScriptData({
+    name: 'i18n Titles',
+    author: 'SlashNephy &lt;spica@starry.blue&gt;',
+    description: 'Display localized anime titles. (Currently support only Japanese.)',
+  })
 })

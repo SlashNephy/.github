@@ -350,7 +350,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-i18n-titles',
     name: 'AMQ i18n Titles',
-    version: '0.1.0',
+    version: '0.1.1',
     description: {
       en: 'Display localized anime titles. (Currently support only Japanese.)',
       ja: '選択肢やドロップダウンに表示されているアニメのタイトルを日本語に置換します。',
