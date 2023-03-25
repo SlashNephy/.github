@@ -366,6 +366,19 @@ export const banners: Banner[] = [
       'https://cdn.jsdelivr.net/gh/TheJoseph98/AMQ-Scripts@b97377730c4e8553d2dcdda7fba00f6e83d5a18a/common/amqScriptInfo.js',
     ],
   },
+  {
+    id: 'detect-types',
+    name: 'Detect Types',
+    version: '0.1.0',
+    description: {
+      en: 'Register a function to generate runtime window type definitions.',
+      ja: 'window の型定義を生成する関数を登録します。',
+    },
+    homepage: 'https://scrapbox.io/slashnephy',
+    author: 'SlashNephy',
+    match: 'https://*/*',
+    grant: 'unsafeWindow',
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
