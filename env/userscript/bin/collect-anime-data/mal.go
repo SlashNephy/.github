@@ -13,86 +13,45 @@ import (
 	"time"
 )
 
-func main() {
-	ctx := context.Background()
-	client := http.DefaultClient
+type MALClient struct {
+	client   *http.Client
+	cacheDir string
+}
 
-	homeDir, err := os.UserHomeDir()
-	if err != nil {
-		panic(err)
-	}
-
-	outDir := homeDir + "/.github/env/userscript/bin/collect-mal-data/results"
-
-	entries, err := fetchAllAnimeEntries(ctx, client, outDir)
-	if err != nil {
-		panic(err)
-	}
-
-	titles := map[string][]string{}
-	for _, entry := range entries {
-		for _, anime := range entry.Data {
-			var (
-				japaneseTitles    []string
-				nonJapaneseTitles []string
-			)
-			for _, title := range anime.Titles {
-				if title.Type == "Japanese" {
-					japaneseTitles = append(japaneseTitles, title.Title)
-				} else {
-					nonJapaneseTitles = append(nonJapaneseTitles, title.Title)
-				}
-			}
-
-			if len(japaneseTitles) == 0 {
-				continue
-			}
-
-			// trim duplicates
-			japaneseTitles = removeDuplicate(japaneseTitles)
-			nonJapaneseTitles = removeDuplicate(nonJapaneseTitles)
-
-			for _, title := range nonJapaneseTitles {
-				if len(japaneseTitles) == 1 && title == japaneseTitles[0] {
-					continue
-				}
-
-				titles[title] = japaneseTitles
-			}
-		}
-	}
-
-	content, err := json.Marshal(titles)
-	if err != nil {
-		panic(err)
-	}
-
-	if err = os.WriteFile(outDir+"/titles.json", content, 0644); err != nil {
-		panic(err)
+func NewMalClient(client *http.Client, cacheDir string) *MALClient {
+	return &MALClient{
+		client:   client,
+		cacheDir: cacheDir,
 	}
 }
 
-func removeDuplicate(slice []string) []string {
-	keys := map[string]bool{}
-	var result []string
-	for _, item := range slice {
-		if _, value := keys[item]; !value {
-			keys[item] = true
-			result = append(result, item)
-		}
-	}
-
-	return result
-}
-
-func fetchAllAnimeEntries(ctx context.Context, client *http.Client, outDir string) ([]*AnimeEntry, error) {
-	var results []*AnimeEntry
+func (c *MALClient) Fetch(ctx context.Context) ([]*MALAnimeEntry, error) {
+	var results []*MALAnimeEntry
 	page := 1
 
 	for {
-		result, isLast, err := fetchAnimeEntryGracefully(ctx, client, outDir, page)
+		result, isLast, err := c.loadCache(page)
 		if err != nil {
 			return nil, err
+		}
+
+		if result == nil {
+			result, err = c.fetchWithPage(ctx, page)
+			if err != nil {
+				if errors.Is(err, errRateLimited) {
+					time.Sleep(2 * time.Second)
+					continue
+				}
+
+				return nil, err
+			}
+
+			if err = c.saveCache(page, result); err != nil {
+				return nil, err
+			}
+
+			isLast = !result.Pagination.HasNextPage
+			fmt.Printf("[page = %d] fetched %d items\n", page, result.Pagination.Items.Count)
 		}
 
 		results = append(results, result)
@@ -110,50 +69,89 @@ func fetchAllAnimeEntries(ctx context.Context, client *http.Client, outDir strin
 	return results, nil
 }
 
-func fetchAnimeEntryGracefully(ctx context.Context, client *http.Client, outDir string, page int) (*AnimeEntry, bool, error) {
-	resultPath := fmt.Sprintf("%s/anime-%d.json", outDir, page)
-	if _, err := os.Stat(resultPath); err == nil {
-		fmt.Printf("[page = %d] %s exists, skipping\n", page, resultPath)
+func (c *MALClient) loadCache(page int) (*MALAnimeEntry, bool, error) {
+	cachePath := fmt.Sprintf("%s/mal-%d.json", c.cacheDir, page)
 
-		file, err := os.ReadFile(resultPath)
-		if err != nil {
-			return nil, false, err
-		}
-
-		var result AnimeEntry
-		if err = json.Unmarshal(file, &result); err != nil {
-			return nil, false, err
-		}
-
-		return &result, !result.Pagination.HasNextPage, nil
+	// cache not found
+	if _, err := os.Stat(cachePath); err != nil {
+		return nil, false, nil
 	}
 
-	result, err := fetchAnimeEntry(ctx, client, page)
-	if err != nil {
-		if errors.Is(err, errRateLimited) {
-			time.Sleep(2 * time.Second)
-			return fetchAnimeEntryGracefully(ctx, client, outDir, page)
-		}
+	fmt.Printf("[page = %d] %s exists, skipping\n", page, cachePath)
 
-		return nil, false, err
-	}
-
-	data, err := json.Marshal(result)
+	file, err := os.ReadFile(cachePath)
 	if err != nil {
 		return nil, false, err
 	}
 
-	if err = os.WriteFile(resultPath, data, 0644); err != nil {
+	var result MALAnimeEntry
+	if err = json.Unmarshal(file, &result); err != nil {
 		return nil, false, err
 	}
 
-	fmt.Printf("[page = %d] fetched %d items\n", page, result.Pagination.Items.Count)
-	return result, !result.Pagination.HasNextPage, nil
+	return &result, !result.Pagination.HasNextPage, nil
 }
 
-var errRateLimited = errors.New("rate limited")
+func (c *MALClient) saveCache(page int, result *MALAnimeEntry) error {
+	data, err := json.Marshal(result)
+	if err != nil {
+		return err
+	}
 
-type AnimeEntry struct {
+	cachePath := fmt.Sprintf("%s/mal-%d.json", c.cacheDir, page)
+	if err = os.WriteFile(cachePath, data, 0644); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (c *MALClient) fetchWithPage(ctx context.Context, page int) (*MALAnimeEntry, error) {
+	requestURL, err := url.Parse("https://api.jikan.moe/v4/anime")
+	if err != nil {
+		return nil, err
+	}
+
+	query := requestURL.Query()
+	query.Set("page", strconv.Itoa(page))
+	query.Set("limit", "25")
+	query.Set("order_by", "mal_id")
+	requestURL.RawQuery = query.Encode()
+
+	request, err := http.NewRequestWithContext(ctx, http.MethodGet, requestURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	request.Header.Set("Accept", "application/json")
+	request.Header.Set("User-Agent", "collect-anime-data (+https://github.com/SlashNephy/.github)")
+
+	response, err := c.client.Do(request)
+	if err != nil {
+		return nil, err
+	}
+	if response.StatusCode == http.StatusTooManyRequests {
+		return nil, errRateLimited
+	}
+
+	defer func(body io.ReadCloser) {
+		_ = body.Close()
+	}(response.Body)
+
+	body, err := io.ReadAll(response.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	var entry MALAnimeEntry
+	if err = json.Unmarshal(body, &entry); err != nil {
+		return nil, err
+	}
+
+	return &entry, nil
+}
+
+type MALAnimeEntry struct {
 	Data []struct {
 		MalId  int    `json:"mal_id"`
 		Url    string `json:"url"`
@@ -275,49 +273,4 @@ type AnimeEntry struct {
 			PerPage int `json:"per_page"`
 		} `json:"items"`
 	} `json:"pagination"`
-}
-
-func fetchAnimeEntry(ctx context.Context, client *http.Client, page int) (*AnimeEntry, error) {
-	requestURL, err := url.Parse("https://api.jikan.moe/v4/anime")
-	if err != nil {
-		return nil, err
-	}
-
-	query := requestURL.Query()
-	query.Set("page", strconv.Itoa(page))
-	query.Set("limit", "25")
-	query.Set("order_by", "mal_id")
-	requestURL.RawQuery = query.Encode()
-
-	request, err := http.NewRequestWithContext(ctx, http.MethodGet, requestURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	request.Header.Set("Accept", "application/json")
-	request.Header.Set("User-Agent", "collect-titles (+https://github.com/SlashNephy/.github)")
-
-	response, err := client.Do(request)
-	if err != nil {
-		return nil, err
-	}
-	if response.StatusCode == http.StatusTooManyRequests {
-		return nil, errRateLimited
-	}
-
-	defer func(body io.ReadCloser) {
-		_ = body.Close()
-	}(response.Body)
-
-	body, err := io.ReadAll(response.Body)
-	if err != nil {
-		return nil, err
-	}
-
-	var entry AnimeEntry
-	if err = json.Unmarshal(body, &entry); err != nil {
-		return nil, err
-	}
-
-	return &entry, nil
 }

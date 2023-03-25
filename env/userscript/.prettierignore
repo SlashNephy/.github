@@ -1,4 +1,5 @@
 .yarn/
 dist/
 rollup.config-*.mjs
-bin/collect-mal-data/results/
+bin/collect-anime-data/cache/
+bin/collect-anime-data/main.go
