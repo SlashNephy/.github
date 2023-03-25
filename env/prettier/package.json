@@ -32,12 +32,12 @@
     "prettier": "^2"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.4.3",
-    "@types/node": "18.15.6",
+    "@slashnephy/eslint-config": "0.4.5",
+    "@types/node": "18.15.9",
     "@types/prettier": "2.7.2",
     "concurrently": "7.6.0",
     "eslint": "8.36.0",
-    "prettier": "2.8.6",
+    "prettier": "2.8.7",
     "ts-node": "10.9.1",
     "typescript": "5.0.2"
   },

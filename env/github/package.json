@@ -24,12 +24,12 @@
     "zod": "3.21.4"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.4.3",
+    "@slashnephy/eslint-config": "0.4.5",
     "@slashnephy/prettier-config": "0.1.16",
-    "@types/node": "18.15.6",
+    "@types/node": "18.15.9",
     "concurrently": "7.6.0",
     "eslint": "8.36.0",
-    "prettier": "2.8.6",
+    "prettier": "2.8.7",
     "ts-node": "10.9.1",
     "typescript": "5.0.2"
   },
