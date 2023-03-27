@@ -27,7 +27,7 @@ jobs:
     uses: ./.github/workflows/go-push.yml
     with:
       working-directory: 'env/userscript/bin/collect-anime-data'
-      command: 'BASE_DIR=env/userscript/bin/collect-anime-data go run ./'
+      command: 'BASE_DIR=. go run ./'
       commit-message: '⚙️ Build (env/userscript/bin/collect-anime-data)'
     permissions:
       contents: 'write'
