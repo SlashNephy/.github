@@ -1,21 +1,21 @@
-name: 'yarn push'
+name: 'go push'
 
 on:
   workflow_call:
     inputs:
-      node-version:
-        required: false
-        type: string
-        default: '18'
-      node-version-file:
-        required: false
-        type: string
-        default: ''
       working-directory:
         required: false
         type: string
         default: '.'
-      pre-script:
+      pre-task:
+        required: false
+        type: string
+        default: ''
+      task:
+        required: false
+        type: string
+        default: ''
+      post-task:
         required: false
         type: string
         default: ''
@@ -23,18 +23,15 @@ on:
         required: false
         type: string
         default: ''
-      script:
-        required: true
-        type: string
       command:
         required: false
         type: string
         default: ''
-      post-script:
+      post-command:
         required: false
         type: string
         default: ''
-      post-command:
+      env:
         required: false
         type: string
         default: ''
@@ -43,60 +40,51 @@ on:
         type: string
 
 permissions:
-  contents: 'write'
+  contents: write
 
 jobs:
-  push:
+  run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node (via node-version-file)
-        if: inputs.node-version-file != ''
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '${{ inputs.node-version-file }}'
-          cache: 'yarn'
-          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
-      - name: Setup Node (via node-version)
-        if: inputs.node-version-file == ''
-        uses: actions/setup-node@v3
-        with:
-          node-version: '${{ inputs.node-version }}'
-          cache: 'yarn'
-          cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
-
-      - name: Install
+      - name: Setup .env
+        if: inputs.env != ''
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn install --immutable'
+        run: 'echo "${{ inputs.env }}" > .env'
 
-      - name: Run Pre-Script
-        if: inputs.pre-script != ''
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version-file: '${{ inputs.working-directory }}/go.mod'
+          cache: true
+          cache-dependency-path: '${{ inputs.working-directory }}/go.sum'
+
+      - name: Run Pre-Task
+        if: inputs.pre-task != ''
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn ${{ inputs.pre-script }}'
+        run: 'go ${{ inputs.pre-task }}'
 
       - name: Run Pre-Command
         if: inputs.pre-command != ''
         working-directory: '${{ inputs.working-directory }}'
         run: '${{ inputs.pre-command }}'
 
-      - name: Run Script
-        if: inputs.script != ''
+      - name: Run Task
+        if: inputs.task != ''
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn ${{ inputs.script }}'
+        run: 'go ${{ inputs.task }}'
 
       - name: Run Command
         if: inputs.command != ''
         working-directory: '${{ inputs.working-directory }}'
         run: '${{ inputs.command }}'
 
-      - name: Run Post-Script
-        if: inputs.post-script != ''
+      - name: Run Post-Task
+        if: inputs.post-task != ''
         working-directory: '${{ inputs.working-directory }}'
-        run: 'yarn ${{ inputs.post-script }}'
+        run: 'go ${{ inputs.post-task }}'
 
       - name: Run Post-Command
         if: inputs.post-command != ''

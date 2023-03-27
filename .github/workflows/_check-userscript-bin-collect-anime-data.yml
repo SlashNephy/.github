@@ -1,0 +1,33 @@
+name: 'Check env/userscript/bin/collect-anime-data'
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'env/userscript/bin/collect-anime-data/**'
+      - '.github/workflows/_check-userscript-bin-collect-anime-data.yml'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    paths:
+      - 'env/userscript/bin/collect-anime-data/**'
+      - '.github/workflows/_check-userscript-bin-collect-anime-data.yml'
+
+  schedule:
+    - cron: '0 * * * *'
+
+  workflow_dispatch:
+
+jobs:
+  update:
+    if: github.event_name != 'pull_request'
+    uses: ./.github/workflows/go-push.yml
+    with:
+      working-directory: 'env/userscript/bin/collect-anime-data'
+      task: 'run ./'
+      commit-message: '⚙️ Build (env/userscript/bin/collect-anime-data)'
+    permissions:
+      contents: 'write'
