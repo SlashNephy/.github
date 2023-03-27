@@ -52,6 +52,11 @@ func main() {
 }
 
 func getBaseDir() (string, error) {
+	baseDir, ok := os.LookupEnv("BASE_DIR")
+	if ok {
+		return baseDir, nil
+	}
+
 	homeDir, err := os.UserHomeDir()
 	if err != nil {
 		return "", err
