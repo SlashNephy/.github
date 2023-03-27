@@ -45,8 +45,6 @@ brew "node"
 brew "aws-cdk"
 # Official Amazon AWS command-line interface
 brew "awscli"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # Simple command-line tool to read AWS CloudWatch logs
 brew "awslogs"
 # Programmable completion for Bash 3.2
@@ -127,8 +125,6 @@ brew "gnu-tar"
 brew "gnu-which"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Development kit for the Java programming language
-brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # GNU grep, egrep and fgrep
@@ -147,6 +143,8 @@ brew "hadolint"
 brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Tools and libraries to manipulate images in many formats
@@ -205,6 +203,8 @@ brew "nss"
 brew "nvm"
 # Reverse proxy for authenticating users via OAuth 2 providers
 brew "oauth2_proxy"
+# Development kit for the Java programming language
+brew "openjdk"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Command-line tool to generate, analyze, convert and manipulate colors
