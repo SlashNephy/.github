@@ -2437,7 +2437,7 @@ __metadata:
     eslint: 8.36.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.7
-    renovate: 35.24.2
+    renovate: 35.24.3
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -8752,9 +8752,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.24.2":
-  version: 35.24.2
-  resolution: "renovate@npm:35.24.2"
+"renovate@npm:35.24.3":
+  version: 35.24.3
+  resolution: "renovate@npm:35.24.3"
   dependencies:
     "@aws-sdk/client-codecommit": 3.290.0
     "@aws-sdk/client-ec2": 3.291.0
@@ -8860,7 +8860,7 @@ __metadata:
     url-join: 4.0.1
     validate-npm-package-name: 5.0.0
     vuln-vects: 1.1.0
-    xmldoc: 1.2.0
+    xmldoc: 1.3.0
     zod: 3.21.4
   dependenciesMeta:
     re2:
@@ -8868,7 +8868,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 0593e3c3edd4b2a6218efa123c3580cbb51c56308c936275ca975f3da1085335b454c3f07b8a161d82faae563ba8fd013b41ab153eacdc4e7baba2ea85dfa4cb
+  checksum: fdd54dee45550a14b96b0c48fa85513a7f30504e250e69ada387ea0c7cb61b26400dd02d162ca303de66dd380003624790e89eddf5910be5c4b9afc47e11b607
   languageName: node
   linkType: hard
 
@@ -10470,12 +10470,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmldoc@npm:1.2.0":
-  version: 1.2.0
-  resolution: "xmldoc@npm:1.2.0"
+"xmldoc@npm:1.3.0":
+  version: 1.3.0
+  resolution: "xmldoc@npm:1.3.0"
   dependencies:
     sax: ^1.2.4
-  checksum: df42d06cf42bad47189f0d11d402de8da42652f1d96ee20586f906a3db72c6a0efbabc04d1a97cec7fe235fde55ff7e601c9dc4fdf31b9ef3ce30bd7836b4b08
+  checksum: 06354246b6912cf63978e78acd5dee5f8d3069547b89a210a4111747d226c82a475c2062a73f1cdb34191a8b2a8fb57a11948f45ffd5c1effa8bbcf34691b2d2
   languageName: node
   linkType: hard
 
