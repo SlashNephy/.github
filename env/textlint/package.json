@@ -41,7 +41,7 @@
     "@slashnephy/prettier-config": "0.1.16",
     "@textlint/types": "13.3.2",
     "@types/node": "18.15.11",
-    "concurrently": "7.6.0",
+    "concurrently": "8.0.0",
     "eslint": "8.37.0",
     "prettier": "2.8.7",
     "typescript": "5.0.2"
