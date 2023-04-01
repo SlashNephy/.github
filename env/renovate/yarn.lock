@@ -2312,9 +2312,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/osv-offline@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@renovatebot/osv-offline@npm:1.2.3"
+"@renovatebot/osv-offline@npm:1.2.4":
+  version: 1.2.4
+  resolution: "@renovatebot/osv-offline@npm:1.2.4"
   dependencies:
     "@octokit/rest": ^19.0.7
     "@renovatebot/osv-offline-db": 1.3.2
@@ -2322,7 +2322,8 @@ __metadata:
     fs-extra: ^11.1.1
     got: ^11.8.6
     luxon: ^3.3.0
-  checksum: 1c7c91a9ed9f29386ded068654170d5a2d41d95dbddcb10cc0af6e9ad69e5b8a4f0ceca8bb8cbb36fa34f115f2c4db15717b51b3746c22381e436cd0aa4eb1b5
+    node-fetch: ^2.6.9
+  checksum: 637f21848186d853de3a0709c791faecca33991618b217033bb7df98cdf4493681de58f17afc82fe5e937fdaefd9f5f6d59ec418c612699e1f404ce6fb319c60
   languageName: node
   linkType: hard
 
@@ -2437,7 +2438,7 @@ __metadata:
     eslint: 8.37.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.7
-    renovate: 35.31.0
+    renovate: 35.31.1
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -7825,6 +7826,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-fetch@npm:^2.6.9":
+  version: 2.6.9
+  resolution: "node-fetch@npm:2.6.9"
+  dependencies:
+    whatwg-url: ^5.0.0
+  peerDependencies:
+    encoding: ^0.1.0
+  peerDependenciesMeta:
+    encoding:
+      optional: true
+  checksum: acb04f9ce7224965b2b59e71b33c639794d8991efd73855b0b250921382b38331ffc9d61bce502571f6cc6e11a8905ca9b1b6d4aeb586ab093e2756a1fd190d0
+  languageName: node
+  linkType: hard
+
 "node-gyp@npm:^9.3.0":
   version: 9.3.0
   resolution: "node-gyp@npm:9.3.0"
@@ -8804,9 +8819,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.31.0":
-  version: 35.31.0
-  resolution: "renovate@npm:35.31.0"
+"renovate@npm:35.31.1":
+  version: 35.31.1
+  resolution: "renovate@npm:35.31.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.290.0
     "@aws-sdk/client-ec2": 3.291.0
@@ -8828,7 +8843,7 @@ __metadata:
     "@opentelemetry/sdk-trace-node": 1.10.1
     "@opentelemetry/semantic-conventions": 1.10.1
     "@qnighy/marshal": 0.1.3
-    "@renovatebot/osv-offline": 1.2.3
+    "@renovatebot/osv-offline": 1.2.4
     "@renovatebot/pep440": 2.1.13
     "@renovatebot/ruby-semver": 2.1.10
     "@sindresorhus/is": 4.6.0
@@ -8920,7 +8935,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: e3c556e5d9ce5e4532959269852d740c1a82bf302075fa70338bd301f31e5bc7e7934b7e96b65788ea9eb7d1acb8688af204d9602e94fb89ed2299b2644db1ed
+  checksum: cbc701a38ca46f8bae63c547895772f743551d0d7fc4c16a4d4d48c7f0a012689f17e92ca2512fcb3272e6d0f309a2b441724e118ea1e5cf71dcdcdd159887b1
   languageName: node
   linkType: hard
 
