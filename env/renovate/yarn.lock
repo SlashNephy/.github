@@ -2438,7 +2438,7 @@ __metadata:
     eslint: 8.37.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.7
-    renovate: 35.31.2
+    renovate: 35.31.4
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -7766,7 +7766,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:3.3.4, nanoid@npm:^3.3.4":
+"nanoid@npm:3.3.6":
+  version: 3.3.6
+  resolution: "nanoid@npm:3.3.6"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 7d0eda657002738aa5206107bd0580aead6c95c460ef1bdd0b1a87a9c7ae6277ac2e9b945306aaa5b32c6dcb7feaf462d0f552e7f8b5718abfc6ead5c94a71b3
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.3.4":
   version: 3.3.4
   resolution: "nanoid@npm:3.3.4"
   bin:
@@ -8819,9 +8828,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.31.2":
-  version: 35.31.2
-  resolution: "renovate@npm:35.31.2"
+"renovate@npm:35.31.4":
+  version: 35.31.4
+  resolution: "renovate@npm:35.31.4"
   dependencies:
     "@aws-sdk/client-codecommit": 3.290.0
     "@aws-sdk/client-ec2": 3.291.0
@@ -8899,7 +8908,7 @@ __metadata:
     minimatch: 5.1.6
     moo: 0.5.2
     ms: 2.1.3
-    nanoid: 3.3.4
+    nanoid: 3.3.6
     node-html-parser: 6.1.5
     openpgp: 5.7.0
     p-all: 3.0.0
@@ -8919,7 +8928,7 @@ __metadata:
     semver-utils: 1.1.4
     shlex: 2.1.2
     simple-git: 3.17.0
-    slugify: 1.6.5
+    slugify: 1.6.6
     source-map-support: 0.5.21
     traverse: 0.6.7
     tslib: 2.5.0
@@ -8935,7 +8944,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 45ebf5f24752b09e5ef2e8e20a9f39a0191089a6bd7ebe8d5330b5472718449b437e138e2fd97940b913cd73ed39fc45e20be8cace93d6b593f344a45f45eed3
+  checksum: 0b4c762e877a9991a5bb0ac45b4fd2f5b91ccc8d9c753eab90baf459eb329f0a979fdee972d358e872913fe5b38f6a6a065e52f643971668e35bb0548f11a8c2
   languageName: node
   linkType: hard
 
@@ -9397,10 +9406,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slugify@npm:1.6.5":
-  version: 1.6.5
-  resolution: "slugify@npm:1.6.5"
-  checksum: a955a1b600201030f4c1daa9bb74a17d4402a0693fc40978bbd17e44e64fd72dad3bac4037422aa8aed55b5170edd57f3f4cd8f59ba331f5cf0f10f1a7795609
+"slugify@npm:1.6.6":
+  version: 1.6.6
+  resolution: "slugify@npm:1.6.6"
+  checksum: 04773c2d3b7aea8d2a61fa47cc7e5d29ce04e1a96cbaec409da57139df906acb3a449fac30b167d203212c806e73690abd4ff94fbad0a9a7b7ea109a2a638ae9
   languageName: node
   linkType: hard
 
