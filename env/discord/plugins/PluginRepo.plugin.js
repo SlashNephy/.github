@@ -2,7 +2,7 @@
  * @name PluginRepo
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.4.6
+ * @version 2.5.0
  * @description Allows you to download all Plugins from BD's Website within Discord
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -484,7 +484,7 @@ module.exports = (_ => {
 														this.props.downloading = true;
 														let loadingToast = BDFDB.NotificationUtils.toast(`${BDFDB.LanguageUtils.LibraryStringsFormat("loading", this.props.data.name)} - ${BDFDB.LanguageUtils.LibraryStrings.please_wait}`, {timeout: 0, ellipsis: true});
 														let autoloadKey = this.props.data.state == pluginStates.OUTDATED ? "startUpdated" : "startDownloaded";
-														BDFDB.DiscordUtils.requestFileData(this.props.data.rawSourceUrl, {timeout: 10000}, (error, buffer) => {
+														BDFDB.DiscordUtils.requestFileData(this.props.data.rawSourceUrl, (error, buffer) => {
 															if (error || !buffer) {
 																delete this.props.downloading;
 																loadingToast.close();
@@ -636,13 +636,15 @@ module.exports = (_ => {
 			onUserSettingsCogContextMenu (e) {
 				BDFDB.TimeUtils.timeout(_ => {
 					let [children, index] = BDFDB.ReactUtils.findParent(e.returnvalue, {props: [["label", ["BandagedBD", "BetterDiscord"]]]});
-					if (index > -1 && BDFDB.ArrayUtils.is(children[index].props.children)) children[index].props.children.push(BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
-						label: "Plugin Repo",
-						id: BDFDB.ContextMenuUtils.createItemId(this.name, "repo"),
-						action: _ => {
-							BDFDB.LibraryModules.UserSettingsUtils.open("pluginrepo");
-						}
-					}));
+					if (index > -1 && BDFDB.ArrayUtils.is(children[index].props.children)) {
+						let item = BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
+							label: "Plugin Repo",
+							id: BDFDB.ContextMenuUtils.createItemId(this.name, "repo"),
+							action: _ => BDFDB.LibraryModules.UserSettingsUtils.open("pluginrepo")
+						});
+						if (children[index].props.children.find(n => n && n.props && n.props.id == "themerepo-repo")) children[index].props.children.splice(children[index].props.children.length-1, 0, item);
+						else children[index].props.children.push(item);
+					}
 				});
 			}
 			
@@ -754,7 +756,7 @@ module.exports = (_ => {
 						delete plugin.release_date;
 						delete plugin.latest_source_url;
 						delete plugin.thumbnail_url;
-						BDFDB.DiscordUtils.requestFileData(plugin.rawSourceUrl, {timeout: 10000}, (error, buffer) => {
+						BDFDB.DiscordUtils.requestFileData(plugin.rawSourceUrl, (error, buffer) => {
 							if (error || !buffer) plugin.failed = true;
 							else {
 								let body = Buffer.from(buffer).toString();
@@ -839,10 +841,10 @@ module.exports = (_ => {
 			getInstalledPlugin (plugin) {
 				if (!plugin || typeof plugin.authorname != "string") return;
 				const iPlugin = BDFDB.BDUtils.getPlugin(plugin.name, false, true);
-				if (iPlugin && plugin.authorname.toUpperCase() == this.getString(iPlugin.author).toUpperCase()) return iPlugin;
+				if (iPlugin && (plugin.authorname.toUpperCase().indexOf(this.getString(iPlugin.author).toUpperCase()) > -1 || this.getString(iPlugin.author).toUpperCase().indexOf(plugin.authorname.toUpperCase()) > -1)) return iPlugin;
 				else if (plugin.rawSourceUrl && window.BdApi && BdApi.Plugins && typeof BdApi.Plugins.getAll == "function") {
 					const filename = plugin.rawSourceUrl.split("/").pop();
-					for (let p of BdApi.Plugins.getAll()) if (p.filename == filename && plugin.authorname.toUpperCase() == this.getString(p.author).toUpperCase()) return p;
+					for (let p of BdApi.Plugins.getAll()) if (p.filename == filename && (plugin.authorname.toUpperCase().indexOf(this.getString(p.author).toUpperCase()) > -1 || this.getString(p.author).toUpperCase().indexOf(plugin.authorname.toUpperCase()) > -1)) return p;
 				}
 			}
 
@@ -884,9 +886,9 @@ module.exports = (_ => {
 					case "el":		// Greek
 						return {
 							list:								"Λίστα",
-							notice_failed_plugins:				"Δεν ήταν δυνατή η φόρτωση ορισμένων Plugins [{{var0}}] ",
-							notice_new_plugins:					"Προστέθηκαν νέα Plugins [{{var0}}] στο Plugin Repo",
-							notice_outdated_plugins:			"Ορισμένα Plugins [{{var0}}] είναι παλιά"
+							notice_failed_plugins:				"Δεν ήταν δυνατή η φόρτωση ορισμένων Πρόσθετων [{{var0}}] ",
+							notice_new_plugins:					"Προστέθηκαν νέα Πρόσθετα [{{var0}}] στο Αποθετήριο Προσθέτων",
+							notice_outdated_plugins:			"Ορισμένα Πρόσθετα [{{var0}}] είναι παλαιά"
 						};
 					case "es":		// Spanish
 						return {
