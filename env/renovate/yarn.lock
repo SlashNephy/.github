@@ -2438,7 +2438,7 @@ __metadata:
     eslint: 8.38.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.7
-    renovate: 35.40.1
+    renovate: 35.40.3
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -6240,10 +6240,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graph-data-structure@npm:3.2.0":
-  version: 3.2.0
-  resolution: "graph-data-structure@npm:3.2.0"
-  checksum: 0312e7854eba1679cb42a0696bbf9686c3f80618975828edd3c5aed2b69987dcd4cfa549db0cada63e57c798a714b2322f596a42dcf5b228946897863a1740cd
+"graph-data-structure@npm:3.3.0":
+  version: 3.3.0
+  resolution: "graph-data-structure@npm:3.3.0"
+  checksum: b6721b7a53a673c1d839427b2336ab6ef85db582cf8ed2099e2a7ab3650a6d64530d502f06fa3fd0cbd2e19412ba6043650411e89d0e817b64490e224c2c5e15
   languageName: node
   linkType: hard
 
@@ -8858,9 +8858,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.40.1":
-  version: 35.40.1
-  resolution: "renovate@npm:35.40.1"
+"renovate@npm:35.40.3":
+  version: 35.40.3
+  resolution: "renovate@npm:35.40.3"
   dependencies:
     "@aws-sdk/client-codecommit": 3.290.0
     "@aws-sdk/client-ec2": 3.291.0
@@ -8922,7 +8922,7 @@ __metadata:
     global-agent: 3.0.0
     good-enough-parser: 1.1.22
     got: 11.8.6
-    graph-data-structure: 3.2.0
+    graph-data-structure: 3.3.0
     handlebars: 4.7.7
     hasha: 5.2.2
     hcl2-parser: 1.0.3
@@ -8974,7 +8974,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: bba01a28666ee3b5377e6931c87c19293323b495d5021a351c7f0ffa55a6697de88e47faa5c40e1c632ea418e02d3787d0ba74487f66cef778e2bf2a710284f2
+  checksum: 645f75388d633722038f2b3eb777d81223bed2c7684a29f5a308a14aafd4a762a189f7b163201d06004a8fec5ef02b9314512a18d3282496386352d094e78a1a
   languageName: node
   linkType: hard
 
