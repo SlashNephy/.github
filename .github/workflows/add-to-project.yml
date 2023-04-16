@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add to Project
-        uses: actions/add-to-project@v0.4.1
+        uses: actions/add-to-project@v0.5.0
         with:
           project-url: 'https://github.com/users/SlashNephy/projects/1'
           github-token: '${{ secrets.PROJECT_GITHUB_TOKEN }}'
