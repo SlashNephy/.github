@@ -27,6 +27,17 @@ const listOrgRepos = async (org: string): Promise<[string, string][]> => {
     .map((repo) => repo.full_name.split('/') as [string, string])
 }
 
+export const listOwnerRepos = async (): Promise<[string, string][]> => {
+  const repos = await octokit.paginate(octokit.repos.listForAuthenticatedUser, {
+    affiliation: 'owner',
+    per_page: 100,
+  })
+
+  return repos
+    .filter((repo) => repo.archived === false && !repo.fork)
+    .map((repo) => repo.full_name.split('/') as [string, string])
+}
+
 const listUserRepos = async (username: string): Promise<[string, string][]> => {
   const repos = await octokit.paginate(octokit.repos.listForUser, {
     username,
@@ -45,7 +56,7 @@ const main = async () => {
 
   const repos = await Promise.all([
     listOrgRepos('StarryBlueSky'),
-    listUserRepos('SlashNephy'),
+    listOwnerRepos(),
   ]).then((result) => result.flat())
 
   const promises = repos.map(async ([owner, repo]) => {
