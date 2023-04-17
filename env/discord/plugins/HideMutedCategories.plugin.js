@@ -2,7 +2,7 @@
  * @name HideMutedCategories
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.1.1
+ * @version 1.1.2
  * @description Hides muted Categories, if muted Channels are hidden
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -14,7 +14,7 @@
 
 module.exports = (_ => {
 	const changeLog = {
-		
+
 	};
 
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
@@ -23,14 +23,14 @@ module.exports = (_ => {
 		getAuthor () {return this.author;}
 		getVersion () {return this.version;}
 		getDescription () {return `The Library Plugin needed for ${this.name} is missing. Open the Plugin Settings to download it. \n\n${this.description}`;}
-		
+
 		downloadLibrary () {
 			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
 				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Finished downloading BDFDB Library", {type: "success"}));
 				else BdApi.alert("Error", "Could not download BDFDB Library Plugin. Try again later or download it manually from GitHub: https://mwittrien.github.io/downloader/?library");
 			});
 		}
-		
+
 		load () {
 			if (!window.BDFDB_Global || !Array.isArray(window.BDFDB_Global.pluginQueue)) window.BDFDB_Global = Object.assign({}, window.BDFDB_Global, {pluginQueue: []});
 			if (!window.BDFDB_Global.downloadModal) {
@@ -62,7 +62,7 @@ module.exports = (_ => {
 			WOULD_SHOW_IF_UNCOLLAPSED: 3,
 			SHOW: 4
 		};
-		
+
 		return class HideMutedCategories extends Plugin {
 			onLoad () {
 				this.modulePatches = {
@@ -73,21 +73,21 @@ module.exports = (_ => {
 						"ChannelsList"
 					]
 				};
-				
+
 				this.patchPriority = 9;
 			}
-			
+
 			onStart () {
-				BDFDB.PatchUtils.forceAllUpdates(this);
+				BDFDB.ChannelUtils.rerenderAll();
 			}
-			
+
 			onStop () {
-				BDFDB.PatchUtils.forceAllUpdates(this);
+				BDFDB.ChannelUtils.rerenderAll();
 			}
 
 			processChannelsList (e) {
 				if (!e.instance.props.guild || !e.instance.props.guildChannels.hideMutedChannels) return;
-				
+
 				if (!e.returnvalue) {
 					e.instance.props.guildChannels.categories = Object.assign({}, e.instance.props.guildChannels.categories);
 					for (let id in e.instance.props.guildChannels.categories) if (e.instance.props.guildChannels.categories[id].isMuted) {
@@ -135,7 +135,7 @@ module.exports = (_ => {
 					}, "Error in Child Render of ChannelsList!", this);
 				}
 			}
-			
+
 			isCategoryMuted (guildId, channelId) {
 				if (!guildId || !channelId) return false;
 				let channel = BDFDB.LibraryStores.ChannelStore.getChannel(channelId);

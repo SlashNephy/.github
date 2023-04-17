@@ -450,6 +450,8 @@ cask "mysqlworkbench"
 cask "ngrok"
 # Client-side GUI application for modern database development and operations
 cask "nosql-workbench"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Monitors computer mic and webcam
