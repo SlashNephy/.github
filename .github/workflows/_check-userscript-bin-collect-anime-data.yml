@@ -42,6 +42,7 @@ jobs:
 
       - name: Generate
         run: BASE_DIR=. go run ./
+        working-directory: 'env/userscript/bin/collect-anime-data'
 
       - name: Pull
         run: git pull
