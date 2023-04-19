@@ -335,6 +335,7 @@ cask "anaconda"
 cask "android-file-transfer"
 # Android SDK component
 cask "android-platform-tools"
+# Tools for the Android SDK
 cask "android-sdk"
 # Inspect application bundles
 cask "apparency"
@@ -391,6 +392,8 @@ cask "ghidra"
 cask "gimp"
 # Desktop client for GitHub repositories
 cask "github"
+# App that shows GitHub notifications on the desktop
+cask "gitify"
 # Web browser
 cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud

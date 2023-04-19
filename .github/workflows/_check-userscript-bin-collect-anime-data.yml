@@ -24,10 +24,29 @@ on:
 jobs:
   update:
     if: github.event_name != 'pull_request'
-    uses: ./.github/workflows/go-push.yml
-    with:
-      working-directory: 'env/userscript/bin/collect-anime-data'
-      command: 'BASE_DIR=. go run ./'
-      commit-message: '⚙️ Build (env/userscript/bin/collect-anime-data)'
     permissions:
       contents: 'write'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: '${{ secrets.BOT_GITHUB_TOKEN }}'
+
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version-file: 'env/userscript/bin/collect-anime-data/go.mod'
+          cache: true
+          cache-dependency-path: 'env/userscript/bin/collect-anime-data/go.sum'
+
+      - name: Generate
+        run: BASE_DIR=. go run ./
+
+      - name: Pull
+        run: git pull
+
+      - name: Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: '⚙️ Build (env/userscript/bin/collect-anime-data)'
