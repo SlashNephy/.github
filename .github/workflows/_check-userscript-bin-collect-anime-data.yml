@@ -7,6 +7,8 @@ on:
     paths:
       - 'env/userscript/bin/collect-anime-data/**'
       - '.github/workflows/_check-userscript-bin-collect-anime-data.yml'
+    paths-ignore:
+      - 'env/userscript/bin/collect-anime-data/dist/**'
 
   pull_request:
     types:
@@ -15,6 +17,8 @@ on:
     paths:
       - 'env/userscript/bin/collect-anime-data/**'
       - '.github/workflows/_check-userscript-bin-collect-anime-data.yml'
+    paths-ignore:
+      - 'env/userscript/bin/collect-anime-data/dist/**'
 
   schedule:
     - cron: '0 * * * *'
