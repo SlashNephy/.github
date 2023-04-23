@@ -24,7 +24,7 @@
     "zod": "3.21.4"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.4.16",
+    "@slashnephy/eslint-config": "0.4.17",
     "@slashnephy/prettier-config": "0.1.16",
     "@types/node": "18.16.0",
     "concurrently": "8.0.1",
