@@ -375,7 +375,7 @@ cask "discord-ptb"
 cask "docker"
 # Developer platform
 cask "dotnet-sdk"
-# Draw.io is free online diagram software
+# Online diagram software
 cask "drawio"
 # Launcher for *Epic Games* games
 cask "epic-games"
@@ -400,6 +400,7 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 # Client for the Google Drive storage service
 cask "google-drive"
+# Japanese input software
 cask "google-japanese-ime"
 # GraphQL IDE for better development workflows
 cask "graphql-playground"
