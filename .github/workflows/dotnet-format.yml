@@ -6,7 +6,7 @@ on:
       dotnet-version:
         required: false
         type: string
-        default: '6.0.x'
+        default: '7.0.x'
       working-directory:
         required: false
         type: string
@@ -95,3 +95,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: '${{ inputs.commit-message }}'
+          commit_author: 'StarryBlueSky-bot <97773209+StarryBlueSky-bot@users.noreply.github.com>'
