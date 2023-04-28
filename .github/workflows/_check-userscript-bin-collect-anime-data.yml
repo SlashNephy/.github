@@ -28,8 +28,6 @@ on:
 jobs:
   update:
     if: github.event_name != 'pull_request'
-    permissions:
-      contents: 'write'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -55,3 +53,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: '⚙️ Build (env/userscript/bin/collect-anime-data)'
+          commit_author: 'StarryBlueSky-bot <97773209+StarryBlueSky-bot@users.noreply.github.com>'
