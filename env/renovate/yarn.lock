@@ -2310,19 +2310,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/pep440@npm:2.1.13":
-  version: 2.1.13
-  resolution: "@renovatebot/pep440@npm:2.1.13"
-  checksum: 89f7f4d99c5a0b32c117c2c0b748294d12a78177666fe3ebcd5c22b7a323b538c3804c2e2412f0780a752e494ce46d29c7a78fd3cef434446ec1525ed2c300f6
+"@renovatebot/pep440@npm:2.1.14":
+  version: 2.1.14
+  resolution: "@renovatebot/pep440@npm:2.1.14"
+  checksum: bab5f1f1ba80d46b5af2aa8240448244f426155fc4cb2f3adb9b7167ace77416d659167d96e807991c52e6c367b4bf4f299f90c4835b74815e48cb259c36ce0c
   languageName: node
   linkType: hard
 
-"@renovatebot/ruby-semver@npm:2.1.11":
-  version: 2.1.11
-  resolution: "@renovatebot/ruby-semver@npm:2.1.11"
+"@renovatebot/ruby-semver@npm:2.1.12":
+  version: 2.1.12
+  resolution: "@renovatebot/ruby-semver@npm:2.1.12"
   dependencies:
     tslib: ^2.5.0
-  checksum: 5ef9c9c5da2272ec66fe676149f7c3d471625eec0417b2950352c5774d871d308a63d015c8e5d72e1b660b4ffa77707aa7204228b96dfa776e4598933b60c579
+  checksum: d17cfcc25dfbd73c7a76051f7cefb7d6bba3fca9b3e37661f823091537f0a06cb9deddae7f978cb9524dff59f4a787a9cae866c24bbf90856473948cad7fd4bd
   languageName: node
   linkType: hard
 
@@ -2421,7 +2421,7 @@ __metadata:
     eslint: 8.39.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.8
-    renovate: 35.68.0
+    renovate: 35.69.1
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -7485,21 +7485,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:5.1.6":
-  version: 5.1.6
-  resolution: "minimatch@npm:5.1.6"
-  dependencies:
-    brace-expansion: ^2.0.1
-  checksum: 7564208ef81d7065a370f788d337cd80a689e981042cb9a1d0e6580b6c6a8c9279eba80010516e258835a988363f99f54a6f711a315089b8b42694f5da9d0d77
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:6.1.6":
   version: 6.1.6
   resolution: "minimatch@npm:6.1.6"
   dependencies:
     brace-expansion: ^2.0.1
   checksum: 707b026e0adc610be6c02f24173d84811e5b8cc2e434881e47ef00a72be5fbea9323b7158d7bf065782b1e1d5c50d7d80cd72f2602255f2fddfb1d2f02e9092c
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:9.0.0":
+  version: 9.0.0
+  resolution: "minimatch@npm:9.0.0"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: 7bd57899edd1d1b0560f50b5b2d1ea4ad2a366c5a2c8e0a943372cf2f200b64c256bae45a87a80915adbce27fa36526264296ace0da57b600481fe5ea3e372e5
   languageName: node
   linkType: hard
 
@@ -8785,9 +8785,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.68.0":
-  version: 35.68.0
-  resolution: "renovate@npm:35.68.0"
+"renovate@npm:35.69.1":
+  version: 35.69.1
+  resolution: "renovate@npm:35.69.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.312.0
     "@aws-sdk/client-ec2": 3.312.0
@@ -8810,8 +8810,8 @@ __metadata:
     "@opentelemetry/semantic-conventions": 1.12.0
     "@qnighy/marshal": 0.1.3
     "@renovatebot/osv-offline": 1.2.4
-    "@renovatebot/pep440": 2.1.13
-    "@renovatebot/ruby-semver": 2.1.11
+    "@renovatebot/pep440": 2.1.14
+    "@renovatebot/ruby-semver": 2.1.12
     "@sindresorhus/is": 4.6.0
     "@types/ms": 0.7.31
     "@types/tmp": 0.2.3
@@ -8862,7 +8862,7 @@ __metadata:
     luxon: 3.3.0
     markdown-it: 13.0.1
     markdown-table: 2.0.0
-    minimatch: 5.1.6
+    minimatch: 9.0.0
     moo: 0.5.2
     ms: 2.1.3
     nanoid: 3.3.6
@@ -8901,7 +8901,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 1f9d1b7c0d8c3346eeea732d6b20ba30df9368616263f1d7c69f95105554519f4aec8566eae609b723473851359dfeb03149a156a9f9f664b29f09dbcca04ee6
+  checksum: 5fc86d153a3216436dd24ad1dfe297896af0b7c584425e420414a5ce50f3c2433ac12eebf7dd8ba581ad52e3a4fc1d602fb96a0b4d2f5c71d3754aba989bba42
   languageName: node
   linkType: hard
 
