@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.4.20",
-    "@types/node": "18.16.3",
+    "@types/node": "18.16.4",
     "@types/prettier": "2.7.2",
     "concurrently": "8.0.1",
     "eslint": "8.39.0",
