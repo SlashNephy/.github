@@ -30,7 +30,7 @@
     "concurrently": "8.0.1",
     "eslint": "8.39.0",
     "prettier": "2.8.8",
-    "rollup": "3.21.4",
+    "rollup": "3.21.5",
     "typescript": "5.0.2"
   },
   "packageManager": "yarn@3.5.0",
