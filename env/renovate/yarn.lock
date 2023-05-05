@@ -1486,6 +1486,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cdktf/hcl2json@npm:0.16.1":
+  version: 0.16.1
+  resolution: "@cdktf/hcl2json@npm:0.16.1"
+  dependencies:
+    fs-extra: ^11.1.1
+  checksum: 0054a0d520dcfbf7ac39fea1cb758aa84a1de5611d29d7f21581376a61755f0c2275309b874e1daad9de0c8e89369bd21e8d3c59103487af5065374a1d84e657
+  languageName: node
+  linkType: hard
+
 "@cheap-glitch/mi-cron@npm:1.0.1":
   version: 1.0.1
   resolution: "@cheap-glitch/mi-cron@npm:1.0.1"
@@ -2429,7 +2438,7 @@ __metadata:
     eslint: 8.39.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.8
-    renovate: 35.71.4
+    renovate: 35.71.5
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -6382,13 +6391,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hcl2-parser@npm:1.0.3":
-  version: 1.0.3
-  resolution: "hcl2-parser@npm:1.0.3"
-  checksum: b87c0a3fe7d1e24f4072c3c4c50d00a40f06e5ae5cc6496a241306223e54159daf953cb19eaff021c51910ca3a9ce17413a473671b48a35d1764728bb403fddc
-  languageName: node
-  linkType: hard
-
 "he@npm:1.2.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
@@ -8893,9 +8895,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.71.4":
-  version: 35.71.4
-  resolution: "renovate@npm:35.71.4"
+"renovate@npm:35.71.5":
+  version: 35.71.5
+  resolution: "renovate@npm:35.71.5"
   dependencies:
     "@aws-sdk/client-codecommit": 3.312.0
     "@aws-sdk/client-ec2": 3.312.0
@@ -8904,6 +8906,7 @@ __metadata:
     "@aws-sdk/client-rds": 3.314.0
     "@aws-sdk/client-s3": 3.312.0
     "@breejs/later": 4.1.0
+    "@cdktf/hcl2json": 0.16.1
     "@cheap-glitch/mi-cron": 1.0.1
     "@iarna/toml": 3.0.0
     "@opentelemetry/api": 1.4.1
@@ -8960,7 +8963,6 @@ __metadata:
     graph-data-structure: 3.3.0
     handlebars: 4.7.7
     hasha: 5.2.2
-    hcl2-parser: 1.0.3
     ignore: 5.2.4
     ini: 4.1.0
     js-yaml: 4.1.0
@@ -9009,7 +9011,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 06d3d67f6bec96e5723a4610392d8a0c2ff846acd78dd916df6cdfbed161089e927d3c37e33c5fdb9dd946623f836b352dc9cf73af19e428fa1f4275f990d8bb
+  checksum: 9bf6dcad8d0385b151eedb3ec7517815982858d6b35360f39b235ae326979c075c8a06cf4571109b0bc75b1ad4dc0a7b8f7812e6863e1126b19a464d10b1adb1
   languageName: node
   linkType: hard
 
