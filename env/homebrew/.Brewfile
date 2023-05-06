@@ -115,6 +115,8 @@ brew "gh"
 brew "ghq"
 # Distributed revision control system
 brew "git"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
 # Audit git repos for secrets
 brew "gitleaks"
 # GNU implementation of the famous stream editor
@@ -219,6 +221,8 @@ brew "pipenv"
 brew "plenv"
 # 📦🚀 Fast, disk space efficient package manager
 brew "pnpm"
+# Python package management tool
+brew "poetry"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Coreutils progress viewer
