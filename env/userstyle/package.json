@@ -34,5 +34,5 @@
     "sass": "1.62.1",
     "stylelint": "15.6.1"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.1"
 }
