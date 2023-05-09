@@ -3,20 +3,13 @@
   extends: [
     'config:base',
     ':separateMultipleMajorReleases',
-    'github>SlashNephy/.github//env/renovate/src/labels.json5',
-    'github>SlashNephy/.github//env/renovate/src/include-forks.json5',
-    'github>SlashNephy/.github//env/renovate/src/reviewers.json5',
-    ':disableRateLimiting',
+    // PR に renovate ラベルを付ける
+    ':label(renovate)',
     'github>SlashNephy/.github//env/renovate/src/schedule.json5',
-    'github>SlashNephy/.github//env/renovate/src/stability-days.json5',
-    'group:recommended',
     'github>SlashNephy/.github//env/renovate/src/group.json5',
-    ':automergeMinor',
-    ':automergeRequireAllStatusChecks',
-    ':automergeLinters',
-    ':automergeTesters',
-    ':automergeTypes',
     'github>SlashNephy/.github//env/renovate/src/automerge.json5',
-    'github>SlashNephy/.github//env/renovate/src/automerge-security.json5',
+    'github>SlashNephy/.github//env/renovate/src/lockfile.json5',
   ],
+  // Fork を含める
+  forkProcessing: 'enabled',
 }
