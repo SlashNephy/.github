@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/prettier-config",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "main": "dist/src/index.js",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
