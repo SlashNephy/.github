@@ -34,7 +34,7 @@ export const listOwnerRepos = async (): Promise<[string, string][]> => {
   })
 
   return repos
-    .filter((repo) => repo.archived === false && !repo.fork)
+    .filter((repo) => !repo.archived && !repo.fork)
     .map((repo) => repo.full_name.split('/') as [string, string])
 }
 
@@ -60,7 +60,7 @@ const main = async () => {
   ]).then((result) => result.flat())
 
   const promises = repos.map(async ([owner, repo]) => {
-    let sha: string | undefined = undefined
+    let sha: string | undefined
     try {
       const previousContent = await octokit.repos.getContent({
         owner,

@@ -8,7 +8,7 @@ const bumpVersion = async () => {
   const packageJson = JSON.parse(content) as { version: string }
 
   const [major, minor, patch] = packageJson.version.split('.')
-  const patchNumber = parseInt(patch)
+  const patchNumber = parseInt(patch, 10)
   packageJson.version = `${major}.${minor}.${patchNumber + 1}`
 
   await writeFile(path, JSON.stringify(packageJson, null, 2))

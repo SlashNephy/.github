@@ -3,21 +3,19 @@ import typescript from '@rollup/plugin-typescript'
 
 import type { RollupOptions } from 'rollup'
 
-export const buildOptions = (banner: Banner): RollupOptions => {
-  return {
-    input: `src/${banner.id}.ts`,
-    output: {
-      banner: buildBanner(banner),
-      file: `plugins/${banner.id}.plugin.js`,
-    },
-    plugins: [
-      typescript(),
-      babel({
-        babelHelpers: 'bundled',
-      }),
-    ],
-  }
-}
+export const buildOptions = (banner: Banner): RollupOptions => ({
+  input: `src/${banner.id}.ts`,
+  output: {
+    banner: buildBanner(banner),
+    file: `plugins/${banner.id}.plugin.js`,
+  },
+  plugins: [
+    typescript(),
+    babel({
+      babelHelpers: 'bundled',
+    }),
+  ],
+})
 
 export type Banner = {
   id: string

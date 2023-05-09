@@ -10,6 +10,4 @@ declare global {
   }
 }
 
-defineProperty(Array.prototype, 'lastIndex', (array) => {
-  return array.length - 1
-})
+defineProperty(Array.prototype, 'lastIndex', (array) => array.length - 1)
