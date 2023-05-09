@@ -2233,7 +2233,6 @@ __metadata:
     markdown-doc-builder: 1.3.0
     prettier: 2.8.8
     rollup: 3.21.5
-    rollup-plugin-node-externals: 6.0.0
     serve: 14.2.0
     ts-node: 10.9.1
     typescript: 5.0.2
@@ -7099,15 +7098,6 @@ __metadata:
   bin:
     rimraf: bin.js
   checksum: 87f4164e396f0171b0a3386cc1877a817f572148ee13a7e113b238e48e8a9f2f31d009a92ec38a591ff1567d9662c6b67fd8818a2dbbaed74bc26a87a2a4a9a0
-  languageName: node
-  linkType: hard
-
-"rollup-plugin-node-externals@npm:6.0.0":
-  version: 6.0.0
-  resolution: "rollup-plugin-node-externals@npm:6.0.0"
-  peerDependencies:
-    rollup: ^3.0.0
-  checksum: a2308921fef739a5eb0f2f0efecac557016ef7f89f7770f4b1ddfe0db9e8a623efb600d62c6d0d99d47b114f90c535fd721bd0685baf6e724f0c6f121d12d755
   languageName: node
   linkType: hard
 
