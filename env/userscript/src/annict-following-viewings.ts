@@ -820,11 +820,11 @@ const handle = async () => {
   card.append(document.createElement('br'), settingsAnchor)
 
   const promises: Promise<void>[] = []
-  if (typeof annictToken === 'string') {
+  if (typeof annictToken === 'string' && annictToken.length > 0) {
     promises.push(insertAnnictFollowingStatuses(annictWorkId, annictToken, card, row))
   }
 
-  if (typeof anilistToken === 'string') {
+  if (typeof anilistToken === 'string' && anilistToken.length > 0) {
     promises.push(insertAniListFollowingStatuses(annictWorkId, anilistToken, card, row))
   }
 
