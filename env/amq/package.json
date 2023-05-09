@@ -25,7 +25,7 @@
     "publish": "yarn npm publish"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.4.23",
+    "@slashnephy/eslint-config": "0.4.24",
     "@slashnephy/prettier-config": "0.1.17",
     "@types/jquery": "3.5.16",
     "@types/node": "18.16.6",
