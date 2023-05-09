@@ -1,5 +1,0 @@
-{
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  description: 'PR に renovate ラベルを付ける',
-  labels: ['renovate'],
-}

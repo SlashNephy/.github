@@ -1,5 +1,7 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  description: '週末にのみチェックを行う',
-  extends: [':timezone(Asia/Tokyo)', 'schedule:weekends'],
+  description: 'Schedule',
+  extends: [':timezone(Asia/Tokyo)', ':disableRateLimiting'],
+  // リリースから1週間以上経ったパッケージのみ適用する
+  stabilityDays: 7,
 }

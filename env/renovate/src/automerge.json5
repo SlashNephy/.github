@@ -1,6 +1,20 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  description: '特定条件下で Automerge する',
+  description: 'Automerge',
+  extends: [
+    ':automergeMinor',
+    ':automergeRequireAllStatusChecks',
+    ':automergeLinters',
+    ':automergeTesters',
+    ':automergeTypes',
+  ],
+  // セキュリティー関連は Automerge
+  vulnerabilityAlerts: {
+    labels: ['renovate', 'security'],
+    automerge: true,
+    ignoreTests: true,
+    stabilityDays: 0,
+  },
   packageRules: [
     // 特定パッケージは常に Automerge
     {
