@@ -27,7 +27,7 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | AMQ Auto Continue Login           | 0.2.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js           |
 | AKASHI Show Remaining Hours       | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/akashi-show-remaining-hours.user.js       |
 | AMQ Dynamic Background            | 0.3.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
-| Annict Following Viewings         | 0.3.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js         |
+| Annict Following Viewings         | 0.3.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js         |
 | AniList Status Filter             | 0.1.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js             |
 | AMQ i18n Titles                   | 0.1.1          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-i18n-titles.user.js                   |
 | Detect Types                      | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/detect-types.user.js                      |
@@ -146,7 +146,7 @@ Display the remaining required working hours in attendance page.
 
 Set the currently playing video surface as the background image.
 
-### Annict Following Viewings (v0.3.0)
+### Annict Following Viewings (v0.3.1)
 
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/annict-following-viewings.ts) / [📖 Article](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
