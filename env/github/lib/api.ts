@@ -86,36 +86,30 @@ const octokit = new Octokit({
   auth: env.GITHUB_TOKEN,
 })
 
-export const getAuthenticatedUser = async (): Promise<AuthenticatedUser> => {
-  return octokit.users.getAuthenticated()
-}
+export const getAuthenticatedUser = async (): Promise<AuthenticatedUser> =>
+  octokit.users.getAuthenticated()
 
 export const listUserRepos = async (
   username: string
-): Promise<ListUserReposResponseData[]> => {
-  return await octokit.paginate(octokit.repos.listForUser, {
+): Promise<ListUserReposResponseData[]> =>
+  octokit.paginate(octokit.repos.listForUser, {
     username,
     per_page: 100,
   })
-}
 
-export const listOwnerRepos = async (): Promise<
-  ListOwnerReposResponseData[]
-> => {
-  return await octokit.paginate(octokit.repos.listForAuthenticatedUser, {
+export const listOwnerRepos = async (): Promise<ListOwnerReposResponseData[]> =>
+  octokit.paginate(octokit.repos.listForAuthenticatedUser, {
     affiliation: 'owner',
     per_page: 100,
   })
-}
 
 export const listOrgRepos = async (
   org: string
-): Promise<ListOrgReposResponseData[]> => {
-  return await octokit.paginate(octokit.repos.listForOrg, {
+): Promise<ListOrgReposResponseData[]> =>
+  octokit.paginate(octokit.repos.listForOrg, {
     org,
     per_page: 100,
   })
-}
 
 export const listRepoWebhooks = async (
   owner: string,

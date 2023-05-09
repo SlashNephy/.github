@@ -29,9 +29,9 @@ const main = async () => {
       ? env.USER_WEBHOOK_URLS[env.TARGET_USERS.indexOf(repo.owner.login)]
       : env.ORG_WEBHOOK_URLS[env.TARGET_ORGS.indexOf(repo.owner.login)]
 
-    let hasEvents = false,
-      hasStar = false,
-      hasIssue = false
+    let hasEvents = false
+    let hasStar = false
+    let hasIssue = false
     const oldIds = [] as number[]
     for (const webhook of await listRepoWebhooks(repo.owner.login, repo.name)) {
       if (webhook.config.url === undefined) {
