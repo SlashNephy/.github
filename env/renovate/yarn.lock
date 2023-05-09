@@ -2327,10 +2327,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/pep440@npm:2.1.14":
-  version: 2.1.14
-  resolution: "@renovatebot/pep440@npm:2.1.14"
-  checksum: bab5f1f1ba80d46b5af2aa8240448244f426155fc4cb2f3adb9b7167ace77416d659167d96e807991c52e6c367b4bf4f299f90c4835b74815e48cb259c36ce0c
+"@renovatebot/pep440@npm:2.1.15":
+  version: 2.1.15
+  resolution: "@renovatebot/pep440@npm:2.1.15"
+  checksum: eaeff77ce9f47d0e0423c87c75b6339970f13689042cb6fe6ee4cea28ec709e771cec905ad7244a911e33202432184aafdd0a80e5b7ce52a78e1064de5da3245
   languageName: node
   linkType: hard
 
@@ -2430,13 +2430,13 @@ __metadata:
     "@octokit/rest": 19.0.7
     "@slashnephy/eslint-config": 0.4.22
     "@slashnephy/prettier-config": 0.1.16
-    "@types/node": 18.16.5
+    "@types/node": 18.16.6
     concurrently: 8.0.1
     dotenv: 16.0.3
     eslint: 8.40.0
     fast-deep-equal: 3.1.3
     prettier: 2.8.8
-    renovate: 35.71.7
+    renovate: 35.74.1
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -2589,7 +2589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/emscripten@npm:^1.38.0":
+"@types/emscripten@npm:^1.38.0, @types/emscripten@npm:^1.39.6":
   version: 1.39.6
   resolution: "@types/emscripten@npm:1.39.6"
   checksum: 437f2f9cdfd9057255662508fa9a415fe704ba484c6198f3549c5b05feebcdcd612b1ec7b10026d2566935d05d3c36f9366087cb42bc90bd25772a88fcfc9343
@@ -2670,10 +2670,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.16.5":
-  version: 18.16.5
-  resolution: "@types/node@npm:18.16.5"
-  checksum: b6df96a76a7655cd944794197cf63f5269e5034041bc355f4f243cb3f185ad3e1948011b6f0ac66c22434e50bc53a20ec3a9d95ad284f0e3819813d309d1650b
+"@types/node@npm:18.16.6":
+  version: 18.16.6
+  resolution: "@types/node@npm:18.16.6"
+  checksum: 99417418952c0b1a6ff5dd40ccf01c2cd18db6a1c54bfaaff29c700c877e2e541aa31ea33090592f3817adb2b8c0946b86c7fb57049131e7c08252d70075f09b
   languageName: node
   linkType: hard
 
@@ -3114,18 +3114,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:3.4.0":
-  version: 3.4.0
-  resolution: "@yarnpkg/core@npm:3.4.0"
+"@yarnpkg/core@npm:3.5.1":
+  version: 3.5.1
+  resolution: "@yarnpkg/core@npm:3.5.1"
   dependencies:
     "@arcanis/slice-ansi": ^1.1.1
     "@types/semver": ^7.1.0
     "@types/treeify": ^1.0.0
-    "@yarnpkg/fslib": ^2.10.1
+    "@yarnpkg/fslib": ^2.10.3
     "@yarnpkg/json-proxy": ^2.1.1
-    "@yarnpkg/libzip": ^2.2.4
+    "@yarnpkg/libzip": ^2.3.0
     "@yarnpkg/parsers": ^2.5.1
-    "@yarnpkg/pnp": ^3.3.0
+    "@yarnpkg/pnp": ^3.3.2
     "@yarnpkg/shell": ^3.2.5
     camelcase: ^5.3.1
     chalk: ^3.0.0
@@ -3150,17 +3150,17 @@ __metadata:
     treeify: ^1.1.0
     tslib: ^1.13.0
     tunnel: ^0.0.6
-  checksum: 024fc0ffc5b971b31e742df979aa011b12c4f46b5031fd8fba6d037184abe2f55b082b96f6938c700295e52e588f4241fcdcc4ea75dfaa5ced6ea1ce146ed039
+  checksum: 3a22d04678545913aa8765865bd1d4c9f4ffdd355168b9014e895e640d396144f75e20dcce4780f11ebfadd6b979746c0a83575a6b5d44dba66948851d5248c3
   languageName: node
   linkType: hard
 
-"@yarnpkg/fslib@npm:^2.10.1":
-  version: 2.10.1
-  resolution: "@yarnpkg/fslib@npm:2.10.1"
+"@yarnpkg/fslib@npm:^2.10.3":
+  version: 2.10.3
+  resolution: "@yarnpkg/fslib@npm:2.10.3"
   dependencies:
-    "@yarnpkg/libzip": ^2.2.4
+    "@yarnpkg/libzip": ^2.3.0
     tslib: ^1.13.0
-  checksum: 76a4e094cdde790edf9c1609c63c4ab4e7d518fc13e05da2de9431ece15ccd442a941b505e90d62731edef8ce7a0e491c60fc824f4383dcecf69d4cec74a8ba6
+  checksum: 0ca693f61d47bcf165411a121ed9123f512b1b5bfa5e1c6c8f280b4ffdbea9bf2a6db418f99ecfc9624587fdc695b2b64eb0fe7b4028e44095914b25ca99655e
   languageName: node
   linkType: hard
 
@@ -3204,6 +3204,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yarnpkg/libzip@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@yarnpkg/libzip@npm:2.3.0"
+  dependencies:
+    "@types/emscripten": ^1.39.6
+    tslib: ^1.13.0
+  checksum: 533a4883f69bb013f955d80dc19719881697e6849ea5f0cbe6d87ef1d582b05cbae8a453802f92ad0c852f976296cac3ff7834be79a7e415b65cdf213e448110
+  languageName: node
+  linkType: hard
+
 "@yarnpkg/parsers@npm:2.5.1, @yarnpkg/parsers@npm:^2.5.1":
   version: 2.5.1
   resolution: "@yarnpkg/parsers@npm:2.5.1"
@@ -3214,13 +3224,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnp@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "@yarnpkg/pnp@npm:3.3.0"
+"@yarnpkg/pnp@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "@yarnpkg/pnp@npm:3.3.2"
   dependencies:
     "@types/node": ^13.7.0
-    "@yarnpkg/fslib": ^2.10.1
-  checksum: 231f65f50684c9b4f994096483540ca276172f27f0dbc43b4c8ff65b66aed2cb59f547165e1f1b627108deef4c2204f16f429b3486d0c375e384380679407c3b
+    "@yarnpkg/fslib": ^2.10.3
+  checksum: a8d451af7074b83d393110f646fa877a5e3c5d80149b8bfea3d34273cac72dd5d0f75efab158ac517a2d47b59620f0f3c248faea72d8574a67a90bfa5f7ec3f5
   languageName: node
   linkType: hard
 
@@ -8893,9 +8903,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.71.7":
-  version: 35.71.7
-  resolution: "renovate@npm:35.71.7"
+"renovate@npm:35.74.1":
+  version: 35.74.1
+  resolution: "renovate@npm:35.74.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.312.0
     "@aws-sdk/client-ec2": 3.312.0
@@ -8919,12 +8929,12 @@ __metadata:
     "@opentelemetry/semantic-conventions": 1.12.0
     "@qnighy/marshal": 0.1.3
     "@renovatebot/osv-offline": 1.2.4
-    "@renovatebot/pep440": 2.1.14
+    "@renovatebot/pep440": 2.1.15
     "@renovatebot/ruby-semver": 3.0.1
     "@sindresorhus/is": 4.6.0
     "@types/ms": 0.7.31
     "@types/tmp": 0.2.3
-    "@yarnpkg/core": 3.4.0
+    "@yarnpkg/core": 3.5.1
     "@yarnpkg/parsers": 2.5.1
     agentkeepalive: 4.3.0
     aggregate-error: 3.1.0
@@ -9009,7 +9019,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 5795ce8a419e140b9b2696a3cd81dcb4fefe3f321e4dea6f26793be34cdcb52aff8ee007cb8f4374c606859ebbe40da515d8bc8e9ec47a955e2385de4e0fa4eb
+  checksum: c2ac68995f68e54ae8294f09dad63a87877a47a428a6391b5c55c6447163955684a5b0c424ce8a6e09d894227ef6afa043bda31d355b4cb2c80b239ae630f7ce
   languageName: node
   linkType: hard
 
