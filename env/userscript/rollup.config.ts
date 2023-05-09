@@ -319,7 +319,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-following-viewings',
     name: 'Annict Following Viewings',
-    version: '0.3.0',
+    version: '0.3.1',
     description: {
       en: 'Display following viewings on Annict work page.',
       ja: 'Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。',
