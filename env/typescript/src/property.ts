@@ -1,4 +1,4 @@
-export const defineProperty = <T, R>(
+export const defineProperty = <T extends object, R>(
   object: T,
   name: string,
   value: (obj: T) => R
