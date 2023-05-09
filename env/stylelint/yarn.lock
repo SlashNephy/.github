@@ -325,7 +325,7 @@ __metadata:
     prettier: 2.8.8
     stylelint: 15.6.1
     stylelint-config-property-sort-order-smacss: 9.1.0
-    stylelint-config-recommended: 11.0.0
+    stylelint-config-recommended: 12.0.0
     typescript: 5.0.2
   peerDependencies:
     stylelint: ^14 || ^15.0.0
@@ -4697,12 +4697,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recommended@npm:11.0.0":
-  version: 11.0.0
-  resolution: "stylelint-config-recommended@npm:11.0.0"
+"stylelint-config-recommended@npm:12.0.0":
+  version: 12.0.0
+  resolution: "stylelint-config-recommended@npm:12.0.0"
   peerDependencies:
-    stylelint: ^15.3.0
-  checksum: f6bed5995235d61a2b4bcae086fab925df3b824c77ef585f9f0f9b891b1409c0aa8ae49e8f53d6a2f851be8f7928a7d95e2b17ee876f248ce88f718a3892bf6f
+    stylelint: ^15.5.0
+  checksum: d1de0fa2673c8aa4e50259eb7320cc17e7d09d13a176afea943b3227befcaaaf4e78b546ec076ace1e031ff526c81ea5dc6efa98dd7dc77c582b7352a128d37c
   languageName: node
   linkType: hard
 
