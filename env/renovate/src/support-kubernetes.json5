@@ -11,4 +11,12 @@
     // 多分使ってない時間
     schedule: ['after 4am'],
   },
+  kustomize: {
+    pinDigests: true,
+    pinDigest: {
+      extends: ['default:automergeBranchPush'],
+    },
+    // 多分使ってない時間
+    schedule: ['after 4am'],
+  },
 }
