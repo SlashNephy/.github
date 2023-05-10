@@ -2,6 +2,13 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'Support Kubernetes',
   kubernetes: {
+    extends: ['default:automergeDigest'],
     fileMatch: ['\\.yaml$'],
+    pinDigests: true,
+    pinDigest: {
+      extends: ['default:automergeBranchPush'],
+    },
+    // 多分使ってない時間
+    schedule: ['after 4am'],
   },
 }

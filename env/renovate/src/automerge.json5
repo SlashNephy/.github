@@ -14,7 +14,6 @@
     automerge: true,
     ignoreTests: true,
     stabilityDays: 0,
-    schedule: ['at any time'],
   },
   packageRules: [
     // 特定パッケージは常に Automerge
@@ -29,32 +28,16 @@
       automerge: true,
       ignoreTests: true,
       stabilityDays: 0,
-      schedule: ['at any time'],
     },
     // 特定パッケージは CI Pass 後 Automerge
     {
       matchPackageNames: ['node', 'gradle', 'yarn', 'discord-api-types'],
       automerge: true,
-      stabilityDays: 0,
-      schedule: ['at any time'],
     },
-    // devDependencies は常に Automerge
+    // devDependencies は Automerge
     {
       matchDepTypes: ['devDependencies'],
       automerge: true,
-      ignoreTests: true,
-      stabilityDays: 0,
-      schedule: ['at any time'],
-    },
-    // マイナーな @types/* の更新は常に Automerge
-    {
-      matchDepTypes: ['devDependencies'],
-      matchPackagePatterns: ['^@types/'],
-      matchUpdateTypes: ['minor', 'patch'],
-      automerge: true,
-      ignoreTests: true,
-      stabilityDays: 0,
-      schedule: ['at any time'],
     },
   ],
 }
