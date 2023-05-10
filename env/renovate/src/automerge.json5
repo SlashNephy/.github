@@ -2,12 +2,16 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'Automerge',
   extends: [
-    ':automergeMinor',
     ':automergeRequireAllStatusChecks',
+    ':automergeMinor',
+    ':automergePatch',
     ':automergeLinters',
     ':automergeTesters',
     ':automergeTypes',
+    ':automergeDigest',
   ],
+  // 深夜にマージする
+  automergeSchedule: ['after 4am'],
   // セキュリティー関連は Automerge
   vulnerabilityAlerts: {
     labels: ['renovate', 'security'],
@@ -16,28 +20,32 @@
     stabilityDays: 0,
   },
   packageRules: [
-    // 特定パッケージは常に Automerge
+    // 直ちにマージ
     {
+      automerge: true,
+      matchPackageNames: ['@kawaiioverflow/arm', 'renovate'],
+      ignoreTests: true,
+      stabilityDays: 0,
+      automergeSchedule: ['at any time'],
+    },
+    // テスト無視
+    {
+      automerge: true,
       matchPackageNames: [
-        '@kawaiioverflow/arm',
-        'renovate',
         '@slashnephy/eslint-config',
         '@slashnephy/prettier-config',
         '@slashnephy/typescript-extension',
       ],
-      automerge: true,
       ignoreTests: true,
-      stabilityDays: 0,
     },
-    // 特定パッケージは CI Pass 後 Automerge
+    // テスト後マージ
     {
+      automerge: true,
       matchPackageNames: ['node', 'gradle', 'yarn', 'discord-api-types'],
-      automerge: true,
     },
-    // devDependencies は Automerge
     {
-      matchDepTypes: ['devDependencies'],
       automerge: true,
+      matchDepTypes: ['devDependencies'],
     },
   ],
 }
