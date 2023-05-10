@@ -2,6 +2,7 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'Schedule',
   extends: [':timezone(Asia/Tokyo)', ':disableRateLimiting'],
+  schedule: ['at any time'],
   // リリースから1週間以上経ったパッケージのみ適用する
   stabilityDays: 7,
 }
