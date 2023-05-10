@@ -9,7 +9,9 @@
     'github>SlashNephy/.github//env/renovate/src/group.json5',
     'github>SlashNephy/.github//env/renovate/src/automerge.json5',
     'github>SlashNephy/.github//env/renovate/src/lockfile.json5',
-    'github>SlashNephy/.github//env/renovate/src/kubernetes.json5',
+    'github>SlashNephy/.github//env/renovate/src/support-docker.json5',
+    'github>SlashNephy/.github//env/renovate/src/support-golang.json5',
+    'github>SlashNephy/.github//env/renovate/src/support-kubernetes.json5',
   ],
   // Fork を含める
   forkProcessing: 'enabled',

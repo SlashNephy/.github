@@ -14,6 +14,7 @@
     automerge: true,
     ignoreTests: true,
     stabilityDays: 0,
+    schedule: ['at any time'],
   },
   packageRules: [
     // 特定パッケージは常に Automerge
