@@ -10,14 +10,22 @@
     ':automergeTypes',
     ':automergeDigest',
   ],
-  // 深夜にマージする
-  automergeSchedule: ['after 4am'],
+  automergeType: 'pr',
+  platformAutomerge: true,
+  automergeSchedule: ['at any time'],
   // セキュリティー関連は Automerge
   vulnerabilityAlerts: {
-    labels: ['renovate', 'security'],
     automerge: true,
-    ignoreTests: true,
     stabilityDays: 0,
+  },
+  lockFileMaintenance: {
+    automerge: true,
+  },
+  pin: {
+    automerge: true,
+  },
+  pinDigest: {
+    automerge: true,
   },
   packageRules: [
     // 直ちにマージ

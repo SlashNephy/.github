@@ -10,6 +10,7 @@
     "strict": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "useUnknownInCatchVariables": true
+    "useUnknownInCatchVariables": true,
+    "resolveJsonModule": true
   }
 }
