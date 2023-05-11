@@ -14,6 +14,7 @@
     "access": "public"
   },
   "scripts": {
+    "build": "tsc --noEmit",
     "bump-version": "ts-node bin/bump-version.ts",
     "format": "concurrently -n format: -m 1 'yarn:format:*'",
     "format:eslint": "yarn lint:eslint --fix",
