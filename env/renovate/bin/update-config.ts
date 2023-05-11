@@ -1,13 +1,12 @@
-import { readFile } from 'fs/promises'
-
 import { RequestError } from '@octokit/request-error'
 import { Octokit } from '@octokit/rest'
 import dotenv from 'dotenv'
-import deepEqual from 'fast-deep-equal'
+
+import renovateConfig from '../../../renovate.json'
 
 dotenv.config()
 
-const { GITHUB_TOKEN } = process.env
+const { GITHUB_TOKEN, DRY_RUN } = process.env
 if (GITHUB_TOKEN === undefined) {
   throw new Error('GITHUB_TOKEN is not set')
 }
@@ -50,10 +49,6 @@ const listUserRepos = async (username: string): Promise<[string, string][]> => {
 }
 
 const main = async () => {
-  const content = await readFile('../../renovate.json', 'utf8')
-  const renovateConfig = JSON.parse(content) as unknown
-  const encodedContent = Buffer.from(content).toString('base64').trim()
-
   const repos = await Promise.all([
     listOrgRepos('StarryBlueSky'),
     listOwnerRepos(),
@@ -62,32 +57,24 @@ const main = async () => {
   const promises = repos.map(async ([owner, repo]) => {
     let sha: string | undefined
     try {
-      const previousContent = await octokit.repos.getContent({
+      const content = await octokit.repos.getContent({
         owner,
         repo,
         path: 'renovate.json',
       })
 
-      if ('sha' in previousContent.data) {
-        sha = previousContent.data.sha
+      if ('sha' in content.data) {
+        sha = content.data.sha
       }
 
-      if ('content' in previousContent.data) {
-        const previousContentData = previousContent.data.content
-          .replace(/\r?\n/g, '')
-          .trim()
-        const decodedContent = Buffer.from(
-          previousContentData,
-          'base64'
-        ).toString()
+      if ('content' in content.data) {
+        const json = Buffer.from(content.data.content, 'base64').toString()
+        const repoRenovateConfig = JSON.parse(json)
 
         if (
-          previousContentData === encodedContent ||
-          deepEqual(renovateConfig, JSON.parse(decodedContent))
+          renovateConfig.$schema === repoRenovateConfig.$schema &&
+          renovateConfig.extends[0] === repoRenovateConfig.extends[0]
         ) {
-          console.info(
-            `[${owner}/${repo}] There is already the latest renovate.json. Skipping...`
-          )
           return
         }
       }
@@ -99,14 +86,17 @@ const main = async () => {
     }
 
     try {
-      await octokit.repos.createOrUpdateFileContents({
-        owner,
-        repo,
-        path: 'renovate.json',
-        message: '🔧 chore(renovate): update config',
-        content: encodedContent,
-        sha,
-      })
+      if (DRY_RUN !== '1') {
+        await octokit.repos.createOrUpdateFileContents({
+          owner,
+          repo,
+          path: 'renovate.json',
+          message: '🔧 chore(renovate): update config',
+          content: JSON.stringify(renovateConfig),
+          sha,
+        })
+      }
+
       console.info(`${owner}/${repo} update done.`)
     } catch (error: unknown) {
       console.error(`[${owner}/${repo}] Failed to update`, error)

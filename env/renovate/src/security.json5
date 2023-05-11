@@ -1,0 +1,9 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  description: 'Security',
+  vulnerabilityAlerts: {
+    addLabels: ['security'],
+    reviewers: ['@SlashNephy'],
+    reviewersFromCodeOwners: true,
+  },
+}
