@@ -1,19 +1,11 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'Grouping',
-  extends: ['group:recommended'],
+  extends: ['group:recommended', 'group:monorepos'],
   packageRules: [
-    {
-      groupName: 'Mantine',
-      matchPackagePrefixes: ['@mantine/'],
-    },
     {
       groupName: 'Ktor',
       matchPackagePrefixes: ['io.ktor:'],
-    },
-    {
-      groupName: 'Kotlin',
-      matchPackagePrefixes: ['org.jetbrains.kotlin.'],
     },
   ],
 }
