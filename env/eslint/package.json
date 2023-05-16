@@ -59,7 +59,7 @@
     "eslint-plugin-userscripts": "0.2.12",
     "eslint-plugin-vitest": "0.2.2",
     "eslint-plugin-xss": "0.1.12",
-    "eslint-plugin-yml": "1.5.0",
+    "eslint-plugin-yml": "1.7.0",
     "typescript": "5.0.4"
   },
   "peerDependencies": {
