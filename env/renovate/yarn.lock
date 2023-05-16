@@ -2441,7 +2441,7 @@ __metadata:
     eslint-plugin-jest: 27.2.1
     eslint-plugin-unused-imports: 2.0.0
     prettier: 2.8.8
-    renovate: 35.86.1
+    renovate: 35.86.2
     ts-node: 10.9.1
     typescript: 5.0.4
   languageName: unknown
@@ -6348,15 +6348,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"good-enough-parser@npm:1.1.22":
-  version: 1.1.22
-  resolution: "good-enough-parser@npm:1.1.22"
+"good-enough-parser@npm:1.1.23":
+  version: 1.1.23
+  resolution: "good-enough-parser@npm:1.1.23"
   dependencies:
     "@thi.ng/zipper": 1.0.3
     "@types/moo": 0.5.5
-    klona: 2.0.5
+    klona: 2.0.6
     moo: 0.5.2
-  checksum: e80786e72613a93b638c3e511e70b56f446901843d5b5251a4f1d8c99494b400eba00946b7fba385a9c369d48547b8758476eb0b6c28ba3c98906cb23dd9443e
+  checksum: d06b17eb523c3eefe744d11e48f954f304dfea9cd9919e0252199f0a4dabc8769a309f0f6f470d2b30e7736d963edb107a7956100f931c017c0ca5904de75250
   languageName: node
   linkType: hard
 
@@ -7325,7 +7325,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"klona@npm:2.0.5, klona@npm:^2.0.4":
+"klona@npm:2.0.6":
+  version: 2.0.6
+  resolution: "klona@npm:2.0.6"
+  checksum: ac9ee3732e42b96feb67faae4d27cf49494e8a3bf3fa7115ce242fe04786788e0aff4741a07a45a2462e2079aa983d73d38519c85d65b70ef11447bbc3c58ce7
+  languageName: node
+  linkType: hard
+
+"klona@npm:^2.0.4":
   version: 2.0.5
   resolution: "klona@npm:2.0.5"
   checksum: 8c976126ea252b766e648a4866e1bccff9d3b08432474ad80c559f6c7265cf7caede2498d463754d8c88c4759895edd8210c85c0d3155e6aae4968362889466f
@@ -9029,9 +9036,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.86.1":
-  version: 35.86.1
-  resolution: "renovate@npm:35.86.1"
+"renovate@npm:35.86.2":
+  version: 35.86.2
+  resolution: "renovate@npm:35.86.2"
   dependencies:
     "@aws-sdk/client-codecommit": 3.312.0
     "@aws-sdk/client-ec2": 3.312.0
@@ -9093,7 +9100,7 @@ __metadata:
     github-url-from-git: 1.5.0
     glob: 10.2.2
     global-agent: 3.0.0
-    good-enough-parser: 1.1.22
+    good-enough-parser: 1.1.23
     got: 11.8.6
     graph-data-structure: 3.3.0
     handlebars: 4.7.7
@@ -9146,7 +9153,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 8e2c6e6d38d2d82a77458124ec332fc9020de475d4268100ced8d6d4701c199d7f5560067bd951a92d7e7e6ce4bdd18de0be66b8ea81bcb6132fc1182e4aeafb
+  checksum: b67044719c9e60de7789042e4cd03add787b9f4fa24865a9ef6fe4103a4785d61b227de616bacbc5d9375e10fc4dbc1c951c5f3c798da6518b170715c8555f4f
   languageName: node
   linkType: hard
 
