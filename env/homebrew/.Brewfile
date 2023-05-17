@@ -195,6 +195,8 @@ brew "mysql-client"
 brew "nano"
 # Improved Nano Syntax Highlighting Files
 brew "nanorc"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Netlify command-line tool
 brew "netlify-cli"
 # Network Kanji code conversion Filter (NKF)
