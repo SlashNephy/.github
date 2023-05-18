@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "0.4.31",
+  "version": "0.4.32",
   "type": "commonjs",
   "main": "dist/index.js",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
