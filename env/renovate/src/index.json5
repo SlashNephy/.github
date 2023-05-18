@@ -16,4 +16,9 @@
   ],
   // Fork を含める
   forkProcessing: 'enabled',
+  printConfig: true,
+  internalChecksFilter: 'none',
+  platformCommit: true,
+  prConcurrentLimit: 0,
+  prCreation: 'immediate',
 }
