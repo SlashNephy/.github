@@ -1866,7 +1866,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/rest@npm:19.0.11, @octokit/rest@npm:^19.0.10":
+"@octokit/rest@npm:19.0.11, @octokit/rest@npm:^19.0.11":
   version: 19.0.11
   resolution: "@octokit/rest@npm:19.0.11"
   dependencies:
@@ -2309,18 +2309,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/osv-offline@npm:1.2.11":
-  version: 1.2.11
-  resolution: "@renovatebot/osv-offline@npm:1.2.11"
+"@renovatebot/osv-offline@npm:1.2.12":
+  version: 1.2.12
+  resolution: "@renovatebot/osv-offline@npm:1.2.12"
   dependencies:
-    "@octokit/rest": ^19.0.10
+    "@octokit/rest": ^19.0.11
     "@renovatebot/osv-offline-db": 1.4.0
     adm-zip: ~0.5.10
     fs-extra: ^11.1.1
     got: ^11.8.6
     luxon: ^3.3.0
     node-fetch: ^2.6.11
-  checksum: bd7958c77aea60283187946b5b927f3594d6c98f84e75252cb6c92ec239cc356605929e6c189efb36be5258d3dc8dc71bf732ae66acbb389743fc43813c23d6a
+  checksum: 97c6378e485d8caa656d207ac83fb810fa50ab8985701e8c0d33cbfb608f7089cc3c82dedeedb23efc3443e54b5ec112d7f05c0782bbeee038349fb6f9cac1c5
   languageName: node
   linkType: hard
 
@@ -2438,7 +2438,7 @@ __metadata:
     eslint-plugin-jest: 27.2.1
     eslint-plugin-unused-imports: 2.0.0
     prettier: 2.8.8
-    renovate: 35.102.8
+    renovate: 35.102.10
     ts-node: 10.9.1
     typescript: 5.0.4
   languageName: unknown
@@ -5953,18 +5953,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:10.2.5":
-  version: 10.2.5
-  resolution: "glob@npm:10.2.5"
+"glob@npm:10.2.6":
+  version: 10.2.6
+  resolution: "glob@npm:10.2.6"
   dependencies:
     foreground-child: ^3.1.0
     jackspeak: ^2.0.3
-    minimatch: ^9.0.0
+    minimatch: ^9.0.1
     minipass: ^5.0.0 || ^6.0.2
     path-scurry: ^1.7.0
   bin:
     glob: dist/cjs/src/bin.js
-  checksum: 54d2b629c467953317c175903a049819577bcce679d437ff1ad43bf654091d3564e796351d705463b26a0194234acdea7f4de64993b0544ea86275c000498026
+  checksum: 94c5964bfa9df95207a69a3bd9b07b99ea7b5ba1f36dd73a8914378cee9436a205b9b5bdff58872abc238684ea7f4b4936e932155b8885250818bcc8d5321ddf
   languageName: node
   linkType: hard
 
@@ -7519,12 +7519,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:9.0.0, minimatch@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "minimatch@npm:9.0.0"
+"minimatch@npm:9.0.1, minimatch@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "minimatch@npm:9.0.1"
   dependencies:
     brace-expansion: ^2.0.1
-  checksum: 7bd57899edd1d1b0560f50b5b2d1ea4ad2a366c5a2c8e0a943372cf2f200b64c256bae45a87a80915adbce27fa36526264296ace0da57b600481fe5ea3e372e5
+  checksum: 97f5f5284bb57dc65b9415dec7f17a0f6531a33572193991c60ff18450dcfad5c2dad24ffeaf60b5261dccd63aae58cc3306e2209d57e7f88c51295a532d8ec3
   languageName: node
   linkType: hard
 
@@ -7534,6 +7534,15 @@ __metadata:
   dependencies:
     brace-expansion: ^2.0.1
   checksum: 15ce53d31a06361e8b7a629501b5c75491bc2b59712d53e802b1987121d91b433d73fcc5be92974fde66b2b51d8fb28d75a9ae900d249feb792bb1ba2a4f0a90
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "minimatch@npm:9.0.0"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: 7bd57899edd1d1b0560f50b5b2d1ea4ad2a366c5a2c8e0a943372cf2f200b64c256bae45a87a80915adbce27fa36526264296ace0da57b600481fe5ea3e372e5
   languageName: node
   linkType: hard
 
@@ -8801,9 +8810,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.102.8":
-  version: 35.102.8
-  resolution: "renovate@npm:35.102.8"
+"renovate@npm:35.102.10":
+  version: 35.102.10
+  resolution: "renovate@npm:35.102.10"
   dependencies:
     "@aws-sdk/client-codecommit": 3.332.0
     "@aws-sdk/client-ec2": 3.332.0
@@ -8826,7 +8835,7 @@ __metadata:
     "@opentelemetry/sdk-trace-node": 1.13.0
     "@opentelemetry/semantic-conventions": 1.13.0
     "@qnighy/marshal": 0.1.3
-    "@renovatebot/osv-offline": 1.2.11
+    "@renovatebot/osv-offline": 1.2.12
     "@renovatebot/pep440": 2.1.15
     "@renovatebot/ruby-semver": 3.0.1
     "@sindresorhus/is": 4.6.0
@@ -8863,7 +8872,7 @@ __metadata:
     fs-extra: 11.1.1
     git-url-parse: 13.1.0
     github-url-from-git: 1.5.0
-    glob: 10.2.5
+    glob: 10.2.6
     global-agent: 3.0.0
     good-enough-parser: 1.1.23
     got: 11.8.6
@@ -8879,7 +8888,7 @@ __metadata:
     luxon: 3.3.0
     markdown-it: 13.0.1
     markdown-table: 2.0.0
-    minimatch: 9.0.0
+    minimatch: 9.0.1
     moo: 0.5.2
     ms: 2.1.3
     nanoid: 3.3.6
@@ -8918,7 +8927,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 59adbf25987109b26876ec150c303f8aa7195a57f761c5f3c65c706e76408ed98d8607a362b39c4076e793c972a7de01a3fe50853887c23ae6bde1c2ad8be5cf
+  checksum: 2407601cbcbcae03d53ccb7442547713bb7cd1a344ba03036ea05d8f21a98d3caa45fe446860348772f5e0de57e3eed7656a611f012b3126d7797bd08c9bfeac
   languageName: node
   linkType: hard
 
