@@ -55,12 +55,18 @@ brew "bat"
 brew "binutils"
 # New way to see and navigate directory trees
 brew "broot"
-# Extract files from Microsoft cabinet files
-brew "cabextract"
 # Core application library for C
 brew "glib"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Development kit for the Java programming language
+brew "openjdk"
+# Command-line tool to manipulate Android App Bundles
+brew "bundletool"
+# Extract files from Microsoft cabinet files
+brew "cabextract"
 # Perl module dependency manager (aka Bundler for Perl)
 brew "carton"
 # Define k8s native apps and abstractions using object-oriented programming
@@ -97,8 +103,6 @@ brew "fd"
 brew "unbound"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Collection of GNU find, xargs, and locate
@@ -147,8 +151,6 @@ brew "hadolint"
 brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Tools and libraries to manipulate images in many formats
@@ -181,6 +183,8 @@ brew "make"
 brew "mas"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
 # Simple tool to make locally trusted development certificates
@@ -209,8 +213,6 @@ brew "nss"
 brew "nvm"
 # Reverse proxy for authenticating users via OAuth 2 providers
 brew "oauth2_proxy"
-# Development kit for the Java programming language
-brew "openjdk"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Command-line tool to generate, analyze, convert and manipulate colors
@@ -255,6 +257,8 @@ brew "skaffold"
 brew "sl"
 # Proxy server that works as a poor man's VPN
 brew "sshuttle"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
 # Modern CSS linter
 brew "stylelint"
 # Version control system designed to be a better CVS
@@ -428,6 +432,8 @@ cask "insomnia"
 cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Real-time earthquake monitoring software for Japan
+cask "jquake"
 # File archiver
 cask "keka"
 # End-to-end encryption software
