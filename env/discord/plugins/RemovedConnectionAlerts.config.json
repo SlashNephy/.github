@@ -1,0 +1,8 @@
+{
+    "config": {
+        "version": "0.7.0",
+        "settings": {
+            "hideButton": false
+        }
+    }
+}
