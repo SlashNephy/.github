@@ -3,6 +3,6 @@
   description: 'Schedule',
   extends: [':timezone(Asia/Tokyo)', ':disableRateLimiting'],
   schedule: ['at any time'],
-  // リリースから1週間以上経ったパッケージのみ適用する
-  stabilityDays: 7,
+  // リリースから3日以上経ったパッケージのみ適用する
+  stabilityDays: 3,
 }
