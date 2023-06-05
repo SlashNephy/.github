@@ -1,10 +1,10 @@
 /**
  * @name AutoIdleOnAFK
  * @description Automatically updates your discord status to 'idle' when you haven't opened your discord client for more than 5 minutes.
-Plugin only works when your status is 'online' and you are not in a voice channel. 
+Plugin only works when your status is 'online' and you are not in a voice channel.
 
 For Bugs or Feature Requests open an issue on my Github
- * @version 0.3.2
+ * @version 0.4.0
  * @author RoguedBear
  * @authorLink https://github.com/RoguedBear
  * @website https://github.com/RoguedBear/BetterDiscordPlugin-AutoIdleOnAFK
@@ -12,7 +12,7 @@ For Bugs or Feature Requests open an issue on my Github
  */
 /*@cc_on
 @if (@_jscript)
-    
+
     // Offer to self-install for clueless users that try to run this directly.
     var shell = WScript.CreateObject("WScript.Shell");
     var fs = new ActiveXObject("Scripting.FileSystemObject");
@@ -43,19 +43,18 @@ const config = {
                 link: "https://github.com/RoguedBear"
             }
         ],
-        version: "0.3.2",
+        version: "0.4.0",
         description: "Automatically updates your discord status to 'idle' when you haven't opened your discord client for more than 5 minutes.\nPlugin only works when your status is 'online' and you are not in a voice channel. \n\nFor Bugs or Feature Requests open an issue on my Github",
         github: "https://github.com/RoguedBear/BetterDiscordPlugin-AutoIdleOnAFK",
         github_raw: "https://raw.githubusercontent.com/RoguedBear/BetterDiscordPlugin-AutoIdleOnAFK/main/release/AutoIdleOnAFK.plugin.js"
     },
     changelog: [
         {
-            type: "fixed",
-            title: "Fixed the plugin :) 🎉",
+            type: "added",
+            title: "Added a setting to optionally ignore VC state when going AFK",
             items: [
-                "Fixed the plugin after a long wait!!!",
-                "Thanks to: `@Violet-Vibes` for nudging me in the right direction, and `DevilBro's` BDFDB library for showing me the way!",
-                "so glad to have the plugin back working"
+                "Earlier if you were in a VC you couldn't go in AFK mode. Now you can toggle a setting to ignore whether you are in VC or not before going AFK.",
+                "default value: off"
             ]
         }
     ],
@@ -124,6 +123,14 @@ const config = {
         },
         {
             type: "switch",
+            name: "Ignore VC state when going AFK",
+            note: "Allows going to Idle mode even when you are in a VC. default: off",
+            id: "ignoreVCState",
+            value: false,
+            defaultValue: false
+        },
+        {
+            type: "switch",
             name: "Always Revert To Online",
             note: "Come back online even if this plugin didn't change your status. Useful for multiple devices.",
             id: "alwaysOnline",
@@ -145,7 +152,7 @@ class Dummy {
     start() {}
     stop() {}
 }
- 
+
 if (!global.ZeresPluginLibrary) {
     BdApi.showConfirmationModal("Library Missing", `The library plugin needed for ${config.name ?? config.info.name} is missing. Please click Download Now to install it.`, {
         confirmText: "Download Now",
@@ -166,7 +173,7 @@ if (!global.ZeresPluginLibrary) {
         }
     });
 }
- 
+
 module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
      const plugin = (Plugin, Library) => {
     const { Logger, DiscordModules } = Library;
@@ -378,7 +385,10 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
          * @returns {boolean} if user is in a VC
          */
         inVoiceChannel() {
-            return getVoiceChannelId() !== null;
+            return (
+                this.settings.ignoreVCState === false &&
+                getVoiceChannelId() !== null
+            );
         }
 
         /**

@@ -3,11 +3,11 @@
 * @displayName PlatformIndicators
 * @authorId 415849376598982656
 * @invite gvA2ree
-* @version 1.4.0
+* @version 1.4.1
 */
 /*@cc_on
 @if (@_jscript)
-     
+
     // Offer to self-install for clueless users that try to run this directly.
     var shell = WScript.CreateObject("WScript.Shell");
     var fs = new ActiveXObject("Scripting.FileSystemObject");
@@ -27,7 +27,7 @@
     }
     WScript.Quit();
 @else@*/
- 
+
 module.exports = (() => {
     const config = {
         info: {
@@ -40,17 +40,19 @@ module.exports = (() => {
                     twitter_username: "Strencher3"
                 }
             ],
-            version: "1.4.0",
+            version: "1.4.1",
             description: "Adds indicators for every platform that the user is using. Source code available on the repo in the 'src' folder.",
             github: "https://github.com/Strencher/BetterDiscordStuff/blob/master/PlatformIndicators/APlatformIndicators.plugin.js",
             github_raw: "https://raw.githubusercontent.com/Strencher/BetterDiscordStuff/master/PlatformIndicators/APlatformIndicators.plugin.js"
         },
         changelog: [
             {
-                title: "v1.4.0",
+                title: "v1.4.1",
                 type: "fixed",
                 items: [
-                    "The plugin was rewritten from the ground up to be compatible with discord's newest changes. It now uses DOM Manipulation instead of react patching."
+                    "Fixed indicators showing in chat.",
+                    "Fixed indicators showing in dms list.",
+                    "(hopefully) fixed tooltips not disappearing"
                 ]
             },
         ],
@@ -127,7 +129,7 @@ module.exports = (() => {
             }
         ]
     };
-    
+
     return !global.ZeresPluginLibrary ? class {
         constructor() {
             this._config = config;
@@ -159,13 +161,14 @@ module.exports = (() => {
             const Flux = Object.assign({}, WebpackModules.getByProps("Store", "connectStores"), WebpackModules.getByProps("useStateFromStores"));
             const SessionsStore = WebpackModules.getByProps("getSessions", "_dispatchToken");
             const friendsRowClasses = WebpackModules.getByProps("hovered", "discriminator");
- 
+
             const {Webpack, Webpack: {Filters}} = BdApi;
-            const [ChatHeader, NameTag, MemberListItem, DirectMessage] = Webpack.getBulk.apply(null, [
+            const [ChatHeader, NameTag, MemberListItem, DirectMessage, {LayerClassName = ""} = {}] = Webpack.getBulk.apply(null, [
                 Filters.byProps("replyAvatar", "sizeEmoji"),
                 Filters.byProps("bot", "nameTag"),
                 Filters.byProps("wrappedName", "nameAndDecorators"),
-                Filters.byProps("wrappedName", "nameAndDecorators", "selected"),
+                Filters.combine(Filters.byProps("wrappedName", "nameAndDecorators"), m => !m.container),
+                Filters.byProps("LayerClassName")
             ].map(fn => ({filter: fn})));
 
             class StringUtils {
@@ -178,11 +181,11 @@ module.exports = (() => {
             const Settings = new class Settings extends Flux.Store {
                 constructor() {super(Dispatcher, {});}
                 _settings = PluginUtilities.loadSettings(config.info.name, {});
- 
+
                 get(key, def) {
                     return this._settings[key] ?? def;
                 }
- 
+
                 set(key, value) {
                     this._settings[key] = value;
                     this.emitChange();
@@ -282,15 +285,19 @@ module.exports = (() => {
                     });
 
                     this.target.addEventListener("mouseenter", () => {
-                        this.show();    
+                        this.show();
                     });
 
                     this.target.addEventListener("mouseleave", () => {
                         this.hide();
                     });
+
+                    this.target.addEventListener("mousedown", () => {
+                        this.hide();
+                    });
                 }
 
-                get container() {return document.querySelector(".layerContainer-2v_Sit ~ .layerContainer-2v_Sit");}
+                get container() {return document.querySelector(`.${LayerClassName} ~ .${LayerClassName}`);}
 
                 checkOffset(x, y) {
                     if (y < 0) {
@@ -298,13 +305,13 @@ module.exports = (() => {
                     } else if (y > window.innerHeight) {
                         y = window.innerHeight;
                     }
-            
+
                     if (x > window.innerWidth) {
                         x = window.innerWidth;
                     } else if (x < 0) {
                         x = 0;
                     }
-            
+
                     return {x, y};
                 }
 
@@ -316,7 +323,7 @@ module.exports = (() => {
                     const tooltipRect = tooltip.getBoundingClientRect();
 
                     let top = (targetRect.y - tooltipRect.height) - this.spacing;
-                    let left = targetRect.x + (targetRect.width / 2) - (tooltipRect.width / 2);    
+                    let left = targetRect.x + (targetRect.width / 2) - (tooltipRect.width / 2);
 
                     const position = this.checkOffset(left, top);
 
@@ -366,7 +373,7 @@ module.exports = (() => {
                         } else {
                             this.target.appendChild(res);
                         }
-                        
+
                         this.ref = res;
                     }
                 }
@@ -386,14 +393,14 @@ module.exports = (() => {
                         shouldShow: (() => {
                             const shownInArea = Settings.get("showIn" + this.type, true);
                             const isBot = Settings.get("ignoreBots", true) && (user?.bot ?? false);
-        
+
                             return shownInArea && !isBot;
                         })(),
                         clients: (() => {
                             if (user?.id === UserStore.getCurrentUser()?.id) return SessionsStore.getSession() ? {
                                 [SessionsStore.getSession().clientInfo.client]: isStreaming() ? "streaming" : SessionsStore.getSession().status
                             } : {};
-         
+
                             return UserStatusStore.getState().clientStatuses[user?.id] ?? {};
                         })(),
                         user
@@ -437,7 +444,7 @@ module.exports = (() => {
                 }
 
                 for (const prop in Object.assign({}, defaultProps, props)) {
-                    if (prop === "text") continue; 
+                    if (prop === "text") continue;
                     element.setAttribute(prop, props[prop]);
                 }
 
@@ -464,7 +471,7 @@ module.exports = (() => {
                     for (const el of elements) {
                         if (el.getElementsByClassName("PI-indicatorContainer").length || el._patched) continue;
 
-                        const user = getReactProps(el.parentElement)?.message?.author;
+                        const user = getReactProps(el.parentElement, e => e?.message)?.message?.author;
 
                         if (user) {
                             new StatusIndicators(el, user.id, "Chat").mount();
@@ -476,7 +483,6 @@ module.exports = (() => {
                         if (el.getElementsByClassName("PI-indicatorContainer").length || el._patched) continue;
 
                         const user = getReactProps(el, e => e?.user)?.user;
-
                         if (user) {
                             new StatusIndicators(el, user.id, "Tags").mount();
                         }
@@ -489,7 +495,7 @@ module.exports = (() => {
                         elements => {
                             for (const el of elements) {
                                 if (el.getElementsByClassName("PI-indicatorContainer").length || el._patched) continue;
-                                
+
                                 const user = getReactProps(el, e => e?.user)?.user;
 
                                 if (user) {
@@ -500,20 +506,20 @@ module.exports = (() => {
                     ])
                 )
             };
- 
+
             return class PlatformIndicators extends Plugin {
                 getSettingsPanel() {
                     const panel = this.buildSettingsPanel();
- 
+
                     // Very dirty
                     panel.addListener(() => {
                         Settings._settings = {...this.settings};
                         Settings.emitChange();
                     });
- 
+
                     return panel.getElement();
                 }
- 
+
                 css = /*css*/`
                     .PI-tooltip {
                         position: fixed;
@@ -525,15 +531,15 @@ module.exports = (() => {
                         margin-bottom: 2px;
                         margin-left: 5px;
                     }
- 
+
                     .PI-indicatorContainer svg {
                         margin-left: -2px;
                     }
- 
+
                     .PI-indicatorContainer div:first-child svg {
                         margin-left: 2px;
                     }
- 
+
                     .PI-container {
                         display: flex;
                     }
@@ -544,15 +550,15 @@ module.exports = (() => {
                     }
 
                     .${friendsRowClasses.userInfo} .PI-indicatorContainer > div {display: inline-flex;}
- 
+
                     .${friendsRowClasses.userInfo} .${friendsRowClasses.discriminator} {
                         display: none;
                         visibility: visible;
                     }
- 
+
                     .${friendsRowClasses.hovered} .${friendsRowClasses.discriminator} {display: block;}
                 `;
- 
+
                 onStart() {
                     PluginUtilities.addStyle(config.info.name, this.css);
                     StoreWatcher._init();
