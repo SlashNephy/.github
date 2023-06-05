@@ -2,7 +2,6 @@
 0BDFDB.config.json
 0BDFDB.raw.css
 AutoIdleOnAFK.config.json
-FriendNotifications.config.json
 GameActivityToggle.config.json
-GuildAndFriendRemovalAlerts.config.json
 XenoLib.config.json
+RemovedConnectionAlerts_*.config.json

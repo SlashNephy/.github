@@ -333,7 +333,7 @@ brew "reviewdog/tap/reviewdog"
 brew "romkatv/powerlevel10k/powerlevel10k"
 # Ookla Speedtest
 brew "teamookla/speedtest/speedtest"
-# Password manager that keeps all passwords secure behind one password
+# Password manager
 cask "1password-beta"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"

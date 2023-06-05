@@ -1,1673 +1,1007 @@
 /**
- * @name InAppNotifications
- * @description Show a notification in Discord when someone sends a message, just like on mobile.
- * @author 1Lighty
- * @authorId 239513071272329217
- * @version 1.3.12
- * @invite NYvWdN5
- * @donate https://paypal.me/lighty13
- * @website https://1lighty.github.io/BetterDiscordStuff/?plugin=InAppNotifications
- * @source https://github.com/1Lighty/BetterDiscordPlugins/blob/master/Plugins/InAppNotifications/InAppNotifications.plugin.js
- * @updateUrl https://raw.githubusercontent.com/1Lighty/BetterDiscordPlugins/master/Plugins/InAppNotifications/InAppNotifications.plugin.js
+ * @name AppNotifications
+ * @source https://github.com/QWERTxD/BetterDiscordPlugins/blob/main/InAppNotifications/InAppNotifications.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/QWERTxD/BetterDiscordPlugins/main/InAppNotifications/InAppNotifications.plugin.js
+ * @website https://github.com/QWERTxD/BetterDiscordPlugins/tree/main/InAppNotifications
+ * @version 1.1.2
  */
-/*@cc_on
-@if (@_jscript)
+const request = require("request");
+const fs = require("fs");
+const path = require("path");
 
-  // Offer to self-install for clueless users that try to run this directly.
-  var shell = WScript.CreateObject('WScript.Shell');
-  var fs = new ActiveXObject('Scripting.FileSystemObject');
-  var pathPlugins = shell.ExpandEnvironmentStrings('%APPDATA%\\BetterDiscord\\plugins');
-  var pathSelf = WScript.ScriptFullName;
-  // Put the user at ease by addressing them in the first person
-  shell.Popup('It looks like you\'ve mistakenly tried to run me directly. \n(Don\'t do that!)', 0, 'I\'m a plugin for BetterDiscord', 0x30);
-  if (fs.GetParentFolderName(pathSelf) === fs.GetAbsolutePathName(pathPlugins)) {
-    shell.Popup('I\'m in the correct folder already.\nJust go to settings, plugins and enable me.', 0, 'I\'m already installed', 0x40);
-  } else if (!fs.FolderExists(pathPlugins)) {
-    shell.Popup('I can\'t find the BetterDiscord plugins folder.\nAre you sure it\'s even installed?', 0, 'Can\'t install myself', 0x10);
-  } else if (shell.Popup('Should I copy myself to BetterDiscord\'s plugins folder for you?', 0, 'Do you need some help?', 0x34) === 6) {
-    fs.CopyFile(pathSelf, fs.BuildPath(pathPlugins, fs.GetFileName(pathSelf)), true);
-    // Show the user where to put plugins in the future
-    shell.Exec('explorer ' + pathPlugins);
-    shell.Popup('I\'m installed!\nJust go to settings, plugins and enable me!', 0, 'Successfully installed', 0x40);
-  }
-  WScript.Quit();
-
-@else@*/
-
-/*
- * Copyright © 2019-2020, _Lighty_
- * All rights reserved.
- * Code may not be redistributed, modified or otherwise taken without explicit permission.
- */
-module.exports = (() => {
-  /* Setup */
-  const config = {
-    main: 'index.js',
-    info: {
-      name: 'InAppNotifications',
-      authors: [
-        {
-          name: 'Lighty',
-          discord_id: '239513071272329217',
-          github_username: 'LightyPon',
-          twitter_username: ''
-        }
-      ],
-      version: '1.3.12',
-      description: 'Show a notification in Discord when someone sends a message, just like on mobile.',
-      github: 'https://github.com/1Lighty',
-      github_raw: 'https://raw.githubusercontent.com/1Lighty/BetterDiscordPlugins/master/Plugins/InAppNotifications/InAppNotifications.plugin.js'
-    },
-    defaultConfig: [
+const config = {
+  info: {
+    name: "AppNotifications",
+    authors: [
       {
-        name: 'Ignore DND mode',
-        id: 'dndIgnore',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Show notifications from DMs',
-        id: 'dms',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Show notifications from group DMs',
-        id: 'groupDMs',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Show notifications from servers',
-        id: 'servers',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Always show pings',
-        note: 'This overrides all settings above except dnd mode',
-        id: 'pings',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Show notification if pinged in edit',
-        id: 'editPings',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Pin silent ping notifications',
-        note: 'Pins the notification if you got pinged in an edit',
-        id: 'pinSilentPings',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Always show notifications for replies',
-        note: 'This overrides all settings above except dnd mode, always makes a notification whether it pings you or not',
-        id: 'replies',
-        type: 'switch',
-        value: false
-      },
-      {
-        name: 'Pin reply notifications',
-        note: 'Needs option above to work, ensures you can see it',
-        id: 'pinReplies',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Pin reply notifications even if it would show anyway',
-        note: 'If a reply happens in an unmuted channel, it will pin it',
-        id: 'alwaysPinReplies',
-        type: 'switch',
-        value: false
-      },
-      {
-        name: 'Show notifications even when not focused',
-        id: 'showNoFocus',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Spoiler media from NSFW marked channels',
-        id: 'spoilerNSFW',
-        type: 'switch',
-        value: false
-      },
-      {
-        name: 'Spoiler all media',
-        id: 'spoilerAll',
-        type: 'switch',
-        value: false
-      },
-      {
-        name: 'Friend request accept notification',
-        note: 'Show a notification when someone accepts your friend request',
-        id: 'friendRequestAccept',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Incoming friend request notification',
-        note: 'Show a notification when someone adds you',
-        id: 'friendRequestIncoming',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Bar color',
-        id: 'color',
-        type: 'color',
-        value: '#4a90e2',
-        options: {
-          defaultColor: '#4a90e2'
-        }
-      },
-      {
-        name: 'Set bar color to top role color',
-        id: 'roleColor',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Calculate timeout by number of words',
-        note: 'Long text will stay for longer',
-        id: 'wpmTimeout',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Words per minute',
-        id: 'wordsPerMinute',
-        type: 'slider',
-        value: 300,
-        min: 50,
-        max: 900,
-        markers: Array.from(Array(18), (_, i) => (i + 1) * 50),
-        stickToMarkers: true
-      },
-      {
-        name: 'Bar color for keyword notifications',
-        id: 'keywordColor',
-        type: 'color',
-        value: '#43b581',
-        options: {
-          defaultColor: '#43b581'
-        }
-      },
-      {
-        name: 'Use other bar color for keyword notifications',
-        id: 'useKeywordColor',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Pin keyword notifications',
-        note: 'Keyword notifications will not auto close',
-        id: 'pinKeyword',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Pin keyword notifications even if it would show anyway',
-        note: 'If a keyword is triggered in an unmuted channel, it will pin it',
-        id: 'alwaysPinKeyword',
-        type: 'switch',
-        value: false
-      },
-      {
-        name: 'Show notification if keyword appears in an edit',
-        id: 'editKeyword',
-        type: 'switch',
-        value: true
-      },
-      {
-        name: 'Keyword notifications',
-        note: 'Show a notification if it matches a keyword',
-        id: 'keywords',
-        type: 'keywords',
-        value: []
-      },
-      {
-        name: 'User ID blacklist',
-        note: 'Ignore notifications from certain users via ID',
-        id: 'userIds',
-        type: 'ids',
-        value: []
-      },
-      {
-        name: 'Channel ID blacklist',
-        note: 'Ignore notifications from certain channels via ID',
-        id: 'channelIds',
-        type: 'ids',
-        value: []
-      },
-      {
-        name: 'Server ID blacklist',
-        note: 'Ignore notifications from certain servers via ID',
-        id: 'serverIds',
-        type: 'ids',
-        value: []
-      },
-      {
-        type: 'note'
+        name: "QWERT",
+        discord_id: "678556376640913408",
+        github_username: "QWERTxD"
       }
     ],
-    changelog: [
-      {
-        title: 'Fixed',
-        type: 'fixed',
-        items: [
-          'Fixed not working.',
-        ]
-      }
-    ]
-  };
+    github_raw:
+      "https://raw.githubusercontent.com/QWERTxD/BetterDiscordPlugins/main/InAppNotifications/InAppNotifications.plugin.js",
+    version: "1.1.2",
+    description:
+      "Displays notifications such as new messages, friends added in Discord.",
+  },
+  changelog: [
+    {
+      "title": "Fixed",
+      "type": "fixed",
+      "items": [
+        "Fixed mentions not working.",
+      ]
+    }
+  ],
+  defaultConfig: [
+    {
+      type: "slider",
+      name: "Notification display time (seconds)",
+      note: "Sets the amount of time for a notification to stay on-screen.",
+      min: 3,
+      max: 25,
+      id: "notiTime",
+      value: 3,
+      markers: [...Array(20).keys()].map((e) => (e += 1)),
+      stickToMarkers: true,
+    },
+    {
+      type: "dropdown",
+      name: "Notifications Position",
+      note: "Note: a client reload is required for changes to take effect.",
+      value: 0,
+      id: "position",
+      options: [
+        { label: "Top Right", value: 0 },
+        { label: "Top Left", value: 1 },
+        { label: "Bottom Right", value: 2 },
+        { label: "Bottom Left", value: 3 },
+      ]
+    },
+    {
+      type: "textbox",
+      name: "Keyword Notifications",
+      note: "Push notifications if certain words were sent in a message. (Separate with a comma)",
+      id: "keywords",
+      value: "",
+    },
+    {
+      type: "switch",
+      name: "keywords case sensitive",
+      id: "case",
+      value: false,
+    },
+    {
+      type: "switch",
+      name: "Mark message as read when closing",
+      note: "Marks the message as read if you press the close button on a notification.",
+      id: "markAsRead",
+      value: true,
+    },
+    {
+      type: "switch",
+      name: "Display author's highest role color if available",
+      note: "Sets the author's color in the notification to its highest role color.",
+      id: "roleColor",
+      value: false,
+    },
+    {
+      type: "switch",
+      name: "Disable when window is not focused",
+      note: "Do not push notifications if Discord is not focused.",
+      id: "disableIfNoFocus",
+      value: false,
+    },
+    {
+      type: "switch",
+      name: "Disable on Do Not Disturb",
+      note: "Do not push notifications if the current user status is Do Not Disturb.",
+      id: "disableOnDnd",
+      value: false,
+    },
+    {
+      type: "switch",
+      name: "Disable DMs notifications",
+      note: "Do not push notifications from DM chats.",
+      id: "ignoreDMs",
+      value: false,
+    },
+    {
+      type: "switch",
+      name: "Friend requests notifications",
+      note: "Push notifications for accepted friend requests.",
+      id: "relationshipsNotis",
+      value: true,
+    },
+    {
+      type: "switch",
+      name: "Disable Group DMs notifications",
+      note: "Do not push notifications from DM groups.",
+      id: "ignoreDMGroups",
+      value: false,
+    },
+    {
+      type: "textbox",
+      name: "Ignored Users IDs (Split with `, `)",
+      note: "Do not push notifications if the author's id is specified.",
+      id: "ignoredUsers",
+      value: "",
+    },
+    {
+      type: "textbox",
+      name: "Ignored Servers IDs (Split with `, `)",
+      note: "Do not push notifications if the message was sent from a specific server.",
+      id: "ignoredServers",
+      value: "",
+    },
+    {
+      type: "textbox",
+      name: "Ignored Channels IDs (Split with `, `)",
+      note: "Do not push notifications if the message was sent from a specific channel.",
+      id: "ignoredChannels",
+      value: "",
+    }
+  ]
+};
 
-  /* Build */
-  const buildPlugin = ([Plugin, Api]) => {
-    const { ContextMenu, EmulatedTooltip, Toasts, Settings, Popouts, Modals, Utilities, WebpackModules, Filters, DiscordModules, ColorConverter, DOMTools, DiscordClasses, DiscordSelectors, ReactTools, ReactComponents, Logger, PluginUpdater, PluginUtilities, DiscordClassModules } = Api;
-    const { React, ModalStack, ContextMenuActions, ContextMenuItem, ContextMenuItemsGroup, ReactDOM, GuildStore, DiscordConstants, GuildMemberStore, GuildActions, SwitchRow, EmojiUtils, RadioGroup, Permissions, FlexChild, PopoutOpener, Textbox, RelationshipStore, WindowInfo, UserSettingsStore, NavigationUtils, SelectedChannelStore, PrivateChannelActions } = DiscordModules;
-
-    const Dispatcher = WebpackModules.getByProps('dispatch', 'subscribe');
-
-    const Patcher = XenoLib.createSmartPatcher(Api.Patcher);
-
-    const ChannelStore = WebpackModules.getByProps('getChannel', 'getDMFromUserId');
-    const UserStore = WebpackModules.getByProps('getCurrentUser', 'getUser');
-    const UserNameResolver = WebpackModules.getByProps('getName', 'getNickname');
-
-    const LurkerStore = WebpackModules.getByProps('isLurking');
-    const MuteStore = WebpackModules.getByProps('allowNoMessages');
-    const isMentionedUtils = WebpackModules.getByProps('isRawMessageMentioned');
-    const ParserModule = WebpackModules.getByProps('astParserFor', 'parse');
-    const MessageClasses = WebpackModules.getByProps('username', 'messageContent', 'usernameContainer');
-    const MarkupClassname = XenoLib.getClass('markup');
-    const { Messages } = WebpackModules.find(e => e._languages && e._languages.find(e => e && (e.name === 'English, US'))) || {};
-    const SysMessageUtils = WebpackModules.getByProps('getSystemMessageUserJoin', 'stringify');
-    const MessageParseUtils = (WebpackModules.getByProps('parseAndRebuild', 'default') || {}).default;
-    const CUser = WebpackModules.getByPrototypes('getAvatarSource', 'isLocalBot');
-    const TextElement = WebpackModules.getByDisplayName('Text') || WebpackModules.find(e => e.Text?.displayName === 'Text')?.Text;
-    const MessageComponent = WebpackModules.getByProps('MessageAccessories');
-    const MessageActionCreators = WebpackModules.getByProps('createMessageRecord');
-    const PlainTextUtils = WebpackModules.getByProps('isPlaintextPreviewableFile');
-    const TextInput = WebpackModules.getByDisplayName('TextInput');
-    const Switch = WebpackModules.getByDisplayName('Switch');
-    const { default: Scroller } = WebpackModules.find(e => e.hasOwnProperty('ScrollEvent')) || {};
-    const { TooltipContainer } = WebpackModules.getByProps('TooltipContainer') || {};
-    const TimestampUtils = WebpackModules.getByProps('fromTimestamp');
-    const FormText = WebpackModules.getByDisplayName('FormText');
-    // const OverflowMenu = WebpackModules.getByDisplayName('OverflowMenu');
-    const Button = WebpackModules.getByProps('Colors', 'Hovers', 'Looks', 'Sizes', 'Link');
-    const AckUtils = WebpackModules.getByProps('ack', 'bulkAck');
-    const UnreadStore = WebpackModules.getByProps('hasUnread', 'getMentionCount');
-    const { SpoilerDisplayContext } = WebpackModules.getByProps('SpoilerDisplayContext') || {};
-    const PermissionsStore = WebpackModules.getByProps('can', 'canManageUser');
-    const shouldRenderSpoilers = WebpackModules.find(e => !e.displayName && typeof e === 'function' && e.length === 2 && ~e.toString().indexOf('SpoilerRenderSetting.ON_CLICK'));
-
-
-    function PlusAlt(props) {
-      return React.createElement('svg', { width: 24, height: 24, viewBox: '0 0 18 18', ...props }, React.createElement('polygon', { fill: 'currentColor', points: '15 10 10 10 10 15 8 15 8 10 3 10 3 8 8 8 8 3 10 3 10 8 15 8' }));
+module.exports = !global.ZeresPluginLibrary
+  ? class {
+    constructor() {
+      this._config = config;
     }
 
-    function CloseButton(props) {
-      return React.createElement('svg', { width: 24, height: 24, viewBox: '0 0 24 24', ...props }, React.createElement('path', { fill: 'currentColor', d: 'M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z' }));
-    }
+    load() {
+      BdApi.showConfirmationModal(
+        "Library plugin is needed",
+        `The library plugin needed for AQWERT'sPluginBuilder is missing. Please click Download Now to install it.`,
+        {
+          confirmText: "Download",
+          cancelText: "Cancel",
+          onConfirm: () => {
+            request.get(
+              "https://rauenzi.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js",
+              (error, response, body) => {
+                if (error)
+                  return electron.shell.openExternal(
+                    "https://betterdiscord.net/ghdl?url=https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js"
+                  );
 
-    function OverflowMenu(props) {
-      return React.createElement('svg', { width: 24, height: 24, viewBox: '0 0 24 24', ...props }, React.createElement('path', { fill: 'currentColor', d: 'M12 16c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0-6c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0-6c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2z' }));
-    }
-
-    class KeywordItem extends React.PureComponent {
-      constructor(props) {
-        super(props);
-        this.onTextChange = this.onTextChange.bind(this);
-        this.handleBlur = this.handleBlur.bind(this);
-        this.handleRemove = this.handleRemove.bind(this);
-        this.handleOverflow = this.handleOverflow.bind(this);
-        this.state = {
-          value: props.keyword,
-          caseSensitive: props.caseSensitive,
-          matchWhole: props.matchWhole
-        };
-      }
-      onTextChange(value) {
-        this.setState({ value });
-      }
-      handleKeyPress(e) {
-        if (e.which === 13) e.currentTarget.blur();
-      }
-      handleBlur() {
-        this.props.onSave(this.state.value, this.state.caseSensitive, this.props.id);
-      }
-      handleRemove() {
-        this.props.onRemove(this.props.id);
-      }
-      handleOverflow(e) {
-        this.props.handleOverflow(e, { caseSensitive: this.state.caseSensitive, matchWhole: this.state.matchWhole }, (caseSensitive, matchWhole) => {
-          this.setState({ caseSensitive, matchWhole });
-          this.props.onSave(this.state.value, caseSensitive, matchWhole, this.props.id);
-        });
-      }
-      render() {
-        /* eslint-disable function-call-argument-newline */
-        /* eslint-disable indent */
-        return (
-          // eslint-disable-next-line function-paren-newline
-          React.createElement(FlexChild, { className: 'IAN-item-wrapper', align: FlexChild.Align.CENTER },
-            // eslint-disable-next-line function-paren-newline
-            React.createElement(FlexChild, { className: 'positionRelative-3HNyhz', style: { width: '100%' } },
-              React.createElement(TextInput, {
-                autoFocus: false,
-                disabled: false,
-                maxLength: 999,
-                onChange: this.onTextChange,
-                onKeyPress: this.handleKeyPress,
-                onBlur: this.handleBlur,
-                size: 'mini',
-                type: 'text',
-                value: this.state.value,
-                className: 'IAN-maxWidth IAN-inputInvisWrapepr',
-                inputClassName: 'IAN-inputInvis'
-              }),
-              React.createElement('div', { className: 'IAN-inputText' }, this.state.value)
-            ),
-            // eslint-disable-next-line function-paren-newline
-            React.createElement(FlexChild, { align: FlexChild.Align.CENTER, style: { margin: 0 } },
-            // eslint-disable-next-line function-paren-newline
-              React.createElement(TooltipContainer, { hideOnClick: false, text: React.createElement(FlexChild, { align: FlexChild.Align.CENTER, direction: FlexChild.Direction.VERTICAL }, React.createElement('div', {}, this.state.caseSensitive ? 'Case sensitive' : 'Case insensitive'), React.createElement('div', {}, this.state.matchWhole ? 'Match whole word' : 'Partial match')) },
-                React.createElement(Button, { size: Button.Sizes.MIN, color: Button.Colors.GREY, look: Button.Looks.BLANK, className: 'IAN-sideButton', onClick: this.handleOverflow }, React.createElement(OverflowMenu))
-              )
-            ),
-            // eslint-disable-next-line function-paren-newline
-            React.createElement(FlexChild, { align: FlexChild.Align.CENTER, style: { marginLeft: 0 } },
-              React.createElement(Button, { size: Button.Sizes.MIN, color: Button.Colors.GREY, look: Button.Looks.BLANK, className: 'IAN-sideButton', onClick: this.handleRemove }, React.createElement(CloseButton))
-            )
-          )
-        );
-        /* eslint-enable function-call-argument-newline */
-        /* eslint-enable indent */
-      }
-    }
-
-    const CTXMenu = WebpackModules.getByProps('default', 'MenuStyle');
-    const contextMenuItems = WebpackModules.find(m => m.MenuRadioItem && !m.default);
-
-    class InAppKeywordsContextMenu extends React.PureComponent {
-      constructor(props) {
-        super(props);
-        this.handleOnClose = this.handleOnClose.bind(this);
-        this.handleCaseChange = this.handleCaseChange.bind(this);
-        this.handleWholeChange = this.handleWholeChange.bind(this);
-        this.state = {
-          caseSensitive: props.caseSensitive,
-          matchWhole: props.matchWhole
-        };
-      }
-      handleOnClose() {
-        ContextMenuActions.closeContextMenu();
-        if (this.props.target instanceof HTMLElement) this.props.target.focus();
-      }
-      handleCaseChange(e) {
-        const newVal = !this.state.caseSensitive;
-        this.setState({ caseSensitive: newVal });
-        this.props.onChange(newVal, this.state.matchWhole);
-      }
-      handleWholeChange(e) {
-        const newVal = !this.state.matchWhole;
-        this.setState({ matchWhole: newVal });
-        this.props.onChange(this.state.caseSensitive, newVal);
-      }
-      render() {
-        return (
-          React.createElement(CTXMenu.default, {
-            onClose: this.handleOnClose,
-            id: 'xenolib-context'
-          }, XenoLib.createContextMenuGroup([
-            React.createElement(contextMenuItems.MenuCheckboxItem, {
-              id: 'insensitive',
-              label: 'Case Sensitive',
-              checked: this.state.caseSensitive,
-              action: this.handleCaseChange
-            })
-          ]), XenoLib.createContextMenuGroup([
-            React.createElement(contextMenuItems.MenuCheckboxItem, {
-              id: 'whore',
-              label: 'Match Whole',
-              checked: this.state.matchWhole,
-              action: this.handleWholeChange
-            })
-          ]))
-        );
-      }
-    }
-
-    class KeywordsComponent extends React.PureComponent {
-      constructor(props) {
-        super(props);
-        this.onTextChange = this.onTextChange.bind(this);
-        this.handleKeyPress = this.handleKeyPress.bind(this);
-        this.handleSave = this.handleSave.bind(this);
-        this.handleSaveButton = this.handleSaveButton.bind(this);
-        this.handleRemoveItem = this.handleRemoveItem.bind(this);
-        this.handleOverflow = this.handleOverflow.bind(this);
-        this.state = {
-          value: '',
-          caseSensitive: false,
-          matchWhole: true,
-          items: props.value
-        };
-      }
-      onTextChange(value) {
-        this.setState({ value });
-      }
-      handleKeyPress(e) {
-        if (e.which !== 13) return;
-        this.handleSave();
-      }
-      handleSave(keyword = this.state.value, caseSensitive = this.state.caseSensitive, matchWhole = this.state.matchWhole, id = TimestampUtils.fromTimestamp(Date.now())) {
-        keyword = keyword.trim();
-        let found = true;
-        const item = this.state.items.find(e => e.id === id) || (found = false, {});
-        if (!keyword) {
-          if (found) this.handleRemoveItem(id);
-          return;
-        }
-        item.keyword = keyword;
-        item.caseSensitive = caseSensitive;
-        item.matchWhole = matchWhole;
-        item.id = id;
-        if (!found) this.state.items.unshift(item);
-        this.props.onChange(this.state.items);
-        if (!found) this.setState({ value: '', caseSensitive: false, matchWhole: true });
-      }
-      handleSaveButton() {
-        this.handleSave();
-      }
-      handleRemoveItem(id) {
-        const idx = this.state.items.findIndex(e => e.id === id);
-        if (idx === -1) return;
-        this.state.items.splice(idx, 1);
-        this.props.onChange(this.state.items);
-        this.forceUpdate();
-      }
-      _handleOverflow(e, values, onChange) {
-        ContextMenuActions.openContextMenu(e, _ => React.createElement(XenoLib.ReactComponents.ErrorBoundary, { label: 'Donate button CTX menu' }, React.createElement(InAppKeywordsContextMenu, { ...values, onChange })));
-      }
-      handleOverflow(e) {
-        this._handleOverflow(e, { caseSensitive: this.state.caseSensitive, matchWhole: this.state.matchWhole }, (caseSensitive, matchWhole) => this.setState({ caseSensitive, matchWhole }));
-      }
-      render() {
-        /* eslint-disable function-call-argument-newline */
-        /* eslint-disable indent */
-        return [
-          React.createElement(FormText, { type: 'description' }, this.props.subTitle),
-          // eslint-disable-next-line function-paren-newline
-          React.createElement(FlexChild, { direction: FlexChild.Direction.VERTICAL, className: 'IAN-items-wrapper' },
-          // eslint-disable-next-line function-paren-newline
-            React.createElement(FlexChild, { style: { marginRight: 16 } },
-              React.createElement(TextInput, {
-                autoFocus: false,
-                disabled: false,
-                maxLength: 999,
-                onChange: this.onTextChange,
-                onKeyPress: this.handleKeyPress,
-                size: 'default',
-                type: 'text',
-                value: this.state.value,
-                className: 'IAN-maxWidth'
-              }),
-              // eslint-disable-next-line function-paren-newline
-              React.createElement(FlexChild, { align: FlexChild.Align.CENTER, style: { margin: 0 } },
-              // eslint-disable-next-line function-paren-newline
-                React.createElement(TooltipContainer, { hideOnClick: false, text: React.createElement(FlexChild, { align: FlexChild.Align.CENTER, direction: FlexChild.Direction.VERTICAL }, React.createElement('div', {}, this.state.caseSensitive ? 'Case sensitive' : 'Case insensitive'), React.createElement('div', {}, this.state.matchWhole ? 'Match whole word' : 'Partial match')) },
-                  React.createElement(Button, { size: Button.Sizes.MIN, color: Button.Colors.GREY, look: Button.Looks.BLANK, className: 'IAN-sideButton', onClick: this.handleOverflow }, React.createElement(OverflowMenu))
-                )
-              ),
-              // eslint-disable-next-line function-paren-newline
-              React.createElement(FlexChild, { align: FlexChild.Align.CENTER, style: { marginLeft: 0 } },
-                React.createElement(Button, { size: Button.Sizes.MIN, color: Button.Colors.GREY, look: Button.Looks.BLANK, className: 'IAN-sideButton', onClick: this.handleSaveButton }, React.createElement(PlusAlt))
-              )
-            ),
-            // eslint-disable-next-line function-paren-newline
-            React.createElement(Scroller, { className: 'IAN-itemsScroller' }, this.state.items.map(e => React.createElement(KeywordItem, { key: e.id, onSave: this.handleSave, onRemove: this.handleRemoveItem, handleOverflow: this._handleOverflow, ...e })))
-          )
-        ];
-        /* eslint-enable function-call-argument-newline */
-        /* eslint-enable indent */
-      }
-    }
-
-    class Keywords extends Settings.SettingField {
-      constructor(name, note, value, onChange) {
-        super(name, '', onChange, KeywordsComponent, {
-          onChange: reactElement => keywords => {
-            this.onChange(keywords);
+                fs.writeFileSync(
+                  path.join(BdApi.Plugins.folder, "0PluginLibrary.plugin.js"),
+                  body
+                );
+              }
+            );
           },
-          value,
-          subTitle: note
-        });
-      }
-    }
-
-    class SomeIDItem extends React.PureComponent {
-      constructor(props) {
-        super(props);
-        this.onTextChange = this.onTextChange.bind(this);
-        this.handleBlur = this.handleBlur.bind(this);
-        this.handleRemove = this.handleRemove.bind(this);
-        this.state = {
-          value: props.someId
-        };
-      }
-      onTextChange(value) {
-        this.setState({ value });
-      }
-      handleKeyPress(e) {
-        if (e.which === 13) e.currentTarget.blur();
-      }
-      handleBlur() {
-        this.props.onSave(this.state.value, this.props.id);
-      }
-      handleRemove() {
-        this.props.onRemove(this.props.id);
-      }
-      render() {
-        /* eslint-disable function-call-argument-newline */
-        /* eslint-disable indent */
-        return (
-          // eslint-disable-next-line function-paren-newline
-          React.createElement(FlexChild, { className: 'IAN-item-wrapper', align: FlexChild.Align.CENTER },
-            // eslint-disable-next-line function-paren-newline
-            React.createElement(FlexChild, { className: 'positionRelative-3HNyhz', style: { width: '100%' } },
-              React.createElement(TextInput, {
-                autoFocus: false,
-                disabled: false,
-                maxLength: 999,
-                onChange: this.onTextChange,
-                onKeyPress: this.handleKeyPress,
-                onBlur: this.handleBlur,
-                size: 'mini',
-                type: 'text',
-                value: this.state.value,
-                className: 'IAN-maxWidth IAN-inputInvisWrapepr',
-                inputClassName: 'IAN-inputInvis'
-              }),
-              React.createElement('div', { className: 'IAN-inputText' }, this.state.value)
-            ),
-            // eslint-disable-next-line function-paren-newline
-            React.createElement(FlexChild, { align: FlexChild.Align.CENTER, style: { marginLeft: 0 } },
-              React.createElement(Button, { size: Button.Sizes.MIN, color: Button.Colors.GREY, look: Button.Looks.BLANK, className: 'IAN-sideButton', onClick: this.handleRemove }, React.createElement(CloseButton))
-            )
-          )
-        );
-        /* eslint-enable function-call-argument-newline */
-        /* eslint-enable indent */
-      }
-    }
-
-    class SomeIDsComponent extends React.PureComponent {
-      constructor(props) {
-        super(props);
-        this.onTextChange = this.onTextChange.bind(this);
-        this.handleKeyPress = this.handleKeyPress.bind(this);
-        this.handleSave = this.handleSave.bind(this);
-        this.handleSaveButton = this.handleSaveButton.bind(this);
-        this.handleRemoveItem = this.handleRemoveItem.bind(this);
-        this.state = {
-          value: '',
-          items: props.value
-        };
-      }
-      onTextChange(value) {
-        this.setState({ value });
-      }
-      handleKeyPress(e) {
-        if (e.which !== 13) return;
-        this.handleSave();
-      }
-      handleSave(someId = this.state.value, id = TimestampUtils.fromTimestamp(Date.now())) {
-        someId = someId.trim();
-        let found = true;
-        const item = this.state.items.find(e => e.id === id) || (found = false, {});
-        if (!someId) {
-          if (found) this.handleRemoveItem(id);
-          return;
         }
-        item.someId = someId;
-        item.id = id;
-        if (!found) this.state.items.unshift(item);
-        this.props.onChange(this.state.items);
-        if (!found) this.setState({ value: '' });
-      }
-      handleSaveButton() {
-        this.handleSave();
-      }
-      handleRemoveItem(id) {
-        const idx = this.state.items.findIndex(e => e.id === id);
-        if (idx === -1) return;
-        this.state.items.splice(idx, 1);
-        this.props.onChange(this.state.items);
-        this.forceUpdate();
-      }
-      render() {
-        /* eslint-disable function-call-argument-newline */
-        /* eslint-disable indent */
-        return [
-          React.createElement(FormText, { type: 'description' }, this.props.subTitle),
-          // eslint-disable-next-line function-paren-newline
-          React.createElement(FlexChild, { direction: FlexChild.Direction.VERTICAL, className: 'IAN-items-wrapper' },
-          // eslint-disable-next-line function-paren-newline
-            React.createElement(FlexChild, { style: { marginRight: 16 } },
-              React.createElement(TextInput, {
-                autoFocus: false,
-                disabled: false,
-                maxLength: 999,
-                onChange: this.onTextChange,
-                onKeyPress: this.handleKeyPress,
-                size: 'default',
-                type: 'text',
-                value: this.state.value,
-                className: 'IAN-maxWidth'
-              }),
-              // eslint-disable-next-line function-paren-newline
-              React.createElement(FlexChild, { align: FlexChild.Align.CENTER, style: { marginLeft: 0 } },
-                React.createElement(Button, { size: Button.Sizes.MIN, color: Button.Colors.GREY, look: Button.Looks.BLANK, className: 'IAN-sideButton', onClick: this.handleSaveButton }, React.createElement(PlusAlt))
-              )
-            ),
-            // eslint-disable-next-line function-paren-newline
-            React.createElement(Scroller, { className: 'IAN-itemsScroller' }, this.state.items.map(e => React.createElement(SomeIDItem, { key: e.id, onSave: this.handleSave, onRemove: this.handleRemoveItem, ...e })))
-          )
-        ];
-        /* eslint-enable function-call-argument-newline */
-        /* eslint-enable indent */
-      }
+      );
     }
 
-    class SomeIDs extends Settings.SettingField {
-      constructor(name, note, value, onChange) {
-        super(name, '', onChange, SomeIDsComponent, {
-          onChange: reactElement => ids => {
-            this.onChange(ids);
-          },
-          value,
-          subTitle: note
-        });
-      }
-    }
+    start() {}
 
-    class ExtraText extends Settings.SettingField {
-      constructor(name, note) {
-        super(name, note, null, TextElement, {
-          children: 'To change the position or backdrop background color of the notifications, check XenoLib settings.'
-        });
-      }
-    }
+    stop() {}
+  }
+  : (([Plugin, Library]) => {
+    const {
+      DiscordModules,
+      WebpackModules,
+      PluginUtilities,
+      Settings,
+      Patcher,
+    } = Library;
 
-    const MessageRenderers = WebpackModules.getByProps('renderImageComponent');
-    const ImageUtils = WebpackModules.getByProps('fit', 'getRatio');
+    const {
+      React,
+      ReactDOM,
+      Dispatcher,
+      UserStore,
+      ChannelStore,
+      GuildStore,
+      NavigationUtils,
+      UserStatusStore,
+      SelectedChannelStore,
+      GuildMemberStore,
+      // UserProfileModals,
+      InviteActions,
+    } = DiscordModules;
+    const { Webpack } = BdApi;
 
-    const IMAGE_RE = /\.(png|jpe?g|webp|gif)$/i;
-    const VIDEO_RE = /\.(mp4|webm|mov)$/i;
-    const AUDIO_RE = /\.(mp3|m4a|ogg|wav|flac)$/i;
+    const ChannelTypes = Webpack.getModule(Webpack.Filters.byProps("GUILD_TEXT"), { searchExports: true });
+    const MuteStore = WebpackModules.getByProps("isSuppressEveryoneEnabled");
+    const isMentioned = { isRawMessageMentioned: WebpackModules.getModule(Webpack.Filters.byStrings("rawMessage", "suppressEveryone"), {searchExports: true}) };
+    const Markdown = WebpackModules.getByProps("parse", "parseTopic");
+    const AckUtils = { ack: Webpack.getModule(Webpack.Filters.byStrings("CHANNEL_ACK"), { searchExports: true }) };
+    const CallJoin = WebpackModules.getByString("M11 5V3C16.515 3 21 7.486 21 13H19C19 8.589 15.411 5 11 5ZM17 13H15C15 10.795 13.206 9 11 9V7C14.309 7 17 9.691 17 13ZM11 11V13H13C13 11.896 12.105 11 11 11ZM14 16H18C18.553 16 19 16.447 19 17V21C19 21.553 18.553 22 18 22H13C6.925 22 2 17.075 2 11V6C2 5.447 2.448 5 3 5H7C7.553 5 8 5.447 8 6V10C8 10.553 7.553 11 7 11H6C6.063 14.938 9 18 13 18V17C13 16.447 13.447 16 14 16Z");
+    const ImagePlaceholder = WebpackModules.getByString("M6 2C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V6C22 3.79086 20.2091 2 18 2H6ZM10 8C10 6.8952 9.1032 6 8 6C6.8944 6 6 6.8952 6 8C6 9.1056 6.8944 10 8 10C9.1032 10 10 9.1056 10 8ZM9 14L6 18H18L15 11L11 16L9 14Z")
+    const PersonAdd = WebpackModules.getByString("M21 3H24V5H21V8H19V5H16V3H19V0H21V3ZM10 12C12.205 12 14 10.205 14 8C14 5.795 12.205 4 10 4C7.795 4 6 5.795 6 8C6 10.205 7.795 12 10 12ZM10 13C5.289 13 2 15.467 2 19V20H18V19C18 15.467 14.711 13 10 13Z")
+    const CloseIcon = WebpackModules.getByString("M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z");
+    const StickerIcon = WebpackModules.getByString("M12.0002 0.662583V5.40204C12.0002 6.83974 13.1605 7.99981 14.5986 7.99981H19.3393C19.9245 7.99981 20.222 7.29584 19.8055 6.8794L13.1209 0.196569C12.7043 -0.219868 12.0002 0.0676718 12.0002 0.662583ZM14.5759 10.0282C12.0336 10.0282 9.96986 7.96441 9.96986 5.42209V0.0583083H1.99397C0.897287 0.0583083 0 0.955595 0 2.05228V18.0041C0 19.1007 0.897287 19.998 1.99397 19.998H17.9457C19.0424 19.998 19.9397 19.1007 19.9397 18.0041V10.0282H14.5759ZM11.9998 12.2201C11.9998 13.3245 11.1046 14.2198 10.0002 14.2198C8.8958 14.2198 8.00052 13.3245 8.00052 12.2201H6.66742C6.66742 14.0607 8.15955 15.5529 10.0002 15.5529C11.8408 15.5529 13.3329 14.0607 13.3329 12.2201H11.9998ZM4.44559 13.331C4.44559 13.9446 3.94821 14.442 3.33467 14.442C2.72112 14.442 2.22375 13.9446 2.22375 13.331C2.22375 12.7175 2.72112 12.2201 3.33467 12.2201C3.94821 12.2201 4.44559 12.7175 4.44559 13.331ZM16.6657 14.442C17.2793 14.442 17.7766 13.9446 17.7766 13.331C17.7766 12.7175 17.2793 12.2201 16.6657 12.2201C16.0522 12.2201 15.5548 12.7175 15.5548 13.331C15.5548 13.9446 16.0522 14.442 16.6657 14.442Z")
 
-    class MessageAccessories extends (MessageComponent && MessageComponent.MessageAccessories || React.PureComponent) {
-      constructor(props) {
-        super(props);
-        this.renderImageComponent = this.renderImageComponent.bind(this);
-        this.renderVideoComponent = this.renderVideoComponent.bind(this);
-        this.setContainerRef = this.setContainerRef.bind(this);
+    const openProfileModal = Webpack.getModule(Webpack.Filters.byStrings("friendToken"), { searchExports: true });
+    const UserProfileModals = {
+      open: (id) => {
+        openProfileModal({ userId: id });
       }
-      renderImageComponent(props) {
-        const { width, height } = ImageUtils.fit({
-          width: props.width,
-          height: props.height,
-          maxWidth: this.state.__IAN_maxWidth || 290,
-          maxHeight: props.height
-        });
-        props.width = width;
-        props.height = height;
-        props.__BIV_embed = true;
-        return MessageRenderers.renderImageComponent(props);
-      }
-      renderVideoComponent(props) {
-        const { width, height } = ImageUtils.fit({
-          width: props.width,
-          height: props.height,
-          maxWidth: this.state.__IAN_maxWidth || 290,
-          maxHeight: props.height
-        });
-        props.width = width;
-        props.height = height;
-        props.__BIV_embed = true;
-        return MessageRenderers.renderVideoComponent(props);
-      }
-      renderAttachments(e) {
-        const ret = super.renderAttachments(e);
-        if (!ret) return ret;
-        const finalRet = [];
-        let files = 0;
-        let textFiles = 0;
-        const images = 0;
-        const videos = 0;
-        for (const item of ret) {
-          const props = Utilities.findInReactTree(ret, e => e && e.attachment && typeof e.attachment.content_type === 'string');
-          if (!props) continue;
-          props.renderImageComponent = this.renderImageComponent;
-          props.renderVideoComponent = this.renderVideoComponent;
-          props.__IAN_spoilerAll = this.props.spoilerAll;
-          const { attachment } = props;
-          if ((IMAGE_RE.test(attachment.filename) && attachment.width > 0 && attachment.width > 0) || (VIDEO_RE.test(attachment.filename) && attachment.proxy_url)) {
-            finalRet.push(item);
-            break;
-            /* } else if (AUDIO_RE.test(attachment.filename)) { */
-          } else if (PlainTextUtils.isPlaintextPreviewableFile(attachment.filename)) {
-            textFiles++;
-            finalRet.push(item);
-            break;
-          } else {
-            files++;
-            finalRet.push(item);
-            if (files >= 3) break;
-            if (textFiles && files >= 2) break;
-          }
-        }
-        const remaining = ret.length - finalRet.length;
-        if (remaining) finalRet.push(React.createElement('div', {
-          className: 'messageAttachment-1aDidq',
-          style: {
-            width: '100%'
-          }
-        }, React.createElement('div', {
-          className: 'attachment-33OFj0',
-          style: {
-            textAlign: 'center',
-            padding: 5
-          }
-        }, React.createElement('div', {
-          style: {
-            borderRadius: 12
-          }
-        }, remaining === 1 ? '1 more attachment' : `${remaining} more attachments`))));
-
-        return finalRet;
-      }
-      renderEmbeds(e) {
-        const ret = super.renderEmbeds(e);
-        if (!ret) return ret;
-        const finalRet = [];
-        for (const item of ret) {
-          const embed = Utilities.findInReactTree(item, e => e && typeof e.maxMediaHeight !== 'undefined');
-          if (!embed) continue;
-          const { width, height } = ImageUtils.fit(embed.maxMediaWidth, embed.maxMediaHeight, this.state.__IAN_maxWidth ? this.state.__IAN_maxWidth - 25 : 275, embed.maxMediaHeight);
-          embed.maxMediaWidth = width;
-          embed.maxMediaHeight = height;
-          embed.spoiler = this.props.spoilerAll;
-          finalRet.push(item);
-          break;
-        }
-        const remaining = ret.length - finalRet.length;
-        if (remaining) finalRet.push(React.createElement('div', {
-          className: 'messageAttachment-1aDidq',
-          style: {
-            width: '100%'
-          }
-        }, React.createElement('div', {
-          className: 'attachment-33OFj0',
-          style: {
-            textAlign: 'center',
-            padding: 5
-          }
-        }, React.createElement('div', {
-          style: {
-            borderRadius: 12
-          }
-        }, remaining === 1 ? '1 more embed' : `${remaining} more embeds`))));
-
-        return finalRet;
-      }
-      setContainerRef(ref) {
-        if (!ref) return;
-        this.setState({
-          __IAN_maxWidth: ref.offsetWidth
-        });
-      }
-      handleOnClick(e) {
-        e.stopPropagation();
-      }
-      render() {
-        if (!super.render) return 'MessageAccessories could not be found!';
-        const ret = super.render();
-        if (ret) {
-          const accessories = Array.isArray(ret) ? ret[1] : ret;
-
-          if (accessories) {
-            accessories.ref = this.setContainerRef;
-            accessories.props.onClick = this.handleOnClick;
-          }
-        }
-        return ret;
-      }
-    }
-
-    const FriendsSectionSetter = WebpackModules.find(e => e.setSection && ~e.setSection.toString().indexOf('FRIENDS_SET_SECTION'));
-
-    const RetTypes = {
-      SILENT: false,
-      REPLY: 'reply',
-      KEYWORD: 'keyword',
-      PING: 'ping',
-      REPLY_NORMAL: 'reply-normal',
-      KEYWORD_NORMAL: 'keyowrd-normal',
-      NORMAL: true
     };
 
-    const ThreadNotificationsStuff = WebpackModules.getByProps('computeThreadNotificationSetting');
-    const ThreadConstants = WebpackModules.getByProps('ThreadMemberFlags');
-    const ThreadStateStore = WebpackModules.getByProps('getThreadSidebarState') || WebpackModules.getByProps('getSidebarState');
-    const MessageStore = WebpackModules.getByProps('getMessages', 'getMessage');
-    const UserSettings = WebpackModules.getByProps('RenderSpoilers');
-    const StatusStore = WebpackModules.getByProps('getStatus', 'isMobileOnline');
+    const colors = {
+      online: "#43b581",
+      dnd: "#f04747",
+      away: "#faa61a",
+      offline: "#747f8d",
+      brand: "#7289da",
+    };
 
-    return class InAppNotifications extends Plugin {
+    const classes = {
+      ...WebpackModules.getByProps("horizontal", "flex", "justifyStart"),
+      ...WebpackModules.getByProps("avatar", "alt"),
+    };
+    /* Created by Strencher */
+    const Spring = WebpackModules.getModule(e => e.useSpring);
+    const { useSpring, animated } = Spring;
+
+    const createStore = (state) => {
+      const listeners = new Set();
+
+      const api = {
+        getState(collector) {
+          return collector ? collector(state) : state;
+        },
+        setState(partial) {
+          const partialState =
+            typeof partial === "function" ? partial(state) : partial;
+          state = Object.assign({}, state, partialState);
+          listeners.forEach((listener) => {
+            listener(state);
+          });
+        },
+        get listeners() {
+          return listeners;
+        },
+        on(listener) {
+          if (listeners.has(listener)) return;
+          listeners.add(listener);
+
+          return () => listeners.delete(listener);
+        },
+        off(listener) {
+          return listeners.delete(listener);
+        },
+      };
+
+      function useState(collector) {
+        collector = typeof collector === "function" ? collector : (e) => e;
+        const forceUpdate = React.useReducer((e) => e + 1, 0)[1];
+
+        React.useEffect(() => {
+          const handler = () => forceUpdate();
+
+          listeners.add(handler);
+
+          return () => listeners.delete(handler);
+        }, []);
+
+        return collector(api.getState());
+      }
+
+      return [useState, api];
+    };
+
+    const { useEffect, useState } = React;
+
+    const [useStore, api] = createStore({ toasts: [] });
+
+    const QWERTLib = new (class {
+      Toasts = {
+        _api: api,
+        get RunningToasts() {
+          return api.getState((e) => e.toasts);
+        },
+
+        Toast: function Toast(props) {
+          const {
+            children = [],
+            avatar,
+            id,
+            author,
+            onClick = (_) => {},
+            color,
+            time = 3000,
+            onManualClose,
+            icon,
+          } = props;
+          const [readyToClose, setReadyToClose] = useState(false);
+
+          useEffect(
+            (_) => {
+              if (readyToClose) {
+                api.setState((state) => {
+                  const index = state.toasts.findIndex((e) => e.id === id);
+                  if (index < 0) return state;
+                  state.toasts.splice(index, 1);
+                  return state;
+                });
+                if (props.onClose) props.onClose();
+              }
+            },
+            [readyToClose]
+          );
+          const spring = useSpring({
+            from: {
+              progress: 0,
+              scale: readyToClose ? 1 : 0,
+            },
+            to: {
+              progress: 100,
+              scale: readyToClose ? 0 : 1,
+            },
+            onRest: (_) => {
+              setReadyToClose(true);
+            },
+            config: (key) => {
+              let duration = time;
+              if (key === "scale") duration = 100;
+
+              return { duration };
+            },
+          });
+
+          return React.createElement(animated.div, {
+            className: "qwert-toast",
+            id: id,
+            onMouseOver: (_) => {
+              spring.progress.pause();
+            },
+            onMouseOut: (_) => {
+              spring.progress.resume();
+            },
+            style: {
+              scale: spring.scale.to((e) => {
+                return e;
+              }),
+            },
+            children: [
+              icon &&
+              React.createElement("div", {
+                className: "qwert-toast-icon-container",
+                children: icon,
+              }),
+              avatar &&
+              React.createElement("div", {
+                className: "qwert-toast-avatar-container",
+                children: React.createElement("img", {
+                  src: avatar,
+                  className: "qwert-toast-avatar",
+                }),
+              }),
+              React.createElement(
+                "div",
+                {
+                  onClick: function () {
+                    onClick(), setReadyToClose(true);
+                  },
+                },
+                author &&
+                React.createElement(
+                  "strong",
+                  {
+                    className: "qwert-toast-author",
+                  },
+                  author
+                ),
+                React.createElement(
+                  "div",
+                  {
+                    className: `qwert-toast-text ${classes.flex} ${classes.horizontal} ${classes.noWrap} ${classes.justifyStart}`,
+                  },
+                  children
+                )
+              ),
+              React.createElement(animated.div, {
+                className: "qwert-toast-bar",
+                style: {
+                  width: spring.progress.to((e) => `${e}%`),
+                  background: color ?? colors.brand,
+                },
+              }),
+              React.createElement(
+                "svg",
+                {
+                  className: "qwert-toast-close",
+                  width: "16",
+                  height: "16",
+                  viewBox: "0 0 24 24",
+                  onClick: function () {
+                    onManualClose ? onManualClose() : () => {};
+                    setReadyToClose(true);
+                  },
+                },
+                React.createElement(CloseIcon)
+              ),
+            ],
+          });
+        },
+
+        detroy(id) {
+          const state = api.getState().toasts;
+          const toast = state.find((e) => e.id === id);
+          if (!toast) return false;
+
+          if (!toast.ref.current) return false;
+          toast.ref.current.close();
+          state.toasts.splice(state.toasts.indexOf(toast), 1);
+          api.setState({ toasts });
+        },
+
+        create(children, props) {
+          const id = QWERTLib.createUUID();
+
+          api.setState((state) => ({
+            toasts: state.toasts.concat({ children, ...props, id }),
+          }));
+
+          return id;
+        },
+
+        initialize() {
+          const DOMElement = document.createElement("div");
+          DOMElement.className = "qwert-toasts";
+
+          function QWERTToasts() {
+            const toasts = useStore((s) => s.toasts);
+            return toasts.map((toast) =>
+              React.createElement(QWERTLib.Toasts.Toast, {
+                ...toast,
+                key: toast.id,
+              })
+            );
+          }
+
+          ReactDOM.render(React.createElement(QWERTToasts, {}), DOMElement);
+          if (document.querySelector(".qwert-toasts")) return;
+          document.getElementById("app-mount").appendChild(DOMElement);
+        },
+        shutdown() {
+          const DOMElement =
+            document.getElementsByClassName("qwert-toasts")[0];
+          ReactDOM.unmountComponentAtNode(DOMElement);
+          DOMElement.remove();
+        },
+      };
+
+      createUUID() {
+        return "xxxxxxxxxxxxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+          var r = (Math.random() * 16) | 0,
+            v = c == "x" ? r : (r & 0x3) | 0x8;
+          return v.toString(16);
+        });
+      }
+
+      initialize() {
+        this.Toasts.initialize();
+      }
+
+      shutdown() {
+        this.Toasts.shutdown();
+      }
+    })();
+    class plugin extends Plugin {
       constructor() {
         super();
-        /*
-         * why are we letting Zere, the braindead American let control BD when he can't even
-         * fucking read clearly documented and well known standards, such as __filename being
-         * the files full fucking path and not just the filename itself, IS IT REALLY SO HARD
-         * TO FUCKING READ?! https://nodejs.org/api/modules.html#modules_filename
-         */
-        const _zerecantcode_path = require('path');
-        const theActualFileNameZere = _zerecantcode_path.join(__dirname, _zerecantcode_path.basename(__filename));
-        XenoLib.changeName(theActualFileNameZere, 'InAppNotifications');
-        const oOnStart = this.onStart.bind(this);
-        this.onStart = () => {
-          try {
-            oOnStart();
-          } catch (e) {
-            Logger.stacktrace('Failed to start!', e);
-            PluginUpdater.checkForUpdate(this.name, this.version, this._config.info.github_raw);
-            XenoLib.Notifications.error(`[**${this.name}**] Failed to start! Please update it, press CTRL + R, or ${GuildStore.getGuild(XenoLib.supportServerId) ? 'go to <#639665366380838924>' : '[join my support server](https://discord.gg/NYvWdN5)'} for further assistance.`, { timeout: 0 });
-            try {
-              this.onStop();
-            } catch (e) { }
-          }
+
+        this.getSettingsPanel = () => {
+          return this.buildSettingsPanel().getElement();
         };
-        const oMESSAGE_CREATE = this.MESSAGE_CREATE.bind(this);
-        this.MESSAGE_CREATE = e => {
+
+        try {
+          // QWERTLib.Toasts.create(["Successfully started ", React.createElement("strong", null, "In App Notifications"), "!"], {
+          //     author: "QWERT Library",
+          //     color: colors.online,
+          //     icon: React.createElement(WebpackModules.findByDisplayName("Checkmark"), {
+          //         style: {
+          //             color: colors.online
+          //         }
+          //     }),
+          //     time: 6000,
+          //     onClick: () => {
+          //         InviteActions.acceptInviteAndTransitionToInviteChannel("zMnHFAKsu3");
+          //     }
+          // })
+        } catch (e) {
+          console.log(
+            `%c[InAppNotifications]%c Error!%c`,
+            "color: #3a71c1;",
+            "font-weight: 700; color: #b3001b;",
+            "\n",
+            e
+          );
+          BdApi.alert(
+            "InAppNotifications",
+            "There was an error while trying to start the plugin.\n Try checking the console for any errors from this plugin.\nFor any further support, join my support server (https://discord.gg/zJbXFXNAhJ)"
+          );
+        }
+
+        const om = this.onMessage.bind(this);
+        this.onMessage = (e) => {
           try {
-            oMESSAGE_CREATE(e);
+            om(e);
           } catch (e) {
-            this.errorCount++;
-            if (this.errorCount >= 10) {
-              Logger.stacktrace('Error in MESSAGE_CREATE dispatch handler', e);
-              PluginUpdater.checkForUpdate(this.name, this.version, this._config.info.github_raw);
-              XenoLib.Notifications.error(`[**${this.name}**] Plugin is throwing errors and is in a broken state, please update it or ${GuildStore.getGuild(XenoLib.supportServerId) ? 'go to <#639665366380838924>' : '[join my support server](https://discord.gg/NYvWdN5)'} for further assistance.`, { timeout: 0 });
-              try {
-                this.onStop();
-              } catch (e) { }
+            console.log(
+              `%c[InAppNotifications]%c Error!%c`,
+              "color: #3a71c1;",
+              "font-weight: 700; color: #b3001b;",
+              "\n",
+              e
+            );
+            try {
+              QWERTLib.Toasts.create(
+                "There was an error while trying to start the plugin.\n Try checking the console for any errors from this plugin.\nFor any further support, click here to join my support server.",
+                {
+                  author: "In App Notifications",
+                  color: colors.dnd,
+                  icon: React.createElement(CloseIcon, {
+                    style: {
+                      color: colors.dnd,
+                    },
+                  }),
+                  time: 7000,
+                  onClick: () => {
+                    InviteActions.acceptInviteAndTransitionToInviteChannel(
+                      "zMnHFAKsu3"
+                    );
+                  },
+                }
+              );
+            } catch {
+              BdApi.alert(
+                "InAppNotifications",
+                "There was an error while trying to start the plugin.\n Try checking the console for any errors from this plugin.\nFor any further support, join my support server (https://discord.gg/zJbXFXNAhJ)"
+              );
             }
           }
         };
-        this.events = ['MESSAGE_CREATE', 'MESSAGE_UPDATE', 'FRIEND_REQUEST_ACCEPTED', 'RELATIONSHIP_ADD', 'CHANNEL_SELECT'];
-        this.handleUnreadsChanged = this.handleUnreadsChanged.bind(this);
-        for (const event of this.events) this[event] = Utilities.suppressErrors(this[event].bind(this), `${event} listener`);
-        try {
-          WebpackModules.getByProps('openModal', 'hasModalOpen').closeModal(`${this.name}_DEP_MODAL`);
-        } catch (e) { }
+        const friendRequestFunc = this.friendRequest.bind(this);
+        this.friendRequest = (e) => {
+          try {
+            friendRequestFunc(e);
+          } catch (e) {
+            console.log(
+              `%c[InAppNotifications]%c Error!%c`,
+              "color: #3a71c1;",
+              "font-weight: 700; color: #b3001b;",
+              "\n",
+              e
+            );
+            try {
+              QWERTLib.Toasts.create(
+                "There was an error while trying to start the plugin.\n Try checking the console for any errors from this plugin.\nFor any further support, click here to join my support server.",
+                {
+                  author: "In App Notifications",
+                  icon: React.createElement(CloseIcon, {
+                    style: {
+                      color: colors.dnd,
+                    },
+                  }),
+                  time: 7000,
+                  onClick: () => {
+                    InviteActions.acceptInviteAndTransitionToInviteChannel(
+                      "zMnHFAKsu3"
+                    );
+                  },
+                }
+              );
+            } catch {
+              BdApi.alert(
+                "InAppNotifications",
+                "There was an error while trying to start the plugin.\n Try checking the console for any errors from this plugin.\nFor any further support, join my support server (https://discord.gg/zJbXFXNAhJ)"
+              );
+            }
+          }
+        };
       }
+
       onStart() {
-        const shouldPass = e => e && e.constructor && typeof e.constructor.name === 'string' && e.constructor.name.indexOf('HTML');
-        if (shouldPass(window.Lightcord) || shouldPass(window.LightCord) || shouldPass(window.LightNative)) return XenoLib.Notifications.warning(`[${this.getName()}] Lightcord is an unofficial and unsafe client with stolen code that is falsely advertising that it is safe, Lightcord has allowed the spread of token loggers hidden within plugins redistributed by them, and these plugins are not made to work on it. Your account is very likely compromised by malicious people redistributing other peoples plugins, especially if you didn't download this plugin from [GitHub](https://github.com/1Lighty/BetterDiscordPlugins/edit/master/Plugins/MessageLoggerV2/MessageLoggerV2.plugin.js), you should change your password immediately. Consider using a trusted client mod like [BandagedBD](https://rauenzi.github.io/BetterDiscordApp/) or [Powercord](https://powercord.dev/) to avoid losing your account.`, { timeout: 0 });
-        try {
-          /* do not, under any circumstances, let this kill the plugin */
-          const CUSTOM_RULES = XenoLib._.cloneDeep(WebpackModules.getByProps('RULES').RULES);
-          for (const rule of Object.keys(CUSTOM_RULES)) CUSTOM_RULES[rule].raw = null;
-          for (const rule of ['paragraph', 'text', 'codeBlock', 'emoji', 'inlineCode']) CUSTOM_RULES[rule].raw = e => e.content;
-          for (const rule of ['autolink', 'br', 'link', 'newline', 'url']) delete CUSTOM_RULES[rule];
-          for (const rule of ['blockQuote', 'channel', 'em', 'mention', 'roleMention', 's', 'spoiler', 'strong', 'u']) CUSTOM_RULES[rule].raw = (e, t, n) => t(e.content, n);
-          CUSTOM_RULES.customEmoji.raw = e => e.name;
-          const astTools = WebpackModules.getByProps('flattenAst');
-          const SimpleMarkdown = WebpackModules.getByProps('parserFor', 'outputFor');
-          const parser = SimpleMarkdown.parserFor(CUSTOM_RULES);
-          const render = SimpleMarkdown.htmlFor(SimpleMarkdown.ruleOutput(CUSTOM_RULES, 'raw'));
-          this._timeUnparser = (e = '', r = true, a = {}) => render(astTools.constrainAst(astTools.flattenAst(parser(e, { inline: r, ...a }))));
-        } catch (err) {
-          Logger.stacktrace('Failed to create custom unparser', err);
-          this._timeUnparser = null;
+        Dispatcher.subscribe("MESSAGE_CREATE", this.onMessage);
+        Dispatcher.subscribe("FRIEND_REQUEST_ACCEPTED", this.friendRequest);
+        QWERTLib.initialize();
+        PluginUtilities.addStyle(
+          "QWERTLib",
+          `
+            .qwert-toasts {
+                position: absolute;
+                right: 10px;
+                left: ${
+            [0, 1].includes(this.settings.position) ? "20px" : "10px"
+          };
+                right: 10px;
+                ${
+            [0, 1].includes(this.settings.position)
+              ? "top: 10px"
+              : "bottom: 30px;"
+          }
+                justify-content: flex-start;
+                align-items: ${
+            [0, 2].includes(this.settings.position)
+              ? "flex-end"
+              : "flex-start"
+          };
+                display: flex;
+                flex-direction: column;
+                pointer-events: none;
+                z-index: 9999;
+               }
+               .qwert-toast {
+                position: relative;
+                display: -webkit-inline-box;
+                pointer-events: all;
+                align-items: center;
+                min-height: 24px;
+                backdrop-filter: blur(5px);
+                border-radius: 3px;
+                box-shadow: var(--elevation-medium);
+                padding: 10px 12px 10px 10px;
+                max-width: 50vw;
+                opacity: 1;
+                margin-top: 10px;
+                color: white;
+                background: rgba(10,10,10,0.5);
+                overflow: hidden;
+                cursor: pointer;
+               }
+               .qwert-toast:hover .qwert-toast-image {
+                display: block;
+               }
+               .qwert-toast-image {
+                position: relative;
+                display: none;
+                pointer-events: all;
+                min-height: 24px;
+                max-width: 50vw;
+                margin-top: 2px;
+                max-width: 300px;
+                max-height: 300px;
+               }
+
+               .qwert-toast-text {
+                position: relative;
+                display: block;
+                max-width: 400px;
+                flex: 1 0 auto;
+                font-size: 14px;
+                font-weight: 500;
+                white-space: nowrap;
+                word-wrap: break-word;
+                overflow: hidden;
+                text-overflow: ellipsis;
+               }
+               .qwert-toast:hover .qwert-toast-text {
+                white-space: normal;
+               }
+               .qwert-toast-author {
+                font-size: 14px;
+                max-width: 400px;
+                max-height: 24px;
+                white-space: nowrap;
+                word-wrap: break-word;
+                text-overflow: ellipsis;
+                margin-bottom: 2px;
+               }
+               .qwert-toast-bar {
+                height: 3px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+               }
+               .qwert-toast-avatar {
+                height: 32px;
+                height: 32px;
+                border-radius: 50%;
+               }
+               .qwert-toast-avatar-container {
+                padding-right: 5px;
+                margin-top: 1px;
+                top: 10px;
+               }
+               .qwert-toast-icon {
+                height: 22px;
+                height: 22px;
+                border-radius: 50%;
+                  }
+
+               .qwert-toast-icon-container {
+                padding-right: 5px;
+                margin-top: 1px;
+                top: 10px;
+               }
+               .qwert-toast-close {
+                margin-left: 5px;
+                cursor: pointer;
+               }
+            }`
+        );
+      }
+
+
+      onMessage({ message }) {
+        const author = UserStore.getUser(message.author.id);
+        const channel = ChannelStore.getChannel(message.channel_id);
+        const images = message.attachments.filter(
+          (e) =>
+            typeof e?.content_type === "string" &&
+            e?.content_type.startsWith("image")
+        );
+        const notiTime = this.settings.notiTime;
+        if (!channel || channel.id === SelectedChannelStore.getChannelId())
+          return false;
+
+        let content;
+        const keywordFound = this.checkKeywords(message);
+        if (!this.supposedToNotify(message, channel) && !keywordFound) return;
+        let authorString = "";
+        if (channel.guild_id) {
+          const guild = GuildStore.getGuild(channel.guild_id);
+          const colorString = GuildMemberStore.getMember(
+            channel.guild_id,
+            author.id
+          )?.colorString;
+          if (this.settings.roleColor && colorString) {
+            authorString = [
+              React.createElement(
+                "div",
+                {
+                  style: {
+                    color: colorString ?? "white",
+                    display: "inline",
+                  },
+                },
+                author.tag
+              ),
+              ` (${guild.name}, #${channel.name})`,
+            ];
+          } else {
+            authorString = `${author.tag} (${guild.name}, #${channel.name})`;
+          }
+        }
+        if (channel.type === ChannelTypes["GROUP_DM"]) {
+          authorString = `${author.tag} (${channel.name})`;
+          if (!channel.name || channel.name === " " || channel.name === "") {
+            authorString = `${author.tag} (${channel.rawRecipients.map((e) => e.username).join(", ")})`;
+          }
+        }
+        if (channel.type === ChannelTypes["DM"]) {
+          authorString = `${author.tag}`;
         }
 
-        if (!Array.isArray(this.settings.keywords)) this.settings.keywords = [];
+        if (message.call) {
+          content = [
+            React.createElement(CallJoin, {
+              style: {
+                height: "16px",
+                width: "16px",
+                color: colors.online,
+                marginRight: "2px",
+              },
+            }),
+            "Started a call",
+          ];
+        }
 
-        this.n10nMap = {};
+        if (message.attachments.length !== 0) {
+          content = [
+            React.createElement(ImagePlaceholder, {
+              style: { height: "16px", width: "16px", marginRight: "2px" },
+            }),
+            Markdown.parse(message.content, "div", { channelId: channel.id }),
+          ];
 
-        this.errorCount = 0;
-        for (const event of this.events) Dispatcher.subscribe(event, this[event]);
-        // UnreadStore.addChangeListener(this.handleUnreadsChanged);
-        this.patchAll();
-        PluginUtilities.addStyle(
-          `${this.short }-CSS`,
-          `
-          .IAN-message {
-            padding-left: 40px;
-            position: relative;
-            min-height: 36px;
-            pointer-events: none;
+          if (message.content === "") {
+            content = [
+              React.createElement(ImagePlaceholder, {
+                style: { height: "16px", width: "16px", marginRight: "2px" },
+              }),
+              "Attachment",
+            ];
           }
-          .IAN-message .IAN-avatar {
-            left: -2px;
-            pointer-events: none;
-            width: 32px;
-            height: 32px;
-            top: 0;
-            position: absolute;
-            border-radius: 50%;
+        }
+
+        if (message.embeds.length !== 0) {
+          content = [
+            React.createElement(ImagePlaceholder, {
+              style: { height: "16px", width: "16px", marginRight: "2px" },
+            }),
+            Markdown.parse(message.content, "div", { channelId: channel.id }),
+          ];
+
+          if (message.content === "") {
+            content = [
+              React.createElement(ImagePlaceholder, {
+                style: { height: "16px", width: "16px", marginRight: "2px" },
+              }),
+              message.embeds[0].description !== ""
+                ? message.embeds[0].description
+                : "Embed",
+            ];
           }
-          .IAN-message > .${MessageClasses.username.split(' ')[0]} {
-            font-size: 0.9rem;
-            line-height: unset;
-            display: block;
+        }
+
+        if (message.stickers) {
+          content = [
+            React.createElement(StickerIcon, {
+              style: { height: "16px", width: "16px", marginRight: "2px" },
+            }),
+            Markdown.parse(message.content, "div", { channelId: channel.id }),
+          ];
+
+          if (message.content === "") {
+            content = [
+              React.createElement(StickerIcon, {
+                style: { height: "16px", width: "16px", marginRight: "2px" },
+              }),
+              "Sticker",
+            ];
           }
-          .IAN-message > .${MarkupClassname.split(' ')[0]} {
-            line-height: unset;
+        }
+
+        if (images[0]) {
+          content.push(
+            React.createElement("img", {
+              className: "qwert-toast-image",
+              src: images[0].url,
+              style: {
+                maxWidth: "300px",
+                maxHeight: "300px",
+              },
+            })
+          );
+        }
+
+        if (!this.checkSettings(message, channel)) return;
+        const children = content
+          ? content
+          : Markdown.parse(message.content, "div", { channelId: channel.id });
+        const time = isNaN(notiTime * 1000) ? 3000 : notiTime * 1000;
+        QWERTLib.Toasts.create(children, {
+          icon: React.createElement("div", {
+            className: "qwert-toast-avatar-container",
+            children: React.createElement("img", {
+              src: author.getAvatarURL(),
+              className: "qwert-toast-avatar",
+            }),
+          }),
+          author: authorString,
+          time,
+          onClick: () => {
+            NavigationUtils.replaceWith(
+              `/channels/${message.guild_id || "@me"}/${message.channel_id}/${
+                message.id
+              }`
+            );
+          },
+          onManualClose: () => {
+            if (!this.settings.markAsRead || AckUtils == null) return;
+            AckUtils.ack(message.channel_id);
+          },
+        });
+      }
+
+      escapeRegex(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // https://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+      }
+
+      checkKeywords(message) {
+        let found = false;
+        const { content } = message;
+        const keywords = this.settings.keywords.trim().split(",").map((e) => e.trim()).filter((e) => e !== "");
+        if (keywords.length === 0) return false;
+
+        for (let keyword of keywords) {
+          keyword = this.escapeRegex(keyword);
+          const keywordRegex = new RegExp(`\\b${keyword}\\b`, "g");
+          if (
+            keywordRegex.test(
+              this.settings.case ? content : content.toLowerCase()
+            )
+          ) {
+            found = true;
+            break;
           }
-          .IAN-message {
-            max-height: calc(100vh - 150px);
+        }
+        return found;
+      }
+
+      supposedToNotify(message, channel) {
+        if (message.author.id === UserStore.getCurrentUser().id) return false;
+        if (channel.type === ChannelTypes["PUBLIC_THREAD"] && !channel.member) return false;
+        const suppressEveryone = MuteStore.isSuppressEveryoneEnabled(
+          message.guild_id || "@me"
+        );
+        const suppressRoles = MuteStore.isSuppressRolesEnabled(
+          message.guild_id || "@me"
+        );
+        if (MuteStore.allowAllMessages(channel)) return true;
+        return isMentioned.isRawMessageMentioned(
+          {
+            rawMessage: message,
+            userId: UserStore.getCurrentUser().id,
+            suppressEveryone,
+            suppressRoles
           }
-          .IAN-message > .${MarkupClassname.split(' ')[0]}, .IAN-message > .${MessageClasses.username.split(' ')[0]} {
-            overflow: hidden
+        );
+      }
+
+      checkSettings(message, channel) {
+        let shouldNotify = true;
+        const ignoredUsers = this.settings.ignoredUsers.trim().split(",");
+        const ignoredServers = this.settings.ignoredServers.trim().split(",");
+        const ignoredChannels = this.settings.ignoredChannels
+          .trim()
+          .split(",");
+        const ignoreDMs = this.settings.ignoreDMs;
+        const ignoreDMGroups = this.settings.ignoreDMGroups;
+
+        const disableOnDnd = this.settings.disableOnDnd;
+        const isDnd =
+          UserStatusStore.getStatus(UserStore.getCurrentUser().id) === "dnd";
+        const disableIfNoFocus = this.settings.disableIfNoFocus;
+        const hasFocus = document.hasFocus();
+
+        if (disableOnDnd) {
+          shouldNotify = !isDnd;
+        }
+
+        if (disableIfNoFocus) {
+          if (!hasFocus) shouldNotify = false;
+        }
+
+        if (ignoreDMs) {
+          if (channel.type === ChannelTypes["DM"]) shouldNotify = false;
+        }
+
+        if (ignoreDMGroups) {
+          if (channel.type === ChannelTypes["GROUP_DM"]) shouldNotify = false;
+        }
+
+        if (ignoredUsers.includes(message.author.id)) shouldNotify = false;
+        if (ignoredServers.includes(channel.guild_id)) shouldNotify = false;
+        if (ignoredChannels.includes(channel.id)) shouldNotify = false;
+
+        return shouldNotify;
+      }
+
+      friendRequest({ user }) {
+        if (!this.settings.relationshipsNotis) return;
+        user = UserStore.getUser(user.id);
+        QWERTLib.Toasts.create(
+          [
+            React.createElement(PersonAdd, {
+              style: {
+                height: "16px",
+                width: "16px",
+                color: colors.online,
+                marginRight: "2px",
+              },
+            }),
+            "Accepted your friend request.",
+          ],
+          {
+            author: user.tag,
+            avatar: user.getAvatarURL(),
+            onClick: () => {
+              UserProfileModals.open(user.id);
+            },
           }
-          .IAN-message .container-1ov-mD > .embedWrapper-lXpS3L,
-          .IAN-message .messageAttachment-1aDidq .wrapper-2TxpI8,
-          .IAN-message .messageAttachment-1aDidq .attachment-33OFj0,
-          .IAN-message .messageAttachment-1aDidq .container-1pMiXm,
-          .IAN-message .container-1ov-mD .spoilerContainer-331r0R:not([aria-expanded="true"]),
-          .IAN-message .${MarkupClassname.split(' ')[0]} .spoilerText-3p6IlD.hidden-HHr2R9  {
-            pointer-events: all;
-          }
-          .IAN-message .messageAttachment-1aDidq .codeView-1JPDeA {
-            max-height: 25vh;
-          }
-          .IAN-message .messageAttachment-1aDidq,
-          .IAN-message .embedWrapper-lXpS3L:not(.spoiler-1PPAUc):not(.embedMedia-1guQoW) {
-            width: 100% !important;
-          }
-          .IAN-message .container-1ov-mD,
-          .IAN-message > .${MarkupClassname.split(' ')[0]} {
-            margin-top: 5px;
-          }
-          .IAN-maxWidth {
-            width: 100%;
-          }
-          .IAN-sideButton {
-            width: 40px;
-            min-height: 38px;
-            color: var(--interactive-normal);
-          }
-          .IAN-items-wrapper {
-            padding: 10px;
-            padding-right: 0;
-            background-color: var(--background-secondary);
-          }
-          .IAN-item-wrapper {
-            padding-top: 5px;
-          }
-          .IAN-inputInvisWrapepr {
-            z-index: 1;
-          }
-          .IAN-item-wrapper .IAN-inputInvis {
-            opacity: 0;
-            transition: opacity .1s ease-in-out, border-color .2s ease-in-out;
-          }
-          .IAN-item-wrapper:hover .IAN-inputInvis,
-          .IAN-item-wrapper .IAN-inputInvis:focus {
-            opacity: 1;
-          }
-          .IAN-inputText {
-            position: absolute;
-            line-height: 16px;
-            padding: 5px 8px;
-            height: 26px;
-            color: var(--text-normal);
-          }
-          .IAN-itemsScroller {
-            max-height: 220px;
-          }
-        `
         );
       }
 
       onStop() {
-        for (const event of this.events) Dispatcher.unsubscribe(event, this[event]);
-        // UnreadStore.removeChangeListener(this.handleUnreadsChanged);
+        Dispatcher.unsubscribe("MESSAGE_CREATE", this.onMessage);
+        Dispatcher.unsubscribe("FRIEND_REQUEST_ACCEPTED", this.friendRequest);
+        PluginUtilities.removeStyle("QWERTLib");
+        QWERTLib.shutdown();
         Patcher.unpatchAll();
-        PluginUtilities.removeStyle(`${this.short }-CSS`);
-      }
-
-      buildSetting(data) {
-        switch (data.type) {
-          case 'note': return new ExtraText('', '');
-          case 'keywords': {
-            return new Keywords(data.name, data.note, data.value, data.onChange);
-            break;
-          }
-          case 'ids': {
-            return new SomeIDs(data.name, data.note, data.value, data.onChange);
-            break;
-          }
-        }
-
-        return XenoLib.buildSetting(data);
-      }
-
-      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#escaping
-      escapeRegExp(string) {
-        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
-      }
-
-      isRawMessageMentioned(message, userId, suppressEveryone, suppressRoles) {
-        if (!message.mentions) return false;
-        if (isMentionedUtils.isRawMessageMentioned.length === 1) return isMentionedUtils.isRawMessageMentioned({
-          rawMessage: message,
-          userId,
-          suppressEveryone,
-          suppressRoles
-        });
-        return isMentionedUtils.isRawMessageMentioned(message, userId, suppressEveryone, suppressRoles);
-      }
-
-      shouldNotify(message, iChannel, iAuthor) {
-        if (!XenoLib.DiscordAPI.user || !iChannel || !iAuthor) return RetTypes.SILENT;
-        if (!this.settings.showNoFocus && !WindowInfo.isFocused()) return RetTypes.SILENT;
-        const ciChannel = XenoLib.DiscordAPI.channel;
-        const cUID = XenoLib.DiscordAPI.userId;
-        if (ciChannel && ciChannel.id === iChannel.id && !location.href.endsWith('.com/channels/@me')) return RetTypes.SILENT; // ignore if channel is open
-        const threadState = ciChannel && (ThreadStateStore.getThreadSidebarState ? ThreadStateStore.getThreadSidebarState(ciChannel.id) : ThreadStateStore.getSidebarState(ciChannel.id));
-        if (threadState && threadState.channelId === iChannel.id) return RetTypes.SILENT; // ignore if thread is open
-        if (iChannel.isManaged()) return RetTypes.SILENT; // not sure what managed channels are.. System maybe?
-        const guildId = iChannel.getGuildId();
-        if (guildId && LurkerStore.isLurking(guildId)) return RetTypes.SILENT; // ignore servers you're lurking in
-        if (iAuthor.id === cUID || RelationshipStore.isBlocked(iAuthor.id)) return RetTypes.SILENT; // ignore if from self or if it's a blocked user
-        if (!this.settings.dndIgnore && StatusStore.getStatus(cUID) === DiscordConstants.StatusTypes.DND) return false; // ignore if in DND mode and settings allow
-        if (this.settings.pings && Array.isArray(message.mentions) && ~message.mentions.map(e => (typeof e === 'string' ? e : e.id)).indexOf(cUID)) return RetTypes.PING; // if mentioned, always show notification
-        let ret = RetTypes.SILENT; // default, if a keyword or reply, then it'll pin the notification, but if it'd be true anyway, don't pin
-        if (this.settings.replies && message.referenced_message && message.referenced_message.author && message.referenced_message.author.id === cUID && !~message.referenced_message.mentions.map(e => (typeof e === 'string' ? e : e.id)).indexOf(cUID)) {
-          ret = RetTypes.REPLY; // always show notifications for replies
-          if (this.settings.alwaysPinReplies) return ret;
-        }
-        if (this.settings.userIds.length) if (~this.settings.userIds.findIndex(e => e.someId === iAuthor.id)) return ret;
-        if (this.settings.channelIds.length) if (~this.settings.channelIds.findIndex(e => e.someId === iChannel.id)) return ret;
-        if (guildId && this.settings.serverIds.length) if (~this.settings.serverIds.findIndex(e => e.someId === guildId)) return ret;
-        if (!ret && this.settings.keywords.length) for (const { keyword, caseSensitive, matchWhole } of this.settings.keywords) if ((new RegExp(`${matchWhole ? '\\b' : ''}${this.escapeRegExp(keyword)}${matchWhole ? '\\b' : ''}`, caseSensitive ? 'g' : 'gi')).test(message.content)) {
-          ret = RetTypes.KEYWORD;
-          if (this.settings.alwaysPinKeyword) return ret;
-        }
-        if (iChannel.type === DiscordConstants.ChannelTypes.DM && !this.settings.dms) return ret;
-        if (iChannel.type === DiscordConstants.ChannelTypes.GROUP_DM && !this.settings.groupDMs) return ret;
-        const isThread = iChannel.type === DiscordConstants.ChannelTypes.PUBLIC_THREAD || iChannel.type === DiscordConstants.ChannelTypes.PRIVATE_THREAD;
-        if ((iChannel.type === DiscordConstants.ChannelTypes.GUILD_ANNOUNCEMENT || iChannel.type === DiscordConstants.ChannelTypes.GUILD_TEXT || isThread) && !this.settings.servers) return ret;
-        if (!isThread && MuteStore.allowAllMessages(iChannel)) return ret === RetTypes.REPLY ? RetTypes.REPLY_NORMAL : ret === RetTypes.KEYWORD ? RetTypes.KEYWORD_NORMAL : RetTypes.NORMAL;// channel has notif settings set to all messages
-        if (isThread) {
-          const notifSetting = ThreadNotificationsStuff.computeThreadNotificationSetting(iChannel);
-          if (notifSetting !== ThreadConstants.ThreadMemberFlags.NO_MESSAGES && (notifSetting === ThreadConstants.ThreadMemberFlags.ALL_MESSAGES || this.isRawMessageMentioned(message, cUID, false, false))) return true;
-        }
-        const isMentioned = this.isRawMessageMentioned(message, cUID, MuteStore.isSuppressEveryoneEnabled(guildId), MuteStore.isSuppressRolesEnabled(iChannel.guild_id));
-        if (!isMentioned) return ret;
-        return ret === RetTypes.REPLY ? RetTypes.REPLY_NORMAL : ret === RetTypes.KEYWORD ? RetTypes.KEYWORD_NORMAL : RetTypes.NORMAL;
-      }
-
-      getChannelName(iChannel, iAuthor) {
-        switch (iChannel.type) {
-          case DiscordConstants.ChannelTypes.GROUP_DM:
-            if (iChannel.name !== '') return iChannel.name;
-            const recipients = iChannel.recipients.map(e => (e === iAuthor.id ? iAuthor : UserStore.getUser(e))).filter(e => e);
-            return recipients.length > 0 ? recipients.map(e => e.username).join(', ') : Messages.UNNAMED;
-          case DiscordConstants.ChannelTypes.GUILD_ANNOUNCEMENT:
-          case DiscordConstants.ChannelTypes.GUILD_TEXT:
-          case DiscordConstants.ChannelTypes.PUBLIC_THREAD:
-          case DiscordConstants.ChannelTypes.PRIVATE_THREAD:
-            return `#${iChannel.name}`;
-          default:
-            return iChannel.name;
-        }
-      }
-
-      getActivity(e, t, n, r) {
-        switch (e.type) {
-          case DiscordConstants.ChannelTypes.GUILD_ANNOUNCEMENT:
-          case DiscordConstants.ChannelTypes.GUILD_TEXT:
-          case DiscordConstants.ChannelTypes.PUBLIC_THREAD:
-          case DiscordConstants.ChannelTypes.PRIVATE_THREAD:
-            return t;
-          case DiscordConstants.ChannelTypes.GROUP_DM:
-            return n;
-          case DiscordConstants.ChannelTypes.DM:
-          default:
-            return r;
-        }
-      }
-
-      makeTextChatNotification(iChannel, message, iAuthor) {
-        const author = UserNameResolver.getName(iChannel.guild_id, iChannel.id, iAuthor);
-        let channel = author;
-        switch (iChannel.type) {
-          case DiscordConstants.ChannelTypes.GUILD_ANNOUNCEMENT:
-          case DiscordConstants.ChannelTypes.GUILD_TEXT:
-          case DiscordConstants.ChannelTypes.PUBLIC_THREAD:
-          case DiscordConstants.ChannelTypes.PRIVATE_THREAD:
-            const iGuild = GuildStore.getGuild(iChannel.guild_id);
-            if (message.type === DiscordConstants.MessageTypes.DEFAULT || iGuild) channel += ` (${this.getChannelName(iChannel)}, ${iGuild.name})`;
-            break;
-          case DiscordConstants.ChannelTypes.GROUP_DM:
-            const newChannel = this.getChannelName(iChannel, iAuthor);
-            if (!iChannel.isManaged() || !iAuthor.bot || channel !== newChannel) channel += ` (${newChannel})`;
-        }
-        let d = message.content;
-        if (message.activity && message.application) {
-          const targetMessage = message.activity.type === DiscordConstants.ActivityActionTypes.JOIN ? this.getActivity(iChannel, Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN) : this.getActivity(iChannel, Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_SPECTATE, Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_SPECTATE, Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_SPECTATE);
-          d = targetMessage.format({ user: author, game: message.application.name });
-        } else if (message.activity && message.activity.type === DiscordConstants.ActivityActionTypes.LISTEN) {
-          const targetMessage = this.getActivity(iChannel, Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN);
-          d = targetMessage.format({ user: author });
-        } else if (message.type !== DiscordConstants.MessageTypes.DEFAULT && message.type !== DiscordConstants.MessageTypes.REPLY) {
-          const content = SysMessageUtils.stringify(message);
-          if (!content) return null;
-          d = MessageParseUtils.unparse(content, iChannel.id, true);
-        }
-
-        return {
-          icon: iAuthor.getAvatarURL(iChannel.guild_id, true),
-          title: channel,
-          content: d
-        };
-      }
-
-      MESSAGE_CREATE({ channelId, message, isEdit }) {
-        const iChannel = ChannelStore.getChannel(channelId);
-        if (!iChannel) return; // what?
-        let iAuthor = UserStore.getUser(message.author.id);
-        if (!iAuthor) {
-          iAuthor = new CUser(message.author);
-          UserStore.getUsers()[message.author.id] = iAuthor;
-        }
-        const notifyStatus = this.shouldNotify(message, iChannel, iAuthor);
-        if (!notifyStatus) return;
-        const { icon, title, content } = this.makeTextChatNotification(iChannel, message, iAuthor) || {};
-        if (!title) return; /* wah */
-        const iMember = GuildMemberStore.getMember(iChannel.guild_id, iAuthor.id);
-        const iMessage = MessageStore.getMessage(channelId, message.id) || MessageActionCreators.createMessageRecord(message);
-        const color = notifyStatus === RetTypes.KEYWORD && this.settings.useKeywordColor ? this.settings.keywordColor : this.settings.roleColor && iMember && iMember.colorString;
-        const timeout = ((notifyStatus === RetTypes.KEYWORD && this.settings.pinKeyword) || (notifyStatus === RetTypes.REPLY && this.settings.pinReplies) || (notifyStatus === RetTypes.PING && isEdit && this.settings.pinSilentPings)) ? 0 : this.calculateTimeout(title, content);
-        const options = {
-          timeout,
-          onClick: () => {
-            NavigationUtils.transitionTo(`/channels/${iChannel.guild_id || '@me'}/${iChannel.id}${(notifyStatus === RetTypes.NORMAL) ? '' : `/${message.id}`}`);
-          },
-          onContext: () => {
-            this.bulkCloseNotifs(iChannel.id, iMessage.id);
-            AckUtils.ack(iChannel.id);
-            XenoLib.Notifications.remove(notifId);
-          },
-          onMiddleClick: e => {
-            if (e.shiftKey) this.bulkCloseNotifs(iChannel.id, iMessage.id);
-            XenoLib.Notifications.remove(notifId);
-          },
-          onLeave: () => {
-            delete this.n10nMap[message.id];
-          },
-          color: color || this.settings.color
-        };
-        const notifId = XenoLib.Notifications.show(this.renderContent(icon, title, content, iChannel, iMessage), options);
-        if (!notifId) return; // uuh, notification overload?
-        if (this.n10nMap[message.id]) return; // duplicate
-
-        this.n10nMap[message.id] = {
-          iAuthor,
-          iMessage,
-          iChannel,
-          notifId,
-          options,
-          notifyStatus
-        };
-        //this.showNotification(notif, iChannel, iMessage, this.settings.roleColor && iMember && iMember.colorString);
-      }
-
-      MESSAGE_UPDATE({ message }) {
-        if (!this.n10nMap[message.id]) {
-          if (message.author && (this.settings.editKeyword || this.settings.editPings)) {
-            const channelId = message.channel_id;
-            const iChannel = ChannelStore.getChannel(channelId);
-            if (!iChannel) return; // what?
-            let iAuthor = UserStore.getUser(message.author.id);
-            if (!iAuthor) {
-              iAuthor = new CUser(message.author);
-              UserStore.getUsers()[message.author.id] = iAuthor;
-            }
-            const notifyStatus = this.shouldNotify(message, iChannel, iAuthor);
-            if ((this.settings.editKeyword && notifyStatus === RetTypes.KEYWORD) || (this.settings.editPings && notifyStatus === RetTypes.PING)) return this.MESSAGE_CREATE({ message, channelId, isEdit: true });
-          }
-          return;
-        }
-        const { iAuthor, iMessage: oiMessage, iChannel, notifId, options, notifyStatus } = this.n10nMap[message.id];
-        const iMessage = MessageStore.getMessage(iChannel.id, message.id) || MessageActionCreators.updateMessageRecord(oiMessage, message);
-        const { icon, title, content } = this.makeTextChatNotification(iChannel, iMessage, iAuthor) || {};
-        const timeout = ((notifyStatus === RetTypes.KEYWORD && this.settings.pinKeyword) || (notifyStatus === RetTypes.REPLY && this.settings.pinReplies)) ? 0 : this.calculateTimeout(title, content);
-        if (!title) return; /* wah */
-        XenoLib.Notifications.update(notifId, {
-          ...options,
-          content: this.renderContent(icon, title, content, iChannel, iMessage),
-          timeout
-        });
-        this.n10nMap[message.id] = {
-          iAuthor,
-          iMessage,
-          iChannel,
-          notifId,
-          options,
-          notifyStatus
-        };
-      }
-
-      FRIEND_REQUEST_ACCEPTED({ user }) {
-        if (!this.settings.friendRequestAccept) return;
-        let iUser = UserStore.getUser(user.id);
-        if (!iUser) {
-          iUser = new CUser(user);
-          UserStore.getUsers()[user.id] = iUser;
-        }
-        XenoLib.Notifications.success(this.renderContent(iUser.getAvatarURL(null, true), iUser.tag, Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST), {
-          onClick: () => {
-            PrivateChannelActions.openPrivateChannel(iUser.id);
-          },
-          timeout: this.calculateTimeout(iUser.tag, Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST)
-        });
-      }
-
-      RELATIONSHIP_ADD({ relationship: { type, user } }) {
-        if (!this.settings.friendRequestIncoming || type !== DiscordConstants.RelationshipTypes.PENDING_INCOMING) return;
-        let iUser = UserStore.getUser(user.id);
-        if (!iUser) {
-          iUser = new CUser(user);
-          UserStore.getUsers()[user.id] = iUser;
-        }
-        XenoLib.Notifications.success(this.renderContent(iUser.getAvatarURL(null, true), iUser.tag, Messages.NOTIFICATION_PENDING_FRIEND_REQUEST), {
-          onClick: () => {
-            NavigationUtils.transitionTo(DiscordConstants.Routes.FRIENDS);
-            FriendsSectionSetter.setSection(DiscordConstants.FriendsSections.PENDING);
-          },
-          timeout: this.calculateTimeout(iUser.tag, Messages.NOTIFICATION_PENDING_FRIEND_REQUEST)
-        });
-      }
-
-      CHANNEL_SELECT({ channelId }) {
-        const entries = Object.entries(this.n10nMap);
-        for (const [id, { iChannel, notifId, notifyStatus }] of entries) {
-          if (iChannel.id !== channelId || notifyStatus === RetTypes.REPLY || notifyStatus === RetTypes.KEYWORD || notifyStatus === RetTypes.PING) continue;
-          XenoLib.Notifications.remove(notifId);
-        }
-      }
-
-      bulkCloseNotifs(channelId, messageId) {
-        const targetTime = Math.trunc((messageId / 4194304) + 14200704e5);
-        for (const { iChannel, iMessage, notifId } of Object.values(this.n10nMap)) {
-          if (iChannel.id !== channelId) continue;
-          const time = Math.trunc((iMessage.id / 4194304) + 14200704e5);
-          if (targetTime >= time) XenoLib.Notifications.remove(notifId);
-        }
-      }
-
-      handleUnreadsChanged() {
-        const cache = {};
-        for (const { iChannel, iMessage, notifId } of Object.values(this.n10nMap)) {
-          if (!UnreadStore.hasUnread(iChannel.id)) {
-            XenoLib.Notifications.remove(notifId);
-            continue;
-          }
-          const timestamp = cache[iChannel.id] || UnreadStore.getOldestUnreadTimestamp(iChannel.id);
-          if (!cache[iChannel.id]) cache[iChannel.id] = timestamp;
-          const time = Math.trunc((iMessage.id / 4194304) + 14200704e5);
-          if (timestamp >= time) XenoLib.Notifications.remove(notifId);
-        }
-      }
-
-      calculateTime(text) {
-        let words = 0;
-        if (this._timeUnparser) try {
-          text = this._timeUnparser(text);
-        } catch (err) {
-          Logger.stacktrace(`Failed to unparse text ${text}`, err);
-          this._timeUnparser = null;
-        }
-
-        /* https://github.com/ngryman/reading-time */
-        function ansiWordBound(c) {
-          return c === ' ' || c === '\n' || c === '\r' || c === '\t';
-        }
-        for (let i = 0; i < text.length;) {
-          for (; i < text.length && !ansiWordBound(text[i]); i++);
-          words++;
-          for (; i < text.length && ansiWordBound(text[i]); i++);
-        }
-        return (words / this.settings.wordsPerMinute) * 60 * 1000;
-      }
-
-      calculateTimeout(title, content) {
-        return Math.max(this.settings.wpmTimeout ? Math.min(this.calculateTime(title) + this.calculateTime(content), 60000) : 0, 5000);
-      }
-
-      renderContent(icon, title, content, iChannel, iMessage) {
-        return (
-          React.createElement(
-            'div',
-            {
-              className: 'IAN-message'
-            },
-            React.createElement('img', {
-              className: 'IAN-avatar',
-              src: icon
-            }),
-            React.createElement(
-              'span',
-              {
-                className: XenoLib.joinClassNames(MessageClasses.username, 'overflow-WK9Ogt')
-              },
-              title
-            ),
-            React.createElement(props => {
-              const renderSpoilers = iChannel ? shouldRenderSpoilers(UserSettings.RenderSpoilers.getSetting(), PermissionsStore.can(DiscordConstants.Permissions.MANAGE_MESSAGES, iChannel)) : true;
-              return [
-                React.createElement(SpoilerDisplayContext.Provider, {
-                  value: renderSpoilers
-                }, props.children),
-                // eslint-disable-next-line function-call-argument-newline
-                iChannel && iMessage ? React.createElement(SpoilerDisplayContext.Provider, {
-                  value: (this.settings.spoilerAll || this.settings.spoilerNSFW && iChannel.nsfw) ? false : renderSpoilers
-                }, React.createElement(MessageAccessories, {
-                  channel: iChannel,
-                  message: iMessage,
-                  canDeleteAttachments: false,
-                  canSuppressEmbeds: false,
-                  compact: true,
-                  disableReactionCreates: true,
-                  disableReactionReads: true,
-                  disableReactionUpdates: true,
-                  gifAutoPlay: true,
-                  hasSpoilerEmbeds: false,
-                  inlineAttachmentMedia: true,
-                  inlineEmbedMedia: true,
-                  isInteracting: false,
-                  isLurking: false,
-                  isPendingMember: false,
-                  onAttachmentContextMenu: () => { },
-                  renderEmbeds: true,
-                  renderReactions: true,
-                  spoilerAll: this.settings.spoilerAll || (this.settings.spoilerNSFW && iChannel.nsfw)
-                })) : null
-              ];
-            }, {}, React.createElement('div', { className: XenoLib.joinClassNames(MarkupClassname, MessageClasses.messageContent) }, ParserModule.parse(content, true, { channelId: iChannel && iChannel.id })))
-          )
-        );
-      }
-
-      /* PATCHES */
-
-      patchAll() {
-        Utilities.suppressErrors(this.patchShouldNotify.bind(this), 'shouldNotify patch')();
-        Utilities.suppressErrors(this.patchAttachment.bind(this), 'Attachment patch')();
-      }
-
-      patchShouldNotify() {
-        Patcher.after(WebpackModules.getByProps('shouldDisplayNotifications'), 'shouldDisplayNotifications', () => (WindowInfo.isFocused() ? false : undefined));
-      }
-
-      patchAttachment() {
-        const Attachment = WebpackModules.find(e => e.default && e.default.displayName === 'MessageAttachment');
-        Patcher.before(Attachment, 'default', (_, args) => {
-          const [props] = args;
-          if (!props.__IAN_spoilerAll) return;
-          args[1] = props.attachment.spoiler;
-          props.attachment.spoiler = true;
-        });
-        Patcher.after(Attachment, 'default', (_, args) => {
-          const [props] = args;
-          if (!props.__IAN_spoilerAll) return;
-          // eslint-disable-next-line prefer-destructuring
-          props.attachment.spoiler = args[1];
-          delete args[1];
-        });
-      }
-
-      /* PATCHES */
-
-      showChangelog(footer) {
-        XenoLib.showChangelog(`${this.name} has been updated!`, this.version, this._config.changelog);
-      }
-      getSettingsPanel() {
-        return this.buildSettingsPanel().getElement();
-      }
-
-      get [Symbol.toStringTag]() {
-        return 'Plugin';
-      }
-      get name() {
-        return config.info.name;
-      }
-      get short() {
-        let string = '';
-
-        for (let i = 0, len = config.info.name.length; i < len; i++) {
-          const char = config.info.name[i];
-          if (char === char.toUpperCase()) string += char;
-        }
-
-        return string;
-      }
-      get author() {
-        return config.info.authors.map(author => author.name).join(', ');
-      }
-      get version() {
-        return config.info.version;
-      }
-      get description() {
-        return config.info.description;
-      }
-    };
-  };
-
-  /* Finalize */
-
-  let ZeresPluginLibraryOutdated = false;
-  let XenoLibOutdated = false;
-  try {
-    const i = (i, n) => ((i = i.split('.').map(i => parseInt(i))), (n = n.split('.').map(i => parseInt(i))), !!(n[0] > i[0]) || !!(n[0] == i[0] && n[1] > i[1]) || !!(n[0] == i[0] && n[1] == i[1] && n[2] > i[2])),
-      n = (n, e) => n && n._config && n._config.info && n._config.info.version && i(n._config.info.version, e);
-    let e = BdApi.Plugins.get('ZeresPluginLibrary'),
-      o = BdApi.Plugins.get('XenoLib');
-    if (e && e.instance) e = e.instance;
-    if (o && o.instance) o = o.instance;
-    n(e, '2.0.3') && (ZeresPluginLibraryOutdated = !0), n(o, '1.4.11') && (XenoLibOutdated = !0);
-  } catch (i) {
-    console.error('Error checking if libraries are out of date', i);
-  }
-
-  return !global.ZeresPluginLibrary || !global.XenoLib || ZeresPluginLibraryOutdated || XenoLibOutdated
-    ? class {
-      constructor() {
-        this._XL_PLUGIN = true;
-        this.start = this.load = this.handleMissingLib;
-      }
-      getName() {
-        return this.name.replace(/\s+/g, '');
-      }
-      getAuthor() {
-        return this.author;
-      }
-      getVersion() {
-        return this.version;
-      }
-      getDescription() {
-        return `${this.description} You are missing libraries for this plugin, please enable the plugin and click Download Now.`;
-      }
-      start() { }
-      stop() { }
-      handleMissingLib() {
-        const a = BdApi.findModuleByProps('openModal', 'hasModalOpen');
-        if (a && a.hasModalOpen(`${this.name}_DEP_MODAL`)) return;
-        const b = !global.XenoLib,
-          c = !global.ZeresPluginLibrary,
-          d = (b && c) || ((b || c) && (XenoLibOutdated || ZeresPluginLibraryOutdated)),
-          e = (() => {
-            let a = '';
-            return b || c ? (a += `Missing${XenoLibOutdated || ZeresPluginLibraryOutdated ? ' and outdated' : ''} `) : (XenoLibOutdated || ZeresPluginLibraryOutdated) && (a += 'Outdated '), (a += `${d ? 'Libraries' : 'Library'} `), a;
-          })(),
-          f = (() => {
-            let a = `The ${d ? 'libraries' : 'library'} `;
-            return b || XenoLibOutdated ? ((a += 'XenoLib '), (c || ZeresPluginLibraryOutdated) && (a += 'and ZeresPluginLibrary ')) : (c || ZeresPluginLibraryOutdated) && (a += 'ZeresPluginLibrary '), (a += `required for ${this.name} ${d ? 'are' : 'is'} ${b || c ? 'missing' : ''}${XenoLibOutdated || ZeresPluginLibraryOutdated ? (b || c ? ' and/or outdated' : 'outdated') : ''}.`), a;
-          })(),
-          g = BdApi.findModuleByDisplayName('Text') || BdApi.findModule(e => e.Text?.displayName === 'Text')?.Text,
-          h = BdApi.findModuleByDisplayName('ConfirmModal'),
-          i = () => BdApi.alert(e, BdApi.React.createElement('span', { style: { color: 'var(--text-normal)' } }, BdApi.React.createElement('div', {}, f), 'Due to a slight mishap however, you\'ll have to download the libraries yourself. This is not intentional, something went wrong, errors are in console.', c || ZeresPluginLibraryOutdated ? BdApi.React.createElement('div', {}, BdApi.React.createElement('a', { href: 'https://betterdiscord.app/Download?id=9', target: '_blank' }, 'Click here to download ZeresPluginLibrary')) : null, b || XenoLibOutdated ? BdApi.React.createElement('div', {}, BdApi.React.createElement('a', { href: 'https://astranika.com/bd/xenolib', target: '_blank' }, 'Click here to download XenoLib')) : null));
-        if (!a || !h || !g) return console.error(`Missing components:${(a ? '' : ' ModalStack') + (h ? '' : ' ConfirmationModalComponent') + (g ? '' : 'TextElement')}`), i();
-        class j extends BdApi.React.PureComponent {
-          constructor(a) {
-            super(a), (this.state = { hasError: !1 }), (this.componentDidCatch = a => (console.error(`Error in ${this.props.label}, screenshot or copy paste the error above to Lighty for help.`), this.setState({ hasError: !0 }), typeof this.props.onError === 'function' && this.props.onError(a))), (this.render = () => (this.state.hasError ? null : this.props.children));
-          }
-        }
-        let k = !1,
-          l = !1;
-        const m = a.openModal(
-          b => {
-            if (l) return null;
-            try {
-              return BdApi.React.createElement(
-                j,
-                { label: 'missing dependency modal', onError: () => (a.closeModal(m), i()) },
-                BdApi.React.createElement(
-                  h,
-                  {
-                    header: e,
-                    children: BdApi.React.createElement(g, { size: g.Sizes?.SIZE_16, variant: 'text-md/normal', children: [`${f} Please click Download Now to download ${d ? 'them' : 'it'}.`] }),
-                    red: !1,
-                    confirmText: 'Download Now',
-                    cancelText: 'Cancel',
-                    onCancel: b.onClose,
-                    onConfirm: () => {
-                      if (k) return;
-                      k = !0;
-                      const b = require('https'),
-                        c = require('fs'),
-                        d = require('path'),
-                        e = BdApi.Plugins && BdApi.Plugins.folder ? BdApi.Plugins.folder : window.ContentManager.pluginsFolder,
-                        f = () => {
-                          (global.XenoLib && !XenoLibOutdated) ||
-                            b.request('https://raw.githubusercontent.com/1Lighty/BetterDiscordPlugins/master/Plugins/1XenoLib.plugin.js', f => {
-                              try {
-                                let h = '';
-                                f.on('data', k => (h += k.toString())),
-                                f.on('end', () => {
-                                  try {
-                                    if (f.statusCode !== 200) return a.closeModal(m), i();
-                                    c.writeFile(d.join(e, '1XenoLib.plugin.js'), h, () => { });
-                                  } catch (a) {
-                                    console.error('Error writing XenoLib file', a);
-                                  }
-                                });
-                              } catch (b) {
-                                console.error('Fatal error downloading XenoLib', b), a.closeModal(m), i();
-                              }
-                            }).on('error', b => {
-                              try {
-                                console.error('Error downloading XenoLib', b);
-                                a.closeModal(m);
-                                i();
-                              } catch (err) {
-                                console.error('Failed handling download error of XenoLib', err);
-                              }
-                            }).end();
-                        };
-                      !global.ZeresPluginLibrary || ZeresPluginLibraryOutdated
-                        ? b.request('https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js', g => {
-                          try {
-                            let h = '';
-                            g.on('data', k => (h += k.toString())),
-                            g.on('end', () => {
-                              try {
-                                if (g.statusCode !== 200) return a.closeModal(m), i();
-                                c.writeFile(d.join(e, '0PluginLibrary.plugin.js'), h, () => {
-                                  try {
-                                    f();
-                                  } catch (a) {
-                                    console.error('Error writing ZeresPluginLibrary file', a);
-                                  }
-                                });
-                              } catch (b) {
-                                console.error('Fatal error downloading ZeresPluginLibrary', b), a.closeModal(m), i();
-                              }
-                            });
-                          } catch (b) {
-                            console.error('Fatal error downloading ZeresPluginLibrary', b), a.closeModal(m), i();
-                          }
-                        }).on('error', b => {
-                          try {
-                            console.error('Error downloading ZeresPluginLibrary', b);
-                            a.closeModal(m);
-                            i();
-                          } catch (err) {
-                            console.error('Failed handling download error of ZeresPluginLibrary', err);
-                          }
-                        }).end()
-                        : f();
-                    },
-                    ...b,
-                    onClose: () => { }
-                  }
-                )
-              );
-            } catch (b) {
-              setImmediate(() => {
-                try {
-                  console.error('There has been an error constructing the modal', b);
-                  l = true;
-                  a.closeModal(m);
-                  i();
-                } catch (err) {
-                  console.error('Failed handling error of modal', err);
-                }
-              });
-              return null;
-            }
-          },
-          { modalKey: `${this.name}_DEP_MODAL` }
-        );
-      }
-      get [Symbol.toStringTag]() {
-        return 'Plugin';
-      }
-      get name() {
-        return config.info.name;
-      }
-      get short() {
-        let string = '';
-        for (let i = 0, len = config.info.name.length; i < len; i++) {
-          const char = config.info.name[i];
-          if (char === char.toUpperCase()) string += char;
-        }
-        return string;
-      }
-      get author() {
-        return config.info.authors.map(author => author.name).join(', ');
-      }
-      get version() {
-        return config.info.version;
-      }
-      get description() {
-        return config.info.description;
       }
     }
-    : buildPlugin(global.ZeresPluginLibrary.buildPlugin(config));
-})();
 
-/*@end@*/
+    return plugin;
+  })(global.ZeresPluginLibrary.buildPlugin(config));
