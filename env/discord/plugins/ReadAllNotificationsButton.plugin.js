@@ -2,7 +2,7 @@
  * @name ReadAllNotificationsButton
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.7.4
+ * @version 1.7.5
  * @description Adds a Clear Button to the Server List and the Mentions Popout
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -14,7 +14,7 @@
 
 module.exports = (_ => {
 	const changeLog = {
-		
+
 	};
 
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
@@ -23,14 +23,14 @@ module.exports = (_ => {
 		getAuthor () {return this.author;}
 		getVersion () {return this.version;}
 		getDescription () {return `The Library Plugin needed for ${this.name} is missing. Open the Plugin Settings to download it. \n\n${this.description}`;}
-		
+
 		downloadLibrary () {
 			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
 				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Finished downloading BDFDB Library", {type: "success"}));
 				else BdApi.alert("Error", "Could not download BDFDB Library Plugin. Try again later or download it manually from GitHub: https://mwittrien.github.io/downloader/?library");
 			});
 		}
-		
+
 		load () {
 			if (!window.BDFDB_Global || !Array.isArray(window.BDFDB_Global.pluginQueue)) window.BDFDB_Global = Object.assign({}, window.BDFDB_Global, {pluginQueue: []});
 			if (!window.BDFDB_Global.downloadModal) {
@@ -58,7 +58,7 @@ module.exports = (_ => {
 	} : (([Plugin, BDFDB]) => {
 		var _this;
 		var blacklist, clearing;
-		
+
 		const ReadAllButtonComponent = class ReadAllButton extends BdApi.React.Component {
 			clearClick() {
 				if (_this.settings.batch.guilds) this.clearGuilds(_this.settings.batch.muted ? this.getGuilds() : this.getUnread());
@@ -68,7 +68,7 @@ module.exports = (_ => {
 				BDFDB.GuildUtils.markAsRead(guildIds.filter(id => id && !blacklist.includes(id)));
 			}
 			getGuilds() {
-				return BDFDB.LibraryModules.SortedGuildUtils.getFlattenedGuilds().map(g => g.id).filter(n => n);
+				return BDFDB.LibraryStores.SortedGuildStore.getFlattenedGuildIds().map(BDFDB.LibraryStores.GuildStore.getGuild).map(g => g.id).filter(n => n);
 			}
 			getUnread() {
 				return this.getGuilds().filter(id => BDFDB.LibraryStores.GuildReadStateStore.hasUnread(id) || BDFDB.LibraryStores.GuildReadStateStore.getMentionCount(id) > 0);
@@ -94,47 +94,45 @@ module.exports = (_ => {
 								if (!_this.settings.general.confirmClear) this.clearClick();
 								else BDFDB.ModalUtils.confirm(_this, _this.labels.modal_confirmnotifications, _ => this.clearClick());
 							},
-							onContextMenu: event => {
-								BDFDB.ContextMenuUtils.open(_this, event, BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuGroup, {
-									children: [
-										BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
-											label: _this.labels.context_unreadguilds,
-											id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-unread-read"),
-											action: _ => this.clearGuilds(this.getUnread())
-										}),
-										BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
-											label: _this.labels.context_pingedguilds,
-											id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-pinged-read"),
-											action: _ => this.clearGuilds(this.getPinged())
-										}),
-										BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
-											label: _this.labels.context_mutedguilds,
-											id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-muted-read"),
-											action: _ => this.clearGuilds(this.getMuted())
-										}),
-										BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
-											label: _this.labels.context_guilds,
-											id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-all-read"),
-											action: _ => this.clearGuilds(this.getGuilds())
-										}),
-										BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
-											label: _this.labels.context_dms,
-											id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-dms-read"),
-											action: _ => BDFDB.DMUtils.markAsRead(this.getPingedDMs())
-										})
-									]
-								}));
-							}
+							onContextMenu: event => BDFDB.ContextMenuUtils.open(_this, event, BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuGroup, {
+								children: [
+									BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
+										label: _this.labels.context_unreadguilds,
+										id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-unread-read"),
+										action: _ => this.clearGuilds(this.getUnread())
+									}),
+									BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
+										label: _this.labels.context_pingedguilds,
+										id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-pinged-read"),
+										action: _ => this.clearGuilds(this.getPinged())
+									}),
+									BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
+										label: _this.labels.context_mutedguilds,
+										id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-muted-read"),
+										action: _ => this.clearGuilds(this.getMuted())
+									}),
+									BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
+										label: _this.labels.context_guilds,
+										id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-all-read"),
+										action: _ => this.clearGuilds(this.getGuilds())
+									}),
+									BDFDB.ContextMenuUtils.createItem(BDFDB.LibraryComponents.MenuItems.MenuItem, {
+										label: _this.labels.context_dms,
+										id: BDFDB.ContextMenuUtils.createItemId(_this.name, "mark-dms-read"),
+										action: _ => BDFDB.DMUtils.markAsRead(this.getPingedDMs())
+									})
+								]
+							}))
 						})
 					})
 				});
 			}
 		};
-	
+
 		return class ReadAllNotificationsButton extends Plugin {
 			onLoad () {
 				_this = this;
-				
+
 				this.defaults = {
 					general: {
 						addClearButton:		{value: true, 	description: "Adds a 'Clear Mentions' button to the recent mentions popout"},
@@ -146,14 +144,14 @@ module.exports = (_ => {
 						dms:				{value: false, 	description: "unread DMs"}
 					}
 				};
-			
+
 				this.modulePatches = {
 					after: [
 						"GuildsBar",
 						"InboxHeader"
 					]
 				};
-				
+
 				this.css = `
 					${BDFDB.dotCN.messagespopouttabbar} {
 						flex: 1 0 auto;
@@ -184,21 +182,21 @@ module.exports = (_ => {
 					}
 				`;
 			}
-			
+
 			onStart () {
 				let loadedBlacklist = BDFDB.DataUtils.load(this, "blacklist");
 				this.saveBlacklist(!BDFDB.ArrayUtils.is(loadedBlacklist) ? [] : loadedBlacklist);
 
 				this.forceUpdateAll();
 			}
-			
+
 			onStop () {
 				this.forceUpdateAll();
 			}
 
 			getSettingsPanel (collapseStates = {}) {
 				let settingsPanel, settingsItems = [];
-				
+
 				settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.CollapseContainer, {
 					title: "Settings",
 					collapseStates: collapseStates,
@@ -221,10 +219,10 @@ module.exports = (_ => {
 						}))
 					}))
 				}));
-				
+
 				let listInstance = null, batchSetGuilds = value => {
 					if (!value) {
-						for (let id of BDFDB.LibraryModules.SortedGuildUtils.getFlattenedGuildIds()) blacklist.push(id);
+						for (let id of BDFDB.LibraryStores.SortedGuildStore.getFlattenedGuildIds()) blacklist.push(id);
 						blacklist = BDFDB.ArrayUtils.removeCopies(blacklist);
 					}
 					else blacklist = [];
@@ -260,7 +258,7 @@ module.exports = (_ => {
 						})
 					]
 				}));
-				
+
 				return settingsPanel = BDFDB.PluginUtils.createSettingsPanel(this, settingsItems);
 			}
 
@@ -270,11 +268,11 @@ module.exports = (_ => {
 					this.forceUpdateAll();
 				}
 			}
-		
+
 			forceUpdateAll () {
 				BDFDB.DiscordUtils.rerenderAll();
 			}
-			
+
 			processGuildsBar (e) {
 				let [children, index] = BDFDB.ReactUtils.findParent(e.returnvalue, {name: "UnreadDMs"});
 				if (index > -1) children.splice(index + 1, 0, BDFDB.ReactUtils.createElement(ReadAllButtonComponent, {}));
@@ -325,7 +323,7 @@ module.exports = (_ => {
 					})
 				].flat(10);
 			}
-			
+
 			saveBlacklist (savedBlacklist) {
 				blacklist = savedBlacklist;
 				BDFDB.DataUtils.save(savedBlacklist, this, "blacklist");
