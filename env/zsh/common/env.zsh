@@ -11,3 +11,4 @@ export LESS="-g -i -M -R -S -W -z-4 -x4"
 
 # development
 export DOCKER_BUILDKIT=1
+export NODE_OPTIONS="--max-old-space-size=8192"
