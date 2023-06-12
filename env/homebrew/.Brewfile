@@ -1,3 +1,4 @@
+tap "apple/apple"
 tap "arrow2nd/tap"
 tap "buildpacks/tap"
 tap "ci7lus/miraktest"
@@ -506,6 +507,8 @@ cask "stats"
 cask "steam"
 # All-in-one live streaming software
 cask "streamlabs-obs"
+# Messaging app with a focus on speed and security
+cask "telegram"
 # Web browser focusing on security
 cask "tor-browser"
 # Management tool for Unity
