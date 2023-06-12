@@ -19,7 +19,7 @@ on:
       - '!env/userscript/bin/collect-vod-data/dist/**'
 
   schedule:
-    - cron: '*/3 * * * *'
+    - cron: '0 */3 * * *'
 
   workflow_dispatch:
 
