@@ -32,17 +32,6 @@ func main() {
 	logger.Info("found newest work id", slog.Int("newest_work_id", newestWorkID))
 
 	var results []*AnnictVODData
-	defer func(results []*AnnictVODData) {
-		content, err := json.MarshalContext(ctx, results)
-		if err != nil {
-			panic(err)
-		}
-
-		if err = os.WriteFile("dist/data.json", content, 0644); err != nil {
-			panic(err)
-		}
-	}(results)
-
 	workID := 1
 	for workID <= newestWorkID {
 		logger.Info("fetching vod data", slog.Int("work_id", workID))
@@ -60,6 +49,15 @@ func main() {
 
 		workID++
 		results = append(results, data...)
+	}
+
+	content, err := json.MarshalContext(ctx, results)
+	if err != nil {
+		panic(err)
+	}
+
+	if err = os.WriteFile("dist/data.json", content, 0644); err != nil {
+		panic(err)
 	}
 }
 
