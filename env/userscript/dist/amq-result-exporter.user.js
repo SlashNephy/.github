@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.5.0
+// @version         0.5.1
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
@@ -87,7 +87,12 @@ class PlayerAnswerTimeManager {
     }
 }
 
-const executeXhr = async (request) => new Promise((resolve, reject) => {
+async function fetchArmEntries(branch = 'master') {
+    const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/arm-supplementary/${branch}/dist/arm.json`);
+    return response.json();
+}
+
+const executeGmXhr = async (request) => new Promise((resolve, reject) => {
     GM_xmlhttpRequest({
         ...request,
         onload: (response) => {
@@ -98,14 +103,6 @@ const executeXhr = async (request) => new Promise((resolve, reject) => {
         },
     });
 });
-
-const fetchArmEntries = async () => {
-    const response = await executeXhr({
-        method: 'GET',
-        url: 'https://raw.githubusercontent.com/SlashNephy/arm-supplementary/master/dist/arm.json',
-    });
-    return JSON.parse(response.responseText);
-};
 
 class GM_Value {
     key;
@@ -145,7 +142,7 @@ const executeGas = async (row) => {
     if (dryRun.get()) {
         return;
     }
-    await executeXhr({
+    await executeGmXhr({
         url,
         method: 'POST',
         data: JSON.stringify(row),

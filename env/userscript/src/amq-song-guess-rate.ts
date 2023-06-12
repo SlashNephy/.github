@@ -1,7 +1,7 @@
 import { getDetailedSongInfo } from '../lib/amq/getDetailedSongInfo'
 import { onReady } from '../lib/amq/onReady'
-import { GM_Value } from '../lib/GM_Value'
-import { makeSha256HexDigest } from '../lib/hash'
+import { makeSha256HexDigest } from '../lib/makeSha256HexDigest'
+import { GM_Value } from '../lib/tampermonkey/GM_Value'
 
 import type { AnswerResultsEvent } from '../types/amq'
 

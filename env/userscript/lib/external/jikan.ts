@@ -1,4 +1,4 @@
-export type GetAnimeByIdResponse = {
+export type JikanAnime = {
   data: {
     mal_id: number
     url: string
@@ -84,4 +84,9 @@ export type GetAnimeByIdResponse = {
       url: string
     }[]
   }
+}
+
+export async function fetchJikanAnimeById(id: number): Promise<JikanAnime> {
+  const response = await fetch(`https://api.jikan.moe/v4/anime/${id}`)
+  return response.json()
 }

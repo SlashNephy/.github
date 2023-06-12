@@ -12,7 +12,8 @@
     "strict": true,
     "alwaysStrict": true,
     "skipLibCheck": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "useUnknownInCatchVariables": true
   },
   "include": ["src/**/*.ts", "lib/**/*.ts", "types/**/*.ts", "rollup.config.ts", "rollup.config.private.ts"]
 }

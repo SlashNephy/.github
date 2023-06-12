@@ -19,7 +19,6 @@ export const buildOptions = (banner: Banner): RollupOptions => {
         banner.private === true
           ? join('dist', 'private', `${banner.id}.user.js`)
           : join('dist', `${banner.id}.user.js`),
-      ...(banner.options?.output ?? {}),
     },
     plugins: [
       typescript(),
@@ -27,7 +26,7 @@ export const buildOptions = (banner: Banner): RollupOptions => {
         babelHelpers: 'bundled',
       }),
     ],
-    ...(banner.options ?? {}),
+    ...banner.options,
   }
 }
 
