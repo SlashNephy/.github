@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Work Links
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.1
+// @version         0.3.2
 // @author          SlashNephy
 // @description     Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.
 // @description:ja  Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。
@@ -17,25 +17,10 @@
 // @license         MIT license
 // ==/UserScript==
 
-const executeXhr = async (request) => new Promise((resolve, reject) => {
-    GM_xmlhttpRequest({
-        ...request,
-        onload: (response) => {
-            resolve(response);
-        },
-        onerror: (error) => {
-            reject(error);
-        },
-    });
-});
-
-const fetchArmEntries = async () => {
-    const response = await executeXhr({
-        method: 'GET',
-        url: 'https://raw.githubusercontent.com/SlashNephy/arm-supplementary/master/dist/arm.json',
-    });
-    return JSON.parse(response.responseText);
-};
+async function fetchArmEntries(branch = 'master') {
+    const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/arm-supplementary/${branch}/dist/arm.json`);
+    return response.json();
+}
 
 const annictWorkPageUrlPattern = /^https:\/\/annict\.com\/works\/(\d+)/;
 const cachedEntries = [];

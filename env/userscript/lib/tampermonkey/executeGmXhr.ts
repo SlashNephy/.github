@@ -1,4 +1,7 @@
-export const executeXhr = async <T = unknown>(
+/**
+ * @deprecated use fetch instead
+ */
+export const executeGmXhr = async <T = unknown>(
   request: Omit<Tampermonkey.Request<T>, 'onload' | 'onerror'>
 ): Promise<Tampermonkey.Response<T>> =>
   new Promise((resolve, reject) => {

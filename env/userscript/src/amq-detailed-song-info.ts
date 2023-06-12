@@ -1,7 +1,7 @@
 import { onReady } from '../lib/amq/onReady'
-import { GM_Value } from '../lib/GM_Value'
-import { getAnimeById } from '../lib/jikan'
-import { getAnimeScoreById } from '../lib/mal'
+import { fetchJikanAnimeById } from '../lib/external/jikan'
+import { fetchMalAnimeScoreById } from '../lib/external/mal'
+import { GM_Value } from '../lib/tampermonkey/GM_Value'
 
 import type { AnswerResultsEvent } from '../types/amq'
 import type { CustomLink, CustomRow } from '../types/amq-detailed-song-info'
@@ -64,13 +64,13 @@ const rows: CustomRow[] = [
       if (score === undefined || title === undefined) {
         try {
           // Jikan API
-          const result = await getAnimeById(malId)
+          const result = await fetchJikanAnimeById(malId)
           score = result.data.score
           title = result.data.title_japanese
         } catch {
           try {
             // MyAnimeList API
-            const result = await getAnimeScoreById(malId)
+            const result = await fetchMalAnimeScoreById(malId)
             score = result.mean
             title = result.alternative_titles.ja
           } catch {

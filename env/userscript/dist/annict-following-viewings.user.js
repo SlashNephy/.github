@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Following Viewings
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.1
+// @version         0.3.2
 // @author          SlashNephy
 // @description     Display following viewings on Annict work page.
 // @description:ja  Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。
@@ -23,25 +23,201 @@
 // @license         MIT license
 // ==/UserScript==
 
-const executeXhr = async (request) => new Promise((resolve, reject) => {
-    GM_xmlhttpRequest({
-        ...request,
-        onload: (response) => {
-            resolve(response);
-        },
-        onerror: (error) => {
-            reject(error);
+async function fetchAniListViewer(token) {
+    const response = await fetch('https://graphql.anilist.co', {
+        method: 'POST',
+        body: JSON.stringify({
+            query: `
+        query {
+          Viewer {
+            id
+          }
+        }
+      `,
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: `Bearer ${token}`,
         },
     });
-});
+    return response.json();
+}
+async function fetchAniListFollowings(userId, page, token) {
+    const response = await fetch('https://graphql.anilist.co', {
+        method: 'POST',
+        body: JSON.stringify({
+            query: `
+        query($userId: Int!, $page: Int!) {
+          Page(page: $page, perPage: 50) {
+            followers(userId: $userId) {
+              id
+            }
+            pageInfo {
+              hasNextPage
+            }
+          }
+        }
+      `,
+            variables: {
+                userId,
+                page,
+            },
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: `Bearer ${token}`,
+        },
+    });
+    return response.json();
+}
+async function fetchPaginatedAniListFollowings(userId, token) {
+    const results = [];
+    let page = 1;
+    while (true) {
+        const response = await fetchAniListFollowings(userId, page, token);
+        if ('errors' in response) {
+            return response;
+        }
+        results.push(response);
+        if (!response.data.Page.pageInfo.hasNextPage) {
+            break;
+        }
+        page++;
+    }
+    return results;
+}
+async function fetchAniListFollowingStatuses(mediaId, userIds, page, token) {
+    const response = await fetch('https://graphql.anilist.co', {
+        method: 'POST',
+        body: JSON.stringify({
+            query: `
+        query($mediaId: Int!, $userIds: [Int!]!, $page: Int!) {
+          Page(page: $page, perPage: 50) {
+            mediaList(type: ANIME, mediaId: $mediaId, userId_in: $userIds) {
+              user {
+                name
+                avatar {
+                  large
+                }
+              }
+              status
+              score
+            }
+            pageInfo {
+              hasNextPage
+            }
+          }
+        }
+      `,
+            variables: {
+                mediaId,
+                userIds,
+                page,
+            },
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: `Bearer ${token}`,
+        },
+    });
+    return response.json();
+}
+async function fetchPaginatedAniListFollowingStatuses(mediaId, userIds, token) {
+    const results = [];
+    let page = 1;
+    while (true) {
+        const response = await fetchAniListFollowingStatuses(mediaId, userIds, page, token);
+        if ('errors' in response) {
+            return response;
+        }
+        results.push(response);
+        if (!response.data.Page.pageInfo.hasNextPage) {
+            break;
+        }
+        page++;
+    }
+    return results;
+}
 
-const fetchArmEntries = async () => {
-    const response = await executeXhr({
-        method: 'GET',
-        url: 'https://raw.githubusercontent.com/SlashNephy/arm-supplementary/master/dist/arm.json',
+async function fetchAnnictFollowingStatuses(workId, cursor, token) {
+    const response = await fetch('https://api.annict.com/graphql', {
+        method: 'POST',
+        body: JSON.stringify({
+            query: `
+        query($workId: Int!, $cursor: String) {
+          viewer {
+            following(after: $cursor) {
+              nodes {
+                name
+                username
+                avatarUrl
+                watched: works(annictIds: [$workId], state: WATCHED) {
+                  nodes {
+                    annictId
+                  }
+                }
+                watching: works(annictIds: [$workId], state: WATCHING) {
+                  nodes {
+                    annictId
+                  }
+                }
+                stopWatching: works(annictIds: [$workId], state: STOP_WATCHING) {
+                  nodes {
+                    annictId
+                  }
+                }
+                onHold: works(annictIds: [$workId], state: ON_HOLD) {
+                  nodes {
+                    annictId
+                  }
+                }
+                wannaWatch: works(annictIds: [$workId], state: WANNA_WATCH) {
+                  nodes {
+                    annictId
+                  }
+                }
+              }
+              pageInfo {
+                hasNextPage
+                endCursor
+              }
+            }
+          }
+        }
+      `,
+            variables: {
+                workId,
+                cursor,
+            },
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: `Bearer ${token}`,
+        },
     });
-    return JSON.parse(response.responseText);
-};
+    return response.json();
+}
+async function fetchPaginatedAnnictFollowingStatuses(workId, token) {
+    const results = [];
+    let cursor = null;
+    while (true) {
+        const response = await fetchAnnictFollowingStatuses(workId, cursor, token);
+        if ('errors' in response) {
+            return response;
+        }
+        results.push(response);
+        if (!response.data.viewer.following.pageInfo.hasNextPage) {
+            break;
+        }
+        cursor = response.data.viewer.following.pageInfo.endCursor;
+    }
+    return results;
+}
+
+async function fetchArmEntries(branch = 'master') {
+    const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/arm-supplementary/${branch}/dist/arm.json`);
+    return response.json();
+}
 
 class GM_Value {
     key;
@@ -216,199 +392,6 @@ const migrate = () => {
     if (annictToken !== undefined) {
         GM_config.set(annictTokenKey, annictToken);
     }
-};
-const fetchAnnictFollowingStatuses = async (workId, cursor, token) => {
-    const response = await executeXhr({
-        url: 'https://api.annict.com/graphql',
-        method: 'POST',
-        data: JSON.stringify({
-            query: `
-        query($workId: Int!, $cursor: String) {
-          viewer {
-            following(after: $cursor) {
-              nodes {
-                name
-                username
-                avatarUrl
-                watched: works(annictIds: [$workId], state: WATCHED) {
-                  nodes {
-                    annictId
-                  }
-                }
-                watching: works(annictIds: [$workId], state: WATCHING) {
-                  nodes {
-                    annictId
-                  }
-                }
-                stopWatching: works(annictIds: [$workId], state: STOP_WATCHING) {
-                  nodes {
-                    annictId
-                  }
-                }
-                onHold: works(annictIds: [$workId], state: ON_HOLD) {
-                  nodes {
-                    annictId
-                  }
-                }
-                wannaWatch: works(annictIds: [$workId], state: WANNA_WATCH) {
-                  nodes {
-                    annictId
-                  }
-                }
-              }
-              pageInfo {
-                hasNextPage
-                endCursor
-              }
-            }
-          }
-        }
-      `,
-            variables: {
-                workId,
-                cursor,
-            },
-        }),
-        headers: {
-            'Content-Type': 'application/json',
-            authorization: `Bearer ${token}`,
-        },
-    });
-    return JSON.parse(response.responseText);
-};
-const fetchPaginatedAnnictFollowingStatuses = async (workId, token) => {
-    const results = [];
-    let cursor = null;
-    while (true) {
-        const response = await fetchAnnictFollowingStatuses(workId, cursor, token);
-        if ('errors' in response) {
-            return response;
-        }
-        results.push(response);
-        if (!response.data.viewer.following.pageInfo.hasNextPage) {
-            break;
-        }
-        cursor = response.data.viewer.following.pageInfo.endCursor;
-    }
-    return results;
-};
-const fetchAniListViewer = async (token) => {
-    const response = await executeXhr({
-        url: 'https://graphql.anilist.co',
-        method: 'POST',
-        data: JSON.stringify({
-            query: `
-        query {
-          Viewer {
-            id
-          }
-        }
-      `,
-        }),
-        headers: {
-            'Content-Type': 'application/json',
-            authorization: `Bearer ${token}`,
-        },
-    });
-    return JSON.parse(response.responseText);
-};
-const fetchAniListFollowings = async (userId, page, token) => {
-    const response = await executeXhr({
-        url: 'https://graphql.anilist.co',
-        method: 'POST',
-        data: JSON.stringify({
-            query: `
-        query($userId: Int!, $page: Int!) {
-          Page(page: $page, perPage: 50) {
-            followers(userId: $userId) {
-              id
-            }
-            pageInfo {
-              hasNextPage
-            }
-          }
-        }
-      `,
-            variables: {
-                userId,
-                page,
-            },
-        }),
-        headers: {
-            'Content-Type': 'application/json',
-            authorization: `Bearer ${token}`,
-        },
-    });
-    return JSON.parse(response.responseText);
-};
-const fetchPaginatedAniListFollowings = async (userId, token) => {
-    const results = [];
-    let page = 1;
-    while (true) {
-        const response = await fetchAniListFollowings(userId, page, token);
-        if ('errors' in response) {
-            return response;
-        }
-        results.push(response);
-        if (!response.data.Page.pageInfo.hasNextPage) {
-            break;
-        }
-        page++;
-    }
-    return results;
-};
-const fetchAniListFollowingStatuses = async (mediaId, userIds, page, token) => {
-    const response = await executeXhr({
-        url: 'https://graphql.anilist.co',
-        method: 'POST',
-        data: JSON.stringify({
-            query: `
-        query($mediaId: Int!, $userIds: [Int!]!, $page: Int!) {
-          Page(page: $page, perPage: 50) {
-            mediaList(type: ANIME, mediaId: $mediaId, userId_in: $userIds) {
-              user {
-                name
-                avatar {
-                  large
-                }
-              }
-              status
-              score
-            }
-            pageInfo {
-              hasNextPage
-            }
-          }
-        }
-      `,
-            variables: {
-                mediaId,
-                userIds,
-                page,
-            },
-        }),
-        headers: {
-            'Content-Type': 'application/json',
-            authorization: `Bearer ${token}`,
-        },
-    });
-    return JSON.parse(response.responseText);
-};
-const fetchPaginatedAniListFollowingStatuses = async (mediaId, userIds, token) => {
-    const results = [];
-    let page = 1;
-    while (true) {
-        const response = await fetchAniListFollowingStatuses(mediaId, userIds, page, token);
-        if ('errors' in response) {
-            return response;
-        }
-        results.push(response);
-        if (!response.data.Page.pageInfo.hasNextPage) {
-            break;
-        }
-        page++;
-    }
-    return results;
 };
 const parseAnnictFollowingStatuses = (response) => response.data.viewer.following.nodes
     .map((u) => {

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Song Guess Rate
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.0
+// @version         0.3.1
 // @author          SlashNephy
 // @description     Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)
 // @description:ja  曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)
@@ -82,6 +82,13 @@ const onReady = (callback) => {
         .catch(console.error);
 };
 
+const makeSha256HexDigest = async (message) => {
+    const data = new TextEncoder().encode(message);
+    const buffer = await crypto.subtle.digest('SHA-256', data);
+    const arrayBuffer = Array.from(new Uint8Array(buffer));
+    return arrayBuffer.map((b) => b.toString(16).padStart(2, '0')).join('');
+};
+
 class GM_Value {
     key;
     defaultValue;
@@ -108,13 +115,6 @@ class GM_Value {
         return value;
     }
 }
-
-const makeSha256HexDigest = async (message) => {
-    const data = new TextEncoder().encode(message);
-    const buffer = await crypto.subtle.digest('SHA-256', data);
-    const arrayBuffer = Array.from(new Uint8Array(buffer));
-    return arrayBuffer.map((b) => b.toString(16).padStart(2, '0')).join('');
-};
 
 const increment = async (key, isCorrect) => {
     const hashKey = await makeSha256HexDigest(key);

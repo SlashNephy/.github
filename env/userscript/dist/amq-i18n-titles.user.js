@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ i18n Titles
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.1
+// @version         0.1.2
 // @author          SlashNephy
 // @description     Display localized anime titles. (Currently support only Japanese.)
 // @description:ja  選択肢やドロップダウンに表示されているアニメのタイトルを日本語に置換します。
@@ -46,30 +46,17 @@ const onReady = (callback) => {
         .catch(console.error);
 };
 
-const executeXhr = async (request) => new Promise((resolve, reject) => {
-    GM_xmlhttpRequest({
-        ...request,
-        onload: (response) => {
-            resolve(response);
-        },
-        onerror: (error) => {
-            reject(error);
-        },
-    });
-});
+async function fetchAnimeTitles(branch = 'master') {
+    const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/.github/${branch}/env/userscript/bin/collect-anime-data/dist/titles.json`);
+    return response.json();
+}
 
-const fetchTitles = async () => {
-    const { responseText } = await executeXhr({
-        url: 'https://raw.githubusercontent.com/SlashNephy/.github/master/env/userscript/bin/collect-anime-data/dist/titles.json',
-    });
-    return JSON.parse(responseText);
-};
 const localizeTitle = (titles, target) => Object.entries(titles)
     .find(([k]) => k.toLowerCase() === target.toLowerCase())
     ?.at(1)
     ?.at(0);
 onReady(async () => {
-    const titles = await fetchTitles();
+    const titles = await fetchAnimeTitles();
     const { setName } = QuizMultipleChoiceAnswerOption.prototype;
     QuizMultipleChoiceAnswerOption.prototype.setName = function (name) {
         setName.call(this, name);

@@ -1,6 +1,6 @@
-import { buildOptions } from './lib/tampermonkey'
+import { buildOptions } from './lib/tampermonkey/build'
 
-import type { Banner } from './lib/tampermonkey'
+import type { Banner } from './lib/tampermonkey/build'
 import type { RollupOptions } from 'rollup'
 
 export const banners: Banner[] = [

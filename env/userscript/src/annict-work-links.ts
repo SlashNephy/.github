@@ -1,6 +1,6 @@
-import { fetchArmEntries } from '../lib/arm'
+import { fetchArmEntries } from '../lib/external/arm'
 
-import type { ArmEntry } from '../lib/arm'
+import type { ArmEntry } from '../lib/external/arm'
 
 const annictWorkPageUrlPattern = /^https:\/\/annict\.com\/works\/(\d+)/
 

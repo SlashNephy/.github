@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Detailed Song Info
 // @namespace       https://github.com/SlashNephy
-// @version         0.7.0
+// @version         0.7.1
 // @author          SlashNephy
 // @description     Display detailed information on the side panel of the song.
 // @description:ja  曲のサイドパネルに詳細な情報を表示します。
@@ -49,6 +49,21 @@ const onReady = (callback) => {
         .catch(console.error);
 };
 
+async function fetchJikanAnimeById(id) {
+    const response = await fetch(`https://api.jikan.moe/v4/anime/${id}`);
+    return response.json();
+}
+
+const MalClientId = '6b13c8a22ad3a5e16dd52f548ba7d545';
+async function fetchMalAnimeScoreById(id) {
+    const response = await fetch(`https://api.myanimelist.net/v2/anime/${id}?fields=mean`, {
+        headers: {
+            'X-MAL-CLIENT-ID': MalClientId,
+        },
+    });
+    return response.json();
+}
+
 class GM_Value {
     key;
     defaultValue;
@@ -75,35 +90,6 @@ class GM_Value {
         return value;
     }
 }
-
-const executeXhr = async (request) => new Promise((resolve, reject) => {
-    GM_xmlhttpRequest({
-        ...request,
-        onload: (response) => {
-            resolve(response);
-        },
-        onerror: (error) => {
-            reject(error);
-        },
-    });
-});
-
-const getAnimeById = async (id) => {
-    const content = await executeXhr({
-        url: `https://api.jikan.moe/v4/anime/${id}`,
-    });
-    return JSON.parse(content.responseText);
-};
-
-const getAnimeScoreById = async (id) => {
-    const content = await executeXhr({
-        url: `https://api.myanimelist.net/v2/anime/${id}?fields=mean`,
-        headers: {
-            'X-MAL-CLIENT-ID': '6b13c8a22ad3a5e16dd52f548ba7d545',
-        },
-    });
-    return JSON.parse(content.responseText);
-};
 
 const scoreCache = new Map();
 const titleCache = new Map();
@@ -157,13 +143,13 @@ const rows = [
             let title = titleCache.get(malId);
             if (score === undefined || title === undefined) {
                 try {
-                    const result = await getAnimeById(malId);
+                    const result = await fetchJikanAnimeById(malId);
                     score = result.data.score;
                     title = result.data.title_japanese;
                 }
                 catch {
                     try {
-                        const result = await getAnimeScoreById(malId);
+                        const result = await fetchMalAnimeScoreById(malId);
                         score = result.mean;
                         title = result.alternative_titles.ja;
                     }

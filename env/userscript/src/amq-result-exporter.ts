@@ -1,10 +1,10 @@
 import { onReady } from '../lib/amq/onReady'
 import { PlayerAnswerTimeManager } from '../lib/amq/PlayerAnswerTimeManager'
-import { executeXhr } from '../lib/api'
-import { fetchArmEntries } from '../lib/arm'
-import { GM_Value } from '../lib/GM_Value'
+import { fetchArmEntries } from '../lib/external/arm'
+import { executeGmXhr } from '../lib/tampermonkey/executeGmXhr'
+import { GM_Value } from '../lib/tampermonkey/GM_Value'
 
-import type { ArmEntry } from '../lib/arm'
+import type { ArmEntry } from '../lib/external/arm'
 
 const gasUrl = new GM_Value('GAS_URL', '')
 const dryRun = new GM_Value('DRY_RUN', false)
@@ -21,7 +21,9 @@ const executeGas = async (row: (string | number | boolean)[]) => {
     return
   }
 
-  await executeXhr({
+  // XXX: CORS を回避するため GM_xmlhttpRequest を使う
+  // eslint-disable-next-line deprecation/deprecation
+  await executeGmXhr({
     url,
     method: 'POST',
     data: JSON.stringify(row),
