@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Following Viewings
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.2
+// @version         0.3.1
 // @author          SlashNephy
 // @description     Display following viewings on Annict work page.
 // @description:ja  Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。

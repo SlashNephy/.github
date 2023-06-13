@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ i18n Titles
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.2
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Display localized anime titles. (Currently support only Japanese.)
 // @description:ja  選択肢やドロップダウンに表示されているアニメのタイトルを日本語に置換します。
