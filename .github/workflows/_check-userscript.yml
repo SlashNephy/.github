@@ -7,6 +7,7 @@ on:
     paths:
       - 'env/userscript/**'
       - '.github/workflows/_check-userscript.yml'
+      - '!env/userscript/bin/*/dist/*'
 
   pull_request:
     types:
@@ -15,6 +16,7 @@ on:
     paths:
       - 'env/userscript/**'
       - '.github/workflows/_check-userscript.yml'
+      - '!env/userscript/bin/*/dist/*'
 
   workflow_dispatch:
 
