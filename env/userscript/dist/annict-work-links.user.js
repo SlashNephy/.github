@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Work Links
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.2
+// @version         0.3.1
 // @author          SlashNephy
 // @description     Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.
 // @description:ja  Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。
