@@ -17,56 +17,59 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
-    let timer;
-    const interval = window.setInterval(() => {
-        if (predicate()) {
-            clearInterval(interval);
-            clearTimeout(timer);
-            resolve();
+(function () {
+    'use strict';
+
+    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+        let timer;
+        const interval = window.setInterval(() => {
+            if (predicate()) {
+                clearInterval(interval);
+                clearTimeout(timer);
+                resolve();
+            }
+        }, 500);
+        if (timeout !== undefined) {
+            timer = window.setTimeout(() => {
+                clearInterval(interval);
+                clearTimeout(timer);
+                reject(new Error('timeout'));
+            }, timeout);
         }
-    }, 500);
-    if (timeout !== undefined) {
-        timer = setTimeout(() => {
-            clearInterval(interval);
-            clearTimeout(timer);
-            reject(new Error('timeout'));
-        }, timeout);
-    }
-});
+    });
 
-const onReady = (callback) => {
-    if (document.getElementById('startPage')) {
-        return;
-    }
-    awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
-        .then(callback)
-        .catch(console.error);
-};
-
-onReady(() => {
-    const video = document.createElement('video');
-    video.id = 'dynamic-background-video';
-    video.muted = true;
-    video.loop = true;
-    const container = document.getElementById('quizPage') ?? document.body;
-    container.insertAdjacentElement('afterbegin', video);
-    new Listener('answer results', () => {
-        const quizPlayer = unsafeWindow.quizVideoController.getCurrentPlayer();
-        if (quizPlayer === undefined) {
+    const onReady = (callback) => {
+        if (document.getElementById('startPage')) {
             return;
         }
-        if (quizPlayer.player.isAudio()) {
-            return;
-        }
-        const quizVideo = quizPlayer.$player[0];
-        if (video.src !== quizVideo.src) {
-            video.src = quizVideo.src;
-            video.currentTime = quizVideo.currentTime;
-            video.play().catch(console.error);
-        }
-    }).bindListener();
-    AMQ_addStyle(`
+        awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+            .then(callback)
+            .catch(console.error);
+    };
+
+    onReady(() => {
+        const video = document.createElement('video');
+        video.id = 'dynamic-background-video';
+        video.muted = true;
+        video.loop = true;
+        const container = document.getElementById('quizPage') ?? document.body;
+        container.insertAdjacentElement('afterbegin', video);
+        new Listener('answer results', () => {
+            const quizPlayer = unsafeWindow.quizVideoController.getCurrentPlayer();
+            if (quizPlayer === undefined) {
+                return;
+            }
+            if (quizPlayer.player.isAudio()) {
+                return;
+            }
+            const quizVideo = quizPlayer.$player[0];
+            if (video.src !== quizVideo.src) {
+                video.src = quizVideo.src;
+                video.currentTime = quizVideo.currentTime;
+                video.play().catch(console.error);
+            }
+        }).bindListener();
+        AMQ_addStyle(`
     #dynamic-background-video {
       position: fixed;
       top: 0;
@@ -76,9 +79,11 @@ onReady(() => {
       object-fit: cover;
     }
   `);
-    AMQ_addScriptData({
-        name: 'Dynamic Background',
-        author: 'SlashNephy &lt;spica@starry.blue&gt;',
-        description: 'Set the currently playing video surface as the background image.',
+        AMQ_addScriptData({
+            name: 'Dynamic Background',
+            author: 'SlashNephy &lt;spica@starry.blue&gt;',
+            description: 'Set the currently playing video surface as the background image.',
+        });
     });
-});
+
+})();

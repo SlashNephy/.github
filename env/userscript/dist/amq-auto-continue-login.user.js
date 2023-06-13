@@ -18,46 +18,51 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
-    let timer;
-    const interval = window.setInterval(() => {
-        if (predicate()) {
-            clearInterval(interval);
-            clearTimeout(timer);
-            resolve();
+(function () {
+    'use strict';
+
+    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+        let timer;
+        const interval = window.setInterval(() => {
+            if (predicate()) {
+                clearInterval(interval);
+                clearTimeout(timer);
+                resolve();
+            }
+        }, 500);
+        if (timeout !== undefined) {
+            timer = window.setTimeout(() => {
+                clearInterval(interval);
+                clearTimeout(timer);
+                reject(new Error('timeout'));
+            }, timeout);
         }
-    }, 500);
-    if (timeout !== undefined) {
-        timer = setTimeout(() => {
-            clearInterval(interval);
-            clearTimeout(timer);
-            reject(new Error('timeout'));
-        }, timeout);
-    }
-});
-
-const onReady = (callback) => {
-    if (document.getElementById('startPage')) {
-        return;
-    }
-    awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
-        .then(callback)
-        .catch(console.error);
-};
-
-const selector = '#loginFormContainer > div > a';
-awaitFor(() => document.querySelector(selector) !== null)
-    .then(() => {
-    const element = document.querySelector(selector);
-    if (element !== null) {
-        element.click();
-    }
-})
-    .catch(console.error);
-onReady(() => {
-    AMQ_addScriptData({
-        name: 'Auto Continue Login',
-        author: 'SlashNephy &lt;spica@starry.blue&gt;',
-        description: 'Press the Continue Login button automatically in Login Page.',
     });
-});
+
+    const onReady = (callback) => {
+        if (document.getElementById('startPage')) {
+            return;
+        }
+        awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+            .then(callback)
+            .catch(console.error);
+    };
+
+    const selector = '#loginFormContainer > div > a';
+    awaitFor(() => document.querySelector(selector) !== null)
+        .then(() => {
+        const element = document.querySelector(selector);
+        if (element !== null) {
+            element.click();
+        }
+    })
+        .catch(console.error);
+    onReady(() => {
+        AMQ_addScriptData({
+            name: 'Auto Continue Login',
+            author: 'SlashNephy &lt;spica@starry.blue&gt;',
+            description: 'Press the Continue Login button automatically in Login Page.',
+        });
+    });
+
+})();

@@ -17,123 +17,128 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
-    let timer;
-    const interval = window.setInterval(() => {
-        if (predicate()) {
-            clearInterval(interval);
-            clearTimeout(timer);
-            resolve();
-        }
-    }, 500);
-    if (timeout !== undefined) {
-        timer = setTimeout(() => {
-            clearInterval(interval);
-            clearTimeout(timer);
-            reject(new Error('timeout'));
-        }, timeout);
-    }
-});
+(function () {
+    'use strict';
 
-const onReady = (callback) => {
-    if (document.getElementById('startPage')) {
-        return;
-    }
-    awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
-        .then(callback)
-        .catch(console.error);
-};
-
-const isReady = () => unsafeWindow.setupDocumentDone === true;
-
-class PlayerAnswerTimeManager {
-    #songStartTime = 0;
-    #playerTimes = [];
-    #firstPlayers = [];
-    constructor() {
-        if (!isReady()) {
-            throw new Error('AMQ is not ready.');
-        }
-        new Listener('play next song', () => {
-            this.#songStartTime = Date.now();
-            this.#playerTimes = [];
-            this.#firstPlayers = [];
-        }).bindListener();
-        new Listener('player answered', (playerIds) => {
-            const time = Date.now() - this.#songStartTime;
-            if (this.#firstPlayers.length === 0) {
-                this.#firstPlayers.push(...playerIds);
+    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+        let timer;
+        const interval = window.setInterval(() => {
+            if (predicate()) {
+                clearInterval(interval);
+                clearTimeout(timer);
+                resolve();
             }
-            for (const id of playerIds) {
-                this.#playerTimes[id] = time;
-            }
-        }).bindListener();
-        new Listener('Join Game', ({ quizState }) => {
-            if (quizState.songTimer > 0) {
-                this.#songStartTime = Date.now() - quizState.songTimer * 1000;
-            }
-        }).bindListener();
-    }
-    query(playerId) {
-        return playerId in this.#playerTimes ? this.#playerTimes[playerId] : null;
-    }
-    isFirst(playerId) {
-        return this.#firstPlayers.includes(playerId);
-    }
-}
-
-onReady(() => {
-    const ignoredPlayerIds = [];
-    const playerAnswers = new PlayerAnswerTimeManager();
-    const formatAnswerTime = (playerId) => {
-        const time = playerAnswers.query(playerId);
-        if (time === null) {
-            return null;
+        }, 500);
+        if (timeout !== undefined) {
+            timer = window.setTimeout(() => {
+                clearInterval(interval);
+                clearTimeout(timer);
+                reject(new Error('timeout'));
+            }, timeout);
         }
-        const isLightning = playerAnswers.isFirst(playerId);
-        return `${isLightning ? '⚡ ' : ''}${(time / 1000).toFixed(2)} s`;
+    });
+
+    const onReady = (callback) => {
+        if (document.getElementById('startPage')) {
+            return;
+        }
+        awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+            .then(callback)
+            .catch(console.error);
     };
-    new Listener('Game Starting', ({ players }) => {
-        ignoredPlayerIds.splice(0);
-        const player = players.find((p) => p.name === unsafeWindow.selfName);
-        if (player === undefined) {
-            return;
-        }
-        const { teamNumber } = player;
-        if (teamNumber === null) {
-            return;
-        }
-        const teamMates = players.filter((p) => p.teamNumber === teamNumber);
-        if (teamMates.length > 1) {
-            ignoredPlayerIds.push(...teamMates.map((p) => p.gamePlayerId));
-        }
-    }).bindListener();
-    new Listener('player answered', (event) => {
-        for (const playerId of event.filter((id) => !ignoredPlayerIds.includes(id))) {
-            const time = formatAnswerTime(playerId);
-            if (time !== null) {
-                unsafeWindow.quiz.players[playerId].answer = time;
+
+    const isReady = () => unsafeWindow.setupDocumentDone === true;
+
+    class PlayerAnswerTimeManager {
+        #songStartTime = 0;
+        #playerTimes = [];
+        #firstPlayers = [];
+        constructor() {
+            if (!isReady()) {
+                throw new Error('AMQ is not ready.');
             }
+            new Listener('play next song', () => {
+                this.#songStartTime = Date.now();
+                this.#playerTimes = [];
+                this.#firstPlayers = [];
+            }).bindListener();
+            new Listener('player answered', (playerIds) => {
+                const time = Date.now() - this.#songStartTime;
+                if (this.#firstPlayers.length === 0) {
+                    this.#firstPlayers.push(...playerIds);
+                }
+                for (const id of playerIds) {
+                    this.#playerTimes[id] = time;
+                }
+            }).bindListener();
+            new Listener('Join Game', ({ quizState }) => {
+                if (quizState.songTimer > 0) {
+                    this.#songStartTime = Date.now() - quizState.songTimer * 1000;
+                }
+            }).bindListener();
         }
-    }).bindListener();
-    unsafeWindow.quiz._playerAnswerListner = new Listener('player answers', (event) => {
-        for (const answer of event.answers) {
-            const time = formatAnswerTime(answer.gamePlayerId);
-            const text = time !== null ? `${answer.answer} (${time})` : answer.answer;
-            const player = unsafeWindow.quiz.players[answer.gamePlayerId];
-            player.answer = text;
-            player.unknownAnswerNumber = answer.answerNumber;
-            player.toggleTeamAnswerSharing(false);
+        query(playerId) {
+            return playerId in this.#playerTimes ? this.#playerTimes[playerId] : null;
         }
-        if (!unsafeWindow.quiz.isSpectator) {
-            unsafeWindow.quiz.answerInput?.showSubmitedAnswer();
-            unsafeWindow.quiz.answerInput?.resetAnswerState();
+        isFirst(playerId) {
+            return this.#firstPlayers.includes(playerId);
         }
-        unsafeWindow.quiz.videoTimerBar.updateState(event.progressBarState);
+    }
+
+    onReady(() => {
+        const ignoredPlayerIds = [];
+        const playerAnswers = new PlayerAnswerTimeManager();
+        const formatAnswerTime = (playerId) => {
+            const time = playerAnswers.query(playerId);
+            if (time === null) {
+                return null;
+            }
+            const isLightning = playerAnswers.isFirst(playerId);
+            return `${isLightning ? '⚡ ' : ''}${(time / 1000).toFixed(2)} s`;
+        };
+        new Listener('Game Starting', ({ players }) => {
+            ignoredPlayerIds.splice(0);
+            const player = players.find((p) => p.name === unsafeWindow.selfName);
+            if (player === undefined) {
+                return;
+            }
+            const { teamNumber } = player;
+            if (teamNumber === null) {
+                return;
+            }
+            const teamMates = players.filter((p) => p.teamNumber === teamNumber);
+            if (teamMates.length > 1) {
+                ignoredPlayerIds.push(...teamMates.map((p) => p.gamePlayerId));
+            }
+        }).bindListener();
+        new Listener('player answered', (event) => {
+            for (const playerId of event.filter((id) => !ignoredPlayerIds.includes(id))) {
+                const time = formatAnswerTime(playerId);
+                if (time !== null) {
+                    unsafeWindow.quiz.players[playerId].answer = time;
+                }
+            }
+        }).bindListener();
+        unsafeWindow.quiz._playerAnswerListner = new Listener('player answers', (event) => {
+            for (const answer of event.answers) {
+                const time = formatAnswerTime(answer.gamePlayerId);
+                const text = time !== null ? `${answer.answer} (${time})` : answer.answer;
+                const player = unsafeWindow.quiz.players[answer.gamePlayerId];
+                player.answer = text;
+                player.unknownAnswerNumber = answer.answerNumber;
+                player.toggleTeamAnswerSharing(false);
+            }
+            if (!unsafeWindow.quiz.isSpectator) {
+                unsafeWindow.quiz.answerInput?.showSubmitedAnswer();
+                unsafeWindow.quiz.answerInput?.resetAnswerState();
+            }
+            unsafeWindow.quiz.videoTimerBar.updateState(event.progressBarState);
+        });
+        AMQ_addScriptData({
+            name: 'Display Answer Time 2',
+            author: 'SlashNephy &lt;spica@starry.blue&gt;',
+            description: 'Display player answer time in seconds.',
+        });
     });
-    AMQ_addScriptData({
-        name: 'Display Answer Time 2',
-        author: 'SlashNephy &lt;spica@starry.blue&gt;',
-        description: 'Display player answer time in seconds.',
-    });
-});
+
+})();

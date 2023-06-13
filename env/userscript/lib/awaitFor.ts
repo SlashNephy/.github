@@ -2,7 +2,7 @@ export type Predicate = () => boolean
 
 export const awaitFor = async (predicate: Predicate, timeout?: number): Promise<void> =>
   new Promise((resolve, reject) => {
-    let timer: number | NodeJS.Timer
+    let timer: number
 
     const interval = window.setInterval(() => {
       if (predicate()) {
@@ -13,7 +13,7 @@ export const awaitFor = async (predicate: Predicate, timeout?: number): Promise<
     }, 500)
 
     if (timeout !== undefined) {
-      timer = setTimeout(() => {
+      timer = window.setTimeout(() => {
         clearInterval(interval)
         clearTimeout(timer)
         reject(new Error('timeout'))

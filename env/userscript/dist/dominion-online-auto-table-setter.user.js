@@ -16,44 +16,49 @@
 // @license         MIT license
 // ==/UserScript==
 
-const applySettings = () => {
-    document.querySelector('div.clear-button')?.click();
-    for (let i = 0; i < 2; i++) {
-        document.querySelector('div.table-kingdom-landscape.add-landscape')?.click();
-    }
-    for (const element of document.querySelectorAll('div.landscape-selector-none')) {
-        element.click();
-    }
-    document.querySelector('div#colony-selector')?.click();
-    document.querySelector('div#shelter-selector')?.click();
-    document
-        .querySelector('div.game-options div.table-toggle-container:nth-child(3) > div.switch-button')
-        ?.click();
-    alert('Table settings applied!');
-};
-const observe = () => {
-    const target = document.querySelector('div.window-container > div');
-    if (target === null) {
-        setTimeout(observe, 1000);
-        return;
-    }
-    const observer = new MutationObserver((records) => {
-        for (const record of records) {
-            if (!(record.target instanceof Element)) {
-                continue;
-            }
-            if (record.oldValue?.split(/\s/).some((x) => x === 'my-table') === true) {
-                continue;
-            }
-            if (record.target.classList.contains('my-table')) {
-                applySettings();
-            }
+(function () {
+    'use strict';
+
+    const applySettings = () => {
+        document.querySelector('div.clear-button')?.click();
+        for (let i = 0; i < 2; i++) {
+            document.querySelector('div.table-kingdom-landscape.add-landscape')?.click();
         }
-    });
-    observer.observe(target, {
-        attributes: true,
-        attributeFilter: ['class'],
-        attributeOldValue: true,
-    });
-};
-observe();
+        for (const element of document.querySelectorAll('div.landscape-selector-none')) {
+            element.click();
+        }
+        document.querySelector('div#colony-selector')?.click();
+        document.querySelector('div#shelter-selector')?.click();
+        document
+            .querySelector('div.game-options div.table-toggle-container:nth-child(3) > div.switch-button')
+            ?.click();
+        alert('Table settings applied!');
+    };
+    const observe = () => {
+        const target = document.querySelector('div.window-container > div');
+        if (target === null) {
+            setTimeout(observe, 1000);
+            return;
+        }
+        const observer = new MutationObserver((records) => {
+            for (const record of records) {
+                if (!(record.target instanceof Element)) {
+                    continue;
+                }
+                if (record.oldValue?.split(/\s/).some((x) => x === 'my-table') === true) {
+                    continue;
+                }
+                if (record.target.classList.contains('my-table')) {
+                    applySettings();
+                }
+            }
+        });
+        observer.observe(target, {
+            attributes: true,
+            attributeFilter: ['class'],
+            attributeOldValue: true,
+        });
+    };
+    observe();
+
+})();

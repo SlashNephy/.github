@@ -16,27 +16,32 @@
 // @license         MIT license
 // ==/UserScript==
 
-const main = () => {
-    if (!window.location.href.startsWith('https://annict.com/track')) {
-        return;
-    }
-    for (const card of document.querySelectorAll('div.card.u-card-flat')) {
-        const iconElement = card.querySelector('.fa-check-circle');
-        if (iconElement) {
-            card.style.display = 'none';
-            continue;
+(function () {
+    'use strict';
+
+    const main = () => {
+        if (!window.location.href.startsWith('https://annict.com/track')) {
+            return;
         }
-        const dateElement = card.querySelector('div.col div[class="small"] span.text-muted');
-        if (dateElement === null || dateElement.textContent === null) {
-            continue;
+        for (const card of document.querySelectorAll('div.card.u-card-flat')) {
+            const iconElement = card.querySelector('.fa-check-circle');
+            if (iconElement) {
+                card.style.display = 'none';
+                continue;
+            }
+            const dateElement = card.querySelector('div.col div[class="small"] span.text-muted');
+            if (dateElement === null || dateElement.textContent === null) {
+                continue;
+            }
+            const datetime = Date.parse(dateElement.textContent);
+            const today = Date.now();
+            if (datetime > today + 24 * 60 * 60 * 1000) {
+                card.style.display = 'none';
+            }
         }
-        const datetime = Date.parse(dateElement.textContent);
-        const today = Date.now();
-        if (datetime > today + 24 * 60 * 60 * 1000) {
-            card.style.display = 'none';
-        }
-    }
-};
-document.addEventListener('turbo:load', () => {
-    main();
-});
+    };
+    document.addEventListener('turbo:load', () => {
+        main();
+    });
+
+})();
