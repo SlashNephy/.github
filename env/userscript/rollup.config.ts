@@ -7,7 +7,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-work-links',
     name: 'Annict Work Links',
-    version: '0.3.1',
+    version: '0.3.2',
     description: {
       en: 'Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.',
       ja: 'Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。',
@@ -81,7 +81,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-result-exporter',
     name: 'AMQ Result Exporter',
-    version: '0.5.0',
+    version: '0.5.1',
     description: {
       en: 'Export song results to your Google Spreadsheet!',
       ja: 'Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。',
@@ -144,7 +144,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-detailed-song-info',
     name: 'AMQ Detailed Song Info',
-    version: '0.7.0',
+    version: '0.7.1',
     description: {
       en: 'Display detailed information on the side panel of the song.',
       ja: '曲のサイドパネルに詳細な情報を表示します。',
@@ -216,7 +216,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-song-guess-rate',
     name: 'AMQ Song Guess Rate',
-    version: '0.3.0',
+    version: '0.3.1',
     description: {
       en: 'Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)',
       ja: '曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)',
@@ -319,7 +319,7 @@ export const banners: Banner[] = [
   {
     id: 'annict-following-viewings',
     name: 'Annict Following Viewings',
-    version: '0.3.1',
+    version: '0.3.2',
     description: {
       en: 'Display following viewings on Annict work page.',
       ja: 'Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。',
@@ -350,7 +350,7 @@ export const banners: Banner[] = [
   {
     id: 'amq-i18n-titles',
     name: 'AMQ i18n Titles',
-    version: '0.1.1',
+    version: '0.1.2',
     description: {
       en: 'Display localized anime titles. (Currently support only Japanese.)',
       ja: '選択肢やドロップダウンに表示されているアニメのタイトルを日本語に置換します。',

@@ -2,6 +2,7 @@ import { writeFile } from 'fs/promises'
 import { join } from 'path'
 
 import { babel } from '@rollup/plugin-babel'
+import nodeResolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 
 import type { RollupOptions } from 'rollup'
@@ -12,21 +13,26 @@ export const buildOptions = (banner: Banner): RollupOptions => {
   createDevScript(banner).catch(console.error)
 
   return {
+    ...banner.options,
     input: banner.private === true ? join('src', 'private', `${banner.id}.ts`) : join('src', `${banner.id}.ts`),
     output: {
+      ...banner.options?.output,
       banner: renderBanner(banner, 'dist'),
+      format: 'iife',
       file:
         banner.private === true
           ? join('dist', 'private', `${banner.id}.user.js`)
           : join('dist', `${banner.id}.user.js`),
     },
     plugins: [
+      nodeResolve({
+        browser: true,
+      }),
       typescript(),
       babel({
         babelHelpers: 'bundled',
       }),
     ],
-    ...banner.options,
   }
 }
 

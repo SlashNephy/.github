@@ -17,7 +17,12 @@
 // @license         MIT license
 // ==/UserScript==
 
-const anchor = document.querySelector('body > div > a');
-if (anchor) {
-    window.location.href = anchor.href;
-}
+(function () {
+    'use strict';
+
+    const anchor = document.querySelector('body > div > a');
+    if (anchor) {
+        window.location.href = anchor.href;
+    }
+
+})();

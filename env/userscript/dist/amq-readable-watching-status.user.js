@@ -17,35 +17,38 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
-    let timer;
-    const interval = window.setInterval(() => {
-        if (predicate()) {
-            clearInterval(interval);
-            clearTimeout(timer);
-            resolve();
+(function () {
+    'use strict';
+
+    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+        let timer;
+        const interval = window.setInterval(() => {
+            if (predicate()) {
+                clearInterval(interval);
+                clearTimeout(timer);
+                resolve();
+            }
+        }, 500);
+        if (timeout !== undefined) {
+            timer = window.setTimeout(() => {
+                clearInterval(interval);
+                clearTimeout(timer);
+                reject(new Error('timeout'));
+            }, timeout);
         }
-    }, 500);
-    if (timeout !== undefined) {
-        timer = setTimeout(() => {
-            clearInterval(interval);
-            clearTimeout(timer);
-            reject(new Error('timeout'));
-        }, timeout);
-    }
-});
+    });
 
-const onReady = (callback) => {
-    if (document.getElementById('startPage')) {
-        return;
-    }
-    awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
-        .then(callback)
-        .catch(console.error);
-};
+    const onReady = (callback) => {
+        if (document.getElementById('startPage')) {
+            return;
+        }
+        awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+            .then(callback)
+            .catch(console.error);
+    };
 
-onReady(() => {
-    AMQ_addStyle(`
+    onReady(() => {
+        AMQ_addStyle(`
     .qpAvatarAnswerText {
       width: calc(100% - 1em);
     }
@@ -54,9 +57,11 @@ onReady(() => {
       opacity: 1;
     }
   `);
-    AMQ_addScriptData({
-        name: 'Readable Watching Status',
-        author: 'SlashNephy',
-        description: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
+        AMQ_addScriptData({
+            name: 'Readable Watching Status',
+            author: 'SlashNephy',
+            description: 'Narrow the width of the answered anime titles to make the watching status indicator readable.',
+        });
     });
-});
+
+})();

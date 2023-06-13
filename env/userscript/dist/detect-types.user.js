@@ -16,41 +16,46 @@
 // @license         MIT license
 // ==/UserScript==
 
-const escapeKey = (key) => {
-    if (key.includes('.')) {
-        return `'${key}'`;
-    }
-    return key;
-};
-const getTypeString = (value) => {
-    if (value === null) {
-        return 'null';
-    }
-    if (Array.isArray(value)) {
-        if (value.length === 0) {
-            return 'unknown[]';
+(function () {
+    'use strict';
+
+    const escapeKey = (key) => {
+        if (key.includes('.')) {
+            return `'${key}'`;
         }
-        const types = Array.from(new Set(value.map(getTypeString)));
-        if (types.length > 1) {
-            return `(${types.join(' | ')})[]`;
+        return key;
+    };
+    const getTypeString = (value) => {
+        if (value === null) {
+            return 'null';
         }
-        return `${types.at(0)}[]`;
-    }
-    switch (typeof value) {
-        case 'object': {
-            const entries = Object.entries(value);
-            if (entries.length === 0) {
-                return 'Record<string, unknown>';
+        if (Array.isArray(value)) {
+            if (value.length === 0) {
+                return 'unknown[]';
             }
-            return `{${entries.map(([k, v]) => `${escapeKey(k)}: ${getTypeString(v)}`).join(', ')}}`;
+            const types = Array.from(new Set(value.map(getTypeString)));
+            if (types.length > 1) {
+                return `(${types.join(' | ')})[]`;
+            }
+            return `${types.at(0)}[]`;
         }
-        case 'function':
-            return 'Function';
-        default:
-            return typeof value;
-    }
-};
-unsafeWindow.getTypeString = getTypeString;
-unsafeWindow.printTypeString = (value) => {
-    console.log(getTypeString(value));
-};
+        switch (typeof value) {
+            case 'object': {
+                const entries = Object.entries(value);
+                if (entries.length === 0) {
+                    return 'Record<string, unknown>';
+                }
+                return `{${entries.map(([k, v]) => `${escapeKey(k)}: ${getTypeString(v)}`).join(', ')}}`;
+            }
+            case 'function':
+                return 'Function';
+            default:
+                return typeof value;
+        }
+    };
+    unsafeWindow.getTypeString = getTypeString;
+    unsafeWindow.printTypeString = (value) => {
+        console.log(getTypeString(value));
+    };
+
+})();

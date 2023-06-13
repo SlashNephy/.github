@@ -19,55 +19,60 @@
 // @license         MIT license
 // ==/UserScript==
 
-const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
-    let timer;
-    const interval = window.setInterval(() => {
-        if (predicate()) {
-            clearInterval(interval);
-            clearTimeout(timer);
-            resolve();
+(function () {
+    'use strict';
+
+    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+        let timer;
+        const interval = window.setInterval(() => {
+            if (predicate()) {
+                clearInterval(interval);
+                clearTimeout(timer);
+                resolve();
+            }
+        }, 500);
+        if (timeout !== undefined) {
+            timer = window.setTimeout(() => {
+                clearInterval(interval);
+                clearTimeout(timer);
+                reject(new Error('timeout'));
+            }, timeout);
         }
-    }, 500);
-    if (timeout !== undefined) {
-        timer = setTimeout(() => {
-            clearInterval(interval);
-            clearTimeout(timer);
-            reject(new Error('timeout'));
-        }, timeout);
-    }
-});
-
-const onReady = (callback) => {
-    if (document.getElementById('startPage')) {
-        return;
-    }
-    awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
-        .then(callback)
-        .catch(console.error);
-};
-
-async function fetchAnimeTitles(branch = 'master') {
-    const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/.github/${branch}/env/userscript/bin/collect-anime-data/dist/titles.json`);
-    return response.json();
-}
-
-const localizeTitle = (titles, target) => Object.entries(titles)
-    .find(([k]) => k.toLowerCase() === target.toLowerCase())
-    ?.at(1)
-    ?.at(0);
-onReady(async () => {
-    const titles = await fetchAnimeTitles();
-    const { setName } = QuizMultipleChoiceAnswerOption.prototype;
-    QuizMultipleChoiceAnswerOption.prototype.setName = function (name) {
-        setName.call(this, name);
-        const localized = localizeTitle(titles, name.english) ?? localizeTitle(titles, name.romaji);
-        if (localized) {
-            this.$text.text(localized);
-        }
-    };
-    AMQ_addScriptData({
-        name: 'i18n Titles',
-        author: 'SlashNephy &lt;spica@starry.blue&gt;',
-        description: 'Display localized anime titles. (Currently support only Japanese.)',
     });
-});
+
+    const onReady = (callback) => {
+        if (document.getElementById('startPage')) {
+            return;
+        }
+        awaitFor(() => document.getElementById('loadingScreen')?.classList.contains('hidden') === true)
+            .then(callback)
+            .catch(console.error);
+    };
+
+    async function fetchAnimeTitles(branch = 'master') {
+        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/.github/${branch}/env/userscript/bin/collect-anime-data/dist/titles.json`);
+        return response.json();
+    }
+
+    const localizeTitle = (titles, target) => Object.entries(titles)
+        .find(([k]) => k.toLowerCase() === target.toLowerCase())
+        ?.at(1)
+        ?.at(0);
+    onReady(async () => {
+        const titles = await fetchAnimeTitles();
+        const { setName } = QuizMultipleChoiceAnswerOption.prototype;
+        QuizMultipleChoiceAnswerOption.prototype.setName = function (name) {
+            setName.call(this, name);
+            const localized = localizeTitle(titles, name.english) ?? localizeTitle(titles, name.romaji);
+            if (localized) {
+                this.$text.text(localized);
+            }
+        };
+        AMQ_addScriptData({
+            name: 'i18n Titles',
+            author: 'SlashNephy &lt;spica@starry.blue&gt;',
+            description: 'Display localized anime titles. (Currently support only Japanese.)',
+        });
+    });
+
+})();
