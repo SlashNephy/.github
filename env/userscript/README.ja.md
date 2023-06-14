@@ -8,31 +8,32 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 
 | ⚙ スクリプト                      | バージョン | 📥 インストール                                                                                                |
 | :-------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------- |
-| Annict Work Links                 | 0.3.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js                 |
+| Annict Work Links                 | 0.3.2      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js                 |
 | dominion.games Auto Table Setter  | 0.4.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js |
 | FF14Angler Bypass AdBlocker Check | 0.2.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/ff14angler-bypass-adblock-check.user.js   |
 | Feedly Auto Refresh               | 0.2.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/feedly-auto-refresh.user.js               |
 | AMQ Preload Video                 | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-preload-video.user.js                 |
-| AMQ Result Exporter               | 0.5.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js               |
+| AMQ Result Exporter               | 0.5.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js               |
 | Google Remove Redirection Warning | 0.1.3      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/google-remove-redirection-warning.user.js |
 | Annict Hide Future Programs       | 0.1.6      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-hide-future-programs.user.js       |
 | AMQ Private Session               | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-private-session.user.js               |
-| AMQ Detailed Song Info            | 0.7.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js            |
+| AMQ Detailed Song Info            | 0.7.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js            |
 | AMQ Hide Annoying Dialog          | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-hide-annoying-dialog.user.js          |
 | AMQ Readable Watching Status      | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-readable-watching-status.user.js      |
 | AMQ Clear Answer                  | 1.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-clear-answer.user.js                  |
-| AMQ Song Guess Rate               | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-song-guess-rate.user.js               |
+| AMQ Song Guess Rate               | 0.3.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-song-guess-rate.user.js               |
 | AMQ sanime Link                   | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-sanime-link.user.js                   |
 | AMQ Display Answer Time 2         | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-display-answer-time-2.user.js         |
 | AMQ Auto Continue Login           | 0.2.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-auto-continue-login.user.js           |
 | AKASHI Show Remaining Hours       | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/akashi-show-remaining-hours.user.js       |
 | AMQ Dynamic Background            | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-dynamic-background.user.js            |
-| Annict Following Viewings         | 0.3.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js         |
+| Annict Following Viewings         | 0.3.2      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js         |
 | AniList Status Filter             | 0.1.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js             |
-| AMQ i18n Titles                   | 0.1.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-i18n-titles.user.js                   |
+| AMQ i18n Titles                   | 0.1.2      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-i18n-titles.user.js                   |
 | Detect Types                      | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/detect-types.user.js                      |
+| Anime Comment Overlay             | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js             |
 
-### Annict Work Links (v0.3.1)
+### Annict Work Links (v0.3.2)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/annict-work-links.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E5%90%84%E7%A8%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
@@ -62,7 +63,7 @@ Feedly で未読記事がないとき、フィードを自動リフレッシュ�
 
 プレイヤーのプリロードを有効にします。バッファリングが速くなるかもしれません。
 
-### AMQ Result Exporter (v0.5.0)
+### AMQ Result Exporter (v0.5.1)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-result-exporter.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-result-exporter.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%AE%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88%E3%82%92_Google_%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AB%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B_UserScript)
 
@@ -86,7 +87,7 @@ Annict の「記録するページ」で翌日以降の番組を非表示にし�
 
 ログイン時に Invisible ステータスを設定します。
 
-### AMQ Detailed Song Info (v0.7.0)
+### AMQ Detailed Song Info (v0.7.1)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-detailed-song-info.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-detailed-song-info.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E6%9B%B2%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%AB%E8%A9%B3%E7%B4%B0%E6%83%85%E5%A0%B1%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
@@ -110,7 +111,7 @@ Annict の「記録するページ」で翌日以降の番組を非表示にし�
 
 Delete キーを押下することで解答欄のテキストをクリアする機能を追加します。
 
-### AMQ Song Guess Rate (v0.3.0)
+### AMQ Song Guess Rate (v0.3.1)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-song-guess-rate.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-song-guess-rate.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E6%9B%B2%E3%81%94%E3%81%A8%E3%81%AE%E6%AD%A3%E7%AD%94%E7%8E%87%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
@@ -146,7 +147,7 @@ Delete キーを押下することで解答欄のテキストをクリアする�
 
 現在再生中の動画を背景画像に設定します。
 
-### Annict Following Viewings (v0.3.1)
+### Annict Following Viewings (v0.3.2)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/annict-following-viewings.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
@@ -158,7 +159,7 @@ Annict の作品ページにフォロー中のユーザーの視聴状況を表�
 
 AniList の作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。
 
-### AMQ i18n Titles (v0.1.1)
+### AMQ i18n Titles (v0.1.2)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-i18n-titles.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/amq-i18n-titles.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AMQ_%E3%81%A7%E3%82%A2%E3%83%8B%E3%83%A1%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%99%E3%82%8B_UserScript)
 
@@ -169,3 +170,9 @@ AniList の作品検索ページ内で自分の視聴ステータスでフィル
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/detect-types.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/detect-types.ts) / [📖 解説記事](https://scrapbox.io/slashnephy)
 
 window の型定義を生成する関数を登録します。
+
+### Anime Comment Overlay (v0.1.0)
+
+[📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/anime-comment-overlay.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
+
+アニメ配信サイト (d アニメストア) で実況コメをオーバーレイ表示します。
