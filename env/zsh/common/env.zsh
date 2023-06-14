@@ -3,7 +3,7 @@ export LANG="ja_JP.UTF-8"
 export LC_LANG="ja_JP.UTF-8"
 
 # editor / pager
-export EDITOR="nano"
+export EDITOR="nvim"
 export SYSTEMD_LESS="FRXMK"
 export PAGER="cat"
 export GIT_PAGER="cat"
