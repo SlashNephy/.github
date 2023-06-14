@@ -80,9 +80,10 @@ onReady(() => {
             ? `Ending ${event.songInfo.typeNumber}`
             : `Opening ${event.songInfo.typeNumber}`,
         file: {
-          samplePoint: quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].startPoint,
+          samplePoint: quizVideoController.moePlayers[quizVideoController.currentMoePlayerId]?.startPoint,
           videoLength: parseFloat(
-            quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].$player[0].duration.toFixed(2)
+            quizVideoController.moePlayers[quizVideoController.currentMoePlayerId]?.$player[0]?.duration.toFixed(2) ??
+              '0'
           ),
           videoUrl: event.songInfo.urlMap.catbox
             ? event.songInfo.urlMap.catbox['720'] ?? event.songInfo.urlMap.catbox['480']
@@ -106,20 +107,28 @@ onReady(() => {
               return a.answerNumber - b.answerNumber
             }
 
-            const p1name = quiz.players[a.gamePlayerId]._name
-            const p2name = quiz.players[b.gamePlayerId]._name
+            const p1name = quiz.players[a.gamePlayerId]?._name
+            if (p1name === undefined) {
+              return 0
+            }
+
+            const p2name = quiz.players[b.gamePlayerId]?._name
+            if (p2name === undefined) {
+              return 0
+            }
+
             return p1name.localeCompare(p2name)
           })
           .map((p) => ({
             status: p.listStatus,
             id: p.gamePlayerId,
-            name: quiz.players[p.gamePlayerId]._name,
+            name: quiz.players[p.gamePlayerId]?._name,
             score: p.score,
             correctGuesses: quiz.gameMode !== 'Standard' && quiz.gameMode !== 'Ranked' ? p.correctGuesses : p.score,
             correct: p.correct,
-            answer: quiz.players[p.gamePlayerId].avatarSlot.$answerContainerText.text(),
+            answer: quiz.players[p.gamePlayerId]?.avatarSlot.$answerContainerText.text(),
             guessTime: playerAnswerTimes.query(p.gamePlayerId),
-            active: !quiz.players[p.gamePlayerId].avatarSlot._disabled,
+            active: !quiz.players[p.gamePlayerId]?.avatarSlot._disabled,
             position: p.position,
             positionSlot: p.positionSlot,
           })),
@@ -127,7 +136,7 @@ onReady(() => {
     }
 
     const selfResult = result.players.items.find((p) => p.id === self.gamePlayerId)
-    const selfAnswer = selfResult?.answer.replace('...', '').replace(/ \(\d+ms\)$/, '') ?? ''
+    const selfAnswer = selfResult?.answer?.replace('...', '').replace(/ \(\d+ms\)$/, '') ?? ''
 
     const row = [
       result.time,
@@ -153,7 +162,7 @@ onReady(() => {
       result.song.file.videoUrl ?? '',
       result.song.file.audioUrl ?? '',
       result.song.file.videoLength,
-      result.song.file.samplePoint,
+      result.song.file.samplePoint ?? '',
       result.players.correctCount,
       result.players.activeCount,
       result.players.items

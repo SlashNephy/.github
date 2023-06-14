@@ -1,3 +1,5 @@
+import { hasMinLength } from 'ts-array-length'
+
 import { fetchArmEntries } from '../lib/external/arm'
 
 import type { ArmEntry } from '../lib/external/arm'
@@ -8,7 +10,7 @@ const cachedEntries: ArmEntry[] = []
 
 const main = async () => {
   const match = annictWorkPageUrlPattern.exec(window.location.href)
-  if (!match) {
+  if (!match || !hasMinLength(match, 2)) {
     return
   }
 
@@ -39,7 +41,11 @@ const main = async () => {
     const link = links.firstChild.cloneNode(true)
     const aHtml = link.firstChild as HTMLAnchorElement
     aHtml.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`
-    aHtml.childNodes[0].textContent = 'しょぼいカレンダー'
+    // eslint-disable-next-line xss/no-mixed-html
+    const node = aHtml.childNodes[0]
+    if (node !== undefined) {
+      node.textContent = 'しょぼいカレンダー'
+    }
     links.appendChild(link)
   }
 
@@ -47,7 +53,11 @@ const main = async () => {
     const link = links.firstChild.cloneNode(true)
     const aHtml = link.firstChild as HTMLAnchorElement
     aHtml.href = `https://anilist.co/anime/${entry.anilist_id}`
-    aHtml.childNodes[0].textContent = 'AniList'
+    // eslint-disable-next-line xss/no-mixed-html
+    const node = aHtml.childNodes[0]
+    if (node !== undefined) {
+      node.textContent = 'AniList'
+    }
     links.appendChild(link)
   }
 
@@ -55,7 +65,11 @@ const main = async () => {
     const link = links.firstChild.cloneNode(true)
     const aHtml = link.firstChild as HTMLAnchorElement
     aHtml.href = `https://myanimelist.net/anime/${entry.mal_id}`
-    aHtml.childNodes[0].textContent = 'MyAnimeList'
+    // eslint-disable-next-line xss/no-mixed-html
+    const node = aHtml.childNodes[0]
+    if (node !== undefined) {
+      node.textContent = 'MyAnimeList'
+    }
     links.appendChild(link)
   }
 }
