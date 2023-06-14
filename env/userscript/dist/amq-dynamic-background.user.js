@@ -63,7 +63,7 @@
                 return;
             }
             const quizVideo = quizPlayer.$player[0];
-            if (video.src !== quizVideo.src) {
+            if (quizVideo !== undefined && video.src !== quizVideo.src) {
                 video.src = quizVideo.src;
                 video.currentTime = quizVideo.currentTime;
                 video.play().catch(console.error);

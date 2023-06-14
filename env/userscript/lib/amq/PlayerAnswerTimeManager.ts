@@ -38,7 +38,7 @@ export class PlayerAnswerTimeManager {
   }
 
   public query(playerId: number): number | null {
-    return playerId in this.#playerTimes ? this.#playerTimes[playerId] : null
+    return this.#playerTimes[playerId] ?? null
   }
 
   public isFirst(playerId: number): boolean {

@@ -78,7 +78,7 @@
             }).bindListener();
         }
         query(playerId) {
-            return playerId in this.#playerTimes ? this.#playerTimes[playerId] : null;
+            return this.#playerTimes[playerId] ?? null;
         }
         isFirst(playerId) {
             return this.#firstPlayers.includes(playerId);
@@ -115,7 +115,10 @@
             for (const playerId of event.filter((id) => !ignoredPlayerIds.includes(id))) {
                 const time = formatAnswerTime(playerId);
                 if (time !== null) {
-                    unsafeWindow.quiz.players[playerId].answer = time;
+                    const player = unsafeWindow.quiz.players[playerId];
+                    if (player !== undefined) {
+                        player.answer = time;
+                    }
                 }
             }
         }).bindListener();
@@ -124,9 +127,11 @@
                 const time = formatAnswerTime(answer.gamePlayerId);
                 const text = time !== null ? `${answer.answer} (${time})` : answer.answer;
                 const player = unsafeWindow.quiz.players[answer.gamePlayerId];
-                player.answer = text;
-                player.unknownAnswerNumber = answer.answerNumber;
-                player.toggleTeamAnswerSharing(false);
+                if (player !== undefined) {
+                    player.answer = text;
+                    player.unknownAnswerNumber = answer.answerNumber;
+                    player.toggleTeamAnswerSharing(false);
+                }
             }
             if (!unsafeWindow.quiz.isSpectator) {
                 unsafeWindow.quiz.answerInput?.showSubmitedAnswer();

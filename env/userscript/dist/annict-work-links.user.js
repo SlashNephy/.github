@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Work Links
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.1
+// @version         0.3.2
 // @author          SlashNephy
 // @description     Add links to "Shoboi Calendar", "MyAnimeList" and "AniList" on Annict works page.
 // @description:ja  Annict の作品ページに「しょぼいカレンダー」「MyAnimeList」「AniList」へのリンクを追加します。
@@ -20,6 +20,26 @@
 (function () {
     'use strict';
 
+    /**
+     * Checks whether given array's length is equal to given number.
+     *
+     * @example
+     * ```ts
+     * hasLength(arr, 1) // equivalent to arr.length === 1
+     * ```
+     */
+    /**
+     * Checks whether given array's length is greather than or equal to given number.
+     *
+     * @example
+     * ```ts
+     * hasMinLength(arr, 1) // equivalent to arr.length >= 1
+     * ```
+     */
+    function hasMinLength(arr, length) {
+      return arr.length >= length;
+    }
+
     async function fetchArmEntries(branch = 'master') {
         const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/arm-supplementary/${branch}/dist/arm.json`);
         return response.json();
@@ -29,7 +49,7 @@
     const cachedEntries = [];
     const main = async () => {
         const match = annictWorkPageUrlPattern.exec(window.location.href);
-        if (!match) {
+        if (!match || !hasMinLength(match, 2)) {
             return;
         }
         const annictId = parseInt(match[1], 10);
@@ -53,21 +73,30 @@
             const link = links.firstChild.cloneNode(true);
             const aHtml = link.firstChild;
             aHtml.href = `https://cal.syoboi.jp/tid/${entry.syobocal_tid}`;
-            aHtml.childNodes[0].textContent = 'しょぼいカレンダー';
+            const node = aHtml.childNodes[0];
+            if (node !== undefined) {
+                node.textContent = 'しょぼいカレンダー';
+            }
             links.appendChild(link);
         }
         if (entry.anilist_id !== undefined && links.firstChild) {
             const link = links.firstChild.cloneNode(true);
             const aHtml = link.firstChild;
             aHtml.href = `https://anilist.co/anime/${entry.anilist_id}`;
-            aHtml.childNodes[0].textContent = 'AniList';
+            const node = aHtml.childNodes[0];
+            if (node !== undefined) {
+                node.textContent = 'AniList';
+            }
             links.appendChild(link);
         }
         if (entry.mal_id !== undefined && links.firstChild) {
             const link = links.firstChild.cloneNode(true);
             const aHtml = link.firstChild;
             aHtml.href = `https://myanimelist.net/anime/${entry.mal_id}`;
-            aHtml.childNodes[0].textContent = 'MyAnimeList';
+            const node = aHtml.childNodes[0];
+            if (node !== undefined) {
+                node.textContent = 'MyAnimeList';
+            }
             links.appendChild(link);
         }
     };

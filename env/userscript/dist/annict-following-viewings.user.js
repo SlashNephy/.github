@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Annict Following Viewings
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.1
+// @version         0.3.2
 // @author          SlashNephy
 // @description     Display following viewings on Annict work page.
 // @description:ja  Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。
@@ -25,6 +25,26 @@
 
 (function () {
     'use strict';
+
+    /**
+     * Checks whether given array's length is equal to given number.
+     *
+     * @example
+     * ```ts
+     * hasLength(arr, 1) // equivalent to arr.length === 1
+     * ```
+     */
+    /**
+     * Checks whether given array's length is greather than or equal to given number.
+     *
+     * @example
+     * ```ts
+     * hasMinLength(arr, 1) // equivalent to arr.length >= 1
+     * ```
+     */
+    function hasMinLength(arr, length) {
+      return arr.length >= length;
+    }
 
     async function fetchAniListViewer(token) {
         const response = await fetch('https://graphql.anilist.co', {
@@ -627,7 +647,7 @@
             return;
         }
         const workMatch = annictWorkPageUrlPattern.exec(window.location.href);
-        if (!workMatch) {
+        if (!workMatch || !hasMinLength(workMatch, 2)) {
             return;
         }
         const annictWorkId = parseInt(workMatch[1], 10);

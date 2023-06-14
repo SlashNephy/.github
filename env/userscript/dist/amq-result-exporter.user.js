@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Result Exporter
 // @namespace       https://github.com/SlashNephy
-// @version         0.5.0
+// @version         0.5.1
 // @author          SlashNephy
 // @description     Export song results to your Google Spreadsheet!
 // @description:ja  Google スプレッドシートに AMQ のリザルト (正誤、タイトル、難易度...) を送信します。
@@ -83,7 +83,7 @@
             }).bindListener();
         }
         query(playerId) {
-            return playerId in this.#playerTimes ? this.#playerTimes[playerId] : null;
+            return this.#playerTimes[playerId] ?? null;
         }
         isFirst(playerId) {
             return this.#firstPlayers.includes(playerId);
@@ -195,8 +195,9 @@
                             ? `Ending ${event.songInfo.typeNumber}`
                             : `Opening ${event.songInfo.typeNumber}`,
                     file: {
-                        samplePoint: quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].startPoint,
-                        videoLength: parseFloat(quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].$player[0].duration.toFixed(2)),
+                        samplePoint: quizVideoController.moePlayers[quizVideoController.currentMoePlayerId]?.startPoint,
+                        videoLength: parseFloat(quizVideoController.moePlayers[quizVideoController.currentMoePlayerId]?.$player[0]?.duration.toFixed(2) ??
+                            '0'),
                         videoUrl: event.songInfo.urlMap.catbox
                             ? event.songInfo.urlMap.catbox['720'] ?? event.songInfo.urlMap.catbox['480']
                             : event.songInfo.urlMap.openingsmoe
@@ -218,27 +219,33 @@
                         if (a.answerNumber !== undefined && b.answerNumber !== undefined) {
                             return a.answerNumber - b.answerNumber;
                         }
-                        const p1name = quiz.players[a.gamePlayerId]._name;
-                        const p2name = quiz.players[b.gamePlayerId]._name;
+                        const p1name = quiz.players[a.gamePlayerId]?._name;
+                        if (p1name === undefined) {
+                            return 0;
+                        }
+                        const p2name = quiz.players[b.gamePlayerId]?._name;
+                        if (p2name === undefined) {
+                            return 0;
+                        }
                         return p1name.localeCompare(p2name);
                     })
                         .map((p) => ({
                         status: p.listStatus,
                         id: p.gamePlayerId,
-                        name: quiz.players[p.gamePlayerId]._name,
+                        name: quiz.players[p.gamePlayerId]?._name,
                         score: p.score,
                         correctGuesses: quiz.gameMode !== 'Standard' && quiz.gameMode !== 'Ranked' ? p.correctGuesses : p.score,
                         correct: p.correct,
-                        answer: quiz.players[p.gamePlayerId].avatarSlot.$answerContainerText.text(),
+                        answer: quiz.players[p.gamePlayerId]?.avatarSlot.$answerContainerText.text(),
                         guessTime: playerAnswerTimes.query(p.gamePlayerId),
-                        active: !quiz.players[p.gamePlayerId].avatarSlot._disabled,
+                        active: !quiz.players[p.gamePlayerId]?.avatarSlot._disabled,
                         position: p.position,
                         positionSlot: p.positionSlot,
                     })),
                 },
             };
             const selfResult = result.players.items.find((p) => p.id === self.gamePlayerId);
-            const selfAnswer = selfResult?.answer.replace('...', '').replace(/ \(\d+ms\)$/, '') ?? '';
+            const selfAnswer = selfResult?.answer?.replace('...', '').replace(/ \(\d+ms\)$/, '') ?? '';
             const row = [
                 result.time,
                 result.number,
@@ -263,7 +270,7 @@
                 result.song.file.videoUrl ?? '',
                 result.song.file.audioUrl ?? '',
                 result.song.file.videoLength,
-                result.song.file.samplePoint,
+                result.song.file.samplePoint ?? '',
                 result.players.correctCount,
                 result.players.activeCount,
                 result.players.items

@@ -1,3 +1,5 @@
+import { hasMinLength } from 'ts-array-length'
+
 import {
   fetchAniListViewer,
   fetchPaginatedAniListFollowings,
@@ -422,7 +424,7 @@ const handle = async () => {
   }
 
   const workMatch = annictWorkPageUrlPattern.exec(window.location.href)
-  if (!workMatch) {
+  if (!workMatch || !hasMinLength(workMatch, 2)) {
     return
   }
 
