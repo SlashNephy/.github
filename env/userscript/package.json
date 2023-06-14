@@ -25,11 +25,18 @@
     "watch": "yarn build:rollup -w",
     "watch:private": "yarn build:rollup:private -w"
   },
+  "dependencies": {
+    "@geolonia/japanese-numeral": "0.1.16",
+    "@xpadev-net/niconicomments": "0.2.51",
+    "fast-xml-parser": "4.2.4",
+    "ts-array-length": "0.1.2"
+  },
   "devDependencies": {
     "@babel/core": "7.21.8",
     "@babel/preset-env": "7.21.5",
     "@babel/preset-typescript": "7.21.5",
     "@rollup/plugin-babel": "6.0.3",
+    "@rollup/plugin-commonjs": "25.0.1",
     "@rollup/plugin-node-resolve": "15.1.0",
     "@rollup/plugin-typescript": "11.1.1",
     "@slashnephy/eslint-config": "0.4.35",

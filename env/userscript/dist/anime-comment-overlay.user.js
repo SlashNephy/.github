@@ -1,0 +1,630 @@
+// ==UserScript==
+// @name            Anime Comment Overlay
+// @namespace       https://github.com/SlashNephy
+// @version         0.1.0
+// @author          SlashNephy
+// @description     Display overlay of comments on various streaming sites.
+// @description:ja  アニメ配信サイト (dアニメストア) で実況コメをオーバーレイ表示します。
+// @homepage        https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
+// @homepageURL     https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
+// @icon            https://www.google.com/s2/favicons?sz=64&domain=animestore.docomo.ne.jp
+// @updateURL       https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js
+// @downloadURL     https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js
+// @supportURL      https://github.com/SlashNephy/.github/issues
+// @match           https://animestore.docomo.ne.jp/animestore/sc_d_pc?partId=*
+// @require         https://cdn.jsdelivr.net/npm/@xpadev-net/niconicomments@0.2.51/dist/bundle.min.js
+// @require         https://cdn.jsdelivr.net/gh/NaturalIntelligence/fast-xml-parser@ecf6016f9b48aec1a921e673158be0773d07283e/lib/fxp.min.js
+// @connect         jikkyo.tsukumijima.net
+// @connect         api.annict.com
+// @connect         raw.githubusercontent.com
+// @connect         cal.syoboi.jp
+// @grant           GM_xmlhttpRequest
+// @license         MIT license
+// ==/UserScript==
+
+(function (NiconiComments, fastXmlParser) {
+    'use strict';
+
+    var dist = {};
+
+    var utils = {};
+
+    var oldJapaneseNumerics$1 = {};
+
+    Object.defineProperty(oldJapaneseNumerics$1, "__esModule", {
+      value: true
+    });
+    const oldJapaneseNumerics = {
+      零: '〇',
+      壱: '一',
+      壹: '一',
+      弐: '二',
+      弍: '二',
+      貳: '二',
+      貮: '二',
+      参: '三',
+      參: '三',
+      肆: '四',
+      伍: '五',
+      陸: '六',
+      漆: '七',
+      捌: '八',
+      玖: '九',
+      拾: '十',
+      廿: '二十',
+      陌: '百',
+      佰: '百',
+      阡: '千',
+      仟: '千',
+      萬: '万'
+    };
+    oldJapaneseNumerics$1.default = oldJapaneseNumerics;
+
+    var japaneseNumerics$1 = {};
+
+    Object.defineProperty(japaneseNumerics$1, "__esModule", {
+      value: true
+    });
+    const japaneseNumerics = {
+      〇: 0,
+      一: 1,
+      二: 2,
+      三: 3,
+      四: 4,
+      五: 5,
+      六: 6,
+      七: 7,
+      八: 8,
+      九: 9,
+      '０': 0,
+      '１': 1,
+      '２': 2,
+      '３': 3,
+      '４': 4,
+      '５': 5,
+      '６': 6,
+      '７': 7,
+      '８': 8,
+      '９': 9
+    };
+    japaneseNumerics$1.default = japaneseNumerics;
+
+    (function (exports) {
+
+      Object.defineProperty(exports, "__esModule", {
+        value: true
+      });
+      exports.zen2han = exports.n2kan = exports.kan2n = exports.splitLargeNumber = exports.normalize = exports.smallNumbers = exports.largeNumbers = void 0;
+      const oldJapaneseNumerics_1 = oldJapaneseNumerics$1;
+      const japaneseNumerics_1 = japaneseNumerics$1;
+      exports.largeNumbers = {
+        '兆': 1000000000000,
+        '億': 100000000,
+        '万': 10000
+      };
+      exports.smallNumbers = {
+        '千': 1000,
+        '百': 100,
+        '十': 10
+      };
+      function normalize(japanese) {
+        for (const key in oldJapaneseNumerics_1.default) {
+          const reg = new RegExp(key, 'g');
+          japanese = japanese.replace(reg, oldJapaneseNumerics_1.default[key]);
+        }
+        return japanese;
+      }
+      exports.normalize = normalize;
+      /**
+       * 漢数字を兆、億、万単位に分割する
+       */
+      function splitLargeNumber(japanese) {
+        let kanji = japanese;
+        const numbers = {};
+        for (const key in exports.largeNumbers) {
+          const reg = new RegExp(`(.+)${key}`);
+          const match = kanji.match(reg);
+          if (match) {
+            numbers[key] = kan2n(match[1]);
+            kanji = kanji.replace(match[0], '');
+          } else {
+            numbers[key] = 0;
+          }
+        }
+        if (kanji) {
+          numbers['千'] = kan2n(kanji);
+        } else {
+          numbers['千'] = 0;
+        }
+        return numbers;
+      }
+      exports.splitLargeNumber = splitLargeNumber;
+      /**
+       * 千単位以下の漢数字を数字に変換する（例: 三千 => 3000）
+       *
+       * @param japanese
+       */
+      function kan2n(japanese) {
+        if (japanese.match(/^[0-9]+$/)) {
+          return Number(japanese);
+        }
+        let kanji = zen2han(japanese);
+        let number = 0;
+        for (const key in exports.smallNumbers) {
+          const reg = new RegExp(`(.*)${key}`);
+          const match = kanji.match(reg);
+          if (match) {
+            let n = 1;
+            if (match[1]) {
+              if (match[1].match(/^[0-9]+$/)) {
+                n = Number(match[1]);
+              } else {
+                n = japaneseNumerics_1.default[match[1]];
+              }
+            }
+            number = number + n * exports.smallNumbers[key];
+            kanji = kanji.replace(match[0], '');
+          }
+        }
+        if (kanji) {
+          if (kanji.match(/^[0-9]+$/)) {
+            number = number + Number(kanji);
+          } else {
+            for (let index = 0; index < kanji.length; index++) {
+              const char = kanji[index];
+              const digit = kanji.length - index - 1;
+              number = number + japaneseNumerics_1.default[char] * 10 ** digit;
+            }
+          }
+        }
+        return number;
+      }
+      exports.kan2n = kan2n;
+      /**
+       * Converts number less than 10000 to kanji.
+       *
+       * @param num
+       */
+      function n2kan(num) {
+        const kanjiNumbers = Object.keys(japaneseNumerics_1.default);
+        let number = num;
+        let kanji = '';
+        for (const key in exports.smallNumbers) {
+          const n = Math.floor(number / exports.smallNumbers[key]);
+          if (n) {
+            number = number - n * exports.smallNumbers[key];
+            if (1 === n) {
+              kanji = `${kanji}${key}`;
+            } else {
+              kanji = `${kanji}${kanjiNumbers[n]}${key}`;
+            }
+          }
+        }
+        if (number) {
+          kanji = `${kanji}${kanjiNumbers[number]}`;
+        }
+        return kanji;
+      }
+      exports.n2kan = n2kan;
+      /**
+       * Converts double-width number to number as string.
+       *
+       * @param num
+       */
+      function zen2han(str) {
+        return str.replace(/[０-９]/g, s => {
+          return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+        });
+      }
+      exports.zen2han = zen2han;
+    })(utils);
+
+    Object.defineProperty(dist, "__esModule", {
+      value: true
+    });
+    var findKanjiNumbers_1 = dist.findKanjiNumbers = dist.number2kanji = kanji2number_1 = dist.kanji2number = void 0;
+    const utils_1 = utils;
+    const japaneseNumerics_1 = japaneseNumerics$1;
+    function kanji2number(japanese) {
+      japanese = utils_1.normalize(japanese);
+      if (japanese.match('〇') || japanese.match(/^[〇一二三四五六七八九]+$/)) {
+        for (const key in japaneseNumerics_1.default) {
+          const reg = new RegExp(key, 'g');
+          japanese = japanese.replace(reg, japaneseNumerics_1.default[key].toString());
+        }
+        return Number(japanese);
+      } else {
+        let number = 0;
+        const numbers = utils_1.splitLargeNumber(japanese);
+        // 万以上の数字を数値に変換
+        for (const key in utils_1.largeNumbers) {
+          if (numbers[key]) {
+            const n = utils_1.largeNumbers[key] * numbers[key];
+            number = number + n;
+          }
+        }
+        if (!Number.isInteger(number) || !Number.isInteger(numbers['千'])) {
+          throw new TypeError('The attribute of kanji2number() must be a Japanese numeral as integer.');
+        }
+        // 千以下の数字を足す
+        return number + numbers['千'];
+      }
+    }
+    var kanji2number_1 = dist.kanji2number = kanji2number;
+    function number2kanji(num) {
+      if (!num.toString().match(/^[0-9]+$/)) {
+        throw new TypeError('The attribute of number2kanji() must be integer.');
+      }
+      Object.keys(japaneseNumerics_1.default);
+      let number = num;
+      let kanji = '';
+      // 万以上の数字を漢字に変換
+      for (const key in utils_1.largeNumbers) {
+        const n = Math.floor(number / utils_1.largeNumbers[key]);
+        if (n) {
+          number = number - n * utils_1.largeNumbers[key];
+          kanji = `${kanji}${utils_1.n2kan(n)}${key}`;
+        }
+      }
+      if (number) {
+        kanji = `${kanji}${utils_1.n2kan(number)}`;
+      }
+      return kanji;
+    }
+    dist.number2kanji = number2kanji;
+    function findKanjiNumbers(text) {
+      const num = '([0-9０-９]*)|([〇一二三四五六七八九壱壹弐弍貳貮参參肆伍陸漆捌玖]*)';
+      const basePattern = `((${num})(千|阡|仟))?((${num})(百|陌|佰))?((${num})(十|拾))?(${num})?`;
+      const pattern = `((${basePattern}兆)?(${basePattern}億)?(${basePattern}(万|萬))?${basePattern})`;
+      const regex = new RegExp(pattern, 'g');
+      const match = text.match(regex);
+      if (match) {
+        return match.filter(item => {
+          if (!item.match(/^[0-9０-９]+$/) && item.length && '兆' !== item && '億' !== item && '万' !== item && '萬' !== item) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+      } else {
+        return [];
+      }
+    }
+    findKanjiNumbers_1 = dist.findKanjiNumbers = findKanjiNumbers;
+
+    /**
+     * Checks whether given array's length is equal to given number.
+     *
+     * @example
+     * ```ts
+     * hasLength(arr, 1) // equivalent to arr.length === 1
+     * ```
+     */
+    /**
+     * Checks whether given array's length is greather than or equal to given number.
+     *
+     * @example
+     * ```ts
+     * hasMinLength(arr, 1) // equivalent to arr.length >= 1
+     * ```
+     */
+    function hasMinLength(arr, length) {
+      return arr.length >= length;
+    }
+
+    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+        let timer;
+        const interval = window.setInterval(() => {
+            if (predicate()) {
+                clearInterval(interval);
+                clearTimeout(timer);
+                resolve();
+            }
+        }, 500);
+        if (timeout !== undefined) {
+            timer = window.setTimeout(() => {
+                clearInterval(interval);
+                clearTimeout(timer);
+                reject(new Error('timeout'));
+            }, timeout);
+        }
+    });
+
+    async function fetchArmEntries(branch = 'master') {
+        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/arm-supplementary/${branch}/dist/arm.json`);
+        return response.json();
+    }
+
+    async function fetchAnnictBroadcastData(branch = 'master') {
+        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/.github/${branch}/env/userscript/bin/collect-vod-data/dist/data.json`);
+        return response.json();
+    }
+
+    async function fetchSayaDefinitions(branch = 'master') {
+        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/saya-definitions/${branch}/definitions.json`);
+        return response.json();
+    }
+
+    const executeGmXhr = async (request) => new Promise((resolve, reject) => {
+        GM_xmlhttpRequest({
+            ...request,
+            onload: (response) => {
+                resolve(response);
+            },
+            onerror: (error) => {
+                reject(error);
+            },
+        });
+    });
+
+    async function fetchSyobocalProgLookup(tids) {
+        const { responseText } = await executeGmXhr({
+            url: `https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=${tids.join(',')}`,
+        });
+        const parser = new fastXmlParser.XMLParser();
+        return parser.parse(responseText);
+    }
+
+    async function fetchNiconicoJikkyoKakoLog({ channel, startTime, endTime, }) {
+        const response = await fetch(`https://jikkyo.tsukumijima.net/api/kakolog/${channel}?starttime=${startTime}&endtime=${endTime}&format=json`);
+        return response.json();
+    }
+
+    function extractEpisodeNumber(text) {
+        const match = /\d+/.exec(text);
+        if (match && hasMinLength(match, 1)) {
+            return parseInt(match[0], 10);
+        }
+        const kanjis = findKanjiNumbers_1(text);
+        if (hasMinLength(kanjis, 1)) {
+            return kanji2number_1(kanjis[0]);
+        }
+    }
+    const modules = [
+        {
+            name: 'dアニメストア',
+            url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)$/,
+            initializeContainers() {
+                const video = document.querySelector('video#video');
+                if (video === null) {
+                    throw new Error('video container not found');
+                }
+                const canvas = document.createElement('canvas');
+                canvas.width = 1920;
+                canvas.height = 1080;
+                canvas.style.position = 'relative';
+                canvas.style.objectFit = 'contain';
+                canvas.style.width = '100%';
+                canvas.style.height = '100%';
+                canvas.style.zIndex = '10';
+                video.insertAdjacentElement('afterend', canvas);
+                const toggleButton = document.createElement('div');
+                toggleButton.classList.add('mainButton');
+                const innerButton = document.createElement('button');
+                innerButton.classList.add('fullscreenButton');
+                toggleButton.appendChild(innerButton);
+                document.querySelector('.buttonArea .time')?.insertAdjacentElement('afterend', toggleButton);
+                return { video, canvas, toggleButton };
+            },
+            async detectEpisode(partId) {
+                const [backInfoTxt1, backInfoTxt2, backInfoTxt3] = [$('.backInfoTxt1'), $('.backInfoTxt2'), $('.backInfoTxt3')];
+                await awaitFor(() => backInfoTxt1.text().length > 0 && backInfoTxt2.text().length > 0 && backInfoTxt3.text().length > 0);
+                const workSiteId = partId.slice(0, 5);
+                const data = await fetchAnnictBroadcastData();
+                return {
+                    site: 'danime',
+                    workIds: data
+                        .filter((x) => x.channel_id === annictSupportedVodChannelIds.dAnime && x.vod_code === workSiteId)
+                        .map((x) => x.work_id),
+                    workSiteId,
+                    workTitle: backInfoTxt1.text(),
+                    episodeSiteId: partId,
+                    episodeNumberRaw: backInfoTxt2.text(),
+                    episodeNumber: extractEpisodeNumber(backInfoTxt2.text()),
+                    episodeTitle: backInfoTxt3.text(),
+                };
+            },
+            addEventListener(event, callback) {
+                switch (event) {
+                    case 'episodeChanged':
+                        $('.backInfoTxt3').on('DOMSubtreeModified propertychange', callback);
+                }
+            },
+            removeEventListener(event, callback) {
+                switch (event) {
+                    case 'episodeChanged':
+                        $('.backInfoTxt3').off('DOMSubtreeModified propertychange', callback);
+                }
+            },
+        },
+    ];
+    const annictSupportedVodChannelIds = {
+        bandai: 107,
+        niconico: 165,
+        dAnime: 241,
+        amazonPrimeVideo: 243,
+        netflix: 244,
+        abemaVideo: 260,
+        dAnimeNiconico: 306,
+    };
+    const cmLengthMap = {
+        jk9: 60,
+        jk211: 60,
+    };
+    const additionalCmLength = 10;
+    const vposAdjustment = 50;
+    const partSymbols = ['A', 'B', 'C'];
+    const partSymbolThreshold = 2;
+    const partSymbolAdjustment = 3;
+    function parseNiconicoJikkyoKakoLogResponse(request, response) {
+        if ('error' in response) {
+            console.error(`[anime-comment-overlay] received error from niconico jikkyo kako log: ${response.error}`);
+            return [];
+        }
+        const chats = response.packet
+            .filter(({ chat }) => chat.deleted !== '1' && chat.abone !== '1')
+            .map(({ chat }) => ({
+            chat: {
+                thread: chat.thread,
+                no: parseInt(chat.no, 10),
+                vpos: 0,
+                date: parseInt(chat.date, 10),
+                date_usec: parseInt(chat.date_usec, 10),
+                nicoru: chat.nicoru ? parseInt(chat.nicoru, 10) : 0,
+                premium: chat.premium ? parseInt(chat.premium, 10) : 0,
+                anonymity: chat.anonymity ? parseInt(chat.anonymity, 10) : 0,
+                user_id: chat.user_id,
+                mail: chat.mail,
+                content: chat.content,
+                deleted: 0,
+            },
+        }));
+        const cmLength = cmLengthMap[request.channel];
+        if (cmLength === undefined) {
+            console.info(`[anime-comment-overlay] CM detection for channel ${request.channel} unsupported. Please contribute to this project!`);
+        }
+        else if (cmLength === 0) {
+            console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`);
+        }
+        else {
+            for (const symbol of partSymbols) {
+                const partChats = chats.filter((x) => x.chat.content === symbol);
+                if (!hasMinLength(partChats, partSymbolThreshold)) {
+                    continue;
+                }
+                let removes = 0;
+                const effectiveCmLength = cmLength + (partSymbols.indexOf(symbol) === 0 ? additionalCmLength : 0);
+                const cmEndDate = partChats[0].chat.date - partSymbolAdjustment;
+                const cmStartDate = cmEndDate - effectiveCmLength;
+                for (const c of chats.filter(({ chat }) => cmStartDate < chat.date && chat.date <= cmEndDate)) {
+                    c.chat.deleted = 1;
+                    removes++;
+                }
+                console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} chats deleted)`);
+                let shifts = 0;
+                for (const c of chats.filter(({ chat }) => cmEndDate < chat.date)) {
+                    c.chat.date -= effectiveCmLength;
+                    shifts++;
+                }
+                console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} chats shifted)`);
+            }
+        }
+        return (chats
+            .filter(({ chat }) => chat.deleted === 0)
+            .map(({ chat }) => ({
+            chat: {
+                ...chat,
+                vpos: Math.max((chat.date - request.startTime) * 100 + Math.floor(chat.date_usec / 10000) - vposAdjustment, 0),
+            },
+        })));
+    }
+    async function findPrograms(episode) {
+        if (episode.workIds.length === 0) {
+            return [];
+        }
+        const arm = await fetchArmEntries();
+        const syobocalTids = arm
+            .filter((e) => e.annict_id !== undefined && episode.workIds.includes(e.annict_id))
+            .map((e) => e.syobocal_tid)
+            .filter((x) => x !== undefined)
+            .filter((x, idx, array) => idx === array.indexOf(x));
+        console.info(`[anime-comment-overlay] found syobocal tids: ${syobocalTids}`);
+        const saya = await fetchSayaDefinitions();
+        const programs = await fetchSyobocalProgLookup(syobocalTids);
+        return (programs.ProgLookupResponse?.ProgItems?.ProgItem?.filter((p) => p.Count === episode.episodeNumber)
+            ?.map((p) => {
+            const startedAt = Date.parse(p.StTime) / 1000;
+            if (Date.now() / 1000 < startedAt) {
+                return;
+            }
+            const endedAt = Date.parse(p.EdTime) / 1000;
+            if (Date.now() / 1000 < endedAt) {
+                return;
+            }
+            const channel = saya.channels.find((c) => c.syobocalId === p.ChID);
+            if (channel === undefined) {
+                return;
+            }
+            console.info(`[anime-comment-overlay] found program: ${channel.name} (${p.StTime} ~ ${p.EdTime})`);
+            return {
+                channel,
+                startedAt,
+                endedAt,
+            };
+        })
+            ?.filter((x) => x !== undefined) ?? []);
+    }
+    const providers = [
+        {
+            name: 'ニコニコ実況過去ログ',
+            async provide(program) {
+                const jkId = program.channel.nicojkId;
+                if (jkId === undefined) {
+                    return [];
+                }
+                const request = {
+                    channel: `jk${jkId}`,
+                    startTime: program.startedAt,
+                    endTime: program.endedAt,
+                };
+                const response = await fetchNiconicoJikkyoKakoLog(request);
+                return parseNiconicoJikkyoKakoLogResponse(request, response);
+            },
+        },
+    ];
+    async function fetchComments(episode) {
+        const programs = await findPrograms(episode);
+        const comments = [];
+        const promises = providers.map((p) => programs.map(async (pg) => p.provide(pg))).flat();
+        for (const r of await Promise.allSettled(promises)) {
+            switch (r.status) {
+                case 'fulfilled':
+                    comments.push(...r.value);
+                    break;
+                case 'rejected':
+                    console.error(`[anime-comment-overlay] fetchComments rejected: ${r.reason}`);
+            }
+        }
+        return comments;
+    }
+    async function applyModule(module, params) {
+        const { video, canvas, toggleButton } = module.initializeContainers();
+        const episode = await module.detectEpisode(...params);
+        console.info(`[anime-comment-overlay] episode: ${JSON.stringify(episode)}`);
+        const comments = await fetchComments(episode);
+        const renderer = new NiconiComments(canvas, comments, {
+            format: 'legacy',
+        });
+        let isHide = false;
+        const interval = setInterval(() => {
+            if (isHide) {
+                return;
+            }
+            renderer.drawCanvas(Math.floor(video.currentTime * 100));
+        }, 10);
+        toggleButton?.addEventListener('click', () => {
+            isHide = !isHide;
+            if (isHide) {
+                renderer.clear();
+            }
+        });
+        function onEpisodeChanged() {
+            module.removeEventListener('episodeChanged', onEpisodeChanged);
+            clearInterval(interval);
+            renderer.clear();
+            applyModule(module, params).catch(console.error);
+            console.info('[anime-comment-overlay] episode changed');
+        }
+        module.addEventListener('episodeChanged', onEpisodeChanged);
+    }
+    for (const module of modules) {
+        const match = module.url.exec(window.location.href);
+        if (match === null) {
+            continue;
+        }
+        console.info(`[anime-comment-overlay] applying ${module.name}`);
+        applyModule(module, match.slice(1)).catch(console.error);
+        break;
+    }
+
+})(NiconiComments, fxp);
