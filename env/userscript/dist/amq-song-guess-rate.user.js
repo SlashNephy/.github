@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            AMQ Song Guess Rate
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.1
+// @version         0.3.0
 // @author          SlashNephy
 // @description     Display guess rates per song in side panel of the song. (Requires AMQ Detailed Song Info plugin: version 0.3.0 or higher)
 // @description:ja  曲のサイドパネルに曲ごとの正答率を表示します。(0.3.0 以降の AMQ Detailed Song Info プラグインが必要です。)
