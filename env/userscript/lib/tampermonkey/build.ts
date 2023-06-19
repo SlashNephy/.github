@@ -85,6 +85,8 @@ type TampermonkeyGrant =
   | 'GM_saveTab'
   | 'GM_unregisterMenuCommand'
 
+type TampermonkeyAntiFeature = 'ads' | 'membership' | 'miner' | 'payment' | 'referral-link' | 'tracking'
+
 // https://www.tampermonkey.net/documentation.php
 type TampermonkeyHeader = {
   name: string | InternationalizationStrings
@@ -112,7 +114,7 @@ type TampermonkeyHeader = {
   connect?: string | string[]
   runAt?: 'document-start' | 'document-body' | 'document-end' | 'document-idle' | 'context-menu'
   grant?: TampermonkeyGrant | TampermonkeyGrant[] | 'none'
-  antiFeature?: string | string[]
+  antiFeature?: TampermonkeyAntiFeature | TampermonkeyAntiFeature[]
   noFrames?: boolean
   unwrap?: boolean
   license?: string
