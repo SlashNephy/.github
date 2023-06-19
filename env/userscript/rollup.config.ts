@@ -382,7 +382,7 @@ export const banners: Banner[] = [
   {
     id: 'anime-comment-overlay',
     name: 'Anime Comment Overlay',
-    version: '0.1.0',
+    version: '0.1.1',
     description: {
       en: 'Display overlay of comments on various streaming sites.',
       ja: 'アニメ配信サイト (dアニメストア) で実況コメをオーバーレイ表示します。',
@@ -395,7 +395,13 @@ export const banners: Banner[] = [
       'https://cdn.jsdelivr.net/npm/@xpadev-net/niconicomments@0.2.51/dist/bundle.min.js',
       'https://cdn.jsdelivr.net/gh/NaturalIntelligence/fast-xml-parser@ecf6016f9b48aec1a921e673158be0773d07283e/lib/fxp.min.js',
     ],
-    connect: ['jikkyo.tsukumijima.net', 'api.annict.com', 'raw.githubusercontent.com', 'cal.syoboi.jp'],
+    connect: [
+      'jikkyo.tsukumijima.net',
+      'api.annict.com',
+      'raw.githubusercontent.com',
+      'cal.syoboi.jp',
+      'animestore.docomo.ne.jp',
+    ],
     grant: 'GM_xmlhttpRequest',
     options: {
       external: ['@xpadev-net/niconicomments', 'fast-xml-parser'],

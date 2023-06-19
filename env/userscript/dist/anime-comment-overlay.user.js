@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Anime Comment Overlay
 // @namespace       https://github.com/SlashNephy
-// @version         0.1.0
+// @version         0.1.1
 // @author          SlashNephy
 // @description     Display overlay of comments on various streaming sites.
 // @description:ja  アニメ配信サイト (dアニメストア) で実況コメをオーバーレイ表示します。
@@ -18,12 +18,222 @@
 // @connect         api.annict.com
 // @connect         raw.githubusercontent.com
 // @connect         cal.syoboi.jp
+// @connect         animestore.docomo.ne.jp
 // @grant           GM_xmlhttpRequest
 // @license         MIT license
 // ==/UserScript==
 
 (function (NiconiComments, fastXmlParser) {
     'use strict';
+
+    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
+        let timer;
+        const interval = window.setInterval(() => {
+            if (predicate()) {
+                clearInterval(interval);
+                clearTimeout(timer);
+                resolve();
+            }
+        }, 500);
+        if (timeout !== undefined) {
+            timer = window.setTimeout(() => {
+                clearInterval(interval);
+                clearTimeout(timer);
+                reject(new Error('timeout'));
+            }, timeout);
+        }
+    });
+
+    async function fetchAnnictBroadcastData(branch = 'master') {
+        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/.github/${branch}/env/userscript/bin/collect-vod-data/dist/data.json`);
+        return response.json();
+    }
+
+    async function fetchDanimePartInfo(partId) {
+        const response = await fetch(`https://animestore.docomo.ne.jp/animestore/rest/WS030101?partId=${partId}`);
+        return response.json();
+    }
+
+    const AnnictSupportedVodChannelIds = {
+        bandai: 107,
+        niconico: 165,
+        dAnime: 241,
+        amazonPrimeVideo: 243,
+        netflix: 244,
+        abemaVideo: 260,
+        dAnimeNiconico: 306,
+    };
+    const ChannelCmAttributes = {
+        jk1: null,
+        jk2: null,
+        jk4: {
+            head: 60,
+            sponsor: 5,
+            normal: 150,
+        },
+        jk5: {
+            head: 60 + 3,
+            sponsor: 5,
+            normal: 105,
+        },
+        jk6: {
+            head: 0,
+            sponsor: 10,
+            normal: 135,
+        },
+        jk7: {
+            head: 0,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk8: {
+            head: 120,
+            sponsor: 10,
+            normal: 90,
+        },
+        jk9: {
+            head: 0,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk101: null,
+        jk103: null,
+        jk141: {
+            head: 15,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk151: {
+            head: 0,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk161: {
+            head: 3,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk171: {
+            head: 0,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk181: {
+            head: 15,
+            sponsor: 5,
+            normal: 135,
+        },
+        jk191: null,
+        jk192: null,
+        jk193: null,
+        jk211: {
+            head: 0,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk222: {
+            head: 10,
+            sponsor: 10,
+            normal: 150,
+        },
+        jk236: {
+            head: 10,
+            sponsor: 10,
+            normal: 45,
+        },
+        jk252: null,
+        jk260: {
+            head: 2,
+            sponsor: 10,
+            normal: 120,
+        },
+        jk263: {
+            head: 0,
+            sponsor: 10,
+            normal: 180,
+        },
+        jk265: {
+            head: 10,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk333: null,
+    };
+    const vposAdjustment = 50;
+    const partSymbols = ['A', 'B', 'C'];
+    const partSymbolCommentsThreshold = 2;
+    const partSymbolAdjustment = 3;
+    const opSymbols = ['OP'];
+    const opSymbolCommentsThreshold = 2;
+    const opLength = 90;
+    const opAdjustment = 30;
+    const copyrightCmAttributes = [
+        {
+            pattern: /^&copy;BNP\//,
+            adjustment: 3,
+        },
+    ];
+
+    const DanimeOverlay = {
+        name: 'dアニメストア',
+        url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)$/,
+        initializeContainers() {
+            const video = document.querySelector('video#video');
+            if (video === null) {
+                throw new Error('video container not found');
+            }
+            const canvas = document.createElement('canvas');
+            canvas.width = 1920;
+            canvas.height = 1080;
+            canvas.style.position = 'relative';
+            canvas.style.objectFit = 'contain';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.zIndex = '10';
+            video.insertAdjacentElement('afterend', canvas);
+            const toggleButton = document.createElement('div');
+            toggleButton.classList.add('mainButton');
+            const innerButton = document.createElement('button');
+            innerButton.classList.add('fullscreenButton');
+            toggleButton.appendChild(innerButton);
+            document.querySelector('.buttonArea .time')?.insertAdjacentElement('afterend', toggleButton);
+            return { video, canvas, toggleButton };
+        },
+        async detectMedia(partId) {
+            const [backInfoTxt1, backInfoTxt2, backInfoTxt3] = [$('.backInfoTxt1'), $('.backInfoTxt2'), $('.backInfoTxt3')];
+            await awaitFor(() => backInfoTxt1.length > 0 && backInfoTxt2.length > 0 && backInfoTxt3.length > 0);
+            const workId = partId.slice(0, 5);
+            const broadcasts = await fetchAnnictBroadcastData();
+            const info = await fetchDanimePartInfo(partId);
+            return {
+                platform: 'danime',
+                partId,
+                copyright: info.partCopyright,
+                work: {
+                    title: backInfoTxt1.text(),
+                    annictIds: broadcasts
+                        .filter((x) => x.channel_id === AnnictSupportedVodChannelIds.dAnime && x.vod_code === workId)
+                        .map((x) => x.work_id),
+                },
+                episode: {
+                    title: backInfoTxt3.text(),
+                    number: backInfoTxt2.text(),
+                },
+            };
+        },
+        addEventListener(event, callback) {
+            switch (event) {
+                case 'mediaChanged':
+                    $('.backInfoTxt3').on('DOMSubtreeModified propertychange', callback);
+            }
+        },
+        removeEventListener(event, callback) {
+            switch (event) {
+                case 'mediaChanged':
+                    $('.backInfoTxt3').off('DOMSubtreeModified propertychange', callback);
+            }
+        },
+    };
 
     var dist = {};
 
@@ -312,31 +522,8 @@
       return arr.length >= length;
     }
 
-    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
-        let timer;
-        const interval = window.setInterval(() => {
-            if (predicate()) {
-                clearInterval(interval);
-                clearTimeout(timer);
-                resolve();
-            }
-        }, 500);
-        if (timeout !== undefined) {
-            timer = window.setTimeout(() => {
-                clearInterval(interval);
-                clearTimeout(timer);
-                reject(new Error('timeout'));
-            }, timeout);
-        }
-    });
-
     async function fetchArmEntries(branch = 'master') {
         const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/arm-supplementary/${branch}/dist/arm.json`);
-        return response.json();
-    }
-
-    async function fetchAnnictBroadcastData(branch = 'master') {
-        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/.github/${branch}/env/userscript/bin/collect-vod-data/dist/data.json`);
         return response.json();
     }
 
@@ -365,173 +552,21 @@
         return parser.parse(responseText);
     }
 
-    async function fetchNiconicoJikkyoKakoLog({ channel, startTime, endTime, }) {
-        const response = await fetch(`https://jikkyo.tsukumijima.net/api/kakolog/${channel}?starttime=${startTime}&endtime=${endTime}&format=json`);
-        return response.json();
-    }
-
-    function extractEpisodeNumber(text) {
-        const match = /\d+/.exec(text);
-        if (match && hasMinLength(match, 1)) {
-            return parseInt(match[0], 10);
-        }
-        const kanjis = findKanjiNumbers_1(text);
-        if (hasMinLength(kanjis, 1)) {
-            return kanji2number_1(kanjis[0]);
-        }
-    }
-    const modules = [
-        {
-            name: 'dアニメストア',
-            url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)$/,
-            initializeContainers() {
-                const video = document.querySelector('video#video');
-                if (video === null) {
-                    throw new Error('video container not found');
-                }
-                const canvas = document.createElement('canvas');
-                canvas.width = 1920;
-                canvas.height = 1080;
-                canvas.style.position = 'relative';
-                canvas.style.objectFit = 'contain';
-                canvas.style.width = '100%';
-                canvas.style.height = '100%';
-                canvas.style.zIndex = '10';
-                video.insertAdjacentElement('afterend', canvas);
-                const toggleButton = document.createElement('div');
-                toggleButton.classList.add('mainButton');
-                const innerButton = document.createElement('button');
-                innerButton.classList.add('fullscreenButton');
-                toggleButton.appendChild(innerButton);
-                document.querySelector('.buttonArea .time')?.insertAdjacentElement('afterend', toggleButton);
-                return { video, canvas, toggleButton };
-            },
-            async detectEpisode(partId) {
-                const [backInfoTxt1, backInfoTxt2, backInfoTxt3] = [$('.backInfoTxt1'), $('.backInfoTxt2'), $('.backInfoTxt3')];
-                await awaitFor(() => backInfoTxt1.text().length > 0 && backInfoTxt2.text().length > 0 && backInfoTxt3.text().length > 0);
-                const workSiteId = partId.slice(0, 5);
-                const data = await fetchAnnictBroadcastData();
-                return {
-                    site: 'danime',
-                    workIds: data
-                        .filter((x) => x.channel_id === annictSupportedVodChannelIds.dAnime && x.vod_code === workSiteId)
-                        .map((x) => x.work_id),
-                    workSiteId,
-                    workTitle: backInfoTxt1.text(),
-                    episodeSiteId: partId,
-                    episodeNumberRaw: backInfoTxt2.text(),
-                    episodeNumber: extractEpisodeNumber(backInfoTxt2.text()),
-                    episodeTitle: backInfoTxt3.text(),
-                };
-            },
-            addEventListener(event, callback) {
-                switch (event) {
-                    case 'episodeChanged':
-                        $('.backInfoTxt3').on('DOMSubtreeModified propertychange', callback);
-                }
-            },
-            removeEventListener(event, callback) {
-                switch (event) {
-                    case 'episodeChanged':
-                        $('.backInfoTxt3').off('DOMSubtreeModified propertychange', callback);
-                }
-            },
-        },
-    ];
-    const annictSupportedVodChannelIds = {
-        bandai: 107,
-        niconico: 165,
-        dAnime: 241,
-        amazonPrimeVideo: 243,
-        netflix: 244,
-        abemaVideo: 260,
-        dAnimeNiconico: 306,
-    };
-    const cmLengthMap = {
-        jk9: 60,
-        jk211: 60,
-    };
-    const additionalCmLength = 10;
-    const vposAdjustment = 50;
-    const partSymbols = ['A', 'B', 'C'];
-    const partSymbolThreshold = 2;
-    const partSymbolAdjustment = 3;
-    function parseNiconicoJikkyoKakoLogResponse(request, response) {
-        if ('error' in response) {
-            console.error(`[anime-comment-overlay] received error from niconico jikkyo kako log: ${response.error}`);
-            return [];
-        }
-        const chats = response.packet
-            .filter(({ chat }) => chat.deleted !== '1' && chat.abone !== '1')
-            .map(({ chat }) => ({
-            chat: {
-                thread: chat.thread,
-                no: parseInt(chat.no, 10),
-                vpos: 0,
-                date: parseInt(chat.date, 10),
-                date_usec: parseInt(chat.date_usec, 10),
-                nicoru: chat.nicoru ? parseInt(chat.nicoru, 10) : 0,
-                premium: chat.premium ? parseInt(chat.premium, 10) : 0,
-                anonymity: chat.anonymity ? parseInt(chat.anonymity, 10) : 0,
-                user_id: chat.user_id,
-                mail: chat.mail,
-                content: chat.content,
-                deleted: 0,
-            },
-        }));
-        const cmLength = cmLengthMap[request.channel];
-        if (cmLength === undefined) {
-            console.info(`[anime-comment-overlay] CM detection for channel ${request.channel} unsupported. Please contribute to this project!`);
-        }
-        else if (cmLength === 0) {
-            console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`);
-        }
-        else {
-            for (const symbol of partSymbols) {
-                const partChats = chats.filter((x) => x.chat.content === symbol);
-                if (!hasMinLength(partChats, partSymbolThreshold)) {
-                    continue;
-                }
-                let removes = 0;
-                const effectiveCmLength = cmLength + (partSymbols.indexOf(symbol) === 0 ? additionalCmLength : 0);
-                const cmEndDate = partChats[0].chat.date - partSymbolAdjustment;
-                const cmStartDate = cmEndDate - effectiveCmLength;
-                for (const c of chats.filter(({ chat }) => cmStartDate < chat.date && chat.date <= cmEndDate)) {
-                    c.chat.deleted = 1;
-                    removes++;
-                }
-                console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} chats deleted)`);
-                let shifts = 0;
-                for (const c of chats.filter(({ chat }) => cmEndDate < chat.date)) {
-                    c.chat.date -= effectiveCmLength;
-                    shifts++;
-                }
-                console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} chats shifted)`);
-            }
-        }
-        return (chats
-            .filter(({ chat }) => chat.deleted === 0)
-            .map(({ chat }) => ({
-            chat: {
-                ...chat,
-                vpos: Math.max((chat.date - request.startTime) * 100 + Math.floor(chat.date_usec / 10000) - vposAdjustment, 0),
-            },
-        })));
-    }
-    async function findPrograms(episode) {
-        if (episode.workIds.length === 0) {
+    async function findPrograms(media) {
+        if (media.work.annictIds.length === 0) {
             return [];
         }
         const arm = await fetchArmEntries();
         const syobocalTids = arm
-            .filter((e) => e.annict_id !== undefined && episode.workIds.includes(e.annict_id))
+            .filter((e) => e.annict_id !== undefined && media.work.annictIds.includes(e.annict_id))
             .map((e) => e.syobocal_tid)
             .filter((x) => x !== undefined)
             .filter((x, idx, array) => idx === array.indexOf(x));
         console.info(`[anime-comment-overlay] found syobocal tids: ${syobocalTids}`);
         const saya = await fetchSayaDefinitions();
         const programs = await fetchSyobocalProgLookup(syobocalTids);
-        return (programs.ProgLookupResponse?.ProgItems?.ProgItem?.filter((p) => p.Count === episode.episodeNumber)
+        const episodeNumber = extractEpisodeNumber(media.episode.number);
+        return (programs.ProgLookupResponse?.ProgItems?.ProgItem?.filter((p) => episodeNumber === undefined || p.Count === episodeNumber)
             ?.map((p) => {
             const startedAt = Date.parse(p.StTime) / 1000;
             if (Date.now() / 1000 < startedAt) {
@@ -554,44 +589,178 @@
         })
             ?.filter((x) => x !== undefined) ?? []);
     }
-    const providers = [
-        {
-            name: 'ニコニコ実況過去ログ',
-            async provide(program) {
-                const jkId = program.channel.nicojkId;
-                if (jkId === undefined) {
-                    return [];
-                }
-                const request = {
-                    channel: `jk${jkId}`,
-                    startTime: program.startedAt,
-                    endTime: program.endedAt,
-                };
-                const response = await fetchNiconicoJikkyoKakoLog(request);
-                return parseNiconicoJikkyoKakoLogResponse(request, response);
-            },
-        },
-    ];
-    async function fetchComments(episode) {
-        const programs = await findPrograms(episode);
+    function extractEpisodeNumber(text) {
+        if (text === undefined) {
+            return undefined;
+        }
+        text = text.replace(/[０-９]/g, (s) => String.fromCharCode(s.charCodeAt(0) - 65248));
+        const match = /\d+(\.\d+)?/.exec(text.replace(',', ''));
+        if (match && hasMinLength(match, 1)) {
+            return parseFloat(match[0]);
+        }
+        const kanjis = findKanjiNumbers_1(text);
+        if (hasMinLength(kanjis, 1)) {
+            return kanji2number_1(kanjis[0]);
+        }
+    }
+    async function fetchComments(providers, media, programs) {
         const comments = [];
-        const promises = providers.map((p) => programs.map(async (pg) => p.provide(pg))).flat();
+        const promises = providers.map((p) => programs.map(async (pg) => [p, await p.provide(media, pg)])).flat();
         for (const r of await Promise.allSettled(promises)) {
             switch (r.status) {
-                case 'fulfilled':
-                    comments.push(...r.value);
+                case 'fulfilled': {
+                    const [provider, results] = r.value;
+                    comments.push(...results);
+                    console.info(`[anime-comment-overlay] fetched ${results.length} comments from ${provider.name}`);
                     break;
+                }
                 case 'rejected':
-                    console.error(`[anime-comment-overlay] fetchComments rejected: ${r.reason}`);
+                    console.error(`[anime-comment-overlay] failed to comments: ${r.reason}`);
             }
         }
         return comments;
     }
-    async function applyModule(module, params) {
-        const { video, canvas, toggleButton } = module.initializeContainers();
-        const episode = await module.detectEpisode(...params);
-        console.info(`[anime-comment-overlay] episode: ${JSON.stringify(episode)}`);
-        const comments = await fetchComments(episode);
+
+    async function fetchNiconicoJikkyoKakoLog({ channel, startTime, endTime, }) {
+        const response = await fetch(`https://jikkyo.tsukumijima.net/api/kakolog/${channel}?starttime=${startTime}&endtime=${endTime}&format=json`);
+        return response.json();
+    }
+
+    const NiconicoJikkyoKakoLogProvider = {
+        name: 'ニコニコ実況過去ログ',
+        async provide(media, program) {
+            const jkId = program.channel.nicojkId;
+            if (jkId === undefined) {
+                return [];
+            }
+            const request = {
+                channel: `jk${jkId}`,
+                startTime: program.startedAt,
+                endTime: program.endedAt,
+            };
+            const response = await fetchNiconicoJikkyoKakoLog(request);
+            const chats = this.convertChats(response);
+            const attr = ChannelCmAttributes[request.channel];
+            switch (attr) {
+                case undefined:
+                    console.info(`[anime-comment-overlay] CM detection for channel ${request.channel} unsupported. Please contribute to this project!`);
+                    break;
+                case null:
+                    console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`);
+                    break;
+                default:
+                    console.log(`[anime-comment-overlay] CM attribute for channel ${request.channel}`, attr);
+                    this.processHeadCms(chats, attr.head, request.startTime);
+                    for (const symbol of partSymbols) {
+                        this.processIntervalCms(chats, symbol, attr.normal, attr.sponsor);
+                    }
+            }
+            let copyrightAdjustment = 0;
+            if (media.platform === 'danime') {
+                const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(media.copyright));
+                if (attr2 !== undefined) {
+                    copyrightAdjustment = attr2.adjustment;
+                    console.info(`[anime-comment-overlay] copyright adjustment for ${media.copyright}: ${copyrightAdjustment}`);
+                }
+            }
+            return (chats
+                .filter((c) => c.deleted === 0)
+                .map((c) => ({
+                chat: {
+                    ...c,
+                    vpos: Math.max(copyrightAdjustment +
+                        (c.date - request.startTime) * 100 +
+                        Math.floor(c.date_usec / 10000) -
+                        vposAdjustment, 0),
+                },
+            })));
+        },
+        convertChats(response) {
+            if ('error' in response) {
+                console.error(`[anime-comment-overlay] received error from niconico jikkyo kako log: ${response.error}`);
+                return [];
+            }
+            return (response.packet
+                .filter(({ chat }) => chat.deleted !== '1' && chat.abone !== '1')
+                .map(({ chat }) => ({
+                thread: chat.thread,
+                no: parseInt(chat.no, 10),
+                vpos: 0,
+                date: parseInt(chat.date, 10),
+                date_usec: parseInt(chat.date_usec, 10),
+                nicoru: chat.nicoru ? parseInt(chat.nicoru, 10) : 0,
+                premium: chat.premium ? parseInt(chat.premium, 10) : 0,
+                anonymity: chat.anonymity ? parseInt(chat.anonymity, 10) : 0,
+                user_id: chat.user_id,
+                mail: chat.mail,
+                content: chat.content,
+                deleted: 0,
+            })));
+        },
+        processHeadCms(chats, headInterval, startTime) {
+            if (headInterval === 0) {
+                return;
+            }
+            let removes = 0;
+            const cmStartTime = startTime;
+            const cmEndTime = startTime + headInterval;
+            for (const chat of chats.filter((c) => cmStartTime < c.date && c.date <= cmEndTime)) {
+                chat.deleted = 1;
+                removes++;
+            }
+            console.info(`[anime-comment-overlay] CM part: head (${removes} chats deleted)`);
+            let shifts = 0;
+            for (const chat of chats.filter((c) => cmEndTime < c.date)) {
+                chat.date -= headInterval;
+                shifts++;
+            }
+            console.info(`[anime-comment-overlay] CM part: head (${shifts} chats shifted)`);
+        },
+        processIntervalCms(chats, symbol, normalInterval, sponsorInterval) {
+            const partChats = chats.filter((c) => c.content === symbol);
+            if (!hasMinLength(partChats, partSymbolCommentsThreshold)) {
+                return;
+            }
+            if (partSymbols.indexOf(symbol) === 0) {
+                const opChats = chats.filter((c) => opSymbols.includes(c.content));
+                if (hasMinLength(opChats, opSymbolCommentsThreshold)) {
+                    const opStartTime = opChats[0].date;
+                    const opEndTime = opStartTime + opLength;
+                    if (opStartTime < partChats[0].date && partChats[0].date < opEndTime + opAdjustment) {
+                        console.info(`[anime-comment-overlay] OP part: ${symbol}`);
+                        return;
+                    }
+                }
+            }
+            let removes = 0;
+            const effectiveCmLength = normalInterval + (partSymbols.indexOf(symbol) === 0 ? sponsorInterval : 0);
+            const cmEndTime = partChats[0].date - partSymbolAdjustment;
+            const cmStartTime = cmEndTime - effectiveCmLength;
+            for (const chat of chats.filter((c) => cmStartTime < c.date && c.date <= cmEndTime)) {
+                chat.deleted = 1;
+                removes++;
+            }
+            console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} chats deleted)`);
+            let shifts = 0;
+            for (const chat of chats.filter((c) => cmEndTime < c.date)) {
+                chat.date -= effectiveCmLength;
+                shifts++;
+            }
+            console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} chats shifted)`);
+        },
+    };
+
+    const overlays = [
+        DanimeOverlay,
+    ];
+    const providers = [NiconicoJikkyoKakoLogProvider];
+    async function initializeOverlay(overlay, params) {
+        const { video, canvas, toggleButton } = overlay.initializeContainers();
+        const media = await overlay.detectMedia(...params);
+        console.log('[anime-comment-overlay] media', media);
+        const programs = await findPrograms(media);
+        console.log('[anime-comment-overlay] programs', programs);
+        const comments = await fetchComments(providers, media, programs);
         const renderer = new NiconiComments(canvas, comments, {
             format: 'legacy',
         });
@@ -608,22 +777,22 @@
                 renderer.clear();
             }
         });
-        function onEpisodeChanged() {
-            module.removeEventListener('episodeChanged', onEpisodeChanged);
+        function onMediaChanged() {
+            overlay.removeEventListener('mediaChanged', onMediaChanged);
             clearInterval(interval);
             renderer.clear();
-            applyModule(module, params).catch(console.error);
-            console.info('[anime-comment-overlay] episode changed');
+            initializeOverlay(overlay, params).catch(console.error);
+            console.info('[anime-comment-overlay] media changed');
         }
-        module.addEventListener('episodeChanged', onEpisodeChanged);
+        overlay.addEventListener('mediaChanged', onMediaChanged);
     }
-    for (const module of modules) {
-        const match = module.url.exec(window.location.href);
-        if (match === null) {
+    for (const overlay of overlays) {
+        const params = overlay.url.exec(window.location.href)?.slice(1);
+        if (params === undefined) {
             continue;
         }
-        console.info(`[anime-comment-overlay] applying ${module.name}`);
-        applyModule(module, match.slice(1)).catch(console.error);
+        console.info(`[anime-comment-overlay] initializing ${overlay.name}`);
+        initializeOverlay(overlay, params).catch(console.error);
         break;
     }
 
