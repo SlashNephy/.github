@@ -354,12 +354,16 @@ cask "android-sdk"
 cask "apparency"
 # Application uninstaller
 cask "appcleaner"
+# Manage team projects and tasks
+cask "asana"
 # Multi-track audio editor and recorder
 cask "audacity"
 # Managed client-based VPN service to securely access AWS resources
 cask "aws-vpn-client"
 # Installer for BetterDiscord
 cask "betterdiscord-installer"
+# Virtual Audio Driver
+cask "blackhole-16ch"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 # 3D creation suite
