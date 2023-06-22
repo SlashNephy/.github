@@ -7,17 +7,31 @@ import { fetchSyobocalProgLookup } from '../../../lib/external/syobocal'
 
 import type { SayaDefinitions } from '../../../lib/external/saya'
 import type { Media } from '../overlay'
-import type { RawApiResponse } from '@xpadev-net/niconicomments'
+import type { FormattedComment } from '@xpadev-net/niconicomments'
 
 export type CommentProviderModule = {
   name: string
-  provide(media: Media, program: Program): Promise<RawApiResponse[]>
+  provide(media: Media, program: Program): Promise<Comment[]>
 }
 
 export type Program = {
   channel: SayaDefinitions['channels'][0]
   startedAt: number
   endedAt: number
+}
+
+export type Comment = {
+  providerId: number
+  id: number
+  vpos: number
+  content: string
+  date: number
+  dateUsec: number
+  userId: number
+  isPremium: boolean
+  mails: string[]
+  layer: number
+  isDeleted: boolean
 }
 
 export async function findPrograms(media: Media): Promise<Program[]> {
@@ -72,7 +86,7 @@ export async function findPrograms(media: Media): Promise<Program[]> {
         } satisfies Program
       })
       ?.filter((x): x is NonNullable<typeof x> => x !== undefined)
-      ?.sort((a, b) => b.startedAt - a.startedAt) ?? []
+      ?.sort((a, b) => a.startedAt - b.startedAt) ?? []
   )
 }
 
@@ -104,15 +118,28 @@ export async function fetchComments(
   providers: CommentProviderModule[],
   media: Media,
   programs: Program[]
-): Promise<RawApiResponse[]> {
-  const comments: RawApiResponse[] = []
+): Promise<FormattedComment[]> {
+  const comments: FormattedComment[] = []
 
   const promises = providers.map((p) => programs.map(async (pg) => [p, await p.provide(media, pg)] as const)).flat()
   for (const r of await Promise.allSettled(promises)) {
     switch (r.status) {
       case 'fulfilled': {
         const [provider, results] = r.value
-        comments.push(...results)
+        comments.push(
+          ...results.map((c) => ({
+            id: c.id,
+            vpos: c.vpos,
+            content: c.content,
+            date: c.date,
+            date_usec: c.dateUsec,
+            user_id: c.userId,
+            owner: !c.userId,
+            premium: c.isPremium,
+            mail: c.mails,
+            layer: c.layer,
+          }))
+        )
         console.info(`[anime-comment-overlay] fetched ${results.length} comments from ${provider.name}`)
         break
       }
