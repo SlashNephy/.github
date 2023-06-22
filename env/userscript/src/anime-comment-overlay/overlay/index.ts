@@ -1,7 +1,7 @@
 export type CommentOverlayModule = {
   name: string
   url: RegExp
-  initializeContainers(): Containers
+  initializeContainers(): Promise<Containers>
   detectMedia(...params: string[]): Promise<Media>
   addEventListener<K extends keyof CommentOverlayModuleEventMap>(
     event: K,
@@ -14,7 +14,7 @@ export type CommentOverlayModule = {
 }
 
 export type Containers = {
-  video: HTMLVideoElement
+  video: HTMLVideoElement | (() => HTMLVideoElement)
   canvas: HTMLCanvasElement
   toggleButton?: HTMLElement
 }
@@ -37,14 +37,24 @@ export type Media =
     }
   | {
       platform: 'danime'
+      copyright: string
       work: {
         title: string
         annictIds: number[]
       }
       episode: {
-        title?: string
-        number?: string
+        title: string
+        number: string
       }
-      partId: string
-      copyright: string
+    }
+  | {
+      platform: 'abema-video'
+      work: {
+        title: string
+        annictIds: number[]
+      }
+      episode: {
+        title: string
+        number: string
+      }
     }
