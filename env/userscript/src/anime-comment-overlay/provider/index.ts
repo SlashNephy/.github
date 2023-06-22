@@ -71,7 +71,8 @@ export async function findPrograms(media: Media): Promise<Program[]> {
           endedAt,
         } satisfies Program
       })
-      ?.filter((x): x is NonNullable<typeof x> => x !== undefined) ?? []
+      ?.filter((x): x is NonNullable<typeof x> => x !== undefined)
+      ?.sort((a, b) => b.startedAt - a.startedAt) ?? []
   )
 }
 

@@ -54,7 +54,7 @@ export type Banner = BuildConfig & TampermonkeyHeader
 type BuildConfig = {
   id: string
   private?: boolean
-  options?: RollupOptions
+  options?: Omit<RollupOptions, 'input' | 'plugins'>
 }
 
 type InternationalizationStrings = Record<string, string> & { en: string; ja?: string }

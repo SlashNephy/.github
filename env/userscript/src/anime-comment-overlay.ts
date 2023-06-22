@@ -1,5 +1,7 @@
 import NiconiComments from '@xpadev-net/niconicomments'
 
+import { maxPrograms } from './anime-comment-overlay/constant'
+import { AbemaVideoOverlay } from './anime-comment-overlay/overlay/abema-video'
 import { DanimeOverlay } from './anime-comment-overlay/overlay/danime'
 import { fetchComments, findPrograms } from './anime-comment-overlay/provider'
 import { NiconicoJikkyoKakoLogProvider } from './anime-comment-overlay/provider/niconico'
@@ -7,18 +9,11 @@ import { NiconicoJikkyoKakoLogProvider } from './anime-comment-overlay/provider/
 import type { CommentOverlayModule } from './anime-comment-overlay/overlay'
 import type { CommentProviderModule } from './anime-comment-overlay/provider'
 
-const overlays: CommentOverlayModule[] = [
-  DanimeOverlay,
-  // {
-  //   name: 'ABEMAビデオ',
-  //   url: /^https:\/\/abema\.tv\/video\/episode\/(.+)$/,
-  // },
-]
-
+const overlays: CommentOverlayModule[] = [DanimeOverlay, AbemaVideoOverlay]
 const providers: CommentProviderModule[] = [NiconicoJikkyoKakoLogProvider]
 
 async function initializeOverlay(overlay: CommentOverlayModule, params: string[]): Promise<void> {
-  const { video, canvas, toggleButton } = overlay.initializeContainers()
+  const { video, canvas, toggleButton } = await overlay.initializeContainers()
 
   const media = await overlay.detectMedia(...params)
   console.log('[anime-comment-overlay] media', media)
@@ -26,18 +21,28 @@ async function initializeOverlay(overlay: CommentOverlayModule, params: string[]
   const programs = await findPrograms(media)
   console.log('[anime-comment-overlay] programs', programs)
 
-  const comments = await fetchComments(providers, media, programs)
+  const comments = await fetchComments(providers, media, programs.slice(0, maxPrograms))
   const renderer = new NiconiComments(canvas, comments, {
     format: 'legacy',
   })
 
   let isHide = false
+  let cachedVideo: HTMLVideoElement | null = null
   const interval = setInterval(() => {
     if (isHide) {
       return
     }
 
-    renderer.drawCanvas(Math.floor(video.currentTime * 100))
+    let v: HTMLVideoElement
+    if (typeof video === 'function') {
+      if (cachedVideo?.isConnected !== true) {
+        cachedVideo = video()
+      }
+      v = cachedVideo
+    } else {
+      v = video
+    }
+    renderer.drawCanvas(Math.floor(v.currentTime * 100))
   }, 10)
 
   toggleButton?.addEventListener('click', () => {

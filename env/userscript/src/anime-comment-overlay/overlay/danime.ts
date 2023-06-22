@@ -3,12 +3,14 @@ import { fetchAnnictBroadcastData } from '../../../lib/external/collect-vod-data
 import { fetchDanimePartInfo } from '../../../lib/external/danime'
 import { AnnictSupportedVodChannelIds } from '../constant'
 
-import type { CommentOverlayModuleEventMap, Containers, Media } from './index'
+import type { CommentOverlayModule, CommentOverlayModuleEventMap, Containers, Media } from './index'
 
-export const DanimeOverlay = {
+export const DanimeOverlay: CommentOverlayModule = {
   name: 'dアニメストア',
-  url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)$/,
-  initializeContainers(): Containers {
+  url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)/,
+  async initializeContainers(): Promise<Containers> {
+    await awaitFor(() => document.querySelector('video#video') !== null)
+
     const video = document.querySelector<HTMLVideoElement>('video#video')
     if (video === null) {
       throw new Error('video container not found')
@@ -43,7 +45,6 @@ export const DanimeOverlay = {
 
     return {
       platform: 'danime',
-      partId,
       copyright: info.partCopyright,
       work: {
         title: backInfoTxt1.text(),

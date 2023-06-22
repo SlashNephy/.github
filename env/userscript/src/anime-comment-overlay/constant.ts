@@ -192,3 +192,7 @@ export const copyrightCmAttributes: {
     adjustment: 3,
   },
 ]
+
+// 最大の参照される番組数
+// 古い方から n 件使用する
+export const maxPrograms = 5
