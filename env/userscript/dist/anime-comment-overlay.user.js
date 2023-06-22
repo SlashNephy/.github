@@ -147,6 +147,7 @@
         },
     ];
     const maxPrograms = 5;
+    const targetFps = 100;
 
     const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
         let timer;
@@ -165,24 +166,24 @@
             }, timeout);
         }
     });
-    async function awaitElement(selectors, timeout) {
-        return new Promise((resolve, reject) => {
-            let timer;
-            const interval = window.setInterval(() => {
-                const element = document.querySelector(selectors);
-                if (element !== null) {
-                    clearInterval(interval);
-                    clearTimeout(timer);
-                    resolve(element);
-                }
-            }, 500);
-            if (timeout !== undefined) {
-                timer = window.setTimeout(() => {
-                    clearInterval(interval);
-                    clearTimeout(timer);
-                    reject(new Error('timeout'));
-                }, timeout);
+    async function awaitElement(selectors) {
+        return new Promise((resolve) => {
+            const element = document.querySelector(selectors);
+            if (element !== null) {
+                resolve(element);
+                return;
             }
+            const observer = new MutationObserver(() => {
+                const e = document.querySelector(selectors);
+                if (e !== null) {
+                    resolve(e);
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true,
+            });
         });
     }
 
@@ -196,13 +197,7 @@
         name: 'ABEMAビデオ',
         url: /^https:\/\/abema\.tv\/video\/episode\/([\w-]+)/,
         async initializeContainers() {
-            const video = () => {
-                const element = document.querySelector('video[preload="metadata"]');
-                if (element === null) {
-                    throw new Error('video container not found');
-                }
-                return element;
-            };
+            const video = () => document.querySelector('video[preload="metadata"]');
             const canvas = document.createElement('canvas');
             canvas.width = 1920;
             canvas.height = 1080;
@@ -228,9 +223,10 @@
             if (!episode) {
                 throw new Error('episode container not found');
             }
-            const [episodeNumber, episodeTitle] = episode.split(' ', 2);
+            let [episodeNumber, episodeTitle] = episode.split(' ', 2);
             if (!episodeNumber || !episodeTitle) {
-                throw new Error(`unexpected episode format: ${episode}`);
+                episodeNumber = episode;
+                episodeTitle = episode;
             }
             const broadcasts = await fetchAnnictBroadcastData();
             return {
@@ -288,11 +284,7 @@
         name: 'dアニメストア',
         url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)/,
         async initializeContainers() {
-            await awaitFor(() => document.querySelector('video#video') !== null);
-            const video = document.querySelector('video#video');
-            if (video === null) {
-                throw new Error('video container not found');
-            }
+            const video = await awaitElement('video#video');
             const canvas = document.createElement('canvas');
             canvas.width = 1920;
             canvas.height = 1080;
@@ -698,7 +690,7 @@
             };
         })
             ?.filter((x) => x !== undefined)
-            ?.sort((a, b) => b.startedAt - a.startedAt) ?? []);
+            ?.sort((a, b) => a.startedAt - b.startedAt) ?? []);
     }
     function extractEpisodeNumber(text) {
         if (text === undefined) {
@@ -714,33 +706,33 @@
             return kanji2number_1(kanjis[0]);
         }
     }
-    async function fetchComments(providers, media, programs) {
-        const comments = [];
-        const promises = providers.map((p) => programs.map(async (pg) => [p, await p.provide(media, pg)])).flat();
-        for (const r of await Promise.allSettled(promises)) {
-            switch (r.status) {
-                case 'fulfilled': {
-                    const [provider, results] = r.value;
-                    comments.push(...results.map((c) => ({
-                        id: c.id,
-                        vpos: c.vpos,
-                        content: c.content,
-                        date: c.date,
-                        date_usec: c.dateUsec,
-                        user_id: c.userId,
-                        owner: !c.userId,
-                        premium: c.isPremium,
-                        mail: c.mails,
-                        layer: c.layer,
-                    })));
-                    console.info(`[anime-comment-overlay] fetched ${results.length} comments from ${provider.name}`);
-                    break;
-                }
-                case 'rejected':
-                    console.error(`[anime-comment-overlay] failed to comments: ${r.reason}`);
-            }
+    async function* fetchComments(providers, media, programs) {
+        const promises = providers
+            .map((provider) => programs.map(async (program) => provider
+            .provide(media, program)
+            .then((comments) => {
+            console.info(`[anime-comment-overlay] fetched ${comments.length} comments from ${provider.name}`);
+            return comments.map((c) => ({
+                id: c.id * c.providerId,
+                vpos: c.vpos,
+                content: c.content,
+                date: c.date,
+                date_usec: c.dateUsec,
+                user_id: c.userId * c.providerId,
+                owner: !c.userId,
+                premium: c.isPremium,
+                mail: c.mails,
+                layer: c.layer,
+            }));
+        })
+            .catch((e) => {
+            console.error(`[anime-comment-overlay] failed to comments from ${provider.name}: ${e}`);
+            return [];
+        })))
+            .flat();
+        for (const promise of promises) {
+            yield promise;
         }
-        return comments;
     }
 
     async function fetchNiconicoJikkyoKakoLog({ channel, startTime, endTime, }) {
@@ -765,13 +757,13 @@
             const attr = ChannelCmAttributes[request.channel];
             switch (attr) {
                 case undefined:
-                    console.info(`[anime-comment-overlay] CM detection for channel ${request.channel} unsupported. Please contribute to this project!`);
+                    console.info(`[anime-comment-overlay] CM detection for channel ${request.channel} unsupported. Please contribute to this project!`, media, program);
                     return [];
                 case null:
-                    console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`);
+                    console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`, media, program);
                     break;
                 default:
-                    console.log(`[anime-comment-overlay] CM attribute for channel ${request.channel}`, attr);
+                    console.log(`[anime-comment-overlay] CM attribute for channel ${request.channel}`, attr, media, program);
                     processHeadCms(chats, attr.head, request.startTime);
                     for (const symbol of partSymbols) {
                         processIntervalCms(chats, symbol, attr.normal, attr.sponsor);
@@ -782,7 +774,7 @@
                 const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(media.copyright));
                 if (attr2 !== undefined) {
                     copyrightAdjustment = attr2.adjustment;
-                    console.info(`[anime-comment-overlay] copyright adjustment for ${media.copyright}: ${copyrightAdjustment}`);
+                    console.info(`[anime-comment-overlay] copyright adjustment for ${media.copyright}: ${copyrightAdjustment}`, media, program);
                 }
             }
             return (chats
@@ -881,29 +873,28 @@
     const overlays = [DanimeOverlay, AbemaVideoOverlay];
     const providers = [NiconicoJikkyoKakoLogProvider];
     async function initializeOverlay(overlay, params) {
-        const { video, canvas, toggleButton } = await overlay.initializeContainers();
         const media = await overlay.detectMedia(...params);
         console.log('[anime-comment-overlay] media', media);
         const programs = await findPrograms(media);
         console.log('[anime-comment-overlay] programs', programs);
+        const { video, canvas, toggleButton } = await overlay.initializeContainers();
         const renderer = new NiconiComments(canvas, undefined, {
             format: 'empty',
         });
-        fetchComments(providers, media, programs.slice(0, maxPrograms))
-            .then((comments) => {
-            renderer.addComments(...comments);
-        })
-            .catch(console.error);
+        let isInitialized = false;
         let isHide = false;
         let cachedVideo = null;
         const interval = setInterval(() => {
-            if (isHide) {
+            if (!isInitialized || isHide) {
                 return;
             }
             let v;
             if (typeof video === 'function') {
                 if (cachedVideo?.isConnected !== true) {
                     cachedVideo = video();
+                    if (cachedVideo === null) {
+                        return;
+                    }
                 }
                 v = cachedVideo;
             }
@@ -911,7 +902,7 @@
                 v = video;
             }
             renderer.drawCanvas(Math.floor(v.currentTime * 100));
-        }, 10);
+        }, 1000 / targetFps);
         toggleButton?.addEventListener('click', () => {
             isHide = !isHide;
             if (isHide) {
@@ -926,6 +917,10 @@
             console.info('[anime-comment-overlay] media changed');
         }
         overlay.addEventListener('mediaChanged', onMediaChanged);
+        for await (const comments of fetchComments(providers, media, programs.slice(0, maxPrograms))) {
+            renderer.addComments(...comments);
+        }
+        isInitialized = true;
     }
     for (const overlay of overlays) {
         const params = overlay.url.exec(window.location.href)?.slice(1);
@@ -933,7 +928,11 @@
             continue;
         }
         console.info(`[anime-comment-overlay] initializing ${overlay.name}`);
-        initializeOverlay(overlay, params).catch(console.error);
+        initializeOverlay(overlay, params)
+            .then(() => {
+            console.info(`[anime-comment-overlay] initialized ${overlay.name}`);
+        })
+            .catch(console.error);
         break;
     }
 

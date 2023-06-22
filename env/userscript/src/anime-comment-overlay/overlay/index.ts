@@ -14,7 +14,7 @@ export type CommentOverlayModule = {
 }
 
 export type Containers = {
-  video: HTMLVideoElement | (() => HTMLVideoElement)
+  video: HTMLVideoElement | (() => HTMLVideoElement | null)
   canvas: HTMLCanvasElement
   toggleButton?: HTMLElement
 }

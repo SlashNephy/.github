@@ -196,3 +196,6 @@ export const copyrightCmAttributes: {
 // 最大の参照される番組数
 // 古い方から n 件使用する
 export const maxPrograms = 5
+
+// コメント描画のフレームレート
+export const targetFps = 100
