@@ -2,7 +2,7 @@
  * @name Translator
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.5.5
+ * @version 2.5.6
  * @description Allows you to translate Messages and your outgoing Messages within Discord
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -554,15 +554,15 @@ module.exports = (_ => {
 						disabled: !translated && isTranslating,
 						action: _ => this.translateMessage(e.instance.props.message, e.instance.props.channel)
 					}));
-					this.injectSearchItem(e);
+					this.injectSearchItem(e, false);
 				}
 			}
 			
 			onTextAreaContextMenu (e) {
-				this.injectSearchItem(e);
+				this.injectSearchItem(e, true);
 			}
 			
-			injectSearchItem (e) {
+			injectSearchItem (e, ownMessage) {
 				let text = document.getSelection().toString();
 				if (text) {
 					let translating, foundTranslation, foundInput, foundOutput;
@@ -600,7 +600,7 @@ module.exports = (_ => {
 									}
 									else if (!translating) {
 										translating = true;
-										this.translateText(text, messageTypes.RECEIVED, (translation, input, output) => {
+										this.translateText(text, ownMessage ? messageTypes.SENT : messageTypes.RECEIVED, (translation, input, output) => {
 											if (translation) {
 												foundTranslation = translation, foundInput = input, foundOutput = output;
 												createTooltip();
@@ -1510,11 +1510,11 @@ module.exports = (_ => {
 							error_keyoutdated:					"Το κλειδί API δεν είναι ενημερωμένο.",
 							error_monthlylimit:					"Συμπληρώθηκε το μηνιαίο όριο αιτημάτων.",
 							error_serverdown:					"Ο διακομιστής μετάφρασης ενδέχεται να είναι εκτός σύνδεσης.",
-							exception_text:						"Οι λέξεις που ξεκινούν με {{var0}} θα αγνοηθούν",
-							general_addTranslateButton:			"Προσθήκη ένός κουμπιού μετάφρασης στην Περιοχή κειμένου του Καναλιού",
-							general_sendOriginalMessage:		"Επίσης αποστολή του αρχικού Μηνύματος κατά τη μετάφραση του απεσταλμένου μηνύματος",
-							general_showOriginalMessage:		"Επίσης εμφάνιση του αρχικού Μηνύματος κατά τη μετάφραση ενός ληφθέντος μηνύματος",
-							general_usePerChatTranslation:		"Ενεργοποιεί/απενεργοποιεί την κατάσταση του κουμπιού μεταφραστή ανά κανάλι και όχι καθολικά",
+							exception_text:						"Οι λέξεις θα αγνοηθούν που ξεκινούν με {{var0}}",
+							general_addTranslateButton:			"Προσθήκη κουμπιού μετάφρασης στην Περιοχή κειμένου του Καναλιού",
+							general_sendOriginalMessage:		"Αποστολή αρχικού Μηνύματος με τη μετάφραση απεσταλμένου μηνύματος",
+							general_showOriginalMessage:		"Εμφάνιση αρχικού Μηνύματος με τη μετάφραση ενός ληφθέντος μηνύματος",
+							general_usePerChatTranslation:		"(Απ)Ενεργοποίηση κατάστασης κουμπιού μεταφραστή ανά κανάλι",
 							language_choice_input_received:		"Γλώσσα εισαγωγής στα ληφθέντα μηνύματα",
 							language_choice_input_sent:			"Γλώσσα εισαγωγής στα απεσταλμένα μηνύματά σας",
 							language_choice_output_received:	"Γλώσσα εξαγωγής στα ληφθέντα μηνύματα",
