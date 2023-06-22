@@ -21,10 +21,14 @@ async function initializeOverlay(overlay: CommentOverlayModule, params: string[]
   const programs = await findPrograms(media)
   console.log('[anime-comment-overlay] programs', programs)
 
-  const comments = await fetchComments(providers, media, programs.slice(0, maxPrograms))
-  const renderer = new NiconiComments(canvas, comments, {
-    format: 'legacy',
+  const renderer = new NiconiComments(canvas, undefined, {
+    format: 'empty',
   })
+  fetchComments(providers, media, programs.slice(0, maxPrograms))
+    .then((comments) => {
+      renderer.addComments(...comments)
+    })
+    .catch(console.error)
 
   let isHide = false
   let cachedVideo: HTMLVideoElement | null = null

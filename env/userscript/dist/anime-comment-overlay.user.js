@@ -721,7 +721,18 @@
             switch (r.status) {
                 case 'fulfilled': {
                     const [provider, results] = r.value;
-                    comments.push(...results);
+                    comments.push(...results.map((c) => ({
+                        id: c.id,
+                        vpos: c.vpos,
+                        content: c.content,
+                        date: c.date,
+                        date_usec: c.dateUsec,
+                        user_id: c.userId,
+                        owner: !c.userId,
+                        premium: c.isPremium,
+                        mail: c.mails,
+                        layer: c.layer,
+                    })));
                     console.info(`[anime-comment-overlay] fetched ${results.length} comments from ${provider.name}`);
                     break;
                 }
@@ -775,15 +786,10 @@
                 }
             }
             return (chats
-                .filter((c) => c.deleted === 0)
+                .filter((c) => !c.isDeleted)
                 .map((c) => ({
-                chat: {
-                    ...c,
-                    vpos: Math.max(copyrightAdjustment +
-                        (c.date - request.startTime) * 100 +
-                        Math.floor(c.date_usec / 10000) -
-                        vposAdjustment, 0),
-                },
+                ...c,
+                vpos: Math.max(copyrightAdjustment + (c.date - request.startTime) * 100 + Math.floor(c.dateUsec / 10000) - vposAdjustment, 0),
             })));
         },
     };
@@ -792,53 +798,64 @@
             console.error(`[anime-comment-overlay] received error from niconico jikkyo kako log: ${response.error}`);
             return [];
         }
+        const users = [];
         return (response.packet
             .filter(({ chat }) => chat.deleted !== '1' && chat.abone !== '1')
-            .map(({ chat }) => ({
-            thread: chat.thread,
-            no: parseInt(chat.no, 10),
-            vpos: 0,
-            date: parseInt(chat.date, 10),
-            date_usec: parseInt(chat.date_usec, 10),
-            nicoru: chat.nicoru ? parseInt(chat.nicoru, 10) : 0,
-            premium: chat.premium ? parseInt(chat.premium, 10) : 0,
-            anonymity: chat.anonymity ? parseInt(chat.anonymity, 10) : 0,
-            user_id: chat.user_id,
-            mail: chat.mail,
-            content: chat.content,
-            deleted: 0,
-        })));
+            .map(({ chat }) => {
+            const mails = chat.mail ? chat.mail.split(/\s+/g) : [];
+            if (chat.content.startsWith('/')) {
+                mails.push('invisible');
+            }
+            let userId = users.indexOf(chat.user_id);
+            if (userId < 0) {
+                userId = users.length;
+                users.push(chat.user_id);
+            }
+            return {
+                providerId: 1,
+                id: parseInt(chat.no, 10),
+                vpos: 0,
+                content: chat.content,
+                date: parseInt(chat.date, 10),
+                dateUsec: parseInt(chat.date_usec, 10),
+                userId,
+                isPremium: chat.premium === '1',
+                mails,
+                layer: -1,
+                isDeleted: false,
+            };
+        }));
     }
-    function processHeadCms(chats, headInterval, startTime) {
+    function processHeadCms(comments, headInterval, startTime) {
         if (headInterval === 0) {
             return;
         }
         let removes = 0;
         const cmStartTime = startTime;
         const cmEndTime = startTime + headInterval;
-        for (const chat of chats.filter((c) => cmStartTime < c.date && c.date <= cmEndTime)) {
-            chat.deleted = 1;
+        for (const comment of comments.filter((c) => cmStartTime < c.date && c.date <= cmEndTime)) {
+            comment.isDeleted = true;
             removes++;
         }
-        console.info(`[anime-comment-overlay] CM part: head (${removes} chats deleted)`);
+        console.info(`[anime-comment-overlay] CM part: head (${removes} comments deleted)`);
         let shifts = 0;
-        for (const chat of chats.filter((c) => cmEndTime < c.date)) {
-            chat.date -= headInterval;
+        for (const comment of comments.filter((c) => cmEndTime < c.date)) {
+            comment.date -= headInterval;
             shifts++;
         }
-        console.info(`[anime-comment-overlay] CM part: head (${shifts} chats shifted)`);
+        console.info(`[anime-comment-overlay] CM part: head (${shifts} comments shifted)`);
     }
-    function processIntervalCms(chats, symbol, normalInterval, sponsorInterval) {
-        const partChats = chats.filter((c) => c.content === symbol);
-        if (!hasMinLength(partChats, partSymbolCommentsThreshold)) {
+    function processIntervalCms(comments, symbol, normalInterval, sponsorInterval) {
+        const partComments = comments.filter((c) => c.content === symbol);
+        if (!hasMinLength(partComments, partSymbolCommentsThreshold)) {
             return;
         }
         if (partSymbols.indexOf(symbol) === 0) {
-            const opChats = chats.filter((c) => opSymbols.includes(c.content));
-            if (hasMinLength(opChats, opSymbolCommentsThreshold)) {
-                const opStartTime = opChats[0].date;
+            const opComments = comments.filter((c) => opSymbols.includes(c.content));
+            if (hasMinLength(opComments, opSymbolCommentsThreshold)) {
+                const opStartTime = opComments[0].date;
                 const opEndTime = opStartTime + opLength;
-                if (opStartTime < partChats[0].date && partChats[0].date < opEndTime + opAdjustment) {
+                if (opStartTime < partComments[0].date && partComments[0].date < opEndTime + opAdjustment) {
                     console.info(`[anime-comment-overlay] OP part: ${symbol}`);
                     return;
                 }
@@ -846,19 +863,19 @@
         }
         let removes = 0;
         const effectiveCmLength = normalInterval + (partSymbols.indexOf(symbol) === 0 ? sponsorInterval : 0);
-        const cmEndTime = partChats[0].date - partSymbolAdjustment;
+        const cmEndTime = partComments[0].date - partSymbolAdjustment;
         const cmStartTime = cmEndTime - effectiveCmLength;
-        for (const chat of chats.filter((c) => cmStartTime < c.date && c.date <= cmEndTime)) {
-            chat.deleted = 1;
+        for (const comment of comments.filter((c) => cmStartTime < c.date && c.date <= cmEndTime)) {
+            comment.isDeleted = true;
             removes++;
         }
-        console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} chats deleted)`);
+        console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} comments deleted)`);
         let shifts = 0;
-        for (const chat of chats.filter((c) => cmEndTime < c.date)) {
-            chat.date -= effectiveCmLength;
+        for (const comment of comments.filter((c) => cmEndTime < c.date)) {
+            comment.date -= effectiveCmLength;
             shifts++;
         }
-        console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} chats shifted)`);
+        console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} comments shifted)`);
     }
 
     const overlays = [DanimeOverlay, AbemaVideoOverlay];
@@ -869,10 +886,14 @@
         console.log('[anime-comment-overlay] media', media);
         const programs = await findPrograms(media);
         console.log('[anime-comment-overlay] programs', programs);
-        const comments = await fetchComments(providers, media, programs.slice(0, maxPrograms));
-        const renderer = new NiconiComments(canvas, comments, {
-            format: 'legacy',
+        const renderer = new NiconiComments(canvas, undefined, {
+            format: 'empty',
         });
+        fetchComments(providers, media, programs.slice(0, maxPrograms))
+            .then((comments) => {
+            renderer.addComments(...comments);
+        })
+            .catch(console.error);
         let isHide = false;
         let cachedVideo = null;
         const interval = setInterval(() => {
