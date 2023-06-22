@@ -114,39 +114,42 @@ function extractEpisodeNumber(text: string | undefined): number | undefined {
   }
 }
 
-export async function fetchComments(
+// eslint-disable-next-line @typescript-eslint/require-await
+export async function* fetchComments(
   providers: CommentProviderModule[],
   media: Media,
   programs: Program[]
-): Promise<FormattedComment[]> {
-  const comments: FormattedComment[] = []
+): AsyncGenerator<FormattedComment[]> {
+  const promises: Promise<FormattedComment[]>[] = providers
+    .map((provider) =>
+      programs.map(async (program) =>
+        provider
+          .provide(media, program)
+          .then((comments) => {
+            console.info(`[anime-comment-overlay] fetched ${comments.length} comments from ${provider.name}`)
 
-  const promises = providers.map((p) => programs.map(async (pg) => [p, await p.provide(media, pg)] as const)).flat()
-  for (const r of await Promise.allSettled(promises)) {
-    switch (r.status) {
-      case 'fulfilled': {
-        const [provider, results] = r.value
-        comments.push(
-          ...results.map((c) => ({
-            id: c.id,
-            vpos: c.vpos,
-            content: c.content,
-            date: c.date,
-            date_usec: c.dateUsec,
-            user_id: c.userId,
-            owner: !c.userId,
-            premium: c.isPremium,
-            mail: c.mails,
-            layer: c.layer,
-          }))
-        )
-        console.info(`[anime-comment-overlay] fetched ${results.length} comments from ${provider.name}`)
-        break
-      }
-      case 'rejected':
-        console.error(`[anime-comment-overlay] failed to comments: ${r.reason}`)
-    }
+            return comments.map((c) => ({
+              id: c.id * c.providerId,
+              vpos: c.vpos,
+              content: c.content,
+              date: c.date,
+              date_usec: c.dateUsec,
+              user_id: c.userId * c.providerId,
+              owner: !c.userId,
+              premium: c.isPremium,
+              mail: c.mails,
+              layer: c.layer,
+            }))
+          })
+          .catch((e) => {
+            console.error(`[anime-comment-overlay] failed to comments from ${provider.name}: ${e}`)
+            return []
+          })
+      )
+    )
+    .flat()
+
+  for (const promise of promises) {
+    yield promise
   }
-
-  return comments
 }

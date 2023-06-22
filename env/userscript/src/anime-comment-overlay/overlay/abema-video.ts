@@ -10,14 +10,7 @@ export const AbemaVideoOverlay: CommentOverlayModule = {
   name: 'ABEMAビデオ',
   url: /^https:\/\/abema\.tv\/video\/episode\/([\w-]+)/,
   async initializeContainers(): Promise<Containers> {
-    const video = () => {
-      const element = document.querySelector<HTMLVideoElement>('video[preload="metadata"]')
-      if (element === null) {
-        throw new Error('video container not found')
-      }
-
-      return element
-    }
+    const video = () => document.querySelector<HTMLVideoElement>('video[preload="metadata"]')
 
     const canvas = document.createElement('canvas')
     canvas.width = 1920
@@ -48,9 +41,10 @@ export const AbemaVideoOverlay: CommentOverlayModule = {
       throw new Error('episode container not found')
     }
 
-    const [episodeNumber, episodeTitle] = episode.split(' ', 2)
+    let [episodeNumber, episodeTitle] = episode.split(' ', 2)
     if (!episodeNumber || !episodeTitle) {
-      throw new Error(`unexpected episode format: ${episode}`)
+      episodeNumber = episode
+      episodeTitle = episode
     }
 
     const broadcasts = await fetchAnnictBroadcastData()

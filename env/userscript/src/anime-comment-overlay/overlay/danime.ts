@@ -1,4 +1,4 @@
-import { awaitFor } from '../../../lib/awaitFor'
+import { awaitElement, awaitFor } from '../../../lib/awaitFor'
 import { fetchAnnictBroadcastData } from '../../../lib/external/collect-vod-data'
 import { fetchDanimePartInfo } from '../../../lib/external/danime'
 import { AnnictSupportedVodChannelIds } from '../constant'
@@ -9,12 +9,7 @@ export const DanimeOverlay: CommentOverlayModule = {
   name: 'dアニメストア',
   url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)/,
   async initializeContainers(): Promise<Containers> {
-    await awaitFor(() => document.querySelector('video#video') !== null)
-
-    const video = document.querySelector<HTMLVideoElement>('video#video')
-    if (video === null) {
-      throw new Error('video container not found')
-    }
+    const video = await awaitElement<HTMLVideoElement>('video#video')
 
     const canvas = document.createElement('canvas')
     canvas.width = 1920
