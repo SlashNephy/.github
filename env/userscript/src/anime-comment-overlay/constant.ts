@@ -21,19 +21,17 @@ export const AnnictSupportedVodChannelIds = {
 
 // チャンネルの CM 構成
 // CM が存在しないチャンネルでは null を設定する
-export const ChannelCmAttributes: Partial<
-  Record<
-    NiconicoJikkyoChannel,
-    {
-      // 先頭の CM の長さ (秒)
-      // TODO: 条件分岐してこのパラメーターを変更できるように
-      head: number
-      // 「提供」でのスポンサー読み上げ部分の長さ (秒)
-      sponsor: number
-      // 通常の CM の長さ (秒)
-      normal: number
-    } | null
-  >
+export const ChannelCmAttributes: Record<
+  NiconicoJikkyoChannel,
+  {
+    // 先頭の CM の長さ (秒)
+    // TODO: 条件分岐してこのパラメーターを変更できるように
+    head: number
+    // 「提供」でのスポンサー読み上げ部分の長さ (秒)
+    sponsor: number
+    // 通常の CM の長さ (秒)
+    normal: number
+  } | null
 > = {
   // NHK 総合
   jk1: null,
@@ -71,6 +69,24 @@ export const ChannelCmAttributes: Partial<
   },
   // TOKYO MX
   jk9: {
+    head: 0,
+    sponsor: 10,
+    normal: 60,
+  },
+  // テレ玉
+  jk10: {
+    head: 0,
+    sponsor: 10,
+    normal: 60,
+  },
+  // tvk
+  jk11: {
+    head: 0,
+    sponsor: 10,
+    normal: 60,
+  },
+  // チバテレビ
+  jk12: {
     head: 0,
     sponsor: 10,
     normal: 60,

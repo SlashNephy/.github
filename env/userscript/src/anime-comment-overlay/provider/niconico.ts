@@ -31,31 +31,22 @@ export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
       startTime: program.startedAt,
       endTime: program.endedAt,
     }
-    const response = await fetchNiconicoJikkyoKakoLog(request)
 
     // 変換
+    const response = await fetchNiconicoJikkyoKakoLog(request)
     const chats = convertChats(response)
 
-    // CM パートをトリム
+    // CM パートをトリムする
     const attr = ChannelCmAttributes[request.channel]
-    switch (attr) {
-      case undefined:
-        console.info(
-          `[anime-comment-overlay] CM detection for channel ${request.channel} unsupported. Please contribute to this project!`,
-          media,
-          program
-        )
-        return []
-      case null:
-        console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`, media, program)
-        break
-      default:
-        console.log(`[anime-comment-overlay] CM attribute for channel ${request.channel}`, attr, media, program)
+    if (attr === null) {
+      console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`, program)
+    } else {
+      console.log(`[anime-comment-overlay] CM attribute for channel ${request.channel}`, attr, program)
 
-        processHeadCms(chats, attr.head, request.startTime)
-        for (const symbol of partSymbols) {
-          processIntervalCms(chats, symbol, attr.normal, attr.sponsor)
-        }
+      processHeadCms(chats, attr.head, program)
+      for (const symbol of partSymbols) {
+        processIntervalCms(chats, symbol, attr.normal, attr.sponsor, program)
+      }
     }
 
     let copyrightAdjustment = 0
@@ -66,7 +57,6 @@ export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
 
         console.info(
           `[anime-comment-overlay] copyright adjustment for ${media.copyright}: ${copyrightAdjustment}`,
-          media,
           program
         )
       }
@@ -131,20 +121,20 @@ function convertChats(response: NiconicoJikkyoKakoLogResponse): Comment[] {
   )
 }
 
-function processHeadCms(comments: Comment[], headInterval: number, startTime: number) {
+function processHeadCms(comments: Comment[], headInterval: number, program: Program) {
   if (headInterval === 0) {
     return
   }
 
   // 先頭 CM 区間のコメントを除去
   let removes = 0
-  const cmStartTime = startTime
-  const cmEndTime = startTime + headInterval
+  const cmStartTime = program.startedAt
+  const cmEndTime = program.startedAt + headInterval
   for (const comment of comments.filter((c) => cmStartTime < c.date && c.date <= cmEndTime)) {
     comment.isDeleted = true
     removes++
   }
-  console.info(`[anime-comment-overlay] CM part: head (${removes} comments deleted)`)
+  console.info(`[anime-comment-overlay] CM part: head (${removes} comments deleted)`, program)
 
   // 先頭 CM 区間後の時刻をシフト
   let shifts = 0
@@ -152,10 +142,16 @@ function processHeadCms(comments: Comment[], headInterval: number, startTime: nu
     comment.date -= headInterval
     shifts++
   }
-  console.info(`[anime-comment-overlay] CM part: head (${shifts} comments shifted)`)
+  console.info(`[anime-comment-overlay] CM part: head (${shifts} comments shifted)`, program)
 }
 
-function processIntervalCms(comments: Comment[], symbol: string, normalInterval: number, sponsorInterval: number) {
+function processIntervalCms(
+  comments: Comment[],
+  symbol: string,
+  normalInterval: number,
+  sponsorInterval: number,
+  program: Program
+) {
   const partComments = comments.filter((c) => c.content === symbol)
   if (!hasMinLength(partComments, partSymbolCommentsThreshold)) {
     return
@@ -168,7 +164,7 @@ function processIntervalCms(comments: Comment[], symbol: string, normalInterval:
       const opStartTime = opComments[0].date
       const opEndTime = opStartTime + opLength
       if (opStartTime < partComments[0].date && partComments[0].date < opEndTime + opAdjustment) {
-        console.info(`[anime-comment-overlay] OP part: ${symbol}`)
+        console.info(`[anime-comment-overlay] OP part: ${symbol}`, program)
         return
       }
     }
@@ -183,7 +179,7 @@ function processIntervalCms(comments: Comment[], symbol: string, normalInterval:
     comment.isDeleted = true
     removes++
   }
-  console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} comments deleted)`)
+  console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} comments deleted)`, program)
 
   // CM 区間後の時刻をシフト
   let shifts = 0
@@ -191,5 +187,5 @@ function processIntervalCms(comments: Comment[], symbol: string, normalInterval:
     comment.date -= effectiveCmLength
     shifts++
   }
-  console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} comments shifted)`)
+  console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} comments shifted)`, program)
 }

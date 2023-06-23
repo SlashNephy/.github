@@ -382,7 +382,7 @@ export const banners: Banner[] = [
   {
     id: 'anime-comment-overlay',
     name: 'Anime Comment Overlay',
-    version: '0.2.0',
+    version: '0.2.1',
     description: {
       en: 'Display overlay of comments on various streaming sites.',
       ja: 'アニメ配信サイト (dアニメストア, ABEMAビデオ) で実況コメをオーバーレイ表示します。',

@@ -32,7 +32,7 @@ async function initializeOverlay(overlay: CommentOverlayModule, params: string[]
       return
     }
 
-    let v: HTMLVideoElement
+    let time: number
     if (typeof video === 'function') {
       if (cachedVideo?.isConnected !== true) {
         cachedVideo = video()
@@ -40,11 +40,14 @@ async function initializeOverlay(overlay: CommentOverlayModule, params: string[]
           return
         }
       }
-      v = cachedVideo
+      time = cachedVideo.currentTime
     } else {
-      v = video
+      time = video.currentTime
     }
-    renderer.drawCanvas(Math.floor(v.currentTime * 100))
+
+    setTimeout(() => {
+      renderer.drawCanvas(Math.floor(time * 100))
+    }, 0)
   }, 1000 / targetFps)
 
   toggleButton?.addEventListener('click', () => {
@@ -64,7 +67,9 @@ async function initializeOverlay(overlay: CommentOverlayModule, params: string[]
   overlay.addEventListener('mediaChanged', onMediaChanged)
 
   for await (const comments of fetchComments(providers, media, programs.slice(0, maxPrograms))) {
-    renderer.addComments(...comments)
+    setTimeout(() => {
+      renderer.addComments(...comments)
+    }, 0)
   }
 
   isInitialized = true
