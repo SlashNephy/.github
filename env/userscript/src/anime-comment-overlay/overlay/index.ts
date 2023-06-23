@@ -1,7 +1,7 @@
 export type CommentOverlayModule = {
   name: string
   url: RegExp
-  initializeContainers(): Promise<Containers>
+  initializeContainers(): Containers
   detectMedia(...params: string[]): Promise<Media>
   addEventListener<K extends keyof CommentOverlayModuleEventMap>(
     event: K,

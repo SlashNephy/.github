@@ -1,4 +1,4 @@
-import { awaitElement, awaitFor } from '../../../lib/awaitFor'
+import { awaitElement } from '../../../lib/awaitFor'
 import { fetchAnnictBroadcastData } from '../../../lib/external/collect-vod-data'
 import { fetchDanimePartInfo } from '../../../lib/external/danime'
 import { AnnictSupportedVodChannelIds } from '../constant'
@@ -8,9 +8,7 @@ import type { CommentOverlayModule, CommentOverlayModuleEventMap, Containers, Me
 export const DanimeOverlay: CommentOverlayModule = {
   name: 'dアニメストア',
   url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)/,
-  async initializeContainers(): Promise<Containers> {
-    const video = await awaitElement<HTMLVideoElement>('video#video')
-
+  initializeContainers(): Containers {
     const canvas = document.createElement('canvas')
     canvas.width = 1920
     canvas.height = 1080
@@ -19,7 +17,16 @@ export const DanimeOverlay: CommentOverlayModule = {
     canvas.style.width = '100%'
     canvas.style.height = '100%'
     canvas.style.zIndex = '10'
-    video.insertAdjacentElement('afterend', canvas)
+
+    awaitElement<HTMLVideoElement>('video#video')
+      .then((video) => {
+        video.insertAdjacentElement('afterend', canvas)
+      })
+      .catch((e) => {
+        console.error(`[anime-comment-overlay] failed to find video element: ${e}`)
+      })
+
+    const video = () => document.querySelector<HTMLVideoElement>('video#video')
 
     const toggleButton = document.createElement('div')
     toggleButton.classList.add('mainButton')
@@ -31,25 +38,21 @@ export const DanimeOverlay: CommentOverlayModule = {
     return { video, canvas, toggleButton }
   },
   async detectMedia(partId: string): Promise<Media> {
-    const [backInfoTxt1, backInfoTxt2, backInfoTxt3] = [$('.backInfoTxt1'), $('.backInfoTxt2'), $('.backInfoTxt3')]
-    await awaitFor(() => backInfoTxt1.length > 0 && backInfoTxt2.length > 0 && backInfoTxt3.length > 0)
-
-    const workId = partId.slice(0, 5)
-    const broadcasts = await fetchAnnictBroadcastData()
     const info = await fetchDanimePartInfo(partId)
+    const broadcasts = await fetchAnnictBroadcastData()
 
     return {
       platform: 'danime',
       copyright: info.partCopyright,
       work: {
-        title: backInfoTxt1.text(),
+        title: info.workTitle,
         annictIds: broadcasts
-          .filter((x) => x.channel_id === AnnictSupportedVodChannelIds.dAnime && x.vod_code === workId)
+          .filter((x) => x.channel_id === AnnictSupportedVodChannelIds.dAnime && x.vod_code === info.workId)
           .map((x) => x.work_id),
       },
       episode: {
-        title: backInfoTxt3.text(),
-        number: backInfoTxt2.text(),
+        title: info.partTitle,
+        number: info.partDispNumber,
       },
     }
   },

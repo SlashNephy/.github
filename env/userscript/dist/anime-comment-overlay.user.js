@@ -179,7 +179,7 @@
     const AbemaVideoOverlay = {
         name: 'ABEMAビデオ',
         url: /^https:\/\/abema\.tv\/video\/episode\/([\w-]+)/,
-        async initializeContainers() {
+        initializeContainers() {
             const video = () => document.querySelector('video[preload="metadata"]');
             const canvas = document.createElement('canvas');
             canvas.width = 1920;
@@ -189,8 +189,13 @@
             canvas.style.width = '100%';
             canvas.style.height = '100%';
             canvas.style.zIndex = '10';
-            const cover = await awaitElement('.com-vod-VODScreen-video-cover');
-            cover.appendChild(canvas);
+            awaitElement('.com-vod-VODScreen-video-cover')
+                .then((cover) => {
+                cover.appendChild(canvas);
+            })
+                .catch((e) => {
+                console.error(`[anime-comment-overlay] failed to find cover element: ${e}`);
+            });
             return { video, canvas };
         },
         async detectMedia(id) {
@@ -266,7 +271,7 @@
     const DanimeOverlay = {
         name: 'dアニメストア',
         url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)/,
-        async initializeContainers() {
+        initializeContainers() {
             const canvas = document.createElement('canvas');
             canvas.width = 1920;
             canvas.height = 1080;
@@ -275,8 +280,14 @@
             canvas.style.width = '100%';
             canvas.style.height = '100%';
             canvas.style.zIndex = '10';
-            const video = await awaitElement('video#video');
-            video.insertAdjacentElement('afterend', canvas);
+            awaitElement('video#video')
+                .then((video) => {
+                video.insertAdjacentElement('afterend', canvas);
+            })
+                .catch((e) => {
+                console.error(`[anime-comment-overlay] failed to find video element: ${e}`);
+            });
+            const video = () => document.querySelector('video#video');
             const toggleButton = document.createElement('div');
             toggleButton.classList.add('mainButton');
             const innerButton = document.createElement('button');
@@ -857,7 +868,7 @@
         console.log('[anime-comment-overlay] media', media);
         const programs = await findPrograms(media);
         console.log('[anime-comment-overlay] programs', programs);
-        const { video, canvas, toggleButton } = await overlay.initializeContainers();
+        const { video, canvas, toggleButton } = overlay.initializeContainers();
         const renderer = new NiconiComments(canvas, undefined, {
             format: 'empty',
         });

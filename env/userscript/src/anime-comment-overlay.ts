@@ -19,7 +19,7 @@ async function initializeOverlay(overlay: CommentOverlayModule, params: string[]
   const programs = await findPrograms(media)
   console.log('[anime-comment-overlay] programs', programs)
 
-  const { video, canvas, toggleButton } = await overlay.initializeContainers()
+  const { video, canvas, toggleButton } = overlay.initializeContainers()
   const renderer = new NiconiComments(canvas, undefined, {
     format: 'empty',
   })
