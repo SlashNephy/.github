@@ -119,7 +119,8 @@ function convertChats(response: NiconicoJikkyoKakoLogResponse): Comment[] {
           vpos: 0,
           content: chat.content,
           date: parseInt(chat.date, 10),
-          dateUsec: parseInt(chat.date_usec, 10),
+          // date_usec がない場合は乱数で置き換える
+          dateUsec: chat.date_usec ? parseInt(chat.date_usec, 10) : Math.floor(Math.random() * 100000),
           userId,
           isPremium: chat.premium === '1',
           mails,

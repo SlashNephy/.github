@@ -149,23 +149,6 @@
     const maxPrograms = 5;
     const targetFps = 100;
 
-    const awaitFor = async (predicate, timeout) => new Promise((resolve, reject) => {
-        let timer;
-        const interval = window.setInterval(() => {
-            if (predicate()) {
-                clearInterval(interval);
-                clearTimeout(timer);
-                resolve();
-            }
-        }, 500);
-        if (timeout !== undefined) {
-            timer = window.setTimeout(() => {
-                clearInterval(interval);
-                clearTimeout(timer);
-                reject(new Error('timeout'));
-            }, timeout);
-        }
-    });
     async function awaitElement(selectors) {
         return new Promise((resolve) => {
             const element = document.querySelector(selectors);
@@ -284,7 +267,6 @@
         name: 'dアニメストア',
         url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)/,
         async initializeContainers() {
-            const video = await awaitElement('video#video');
             const canvas = document.createElement('canvas');
             canvas.width = 1920;
             canvas.height = 1080;
@@ -293,6 +275,7 @@
             canvas.style.width = '100%';
             canvas.style.height = '100%';
             canvas.style.zIndex = '10';
+            const video = await awaitElement('video#video');
             video.insertAdjacentElement('afterend', canvas);
             const toggleButton = document.createElement('div');
             toggleButton.classList.add('mainButton');
@@ -303,23 +286,20 @@
             return { video, canvas, toggleButton };
         },
         async detectMedia(partId) {
-            const [backInfoTxt1, backInfoTxt2, backInfoTxt3] = [$('.backInfoTxt1'), $('.backInfoTxt2'), $('.backInfoTxt3')];
-            await awaitFor(() => backInfoTxt1.length > 0 && backInfoTxt2.length > 0 && backInfoTxt3.length > 0);
-            const workId = partId.slice(0, 5);
-            const broadcasts = await fetchAnnictBroadcastData();
             const info = await fetchDanimePartInfo(partId);
+            const broadcasts = await fetchAnnictBroadcastData();
             return {
                 platform: 'danime',
                 copyright: info.partCopyright,
                 work: {
-                    title: backInfoTxt1.text(),
+                    title: info.workTitle,
                     annictIds: broadcasts
-                        .filter((x) => x.channel_id === AnnictSupportedVodChannelIds.dAnime && x.vod_code === workId)
+                        .filter((x) => x.channel_id === AnnictSupportedVodChannelIds.dAnime && x.vod_code === info.workId)
                         .map((x) => x.work_id),
                 },
                 episode: {
-                    title: backInfoTxt3.text(),
-                    number: backInfoTxt2.text(),
+                    title: info.partTitle,
+                    number: info.partDispNumber,
                 },
             };
         },
@@ -809,7 +789,7 @@
                 vpos: 0,
                 content: chat.content,
                 date: parseInt(chat.date, 10),
-                dateUsec: parseInt(chat.date_usec, 10),
+                dateUsec: chat.date_usec ? parseInt(chat.date_usec, 10) : Math.floor(Math.random() * 100000),
                 userId,
                 isPremium: chat.premium === '1',
                 mails,
