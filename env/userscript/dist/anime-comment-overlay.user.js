@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Anime Comment Overlay
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.0
+// @version         0.2.1
 // @author          SlashNephy
 // @description     Display overlay of comments on various streaming sites.
 // @description:ja  アニメ配信サイト (dアニメストア, ABEMAビデオ) で実況コメをオーバーレイ表示します。
@@ -65,6 +65,21 @@
             normal: 90,
         },
         jk9: {
+            head: 0,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk10: {
+            head: 0,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk11: {
+            head: 0,
+            sponsor: 10,
+            normal: 60,
+        },
+        jk12: {
             head: 0,
             sponsor: 10,
             normal: 60,
@@ -702,6 +717,9 @@
             .map((provider) => programs.map(async (program) => provider
             .provide(media, program)
             .then((comments) => {
+            if (comments.length === 0) {
+                return [];
+            }
             console.info(`[anime-comment-overlay] fetched ${comments.length} comments from ${provider.name}`);
             return comments.map((c) => ({
                 id: c.id * c.providerId,
@@ -746,26 +764,22 @@
             const response = await fetchNiconicoJikkyoKakoLog(request);
             const chats = convertChats(response);
             const attr = ChannelCmAttributes[request.channel];
-            switch (attr) {
-                case undefined:
-                    console.info(`[anime-comment-overlay] CM detection for channel ${request.channel} unsupported. Please contribute to this project!`, media, program);
-                    return [];
-                case null:
-                    console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`, media, program);
-                    break;
-                default:
-                    console.log(`[anime-comment-overlay] CM attribute for channel ${request.channel}`, attr, media, program);
-                    processHeadCms(chats, attr.head, request.startTime);
-                    for (const symbol of partSymbols) {
-                        processIntervalCms(chats, symbol, attr.normal, attr.sponsor);
-                    }
+            if (attr === null) {
+                console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`, program);
+            }
+            else {
+                console.log(`[anime-comment-overlay] CM attribute for channel ${request.channel}`, attr, program);
+                processHeadCms(chats, attr.head, program);
+                for (const symbol of partSymbols) {
+                    processIntervalCms(chats, symbol, attr.normal, attr.sponsor, program);
+                }
             }
             let copyrightAdjustment = 0;
             if (media.platform === 'danime') {
                 const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(media.copyright));
                 if (attr2 !== undefined) {
                     copyrightAdjustment = attr2.adjustment;
-                    console.info(`[anime-comment-overlay] copyright adjustment for ${media.copyright}: ${copyrightAdjustment}`, media, program);
+                    console.info(`[anime-comment-overlay] copyright adjustment for ${media.copyright}: ${copyrightAdjustment}`, program);
                 }
             }
             return (chats
@@ -809,26 +823,26 @@
             };
         }));
     }
-    function processHeadCms(comments, headInterval, startTime) {
+    function processHeadCms(comments, headInterval, program) {
         if (headInterval === 0) {
             return;
         }
         let removes = 0;
-        const cmStartTime = startTime;
-        const cmEndTime = startTime + headInterval;
+        const cmStartTime = program.startedAt;
+        const cmEndTime = program.startedAt + headInterval;
         for (const comment of comments.filter((c) => cmStartTime < c.date && c.date <= cmEndTime)) {
             comment.isDeleted = true;
             removes++;
         }
-        console.info(`[anime-comment-overlay] CM part: head (${removes} comments deleted)`);
+        console.info(`[anime-comment-overlay] CM part: head (${removes} comments deleted)`, program);
         let shifts = 0;
         for (const comment of comments.filter((c) => cmEndTime < c.date)) {
             comment.date -= headInterval;
             shifts++;
         }
-        console.info(`[anime-comment-overlay] CM part: head (${shifts} comments shifted)`);
+        console.info(`[anime-comment-overlay] CM part: head (${shifts} comments shifted)`, program);
     }
-    function processIntervalCms(comments, symbol, normalInterval, sponsorInterval) {
+    function processIntervalCms(comments, symbol, normalInterval, sponsorInterval, program) {
         const partComments = comments.filter((c) => c.content === symbol);
         if (!hasMinLength(partComments, partSymbolCommentsThreshold)) {
             return;
@@ -839,7 +853,7 @@
                 const opStartTime = opComments[0].date;
                 const opEndTime = opStartTime + opLength;
                 if (opStartTime < partComments[0].date && partComments[0].date < opEndTime + opAdjustment) {
-                    console.info(`[anime-comment-overlay] OP part: ${symbol}`);
+                    console.info(`[anime-comment-overlay] OP part: ${symbol}`, program);
                     return;
                 }
             }
@@ -852,13 +866,13 @@
             comment.isDeleted = true;
             removes++;
         }
-        console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} comments deleted)`);
+        console.info(`[anime-comment-overlay] CM part: ${symbol} (${removes} comments deleted)`, program);
         let shifts = 0;
         for (const comment of comments.filter((c) => cmEndTime < c.date)) {
             comment.date -= effectiveCmLength;
             shifts++;
         }
-        console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} comments shifted)`);
+        console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} comments shifted)`, program);
     }
 
     const overlays = [DanimeOverlay, AbemaVideoOverlay];
@@ -879,7 +893,7 @@
             if (!isInitialized || isHide) {
                 return;
             }
-            let v;
+            let time;
             if (typeof video === 'function') {
                 if (cachedVideo?.isConnected !== true) {
                     cachedVideo = video();
@@ -887,12 +901,14 @@
                         return;
                     }
                 }
-                v = cachedVideo;
+                time = cachedVideo.currentTime;
             }
             else {
-                v = video;
+                time = video.currentTime;
             }
-            renderer.drawCanvas(Math.floor(v.currentTime * 100));
+            setTimeout(() => {
+                renderer.drawCanvas(Math.floor(time * 100));
+            }, 0);
         }, 1000 / targetFps);
         toggleButton?.addEventListener('click', () => {
             isHide = !isHide;
@@ -909,7 +925,9 @@
         }
         overlay.addEventListener('mediaChanged', onMediaChanged);
         for await (const comments of fetchComments(providers, media, programs.slice(0, maxPrograms))) {
-            renderer.addComments(...comments);
+            setTimeout(() => {
+                renderer.addComments(...comments);
+            }, 0);
         }
         isInitialized = true;
     }

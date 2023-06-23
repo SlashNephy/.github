@@ -126,6 +126,10 @@ export async function* fetchComments(
         provider
           .provide(media, program)
           .then((comments) => {
+            if (comments.length === 0) {
+              return []
+            }
+
             console.info(`[anime-comment-overlay] fetched ${comments.length} comments from ${provider.name}`)
 
             return comments.map((c) => ({
