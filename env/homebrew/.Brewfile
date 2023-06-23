@@ -20,7 +20,7 @@ tap "reviewdog/tap"
 tap "romkatv/powerlevel10k"
 tap "teamookla/speedtest"
 tap "yudai/gotty"
-# Run your GitHub Actions locally 🚀
+# Run your GitHub Actions locally
 brew "act"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
@@ -226,7 +226,7 @@ brew "php"
 brew "pipenv"
 # Perl binary manager
 brew "plenv"
-# 📦🚀 Fast, disk space efficient package manager
+# Fast, disk space efficient package manager
 brew "pnpm"
 # Python package management tool
 brew "poetry"
