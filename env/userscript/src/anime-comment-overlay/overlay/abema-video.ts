@@ -9,7 +9,7 @@ let observer: MutationObserver | null = null
 export const AbemaVideoOverlay: CommentOverlayModule = {
   name: 'ABEMAビデオ',
   url: /^https:\/\/abema\.tv\/video\/episode\/([\w-]+)/,
-  async initializeContainers(): Promise<Containers> {
+  initializeContainers(): Containers {
     const video = () => document.querySelector<HTMLVideoElement>('video[preload="metadata"]')
 
     const canvas = document.createElement('canvas')
@@ -20,8 +20,13 @@ export const AbemaVideoOverlay: CommentOverlayModule = {
     canvas.style.width = '100%'
     canvas.style.height = '100%'
     canvas.style.zIndex = '10'
-    const cover = await awaitElement('.com-vod-VODScreen-video-cover')
-    cover.appendChild(canvas)
+    awaitElement('.com-vod-VODScreen-video-cover')
+      .then((cover) => {
+        cover.appendChild(canvas)
+      })
+      .catch((e) => {
+        console.error(`[anime-comment-overlay] failed to find cover element: ${e}`)
+      })
 
     return { video, canvas }
   },
