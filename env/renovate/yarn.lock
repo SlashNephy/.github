@@ -2372,7 +2372,7 @@ __metadata:
     eslint-plugin-jest: 27.2.1
     eslint-plugin-unused-imports: 2.0.0
     prettier: 2.8.8
-    renovate: 35.143.0
+    renovate: 35.143.3
     ts-node: 10.9.1
     typescript: 5.0.4
   languageName: unknown
@@ -3315,13 +3315,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-devops-node-api@npm:12.0.0":
-  version: 12.0.0
-  resolution: "azure-devops-node-api@npm:12.0.0"
+"azure-devops-node-api@npm:12.1.0":
+  version: 12.1.0
+  resolution: "azure-devops-node-api@npm:12.1.0"
   dependencies:
     tunnel: 0.0.6
     typed-rest-client: ^1.8.4
-  checksum: a6e142c61f71ace9cd3fd814607d47d68b443065e50735b596c4d5057de16345f1eb40f4e2b5bcae2b60497483cf54fc7d9c4136a3568c01345cc34165e9b8ef
+  checksum: aa3c3f3eff89485a44ea31843749c5abf5ddfb0d2f059a3f5623d75d5eddbab5b839a5458c158e7941b9c8a2adfde2ecfea128ed076f730c309c869e8a318a78
   languageName: node
   linkType: hard
 
@@ -8240,9 +8240,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.143.0":
-  version: 35.143.0
-  resolution: "renovate@npm:35.143.0"
+"renovate@npm:35.143.3":
+  version: 35.143.3
+  resolution: "renovate@npm:35.143.3"
   dependencies:
     "@aws-sdk/client-codecommit": 3.348.0
     "@aws-sdk/client-ec2": 3.348.0
@@ -8276,7 +8276,7 @@ __metadata:
     aggregate-error: 3.1.0
     auth-header: 1.0.0
     aws4: 1.12.0
-    azure-devops-node-api: 12.0.0
+    azure-devops-node-api: 12.1.0
     bunyan: 1.8.15
     cacache: 17.1.3
     cacheable-lookup: 5.0.4
@@ -8356,7 +8356,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: e5113d9eafb7fb8e9bcf620a59cbe803d934be5f169840f7fe4a482e49f682e3ceaf6c8f873653063f43594fd707993a931e9f626211701547a4325006d5acab
+  checksum: 44130c53f2ad9e975d144cb2251b2740da668b7f01a2f23dcc8e55c8a0b52ee9be5d83d4cd5721528994b474c6e51e370beb92b2234bae6fda39befb9802b901
   languageName: node
   linkType: hard
 
