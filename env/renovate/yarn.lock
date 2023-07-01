@@ -2372,7 +2372,7 @@ __metadata:
     eslint-plugin-jest: 27.2.1
     eslint-plugin-unused-imports: 2.0.0
     prettier: 2.8.8
-    renovate: 35.143.3
+    renovate: 35.151.1
     ts-node: 10.9.1
     typescript: 5.0.4
   languageName: unknown
@@ -3767,6 +3767,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "commander@npm:11.0.0"
+  checksum: 6621954e1e1d078b4991c1f5bbd9439ad37aa7768d6ab4842de1dbd4d222c8a27e1b8e62108b3a92988614af45031d5bb2a2aaa92951f4d0c934d1a1ac564bb4
+  languageName: node
+  linkType: hard
+
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -4194,7 +4201,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"editorconfig@npm:1.0.2, editorconfig@npm:^1.0.2":
+"editorconfig@npm:1.0.3":
+  version: 1.0.3
+  resolution: "editorconfig@npm:1.0.3"
+  dependencies:
+    "@one-ini/wasm": 0.1.1
+    commander: ^11.0.0
+    minimatch: 9.0.1
+    semver: ^7.5.3
+  bin:
+    editorconfig: bin/editorconfig
+  checksum: 40ff29a92c628a1f00b44af538aac7e845fce7986606992d46138387a5299506e6cfc2ba0aed7b58b37865b00991217b19e8bf664174b890b2b8c13731fcae45
+  languageName: node
+  linkType: hard
+
+"editorconfig@npm:^1.0.2":
   version: 1.0.2
   resolution: "editorconfig@npm:1.0.2"
   dependencies:
@@ -5516,18 +5537,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:10.2.7":
-  version: 10.2.7
-  resolution: "glob@npm:10.2.7"
+"glob@npm:10.3.1":
+  version: 10.3.1
+  resolution: "glob@npm:10.3.1"
   dependencies:
     foreground-child: ^3.1.0
     jackspeak: ^2.0.3
     minimatch: ^9.0.1
     minipass: ^5.0.0 || ^6.0.2
-    path-scurry: ^1.7.0
+    path-scurry: ^1.10.0
   bin:
     glob: dist/cjs/src/bin.js
-  checksum: 555205a74607d6f8d9874ba888924b305b5ea1abfaa2e9ccb11ac713d040aac7edbf7d8702a2f4a1cd81b2d7666412170ce7ef061d33cddde189dae8c1a1a054
+  checksum: 19c8c2805658b1002fecf0722cd609a33153d756a0d5260676bd0e9c5e6ef889ec9cce6d3dac0411aa90bce8de3d14f25b6f5589a3292582cccbfeddd0e98cc4
   languageName: node
   linkType: hard
 
@@ -6752,6 +6773,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lru-cache@npm:^9.1.1 || ^10.0.0":
+  version: 10.0.0
+  resolution: "lru-cache@npm:10.0.0"
+  checksum: 18f101675fe283bc09cda0ef1e3cc83781aeb8373b439f086f758d1d91b28730950db785999cd060d3c825a8571c03073e8c14512b6655af2188d623031baf50
+  languageName: node
+  linkType: hard
+
 "luxon@npm:3.3.0, luxon@npm:^3.3.0":
   version: 3.3.0
   resolution: "luxon@npm:3.3.0"
@@ -7057,6 +7085,15 @@ __metadata:
   dependencies:
     brace-expansion: ^2.0.1
   checksum: 97f5f5284bb57dc65b9415dec7f17a0f6531a33572193991c60ff18450dcfad5c2dad24ffeaf60b5261dccd63aae58cc3306e2209d57e7f88c51295a532d8ec3
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:9.0.2":
+  version: 9.0.2
+  resolution: "minimatch@npm:9.0.2"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: 2eb12e2047a062fdb973fb51b9803f2455e3a00977858c038d66646d303a5a15bbcbc6ed5a2fc403bc869b1309f829ed3acd881d3246faf044ea7a494974b924
   languageName: node
   linkType: hard
 
@@ -7862,6 +7899,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path-scurry@npm:^1.10.0":
+  version: 1.10.0
+  resolution: "path-scurry@npm:1.10.0"
+  dependencies:
+    lru-cache: ^9.1.1 || ^10.0.0
+    minipass: ^5.0.0 || ^6.0.2
+  checksum: 3b66a4a6ab66e45755b577c966ecf0da92d3e068b3c992d8f69aa2cc908ef4eda9358253e9b4f86cad43d3ad810ec445be164105975f5cb3fdab68459c59dc6e
+  languageName: node
+  linkType: hard
+
 "path-scurry@npm:^1.7.0":
   version: 1.9.2
   resolution: "path-scurry@npm:1.9.2"
@@ -8240,9 +8287,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:35.143.3":
-  version: 35.143.3
-  resolution: "renovate@npm:35.143.3"
+"renovate@npm:35.151.1":
+  version: 35.151.1
+  resolution: "renovate@npm:35.151.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.348.0
     "@aws-sdk/client-ec2": 3.348.0
@@ -8289,7 +8336,7 @@ __metadata:
     delay: 5.0.0
     dequal: 2.0.3
     detect-indent: 6.1.0
-    editorconfig: 1.0.2
+    editorconfig: 1.0.3
     email-addresses: 5.0.0
     emoji-regex: 10.2.1
     emojibase: 6.1.0
@@ -8300,7 +8347,7 @@ __metadata:
     fs-extra: 11.1.1
     git-url-parse: 13.1.0
     github-url-from-git: 1.5.0
-    glob: 10.2.7
+    glob: 10.3.1
     global-agent: 3.0.0
     good-enough-parser: 1.1.23
     got: 11.8.6
@@ -8317,7 +8364,7 @@ __metadata:
     luxon: 3.3.0
     markdown-it: 13.0.1
     markdown-table: 2.0.0
-    minimatch: 9.0.1
+    minimatch: 9.0.2
     moo: 0.5.2
     ms: 2.1.3
     nanoid: 3.3.6
@@ -8356,7 +8403,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 44130c53f2ad9e975d144cb2251b2740da668b7f01a2f23dcc8e55c8a0b52ee9be5d83d4cd5721528994b474c6e51e370beb92b2234bae6fda39befb9802b901
+  checksum: 706bac78f49892c0c8d6138f5448b2bc9d9ba8e6e47a914881e8580f9408ffab63c2e52496f6f73e1b83c625b972a15eb6ed279b2cd54cbc1701cd29d7164358
   languageName: node
   linkType: hard
 
@@ -8636,7 +8683,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.5.3":
+"semver@npm:7.5.3, semver@npm:^7.5.3":
   version: 7.5.3
   resolution: "semver@npm:7.5.3"
   dependencies:
