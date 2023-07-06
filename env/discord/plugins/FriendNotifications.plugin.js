@@ -2,7 +2,7 @@
  * @name FriendNotifications
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.9.2
+ * @version 1.9.4
  * @description Shows a Notification when a Friend or a User, you choose to observe, changes their Status
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -560,7 +560,7 @@ module.exports = (_ => {
 								children: [
 									BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.Flex.Child, {
 										children: BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.TextInput, {
-											placeholder: "user (id or name#discriminator)",
+											placeholder: "user (id, accountname or name#discriminator)",
 											value: "",
 											onChange: value => strangerId = value
 										})
@@ -568,18 +568,21 @@ module.exports = (_ => {
 									BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.Button, {
 										onClick: _ => {
 											let userId = strangerId.trim();
-											if (userId == BDFDB.UserUtils.me.id) BDFDB.NotificationUtils.toast("Are you seriously trying to stalk yourself?", {type: "danger"});
+											if (userId == BDFDB.UserUtils.me.id) BDFDB.NotificationUtils.toast("Are you seriously trying to observe yourself?", {type: "danger"});
 											else if (friendIds.includes(userId)) BDFDB.NotificationUtils.toast("User is already a Friend of yours, please use the 'Friend-List' Area to configure them", {type: "danger"});
 											else if (observed.strangers[userId]) BDFDB.NotificationUtils.toast("User is already being observed as a 'Stranger'", {type: "danger"});
 											else {
-												let user = /.+#[0-9]{4}/.test(userId) ? BDFDB.LibraryStores.UserStore.findByTag(userId.split("#").slice(0, -1).join("#"), userId.split("#").pop()) : BDFDB.LibraryStores.UserStore.getUser(userId);
+												let user = /.+#[0-9]{4}/.test(userId) ? BDFDB.LibraryStores.UserStore.findByTag(userId.split("#").slice(0, -1).join("#"), userId.split("#").pop()) : (BDFDB.LibraryStores.UserStore.findByTag(userId) || BDFDB.LibraryStores.UserStore.getUser(userId));
 												if (user) {
-													observed.strangers[user.id || userId] = Object.assign({}, defaultSettings);
-													BDFDB.DataUtils.save(observed, this, "observed");
-													BDFDB.PluginUtils.refreshSettingsPanel(this, settingsPanel, collapseStates);
-													this.SettingsUpdated = true;
+													if (user.id == BDFDB.UserUtils.me.id) BDFDB.NotificationUtils.toast("Are you seriously trying to observe yourself?", {type: "danger"});
+													else {
+														observed.strangers[user.id || userId] = Object.assign({}, defaultSettings);
+														BDFDB.DataUtils.save(observed, this, "observed");
+														BDFDB.PluginUtils.refreshSettingsPanel(this, settingsPanel, collapseStates);
+														this.SettingsUpdated = true;
+													}
 												}
-												else BDFDB.NotificationUtils.toast("Please enter a valid ID of a User that has been loaded in your Client", {type: "danger"});
+												else BDFDB.NotificationUtils.toast("Please enter a valid ID or Accountname of a User that has been loaded in your Client", {type: "danger"});
 											}
 										},
 										children: BDFDB.LanguageUtils.LanguageStrings.ADD
@@ -838,8 +841,8 @@ module.exports = (_ => {
 							let string = this.settings.notificationStrings[screensharingNotice ? "screensharing" : customChanged ? "custom" : loginNotice ? "login" : status.name] || "'$user' changed status to '$status'";
 							let hasUserPlaceholder = string.indexOf("$user") > -1;
 							let toastString = BDFDB.StringUtils.htmlEscape(string)
-								.replace(/'{0,1}\$user'{0,1}/g, `<strong>${BDFDB.StringUtils.htmlEscape(name)}</strong>${this.settings.general.showDiscriminator && user.discriminator ? ("#" + user.discriminator) : ""}`)
-								.replace(/'{0,1}\$nick'{0,1}/g, nickname ? `<strong>${BDFDB.StringUtils.htmlEscape(nickname)}</strong>${!hasUserPlaceholder && this.settings.general.showDiscriminator && user.discriminator ? ("#" + user.discriminator) : ""}` : !hasUserPlaceholder ? `<strong>${BDFDB.StringUtils.htmlEscape(name)}</strong>${this.settings.general.showDiscriminator && user.discriminator ? ("#" + user.discriminator) : ""}` : "")
+								.replace(/'{0,1}\$user'{0,1}/g, `<strong>${BDFDB.StringUtils.htmlEscape(name)}</strong>${this.settings.general.showDiscriminator && !user.isPomelo() ? ("#" + user.discriminator) : ""}`)
+								.replace(/'{0,1}\$nick'{0,1}/g, nickname ? `<strong>${BDFDB.StringUtils.htmlEscape(nickname)}</strong>${!hasUserPlaceholder && this.settings.general.showDiscriminator && !user.isPomelo() ? ("#" + user.discriminator) : ""}` : !hasUserPlaceholder ? `<strong>${BDFDB.StringUtils.htmlEscape(name)}</strong>${this.settings.general.showDiscriminator && user.discriminator && user.discriminator != "0" ? ("#" + user.discriminator) : ""}` : "")
 								.replace(/'{0,1}\$statusOld'{0,1}/g, `<strong>${oldStatusName}</strong>`)
 								.replace(/'{0,1}\$status'{0,1}/g, `<strong>${statusName}</strong>`);
 							if (status.activity) {
