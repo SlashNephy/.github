@@ -26,6 +26,8 @@ brew "act"
 brew "actionlint"
 # Access Log Profiler
 brew "alp"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Download with resuming and segmented downloading
@@ -36,8 +38,6 @@ brew "autoconf"
 brew "automake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Platform built on V8 to build network applications
@@ -174,6 +174,8 @@ brew "kubeconform"
 brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# Postgres C API library
+brew "libpq"
 # Fully functional local AWS cloud stack
 brew "localstack"
 # Utility to list open files
@@ -184,8 +186,6 @@ brew "make"
 brew "mas"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
 # Simple tool to make locally trusted development certificates
@@ -240,6 +240,8 @@ brew "protoc-gen-go"
 brew "protoc-gen-go-grpc"
 # Protoc plugin that generates code for gRPC-Web clients
 brew "protoc-gen-grpc-web"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Ruby version manager
 brew "rbenv"
 # Rsync for cloud storage
@@ -372,8 +374,6 @@ cask "blender"
 cask "blockblock"
 # Missing menulet for Homebrew
 cask "brewlet"
-# Remotely access another computer through the Google Chrome browser
-cask "chrome-remote-desktop-host"
 # Clipboard extension app
 cask "clipy"
 # Free app that makes your Internet safer
