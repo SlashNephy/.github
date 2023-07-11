@@ -1955,7 +1955,7 @@ __metadata:
     eslint-plugin-jest: 27.2.1
     eslint-plugin-unused-imports: 2.0.0
     prettier: 2.8.8
-    renovate: 36.5.3
+    renovate: 36.7.0
     ts-node: 10.9.1
     typescript: 5.0.4
   languageName: unknown
@@ -6626,6 +6626,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonata@npm:2.0.3":
+  version: 2.0.3
+  resolution: "jsonata@npm:2.0.3"
+  checksum: 877e97a56b5b92e5add968328d1b704936c1b61a0cb28f4fc1a45b45286f71dd9346f1277177fbb3f95d22f75a7ffb625bb92344ac6755fe492cd2e5c04ad5a6
+  languageName: node
+  linkType: hard
+
 "jsonc-parser@npm:^3.0.0":
   version: 3.2.0
   resolution: "jsonc-parser@npm:3.2.0"
@@ -8347,9 +8354,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:36.5.3":
-  version: 36.5.3
-  resolution: "renovate@npm:36.5.3"
+"renovate@npm:36.7.0":
+  version: 36.7.0
+  resolution: "renovate@npm:36.7.0"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -8419,6 +8426,7 @@ __metadata:
     json-dup-key-validator: 1.0.3
     json-stringify-pretty-compact: 3.0.0
     json5: 2.2.3
+    jsonata: 2.0.3
     klona: 2.0.6
     luxon: 3.3.0
     markdown-it: 13.0.1
@@ -8462,7 +8470,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: f4e23b985d4567139294fb1804f836080cda2e22bbf83adb279bd99db6c788908ba499066402f80667a38cc923a6c1679739a2af8b640c6387d4742289cf191f
+  checksum: b0a5bad9202d7c8d9e354ab09c1f66c7f73f77ea7b86d2b844b05ff34bf79a752c6c8cf2de19c18a6ececf6765b585c3a311a8ee5e0d17fedbd98f04b6a48725
   languageName: node
   linkType: hard
 
