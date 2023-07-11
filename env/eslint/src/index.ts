@@ -14,7 +14,10 @@ const config: Linter.Config = {
     // TypeScript
     {
       files: '**/*.{ts,mts,cts,tsx}',
-      extends: resolve(__dirname, 'typescript.js'),
+      extends: [
+        resolve(__dirname, 'typescript.js'),
+        'plugin:storybook/recommended',
+      ],
     },
     // jest / vitest
     {

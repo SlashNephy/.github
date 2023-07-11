@@ -11,7 +11,7 @@ const react: Linter.Config = {
     'plugin:css-import-order/recommended',
     'plugin:jsx-a11y/recommended',
   ],
-  plugins: ['css-import-order'],
+  plugins: ['css-import-order', 'react-refresh'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -81,6 +81,7 @@ const react: Linter.Config = {
     'react/jsx-no-useless-fragment': 'off',
     // defaultProps を使わない
     'react/require-default-props': 'off',
+    'react-refresh/only-export-components': 'warn',
   },
   overrides: [
     {
