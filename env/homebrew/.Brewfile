@@ -378,6 +378,8 @@ cask "brewlet"
 cask "clipy"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
+# OpenJDK distribution from Amazon
+cask "corretto"
 # Disk space visualizer
 cask "daisydisk"
 # Presentations from Markdown
@@ -483,6 +485,8 @@ cask "oversight"
 cask "parallels"
 # Remote desktop
 cask "parsec"
+# Administration and development platform for PostgreSQL
+cask "pgadmin4"
 # Collaboration platform for API development
 cask "postman"
 # Command-line shell and scripting language
@@ -505,6 +509,8 @@ cask "sequel-ace"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# DBMS-independent SQL query tool
+cask "sqlworkbenchj"
 # System monitor for the menu bar
 cask "stats"
 # Video game digital distribution service
