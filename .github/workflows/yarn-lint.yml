@@ -6,7 +6,7 @@ on:
       node-version:
         required: false
         type: string
-        default: '18'
+        default: '20'
       node-version-file:
         required: false
         type: string
@@ -46,7 +46,7 @@ on:
       eslint-flags:
         required: false
         type: string
-        default: ''
+        default: '--quiet' # https://github.com/reviewdog/action-eslint/issues/62
       prettier-flags:
         required: false
         type: string
