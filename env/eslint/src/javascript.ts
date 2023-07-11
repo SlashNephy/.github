@@ -91,7 +91,6 @@ const javascript: Linter.Config = {
     'node/no-extraneous-import': 'off',
     'node/no-unpublished-import': 'off',
     'import/no-import-module-exports': 'off',
-    'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     // foo["bar"] 👉 foo.bar
     'dot-notation': 'error',
@@ -144,6 +143,14 @@ const javascript: Linter.Config = {
     'no-plusplus': 'off',
     // return の省略などを許可
     'consistent-return': 'off',
+    // import に拡張子を強制
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        ignorePackages: true,
+      },
+    ],
   },
 }
 
