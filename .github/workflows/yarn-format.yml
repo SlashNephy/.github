@@ -6,7 +6,7 @@ on:
       node-version:
         required: false
         type: string
-        default: '18'
+        default: '20'
       node-version-file:
         required: false
         type: string
