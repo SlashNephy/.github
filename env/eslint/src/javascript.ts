@@ -143,14 +143,6 @@ const javascript: Linter.Config = {
     'no-plusplus': 'off',
     // return の省略などを許可
     'consistent-return': 'off',
-    // import に拡張子を強制
-    'import/extensions': [
-      'error',
-      'always',
-      {
-        ignorePackages: true,
-      },
-    ],
   },
 }
 

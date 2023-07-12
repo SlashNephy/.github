@@ -172,6 +172,14 @@ const typescript: Linter.Config = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     // Deprecated されたコードの使用を禁止
     'deprecation/deprecation': 'error',
+    // import に拡張子を推奨
+    'import/extensions': [
+      'warn',
+      'always',
+      {
+        ignorePackages: true,
+      },
+    ],
   },
 }
 
