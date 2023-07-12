@@ -46,7 +46,8 @@ on:
       eslint-flags:
         required: false
         type: string
-        default: '--quiet' # https://github.com/reviewdog/action-eslint/issues/62
+        # https://github.com/reviewdog/action-eslint/issues/62
+        default: '--quiet'
       prettier-flags:
         required: false
         type: string
