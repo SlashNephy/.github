@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.5.2",
-    "@slashnephy/prettier-config": "0.1.23",
+    "@slashnephy/prettier-config": "0.1.24",
     "@types/jquery": "3.5.16",
     "@types/node": "18.16.7",
     "@typescript-eslint/eslint-plugin": "5.59.5",
