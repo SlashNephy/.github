@@ -22,7 +22,7 @@
     "watch:postcss": "yarn build:postcss -w"
   },
   "devDependencies": {
-    "@slashnephy/prettier-config": "0.1.23",
+    "@slashnephy/prettier-config": "0.1.24",
     "@slashnephy/stylelint-config": "0.1.1",
     "autoprefixer": "10.4.14",
     "concurrently": "8.0.1",
