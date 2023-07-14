@@ -116,8 +116,6 @@ const typescript: Linter.Config = {
     ],
     // void を式の値として禁止
     '@typescript-eslint/no-confusing-void-expression': 'error',
-    // DEPRECATED: 代わりに tsconfig.json で "useUnknownInCatchVariables": true を使用
-    '@typescript-eslint/no-implicit-any-catch': 'error',
     // 重複した型定義を禁止
     // boolean | false 👉 boolean
     '@typescript-eslint/no-redundant-type-constituents': 'warn',
