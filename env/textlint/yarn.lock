@@ -280,7 +280,7 @@ __metadata:
     textlint-filter-rule-allowlist: 4.0.0
     textlint-rule-no-todo: 2.0.1
     textlint-rule-preset-ja-spacing: 2.3.0
-    textlint-rule-preset-ja-technical-writing: 7.0.0
+    textlint-rule-preset-ja-technical-writing: 8.0.0
     textlint-rule-preset-jtf-style: 2.3.13
     typescript: 5.0.4
   peerDependencies:
@@ -306,7 +306,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@textlint-rule/textlint-rule-no-unmatched-pair@npm:^1.0.8":
+"@textlint-rule/textlint-rule-no-unmatched-pair@npm:^1.0.9":
   version: 1.0.9
   resolution: "@textlint-rule/textlint-rule-no-unmatched-pair@npm:1.0.9"
   dependencies:
@@ -330,7 +330,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@textlint/ast-node-types@npm:^13.3.3":
+"@textlint/ast-node-types@npm:^13.2.0, @textlint/ast-node-types@npm:^13.3.3":
   version: 13.3.3
   resolution: "@textlint/ast-node-types@npm:13.3.3"
   checksum: 52ac2f04c0c30e19f2910e8c0a4920b3d2159107478cbca49c962419fcb2cdd3d03b504f33f364c884b5e16466e97376f989873be16865e327aa289b5b394cfc
@@ -344,6 +344,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@textlint/ast-tester@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/ast-tester@npm:13.3.3"
+  dependencies:
+    "@textlint/ast-node-types": ^13.3.3
+    debug: ^4.3.4
+  checksum: 0ff4bc86d6b0221607418ed37d56147a9a99844707e47c066b914789ceba19daf09989f1c83c37734e813e77e6bcfe44495873360dfa7cb16314e1e6c7c015a3
+  languageName: node
+  linkType: hard
+
+"@textlint/ast-traverse@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/ast-traverse@npm:13.3.3"
+  dependencies:
+    "@textlint/ast-node-types": ^13.3.3
+  checksum: f4c4b7dc5bbd3ce8b19ba753637de8faad0ed828637b71c9d207373b3feb3e5db0e787d121e0b71e53893e362c991b9d7c7ab5386c5ff382bb816ba157219bc1
+  languageName: node
+  linkType: hard
+
+"@textlint/feature-flag@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/feature-flag@npm:13.3.3"
+  checksum: 9e2de21907641b7c22dd9bcc20f36a16d707679c07370b7573ca03dcfb9093a1cb7bf3a961a2b312fac7943580857c4f59a72fac94ed4c15352cfe4df54f7f54
+  languageName: node
+  linkType: hard
+
 "@textlint/get-config-base-dir@npm:^2.0.0":
   version: 2.0.0
   resolution: "@textlint/get-config-base-dir@npm:2.0.0"
@@ -351,10 +377,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@textlint/module-interop@npm:^12.0.0":
-  version: 12.6.1
-  resolution: "@textlint/module-interop@npm:12.6.1"
-  checksum: e42f9a12cb048cba8ec365fda619c58b841a75ab9d12d6a90996a4adc4a13e3a6417b16d0f8264d8b64681fcf697d45a190201b15978f85310b993b2151f65c6
+"@textlint/kernel@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/kernel@npm:13.3.3"
+  dependencies:
+    "@textlint/ast-node-types": ^13.3.3
+    "@textlint/ast-tester": ^13.3.3
+    "@textlint/ast-traverse": ^13.3.3
+    "@textlint/feature-flag": ^13.3.3
+    "@textlint/source-code-fixer": ^13.3.3
+    "@textlint/types": ^13.3.3
+    "@textlint/utils": ^13.3.3
+    debug: ^4.3.4
+    fast-equals: ^4.0.3
+    structured-source: ^4.0.0
+  checksum: bbd47902a7b6a7dd42eb4d1e084aa127e1720ae2d293e9b2b4340b7115a0ebc10fdcabb16d158b71e8923ef468517e6385d7f4dec36d24754f6c0f6627aacc42
+  languageName: node
+  linkType: hard
+
+"@textlint/markdown-to-ast@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/markdown-to-ast@npm:13.3.3"
+  dependencies:
+    "@textlint/ast-node-types": ^13.3.3
+    debug: ^4.3.4
+    mdast-util-gfm-autolink-literal: ^0.1.3
+    remark-footnotes: ^3.0.0
+    remark-frontmatter: ^3.0.0
+    remark-gfm: ^1.0.0
+    remark-parse: ^9.0.0
+    traverse: ^0.6.7
+    unified: ^9.2.2
+  checksum: ead6b3f1528006f5c56d1459fcd383382de004f6eda742387a793a0f1d561883fd72e1c0434cc6d0c0f937f9991cf68778be29fdb4bad49f967df20218b82f46
+  languageName: node
+  linkType: hard
+
+"@textlint/module-interop@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/module-interop@npm:13.3.3"
+  checksum: 01a9fa865bb9b140134c4de02258dd94888e980a19150c181db76dddf82a535bf40cfaffeb9111d0f8fb8818b5568e89d2952672b0e62eb178c36ebbb39e0db5
   languageName: node
   linkType: hard
 
@@ -372,12 +433,68 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@textlint/types@npm:13.3.3":
+"@textlint/regexp-string-matcher@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@textlint/regexp-string-matcher@npm:2.0.2"
+  dependencies:
+    escape-string-regexp: ^4.0.0
+    lodash.sortby: ^4.7.0
+    lodash.uniq: ^4.5.0
+    lodash.uniqwith: ^4.5.0
+  checksum: 821af7d3349afd31a733493bc1f71bc74a68f7790c3c22d1c926e79c04bf185ba2eeda127f02321188a7adce0f74331b46ae057ea7dfa26cafcd04471cb05704
+  languageName: node
+  linkType: hard
+
+"@textlint/source-code-fixer@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/source-code-fixer@npm:13.3.3"
+  dependencies:
+    "@textlint/types": ^13.3.3
+    debug: ^4.3.4
+  checksum: d097279d54fc10fc0eb68725de95ed6c7532c2e49214ebee23239360b8a2ce103ef7b0eb8b4e7ba82ec165d22bf0a5ad0eee01a1250dca0b0bccce2faf6f30d4
+  languageName: node
+  linkType: hard
+
+"@textlint/text-to-ast@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/text-to-ast@npm:13.3.3"
+  dependencies:
+    "@textlint/ast-node-types": ^13.3.3
+  checksum: 31d4d423815353359ff11fa8e483760f55e6d3c5661eea7095c05de972e360c807f005376dcef384dc34ecda005e184119e44f504f226b129a3fc7ead12d79b1
+  languageName: node
+  linkType: hard
+
+"@textlint/textlint-plugin-markdown@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/textlint-plugin-markdown@npm:13.3.3"
+  dependencies:
+    "@textlint/markdown-to-ast": ^13.3.3
+  checksum: ba129c00e2b9abe6d6cb33d586eaf3c4ab8578d4938fee2c92e76ca63169399b5747583372c5ad67e918b17e5650517f6118663f3617d9fa8e8b6674949f85ad
+  languageName: node
+  linkType: hard
+
+"@textlint/textlint-plugin-text@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/textlint-plugin-text@npm:13.3.3"
+  dependencies:
+    "@textlint/text-to-ast": ^13.3.3
+  checksum: 22f0502c225a546263f7583c3d7aefffda4cc3de6dd0a2dcdb930ca6a0ce41a2c1ad358983f3b37a7c76e0c3c8d95c82167b1faa7e8d8328282ac1408f641b57
+  languageName: node
+  linkType: hard
+
+"@textlint/types@npm:13.3.3, @textlint/types@npm:^13.3.3":
   version: 13.3.3
   resolution: "@textlint/types@npm:13.3.3"
   dependencies:
     "@textlint/ast-node-types": ^13.3.3
   checksum: da0472e1b76a2fad0203a0e9866e7135c13e8499a021ad02aaed0cb68baeef29e3c5d114bfc730974b24aa891581d875d13920210dadd29cb32eb3f174787a03
+  languageName: node
+  linkType: hard
+
+"@textlint/utils@npm:^13.3.3":
+  version: 13.3.3
+  resolution: "@textlint/utils@npm:13.3.3"
+  checksum: 516e15fce46a0c4dac6b8741bde97f95a86d71cb6bebed91007be10709d7481764b931f2a2a07bb2b66556d5d784bc3dd647bb3802c26a5b23ba9e63269c28cf
   languageName: node
   linkType: hard
 
@@ -395,6 +512,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/mdast@npm:^3.0.0":
+  version: 3.0.12
+  resolution: "@types/mdast@npm:3.0.12"
+  dependencies:
+    "@types/unist": ^2
+  checksum: 83adb8679b9d139f69f63554d120af921e9f1289e9903a2c99e0554a327c8524a6c0beccdc0721e4fdbccc606e81964fecb0d390d53df0f74360938e22f1a469
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:18.16.7":
   version: 18.16.7
   resolution: "@types/node@npm:18.16.7"
@@ -406,6 +532,13 @@ __metadata:
   version: 7.5.0
   resolution: "@types/semver@npm:7.5.0"
   checksum: 0a64b9b9c7424d9a467658b18dd70d1d781c2d6f033096a6e05762d20ebbad23c1b69b0083b0484722aabf35640b78ccc3de26368bcae1129c87e9df028a22e2
+  languageName: node
+  linkType: hard
+
+"@types/unist@npm:^2":
+  version: 2.0.7
+  resolution: "@types/unist@npm:2.0.7"
+  checksum: b97a219554e83431f19a93ff113306bf0512909292815e8f32964e47d041c505af1aaa2a381c23e137c4c0b962fad58d4ce9c5c3256642921a466be43c1fc715
   languageName: node
   linkType: hard
 
@@ -855,18 +988,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array.prototype.find@npm:^2.0.3":
-  version: 2.2.1
-  resolution: "array.prototype.find@npm:2.2.1"
-  dependencies:
-    call-bind: ^1.0.2
-    define-properties: ^1.1.4
-    es-abstract: ^1.20.4
-    es-shim-unscopables: ^1.0.0
-  checksum: 3bde6c9137a1b11e28c8e098574ae93aa4c660f3b917ab08e7076ee8ca32704ee158d562437b38b8a5a03b0f0ccacf4df9b7a4e4b4497f4bbe66b8406dc334e5
-  languageName: node
-  linkType: hard
-
 "array.prototype.flat@npm:^1.3.1":
   version: 1.3.1
   resolution: "array.prototype.flat@npm:1.3.1"
@@ -1064,7 +1185,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ccount@npm:^1.0.3":
+"ccount@npm:^1.0.0, ccount@npm:^1.0.3":
   version: 1.1.0
   resolution: "ccount@npm:1.1.0"
   checksum: b335a79d0aa4308919cf7507babcfa04ac63d389ebed49dbf26990d4607c8a4713cde93cc83e707d84571ddfe1e7615dad248be9bc422ae4c188210f71b08b78
@@ -1081,14 +1202,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"check-ends-with-period@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "check-ends-with-period@npm:1.0.1"
+"character-entities-legacy@npm:^1.0.0":
+  version: 1.1.4
+  resolution: "character-entities-legacy@npm:1.1.4"
+  checksum: fe03a82c154414da3a0c8ab3188e4237ec68006cbcd681cf23c7cfb9502a0e76cd30ab69a2e50857ca10d984d57de3b307680fff5328ccd427f400e559c3a811
+  languageName: node
+  linkType: hard
+
+"character-entities@npm:^1.0.0":
+  version: 1.2.4
+  resolution: "character-entities@npm:1.2.4"
+  checksum: e1545716571ead57beac008433c1ff69517cd8ca5b336889321c5b8ff4a99c29b65589a701e9c086cda8a5e346a67295e2684f6c7ea96819fe85cbf49bf8686d
+  languageName: node
+  linkType: hard
+
+"character-reference-invalid@npm:^1.0.0":
+  version: 1.1.4
+  resolution: "character-reference-invalid@npm:1.1.4"
+  checksum: 20274574c70e05e2f81135f3b93285536bc8ff70f37f0809b0d17791a832838f1e49938382899ed4cb444e5bbd4314ca1415231344ba29f4222ce2ccf24fea0b
+  languageName: node
+  linkType: hard
+
+"check-ends-with-period@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "check-ends-with-period@npm:3.0.2"
   dependencies:
-    array.prototype.find: ^2.0.3
-    emoji-regex: ^6.4.1
-    end-with: ^1.0.2
-  checksum: d36415860dcf1494de7b911f80452f77ef2a634c07831bee495fb45b9268c6cbf3d0ab025b671bf210f613603c7dcff8accfcbbfffeb4e19b61d35abb085fc52
+    emoji-regex: ^10.1.0
+  checksum: 427a90c5fe5e7456588d10a11959a2c74096db29c08f47d36f4540b3b63243bb47b883f0d03a95158fbdc4b9f4e165e0859e567c7d1d2ff9090b7e5e1dca4b15
   languageName: node
   linkType: hard
 
@@ -1248,7 +1388,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.1.1, debug@npm:^4.3.2, debug@npm:^4.3.4":
+"debug@npm:^4.0.0, debug@npm:^4.1.1, debug@npm:^4.3.2, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -1409,10 +1549,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emoji-regex@npm:^6.4.1":
-  version: 6.5.1
-  resolution: "emoji-regex@npm:6.5.1"
-  checksum: b207c92f9389b8c918dd960aa8d2ecab75ddb276f26a25a832b1f4fac2af4fed33dc45363151d091d6ba11d8ee2fffa57253a580b9585cd1404aa08101f3d244
+"emoji-regex@npm:^10.1.0":
+  version: 10.2.1
+  resolution: "emoji-regex@npm:10.2.1"
+  checksum: 1aa2d16881c56531fdfc03d0b36f5c2b6221cc4097499a5665b88b711dc3fb4d5b8804f0ca6f00c56e5dcf89bac75f0487eee85da1da77df3a33accc6ecbe426
   languageName: node
   linkType: hard
 
@@ -1427,13 +1567,6 @@ __metadata:
   version: 9.2.2
   resolution: "emoji-regex@npm:9.2.2"
   checksum: 8487182da74aabd810ac6d6f1994111dfc0e331b01271ae01ec1eb0ad7b5ecc2bbbbd2f053c05cb55a1ac30449527d819bbfbf0e3de1023db308cbcb47f86601
-  languageName: node
-  linkType: hard
-
-"end-with@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "end-with@npm:1.0.2"
-  checksum: 9750ae22d2f22b5b5deba8229113181bf35a00ea50876f4ca37eccc7f13a6b3c8c843ad8bb5c3275c0b1cddb8c3a1965b2f49a175ab491e59cffb5d430b213ee
   languageName: node
   linkType: hard
 
@@ -2320,6 +2453,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-equals@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "fast-equals@npm:4.0.3"
+  checksum: 3d5935b757f9f2993e59b5164a7a9eeda0de149760495375cde14a4ed725186a7e6c1c0d58f7d42d2f91deb97f3fce1e0aad5591916ef0984278199a85c87c87
+  languageName: node
+  linkType: hard
+
 "fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
@@ -2353,6 +2493,15 @@ __metadata:
   dependencies:
     reusify: ^1.0.4
   checksum: 0170e6bfcd5d57a70412440b8ef600da6de3b2a6c5966aeaf0a852d542daff506a0ee92d6de7679d1de82e644bce69d7a574a6c93f0b03964b5337eed75ada1a
+  languageName: node
+  linkType: hard
+
+"fault@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "fault@npm:1.0.4"
+  dependencies:
+    format: ^0.2.0
+  checksum: 5ac610d8b09424e0f2fa8cf913064372f2ee7140a203a79957f73ed557c0e79b1a3d096064d7f40bde8132a69204c1fe25ec23634c05c6da2da2039cff26c4e7
   languageName: node
   linkType: hard
 
@@ -2407,6 +2556,13 @@ __metadata:
   dependencies:
     is-callable: ^1.1.3
   checksum: 6c48ff2bc63362319c65e2edca4a8e1e3483a2fabc72fbe7feaf8c73db94fc7861bd53bc02c8a66a0c1dd709da6b04eec42e0abdd6b40ce47305ae92a25e5d28
+  languageName: node
+  linkType: hard
+
+"format@npm:^0.2.0":
+  version: 0.2.2
+  resolution: "format@npm:0.2.2"
+  checksum: 646a60e1336250d802509cf24fb801e43bd4a70a07510c816fa133aa42cdbc9c21e66e9cc0801bb183c5b031c9d68be62e7fbb6877756e52357850f92aa28799
   languageName: node
   linkType: hard
 
@@ -2769,6 +2925,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-alphabetical@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "is-alphabetical@npm:1.0.4"
+  checksum: 6508cce44fd348f06705d377b260974f4ce68c74000e7da4045f0d919e568226dc3ce9685c5a2af272195384df6930f748ce9213fc9f399b5d31b362c66312cb
+  languageName: node
+  linkType: hard
+
+"is-alphanumerical@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "is-alphanumerical@npm:1.0.4"
+  dependencies:
+    is-alphabetical: ^1.0.0
+    is-decimal: ^1.0.0
+  checksum: e2e491acc16fcf5b363f7c726f666a9538dba0a043665740feb45bba1652457a73441e7c5179c6768a638ed396db3437e9905f403644ec7c468fb41f4813d03f
+  languageName: node
+  linkType: hard
+
 "is-arguments@npm:^1.1.1":
   version: 1.1.1
   resolution: "is-arguments@npm:1.1.1"
@@ -2850,6 +3023,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-decimal@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "is-decimal@npm:1.0.4"
+  checksum: ed483a387517856dc395c68403a10201fddcc1b63dc56513fbe2fe86ab38766120090ecdbfed89223d84ca8b1cd28b0641b93cb6597b6e8f4c097a7c24e3fb96
+  languageName: node
+  linkType: hard
+
 "is-descriptor@npm:^1.0.2":
   version: 1.0.2
   resolution: "is-descriptor@npm:1.0.2"
@@ -2908,6 +3088,13 @@ __metadata:
   dependencies:
     is-extglob: ^2.1.1
   checksum: d381c1319fcb69d341cc6e6c7cd588e17cd94722d9a32dbd60660b993c4fb7d0f19438674e68dfec686d09b7c73139c9166b47597f846af387450224a8101ab4
+  languageName: node
+  linkType: hard
+
+"is-hexadecimal@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "is-hexadecimal@npm:1.0.4"
+  checksum: a452e047587b6069332d83130f54d30da4faf2f2ebaa2ce6d073c27b5703d030d58ed9e0b729c8e4e5b52c6f1dab26781bb77b7bc6c7805f14f320e328ff8cd5
   languageName: node
   linkType: hard
 
@@ -3321,6 +3508,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"longest-streak@npm:^2.0.0":
+  version: 2.0.4
+  resolution: "longest-streak@npm:2.0.4"
+  checksum: 28b8234a14963002c5c71035dee13a0a11e9e9d18ffa320fdc8796ed7437399204495702ed69cd2a7087b0af041a2a8b562829b7c1e2042e73a3374d1ecf6580
+  languageName: node
+  linkType: hard
+
 "loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
@@ -3348,12 +3542,137 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-table@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "markdown-table@npm:2.0.0"
+  dependencies:
+    repeat-string: ^1.0.0
+  checksum: 9bb634a9300016cbb41216c1eab44c74b6b7083ac07872e296f900a29449cf0e260ece03fa10c3e9784ab94c61664d1d147da0315f95e1336e2bdcc025615c90
+  languageName: node
+  linkType: hard
+
 "match-index@npm:^1.0.1, match-index@npm:^1.0.3":
   version: 1.0.3
   resolution: "match-index@npm:1.0.3"
   dependencies:
     regexp.prototype.flags: ^1.1.1
   checksum: 3e166488d6d578ed724531b531571289108229df01aa85e36f69f3ed0954706e0ebc48268382edb5b6f8d61b6ff673b08e4b3f536cebd27ff5c183d3261da37c
+  languageName: node
+  linkType: hard
+
+"mdast-util-find-and-replace@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "mdast-util-find-and-replace@npm:1.1.1"
+  dependencies:
+    escape-string-regexp: ^4.0.0
+    unist-util-is: ^4.0.0
+    unist-util-visit-parents: ^3.0.0
+  checksum: e4c9e50d9bce5ae4c728a925bd60080b94d16aaa312c27e2b70b16ddc29a5d0a0844d6e18efaef08aeb22c68303ec528f20183d1b0420504a0c2c1710cebd76f
+  languageName: node
+  linkType: hard
+
+"mdast-util-footnote@npm:^0.1.0":
+  version: 0.1.7
+  resolution: "mdast-util-footnote@npm:0.1.7"
+  dependencies:
+    mdast-util-to-markdown: ^0.6.0
+    micromark: ~2.11.0
+  checksum: 6d05396a9497c289fecf844d68d3210968750b215cf1df3fd1962c77d73560d8598cc4d79cef36a750d5b43f30b71fec079e0563f267b65072cfc38548d39eda
+  languageName: node
+  linkType: hard
+
+"mdast-util-from-markdown@npm:^0.8.0":
+  version: 0.8.5
+  resolution: "mdast-util-from-markdown@npm:0.8.5"
+  dependencies:
+    "@types/mdast": ^3.0.0
+    mdast-util-to-string: ^2.0.0
+    micromark: ~2.11.0
+    parse-entities: ^2.0.0
+    unist-util-stringify-position: ^2.0.0
+  checksum: 5a9d0d753a42db763761e874c22365d0c7c9934a5a18b5ff76a0643610108a208a041ffdb2f3d3dd1863d3d915225a4020a0aade282af0facfd0df110601eee6
+  languageName: node
+  linkType: hard
+
+"mdast-util-frontmatter@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "mdast-util-frontmatter@npm:0.2.0"
+  dependencies:
+    micromark-extension-frontmatter: ^0.2.0
+  checksum: 6dbed31233b34b41dd09da4756bbe3bd674fa3033c58f771f419e56675b8c7a601a18838d027fdb9cbef3b958346c661f7926ca401e154e63c071ecb2a3596a2
+  languageName: node
+  linkType: hard
+
+"mdast-util-gfm-autolink-literal@npm:^0.1.0, mdast-util-gfm-autolink-literal@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "mdast-util-gfm-autolink-literal@npm:0.1.3"
+  dependencies:
+    ccount: ^1.0.0
+    mdast-util-find-and-replace: ^1.1.0
+    micromark: ^2.11.3
+  checksum: 9f7b888678631fd8c0a522b0689a750aead2b05d57361dbdf02c10381557f1ce874f746226141f3ace1e0e7952495e8d5ce8f9af423a7a66bb300d4635a918eb
+  languageName: node
+  linkType: hard
+
+"mdast-util-gfm-strikethrough@npm:^0.2.0":
+  version: 0.2.3
+  resolution: "mdast-util-gfm-strikethrough@npm:0.2.3"
+  dependencies:
+    mdast-util-to-markdown: ^0.6.0
+  checksum: 51aa11ca8f1a5745f1eb9ccddb0eca797b3ede6f0c7bf355d594ad57c02c98d95260f00b1c4b07504018e0b22708531eabb76037841f09ce8465444706a06522
+  languageName: node
+  linkType: hard
+
+"mdast-util-gfm-table@npm:^0.1.0":
+  version: 0.1.6
+  resolution: "mdast-util-gfm-table@npm:0.1.6"
+  dependencies:
+    markdown-table: ^2.0.0
+    mdast-util-to-markdown: ~0.6.0
+  checksum: eeb43faf833753315b4ccf8d7bc8a6845b31562b2d2dd12a92aa40f9cee1b1954643c7515399a98f9b2e143c95cf6b5c0aac5941a4f609d6a57335587cee99ac
+  languageName: node
+  linkType: hard
+
+"mdast-util-gfm-task-list-item@npm:^0.1.0":
+  version: 0.1.6
+  resolution: "mdast-util-gfm-task-list-item@npm:0.1.6"
+  dependencies:
+    mdast-util-to-markdown: ~0.6.0
+  checksum: c10480c0ae86547980b38b49fba2ecd36a50bf1f3478d3f12810a0d8e8f821585c2bd7d805dd735518e84493b5eef314afdb8d59807021e2d9aa22d077eb7588
+  languageName: node
+  linkType: hard
+
+"mdast-util-gfm@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "mdast-util-gfm@npm:0.1.2"
+  dependencies:
+    mdast-util-gfm-autolink-literal: ^0.1.0
+    mdast-util-gfm-strikethrough: ^0.2.0
+    mdast-util-gfm-table: ^0.1.0
+    mdast-util-gfm-task-list-item: ^0.1.0
+    mdast-util-to-markdown: ^0.6.1
+  checksum: 368ed535b2c2e0f33d0225a9e9c985468bf4825a06896815369aea585f6defaccb555ac40ba911e02c8e8c47e79f7efb4348de532de50bca2638a1e568f2d3c9
+  languageName: node
+  linkType: hard
+
+"mdast-util-to-markdown@npm:^0.6.0, mdast-util-to-markdown@npm:^0.6.1, mdast-util-to-markdown@npm:~0.6.0":
+  version: 0.6.5
+  resolution: "mdast-util-to-markdown@npm:0.6.5"
+  dependencies:
+    "@types/unist": ^2.0.0
+    longest-streak: ^2.0.0
+    mdast-util-to-string: ^2.0.0
+    parse-entities: ^2.0.0
+    repeat-string: ^1.0.0
+    zwitch: ^1.0.0
+  checksum: 7ebc47533bff6e8669f85ae124dc521ea570e9df41c0d9e4f0f43c19ef4a8c9928d741f3e4afa62fcca1927479b714582ff5fd684ef240d84ee5b75ab9d863cf
+  languageName: node
+  linkType: hard
+
+"mdast-util-to-string@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "mdast-util-to-string@npm:2.0.0"
+  checksum: 0b2113ada10e002fbccb014170506dabe2f2ddacaacbe4bc1045c33f986652c5a162732a2c057c5335cdb58419e2ad23e368e5be226855d4d4e280b81c4e9ec2
   languageName: node
   linkType: hard
 
@@ -3368,6 +3687,91 @@ __metadata:
   version: 1.4.1
   resolution: "merge2@npm:1.4.1"
   checksum: 7268db63ed5169466540b6fb947aec313200bcf6d40c5ab722c22e242f651994619bcd85601602972d3c85bd2cc45a358a4c61937e9f11a061919a1da569b0c2
+  languageName: node
+  linkType: hard
+
+"micromark-extension-footnote@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "micromark-extension-footnote@npm:0.3.2"
+  dependencies:
+    micromark: ~2.11.0
+  checksum: 476c7f7ae86d7b3c33a07cbf7286d2cce06aa9b348eed79867fd6abc98c37519464c335c522e85208c99e573c1abbbcb72a0a27897f2a0b505d993c76df7bd1d
+  languageName: node
+  linkType: hard
+
+"micromark-extension-frontmatter@npm:^0.2.0":
+  version: 0.2.2
+  resolution: "micromark-extension-frontmatter@npm:0.2.2"
+  dependencies:
+    fault: ^1.0.0
+  checksum: b591494c2910162a47b4413b43d80b1e3f148c0d92955576737ff36525f34deb6cc784cdbede76c4ce6a9d06c75586c7198ffb84f97efee894cafabcc86716e4
+  languageName: node
+  linkType: hard
+
+"micromark-extension-gfm-autolink-literal@npm:~0.5.0":
+  version: 0.5.7
+  resolution: "micromark-extension-gfm-autolink-literal@npm:0.5.7"
+  dependencies:
+    micromark: ~2.11.3
+  checksum: 319ec793c2e374e4cc0cbbb07326c1affb78819e507c7c1577f9d14b972852a6bb55e664332ec51f7cca24bdddd43429c5dd55f11e9200b1a00bab1bf494fb2d
+  languageName: node
+  linkType: hard
+
+"micromark-extension-gfm-strikethrough@npm:~0.6.5":
+  version: 0.6.5
+  resolution: "micromark-extension-gfm-strikethrough@npm:0.6.5"
+  dependencies:
+    micromark: ~2.11.0
+  checksum: 67711633590d3e688759a46aaed9f9d04bcaf29b6615eec17af082eabe1059fbca4beb41ba13db418ae7be3ac90198742fbabe519a70f9b6bb615598c5d6ef1a
+  languageName: node
+  linkType: hard
+
+"micromark-extension-gfm-table@npm:~0.4.0":
+  version: 0.4.3
+  resolution: "micromark-extension-gfm-table@npm:0.4.3"
+  dependencies:
+    micromark: ~2.11.0
+  checksum: 12c78de985944dd66aae409871c45d801cc65704f55ea5cc8afac422042c6d3b5e777b154c079ae81298b30b83434b257b54981bda51c220a102042dd2524a63
+  languageName: node
+  linkType: hard
+
+"micromark-extension-gfm-tagfilter@npm:~0.3.0":
+  version: 0.3.0
+  resolution: "micromark-extension-gfm-tagfilter@npm:0.3.0"
+  checksum: 9369736a203836b2933dfdeacab863e7a4976139b9dd46fa5bd6c2feeef50c7dbbcdd641ae95f0481f577d8aa22396bfa7ed9c38515647d4cf3f2c727cc094a3
+  languageName: node
+  linkType: hard
+
+"micromark-extension-gfm-task-list-item@npm:~0.3.0":
+  version: 0.3.3
+  resolution: "micromark-extension-gfm-task-list-item@npm:0.3.3"
+  dependencies:
+    micromark: ~2.11.0
+  checksum: e4ccbe6b440234c8ee05d89315e1204c78773724241af31ac328194470a8a61bc6606eab3ce2d9a83da4401b06e07936038654493da715d40522133d1556dda4
+  languageName: node
+  linkType: hard
+
+"micromark-extension-gfm@npm:^0.3.0":
+  version: 0.3.3
+  resolution: "micromark-extension-gfm@npm:0.3.3"
+  dependencies:
+    micromark: ~2.11.0
+    micromark-extension-gfm-autolink-literal: ~0.5.0
+    micromark-extension-gfm-strikethrough: ~0.6.5
+    micromark-extension-gfm-table: ~0.4.0
+    micromark-extension-gfm-tagfilter: ~0.3.0
+    micromark-extension-gfm-task-list-item: ~0.3.0
+  checksum: 7957a1afd8c92daa0fc165342902729334b22d59feacd85b20a0d9cc453c90bbdd5b5ba85a3d177c01802060aeb3326daf05d3e6d95932fcbc8371827c98336e
+  languageName: node
+  linkType: hard
+
+"micromark@npm:^2.11.3, micromark@npm:~2.11.0, micromark@npm:~2.11.3":
+  version: 2.11.4
+  resolution: "micromark@npm:2.11.4"
+  dependencies:
+    debug: ^4.0.0
+    parse-entities: ^2.0.0
+  checksum: f8a5477d394908a5d770227aea71657a76423d420227c67ea0699e659a5f62eb39d504c1f7d69ec525a6af5aaeb6a7bffcdba95614968c03d41d3851edecb0d6
   languageName: node
   linkType: hard
 
@@ -3718,6 +4122,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parse-entities@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "parse-entities@npm:2.0.0"
+  dependencies:
+    character-entities: ^1.0.0
+    character-entities-legacy: ^1.0.0
+    character-reference-invalid: ^1.0.0
+    is-alphanumerical: ^1.0.0
+    is-decimal: ^1.0.0
+    is-hexadecimal: ^1.0.0
+  checksum: 7addfd3e7d747521afac33c8121a5f23043c6973809756920d37e806639b4898385d386fcf4b3c8e2ecf1bc28aac5ae97df0b112d5042034efbe80f44081ebce
+  languageName: node
+  linkType: hard
+
 "parse5@npm:^5.0.0":
   version: 5.1.1
   resolution: "parse5@npm:5.1.1"
@@ -3935,6 +4353,52 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remark-footnotes@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "remark-footnotes@npm:3.0.0"
+  dependencies:
+    mdast-util-footnote: ^0.1.0
+    micromark-extension-footnote: ^0.3.0
+  checksum: 5e84afb47b57e512171f8af5146e8ba49817faff761c6cdd14abf26c9f018b497e69e79378d94b3ba529e491d3f0615c60851d3db86de785aa37641bf5bf7f8a
+  languageName: node
+  linkType: hard
+
+"remark-frontmatter@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "remark-frontmatter@npm:3.0.0"
+  dependencies:
+    mdast-util-frontmatter: ^0.2.0
+    micromark-extension-frontmatter: ^0.2.0
+  checksum: 33bbcf36a51ee4c3813106b933766e0dc4b2b50f8eb4da3a4c577ea0278335589b36b182fb2722c9857d0ea9932ac75368a5dff70c8cf2b74f4747c244068976
+  languageName: node
+  linkType: hard
+
+"remark-gfm@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "remark-gfm@npm:1.0.0"
+  dependencies:
+    mdast-util-gfm: ^0.1.0
+    micromark-extension-gfm: ^0.3.0
+  checksum: 877b0f6472a90a490b5d5a1393f46d22c4ab7451b1e83ebd7362e5be9c661b6ed03e76c28f76894f460bedf23345c589d3f412c273ce0d4d442c6a4d65b0eae4
+  languageName: node
+  linkType: hard
+
+"remark-parse@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "remark-parse@npm:9.0.0"
+  dependencies:
+    mdast-util-from-markdown: ^0.8.0
+  checksum: 50104880549639b7dd7ae6f1e23c214915fe9c054f02f3328abdaee3f6de6d7282bf4357c3c5b106958fe75e644a3c248c2197755df34f9955e8e028fc74868f
+  languageName: node
+  linkType: hard
+
+"repeat-string@npm:^1.0.0":
+  version: 1.6.1
+  resolution: "repeat-string@npm:1.6.1"
+  checksum: 1b809fc6db97decdc68f5b12c4d1a671c8e3f65ec4a40c238bc5200e44e85bcc52a54f78268ab9c29fcf5fe4f1343e805420056d1f30fa9a9ee4c2d93e3cc6c0
+  languageName: node
+  linkType: hard
+
 "require-directory@npm:^2.1.1":
   version: 2.1.1
   resolution: "require-directory@npm:2.1.1"
@@ -4114,7 +4578,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sentence-splitter@npm:^3.0.11, sentence-splitter@npm:^3.2.0, sentence-splitter@npm:^3.2.1, sentence-splitter@npm:^3.2.2, sentence-splitter@npm:^3.2.3":
+"sentence-splitter@npm:^3.0.11, sentence-splitter@npm:^3.2.0, sentence-splitter@npm:^3.2.1, sentence-splitter@npm:^3.2.2":
   version: 3.2.3
   resolution: "sentence-splitter@npm:3.2.3"
   dependencies:
@@ -4125,6 +4589,16 @@ __metadata:
   bin:
     sentence-splitter: bin/cmd.js
   checksum: 90de7e110810017caf7272b776f337d267a413a5c121aca568cc95c7069daa45a12d5d5e4573e5f502ddf2416af7076febeb6a9d991f8c9c97b581df2bf7a40d
+  languageName: node
+  linkType: hard
+
+"sentence-splitter@npm:^4.0.2, sentence-splitter@npm:^4.2.0":
+  version: 4.2.1
+  resolution: "sentence-splitter@npm:4.2.1"
+  dependencies:
+    "@textlint/ast-node-types": ^13.2.0
+    structured-source: ^4.0.0
+  checksum: 9bdb83f3f22ab349bdcfad46c001675519efef30d691b888abe459e8ed3bab3338176d64d83b89d06ef110bdee1efd3649d55122521e9bd0fb8744debfcba7c5
   languageName: node
   linkType: hard
 
@@ -4435,16 +4909,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-helper@npm:^1.1.5":
-  version: 1.2.0
-  resolution: "textlint-rule-helper@npm:1.2.0"
-  dependencies:
-    unist-util-visit: ^1.1.0
-  checksum: 6e9e0da9bb213cd14ac007564890e1bbf635fec8b9c920fcfe8d73b47e236b1d7e88b5c619caa3352598cdc02d4e4aafd340b86da77d65846472ac4fc107e2d1
-  languageName: node
-  linkType: hard
-
-"textlint-rule-helper@npm:^2.0.0, textlint-rule-helper@npm:^2.1.1, textlint-rule-helper@npm:^2.2.0, textlint-rule-helper@npm:^2.2.1, textlint-rule-helper@npm:^2.2.3, textlint-rule-helper@npm:^2.3.0":
+"textlint-rule-helper@npm:^2.0.0, textlint-rule-helper@npm:^2.1.1, textlint-rule-helper@npm:^2.2.0, textlint-rule-helper@npm:^2.2.1, textlint-rule-helper@npm:^2.2.4, textlint-rule-helper@npm:^2.3.0":
   version: 2.3.0
   resolution: "textlint-rule-helper@npm:2.3.0"
   dependencies:
@@ -4476,17 +4941,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-ja-no-mixed-period@npm:^2.1.1":
-  version: 2.1.3
-  resolution: "textlint-rule-ja-no-mixed-period@npm:2.1.3"
+"textlint-rule-ja-no-mixed-period@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "textlint-rule-ja-no-mixed-period@npm:3.0.1"
   dependencies:
-    check-ends-with-period: ^1.0.1
-    textlint-rule-helper: ^2.2.3
-  checksum: 4087202417b01b4e531a5ba2c8e1e879e6199c5aa19e33b1be782d77ac55802f445da4f90befea2d4c6d9025617500ff4a736e6d2a04d96184f0129101c2ac46
+    check-ends-with-period: ^3.0.2
+    textlint-rule-helper: ^2.2.4
+  checksum: a82dcf71d38cffebdd51bbc7b4c086c7e26850e6f40df2dc2d27c71b7b5f6990dd73ed06fdb1676fde6ebb92f9da1fe7393b6e91f099225ef128cf92552c47d4
   languageName: node
   linkType: hard
 
-"textlint-rule-ja-no-redundant-expression@npm:^4.0.0":
+"textlint-rule-ja-no-redundant-expression@npm:^4.0.1":
   version: 4.0.1
   resolution: "textlint-rule-ja-no-redundant-expression@npm:4.0.1"
   dependencies:
@@ -4521,7 +4986,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-ja-no-successive-word@npm:^2.0.0":
+"textlint-rule-ja-no-successive-word@npm:^2.0.1":
   version: 2.0.1
   resolution: "textlint-rule-ja-no-successive-word@npm:2.0.1"
   dependencies:
@@ -4593,14 +5058,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-max-comma@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "textlint-rule-max-comma@npm:2.0.2"
+"textlint-rule-max-comma@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "textlint-rule-max-comma@npm:3.0.1"
   dependencies:
-    sentence-splitter: ^3.2.1
-    textlint-util-to-string: ^3.1.1
-    unist-util-filter: ^2.0.3
-  checksum: f82857741dd41e53a776f2faf77f64a8f215d5aa3c9d29ab5fcfcd4fda350badaf8e31f41187c6ac1d20faa84b54cea5313e356bc1974c51eda9975c289389a8
+    sentence-splitter: ^4.2.0
+    textlint-util-to-string: ^3.3.2
+  checksum: 2995929514ae77071457351faf87fe5795b263ace6c9b44a479e34554e64c4eab357eb48f4c4857f53422f7b5acd3e147a7279a895df4322659d81e7b93c597c
   languageName: node
   linkType: hard
 
@@ -4614,7 +5078,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-max-ten@npm:^4.0.2":
+"textlint-rule-max-ten@npm:^4.0.4":
   version: 4.0.4
   resolution: "textlint-rule-max-ten@npm:4.0.4"
   dependencies:
@@ -4626,7 +5090,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-no-double-negative-ja@npm:^2.0.0":
+"textlint-rule-no-double-negative-ja@npm:^2.0.1":
   version: 2.0.1
   resolution: "textlint-rule-no-double-negative-ja@npm:2.0.1"
   dependencies:
@@ -4635,7 +5099,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-no-doubled-conjunction@npm:^2.0.1":
+"textlint-rule-no-doubled-conjunction@npm:^2.0.4":
   version: 2.0.4
   resolution: "textlint-rule-no-doubled-conjunction@npm:2.0.4"
   dependencies:
@@ -4647,7 +5111,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-no-doubled-conjunctive-particle-ga@npm:^2.0.1":
+"textlint-rule-no-doubled-conjunctive-particle-ga@npm:^2.0.5":
   version: 2.0.5
   resolution: "textlint-rule-no-doubled-conjunctive-particle-ga@npm:2.0.5"
   dependencies:
@@ -4659,15 +5123,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-no-doubled-joshi@npm:^4.0.0":
-  version: 4.0.3
-  resolution: "textlint-rule-no-doubled-joshi@npm:4.0.3"
+"textlint-rule-no-doubled-joshi@npm:^4.0.3":
+  version: 4.1.0
+  resolution: "textlint-rule-no-doubled-joshi@npm:4.1.0"
   dependencies:
     kuromojin: ^3.0.0
     sentence-splitter: ^3.2.1
     textlint-rule-helper: ^2.3.0
     textlint-util-to-string: ^3.3.0
-  checksum: 3d0209177e0f0a7cc63d1172bb5fcec14e53f404114c97924aca5fae1e41c567e888972cbebfd59f60bbc79fa16631bc6d56a7934d632add4a8b37f3daca37d3
+  checksum: 37112b2d43f0653bcd369970a5e77e950b9da98f801feae6c1b662b082c59802385581c9beb7a7faea78d19a0ed63339021a8c9144a5f77ec96cebd5f961b058
   languageName: node
   linkType: hard
 
@@ -4692,13 +5156,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-no-hankaku-kana@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "textlint-rule-no-hankaku-kana@npm:1.0.2"
+"textlint-rule-no-hankaku-kana@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "textlint-rule-no-hankaku-kana@npm:2.0.1"
   dependencies:
-    match-index: ^1.0.1
-    textlint-rule-helper: ^1.1.5
-  checksum: c360084e8cd3aa78e05b81df51f1e9651aa3b6a20525bab8307b14235724c4170a4602be0966a3eff2b90000b37f5a6acd8e1eb732f4893cbe380894a6f55016
+    textlint-rule-helper: ^2.3.0
+    textlint-tester: ^13.3.1
+  checksum: 5c8b0c2715e190b5fb3beba652e99be8c10b999c7b1898b519769dd9120efebebfc87b19f4b3e946ae67347d456152677df7e2bf8b2730e894c36c2ae7937895
   languageName: node
   linkType: hard
 
@@ -4713,14 +5177,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-no-nfd@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "textlint-rule-no-nfd@npm:1.0.2"
+"textlint-rule-no-nfd@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "textlint-rule-no-nfd@npm:2.0.2"
   dependencies:
     match-index: ^1.0.3
-    textlint-rule-helper: ^2.1.1
-    unorm: ^1.4.1
-  checksum: 112ae87fcec43bfaf406be26f85f681810fdb5c429224101542dd689213c291923768f17bae11b0bb0756d3074bda008effd9d183852d3591f09d61f79363648
+    textlint-rule-helper: ^2.3.0
+  checksum: 17763e476ce6d8fe31667ec81178297becd8f63e002aaecb640de1bbd2c27dbf0cc79716dd10be4b977a450b7d1e87eac98c96495aef53f42dc651122d392d47
   languageName: node
   linkType: hard
 
@@ -4755,39 +5218,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-preset-ja-technical-writing@npm:7.0.0":
-  version: 7.0.0
-  resolution: "textlint-rule-preset-ja-technical-writing@npm:7.0.0"
+"textlint-rule-preset-ja-technical-writing@npm:8.0.0":
+  version: 8.0.0
+  resolution: "textlint-rule-preset-ja-technical-writing@npm:8.0.0"
   dependencies:
     "@textlint-rule/textlint-rule-no-invalid-control-character": ^2.0.0
-    "@textlint-rule/textlint-rule-no-unmatched-pair": ^1.0.8
-    "@textlint/module-interop": ^12.0.0
+    "@textlint-rule/textlint-rule-no-unmatched-pair": ^1.0.9
+    "@textlint/module-interop": ^13.3.3
     textlint-rule-ja-no-abusage: ^3.0.0
-    textlint-rule-ja-no-mixed-period: ^2.1.1
-    textlint-rule-ja-no-redundant-expression: ^4.0.0
-    textlint-rule-ja-no-successive-word: ^2.0.0
+    textlint-rule-ja-no-mixed-period: ^3.0.1
+    textlint-rule-ja-no-redundant-expression: ^4.0.1
+    textlint-rule-ja-no-successive-word: ^2.0.1
     textlint-rule-ja-no-weak-phrase: ^2.0.0
     textlint-rule-ja-unnatural-alphabet: 2.0.1
-    textlint-rule-max-comma: ^2.0.2
+    textlint-rule-max-comma: ^3.0.1
     textlint-rule-max-kanji-continuous-len: ^1.1.1
-    textlint-rule-max-ten: ^4.0.2
-    textlint-rule-no-double-negative-ja: ^2.0.0
-    textlint-rule-no-doubled-conjunction: ^2.0.1
-    textlint-rule-no-doubled-conjunctive-particle-ga: ^2.0.1
-    textlint-rule-no-doubled-joshi: ^4.0.0
+    textlint-rule-max-ten: ^4.0.4
+    textlint-rule-no-double-negative-ja: ^2.0.1
+    textlint-rule-no-doubled-conjunction: ^2.0.4
+    textlint-rule-no-doubled-conjunctive-particle-ga: ^2.0.5
+    textlint-rule-no-doubled-joshi: ^4.0.3
     textlint-rule-no-dropping-the-ra: ^3.0.0
     textlint-rule-no-exclamation-question-mark: ^1.1.0
-    textlint-rule-no-hankaku-kana: ^1.0.2
+    textlint-rule-no-hankaku-kana: ^2.0.1
     textlint-rule-no-mix-dearu-desumasu: ^5.0.0
-    textlint-rule-no-nfd: ^1.0.2
+    textlint-rule-no-nfd: ^2.0.2
     textlint-rule-no-zero-width-spaces: ^1.0.1
-    textlint-rule-preset-jtf-style: ^2.3.12
-    textlint-rule-sentence-length: ^3.0.0
-  checksum: 53e3b84c7b9309f3d7c6119746084081f01aaeb9c3a79cddc3f103ae17ad3dd55df9137d59d3535bcf13ab03d0cead55cc954f917bc8e1e6ef6ab7f1aeaf913e
+    textlint-rule-preset-jtf-style: ^2.3.13
+    textlint-rule-sentence-length: ^4.0.2
+  checksum: 0789bb9ba8c7befe58046417b63ac4ec6660f4d5c70396cd5d85fb32199b00525fa1a7f3bb271a490a6b13b8313cce7a0ce909c910b5ca7bda9405e487de63f1
   languageName: node
   linkType: hard
 
-"textlint-rule-preset-jtf-style@npm:2.3.13, textlint-rule-preset-jtf-style@npm:^2.3.12":
+"textlint-rule-preset-jtf-style@npm:2.3.13, textlint-rule-preset-jtf-style@npm:^2.3.13":
   version: 2.3.13
   resolution: "textlint-rule-preset-jtf-style@npm:2.3.13"
   dependencies:
@@ -4818,19 +5281,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-sentence-length@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "textlint-rule-sentence-length@npm:3.0.1"
+"textlint-rule-sentence-length@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "textlint-rule-sentence-length@npm:4.0.2"
   dependencies:
-    "@textlint/regexp-string-matcher": ^1.1.0
-    sentence-splitter: ^3.2.3
-    textlint-rule-helper: ^2.1.1
-    textlint-util-to-string: ^3.1.1
-  checksum: 06a0724b0d79108e3b638524ce150db949dc699b778576e9dfd9482ef5e1072d1be458f9e45910c4bb6f24dcbf3ca2d40a989f78abf4e63e0168174afa4c7a04
+    "@textlint/regexp-string-matcher": ^2.0.2
+    sentence-splitter: ^4.0.2
+    textlint-rule-helper: ^2.3.0
+    textlint-util-to-string: ^3.2.0
+  checksum: c82babeabfc1db02902ef2578786ecf8cdd29784577b0897e4e7993db73b90bdec674884898168f133d2bcf5b650874f7c51a12abf62bf70289d10aba2b29a8e
   languageName: node
   linkType: hard
 
-"textlint-util-to-string@npm:^3.1.1, textlint-util-to-string@npm:^3.3.0":
+"textlint-tester@npm:^13.3.1":
+  version: 13.3.3
+  resolution: "textlint-tester@npm:13.3.3"
+  dependencies:
+    "@textlint/feature-flag": ^13.3.3
+    "@textlint/kernel": ^13.3.3
+    "@textlint/textlint-plugin-markdown": ^13.3.3
+    "@textlint/textlint-plugin-text": ^13.3.3
+  checksum: 83d12fbee5aa449a1764192d52b7ebca72b7982f52219fed556e5603df7a40b14cfe7079e1471c0e4ce0e9aad11f9aa3a8b848e5a236332c28e2035d696987cf
+  languageName: node
+  linkType: hard
+
+"textlint-util-to-string@npm:^3.1.1, textlint-util-to-string@npm:^3.2.0, textlint-util-to-string@npm:^3.3.0, textlint-util-to-string@npm:^3.3.2":
   version: 3.3.2
   resolution: "textlint-util-to-string@npm:3.3.2"
   dependencies:
@@ -4874,6 +5349,13 @@ __metadata:
     regex-not: ^1.0.2
     safe-regex: ^1.1.0
   checksum: 4ed4a619059b64e204aad84e4e5f3ea82d97410988bcece7cf6cbfdbf193d11bff48cf53842d88b8bb00b1bfc0d048f61f20f0709e6f393fd8fe0122662d9db4
+  languageName: node
+  linkType: hard
+
+"traverse@npm:^0.6.7":
+  version: 0.6.7
+  resolution: "traverse@npm:0.6.7"
+  checksum: 21018085ab72f717991597e12e2b52446962ed59df591502e4d7e1a709bc0a989f7c3d451aa7d882666ad0634f1546d696c5edecda1f2fc228777df7bb529a1e
   languageName: node
   linkType: hard
 
@@ -5016,12 +5498,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-filter@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "unist-util-filter@npm:2.0.3"
+"unified@npm:^9.2.2":
+  version: 9.2.2
+  resolution: "unified@npm:9.2.2"
   dependencies:
-    unist-util-is: ^4.0.0
-  checksum: ff92b1f2cbabbbfdca8088c10f42219c61b7fc302e64be7adc6834c9882be37a2c7b4b31b7b19e91dd7457e785f68cdbca231cd1a411dc499f72a8d4eaa3c73c
+    bail: ^1.0.0
+    extend: ^3.0.0
+    is-buffer: ^2.0.0
+    is-plain-obj: ^2.0.0
+    trough: ^1.0.0
+    vfile: ^4.0.0
+  checksum: 7c24461be7de4145939739ce50d18227c5fbdf9b3bc5a29dabb1ce26dd3e8bd4a1c385865f6f825f3b49230953ee8b591f23beab3bb3643e3e9dc37aa8a089d5
   languageName: node
   linkType: hard
 
@@ -5114,13 +5601,6 @@ __metadata:
     unist-util-is: ^5.0.0
     unist-util-visit-parents: ^4.0.0
   checksum: c37dbc0c5509f85f3abdf46d927b3dd11e6c419159771b1f1a5ce446d36ac993d04b087e28bc6173a172e0fbe9d77e997f120029b2b449766ebe55b6f6e0cc2c
-  languageName: node
-  linkType: hard
-
-"unorm@npm:^1.4.1":
-  version: 1.6.0
-  resolution: "unorm@npm:1.6.0"
-  checksum: 9a86546256a45f855b6cfe719086785d6aada94f63778cecdecece8d814ac26af76cb6da70130da0a08b8803bbf0986e56c7ec4249038198f3de02607fffd811
   languageName: node
   linkType: hard
 
@@ -5378,5 +5858,12 @@ __metadata:
   version: 0.3.1
   resolution: "zlibjs@npm:0.3.1"
   checksum: 91f3d28bb5925ac71565a1fd4d44303b6b876ed483c9c192864393811151b399f29d917c9118a5aca5a541d9dfc7c199460f86b489ea1f77b7217e0edc887c89
+  languageName: node
+  linkType: hard
+
+"zwitch@npm:^1.0.0":
+  version: 1.0.5
+  resolution: "zwitch@npm:1.0.5"
+  checksum: 28a1bebacab3bc60150b6b0a2ba1db2ad033f068e81f05e4892ec0ea13ae63f5d140a1d692062ac0657840c8da076f35b94433b5f1c329d7803b247de80f064a
   languageName: node
   linkType: hard
