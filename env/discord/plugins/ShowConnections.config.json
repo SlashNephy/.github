@@ -3,6 +3,7 @@
 		"connections": {
 			"battlenet": true,
 			"crunchyroll": true,
+			"domain": true,
 			"ebay": true,
 			"epicgames": true,
 			"facebook": true,
