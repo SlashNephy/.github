@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 /**
  * jest 関連の eslint プリセット
  */
-const jest: Linter.Config = {
+module.exports = {
   plugins: ['jest'],
   extends: [
     'plugin:jest/recommended',
@@ -14,6 +14,4 @@ const jest: Linter.Config = {
     'jest/globals': true,
   },
   rules: {},
-}
-
-module.exports = jest
+} satisfies Linter.Config

@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 /**
  * JavaScript 関連の eslint プリセット
  */
-const javascript: Linter.Config = {
+module.exports = {
   extends: [
     'plugin:eslint-comments/recommended',
     'plugin:node/recommended',
@@ -144,6 +144,4 @@ const javascript: Linter.Config = {
     // return の省略などを許可
     'consistent-return': 'off',
   },
-}
-
-module.exports = javascript
+} satisfies Linter.Config

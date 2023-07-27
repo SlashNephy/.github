@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 /**
  * UserScript 開発用の eslint プリセット
  */
-const userScript: Linter.Config = {
+module.exports = {
   extends: ['plugin:userscripts/recommended'],
   rules: {
     'no-undef': 'off',
@@ -22,6 +22,4 @@ const userScript: Linter.Config = {
       },
     ],
   },
-}
-
-module.exports = userScript
+} satisfies Linter.Config

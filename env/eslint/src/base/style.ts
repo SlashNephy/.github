@@ -1,11 +1,10 @@
 import type { Linter } from 'eslint'
 
 /**
- * prettier 関連の eslint プリセット
+ * スタイル関連の eslint プリセット
  * - 特に eslint と競合しそうなルールを記述する
- * - prettier と eslint は競合するので最後に読み込む
  */
-const prettier: Linter.Config = {
+module.exports = {
   extends: ['plugin:editorconfig/noconflict', 'prettier'],
   plugins: ['editorconfig'],
   rules: {
@@ -15,8 +14,6 @@ const prettier: Linter.Config = {
     // indent: ['error', 2, { SwitchCase: 1 }],
     // 詳細なインデントは競合するので無効にして prettier に任せる
 
-    // 改行コードを LF に
-    'linebreak-style': ['error', 'unix'],
     // ダブルクォーテーションを禁止
     quotes: ['error', 'single'],
     // セミコロンを禁止
@@ -39,6 +36,4 @@ const prettier: Linter.Config = {
       },
     },
   ],
-}
-
-module.exports = prettier
+} satisfies Linter.Config

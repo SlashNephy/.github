@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 /**
  * React 関連の eslint プリセット
  */
-const react: Linter.Config = {
+module.exports = {
   extends: [
     'airbnb/hooks',
     'plugin:react/recommended',
@@ -91,6 +91,4 @@ const react: Linter.Config = {
       },
     },
   ],
-}
-
-module.exports = react
+} satisfies Linter.Config

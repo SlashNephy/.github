@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 
-const config: Linter.Config = {
+module.exports = {
   rules: {
     'import/no-default-export': 'off',
     // import で devDependencies を許可
@@ -11,6 +11,4 @@ const config: Linter.Config = {
       },
     ],
   },
-}
-
-module.exports = config
+} satisfies Linter.Config

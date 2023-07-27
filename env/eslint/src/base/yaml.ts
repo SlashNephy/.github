@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 
-const yaml: Linter.Config = {
+module.exports = {
   extends: ['plugin:yml/standard', 'plugin:yml/prettier'],
   parser: 'yaml-eslint-parser',
   rules: {
@@ -16,6 +16,4 @@ const yaml: Linter.Config = {
       },
     },
   ],
-}
-
-module.exports = yaml
+} satisfies Linter.Config
