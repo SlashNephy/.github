@@ -2,22 +2,19 @@ import { resolve } from 'path'
 
 import type { Linter } from 'eslint'
 
-const config: Linter.Config = {
+module.exports = {
   root: true,
   extends: ['eslint:recommended', 'standard', 'airbnb'],
   overrides: [
     // JavaScript / TypeScript
     {
       files: '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-      extends: resolve(__dirname, 'javascript.js'),
+      extends: resolve(__dirname, 'base/javascript.js'),
     },
     // TypeScript
     {
       files: '**/*.{ts,mts,cts,tsx}',
-      extends: [
-        resolve(__dirname, 'typescript.js'),
-        'plugin:storybook/recommended',
-      ],
+      extends: [resolve(__dirname, 'base/typescript.js')],
     },
     // jest / vitest
     {
@@ -25,42 +22,45 @@ const config: Linter.Config = {
         '**/*.test.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
         '**/test/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       ],
-      extends: [resolve(__dirname, 'jest.js'), resolve(__dirname, 'vitest.js')],
+      extends: [
+        resolve(__dirname, 'framework/jest.js'),
+        resolve(__dirname, 'framework/vitest.js'),
+      ],
     },
     // React
     {
       files: '**/*.{jsx,tsx}',
-      extends: resolve(__dirname, 'react.js'),
+      extends: resolve(__dirname, 'framework/react.js'),
     },
     // Emotion
     {
       files: '**/*.{jsx,tsx}',
-      extends: resolve(__dirname, 'emotion.js'),
+      extends: resolve(__dirname, 'framework/emotion.js'),
     },
     // Next.js
     {
       files: '**/pages/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-      extends: resolve(__dirname, 'next.js.js'),
+      extends: resolve(__dirname, 'framework/next.js.js'),
     },
     // JSON 共通ルール
     {
       files: '**/*.json',
-      extends: resolve(__dirname, 'json.js'),
+      extends: resolve(__dirname, 'base/json.js'),
     },
     // YAML 共通ルール
     {
       files: '**/*.{yml,yaml}',
-      extends: resolve(__dirname, 'yaml.js'),
+      extends: resolve(__dirname, 'base/yaml.js'),
     },
     // package.json
     {
       files: '**/package.json',
-      extends: resolve(__dirname, 'package.json.js'),
+      extends: resolve(__dirname, 'presets/package.json.js'),
     },
     // UserScript
     {
       files: '**/*.user.js',
-      extends: resolve(__dirname, 'userscript.js'),
+      extends: resolve(__dirname, 'presets/userscript.js'),
     },
     // Node.js
     {
@@ -68,20 +68,18 @@ const config: Linter.Config = {
         '**/bin/**/*.{js,mjs,cjs,ts,mts,cts}',
         '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
       ],
-      extends: resolve(__dirname, 'node.js'),
+      extends: resolve(__dirname, 'presets/node.js'),
     },
     // 構成ファイル
     {
       files: '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
-      extends: resolve(__dirname, 'config.js'),
+      extends: resolve(__dirname, 'presets/config.js'),
     },
     // 最後に prettier を適用
     {
       files: '**/*',
-      extends: resolve(__dirname, 'prettier.js'),
+      extends: resolve(__dirname, 'base/style.js'),
     },
   ],
   ignorePatterns: ['**/node_modules/**'],
-}
-
-module.exports = config
+} satisfies Linter.Config

@@ -3,9 +3,7 @@ import type { Linter } from 'eslint'
 /**
  * vitest 関連の eslint プリセット
  */
-const vitest: Linter.Config = {
+module.exports = {
   plugins: ['vitest'],
   rules: {},
-}
-
-module.exports = vitest
+} satisfies Linter.Config

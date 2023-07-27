@@ -3,15 +3,15 @@ import type { Linter } from 'eslint'
 /**
  * TypeScript 関連の eslint プリセット
  */
-const typescript: Linter.Config = {
+module.exports = {
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:@typescript-eslint/strict',
+    'plugin:@typescript-eslint/strict-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:import/typescript',
     'plugin:no-void-return-type/recommended',
+    'plugin:storybook/recommended',
   ],
-  plugins: ['@typescript-eslint', 'deprecation'],
+  plugins: ['@typescript-eslint', 'deprecation', 'tsdoc'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
@@ -178,7 +178,7 @@ const typescript: Linter.Config = {
         ignorePackages: true,
       },
     ],
+    // TSDoc
+    'tsdoc/syntax': 'warn',
   },
-}
-
-module.exports = typescript
+} satisfies Linter.Config

@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 /**
  * Emotion 関連の eslint プリセット
  */
-const emotion: Linter.Config = {
+module.exports = {
   plugins: ['@emotion', 'css-reorder'],
   rules: {
     '@emotion/pkg-renaming': 'error',
@@ -17,6 +17,4 @@ const emotion: Linter.Config = {
       },
     ],
   },
-}
-
-module.exports = emotion
+} satisfies Linter.Config

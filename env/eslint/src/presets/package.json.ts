@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 
-const packageJson: Linter.Config = {
+module.exports = {
   extends: ['plugin:package-json/recommended'],
   plugins: ['package-json'],
   env: {
@@ -20,6 +20,7 @@ const packageJson: Linter.Config = {
         'repository',
         'license',
         'files',
+        'exports',
         'publishConfig',
         'scripts',
         'dependencies',
@@ -33,6 +34,4 @@ const packageJson: Linter.Config = {
       ],
     ],
   },
-}
-
-module.exports = packageJson
+} satisfies Linter.Config
