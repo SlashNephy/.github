@@ -19,7 +19,7 @@
     "start": "ts-node bin/update-webhooks.ts"
   },
   "dependencies": {
-    "@octokit/rest": "19.0.11",
+    "@octokit/rest": "19.0.13",
     "dotenv": "16.0.3",
     "zod": "3.21.4"
   },
