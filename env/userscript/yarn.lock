@@ -1766,7 +1766,7 @@ __metadata:
     "@types/tampermonkey": 4.0.10
     "@typescript-eslint/eslint-plugin": 5.59.5
     "@typescript-eslint/parser": 5.59.5
-    "@xpadev-net/niconicomments": 0.2.51
+    "@xpadev-net/niconicomments": 0.2.55
     concurrently: 8.0.1
     eslint: 8.40.0
     eslint-plugin-deprecation: 1.4.1
@@ -2212,10 +2212,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xpadev-net/niconicomments@npm:0.2.51":
-  version: 0.2.51
-  resolution: "@xpadev-net/niconicomments@npm:0.2.51"
-  checksum: 63e16f3cf032aba315a192542953e991ac25abc45eea827b20cc66a4c8d893843666d59ec5fa08ea69e5f340951b10725bc1c4849d999ff09eba3f91948f0f6b
+"@xpadev-net/niconicomments@npm:0.2.55":
+  version: 0.2.55
+  resolution: "@xpadev-net/niconicomments@npm:0.2.55"
+  checksum: f70c0d9b12c71efac0c24161f3a57720dc889534f813bc3a865cbdba69e1f921bdfbb450d7282ef1b583c1f3b3f988911ac6d67c2ea35847fb9b569ca8fe357f
   languageName: node
   linkType: hard
 
