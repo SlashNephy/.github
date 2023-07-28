@@ -95,6 +95,8 @@ declare global {
 // scripts/pages/gamePage/menuBar/socialStatus.js
 declare global {
   declare class SocialStatus {
+    public $entry: JQuery
+
     public currentStatus: number
 
     public STATUS_IDS: {
@@ -104,7 +106,7 @@ declare global {
       INVISIBLE: number
     }
 
-    public constructor(public $entry: JQuery)
+    public constructor($entry: JQuery)
 
     public changeSocialStatus(status: number): void
 
@@ -149,9 +151,13 @@ declare global {
 // scripts/pages/gamePage/shared/listener.js
 declare global {
   declare class Listener<C extends keyof EventMap> {
+    public command: C
+
+    public callback: (event: EventMap[C]) => void
+
     public bound: boolean
 
-    public constructor(public command: C, public callback: (event: EventMap[C]) => void)
+    public constructor(command: C, callback: (event: EventMap[C]) => void)
 
     public fire(event: EventMap[C]): void
 
@@ -270,13 +276,15 @@ declare class AmqAwesomeplete {
 }
 
 declare class AutoCompleteController {
+  public $input: JQuery
+
   public list: string[]
 
   public version: number
 
   public awesomepleteInstance?: AmqAwesomeplete
 
-  public constructor(public $input: JQuery)
+  public constructor($input: JQuery)
 
   public updateList()
 
@@ -286,6 +294,8 @@ declare class AutoCompleteController {
 }
 
 declare class QuizAnswerInput {
+  public skipController: unknown
+
   public $input: JQuery
 
   public $inputContainer: JQuery
@@ -298,7 +308,7 @@ declare class QuizAnswerInput {
 
   public _inFocus: boolean
 
-  public constructor(public skipController: unknown)
+  public constructor(skipController: unknown)
 
   public get inFocus(): boolean
 

@@ -10,6 +10,8 @@
     "strict": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "useUnknownInCatchVariables": true
-  }
+    "useUnknownInCatchVariables": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "include": ["src/**/*.ts"]
 }

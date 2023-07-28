@@ -10,14 +10,14 @@ const main = () => {
       continue
     }
 
-    const dateElement = card.querySelector<HTMLSpanElement>('div.col div[class="small"] span.text-muted')
+    const content = card.querySelector<HTMLSpanElement>('div.col div[class="small"] span.text-muted')?.textContent
 
     // 放送日時が存在しない場合は無視
-    if (dateElement === null || dateElement.textContent === null) {
+    if (!content) {
       continue
     }
 
-    const datetime = Date.parse(dateElement.textContent)
+    const datetime = Date.parse(content)
     const today = Date.now()
 
     // 24時間以上後の場合は非表示にする
