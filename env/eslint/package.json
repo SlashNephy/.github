@@ -82,11 +82,11 @@
     "ts-node": "10.9.1"
   },
   "packageManager": "yarn@3.6.1",
+  "eslintConfig": {
+    "extends": "./dist"
+  },
   "keywords": [
     "eslint",
     "eslintconfig"
-  ],
-  "eslintConfig": {
-    "extends": "./dist"
-  }
+  ]
 }
