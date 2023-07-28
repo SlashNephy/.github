@@ -5,13 +5,11 @@ import type { Linter } from 'eslint'
  */
 module.exports = {
   extends: [
-    'airbnb/hooks',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:css-import-order/recommended',
-    'plugin:jsx-a11y/recommended',
   ],
-  plugins: ['css-import-order', 'react-refresh'],
+  plugins: ['react-hooks', 'css-import-order'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -21,6 +19,7 @@ module.exports = {
   },
   env: {
     browser: true,
+    node: true,
   },
   settings: {
     react: {
@@ -81,7 +80,6 @@ module.exports = {
     'react/jsx-no-useless-fragment': 'off',
     // defaultProps を使わない
     'react/require-default-props': 'off',
-    'react-refresh/only-export-components': 'warn',
   },
   overrides: [
     {

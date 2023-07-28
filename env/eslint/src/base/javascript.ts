@@ -1,3 +1,5 @@
+import standard from 'eslint-config-standard'
+
 import type { Linter } from 'eslint'
 
 /**
@@ -10,7 +12,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:xss/recommended',
   ],
-  plugins: ['promise', 'unused-imports'],
+  plugins: ['import', 'promise', 'n', 'unused-imports'],
   env: {
     node: true,
     es2022: true,
@@ -18,7 +20,13 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  globals: {
+    document: 'readonly',
+    navigator: 'readonly',
+    window: 'readonly',
+  },
   rules: {
+    ...standard.rules,
     // 不要なルール無効化コメントを報告
     'eslint-comments/no-unused-disable': 'error',
     // default export を禁止
