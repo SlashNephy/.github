@@ -1599,9 +1599,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-commonjs@npm:25.0.1":
-  version: 25.0.1
-  resolution: "@rollup/plugin-commonjs@npm:25.0.1"
+"@rollup/plugin-commonjs@npm:25.0.3":
+  version: 25.0.3
+  resolution: "@rollup/plugin-commonjs@npm:25.0.3"
   dependencies:
     "@rollup/pluginutils": ^5.0.1
     commondir: ^1.0.1
@@ -1614,7 +1614,7 @@ __metadata:
   peerDependenciesMeta:
     rollup:
       optional: true
-  checksum: 886340bac6ba8c20bb16e3b7fa4d0357019708043697153e7b18cecb7e1fdbe7ec6f26974079f32091c6168c67300960f023ad3d167d2d0d9a9e3bd713cd22a4
+  checksum: 1b94218cc80364d218e5d526e9199620151fe8ac489abc293a75741af5ffb2bfa90da06cffc4a1b9a4091a6f8cda63a6f7c557881b12188f9e0a05f08c147fd0
   languageName: node
   linkType: hard
 
@@ -1753,7 +1753,7 @@ __metadata:
     "@babel/preset-typescript": 7.21.5
     "@geolonia/japanese-numeral": 0.1.16
     "@rollup/plugin-babel": 6.0.3
-    "@rollup/plugin-commonjs": 25.0.1
+    "@rollup/plugin-commonjs": 25.0.3
     "@rollup/plugin-node-resolve": 15.1.0
     "@rollup/plugin-typescript": 11.1.1
     "@slashnephy/eslint-config": 0.5.3
