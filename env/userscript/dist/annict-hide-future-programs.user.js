@@ -29,11 +29,11 @@
                 card.style.display = 'none';
                 continue;
             }
-            const dateElement = card.querySelector('div.col div[class="small"] span.text-muted');
-            if (dateElement === null || dateElement.textContent === null) {
+            const content = card.querySelector('div.col div[class="small"] span.text-muted')?.textContent;
+            if (!content) {
                 continue;
             }
-            const datetime = Date.parse(dateElement.textContent);
+            const datetime = Date.parse(content);
             const today = Date.now();
             if (datetime > today + 24 * 60 * 60 * 1000) {
                 card.style.display = 'none';
