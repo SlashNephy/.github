@@ -6,7 +6,7 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 
 ## UserScript
 
-| ⚙ スクリプト                      | バージョン | 📥 インストール                                                                                                |
+| ⚙ スクリプト                     | バージョン | 📥 インストール                                                                                                |
 | :-------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------- |
 | Annict Work Links                 | 0.3.2      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js                 |
 | dominion.games Auto Table Setter  | 0.4.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js |
@@ -151,13 +151,13 @@ Delete キーを押下することで解答欄のテキストをクリアする�
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-following-viewings.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/annict-following-viewings.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/Annict_%E3%81%AE%E4%BD%9C%E5%93%81%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E4%B8%AD%E3%81%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E8%A6%96%E8%81%B4%E7%8A%B6%E6%B3%81%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
-Annict の作品ページにフォロー中のユーザーの視聴状況を表示します。
+Annictの作品ページにフォロー中のユーザーの視聴状況を表示します。
 
 ### AniList Status Filter (v0.1.1)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/anilist-status-filter.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/AniList_%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E8%A6%96%E8%81%B4%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%81%AB%E5%BF%9C%E3%81%98%E3%81%A6%E4%BD%9C%E5%93%81%E3%82%92%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%81%99%E3%82%8B_UserScript)
 
-AniList の作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。
+AniListの作品検索ページ内で自分の視聴ステータスでフィルターできるようにします。
 
 ### AMQ i18n Titles (v0.1.2)
 
@@ -175,4 +175,4 @@ window の型定義を生成する関数を登録します。
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/anime-comment-overlay.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
-アニメ配信サイト (d アニメストア, ABEMA ビデオ) で実況コメをオーバーレイ表示します。
+アニメ配信サイト (dアニメストア, ABEMAビデオ) で実況コメをオーバーレイ表示します。

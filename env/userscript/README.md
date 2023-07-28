@@ -6,7 +6,7 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 
 ## UserScript
 
-| ⚙ Script                          | Latest Version | 📥 Install                                                                                                     |
+| ⚙ Script                         | Latest Version | 📥 Install                                                                                                     |
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------- |
 | Annict Work Links                 | 0.3.2          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/annict-work-links.user.js                 |
 | dominion.games Auto Table Setter  | 0.4.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/dominion-online-auto-table-setter.user.js |
