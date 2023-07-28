@@ -52,5 +52,5 @@ $ bash ~/.github/script/install.sh
 
 ```console
 $ git clone git@github.com:SlashNephy/.github.git ~\.github
-$ powershell ~\.github\script\install.ps1
+$ pwsh .github\script\install.ps1
 ```
