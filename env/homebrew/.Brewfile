@@ -82,6 +82,8 @@ brew "cloudflared"
 brew "cmake"
 # Color-highlighted diff(1) output
 brew "colordiff"
+# Package acting as bridge between Node projects and their package managers
+brew "corepack"
 # Open source suite of directory software
 brew "openldap"
 # Tool for downloading RTMP streaming media
@@ -226,8 +228,6 @@ brew "php"
 brew "pipenv"
 # Perl binary manager
 brew "plenv"
-# Fast, disk space efficient package manager
-brew "pnpm"
 # Python package management tool
 brew "poetry"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
@@ -271,7 +271,9 @@ brew "wireshark", link: false
 # Terminal UI for tshark, inspired by Wireshark
 brew "termshark"
 # Tool to build, change, and version infrastructure
-brew "terraform"
+brew "terraform", link: false
+# Terraform version manager inspired by rbenv
+brew "tfenv"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -294,8 +296,6 @@ brew "wimlib"
 brew "winetricks"
 # Linter for YAML files
 brew "yamllint"
-# JavaScript package manager
-brew "yarn"
 # Tool for managing your YubiKey configuration
 brew "ykman"
 # Download YouTube videos from the command-line
@@ -441,6 +441,8 @@ cask "iterm2"
 cask "jetbrains-toolbox"
 # Real-time earthquake monitoring software for Japan
 cask "jquake"
+# Keyboard customizer
+cask "karabiner-elements"
 # File archiver
 cask "keka"
 # End-to-end encryption software
