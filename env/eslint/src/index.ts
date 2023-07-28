@@ -42,7 +42,7 @@ module.exports = {
     },
     // Next.js
     {
-      files: '**/pages/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+      files: '**/{pages,app}/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       extends: resolve(__dirname, 'framework/next.js.js'),
     },
     // JSON 共通ルール
