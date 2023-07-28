@@ -65,10 +65,10 @@
     "eslint-plugin-xss": "0.1.12",
     "eslint-plugin-yml": "1.7.0",
     "typescript": "5.1.6",
-    "yaml-eslint-parser": "^1.2.2"
+    "yaml-eslint-parser": "1.2.2"
   },
   "peerDependencies": {
-    "eslint": "8.45.0"
+    "eslint": "^8"
   },
   "devDependencies": {
     "@slashnephy/prettier-config": "0.1.25",
