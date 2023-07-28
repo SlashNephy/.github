@@ -24,7 +24,7 @@
     "format": "concurrently -n format: 'yarn:format:*'",
     "format:eslint": "yarn build && yarn lint:eslint --fix",
     "format:prettier": "yarn lint:prettier --write",
-    "lint": "TEST_RULES=true concurrently -n lint: 'yarn:lint:*'",
+    "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "yarn build && eslint .",
     "lint:prettier": "prettier --check .",
     "publish": "yarn clean && yarn build && yarn npm publish"
