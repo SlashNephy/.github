@@ -18,7 +18,6 @@ type ListOrgReposResponseData =
 export type RepositoryData =
   | ListUserReposResponseData
   | ListOwnerReposResponseData
-  | ListOrgReposResponseData
 type ListWebhooksResponseData =
   RestEndpointMethodTypes['repos']['listWebhooks']['response']['data'][0]
 

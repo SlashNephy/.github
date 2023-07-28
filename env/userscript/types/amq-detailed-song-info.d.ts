@@ -15,14 +15,14 @@ declare global {
 export type CustomRow = {
   readonly id: string
   readonly title: string
-  readonly isEnabled?(): boolean
-  readonly content(event: AnswerResultsEvent): string | null | Promise<string | null>
+  isEnabled?(): boolean
+  content(event: AnswerResultsEvent): string | null | Promise<string | null>
 }
 
 export type CustomLink = {
   readonly id: string
   readonly title: string
   readonly target?: string
-  readonly isEnabled?(): boolean
-  readonly href(event: AnswerResultsEvent): string | null
+  isEnabled?(): boolean
+  href(event: AnswerResultsEvent): string | null
 }

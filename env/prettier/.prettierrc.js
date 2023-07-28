@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('./dist/src/index'),
+  ...require('./dist'),
 }
