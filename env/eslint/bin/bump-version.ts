@@ -8,6 +8,10 @@ const bumpVersion = async () => {
   const packageJson = JSON.parse(content) as { version: string }
 
   const [major, minor, patch] = packageJson.version.split('.')
+  if (!major || !minor || !patch) {
+    throw new Error('Invalid version number detected')
+  }
+
   const patchNumber = parseInt(patch, 10)
   packageJson.version = `${major}.${minor}.${patchNumber + 1}`
 
