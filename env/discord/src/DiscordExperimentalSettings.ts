@@ -1,5 +1,5 @@
 // eslint-disable-next-line eslint-comments/disable-enable-pair
-/* eslint-disable eqeqeq, no-proto, class-methods-use-this */
+/* eslint-disable eqeqeq, no-proto */
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
