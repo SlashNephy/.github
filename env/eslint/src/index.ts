@@ -78,10 +78,7 @@ module.exports = {
     },
     // Node.js
     {
-      files: [
-        '**/bin/**/*.{js,mjs,cjs,ts,mts,cts}',
-        '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
-      ],
+      files: '**/bin/**/*.{js,mjs,cjs,ts,mts,cts}',
       extends: resolve(__dirname, 'presets/node.js'),
     },
     // ビルドツールの構成ファイル
@@ -90,7 +87,10 @@ module.exports = {
         '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
         '**/codegen.{js,mjs,cjs,ts,mts,cts}',
       ],
-      extends: resolve(__dirname, 'presets/config.js'),
+      extends: [
+        resolve(__dirname, 'presets/config.js'),
+        resolve(__dirname, 'presets/node.js'),
+      ],
     },
     // package.json
     {
