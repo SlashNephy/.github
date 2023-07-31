@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "1.0.5",
-    "@slashnephy/prettier-config": "0.1.26",
+    "@slashnephy/prettier-config": "0.1.27",
     "@types/node": "20.4.5",
     "concurrently": "8.2.0",
     "dts-gen": "0.6.1",
