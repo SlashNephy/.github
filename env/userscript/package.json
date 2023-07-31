@@ -39,7 +39,7 @@
     "@rollup/plugin-commonjs": "25.0.3",
     "@rollup/plugin-node-resolve": "15.1.0",
     "@rollup/plugin-typescript": "11.1.2",
-    "@slashnephy/eslint-config": "1.0.4",
+    "@slashnephy/eslint-config": "1.0.5",
     "@slashnephy/prettier-config": "0.1.26",
     "@types/babel__core": "7.20.1",
     "@types/babel__preset-env": "7.9.2",
