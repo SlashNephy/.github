@@ -86,7 +86,10 @@ module.exports = {
     },
     // ビルドツールの構成ファイル
     {
-      files: '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
+      files: [
+        '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
+        '**/codegen.{js,mjs,cjs,ts,mts,cts}',
+      ],
       extends: resolve(__dirname, 'presets/config.js'),
     },
     // package.json
