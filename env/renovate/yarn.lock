@@ -2149,7 +2149,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 36.26.1
+    renovate: 36.27.1
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -8774,9 +8774,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:36.26.1":
-  version: 36.26.1
-  resolution: "renovate@npm:36.26.1"
+"renovate@npm:36.27.1":
+  version: 36.27.1
+  resolution: "renovate@npm:36.27.1"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -8877,7 +8877,7 @@ __metadata:
     slugify: 1.6.6
     source-map-support: 0.5.21
     traverse: 0.6.7
-    tslib: 2.6.0
+    tslib: 2.6.1
     upath: 2.0.1
     url-join: 4.0.1
     validate-npm-package-name: 5.0.0
@@ -8890,7 +8890,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 482a43e320523ba6b2611610437fe95e115173d0a2d31251b3e82e88e49e2533e278755773be6448f27942c1fcd553b642b863cdbc468660cc40027d034ac5a2
+  checksum: a0bc5363b51e9f29836c27f9d17114710766ca2dbaab5402363afb344e638354e12d799844a294cdd87f600d3780dfc4a9ed6d39c79b647c240c8410b9b4ff97
   languageName: node
   linkType: hard
 
@@ -9930,10 +9930,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.6.0":
-  version: 2.6.0
-  resolution: "tslib@npm:2.6.0"
-  checksum: c01066038f950016a18106ddeca4649b4d76caa76ec5a31e2a26e10586a59fceb4ee45e96719bf6c715648e7c14085a81fee5c62f7e9ebee68e77a5396e5538f
+"tslib@npm:2.6.1":
+  version: 2.6.1
+  resolution: "tslib@npm:2.6.1"
+  checksum: b0d176d176487905b66ae4d5856647df50e37beea7571c53b8d10ba9222c074b81f1410fb91da13debaf2cbc970663609068bdebafa844ea9d69b146527c38fe
   languageName: node
   linkType: hard
 
