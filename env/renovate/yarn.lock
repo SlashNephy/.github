@@ -2149,7 +2149,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 36.33.3
+    renovate: 36.33.4
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -8601,14 +8601,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"re2@npm:1.19.1":
-  version: 1.19.1
-  resolution: "re2@npm:1.19.1"
+"re2@npm:1.20.0":
+  version: 1.20.0
+  resolution: "re2@npm:1.20.0"
   dependencies:
     install-artifact-from-github: ^1.3.3
     nan: ^2.17.0
     node-gyp: ^9.4.0
-  checksum: 44f752ebc03b9973d797f126787664f2763dc983d52a872833b4c8988e64db644a74fa76570112b1cd6e44b2f845d3e58e9779f1a917cb5a511044a6ba62a206
+  checksum: 81c5d06d443928fc93ec8a4d8bcf7a747950242eecf77f8b856e8b3b15b7ea603ed72de104ecad93bb478c7e3972f27f0efc3bf3e67738e13e203287d204fd8f
   languageName: node
   linkType: hard
 
@@ -8774,9 +8774,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:36.33.3":
-  version: 36.33.3
-  resolution: "renovate@npm:36.33.3"
+"renovate@npm:36.33.4":
+  version: 36.33.4
+  resolution: "renovate@npm:36.33.4"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -8864,7 +8864,7 @@ __metadata:
     parse-link-header: 2.0.0
     prettier: 2.8.8
     quick-lru: 5.1.1
-    re2: 1.19.1
+    re2: 1.20.0
     redis: 4.6.7
     remark: 13.0.0
     remark-github: 10.1.0
@@ -8890,7 +8890,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 92938f2a67c88e06455fa9fa4a7d488a3443b536107315c2c7b55a72d2865c1dd8dbb5920a1104f6014ec722c7ce185434c10844c8ff8ede6b64a9ea1d1d7f0a
+  checksum: f60504e492d07b1b00e51ac82277f5f628ff4c67cf7679256b2171f0c24f69dfb1fe327c001700ccdec1f24e1c023a62eb860caf8f4b0ff958af0cd3d6f12785
   languageName: node
   linkType: hard
 
