@@ -3,13 +3,14 @@ import NiconiComments from '@xpadev-net/niconicomments'
 import { maxPrograms, targetFps } from './anime-comment-overlay/constant'
 import { AbemaVideoOverlay } from './anime-comment-overlay/overlay/abema-video'
 import { DanimeOverlay } from './anime-comment-overlay/overlay/danime'
+import { NetflixOverlay } from './anime-comment-overlay/overlay/netflix'
 import { fetchComments, findPrograms } from './anime-comment-overlay/provider'
 import { NiconicoJikkyoKakoLogProvider } from './anime-comment-overlay/provider/niconico'
 
 import type { CommentOverlayModule } from './anime-comment-overlay/overlay'
 import type { CommentProviderModule } from './anime-comment-overlay/provider'
 
-const overlays: CommentOverlayModule[] = [DanimeOverlay, AbemaVideoOverlay]
+const overlays: CommentOverlayModule[] = [DanimeOverlay, AbemaVideoOverlay, NetflixOverlay]
 const providers: CommentProviderModule[] = [NiconicoJikkyoKakoLogProvider]
 
 async function initializeOverlay(overlay: CommentOverlayModule, params: string[]): Promise<void> {

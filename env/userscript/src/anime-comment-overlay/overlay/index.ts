@@ -32,7 +32,7 @@ export type Media =
       }
       episode: {
         title?: string
-        number?: string
+        number?: string | number
       }
     }
   | {
@@ -56,5 +56,16 @@ export type Media =
       episode: {
         title: string
         number: string
+      }
+    }
+  | {
+      platform: 'netflix'
+      work: {
+        title: string
+        annictIds: number[]
+      }
+      episode: {
+        title: string
+        number: number
       }
     }

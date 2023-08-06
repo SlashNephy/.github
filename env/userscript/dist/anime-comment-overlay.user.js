@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name            Anime Comment Overlay
 // @namespace       https://github.com/SlashNephy
-// @version         0.2.1
+// @version         0.3.0
 // @author          SlashNephy
 // @description     Display overlay of comments on various streaming sites.
-// @description:ja  アニメ配信サイト (dアニメストア, ABEMAビデオ) で実況コメをオーバーレイ表示します。
+// @description:ja  アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) で実況コメをオーバーレイ表示します。
 // @homepage        https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
 // @homepageURL     https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
 // @icon            https://www.google.com/s2/favicons?sz=64&domain=animestore.docomo.ne.jp
@@ -13,7 +13,8 @@
 // @supportURL      https://github.com/SlashNephy/.github/issues
 // @match           https://animestore.docomo.ne.jp/animestore/sc_d_pc?partId=*
 // @match           https://abema.tv/video/episode/*
-// @require         https://cdn.jsdelivr.net/npm/@xpadev-net/niconicomments@0.2.51/dist/bundle.min.js
+// @match           https://www.netflix.com/watch/*
+// @require         https://cdn.jsdelivr.net/npm/@xpadev-net/niconicomments@0.2.54/dist/bundle.min.js
 // @require         https://cdn.jsdelivr.net/gh/NaturalIntelligence/fast-xml-parser@ecf6016f9b48aec1a921e673158be0773d07283e/lib/fxp.min.js
 // @connect         jikkyo.tsukumijima.net
 // @connect         api.annict.com
@@ -343,6 +344,97 @@
         },
     };
 
+    const executeGmXhr = async (request) => new Promise((resolve, reject) => {
+        GM_xmlhttpRequest({
+            ...request,
+            onload: (response) => {
+                resolve(response);
+            },
+            onerror: (error) => {
+                reject(error);
+            },
+        });
+    });
+
+    async function fetchNetflixMediaMetadata(baseUrl, episodeId) {
+        const { responseText } = await executeGmXhr({
+            method: 'GET',
+            url: `${baseUrl}/metadata?movieid=${episodeId}`,
+        });
+        return JSON.parse(responseText);
+    }
+
+    const NetflixOverlay = {
+        name: 'Netflix',
+        url: /^https:\/\/www\.netflix.com\/watch\/(\d+)/,
+        initializeContainers() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1920;
+            canvas.height = 1080;
+            canvas.style.position = 'relative';
+            canvas.style.objectFit = 'contain';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.zIndex = '10';
+            awaitElement('video')
+                .then((video) => {
+                video.insertAdjacentElement('afterend', canvas);
+            })
+                .catch((e) => {
+                console.error(`[anime-comment-overlay] failed to find video element: ${e}`);
+            });
+            const video = () => document.querySelector('video');
+            return { video, canvas };
+        },
+        async detectMedia(episodeId) {
+            const reactContextScript = Array.from(document.getElementsByTagName('script')).find((e) => e.textContent?.includes('reactContext') === true);
+            if (reactContextScript === undefined) {
+                throw new Error('failed to find reactContext script');
+            }
+            const reactContextJson = reactContextScript.textContent
+                ?.replace(/^.+reactContext = (.+);$/, '$1')
+                .replace(/\\x(.{2})/g, (_, x) => String.fromCharCode(parseInt(x, 16)));
+            if (reactContextJson === undefined) {
+                throw new Error('failed to extract reactContext json');
+            }
+            const context = JSON.parse(reactContextJson);
+            const metadata = await fetchNetflixMediaMetadata(`${context.models.services.data.memberapi.protocol}://${context.models.services.data.memberapi.hostname}${context.models.services.data.memberapi.path[0]}`, episodeId);
+            const episode = metadata.video.seasons
+                .flatMap((s) => s.episodes)
+                .find((e) => e.episodeId === metadata.video.currentEpisode);
+            if (episode === undefined) {
+                throw new Error('failed to find episode');
+            }
+            const broadcasts = await fetchAnnictBroadcastData();
+            return {
+                platform: 'netflix',
+                work: {
+                    title: metadata.video.title,
+                    annictIds: broadcasts
+                        .filter((x) => x.channel_id === AnnictSupportedVodChannelIds.netflix && x.vod_code === metadata.video.id.toString())
+                        .map((x) => x.work_id),
+                },
+                episode: {
+                    title: episode.title,
+                    number: episode.seq,
+                },
+            };
+        },
+        addEventListener(event, callback) {
+            switch (event) {
+                case 'mediaChanged':
+                    document.addEventListener('popstate', callback);
+            }
+        },
+        removeEventListener(event, callback) {
+            switch (event) {
+                case 'mediaChanged': {
+                    document.removeEventListener('popstate', callback);
+                }
+            }
+        },
+    };
+
     var dist = {};
 
     var utils = {};
@@ -640,18 +732,6 @@
         return response.json();
     }
 
-    const executeGmXhr = async (request) => new Promise((resolve, reject) => {
-        GM_xmlhttpRequest({
-            ...request,
-            onload: (response) => {
-                resolve(response);
-            },
-            onerror: (error) => {
-                reject(error);
-            },
-        });
-    });
-
     async function fetchSyobocalProgLookup(tids) {
         const { responseText } = await executeGmXhr({
             url: `https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=${tids.join(',')}`,
@@ -678,15 +758,15 @@
             ?.map((p) => {
             const startedAt = Date.parse(p.StTime) / 1000;
             if (Date.now() / 1000 < startedAt) {
-                return;
+                return null;
             }
             const endedAt = Date.parse(p.EdTime) / 1000;
             if (Date.now() / 1000 < endedAt) {
-                return;
+                return null;
             }
             const channel = saya.channels.find((c) => c.syobocalId === p.ChID);
             if (channel === undefined) {
-                return;
+                return null;
             }
             console.info(`[anime-comment-overlay] found program: ${channel.name} (${p.StTime} ~ ${p.EdTime})`);
             return {
@@ -695,10 +775,13 @@
                 endedAt,
             };
         })
-            ?.filter((x) => x !== undefined)
+            ?.filter((x) => x !== null)
             ?.sort((a, b) => a.startedAt - b.startedAt) ?? []);
     }
     function extractEpisodeNumber(text) {
+        if (typeof text === 'number') {
+            return text;
+        }
         if (text === undefined) {
             return undefined;
         }
@@ -875,7 +958,7 @@
         console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} comments shifted)`, program);
     }
 
-    const overlays = [DanimeOverlay, AbemaVideoOverlay];
+    const overlays = [DanimeOverlay, AbemaVideoOverlay, NetflixOverlay];
     const providers = [NiconicoJikkyoKakoLogProvider];
     async function initializeOverlay(overlay, params) {
         const media = await overlay.detectMedia(...params);
