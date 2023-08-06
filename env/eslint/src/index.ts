@@ -43,7 +43,12 @@ module.exports = {
     },
     // Next.js
     {
-      files: '**/{pages,app}/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+      files: [
+        // <= 12
+        '**/pages/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+        // >= 13
+        '**/src/app/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+      ],
       extends: resolve(__dirname, 'framework/next.js.js'),
     },
     // Vite
