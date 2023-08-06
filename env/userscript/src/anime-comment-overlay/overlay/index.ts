@@ -16,7 +16,6 @@ export type CommentOverlayModule = {
 export type Containers = {
   video: HTMLVideoElement | (() => HTMLVideoElement | null)
   canvas: HTMLCanvasElement
-  toggleButton?: HTMLElement
 }
 
 export type CommentOverlayModuleEventMap = {

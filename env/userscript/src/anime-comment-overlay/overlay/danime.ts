@@ -27,15 +27,7 @@ export const DanimeOverlay: CommentOverlayModule = {
       })
 
     const video = () => document.querySelector<HTMLVideoElement>('video#video')
-
-    const toggleButton = document.createElement('div')
-    toggleButton.classList.add('mainButton')
-    const innerButton = document.createElement('button')
-    innerButton.classList.add('fullscreenButton')
-    toggleButton.appendChild(innerButton)
-    document.querySelector('.buttonArea .time')?.insertAdjacentElement('afterend', toggleButton)
-
-    return { video, canvas, toggleButton }
+    return { video, canvas }
   },
   async detectMedia(partId: string): Promise<Media> {
     const info = await fetchDanimePartInfo(partId)
