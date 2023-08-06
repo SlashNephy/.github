@@ -20,13 +20,13 @@ async function initializeOverlay(overlay: CommentOverlayModule, params: string[]
   const programs = await findPrograms(media)
   console.log('[anime-comment-overlay] programs', programs)
 
-  const { video, canvas, toggleButton } = overlay.initializeContainers()
+  const { video, canvas } = overlay.initializeContainers()
   const renderer = new NiconiComments(canvas, undefined, {
     format: 'empty',
   })
 
   let isInitialized = false
-  let isHide = false
+  const isHide = false
   let cachedVideo: HTMLVideoElement | null = null
   const interval = setInterval(() => {
     if (!isInitialized || isHide) {
@@ -50,13 +50,6 @@ async function initializeOverlay(overlay: CommentOverlayModule, params: string[]
       renderer.drawCanvas(Math.floor(time * 100))
     }, 0)
   }, 1000 / targetFps)
-
-  toggleButton?.addEventListener('click', () => {
-    isHide = !isHide
-    if (isHide) {
-      renderer.clear()
-    }
-  })
 
   function onMediaChanged() {
     overlay.removeEventListener('mediaChanged', onMediaChanged)

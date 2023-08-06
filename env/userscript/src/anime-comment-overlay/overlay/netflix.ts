@@ -26,8 +26,6 @@ export const NetflixOverlay: CommentOverlayModule = {
         console.error(`[anime-comment-overlay] failed to find video element: ${e}`)
       })
 
-    // TODO: toggleButton
-
     const video = () => document.querySelector<HTMLVideoElement>('video')
     return { video, canvas }
   },
