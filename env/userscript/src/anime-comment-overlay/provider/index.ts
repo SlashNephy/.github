@@ -62,19 +62,19 @@ export async function findPrograms(media: Media): Promise<Program[]> {
         // まだ放送されてない
         const startedAt = Date.parse(p.StTime) / 1000
         if (Date.now() / 1000 < startedAt) {
-          return
+          return null
         }
 
         // まだ終わってない
         const endedAt = Date.parse(p.EdTime) / 1000
         if (Date.now() / 1000 < endedAt) {
-          return
+          return null
         }
 
         // しょぼかるのチャンネルID <-> saya のチャンネル変換
         const channel = saya.channels.find((c) => c.syobocalId === p.ChID)
         if (channel === undefined) {
-          return
+          return null
         }
 
         console.info(`[anime-comment-overlay] found program: ${channel.name} (${p.StTime} ~ ${p.EdTime})`)
@@ -85,12 +85,15 @@ export async function findPrograms(media: Media): Promise<Program[]> {
           endedAt,
         } satisfies Program
       })
-      ?.filter((x): x is NonNullable<typeof x> => x !== undefined)
+      ?.filter((x): x is NonNullable<typeof x> => x !== null)
       ?.sort((a, b) => a.startedAt - b.startedAt) ?? []
   )
 }
 
-function extractEpisodeNumber(text: string | undefined): number | undefined {
+function extractEpisodeNumber(text: string | number | undefined): number | undefined {
+  if (typeof text === 'number') {
+    return text
+  }
   if (text === undefined) {
     return undefined
   }
@@ -98,7 +101,7 @@ function extractEpisodeNumber(text: string | undefined): number | undefined {
   // TODO: ローマ数字対応
 
   // 全角 → 半角
-  // eslint-disable-next-line no-param-reassign
+
   text = text.replace(/[０-９]/g, (s) => String.fromCharCode(s.charCodeAt(0) - 65248))
 
   // アラビア数字 → number

@@ -63,7 +63,10 @@
   "eslintConfig": {
     "extends": [
       "@slashnephy/eslint-config"
-    ]
+    ],
+    "rules": {
+      "import/extensions": "off"
+    }
   },
   "browserslist": [
     "> 0.25%",
