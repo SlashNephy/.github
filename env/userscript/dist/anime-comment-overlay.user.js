@@ -304,13 +304,7 @@
                 console.error(`[anime-comment-overlay] failed to find video element: ${e}`);
             });
             const video = () => document.querySelector('video#video');
-            const toggleButton = document.createElement('div');
-            toggleButton.classList.add('mainButton');
-            const innerButton = document.createElement('button');
-            innerButton.classList.add('fullscreenButton');
-            toggleButton.appendChild(innerButton);
-            document.querySelector('.buttonArea .time')?.insertAdjacentElement('afterend', toggleButton);
-            return { video, canvas, toggleButton };
+            return { video, canvas };
         },
         async detectMedia(partId) {
             const info = await fetchDanimePartInfo(partId);
@@ -965,12 +959,12 @@
         console.log('[anime-comment-overlay] media', media);
         const programs = await findPrograms(media);
         console.log('[anime-comment-overlay] programs', programs);
-        const { video, canvas, toggleButton } = overlay.initializeContainers();
+        const { video, canvas } = overlay.initializeContainers();
         const renderer = new NiconiComments(canvas, undefined, {
             format: 'empty',
         });
         let isInitialized = false;
-        let isHide = false;
+        const isHide = false;
         let cachedVideo = null;
         const interval = setInterval(() => {
             if (!isInitialized || isHide) {
@@ -993,12 +987,6 @@
                 renderer.drawCanvas(Math.floor(time * 100));
             }, 0);
         }, 1000 / targetFps);
-        toggleButton?.addEventListener('click', () => {
-            isHide = !isHide;
-            if (isHide) {
-                renderer.clear();
-            }
-        });
         function onMediaChanged() {
             overlay.removeEventListener('mediaChanged', onMediaChanged);
             clearInterval(interval);
