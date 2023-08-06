@@ -31,7 +31,7 @@ env/userscript は [@SlashNephy](https://github.com/SlashNephy) が作成した 
 | AniList Status Filter             | 0.1.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anilist-status-filter.user.js             |
 | AMQ i18n Titles                   | 0.1.2      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-i18n-titles.user.js                   |
 | Detect Types                      | 0.1.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/detect-types.user.js                      |
-| Anime Comment Overlay             | 0.2.1      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js             |
+| Anime Comment Overlay             | 0.3.0      | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js             |
 
 ### Annict Work Links (v0.3.2)
 
@@ -171,8 +171,8 @@ AniListの作品検索ページ内で自分の視聴ステータスでフィル�
 
 window の型定義を生成する関数を登録します。
 
-### Anime Comment Overlay (v0.2.1)
+### Anime Comment Overlay (v0.3.0)
 
 [📥 インストール](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js) / [💻 ソースコード](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/anime-comment-overlay.ts) / [📖 解説記事](https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
-アニメ配信サイト (dアニメストア, ABEMAビデオ) で実況コメをオーバーレイ表示します。
+アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) で実況コメをオーバーレイ表示します。
