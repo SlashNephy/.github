@@ -11,6 +11,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "k1low/tap"
+tap "kayac/tap"
 tap "ktr0731/evans"
 tap "mackerelio/mackerel-agent"
 tap "minacle/chntpw"
@@ -322,6 +323,8 @@ brew "buildpacks/tap/pack"
 brew "gromgit/fuse/sshfs-mac"
 # tbls is a CI-Friendly tool for document a database, written in Go.
 brew "k1low/tap/tbls"
+# ecspresso is a deployment tool for Amazon ECS
+brew "kayac/tap/ecspresso"
 # Evans: more expressive universal gRPC client
 brew "ktr0731/evans/evans"
 brew "mackerelio/mackerel-agent/mackerel-agent"
