@@ -964,10 +964,9 @@
             format: 'empty',
         });
         let isInitialized = false;
-        const isHide = false;
         let cachedVideo = null;
-        const interval = setInterval(() => {
-            if (!isInitialized || isHide) {
+        const interval = window.setInterval(() => {
+            if (!isInitialized) {
                 return;
             }
             let time;
@@ -984,14 +983,16 @@
                 time = video.currentTime;
             }
             setTimeout(() => {
-                renderer.drawCanvas(Math.floor(time * 100));
+                const vpos = Math.floor(time * 100);
+                renderer.drawCanvas(vpos);
             }, 0);
         }, 1000 / targetFps);
         function onMediaChanged() {
             overlay.removeEventListener('mediaChanged', onMediaChanged);
             clearInterval(interval);
             renderer.clear();
-            initializeOverlay(overlay, params).catch(console.error);
+            canvas.remove();
+            initializeOverlays().catch(console.error);
             console.info('[anime-comment-overlay] media changed');
         }
         overlay.addEventListener('mediaChanged', onMediaChanged);
@@ -1002,18 +1003,18 @@
         }
         isInitialized = true;
     }
-    for (const overlay of overlays) {
-        const params = overlay.url.exec(window.location.href)?.slice(1);
-        if (params === undefined) {
-            continue;
+    async function initializeOverlays() {
+        for (const overlay of overlays) {
+            const params = overlay.url.exec(window.location.href)?.slice(1);
+            if (params === undefined) {
+                continue;
+            }
+            console.info(`[anime-comment-overlay] initializing ${overlay.name}`, params);
+            await initializeOverlay(overlay, params);
+            console.info(`[anime-comment-overlay] initialized ${overlay.name}`, params);
+            break;
         }
-        console.info(`[anime-comment-overlay] initializing ${overlay.name}`);
-        initializeOverlay(overlay, params)
-            .then(() => {
-            console.info(`[anime-comment-overlay] initialized ${overlay.name}`);
-        })
-            .catch(console.error);
-        break;
     }
+    initializeOverlays().catch(console.error);
 
 })(NiconiComments, fxp);
