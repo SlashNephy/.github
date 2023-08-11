@@ -2149,7 +2149,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 36.42.1
+    renovate: 36.42.3
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -3389,7 +3389,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"agentkeepalive@npm:4.3.0, agentkeepalive@npm:^4.2.1":
+"agentkeepalive@npm:4.5.0":
+  version: 4.5.0
+  resolution: "agentkeepalive@npm:4.5.0"
+  dependencies:
+    humanize-ms: ^1.2.1
+  checksum: 13278cd5b125e51eddd5079f04d6fe0914ac1b8b91c1f3db2c1822f99ac1a7457869068997784342fe455d59daaff22e14fb7b8c3da4e741896e7e31faf92481
+  languageName: node
+  linkType: hard
+
+"agentkeepalive@npm:^4.2.1":
   version: 4.3.0
   resolution: "agentkeepalive@npm:4.3.0"
   dependencies:
@@ -8786,9 +8795,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:36.42.1":
-  version: 36.42.1
-  resolution: "renovate@npm:36.42.1"
+"renovate@npm:36.42.3":
+  version: 36.42.3
+  resolution: "renovate@npm:36.42.3"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -8817,7 +8826,7 @@ __metadata:
     "@types/tmp": 0.2.3
     "@yarnpkg/core": 3.5.2
     "@yarnpkg/parsers": 2.5.1
-    agentkeepalive: 4.3.0
+    agentkeepalive: 4.5.0
     aggregate-error: 3.1.0
     auth-header: 1.0.0
     aws4: 1.12.0
@@ -8902,7 +8911,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 2396bb313047773d1d11f96e8ce69fd230d049ce3ec28e92d09e9806bbae3df4015b198338e4a2fd72c5ec0c3d69576dd13701b3b9729263a90bf697139aa05d
+  checksum: 925bb5d47968d08db1e4a2e84487b4e60d6e76d822cf017b70fcfe68b0d9c8f46d288b8681c6f2a911b261c97a97e097c3cd904826980b029feed6678abfd8ee
   languageName: node
   linkType: hard
 
