@@ -50,13 +50,13 @@ export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
     }
 
     let copyrightAdjustment = 0
-    if (media.platform === 'danime') {
-      const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(media.copyright))
+    if (media.work.copyright !== undefined) {
+      const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(media.work.copyright))
       if (attr2 !== undefined) {
         copyrightAdjustment = attr2.adjustment
 
         console.info(
-          `[anime-comment-overlay] copyright adjustment for ${media.copyright}: ${copyrightAdjustment}`,
+          `[anime-comment-overlay] copyright adjustment for ${media.work.copyright}: ${copyrightAdjustment}`,
           program
         )
       }
