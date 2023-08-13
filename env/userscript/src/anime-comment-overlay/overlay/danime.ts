@@ -6,6 +6,7 @@ import { AnnictSupportedVodChannelIds } from '../constant'
 import type { CommentOverlayModule, CommentOverlayModuleEventMap, Containers, Media } from './index'
 
 export const DanimeOverlay: CommentOverlayModule = {
+  id: 'danime-store',
   name: 'dアニメストア',
   url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)/,
   initializeContainers(): Containers {
@@ -34,13 +35,12 @@ export const DanimeOverlay: CommentOverlayModule = {
     const broadcasts = await fetchAnnictBroadcastData()
 
     return {
-      platform: 'danime',
-      copyright: info.partCopyright,
       work: {
         title: info.workTitle,
         annictIds: broadcasts
           .filter((x) => x.channel_id === AnnictSupportedVodChannelIds.dAnime && x.vod_code === info.workId)
           .map((x) => x.work_id),
+        copyright: info.partCopyright,
       },
       episode: {
         title: info.partTitle,
