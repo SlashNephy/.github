@@ -11,7 +11,8 @@
   "license": "MIT",
   "files": [
     "package.json",
-    "dist/**/*.js"
+    "dist/**/*.js",
+    "README.md"
   ],
   "publishConfig": {
     "access": "public"
