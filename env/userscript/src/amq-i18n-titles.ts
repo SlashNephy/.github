@@ -17,7 +17,7 @@ onReady(async () => {
   const titles = await fetchAnimeTitles()
 
   const { setName } = QuizMultipleChoiceAnswerOption.prototype
-  // eslint-disable-next-line func-names
+
   QuizMultipleChoiceAnswerOption.prototype.setName = function (name) {
     setName.call(this, name)
 

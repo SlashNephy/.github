@@ -407,7 +407,6 @@ const handle = async () => {
       GM_config.set(anilistTokenKey, token)
       window.location.hash = ''
 
-      // eslint-disable-next-line no-alert
       alert('[Annict Following Viewings] AniList と接続しました。')
 
       const callback = GM_config.get(anilistCallbackKey)

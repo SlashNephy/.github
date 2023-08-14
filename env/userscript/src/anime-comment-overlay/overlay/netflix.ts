@@ -6,6 +6,7 @@ import { AnnictSupportedVodChannelIds } from '../constant'
 import type { CommentOverlayModule, CommentOverlayModuleEventMap, Containers, Media } from './index'
 
 export const NetflixOverlay: CommentOverlayModule = {
+  id: 'netflix',
   name: 'Netflix',
   url: /^https:\/\/www\.netflix.com\/watch\/(\d+)/,
   initializeContainers(): Containers {
@@ -60,7 +61,6 @@ export const NetflixOverlay: CommentOverlayModule = {
     const broadcasts = await fetchAnnictBroadcastData()
 
     return {
-      platform: 'netflix',
       work: {
         title: metadata.video.title,
         annictIds: broadcasts

@@ -382,10 +382,10 @@ export const banners: Banner[] = [
   {
     id: 'anime-comment-overlay',
     name: 'Anime Comment Overlay',
-    version: '0.3.0',
+    version: '0.4.0',
     description: {
-      en: 'Display overlay of comments on various streaming sites.',
-      ja: 'アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) で実況コメをオーバーレイ表示します。',
+      en: 'Display overlay of comments on various streaming sites and EPGStation.',
+      ja: 'アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) や EPGStation で実況コメをオーバーレイ表示します。',
     },
     homepage:
       'https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript',
@@ -394,18 +394,13 @@ export const banners: Banner[] = [
       'https://animestore.docomo.ne.jp/animestore/sc_d_pc?partId=*',
       'https://abema.tv/video/episode/*',
       'https://www.netflix.com/watch/*',
+      '*://*/*',
     ],
     require: [
       'https://cdn.jsdelivr.net/npm/@xpadev-net/niconicomments@0.2.54/dist/bundle.min.js',
       'https://cdn.jsdelivr.net/gh/NaturalIntelligence/fast-xml-parser@ecf6016f9b48aec1a921e673158be0773d07283e/lib/fxp.min.js',
     ],
-    connect: [
-      'jikkyo.tsukumijima.net',
-      'api.annict.com',
-      'raw.githubusercontent.com',
-      'cal.syoboi.jp',
-      'animestore.docomo.ne.jp',
-    ],
+    connect: ['cal.syoboi.jp'],
     grant: 'GM_xmlhttpRequest',
     options: {
       external: ['@xpadev-net/niconicomments', 'fast-xml-parser'],
