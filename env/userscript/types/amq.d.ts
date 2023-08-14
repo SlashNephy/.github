@@ -1,5 +1,5 @@
 // eslint-disable-next-line eslint-comments/disable-enable-pair
-/* eslint-disable @typescript-eslint/naming-convention,max-classes-per-file */
+/* eslint-disable @typescript-eslint/naming-convention */
 // noinspection JSUnusedGlobalSymbols
 
 declare global {

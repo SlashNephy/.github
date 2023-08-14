@@ -7,6 +7,7 @@ import type { CommentOverlayModule, CommentOverlayModuleEventMap, Containers, Me
 let observer: MutationObserver | null = null
 
 export const AbemaVideoOverlay: CommentOverlayModule = {
+  id: 'abema-video',
   name: 'ABEMAビデオ',
   url: /^https:\/\/abema\.tv\/video\/episode\/([\w-]+)/,
   initializeContainers(): Containers {
@@ -55,7 +56,6 @@ export const AbemaVideoOverlay: CommentOverlayModule = {
     const broadcasts = await fetchAnnictBroadcastData()
 
     return {
-      platform: 'abema-video',
       work: {
         title,
         annictIds: broadcasts

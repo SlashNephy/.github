@@ -1,4 +1,5 @@
 export type CommentOverlayModule = {
+  id: string
   name: string
   url: RegExp
   initializeContainers(): Containers
@@ -22,49 +23,22 @@ export type CommentOverlayModuleEventMap = {
   mediaChanged(): void
 }
 
-export type Media =
-  | {
-      platform: 'general'
-      work: {
-        title: string
-        annictIds: number[]
-      }
-      episode: {
-        title?: string
-        number?: string | number
-      }
+export type Media = {
+  work?: {
+    title: string
+    annictIds: number[]
+    copyright?: string
+  }
+  episode?: {
+    title: string
+    number?: string | number
+  }
+  video?: {
+    channel: {
+      type: 'GR' | 'BS' | 'CS' | 'SKY'
+      serviceId: number
     }
-  | {
-      platform: 'danime'
-      copyright: string
-      work: {
-        title: string
-        annictIds: number[]
-      }
-      episode: {
-        title: string
-        number: string
-      }
-    }
-  | {
-      platform: 'abema-video'
-      work: {
-        title: string
-        annictIds: number[]
-      }
-      episode: {
-        title: string
-        number: string
-      }
-    }
-  | {
-      platform: 'netflix'
-      work: {
-        title: string
-        annictIds: number[]
-      }
-      episode: {
-        title: string
-        number: number
-      }
-    }
+    startedAt: Date
+    endedAt: Date
+  }
+}
