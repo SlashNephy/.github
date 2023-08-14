@@ -12,7 +12,8 @@
   "files": [
     "package.json",
     "dist/**/*.js",
-    "dist/**/*.d.ts"
+    "dist/**/*.d.ts",
+    "README.md"
   ],
   "publishConfig": {
     "access": "public"
