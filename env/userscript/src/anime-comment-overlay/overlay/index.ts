@@ -24,7 +24,7 @@ export type CommentOverlayModuleEventMap = {
 }
 
 export type Media = {
-  work: {
+  work?: {
     title: string
     annictIds: number[]
     copyright?: string
@@ -32,5 +32,13 @@ export type Media = {
   episode?: {
     title: string
     number?: string | number
+  }
+  video?: {
+    channel: {
+      type: 'GR' | 'BS' | 'CS' | 'SKY'
+      serviceId: number
+    }
+    startedAt: Date
+    endedAt: Date
   }
 }

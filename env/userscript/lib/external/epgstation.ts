@@ -1,6 +1,6 @@
-export async function fetchEpgStationRecordedItem(id: string): EpgStationRecordedItem {
+export async function fetchEpgStationRecordedItem(id: string): Promise<EpgStationRecordedItem> {
   // TODO: support EPGStation sub directory installation
-  const response = await fetch(`/api/recorded/${id}`)
+  const response = await fetch(`/api/recorded/${id}?isHalfWidth=true`)
   return await response.json()
 }
 
@@ -14,7 +14,7 @@ export type EpgStationRecordedItem = {
   name: string
   description: string
   extended: string
-  rawExtended: {}
+  rawExtended: Record<string, string>
   genre1: number
   subGenre1: number
   genre2: number
@@ -49,4 +49,22 @@ export type EpgStationRecordedItem = {
   }[]
   isEncoding: boolean
   isProtected: boolean
+}
+
+export async function fetchEpgStationChannels(): Promise<EpgStationChannel[]> {
+  const response = await fetch('/api/channels')
+  return await response.json()
+}
+
+export type EpgStationChannel = {
+  id: number
+  serviceId: number
+  networkId: number
+  name: string
+  halfWidthNam: string
+  hasLogoData: boolean
+  channelType: 'GR' | 'BS' | 'CS' | 'SKY'
+  channel: string
+  type: number
+  remoteControlKeyId?: number
 }

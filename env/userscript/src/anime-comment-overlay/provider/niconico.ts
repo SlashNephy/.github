@@ -38,7 +38,9 @@ export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
 
     // CM パートをトリムする
     const attr = ChannelCmAttributes[request.channel]
-    if (attr === null) {
+    if (media.video !== undefined) {
+      console.info('[anime-comment-overlay] this media is video', media)
+    } else if (attr === null) {
       console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`, program)
     } else {
       console.log(`[anime-comment-overlay] CM attribute for channel ${request.channel}`, attr, program)
@@ -50,15 +52,13 @@ export const NiconicoJikkyoKakoLogProvider: CommentProviderModule = {
     }
 
     let copyrightAdjustment = 0
-    if (media.work.copyright !== undefined) {
-      const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(media.work.copyright))
+    const copyright = media.work?.copyright
+    if (copyright !== undefined) {
+      const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(copyright))
       if (attr2 !== undefined) {
         copyrightAdjustment = attr2.adjustment
 
-        console.info(
-          `[anime-comment-overlay] copyright adjustment for ${media.work.copyright}: ${copyrightAdjustment}`,
-          program
-        )
+        console.info(`[anime-comment-overlay] copyright adjustment for ${copyright}: ${copyrightAdjustment}`, program)
       }
     }
 

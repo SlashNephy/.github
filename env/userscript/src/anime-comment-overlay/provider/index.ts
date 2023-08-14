@@ -3,9 +3,10 @@ import { hasMinLength } from 'ts-array-length'
 
 import { fetchArmEntries } from '../../../lib/external/arm'
 import { fetchSayaDefinitions } from '../../../lib/external/saya'
-import { fetchSyobocalProgLookup } from '../../../lib/external/syobocal'
+import { fetchSyobocalProgLookup, fetchSyobocalProgLookupWithRange } from '../../../lib/external/syobocal'
 
 import type { SayaDefinitions } from '../../../lib/external/saya'
+import type { SyobocalProgLookup, SyobocalProgItem } from '../../../lib/external/syobocal'
 import type { Media } from '../overlay'
 import type { FormattedComment } from '@xpadev-net/niconicomments'
 
@@ -35,29 +36,50 @@ export type Comment = {
 }
 
 export async function findPrograms(media: Media): Promise<Program[]> {
-  if (media.work.annictIds.length === 0) {
+  const saya = await fetchSayaDefinitions()
+  const serviceId = media.video?.channel.serviceId
+  if (serviceId !== undefined && media.video !== undefined) {
+    const chId = saya.channels.find((x) => x.type === media.video?.channel.type && x.serviceIds.includes(serviceId))
+      ?.syobocalId
+    if (chId !== undefined) {
+      const programs = await fetchSyobocalProgLookupWithRange(media.video.startedAt, media.video.endedAt, chId)
+      return convertPrograms(programs, undefined, saya)
+    }
+  }
+
+  if (media.work?.annictIds.length === 0) {
     return []
   }
 
   const arm = await fetchArmEntries()
   const syobocalTids = arm
-    .filter((e) => e.annict_id !== undefined && media.work.annictIds.includes(e.annict_id))
+    .filter((e) => e.annict_id !== undefined && media.work?.annictIds.includes(e.annict_id))
     .map((e) => e.syobocal_tid)
     .filter((x): x is NonNullable<typeof x> => x !== undefined)
     // 重複除去
     .filter((x, idx, array) => idx === array.indexOf(x))
   console.info(`[anime-comment-overlay] found syobocal tids: ${syobocalTids}`)
 
-  const saya = await fetchSayaDefinitions()
   const programs = await fetchSyobocalProgLookup(syobocalTids)
 
   // 話数がない場合は劇場版などがある
-  const episodeNumber = extractEpisodeNumber(media.episode.number)
+  const episodeNumber = extractEpisodeNumber(media.episode?.number)
+  return convertPrograms(programs, episodeNumber, saya)
+}
+
+function convertPrograms(
+  response: SyobocalProgLookup,
+  episodeNumber: number | undefined,
+  saya: SayaDefinitions
+): Program[] {
+  const items = Array.isArray(response.ProgLookupResponse?.ProgItems?.ProgItem)
+    ? response.ProgLookupResponse?.ProgItems?.ProgItem
+    : [response.ProgLookupResponse?.ProgItems?.ProgItem]
   return (
     // 指定された話数のみを抽出する
-    programs.ProgLookupResponse?.ProgItems?.ProgItem?.filter(
-      (p) => episodeNumber === undefined || p.Count === episodeNumber
-    )
+    items
+      ?.filter((p): p is NonNullable<SyobocalProgItem> => p !== undefined)
+      .filter((p) => episodeNumber === undefined || p.Count === episodeNumber)
       ?.map((p) => {
         // まだ放送されてない
         const startedAt = Date.parse(p.StTime) / 1000

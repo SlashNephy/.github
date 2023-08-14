@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name            Anime Comment Overlay
 // @namespace       https://github.com/SlashNephy
-// @version         0.3.0
+// @version         0.4.0
 // @author          SlashNephy
-// @description     Display overlay of comments on various streaming sites.
-// @description:ja  アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) で実況コメをオーバーレイ表示します。
+// @description     Display overlay of comments on various streaming sites and EPGStation.
+// @description:ja  アニメ配信サイト (dアニメストア / ABEMAビデオ / Netflix) や EPGStation で実況コメをオーバーレイ表示します。
 // @homepage        https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
 // @homepageURL     https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript
 // @icon            https://www.google.com/s2/favicons?sz=64&domain=animestore.docomo.ne.jp
@@ -14,13 +14,10 @@
 // @match           https://animestore.docomo.ne.jp/animestore/sc_d_pc?partId=*
 // @match           https://abema.tv/video/episode/*
 // @match           https://www.netflix.com/watch/*
+// @match           *://*/*
 // @require         https://cdn.jsdelivr.net/npm/@xpadev-net/niconicomments@0.2.54/dist/bundle.min.js
 // @require         https://cdn.jsdelivr.net/gh/NaturalIntelligence/fast-xml-parser@ecf6016f9b48aec1a921e673158be0773d07283e/lib/fxp.min.js
-// @connect         jikkyo.tsukumijima.net
-// @connect         api.annict.com
-// @connect         raw.githubusercontent.com
 // @connect         cal.syoboi.jp
-// @connect         animestore.docomo.ne.jp
 // @grant           GM_xmlhttpRequest
 // @license         MIT license
 // ==/UserScript==
@@ -193,6 +190,7 @@
 
     let observer = null;
     const AbemaVideoOverlay = {
+        id: 'abema-video',
         name: 'ABEMAビデオ',
         url: /^https:\/\/abema\.tv\/video\/episode\/([\w-]+)/,
         initializeContainers() {
@@ -234,7 +232,6 @@
             }
             const broadcasts = await fetchAnnictBroadcastData();
             return {
-                platform: 'abema-video',
                 work: {
                     title,
                     annictIds: broadcasts
@@ -285,6 +282,7 @@
     }
 
     const DanimeOverlay = {
+        id: 'danime-store',
         name: 'dアニメストア',
         url: /^https:\/\/animestore\.docomo\.ne\.jp\/animestore\/sc_d_pc\?partId=(\d+)/,
         initializeContainers() {
@@ -310,13 +308,12 @@
             const info = await fetchDanimePartInfo(partId);
             const broadcasts = await fetchAnnictBroadcastData();
             return {
-                platform: 'danime',
-                copyright: info.partCopyright,
                 work: {
                     title: info.workTitle,
                     annictIds: broadcasts
                         .filter((x) => x.channel_id === AnnictSupportedVodChannelIds.dAnime && x.vod_code === info.workId)
                         .map((x) => x.work_id),
+                    copyright: info.partCopyright,
                 },
                 episode: {
                     title: info.partTitle,
@@ -335,6 +332,82 @@
                 case 'mediaChanged':
                     $('.backInfoTxt3').off('DOMSubtreeModified propertychange', callback);
             }
+        },
+    };
+
+    async function fetchEpgStationRecordedItem(id) {
+        const response = await fetch(`/api/recorded/${id}?isHalfWidth=true`);
+        return await response.json();
+    }
+    async function fetchEpgStationChannels() {
+        const response = await fetch('/api/channels');
+        return await response.json();
+    }
+
+    const EpgStationOnAirOverlay = {
+        id: 'epgstation-onair',
+        name: 'EPGStation (ライブ)',
+        url: /^https?:\/\/.+\/#\/onair\/watch/,
+        initializeContainers() {
+            throw new Error('not implemented');
+        },
+        async detectMedia(partId) {
+            throw new Error('not implemented');
+        },
+        addEventListener(event) {
+        },
+        removeEventListener(event) {
+        },
+    };
+    const EpgStationRecordedOverlay = {
+        id: 'epgstation-recorded',
+        name: 'EPGStation (録画番組)',
+        url: /^https?:\/\/.+\/#\/recorded\/streaming\/\d+/,
+        initializeContainers() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1920;
+            canvas.height = 1080;
+            canvas.style.position = 'absolute';
+            canvas.style.objectFit = 'contain';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.zIndex = '10';
+            awaitElement('.video-wrap video')
+                .then((video) => {
+                video.insertAdjacentElement('beforebegin', canvas);
+            })
+                .catch((e) => {
+                console.error(`[anime-comment-overlay] failed to find video element: ${e}`);
+            });
+            const video = () => document.querySelector('.video-wrap video');
+            return { video, canvas };
+        },
+        async detectMedia() {
+            const queries = new URLSearchParams(window.location.hash.split('?')[1]);
+            const recordedId = queries.get('recordedId');
+            if (recordedId === null) {
+                throw new Error('recordedId is null');
+            }
+            const recorded = await fetchEpgStationRecordedItem(recordedId);
+            const channels = await fetchEpgStationChannels();
+            const channel = channels.find((x) => x.id === recorded.channelId);
+            if (channel === undefined) {
+                throw new Error('failed to find channel');
+            }
+            return {
+                video: {
+                    channel: {
+                        type: channel.channelType,
+                        serviceId: channel.serviceId,
+                    },
+                    startedAt: new Date(recorded.startAt),
+                    endedAt: new Date(recorded.endAt),
+                },
+            };
+        },
+        addEventListener(event) {
+        },
+        removeEventListener(event) {
         },
     };
 
@@ -359,6 +432,7 @@
     }
 
     const NetflixOverlay = {
+        id: 'netflix',
         name: 'Netflix',
         url: /^https:\/\/www\.netflix.com\/watch\/(\d+)/,
         initializeContainers() {
@@ -401,7 +475,6 @@
             }
             const broadcasts = await fetchAnnictBroadcastData();
             return {
-                platform: 'netflix',
                 work: {
                     title: metadata.video.title,
                     annictIds: broadcasts
@@ -733,22 +806,52 @@
         const parser = new fastXmlParser.XMLParser();
         return parser.parse(responseText);
     }
+    async function fetchSyobocalProgLookupWithRange(startTime, endTime, chId) {
+        function zerofill(n) {
+            return `00${n}`.slice(-2);
+        }
+        function format(d) {
+            return `${d.getFullYear()}${zerofill(d.getMonth() + 1)}${zerofill(d.getDate())}_${zerofill(d.getHours())}${zerofill(d.getMinutes())}${zerofill(d.getSeconds())}`;
+        }
+        const { responseText } = await executeGmXhr({
+            url: `https://cal.syoboi.jp/db.php?Command=ProgLookup&Range=${format(startTime)}-${format(endTime)}&ChID=${chId}`,
+        });
+        const parser = new fastXmlParser.XMLParser();
+        return parser.parse(responseText);
+    }
 
     async function findPrograms(media) {
-        if (media.work.annictIds.length === 0) {
+        const saya = await fetchSayaDefinitions();
+        const serviceId = media.video?.channel.serviceId;
+        if (serviceId !== undefined && media.video !== undefined) {
+            const chId = saya.channels.find((x) => x.type === media.video?.channel.type && x.serviceIds.includes(serviceId))
+                ?.syobocalId;
+            if (chId !== undefined) {
+                const programs = await fetchSyobocalProgLookupWithRange(media.video.startedAt, media.video.endedAt, chId);
+                return convertPrograms(programs, undefined, saya);
+            }
+        }
+        if (media.work?.annictIds.length === 0) {
             return [];
         }
         const arm = await fetchArmEntries();
         const syobocalTids = arm
-            .filter((e) => e.annict_id !== undefined && media.work.annictIds.includes(e.annict_id))
+            .filter((e) => e.annict_id !== undefined && media.work?.annictIds.includes(e.annict_id))
             .map((e) => e.syobocal_tid)
             .filter((x) => x !== undefined)
             .filter((x, idx, array) => idx === array.indexOf(x));
         console.info(`[anime-comment-overlay] found syobocal tids: ${syobocalTids}`);
-        const saya = await fetchSayaDefinitions();
         const programs = await fetchSyobocalProgLookup(syobocalTids);
-        const episodeNumber = extractEpisodeNumber(media.episode.number);
-        return (programs.ProgLookupResponse?.ProgItems?.ProgItem?.filter((p) => episodeNumber === undefined || p.Count === episodeNumber)
+        const episodeNumber = extractEpisodeNumber(media.episode?.number);
+        return convertPrograms(programs, episodeNumber, saya);
+    }
+    function convertPrograms(response, episodeNumber, saya) {
+        const items = Array.isArray(response.ProgLookupResponse?.ProgItems?.ProgItem)
+            ? response.ProgLookupResponse?.ProgItems?.ProgItem
+            : [response.ProgLookupResponse?.ProgItems?.ProgItem];
+        return (items
+            ?.filter((p) => p !== undefined)
+            .filter((p) => episodeNumber === undefined || p.Count === episodeNumber)
             ?.map((p) => {
             const startedAt = Date.parse(p.StTime) / 1000;
             if (Date.now() / 1000 < startedAt) {
@@ -841,7 +944,10 @@
             const response = await fetchNiconicoJikkyoKakoLog(request);
             const chats = convertChats(response);
             const attr = ChannelCmAttributes[request.channel];
-            if (attr === null) {
+            if (media.video !== undefined) {
+                console.info('[anime-comment-overlay] this media is video', media);
+            }
+            else if (attr === null) {
                 console.info(`[anime-comment-overlay] channel ${request.channel} does not have CM`, program);
             }
             else {
@@ -852,11 +958,12 @@
                 }
             }
             let copyrightAdjustment = 0;
-            if (media.platform === 'danime') {
-                const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(media.copyright));
+            const copyright = media.work?.copyright;
+            if (copyright !== undefined) {
+                const attr2 = copyrightCmAttributes.find((a) => a.pattern.test(copyright));
                 if (attr2 !== undefined) {
                     copyrightAdjustment = attr2.adjustment;
-                    console.info(`[anime-comment-overlay] copyright adjustment for ${media.copyright}: ${copyrightAdjustment}`, program);
+                    console.info(`[anime-comment-overlay] copyright adjustment for ${copyright}: ${copyrightAdjustment}`, program);
                 }
             }
             return (chats
@@ -952,7 +1059,13 @@
         console.info(`[anime-comment-overlay] CM part: ${symbol} (${shifts} comments shifted)`, program);
     }
 
-    const overlays = [DanimeOverlay, AbemaVideoOverlay, NetflixOverlay];
+    const overlays = [
+        DanimeOverlay,
+        AbemaVideoOverlay,
+        NetflixOverlay,
+        EpgStationOnAirOverlay,
+        EpgStationRecordedOverlay,
+    ];
     const providers = [NiconicoJikkyoKakoLogProvider];
     async function initializeOverlay(overlay, params) {
         const media = await overlay.detectMedia(...params);
@@ -1009,9 +1122,9 @@
             if (params === undefined) {
                 continue;
             }
-            console.info(`[anime-comment-overlay] initializing ${overlay.name}`, params);
+            console.info(`[anime-comment-overlay] initializing ${overlay.id}`, params);
             await initializeOverlay(overlay, params);
-            console.info(`[anime-comment-overlay] initialized ${overlay.name}`, params);
+            console.info(`[anime-comment-overlay] initialized ${overlay.id}`, params);
             break;
         }
     }

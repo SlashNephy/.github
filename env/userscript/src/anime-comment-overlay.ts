@@ -3,13 +3,13 @@ import NiconiComments from '@xpadev-net/niconicomments'
 import { maxPrograms, targetFps } from './anime-comment-overlay/constant'
 import { AbemaVideoOverlay } from './anime-comment-overlay/overlay/abema-video'
 import { DanimeOverlay } from './anime-comment-overlay/overlay/danime'
+import { EpgStationOnAirOverlay, EpgStationRecordedOverlay } from './anime-comment-overlay/overlay/epgstation'
 import { NetflixOverlay } from './anime-comment-overlay/overlay/netflix'
 import { fetchComments, findPrograms } from './anime-comment-overlay/provider'
 import { NiconicoJikkyoKakoLogProvider } from './anime-comment-overlay/provider/niconico'
 
 import type { CommentOverlayModule } from './anime-comment-overlay/overlay'
 import type { CommentProviderModule } from './anime-comment-overlay/provider'
-import { EpgStationOnAirOverlay, EpgStationRecordedOverlay } from './anime-comment-overlay/overlay/epgstation'
 
 const overlays: CommentOverlayModule[] = [
   DanimeOverlay,
