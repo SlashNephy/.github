@@ -38,6 +38,10 @@ on:
         required: false
         type: string
         default: ''
+      tag-spec:
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -76,6 +80,7 @@ jobs:
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=sha
+            ${{ inputs.tag-spec }}
 
       - name: Build Image & Push
         uses: docker/build-push-action@v4
