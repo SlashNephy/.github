@@ -2,13 +2,13 @@ tap "apple/apple"
 tap "arrow2nd/tap"
 tap "buildpacks/tap"
 tap "ci7lus/miraktest"
+tap "fujiwara/tap"
 tap "gcenx/wine"
+tap "getsentry/tools"
 tap "gromgit/fuse"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "k1low/tap"
 tap "kayac/tap"
@@ -148,7 +148,7 @@ brew "grpc"
 # Like cURL, but for gRPC
 brew "grpcurl"
 # Popular GNU data compression program
-brew "gzip"
+brew "gzip", link: false
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
 # Kubernetes package manager
@@ -226,11 +226,11 @@ brew "percona-toolkit"
 # General-purpose scripting language
 brew "php"
 # Python dependency management tool
-brew "pipenv"
+brew "pipenv", link: false
 # Perl binary manager
 brew "plenv"
 # Python package management tool
-brew "poetry"
+brew "poetry", link: false
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Coreutils progress viewer
@@ -262,7 +262,7 @@ brew "sl"
 # Proxy server that works as a poor man's VPN
 brew "sshuttle"
 # Tail multiple Kubernetes pods & their containers
-brew "stern"
+brew "stern", link: false
 # Modern CSS linter
 brew "stylelint"
 # Version control system designed to be a better CVS
@@ -271,8 +271,6 @@ brew "subversion"
 brew "wireshark", link: false
 # Terminal UI for tshark, inspired by Wireshark
 brew "termshark"
-# Tool to build, change, and version infrastructure
-brew "terraform", link: false
 # Terraform version manager inspired by rbenv
 brew "tfenv"
 # Simplified and community-driven man pages
@@ -289,6 +287,8 @@ brew "vercel-cli"
 brew "vite"
 # Pager/text based browser
 brew "w3m"
+# Watch files and take action when they change
+brew "watchman"
 # Internet file retriever
 brew "wget"
 # Library to create, extract, and modify Windows Imaging files
@@ -319,6 +319,10 @@ brew "zsh-fast-syntax-highlighting"
 brew "arrow2nd/tap/nekome"
 # A CLI for building apps using Cloud Native Buildpacks
 brew "buildpacks/tap/pack"
+# lambroll is a minimal deployment tool for AWS Lambda.
+brew "fujiwara/tap/lambroll"
+# Sentry command-line client for some generic tasks
+brew "getsentry/tools/sentry-cli"
 # File system client based on SSH File Transfer Protocol
 brew "gromgit/fuse/sshfs-mac"
 # tbls is a CI-Friendly tool for document a database, written in Go.
@@ -401,6 +405,8 @@ cask "dotnet-sdk"
 cask "drawio"
 # Launcher for *Epic Games* games
 cask "epic-games"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox"
 cask "font-source-code-pro"
@@ -408,6 +414,8 @@ cask "font-source-sans-pro"
 cask "font-source-serif-pro"
 # Twitter Unicode emoji color OpenType-SVG font
 cask "font-twitter-color-emoji"
+# Virtual video-calling space
+cask "gather"
 # Software reverse engineering (SRE) suite of tools
 cask "ghidra"
 # Free and open-source image editor
