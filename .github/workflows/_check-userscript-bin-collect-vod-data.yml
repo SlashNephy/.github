@@ -19,7 +19,7 @@ on:
       - '!env/userscript/bin/collect-vod-data/dist/**'
 
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 19 * * *' # JST 4:00 AM
 
   workflow_dispatch:
 
