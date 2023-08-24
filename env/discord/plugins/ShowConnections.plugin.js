@@ -2,7 +2,7 @@
  * @name ShowConnections
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.1.7
+ * @version 1.1.9
  * @description Shows the connected Accounts of a User in the UserPopout
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -14,7 +14,7 @@
 
 module.exports = (_ => {
 	const changeLog = {
-		
+
 	};
 
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
@@ -23,14 +23,14 @@ module.exports = (_ => {
 		getAuthor () {return this.author;}
 		getVersion () {return this.version;}
 		getDescription () {return `The Library Plugin needed for ${this.name} is missing. Open the Plugin Settings to download it. \n\n${this.description}`;}
-		
+
 		downloadLibrary () {
 			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
 				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Finished downloading BDFDB Library", {type: "success"}));
 				else BdApi.alert("Error", "Could not download BDFDB Library Plugin. Try again later or download it manually from GitHub: https://mwittrien.github.io/downloader/?library");
 			});
 		}
-		
+
 		load () {
 			if (!window.BDFDB_Global || !Array.isArray(window.BDFDB_Global.pluginQueue)) window.BDFDB_Global = Object.assign({}, window.BDFDB_Global, {pluginQueue: []});
 			if (!window.BDFDB_Global.downloadModal) {
@@ -58,7 +58,7 @@ module.exports = (_ => {
 	} : (([Plugin, BDFDB]) => {
 		var _this;
 		var loadedUsers, requestedUsers, queuedInstances;
-		
+
 		const UserConnectionsComponents = class UserConnections extends BdApi.React.Component {
 			render() {
 				if (!loadedUsers[this.props.user.id] && !requestedUsers[this.props.user.id]) {
@@ -86,8 +86,18 @@ module.exports = (_ => {
 							children: connections.map(c => {
 								let provider = BDFDB.LibraryModules.ConnectionProviderUtils.get(c.type);
 								let url = _this.settings.general.openWebpage && provider.getPlatformUserUrl && provider.getPlatformUserUrl(c);
+								let metadata = [];
+								if (_this.settings.general.showDetails && provider.hasMetadata && c.metadata) {
+									if (c.metadata.created_at) metadata.push(BDFDB.ReactUtils.createElement("span", {children: BDFDB.LanguageUtils.LanguageStringsFormat("CONNECTIONS_PROFILE_MEMBER_SINCE", (new Date(c.metadata.created_at)).toLocaleDateString("default", {year: "numeric", month: "long", day: "numeric"}))}));
+									let metadataGetter = BDFDB.LibraryModules.ConnectionMetadataUtils["get" + BDFDB.StringUtils.upperCaseFirstChar(c.type)];
+									if (metadataGetter) metadata = metadata.concat(metadataGetter(c.metadata));
+								}
 								return BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.TooltipContainer, {
 									text: `${provider.name}: ${c.name}`,
+									note: metadata && metadata.length ? BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.Flex, {
+										direction: BDFDB.LibraryComponents.Flex.Direction.VERTICAL,
+										children: metadata
+									}): null,
 									tooltipConfig: {backgroundColor: _this.settings.general.useColoredTooltips && BDFDB.ColorUtils.change(provider.color, -0.3), color: !_this.settings.general.useColoredTooltips || !provider.color ? "black" : null},
 									children: BDFDB.ReactUtils.createElement(!url ? "div" : BDFDB.LibraryComponents.Anchor, Object.assign(!url ? {} : {
 										href: url
@@ -139,32 +149,33 @@ module.exports = (_ => {
 				});
 			}
 		};
-		
+
 		return class ShowConnections extends Plugin {
 			onLoad () {
 				_this = this;
 				loadedUsers = {};
 				requestedUsers = {};
 				queuedInstances = {};
-				
+
 				this.modulePatches = {
 					after: [
 						"UserConnectionsSection"
 					]
 				};
-				
+
 				this.defaults = {
 					general: {
 						useColoredIcons:	{value: true, 	description: "Uses colored Version of the Icons"},
 						useColoredTooltips:	{value: true, 	description: "Uses colored Version of the Tooltips"},
+						showDetails:		{value: true, 	description: "Shows Details of Connection on hover"},
 						showVerifiedBadge:	{value: true, 	description: "Shows the Badge for verified Connections"},
 						openWebpage:		{value: true, 	description: "Opens the Connection Page when clicking the Icon"}
 					},
 					connections: {}
 				};
-				
+
 				for (let connection of BDFDB.LibraryModules.ConnectionProviderUtils.filter(n => n)) this.defaults.connections[connection.type] = Object.assign({}, connection, {value: true});
-				
+
 				this.css = `
 					${BDFDB.dotCN._showconnectionsconnections} {
 						display: flex;
@@ -188,8 +199,8 @@ module.exports = (_ => {
 					}
 				`;
 			}
-			
-			onStart () {				
+
+			onStart () {
 				BDFDB.PatchUtils.patch(this, BDFDB.LibraryModules.DispatchApiUtils, "dispatch", {after: e => {
 					if (BDFDB.ObjectUtils.is(e.methodArguments[0]) && e.methodArguments[0].type == "USER_PROFILE_FETCH_SUCCESS" && e.methodArguments[0].user && e.methodArguments[0].connected_accounts) {
 						const user = e.methodArguments[0].user;
@@ -200,7 +211,7 @@ module.exports = (_ => {
 					}
 				}});
 			}
-			
+
 			onStop () {}
 
 			getSettingsPanel (collapseStates = {}) {
@@ -209,7 +220,7 @@ module.exports = (_ => {
 					collapseStates: collapseStates,
 					children: _ => {
 						let settingsItems = [];
-				
+
 						for (let key in this.defaults.general) settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsSaveItem, {
 							type: "Switch",
 							plugin: this,
@@ -217,7 +228,7 @@ module.exports = (_ => {
 							label: this.defaults.general[key].description,
 							value: this.settings.general[key]
 						}));
-						
+
 						settingsItems.push(BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsPanelList, {
 							title: "Display Connections:",
 							children: Object.keys(this.defaults.connections).map(key => BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SettingsSaveItem, {
@@ -232,7 +243,7 @@ module.exports = (_ => {
 								]
 							}))
 						}));
-						
+
 						return settingsItems;
 					}
 				});

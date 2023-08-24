@@ -21,6 +21,7 @@
 			"steam": true,
 			"tiktok": true,
 			"twitch": true,
+			"twitter_legacy": true,
 			"twitter": true,
 			"xbox": true,
 			"youtube": true
@@ -28,6 +29,7 @@
 		"general": {
 			"useColoredIcons": true,
 			"useColoredTooltips": true,
+			"showDetails": true,
 			"showVerifiedBadge": true,
 			"openWebpage": true
 		}
