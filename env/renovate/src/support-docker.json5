@@ -1,11 +1,12 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'Support Docker',
+  extends: ['regexManagers:dockerfileVersions'],
   docker: {
-    pinDigests: true,
+    pinDigests: true
   },
   'docker-compose': {
-    pinDigests: true,
+    pinDigests: true
   },
   hostRules: [
     {
@@ -13,8 +14,8 @@
       username: 's1ashnephy',
       encrypted: {
         // https://app.renovatebot.com/encrypt
-        password: 'wcFMA/xDdHCJBTolAQ//W4MpPcP+P0atNJRKq8iRD/VyEQiEXGHzyZ+/jxSZoYfWTNa6BxIWUfLGmJQIFgeNxt2uxmcB0/4A+ZSqz264Jt4HtbBhBl1Uq4eEt0Y3S7RLygrW0BhTVuimE4vdo/iZZT7LqXR0iPEnxRq9Uvej8F5UClW9DlxPOAVKBTz74zNAx/Ws4d8ch+OC0Vf4MT5+6YYmbpg4YAG0m5audPWjxR9MjYSGN6PlHvnRDXjj1F+PzqCAj7AL7dNeeg9Yh9Qx9C32hsfzX27peK5+tD5f16r/iTsKuXtWGS+lz4G3kUAOx71cvr+0x2bvfOKhrly7vjiHkldjY5d2dNLdQNhel9cHu2fPULdzm4sBdDWNm1TAePKJBbGgZylxQlploZleXWuf7FzyXK7qzbHMizwiCVLbvWT9DkLNp+J9xdsXmQfR578Or3ScAXRImHnlwExvnMOvj6mU+unaZtJxxA9Q5fNseNkt8anVJYNHaZtzth6Ow/QVCoqhYrtjS4vnPu/dRcT3hBVF54El1DcpCINhYfYTpxYLLd9xrT0RLC0ME6m83oS07xf+yuNxPI5JQz3n3DEeqk2ip8/aaHDqsc7h2qMLsoi3QZ+Ecd4RB/M9vC+eohO5e5M9Sc8eRy9zejRrE8svLqIBOO1GnKxBhpowUg9yf6x5ScgNiYyO5KDGAOnSgwEZeG0PRvg+TV2lKIGxVrnGgNdbh8Y/NPLIOPZCXsxsDLssMBmuH065sZtMTUt+FXek43EUW7+9iCmrYxIGVm8wIpS9rpXPgAvi87f1NFFKv2FNVk+dAMzHqn+Du/XXToeK5bOkkBq+0TTwsjE4bnERxojEl5Q3daN3VHthja3ij3oI',
-      },
+        password: 'wcFMA/xDdHCJBTolAQ//W4MpPcP+P0atNJRKq8iRD/VyEQiEXGHzyZ+/jxSZoYfWTNa6BxIWUfLGmJQIFgeNxt2uxmcB0/4A+ZSqz264Jt4HtbBhBl1Uq4eEt0Y3S7RLygrW0BhTVuimE4vdo/iZZT7LqXR0iPEnxRq9Uvej8F5UClW9DlxPOAVKBTz74zNAx/Ws4d8ch+OC0Vf4MT5+6YYmbpg4YAG0m5audPWjxR9MjYSGN6PlHvnRDXjj1F+PzqCAj7AL7dNeeg9Yh9Qx9C32hsfzX27peK5+tD5f16r/iTsKuXtWGS+lz4G3kUAOx71cvr+0x2bvfOKhrly7vjiHkldjY5d2dNLdQNhel9cHu2fPULdzm4sBdDWNm1TAePKJBbGgZylxQlploZleXWuf7FzyXK7qzbHMizwiCVLbvWT9DkLNp+J9xdsXmQfR578Or3ScAXRImHnlwExvnMOvj6mU+unaZtJxxA9Q5fNseNkt8anVJYNHaZtzth6Ow/QVCoqhYrtjS4vnPu/dRcT3hBVF54El1DcpCINhYfYTpxYLLd9xrT0RLC0ME6m83oS07xf+yuNxPI5JQz3n3DEeqk2ip8/aaHDqsc7h2qMLsoi3QZ+Ecd4RB/M9vC+eohO5e5M9Sc8eRy9zejRrE8svLqIBOO1GnKxBhpowUg9yf6x5ScgNiYyO5KDGAOnSgwEZeG0PRvg+TV2lKIGxVrnGgNdbh8Y/NPLIOPZCXsxsDLssMBmuH065sZtMTUt+FXek43EUW7+9iCmrYxIGVm8wIpS9rpXPgAvi87f1NFFKv2FNVk+dAMzHqn+Du/XXToeK5bOkkBq+0TTwsjE4bnERxojEl5Q3daN3VHthja3ij3oI'
+      }
     },
     {
       hostType: 'docker',
@@ -22,8 +23,8 @@
       username: 'starrybluesky-bot',
       encrypted: {
         // https://app.renovatebot.com/encrypt
-        password: 'wcFMA/xDdHCJBTolAQ//cpvxa48gdeD+mls04kp2xS55xRBaj9KHRfPQNIPT3kciwC/9Mx0+7qoNfF/c20Ol38hP3u3zrHs7Js3nxxXF4Z3X2/jyOhYdVZTXpQkh0RlHTcoBbDLJ1/2KxwoG1OrXDWhlIBMzjYfl67ezpLhCIK+2mp9t8MiF12OeJr8xq8+tuzhKgt06RGu59a1Cdtz4bB5hxY9+KBfvgQolHzAN5EmFN9flO+HQxDf7cKhh8olDubB+k0SElIZK99NtDSm28YkqcJKpxntseO0URO1ylrKNVzvU0y4YyiCbk6dNVjXOehgtM3i4/rmRfO4uVT+pjY1f8YJ+bmp+E6d3Rc/qT3GZI8HjMoBLT+BxjPTnZWHzkgeFZYzPzXOG7m87NcYcH4eLhUbPZGZd1qhP0h7HoMROrNojTI3ul60JTbaaZPmJuatp39jXtQ8yJdoF+nBjc+hnX95DHMi64jNeZfPo4Gm1bBiw8lgagtThWmyZSdbNOyhQ4YdlhyYwtpc8SJ6sUFJTTzbxre66X85elL4W3WGPQcU9OOUiVuY1q8HYceqUK5bRQGmlED6wd8ByxBnWpy5nmij1kPM+QojMviL7DNbJ+s04fDugBKmL3mFTIz5EvVjc7ORanevOIATSiwPpFQSRMxo7ow/5hXVP6D1rEi+zQ+SuPBX0OZTuZBzjZAbShwEV9OcVc4QbeU5M61NkqlH/zAfaLAZ8KiZUeMcDcqE8PONm+KNxJ6aUkoyvCGdXVA0pYCgGszx0popxWkW8/zRET8nkfgn6gF4jO5z3q1yACxTycHlNSLbjnNDt/cwnGsimKW/RKuwukDFZp4NA2tqArYh3HWgADTSDD6ZXbTIYytooedBfZg',
-      },
-    },
-  ],
+        password: 'wcFMA/xDdHCJBTolAQ//cpvxa48gdeD+mls04kp2xS55xRBaj9KHRfPQNIPT3kciwC/9Mx0+7qoNfF/c20Ol38hP3u3zrHs7Js3nxxXF4Z3X2/jyOhYdVZTXpQkh0RlHTcoBbDLJ1/2KxwoG1OrXDWhlIBMzjYfl67ezpLhCIK+2mp9t8MiF12OeJr8xq8+tuzhKgt06RGu59a1Cdtz4bB5hxY9+KBfvgQolHzAN5EmFN9flO+HQxDf7cKhh8olDubB+k0SElIZK99NtDSm28YkqcJKpxntseO0URO1ylrKNVzvU0y4YyiCbk6dNVjXOehgtM3i4/rmRfO4uVT+pjY1f8YJ+bmp+E6d3Rc/qT3GZI8HjMoBLT+BxjPTnZWHzkgeFZYzPzXOG7m87NcYcH4eLhUbPZGZd1qhP0h7HoMROrNojTI3ul60JTbaaZPmJuatp39jXtQ8yJdoF+nBjc+hnX95DHMi64jNeZfPo4Gm1bBiw8lgagtThWmyZSdbNOyhQ4YdlhyYwtpc8SJ6sUFJTTzbxre66X85elL4W3WGPQcU9OOUiVuY1q8HYceqUK5bRQGmlED6wd8ByxBnWpy5nmij1kPM+QojMviL7DNbJ+s04fDugBKmL3mFTIz5EvVjc7ORanevOIATSiwPpFQSRMxo7ow/5hXVP6D1rEi+zQ+SuPBX0OZTuZBzjZAbShwEV9OcVc4QbeU5M61NkqlH/zAfaLAZ8KiZUeMcDcqE8PONm+KNxJ6aUkoyvCGdXVA0pYCgGszx0popxWkW8/zRET8nkfgn6gF4jO5z3q1yACxTycHlNSLbjnNDt/cwnGsimKW/RKuwukDFZp4NA2tqArYh3HWgADTSDD6ZXbTIYytooedBfZg'
+      }
+    }
+  ]
 }
