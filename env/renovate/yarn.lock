@@ -2132,7 +2132,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 36.57.7
+    renovate: 36.57.11
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -3197,9 +3197,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:3.5.2":
-  version: 3.5.2
-  resolution: "@yarnpkg/core@npm:3.5.2"
+"@yarnpkg/core@npm:3.5.3":
+  version: 3.5.3
+  resolution: "@yarnpkg/core@npm:3.5.3"
   dependencies:
     "@arcanis/slice-ansi": ^1.1.1
     "@types/semver": ^7.1.0
@@ -3208,7 +3208,7 @@ __metadata:
     "@yarnpkg/json-proxy": ^2.1.1
     "@yarnpkg/libzip": ^2.3.0
     "@yarnpkg/parsers": ^2.5.1
-    "@yarnpkg/pnp": ^3.3.3
+    "@yarnpkg/pnp": ^3.3.4
     "@yarnpkg/shell": ^3.2.5
     camelcase: ^5.3.1
     chalk: ^3.0.0
@@ -3233,7 +3233,7 @@ __metadata:
     treeify: ^1.1.0
     tslib: ^1.13.0
     tunnel: ^0.0.6
-  checksum: 7635ea96c79195afc2146a1b8c5adfcb765a83bce2721bc0c88799a01e0e0b73243631f47b57df14667d7349aa0cf0a6b28b6ecfc9814ef329c7dd1f4c7f3826
+  checksum: 203abb513eead0bbe048f56dd2f9f9f0e744fa17362ae1228ca77a9e353e794ec5cbefb09bdb738aecb3a12416b92d5e179bd1627455b1dd6dc27dbd792086f0
   languageName: node
   linkType: hard
 
@@ -3277,13 +3277,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnp@npm:^3.3.3":
-  version: 3.3.3
-  resolution: "@yarnpkg/pnp@npm:3.3.3"
+"@yarnpkg/pnp@npm:^3.3.4":
+  version: 3.3.5
+  resolution: "@yarnpkg/pnp@npm:3.3.5"
   dependencies:
     "@types/node": ^13.7.0
     "@yarnpkg/fslib": ^2.10.3
-  checksum: e379df5f8a6e1781f5af6f502b7d549642c62bf3c00fd9e6956389b7f6ccf4ee731b89d5c9569ff64eba5bf0b8d9003b7ad261d07a0506f7cba0cc70fedc4f33
+  checksum: 5197775e44eb24607473793e344e10007289800b156061d5bd57a593ad735a0a34bd8d412bd822508048bd7c2442008766ac336595de1fc91c8f94c8179b47c6
   languageName: node
   linkType: hard
 
@@ -3811,15 +3811,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cacache@npm:17.1.3, cacache@npm:^17.0.0":
-  version: 17.1.3
-  resolution: "cacache@npm:17.1.3"
+"cacache@npm:17.1.4":
+  version: 17.1.4
+  resolution: "cacache@npm:17.1.4"
   dependencies:
     "@npmcli/fs": ^3.1.0
     fs-minipass: ^3.0.0
     glob: ^10.2.2
     lru-cache: ^7.7.1
-    minipass: ^5.0.0
+    minipass: ^7.0.3
     minipass-collect: ^1.0.2
     minipass-flush: ^1.0.5
     minipass-pipeline: ^1.2.4
@@ -3827,7 +3827,7 @@ __metadata:
     ssri: ^10.0.0
     tar: ^6.1.11
     unique-filename: ^3.0.0
-  checksum: 385756781e1e21af089160d89d7462b7ed9883c978e848c7075b90b73cb823680e66092d61513050164588387d2ca87dd6d910e28d64bc13a9ac82cd8580c796
+  checksum: b7751df756656954a51201335addced8f63fc53266fa56392c9f5ae83c8d27debffb4458ac2d168a744a4517ec3f2163af05c20097f93d17bdc2dc8a385e14a6
   languageName: node
   linkType: hard
 
@@ -3854,6 +3854,26 @@ __metadata:
     tar: ^6.1.11
     unique-filename: ^2.0.0
   checksum: d91409e6e57d7d9a3a25e5dcc589c84e75b178ae8ea7de05cbf6b783f77a5fae938f6e8fda6f5257ed70000be27a681e1e44829251bfffe4c10216002f8f14e6
+  languageName: node
+  linkType: hard
+
+"cacache@npm:^17.0.0":
+  version: 17.1.3
+  resolution: "cacache@npm:17.1.3"
+  dependencies:
+    "@npmcli/fs": ^3.1.0
+    fs-minipass: ^3.0.0
+    glob: ^10.2.2
+    lru-cache: ^7.7.1
+    minipass: ^5.0.0
+    minipass-collect: ^1.0.2
+    minipass-flush: ^1.0.5
+    minipass-pipeline: ^1.2.4
+    p-map: ^4.0.0
+    ssri: ^10.0.0
+    tar: ^6.1.11
+    unique-filename: ^3.0.0
+  checksum: 385756781e1e21af089160d89d7462b7ed9883c978e848c7075b90b73cb823680e66092d61513050164588387d2ca87dd6d910e28d64bc13a9ac82cd8580c796
   languageName: node
   linkType: hard
 
@@ -7669,6 +7689,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minipass@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "minipass@npm:7.0.3"
+  checksum: 6f1614f5b5b55568a46bca5fec0e7c46dac027691db27d0e1923a8192866903144cd962ac772c0e9f89b608ea818b702709c042bce98e190d258847d85461531
+  languageName: node
+  linkType: hard
+
 "minizlib@npm:^2.1.1, minizlib@npm:^2.1.2":
   version: 2.1.2
   resolution: "minizlib@npm:2.1.2"
@@ -8773,9 +8800,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:36.57.7":
-  version: 36.57.7
-  resolution: "renovate@npm:36.57.7"
+"renovate@npm:36.57.11":
+  version: 36.57.11
+  resolution: "renovate@npm:36.57.11"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -8802,7 +8829,7 @@ __metadata:
     "@sindresorhus/is": 4.6.0
     "@types/ms": 0.7.31
     "@types/tmp": 0.2.3
-    "@yarnpkg/core": 3.5.2
+    "@yarnpkg/core": 3.5.3
     "@yarnpkg/parsers": 2.5.1
     agentkeepalive: 4.5.0
     aggregate-error: 3.1.0
@@ -8810,7 +8837,7 @@ __metadata:
     aws4: 1.12.0
     azure-devops-node-api: 12.1.0
     bunyan: 1.8.15
-    cacache: 17.1.3
+    cacache: 17.1.4
     cacheable-lookup: 5.0.4
     chalk: 4.1.2
     changelog-filename-regex: 2.0.1
@@ -8889,7 +8916,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 13def12bb994d7c25d9c092823db6ffc97d194c3d5164d0798c8a680207d0396dc8e0a853306faf95c42b0208c72f49423cc8929842373556d4c132031f1b659
+  checksum: 132efdb79c97de5351392c3890b83ef69a3f08e0ef23daae25a7fe42763ed9fbd55d2edf20bf3ee81b6ae787e79f8d8fbfaed06ce04db51d165fc1fe9c872cf7
   languageName: node
   linkType: hard
 
