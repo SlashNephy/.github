@@ -518,6 +518,8 @@ cask "robo-3t"
 cask "send-anywhere"
 # MySQL/MariaDB database management
 cask "sequel-ace"
+# Plugin for AWS CLI to start and end sessions that connect to managed instances
+cask "session-manager-plugin"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
