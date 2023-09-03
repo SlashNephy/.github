@@ -86,6 +86,11 @@ module.exports = {
       files: '**/bin/**/*.{js,mjs,cjs,ts,mts,cts}',
       extends: resolve(__dirname, 'presets/node.js'),
     },
+    // Cloudflare Worker
+    {
+      files: '**/src/worker.{js,ts}',
+      extends: resolve(__dirname, 'presets/allow-default-export.js'),
+    },
     // ビルドツールの構成ファイル
     {
       files: [
@@ -93,7 +98,8 @@ module.exports = {
         '**/codegen.{js,mjs,cjs,ts,mts,cts}',
       ],
       extends: [
-        resolve(__dirname, 'presets/config.js'),
+        resolve(__dirname, 'presets/allow-default-export.js'),
+        resolve(__dirname, 'presets/build-configuration.js'),
         resolve(__dirname, 'presets/node.js'),
       ],
     },
