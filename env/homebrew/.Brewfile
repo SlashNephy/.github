@@ -89,6 +89,8 @@ brew "corepack"
 brew "openldap"
 # Tool for downloading RTMP streaming media
 brew "rtmpdump"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # File comparison utilities
@@ -135,6 +137,8 @@ brew "gnu-tar"
 brew "gnu-which"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
 # Go Language's command-line interface for database migrations
 brew "goose"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
@@ -226,7 +230,7 @@ brew "percona-toolkit"
 # General-purpose scripting language
 brew "php"
 # Python dependency management tool
-brew "pipenv", link: false
+brew "pipenv"
 # Perl binary manager
 brew "plenv"
 # Python package management tool

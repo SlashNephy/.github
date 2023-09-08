@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/.github.iml" filepath="$PROJECT_DIR$/.idea/.github.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-extension.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-extension.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-extension.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-extension.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-extension.test.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-extension.test.iml" />
     </modules>
   </component>
 </project>

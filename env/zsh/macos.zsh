@@ -13,5 +13,5 @@ for script in "$ENV_DIR"/zsh/macos/**/*.zsh; do
   source "$script"
 done
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# To customize prompt, run `p10k configure` or edit ~/.github/env/zsh/.p10k.zsh.
 source "$HOME/.github/env/zsh/.p10k.zsh"
