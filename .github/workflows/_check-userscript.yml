@@ -43,7 +43,7 @@ jobs:
     with:
       working-directory: 'env/userscript'
       script: ''
-      command: 'NODE_OPTIONS="--max-old-space-size=4096" yarn ci'
+      command: 'NODE_OPTIONS="--max-old-space-size=8172" yarn ci'
       commit-message: '⚙️ Build (env/userscript)'
     permissions:
       contents: 'write'
