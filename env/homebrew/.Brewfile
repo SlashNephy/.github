@@ -235,6 +235,8 @@ brew "pipenv"
 brew "plenv"
 # Python package management tool
 brew "poetry", link: false
+# Theme for zsh
+brew "powerlevel10k"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Coreutils progress viewer
@@ -343,13 +345,11 @@ brew "motemen/furoshiki2/furoshiki2", args: ["HEAD"]
 brew "potatolabs/git-redate/git-redate"
 # Automated code review tool integrated with any code analysis tools regardless of programming language.
 brew "reviewdog/tap/reviewdog"
-# A Zsh Theme
-brew "romkatv/powerlevel10k/powerlevel10k"
 # Ookla Speedtest
 brew "teamookla/speedtest/speedtest"
 # Password manager
 cask "1password-beta"
-# Command-line helper for the 1Password password manager
+# Command-line interface for 1Password
 cask "1password-cli"
 # Stand alone ad blocker
 cask "adguard"
