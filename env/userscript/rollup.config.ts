@@ -412,6 +412,19 @@ export const banners: Banner[] = [
       },
     },
   },
+  {
+    id: 'auto-close-aws-vpn-client-window',
+    name: 'Auto-Close AWS VPN Client Window',
+    version: '0.1.0',
+    description: {
+      en: 'Close the AWS VPN Client window automatically.',
+      ja: '認証後に AWS VPN Client のウィンドウを自動的に閉じます。',
+    },
+    homepage:
+      'https://scrapbox.io/slashnephy/AWS_VPN_Client_%E3%81%AE%E8%AA%8D%E8%A8%BC%E7%94%BB%E9%9D%A2%E3%82%92%E8%87%AA%E5%8B%95%E7%9A%84%E3%81%AB%E9%96%89%E3%81%98%E3%82%8B_UserScript',
+    author: 'SlashNephy',
+    match: 'http://127.0.0.1:35001/',
+  },
 ]
 
 const config: RollupOptions[] = banners.map((banner) => buildOptions(banner))
