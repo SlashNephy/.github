@@ -10,6 +10,7 @@ export const EpgStationOnAirOverlay: CommentOverlayModule = {
   initializeContainers(): Containers {
     throw new Error('not implemented')
   },
+  // eslint-disable-next-line @typescript-eslint/require-await
   async detectMedia(partId: string): Promise<Media> {
     throw new Error('not implemented')
   },
