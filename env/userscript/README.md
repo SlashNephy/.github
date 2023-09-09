@@ -32,6 +32,7 @@ env/userscript is the directory that hosts UserScript sources and artifacts deve
 | AMQ i18n Titles                   | 0.1.2          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/amq-i18n-titles.user.js                   |
 | Detect Types                      | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/detect-types.user.js                      |
 | Anime Comment Overlay             | 0.4.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js             |
+| Auto-Close AWS VPN Client Window  | 0.1.0          | https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/auto-close-aws-vpn-client-window.user.js  |
 
 ### Annict Work Links (v0.3.2)
 
@@ -176,3 +177,9 @@ Register a function to generate runtime window type definitions.
 [📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/anime-comment-overlay.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/anime-comment-overlay.ts) / [📖 Article](https://scrapbox.io/slashnephy/%E3%82%A2%E3%83%8B%E3%83%A1%E9%85%8D%E4%BF%A1%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E5%AE%9F%E6%B3%81%E3%82%B3%E3%83%A1%E3%82%92%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B_UserScript)
 
 Display overlay of comments on various streaming sites and EPGStation.
+
+### Auto-Close AWS VPN Client Window (v0.1.0)
+
+[📥 Install](https://github.com/SlashNephy/.github/raw/master/env/userscript/dist/auto-close-aws-vpn-client-window.user.js) / [💻 Source](https://github.com/SlashNephy/.github/blob/master/env/userscript/src/auto-close-aws-vpn-client-window.ts) / [📖 Article](https://scrapbox.io/slashnephy/AWS_VPN_Client_%E3%81%AE%E8%AA%8D%E8%A8%BC%E7%94%BB%E9%9D%A2%E3%82%92%E8%87%AA%E5%8B%95%E7%9A%84%E3%81%AB%E9%96%89%E3%81%98%E3%82%8B_UserScript)
+
+Close the AWS VPN Client window automatically.
