@@ -83,7 +83,7 @@ jobs:
             ${{ inputs.tag-spec }}
 
       - name: Build Image & Push
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         with:
           push: true
           context: '${{ inputs.context }}'
