@@ -26,7 +26,7 @@
     "watch:private": "yarn build:rollup:private -w"
   },
   "dependencies": {
-    "@geolonia/japanese-numeral": "0.1.16",
+    "@geolonia/japanese-numeral": "1.0.1",
     "@xpadev-net/niconicomments": "0.2.55",
     "fast-xml-parser": "4.2.7",
     "ts-array-length": "0.1.2"
