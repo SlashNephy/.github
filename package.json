@@ -1,0 +1,11 @@
+{
+  "name": "github",
+  "version": "0.0.0",
+  "repository": "https://github.com:SlashNephy/.github",
+  "author": "SlashNephy <spica@starry.blue>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "env/*"
+  ]
+}
