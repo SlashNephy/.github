@@ -1,6 +1,6 @@
 import type { Config } from 'prettier'
 
-const prettier: Config = {
+module.exports = {
   semi: false,
   singleQuote: true,
   jsxSingleQuote: false,
@@ -10,7 +10,6 @@ const prettier: Config = {
   proseWrap: 'preserve',
   arrowParens: 'always',
   htmlWhitespaceSensitivity: 'css',
-  endOfLine: 'lf',
   quoteProps: 'as-needed',
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: false,
@@ -30,6 +29,4 @@ const prettier: Config = {
       },
     },
   ],
-}
-
-module.exports = prettier
+} satisfies Config
