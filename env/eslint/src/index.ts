@@ -2,12 +2,18 @@ import { resolve } from 'path'
 
 // https://github.com/microsoft/rushstack/tree/main/eslint/eslint-patch
 import '@rushstack/eslint-patch/modern-module-resolution.js'
+import { readGitignoreFiles } from 'eslint-gitignore'
 
 import type { Linter } from 'eslint'
 
 module.exports = {
   root: true,
   extends: ['eslint:recommended'],
+  ignorePatterns: [
+    '**/node_modules/**',
+    '**/.yarn/**',
+    ...readGitignoreFiles({ cwd: __dirname }),
+  ],
   overrides: [
     /*
      * 言語固有ルール
@@ -119,5 +125,4 @@ module.exports = {
       extends: resolve(__dirname, 'presets/style.js'),
     },
   ],
-  ignorePatterns: ['**/node_modules/**'],
 } satisfies Linter.Config
