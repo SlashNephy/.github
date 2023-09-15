@@ -88,7 +88,7 @@ module.exports = {
     },
     // Cloudflare Worker
     {
-      files: '**/src/worker.{js,ts}',
+      files: ['**/src/worker.{js,ts}', '**/functions/**/*.{js,ts}'],
       extends: resolve(__dirname, 'presets/allow-default-export.js'),
     },
     // ビルドツールの構成ファイル

@@ -251,6 +251,7 @@ __metadata:
     eslint-plugin-react: 7.33.1
     eslint-plugin-react-hooks: 4.6.0
     eslint-plugin-react-refresh: 0.4.3
+    eslint-plugin-relay: 1.8.3
     eslint-plugin-storybook: 0.6.13
     eslint-plugin-tsdoc: 0.2.17
     eslint-plugin-unused-imports: 3.0.0
@@ -1674,6 +1675,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-relay@npm:1.8.3":
+  version: 1.8.3
+  resolution: "eslint-plugin-relay@npm:1.8.3"
+  dependencies:
+    graphql: ^14.0.0 || ^15.0.0
+  checksum: 1e7e3df3eaa230c489050973650b48ce8c05e87cbe54eb9b09320fa2d9767ed65d07e217f6defdd7380eee847b474c6adc8ec59840357b4c8c6b452df1eb4aa5
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-storybook@npm:0.6.13":
   version: 0.6.13
   resolution: "eslint-plugin-storybook@npm:0.6.13"
@@ -2226,6 +2236,13 @@ __metadata:
   version: 1.4.0
   resolution: "graphemer@npm:1.4.0"
   checksum: bab8f0be9b568857c7bec9fda95a89f87b783546d02951c40c33f84d05bb7da3fd10f863a9beb901463669b6583173a8c8cc6d6b306ea2b9b9d5d3d943c3a673
+  languageName: node
+  linkType: hard
+
+"graphql@npm:^14.0.0 || ^15.0.0":
+  version: 15.8.0
+  resolution: "graphql@npm:15.8.0"
+  checksum: 423325271db8858428641b9aca01699283d1fe5b40ef6d4ac622569ecca927019fce8196208b91dd1d8eb8114f00263fe661d241d0eb40c10e5bfd650f86ec5e
   languageName: node
   linkType: hard
 
