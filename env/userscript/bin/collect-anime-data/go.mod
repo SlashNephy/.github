@@ -3,7 +3,7 @@ module collect-anime-data
 go 1.20
 
 require (
-	github.com/deckarep/golang-set/v2 v2.3.0
+	github.com/deckarep/golang-set/v2 v2.3.1
 	github.com/goccy/go-json v0.10.2
 	github.com/hasura/go-graphql-client v0.9.3
 	go.uber.org/zap v1.24.0
