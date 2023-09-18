@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"os"
 	"strconv"
@@ -12,10 +13,9 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/goccy/go-json"
-	"golang.org/x/exp/slog"
-)
 
-var logger = slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	_ "collect-vod-data/logger"
+)
 
 func main() {
 	ctx := context.Background()
@@ -29,17 +29,17 @@ func main() {
 		panic(err)
 	}
 
-	logger.Info("found newest work id", slog.Int("newest_work_id", newestWorkID))
+	slog.Info("found newest work id", slog.Int("newest_work_id", newestWorkID))
 
 	var results []*AnnictVODData
 	workID := 1
 	for workID <= newestWorkID {
-		logger.Info("fetching vod data", slog.Int("work_id", workID))
+		slog.Info("fetching vod data", slog.Int("work_id", workID))
 
 		data, err := client.fetchVODData(ctx, workID)
 		if err != nil {
 			if errors.Is(err, ErrRateLimited) {
-				logger.Warn("rate limited", slog.Int("work_id", workID))
+				slog.Warn("rate limited", slog.Int("work_id", workID))
 				time.Sleep(3 * time.Second)
 				continue
 			}
@@ -154,24 +154,24 @@ func (a *AnnictClient) fetchVODData(ctx context.Context, workID int) ([]*AnnictV
 	document.Find("table.table tbody tr").Each(func(i int, selection *goquery.Selection) {
 		children := selection.Children()
 		if children.Length() != 9 {
-			logger.Error("invalid table row", slog.Int("row", i), slog.Int("length", children.Length()), slog.Int("work_id", workID))
+			slog.Error("invalid table row", slog.Int("row", i), slog.Int("length", children.Length()), slog.Int("work_id", workID))
 			return
 		}
 
 		programID, err := strconv.Atoi(strings.TrimSpace(children.Eq(0).Text()))
 		if err != nil {
-			logger.Error("invalid program id", slog.Int("row", i), slog.Int("program_id", programID), slog.Int("work_id", workID))
+			slog.Error("invalid program id", slog.Int("row", i), slog.Int("program_id", programID), slog.Int("work_id", workID))
 			return
 		}
 
 		channelID, err := strconv.Atoi(strings.TrimSpace(children.Eq(1).Text()))
 		if err != nil {
-			logger.Error("invalid channel id", slog.Int("row", i), slog.Int("channel_id", channelID), slog.Int("work_id", workID))
+			slog.Error("invalid channel id", slog.Int("row", i), slog.Int("channel_id", channelID), slog.Int("work_id", workID))
 			return
 		}
 
 		if strings.TrimSpace(children.Eq(7).Text()) != "公開" {
-			logger.Error("invalid status", slog.Int("row", i), slog.Int("work_id", workID))
+			slog.Error("invalid status", slog.Int("row", i), slog.Int("work_id", workID))
 			return
 		}
 

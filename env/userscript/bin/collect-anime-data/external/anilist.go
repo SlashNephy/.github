@@ -4,12 +4,12 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"strings"
 	"time"
 
 	"github.com/hasura/go-graphql-client"
-	"go.uber.org/zap"
 )
 
 type AniListClient struct {
@@ -57,7 +57,7 @@ func (c *AniListClient) fetchMediaWithPage(ctx context.Context, page int) (*AniL
 		return nil, err
 	}
 
-	zap.L().Info("fetched media", zap.Int("page", page))
+	slog.Info("fetched media", slog.Int("page", page))
 	return &query, nil
 }
 
@@ -66,7 +66,7 @@ func (c *AniListClient) FetchMediaAll(ctx context.Context) ([]*AniListMediaQuery
 	page := 1
 
 	defer func() {
-		zap.L().Info("last page", zap.Int("page", page))
+		slog.Info("last page", slog.Int("page", page))
 	}()
 
 	for {
@@ -107,7 +107,7 @@ func (c *CachingAniListClient) FetchMediaAll(ctx context.Context) ([]*AniListMed
 	page := 1
 
 	defer func() {
-		zap.L().Info("last page", zap.Int("page", page))
+		slog.Info("last page", slog.Int("page", page))
 	}()
 
 	for {
@@ -120,7 +120,7 @@ func (c *CachingAniListClient) FetchMediaAll(ctx context.Context) ([]*AniListMed
 		}
 
 		if found {
-			zap.L().Debug("use cached response", zap.Int("page", page), zap.String("path", cachePath))
+			slog.Debug("use cached response", slog.Int("page", page), slog.String("path", cachePath))
 		} else {
 			r, err := c.fetchMediaWithPage(ctx, page)
 			if err != nil {

@@ -5,13 +5,13 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"log/slog"
 	"net/http"
 	"net/url"
 	"strconv"
 	"time"
 
 	"github.com/goccy/go-json"
-	"go.uber.org/zap"
 )
 
 type MALClient struct {
@@ -77,7 +77,7 @@ func (c *MALClient) fetchMediaWithPage(ctx context.Context, page int) (*MALMedia
 		return nil, err
 	}
 
-	zap.L().Info("fetched media", zap.Int("page", page))
+	slog.Info("fetched media", slog.Int("page", page))
 	return &result, nil
 }
 
@@ -86,7 +86,7 @@ func (c *MALClient) FetchMediaAll(ctx context.Context) ([]*MALMediaEntry, error)
 	page := 1
 
 	defer func() {
-		zap.L().Info("last page", zap.Int("page", page))
+		slog.Info("last page", slog.Int("page", page))
 	}()
 
 	for {
@@ -127,7 +127,7 @@ func (c *CachingMALClient) FetchMediaAll(ctx context.Context) ([]*MALMediaEntry,
 	page := 1
 
 	defer func() {
-		zap.L().Info("last page", zap.Int("page", page))
+		slog.Info("last page", slog.Int("page", page))
 	}()
 
 	for {
@@ -139,7 +139,7 @@ func (c *CachingMALClient) FetchMediaAll(ctx context.Context) ([]*MALMediaEntry,
 		}
 
 		if found {
-			zap.L().Debug("use cached response", zap.Int("page", page), zap.String("path", cachePath))
+			slog.Debug("use cached response", slog.Int("page", page), slog.String("path", cachePath))
 		} else {
 			r, err := c.fetchMediaWithPage(ctx, page)
 			if err != nil {

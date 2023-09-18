@@ -2,11 +2,11 @@ package main
 
 import (
 	"context"
+	"log/slog"
 	"net/http"
 	"os"
 
 	"github.com/goccy/go-json"
-	"go.uber.org/zap"
 
 	_ "collect-anime-data/logger"
 	"collect-anime-data/processor"
@@ -14,11 +14,12 @@ import (
 
 func main() {
 	ctx := context.Background()
-	httpClient := http.DefaultClient
+	httpClient := &http.Client{}
 
 	baseDir, err := getBaseDir()
 	if err != nil {
-		zap.L().Fatal("failed to get base dir", zap.Error(err))
+		slog.ErrorContext(ctx, "failed to get base dir", slog.Any("err", err))
+		return
 	}
 
 	cacheDir := baseDir + "/cache"
@@ -27,27 +28,32 @@ func main() {
 
 	anilistTitles, err := anilist.FetchTitles(ctx)
 	if err != nil {
-		zap.L().Fatal("failed to fetch AniList titles", zap.Error(err))
+		slog.ErrorContext(ctx, "failed to fetch AniList titles", slog.Any("err", err))
+		return
 	}
 
 	malTitles, err := mal.FetchTitles(ctx)
 	if err != nil {
-		zap.L().Fatal("failed to fetch MAL titles", zap.Error(err))
+		slog.ErrorContext(ctx, "failed to fetch MAL titles", slog.Any("err", err))
+		return
 	}
 
 	titles, err := processor.MergeTitles(append(anilistTitles, malTitles...)...)
 	if err != nil {
-		zap.L().Fatal("failed to merge titles", zap.Error(err))
+		slog.ErrorContext(ctx, "failed to merge titles", slog.Any("err", err))
+		return
 	}
 
 	content, err := json.Marshal(titles)
 	if err != nil {
-		zap.L().Fatal("failed to marshal titles", zap.Error(err))
+		slog.ErrorContext(ctx, "failed to marshal titles", slog.Any("err", err))
+		return
 	}
 
 	outputPath := baseDir + "/dist/titles.json"
 	if err = os.WriteFile(outputPath, content, 0644); err != nil {
-		zap.L().Fatal("failed to write titles.json", zap.Error(err))
+		slog.ErrorContext(ctx, "failed to write titles.json", slog.Any("err", err))
+		return
 	}
 }
 
