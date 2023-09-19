@@ -22,15 +22,14 @@ jobs:
   build:
     uses: ./.github/workflows/yarn-run.yml
     with:
-      working-directory: 'env/userstyle'
-      script: 'build'
+      script: 'workspace @slashnephy/userstyle build'
     permissions:
       contents: 'read'
 
   lint:
     uses: ./.github/workflows/yarn-lint.yml
     with:
-      working-directory: 'env/userstyle'
+      script: 'workspace @slashnephy/userstyle lint'
       enable-eslint: false
       enable-stylelint: true
     permissions:
@@ -41,8 +40,7 @@ jobs:
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
-      working-directory: 'env/userstyle'
-      script: 'ci'
+      script: 'workspace @slashnephy/userstyle ci'
       commit-message: '⚙️ Build (env/userstyle)'
     permissions:
       contents: 'write'

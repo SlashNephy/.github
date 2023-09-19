@@ -22,8 +22,8 @@ jobs:
   lint:
     uses: ./.github/workflows/yarn-lint.yml
     with:
-      working-directory: 'env/prettier'
-      pre-script: 'build'
+      pre-script: 'workspace @slashnephy/prettier-config build'
+      script: 'workspace @slashnephy/prettier-config lint'
     permissions:
       contents: 'read'
       pull-requests: 'write'
@@ -32,8 +32,8 @@ jobs:
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
-      working-directory: 'env/prettier'
-      pre-script: 'build'
+      pre-script: 'workspace @slashnephy/prettier-config build'
+      script: 'workspace @slashnephy/prettier-config format'
     permissions:
       contents: 'write'
 
@@ -43,7 +43,8 @@ jobs:
     uses: ./.github/workflows/yarn-publish.yml
     with:
       working-directory: 'env/prettier'
-      pre-script: 'bump-version'
+      pre-script: 'workspace @slashnephy/prettier-config bump-version'
+      script: 'workspace @slashnephy/prettier-config publish'
       commit-message: '🔨 Bump version'
     permissions:
       contents: 'write'

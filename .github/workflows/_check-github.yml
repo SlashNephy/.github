@@ -26,8 +26,7 @@ jobs:
     if: github.event_name != 'schedule'
     uses: ./.github/workflows/yarn-run.yml
     with:
-      working-directory: 'env/github'
-      script: 'build'
+      script: 'workspace @slashnephy/github-config build'
     permissions:
       contents: 'read'
 
@@ -35,7 +34,7 @@ jobs:
     if: github.event_name != 'schedule'
     uses: ./.github/workflows/yarn-lint.yml
     with:
-      working-directory: 'env/github'
+      script: 'workspace @slashnephy/github-config lint'
     permissions:
       contents: 'read'
       pull-requests: 'write'
@@ -44,7 +43,7 @@ jobs:
     if: github.event_name != 'pull_request' && github.event_name != 'schedule'
     uses: ./.github/workflows/yarn-format.yml
     with:
-      working-directory: 'env/github'
+      script: 'workspace @slashnephy/github-config format'
     permissions:
       contents: 'write'
 
