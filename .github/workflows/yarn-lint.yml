@@ -19,6 +19,10 @@ on:
         required: false
         type: string
         default: ''
+      script:
+        required: false
+        type: string
+        default: ''
       post-script:
         required: false
         type: string
@@ -90,7 +94,7 @@ jobs:
         run: 'yarn ${{ inputs.pre-script }}'
 
       - name: eslint
-        if: inputs.enable-eslint
+        if: inputs.enable-eslint && inputs.script == ''
         uses: reviewdog/action-eslint@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
@@ -99,7 +103,7 @@ jobs:
           eslint_flags: '${{ inputs.eslint-flags }} .'
 
       - name: prettier
-        if: inputs.enable-prettier
+        if: inputs.enable-prettier && inputs.script == ''
         uses: EPMatt/reviewdog-action-prettier@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
@@ -108,13 +112,18 @@ jobs:
           prettier_flags: '${{ inputs.prettier-flags }} .'
 
       - name: stylelint
-        if: inputs.enable-stylelint
+        if: inputs.enable-stylelint && inputs.script == ''
         uses: reviewdog/action-stylelint@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
           workdir: '${{ inputs.working-directory }}'
           stylelint_input: '${{ inputs.stylelint-input }}'
+
+      - name: Run Script
+        if: inputs.script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.script }}'
 
       - name: Run Post-Script
         if: inputs.post-script != ''
@@ -153,7 +162,7 @@ jobs:
         run: 'yarn ${{ inputs.pre-script }}'
 
       - name: eslint
-        if: inputs.enable-eslint
+        if: inputs.enable-eslint && inputs.script == ''
         uses: reviewdog/action-eslint@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
@@ -162,7 +171,7 @@ jobs:
           eslint_flags: '${{ inputs.eslint-flags }} .'
 
       - name: prettier
-        if: inputs.enable-prettier
+        if: inputs.enable-prettier && inputs.script == ''
         uses: EPMatt/reviewdog-action-prettier@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
@@ -171,13 +180,18 @@ jobs:
           prettier_flags: '${{ inputs.prettier-flags }} .'
 
       - name: stylelint
-        if: inputs.enable-stylelint
+        if: inputs.enable-stylelint && inputs.script == ''
         uses: reviewdog/action-stylelint@v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
           stylelint_input: '${{ inputs.stylelint-input }}'
           workdir: '${{ inputs.working-directory }}'
+
+      - name: Run Script
+        if: inputs.script != ''
+        working-directory: '${{ inputs.working-directory }}'
+        run: 'yarn ${{ inputs.script }}'
 
       - name: Run Post-Script
         if: inputs.post-script != ''
