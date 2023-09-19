@@ -83,7 +83,12 @@ module.exports = {
       // プロパティーに snake_case / UPPER_CASE を許容
       {
         selector: ['property'],
-        format: ['strictCamelCase', 'snake_case', 'UPPER_CASE'],
+        format: [
+          'strictCamelCase',
+          'snake_case',
+          'UPPER_CASE',
+          'StrictPascalCase',
+        ],
       },
       // Boolean は特定のプレフィックスを強制
       {
