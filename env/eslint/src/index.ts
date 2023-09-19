@@ -49,7 +49,7 @@ module.exports = {
     },
     // Relay
     {
-      files: '**/*.{jsx,tsx}',
+      files: '**/*.{js,jsx,ts,tsx}',
       extends: resolve(__dirname, 'framework/relay.js'),
     },
     // Next.js
