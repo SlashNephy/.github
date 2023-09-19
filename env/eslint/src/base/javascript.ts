@@ -137,6 +137,8 @@ module.exports = {
     'default-case': 'off',
     // default export を優先しない
     'import/prefer-default-export': 'off',
+    // 循環 import を禁止
+    'import/no-cycle': 'error',
     // continue 文を許可
     'no-continue': 'off',
     // _ で始まるメンバー名を許可
@@ -151,5 +153,14 @@ module.exports = {
     'no-plusplus': 'off',
     // return の省略などを許可
     'consistent-return': 'off',
+    // 空行を挟む
+    'padding-line-between-statements': [
+      'warn',
+      // return 前に空行
+      { blankLine: 'always', prev: '*', next: 'return' },
+      // ディレクティブ後に空行
+      { blankLine: 'always', prev: 'directive', next: '*' },
+      { blankLine: 'any', prev: 'directive', next: 'directive' },
+    ],
   },
 } satisfies Linter.Config
