@@ -22,8 +22,8 @@ jobs:
   lint:
     uses: ./.github/workflows/yarn-lint.yml
     with:
-      working-directory: 'env/amq'
-      pre-script: 'build'
+      pre-script: 'workspace @slashnephy/types-amq build'
+      script: 'workspace @slashnephy/types-amq lint'
     permissions:
       contents: 'read'
       pull-requests: 'write'
@@ -32,8 +32,8 @@ jobs:
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
-      working-directory: 'env/amq'
-      pre-script: 'build'
+      pre-script: 'workspace @slashnephy/types-amq build'
+      script: 'workspace @slashnephy/types-amq format'
     permissions:
       contents: 'write'
 
@@ -42,8 +42,8 @@ jobs:
     needs: lint
     uses: ./.github/workflows/yarn-publish.yml
     with:
-      working-directory: 'env/amq'
-      pre-script: 'bump-version'
+      pre-script: 'workspace @slashnephy/types-amq bump-version'
+      script: 'workspace @slashnephy/types-amq publish'
       commit-message: '🔨 Bump version'
     permissions:
       contents: 'write'

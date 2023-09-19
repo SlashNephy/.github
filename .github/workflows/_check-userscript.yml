@@ -24,15 +24,14 @@ jobs:
   build:
     uses: ./.github/workflows/yarn-run.yml
     with:
-      working-directory: 'env/userscript'
-      script: 'build'
+      script: 'workspace @slashnephy/userscript build'
     permissions:
       contents: 'read'
 
   lint:
     uses: ./.github/workflows/yarn-lint.yml
     with:
-      working-directory: 'env/userscript'
+      script: 'workspace @slashnephy/userscript lint'
     permissions:
       contents: 'read'
       pull-requests: 'write'
@@ -41,9 +40,8 @@ jobs:
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
-      working-directory: 'env/userscript'
       script: ''
-      command: 'NODE_OPTIONS="--max-old-space-size=8172" yarn ci'
+      command: 'NODE_OPTIONS="--max-old-space-size=8172" yarn workspace @slashnephy/userscript ci'
       commit-message: '⚙️ Build (env/userscript)'
     permissions:
       contents: 'write'

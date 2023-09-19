@@ -22,15 +22,14 @@ jobs:
   build:
     uses: ./.github/workflows/yarn-run.yml
     with:
-      working-directory: 'env/stylelint'
-      script: 'build'
+      script: 'workspace @slashnephy/stylelint-config build'
     permissions:
       contents: 'read'
 
   lint:
     uses: ./.github/workflows/yarn-lint.yml
     with:
-      working-directory: 'env/stylelint'
+      script: 'workspace @slashnephy/stylelint-config lint'
     permissions:
       contents: 'read'
       pull-requests: 'write'
@@ -39,8 +38,7 @@ jobs:
     if: github.event_name != 'pull_request'
     uses: ./.github/workflows/yarn-format.yml
     with:
-      working-directory: 'env/stylelint'
-      pre-script: 'build'
+      script: 'workspace @slashnephy/stylelint-config format'
     permissions:
       contents: 'write'
 
@@ -51,7 +49,7 @@ jobs:
       - lint
     uses: ./.github/workflows/yarn-publish.yml
     with:
-      working-directory: 'env/stylelint'
+      script: 'workspace @slashnephy/stylelint-config publish'
     permissions:
       contents: 'write'
     secrets:
