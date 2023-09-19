@@ -47,6 +47,11 @@ module.exports = {
       files: '**/*.{jsx,tsx}',
       extends: resolve(__dirname, 'framework/react.js'),
     },
+    // Relay
+    {
+      files: '**/*.{jsx,tsx}',
+      extends: resolve(__dirname, 'framework/relay.js'),
+    },
     // Next.js
     {
       files: [
