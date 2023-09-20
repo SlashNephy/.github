@@ -32,7 +32,7 @@
     "postcss-cli": "10.1.0",
     "postcss-scss": "4.0.6",
     "prettier": "3.0.0",
-    "sass": "1.64.1",
+    "sass": "1.67.0",
     "stylelint": "15.10.2"
   },
   "packageManager": "yarn@3.6.1"
