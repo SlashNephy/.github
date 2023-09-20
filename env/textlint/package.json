@@ -43,7 +43,7 @@
     "@textlint/types": "13.3.3",
     "@types/node": "20.4.5",
     "concurrently": "8.2.0",
-    "eslint": "8.45.0",
+    "eslint": "8.49.0",
     "prettier": "3.0.0",
     "typescript": "5.1.6"
   },

@@ -31,7 +31,7 @@
     "@slashnephy/prettier-config": "0.1.27",
     "@types/node": "20.4.5",
     "concurrently": "8.2.0",
-    "eslint": "8.45.0",
+    "eslint": "8.49.0",
     "prettier": "3.0.0",
     "renovate": "36.97.3",
     "ts-node": "10.9.1",
