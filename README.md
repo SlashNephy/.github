@@ -1,7 +1,5 @@
 # .github
 
-My dotfiles and GitHub Action reusable workflows collection
-
 ## Contents
 
 | path                | description                            | workflow                                                                                                                                                                                                                 |

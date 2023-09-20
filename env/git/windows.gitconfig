@@ -1,9 +1,6 @@
 [include]
   path = ~/.github/env/git/.gitconfig
 
-[user]
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJissZETg59pdvsAu20bF510AOW/P50f6IG1Y6Hk/+Tw
-
 [gpg]
   format = ssh
 

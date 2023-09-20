@@ -10,3 +10,5 @@ Host ssh.starry.blue bbc-ssh.starry.blue
 
 Host *
   ServerAliveInterval 30
+
+Include ~/.github/env/ssh/private.config

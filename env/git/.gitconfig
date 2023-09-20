@@ -13,8 +13,11 @@
 [tag]
   gpgsign = true
 
-[include]
-  path = ~/.github/env/git/user/default.gitconfig
+[user]
+  name = SlashNephy
+  email = spica@starry.blue
+  # https://start.1password.com/open/i?a=DRJGM4CPEZHWLPPN46N7O5U5HM&v=irzmprmnwbyejlntq4xfqjxqzu&i=m4zibueuwvwpcvfh7gwzbtd4ly&h=my.1password.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIH3GPB5bgJDJOj4bRVsBIsYXWBiwqFQF/SiXwr2Pz7N
 
 [alias]
   current-branch-name = !git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'
