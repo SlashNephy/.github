@@ -3815,7 +3815,7 @@ __metadata:
     eslint-plugin-n: 16.0.1
     eslint-plugin-no-void-return-type: 1.0.2
     eslint-plugin-node: 11.1.0
-    eslint-plugin-package-json: 0.1.4
+    eslint-plugin-package-json: 0.1.5
     eslint-plugin-promise: 6.1.1
     eslint-plugin-react: 7.33.1
     eslint-plugin-react-hooks: 4.6.0
@@ -8084,16 +8084,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-package-json@npm:0.1.4":
-  version: 0.1.4
-  resolution: "eslint-plugin-package-json@npm:0.1.4"
+"eslint-plugin-package-json@npm:0.1.5":
+  version: 0.1.5
+  resolution: "eslint-plugin-package-json@npm:0.1.5"
   dependencies:
     disparity: ^3.0.0
     package-json-validator: ^0.6.3
     requireindex: ^1.2.0
   peerDependencies:
     eslint: ">=4.7.0"
-  checksum: c4526a62f11885f0fc3bc37f07995e9dad57932b0a16473fa412d2c9902ccbb55e01e7015b0d74e021cd67ff9d1a2a180d575ca032f7de1bfe155c0440f5a2e7
+  checksum: 1f6f6b35db333aec936028b5665aacc31cdc46562fea399279155a20ef67d75e047b7e895975d771b903a2ed7e833b755aa02d3f6204312b57a6d19b07dcad02
   languageName: node
   linkType: hard
 
