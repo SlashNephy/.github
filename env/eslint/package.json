@@ -84,7 +84,7 @@
     "prettier": "3.0.0",
     "ts-node": "10.9.1"
   },
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@3.6.3",
   "eslintConfig": {
     "extends": "./dist"
   },

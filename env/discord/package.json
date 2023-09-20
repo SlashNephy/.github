@@ -33,7 +33,7 @@
     "rollup": "3.26.3",
     "typescript": "5.1.6"
   },
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@3.6.3",
   "eslintConfig": {
     "extends": [
       "@slashnephy/eslint-config"
