@@ -89,9 +89,9 @@ jobs:
         run: 'git checkout .yarnrc.yml'
         continue-on-error: true
 
-      - name: Pull
-        if: inputs.commit-message != ''
-        run: git pull
+      # - name: Pull
+      #   if: inputs.commit-message != ''
+      #   run: git pull
 
       - name: Push
         if: inputs.commit-message != ''

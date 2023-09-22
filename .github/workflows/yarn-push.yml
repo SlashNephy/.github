@@ -103,8 +103,8 @@ jobs:
         working-directory: '${{ inputs.working-directory }}'
         run: '${{ inputs.post-command }}'
 
-      - name: Pull
-        run: git pull
+      # - name: Pull
+      #   run: git pull
 
       - name: Push
         uses: stefanzweifel/git-auto-commit-action@v4
