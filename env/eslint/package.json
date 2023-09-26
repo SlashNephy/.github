@@ -42,7 +42,7 @@
     "eslint-config-standard": "17.1.0",
     "eslint-gitignore": "0.1.0",
     "eslint-import-resolver-node": "0.3.7",
-    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-css-import-order": "1.1.0",
     "eslint-plugin-css-reorder": "0.5.1",
     "eslint-plugin-deprecation": "1.5.0",
