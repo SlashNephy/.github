@@ -81,6 +81,7 @@ const main = async () => {
     } catch (error: unknown) {
       if (!(error instanceof RequestError) || error.status !== 404) {
         console.error(`[${owner}/${repo}] Error while getting content`, error)
+
         return
       }
     }
