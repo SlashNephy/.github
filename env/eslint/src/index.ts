@@ -12,7 +12,7 @@ module.exports = {
   ignorePatterns: [
     '**/node_modules/**',
     '**/.yarn/**',
-    ...readGitignoreFiles({ cwd: __dirname }),
+    ...readGitignoreFiles(),
   ],
   overrides: [
     /*

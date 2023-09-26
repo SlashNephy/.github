@@ -12,7 +12,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:xss/recommended',
   ],
-  plugins: ['import', 'promise', 'n', 'unused-imports'],
+  plugins: ['import', 'promise', 'n', 'unused-imports', 'deprecation'],
   env: {
     node: true,
     es2022: true,
@@ -162,5 +162,30 @@ module.exports = {
       { blankLine: 'always', prev: 'directive', next: '*' },
       { blankLine: 'any', prev: 'directive', next: 'directive' },
     ],
+    // void Promise を許可
+    'no-void': 'off',
+    // 1 <= x < 10 を許可
+    yoda: [
+      'error',
+      'never',
+      {
+        exceptRange: true,
+      },
+    ],
+    // Deprecated されたコードの使用を禁止
+    'deprecation/deprecation': 'error',
+    // 不要な変数を禁止
+    'unused-imports/no-unused-vars': [
+      'warn',
+      // '_' で始まる変数を許可
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],
+    // anonymous な export default を許可
+    'import/no-anonymous-default-export': 'off',
   },
 } satisfies Linter.Config

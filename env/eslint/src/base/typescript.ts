@@ -11,7 +11,7 @@ module.exports = {
     'plugin:no-void-return-type/recommended',
     'plugin:storybook/recommended',
   ],
-  plugins: ['@typescript-eslint', 'deprecation', 'tsdoc'],
+  plugins: ['@typescript-eslint', 'tsdoc'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
@@ -166,28 +166,17 @@ module.exports = {
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/unbound-method': 'off',
-    // 不要な変数を禁止
+    // JavaScript 側で定義
     '@typescript-eslint/no-unused-vars': 'off',
-    'unused-imports/no-unused-vars': [
-      'warn',
-      // '_' で始まる変数を許可
-      {
-        vars: 'all',
-        varsIgnorePattern: '^_',
-        args: 'after-used',
-        argsIgnorePattern: '^_',
-      },
-    ],
     // 過激なルールを無効化
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/no-unsafe-enum-comparison': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    // Deprecated されたコードの使用を禁止
-    'deprecation/deprecation': 'error',
     // import に拡張子を推奨
     'import/extensions': [
       'warn',
@@ -198,5 +187,12 @@ module.exports = {
     ],
     // TSDoc
     'tsdoc/syntax': 'warn',
+    // enum のメンバーでビット演算を許可する
+    '@typescript-eslint/prefer-literal-enum-member': [
+      'error',
+      {
+        allowBitwiseExpressions: true,
+      },
+    ],
   },
 } satisfies Linter.Config
