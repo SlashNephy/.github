@@ -184,7 +184,7 @@
     }
 
     async function fetchAnnictBroadcastData(branch = 'master') {
-        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/.github/${branch}/env/userscript/bin/collect-vod-data/dist/data.json`);
+        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/anime-vod-data/${branch}/dist/data.json`);
         return response.json();
     }
 

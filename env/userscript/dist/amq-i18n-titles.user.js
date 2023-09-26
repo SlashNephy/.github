@@ -50,7 +50,7 @@
     };
 
     async function fetchAnimeTitles(branch = 'master') {
-        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/.github/${branch}/env/userscript/bin/collect-anime-data/dist/titles.json`);
+        const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/anime-titles-map/${branch}/dist/japanese.json`);
         return response.json();
     }
 

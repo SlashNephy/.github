@@ -10,8 +10,6 @@ export type AnnictBroadcastData = {
 }
 
 export async function fetchAnnictBroadcastData(branch = 'master'): Promise<AnnictBroadcastData[]> {
-  const response = await fetch(
-    `https://raw.githubusercontent.com/SlashNephy/anime-vod-data/${branch}/dist/data.json`
-  )
+  const response = await fetch(`https://raw.githubusercontent.com/SlashNephy/anime-vod-data/${branch}/dist/data.json`)
   return response.json()
 }
