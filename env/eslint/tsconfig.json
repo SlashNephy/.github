@@ -11,7 +11,11 @@
     "skipLibCheck": true,
     "useUnknownInCatchVariables": true,
     "noUncheckedIndexedAccess": true,
-    "typeRoots": ["./node_modules/@types", "../../node_modules/@types", "./types"]
+    "typeRoots": [
+      "./node_modules/@types",
+      "../../node_modules/@types",
+      "./types"
+    ]
   },
   "include": ["src/**/*.ts"]
 }
