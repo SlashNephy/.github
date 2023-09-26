@@ -77,6 +77,7 @@ const main = async () => {
       console.debug(
         `[${repo.owner.login}/${repo.name}] Cannot edit Webhook because you do not have admin privileges. Skipping...`
       )
+
       return
     }
 
