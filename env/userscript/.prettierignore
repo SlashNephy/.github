@@ -1,5 +1,0 @@
-.yarn/
-dist/
-rollup.config-*.mjs
-bin/collect-anime-data/cache/
-bin/collect-anime-data/main.go
