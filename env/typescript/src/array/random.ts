@@ -14,6 +14,7 @@ Array.prototype.random = function <T>() {
   }
 
   const index = Math.floor(Math.random() * this.length)
+
   return this[index] as T
 }
 
@@ -23,5 +24,6 @@ Array.prototype.randomOrNull = function <T>() {
   }
 
   const index = Math.floor(Math.random() * this.length)
+
   return this[index] as T
 }

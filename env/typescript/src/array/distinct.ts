@@ -10,6 +10,7 @@ declare global {
 
 Array.prototype.distinct = function <T>(): T[] {
   const array = this as T[]
+
   return Array.from(new Set(array))
 }
 

@@ -20,6 +20,7 @@ Array.prototype.remove = function <T>(target: T): boolean {
   }
 
   array.splice(index, 1)
+
   return true
 }
 

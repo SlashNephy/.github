@@ -20,6 +20,7 @@ Array.prototype.min = function <T = number>(): number {
   }
 
   const array = this as T[] as unknown as number[]
+
   return Math.min(...array)
 }
 
@@ -29,6 +30,7 @@ Array.prototype.minOrNull = function <T = number>(): number | null {
   }
 
   const array = this as T[] as unknown as number[]
+
   return Math.min(...array)
 }
 
@@ -39,6 +41,7 @@ Array.prototype.minBy = function <T, R = number>(key: (item: T) => R): T {
 
   const array = this.map((item) => key(item as T))
   const min = array.min()
+
   return this.find((item) => key(item as T) === min)
 }
 
@@ -51,5 +54,6 @@ Array.prototype.minByOrNull = function <T, R = number>(
 
   const array = this.map((item) => key(item as T))
   const min = array.min()
+
   return this.find((item) => key(item as T) === min)
 }

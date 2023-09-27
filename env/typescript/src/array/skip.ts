@@ -9,5 +9,6 @@ declare global {
 
 Array.prototype.skip = function <T>(count: number): T[] {
   const array = this as T[]
+
   return array.slice(count)
 }

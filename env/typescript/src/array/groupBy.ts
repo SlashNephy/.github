@@ -11,6 +11,7 @@ Array.prototype.groupBy = function <T, K>(
   key: (item: T, index: number) => K
 ): Map<K, T[]> {
   const array = this as T[]
+
   return array.reduce((map, item, index) => {
     const groupKey = key(item, index)
 

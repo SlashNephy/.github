@@ -20,6 +20,7 @@ Array.prototype.max = function <T = number>(): number {
   }
 
   const array = this as T[] as unknown as number[]
+
   return Math.max(...array)
 }
 
@@ -29,6 +30,7 @@ Array.prototype.maxOrNull = function <T = number>(): number | null {
   }
 
   const array = this as T[] as unknown as number[]
+
   return Math.max(...array)
 }
 
@@ -39,6 +41,7 @@ Array.prototype.maxBy = function <T, R = number>(key: (item: T) => R): T {
 
   const array = this.map((item) => key(item as T))
   const max = array.max()
+
   return this.find((item) => key(item as T) === max)
 }
 
@@ -51,5 +54,6 @@ Array.prototype.maxByOrNull = function <T, R = number>(
 
   const array = this.map((item) => key(item as T))
   const max = array.max()
+
   return this.find((item) => key(item as T) === max)
 }
