@@ -23,7 +23,7 @@
     "@babel/preset-typescript": "7.22.5",
     "@rollup/plugin-babel": "6.0.3",
     "@rollup/plugin-typescript": "11.1.2",
-    "@slashnephy/eslint-config": "2.0.13",
+    "@slashnephy/eslint-config": "2.0.14",
     "@slashnephy/prettier-config": "1.0.10",
     "@types/babel__core": "7.20.1",
     "@types/babel__preset-env": "7.9.2",
