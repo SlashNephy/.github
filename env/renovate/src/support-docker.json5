@@ -11,14 +11,6 @@
   hostRules: [
     {
       hostType: 'docker',
-      username: 's1ashnephy',
-      encrypted: {
-        // https://app.renovatebot.com/encrypt
-        password: 'wcFMA/xDdHCJBTolAQ//W4MpPcP+P0atNJRKq8iRD/VyEQiEXGHzyZ+/jxSZoYfWTNa6BxIWUfLGmJQIFgeNxt2uxmcB0/4A+ZSqz264Jt4HtbBhBl1Uq4eEt0Y3S7RLygrW0BhTVuimE4vdo/iZZT7LqXR0iPEnxRq9Uvej8F5UClW9DlxPOAVKBTz74zNAx/Ws4d8ch+OC0Vf4MT5+6YYmbpg4YAG0m5audPWjxR9MjYSGN6PlHvnRDXjj1F+PzqCAj7AL7dNeeg9Yh9Qx9C32hsfzX27peK5+tD5f16r/iTsKuXtWGS+lz4G3kUAOx71cvr+0x2bvfOKhrly7vjiHkldjY5d2dNLdQNhel9cHu2fPULdzm4sBdDWNm1TAePKJBbGgZylxQlploZleXWuf7FzyXK7qzbHMizwiCVLbvWT9DkLNp+J9xdsXmQfR578Or3ScAXRImHnlwExvnMOvj6mU+unaZtJxxA9Q5fNseNkt8anVJYNHaZtzth6Ow/QVCoqhYrtjS4vnPu/dRcT3hBVF54El1DcpCINhYfYTpxYLLd9xrT0RLC0ME6m83oS07xf+yuNxPI5JQz3n3DEeqk2ip8/aaHDqsc7h2qMLsoi3QZ+Ecd4RB/M9vC+eohO5e5M9Sc8eRy9zejRrE8svLqIBOO1GnKxBhpowUg9yf6x5ScgNiYyO5KDGAOnSgwEZeG0PRvg+TV2lKIGxVrnGgNdbh8Y/NPLIOPZCXsxsDLssMBmuH065sZtMTUt+FXek43EUW7+9iCmrYxIGVm8wIpS9rpXPgAvi87f1NFFKv2FNVk+dAMzHqn+Du/XXToeK5bOkkBq+0TTwsjE4bnERxojEl5Q3daN3VHthja3ij3oI',
-      },
-    },
-    {
-      hostType: 'docker',
       matchHost: 'https://ghcr.io',
       username: 'starrybluesky-bot',
       encrypted: {
