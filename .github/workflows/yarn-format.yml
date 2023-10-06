@@ -123,7 +123,7 @@ jobs:
       #   run: git pull
 
       - name: Push
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: '${{ inputs.commit-message }}'
           commit_author: 'StarryBlueSky-bot <97773209+StarryBlueSky-bot@users.noreply.github.com>'
