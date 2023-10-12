@@ -3662,7 +3662,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.13.4
+    renovate: 37.13.7
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -6894,17 +6894,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emojibase-regex@npm:15.0.0":
-  version: 15.0.0
-  resolution: "emojibase-regex@npm:15.0.0"
-  checksum: f3759319a8a47c84eacc38ddf5c3e2aa4ea870321e73ea2e8ab2cc2492fd32a027b5748bd0d57ddb1dd1cae9bb276fced405b5ceec5efa5cff336235e6091245
+"emojibase-regex@npm:15.2.0":
+  version: 15.2.0
+  resolution: "emojibase-regex@npm:15.2.0"
+  checksum: 0123fb6d66dd12ebfbe61d5b74de82b6cb8dcb3a15f70b687b6702239ea369ff53e001ad682bfcdcf334ca7fffcc13a543c602db35fb8f47fb302c918cb88bcc
   languageName: node
   linkType: hard
 
-"emojibase@npm:15.0.0":
-  version: 15.0.0
-  resolution: "emojibase@npm:15.0.0"
-  checksum: 6cd0aee781a6e558802bb06bb389b14188496f163fe06e4f697fb6f0ec7f6b8c5abe309e787f41db0084678f9239cf56c2122057a8ba290da82bdc793e3b9c28
+"emojibase@npm:15.2.0":
+  version: 15.2.0
+  resolution: "emojibase@npm:15.2.0"
+  checksum: 43aa33333f1000376b5adb1598cdb4f0d8bb647063a8b2a2d5a4d2f7c30ef7cfe005bb2ea3f9325b48f8e8e2da40e139ff1abe9e3c64c28be53ea26761b66b29
   languageName: node
   linkType: hard
 
@@ -11922,9 +11922,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.13.4":
-  version: 37.13.4
-  resolution: "renovate@npm:37.13.4"
+"renovate@npm:37.13.7":
+  version: 37.13.7
+  resolution: "renovate@npm:37.13.7"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -11974,8 +11974,8 @@ __metadata:
     editorconfig: 2.0.0
     email-addresses: 5.0.0
     emoji-regex: 10.2.1
-    emojibase: 15.0.0
-    emojibase-regex: 15.0.0
+    emojibase: 15.2.0
+    emojibase-regex: 15.2.0
     extract-zip: 2.0.1
     find-packages: 10.0.4
     find-up: 5.0.0
@@ -12040,7 +12040,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 267b96c0ef581c7076febc69be00e9f6df299eef1eb017ac226224586406acc8d10e1042b5c440327702bf331d586ac6fb8dacf29e0379476d9398d6aef4ff20
+  checksum: e1ddddbac0887e1188e549e3b03150e10f3cdde91824ce9e1bd8d1a2543ff8bc7643096b83f16427560a10a1694909b1e224134af55582ad48c65fe2b13444a5
   languageName: node
   linkType: hard
 
