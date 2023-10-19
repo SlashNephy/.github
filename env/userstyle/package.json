@@ -22,7 +22,7 @@
     "watch:postcss": "yarn build:postcss -w"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "2.0.37",
+    "@slashnephy/eslint-config": "2.0.38",
     "@slashnephy/prettier-config": "1.0.25",
     "@slashnephy/stylelint-config": "0.1.1",
     "autoprefixer": "10.4.14",
