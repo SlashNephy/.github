@@ -3548,7 +3548,7 @@ __metadata:
     "@rollup/plugin-babel": 6.0.3
     "@rollup/plugin-typescript": 11.1.2
     "@slashnephy/eslint-config": 2.0.40
-    "@slashnephy/prettier-config": 1.0.26
+    "@slashnephy/prettier-config": 1.0.27
     "@types/babel__core": 7.20.1
     "@types/babel__preset-env": 7.9.2
     concurrently: 8.2.0
@@ -3615,7 +3615,7 @@ __metadata:
   dependencies:
     "@jest/types": 29.6.1
     "@slashnephy/eslint-config": 2.0.40
-    "@slashnephy/prettier-config": 1.0.26
+    "@slashnephy/prettier-config": 1.0.27
     "@types/node": 20.4.5
     concurrently: 8.2.0
     eslint: 8.45.0
@@ -3626,12 +3626,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@slashnephy/prettier-config@npm:1.0.26":
-  version: 1.0.26
-  resolution: "@slashnephy/prettier-config@npm:1.0.26"
+"@slashnephy/prettier-config@npm:1.0.27":
+  version: 1.0.27
+  resolution: "@slashnephy/prettier-config@npm:1.0.27"
   peerDependencies:
     prettier: ^3
-  checksum: 6a7212130d1c0076924a1e93f3bd1640e0e47aeb2a899343c26c32c07904d4b872f3c4beb73b47c4a944c951d104033d64670224cdc462ba9bb963e9aca9b310
+  checksum: b00b9f652230f0bce9d6bc2218b50b842c9e6a45451c3016a3284f7924abaca10ade3f7a2d94f54e8d27c88770c80c12e30da2d37f4b93e2de651fd1258dfc33
   languageName: node
   linkType: hard
 
@@ -3641,7 +3641,7 @@ __metadata:
   dependencies:
     "@octokit/rest": 20.0.1
     "@slashnephy/eslint-config": 2.0.40
-    "@slashnephy/prettier-config": 1.0.26
+    "@slashnephy/prettier-config": 1.0.27
     "@types/node": 20.4.5
     concurrently: 8.2.0
     dotenv: 16.3.1
@@ -3658,7 +3658,7 @@ __metadata:
   resolution: "@slashnephy/scrapbox@workspace:env/scrapbox"
   dependencies:
     "@slashnephy/eslint-config": 2.0.40
-    "@slashnephy/prettier-config": 1.0.26
+    "@slashnephy/prettier-config": 1.0.27
     concurrently: 8.2.0
     eslint: 8.45.0
     prettier: 3.0.0
@@ -3672,7 +3672,7 @@ __metadata:
   resolution: "@slashnephy/stylelint-config@workspace:env/stylelint"
   dependencies:
     "@slashnephy/eslint-config": 2.0.40
-    "@slashnephy/prettier-config": 1.0.26
+    "@slashnephy/prettier-config": 1.0.27
     "@types/node": 20.4.5
     concurrently: 8.2.0
     eslint: 8.45.0
@@ -3691,7 +3691,7 @@ __metadata:
   resolution: "@slashnephy/textlint-config@workspace:env/textlint"
   dependencies:
     "@slashnephy/eslint-config": 2.0.40
-    "@slashnephy/prettier-config": 1.0.26
+    "@slashnephy/prettier-config": 1.0.27
     "@textlint/types": 13.3.3
     "@types/node": 20.4.5
     concurrently: 8.2.0
@@ -3713,7 +3713,7 @@ __metadata:
   resolution: "@slashnephy/typescript-extension@workspace:env/typescript"
   dependencies:
     "@slashnephy/eslint-config": 2.0.40
-    "@slashnephy/prettier-config": 1.0.26
+    "@slashnephy/prettier-config": 1.0.27
     "@types/node": 20.4.5
     concurrently: 8.2.0
     eslint: 8.45.0
@@ -3730,7 +3730,7 @@ __metadata:
   resolution: "@slashnephy/userstyle@workspace:env/userstyle"
   dependencies:
     "@slashnephy/eslint-config": 2.0.40
-    "@slashnephy/prettier-config": 1.0.26
+    "@slashnephy/prettier-config": 1.0.27
     "@slashnephy/stylelint-config": 0.1.1
     autoprefixer: 10.4.14
     concurrently: 8.2.0
