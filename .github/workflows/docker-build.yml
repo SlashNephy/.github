@@ -42,6 +42,19 @@ on:
         required: false
         type: string
         default: ''
+      registry:
+        required: false
+        type: string
+        default: 'ghcr.io'
+      registry-username:
+        required: false
+        type: string
+        default: ''
+    secrets:
+      registry-password:
+         required: false
+      build-args:
+        required: false
 
 permissions:
   contents: read
@@ -52,7 +65,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && !contains(github.ref, 'renovate'))
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -65,9 +78,9 @@ jobs:
       - name: Login to Registry
         uses: docker/login-action@v2
         with:
-          registry: 'ghcr.io'
-          username: '${{ github.repository_owner }}'
-          password: '${{ secrets.GITHUB_TOKEN }}'
+          registry: '${{ inputs.registry }}'
+          username: ${{ (inputs.registry-username != '' && inputs.registry-username) || github.repository_owner }}
+          password: ${{ (secrets.registry-password != '' && secrets.registry-password) || secrets.GITHUB_TOKEN }}
 
       - name: Prepare Image Metadata
         id: metadata
@@ -97,6 +110,7 @@ jobs:
             IMAGE_TAG=${{ steps.metadata.outputs.version }}
             COMMIT_ID=${{ github.sha }}
             ${{ inputs.build-args }}
+            ${{ secrets.build-args }}
           target: '${{ inputs.target }}'
 
       - name: Scan Image
