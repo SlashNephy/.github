@@ -1,5 +1,5 @@
 [wsl2]
-memory=2GB
+memory=8GB
 swap=0
 localhostForwarding=true
-guiApplications=false
+guiApplications=true
