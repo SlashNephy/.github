@@ -3647,7 +3647,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.31.4
+    renovate: 37.31.5
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -6927,7 +6927,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emoji-regex@npm:10.2.1, emoji-regex@npm:^10.1.0":
+"emoji-regex@npm:10.3.0":
+  version: 10.3.0
+  resolution: "emoji-regex@npm:10.3.0"
+  checksum: 5da48edfeb9462fb1ae5495cff2d79129974c696853fb0ce952cbf560f29a2756825433bf51cfd5157ec7b9f93f46f31d712e896d63e3d8ac9c3832bdb45ab73
+  languageName: node
+  linkType: hard
+
+"emoji-regex@npm:^10.1.0":
   version: 10.2.1
   resolution: "emoji-regex@npm:10.2.1"
   checksum: 1aa2d16881c56531fdfc03d0b36f5c2b6221cc4097499a5665b88b711dc3fb4d5b8804f0ca6f00c56e5dcf89bac75f0487eee85da1da77df3a33accc6ecbe426
@@ -11966,9 +11973,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.31.4":
-  version: 37.31.4
-  resolution: "renovate@npm:37.31.4"
+"renovate@npm:37.31.5":
+  version: 37.31.5
+  resolution: "renovate@npm:37.31.5"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -12017,7 +12024,7 @@ __metadata:
     detect-indent: 6.1.0
     editorconfig: 2.0.0
     email-addresses: 5.0.0
-    emoji-regex: 10.2.1
+    emoji-regex: 10.3.0
     emojibase: 15.2.0
     emojibase-regex: 15.2.0
     extract-zip: 2.0.1
@@ -12083,7 +12090,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 2739f288b86ab5fc30b68b6e1619cce62843b30cf2421b7485b3d92323beb386bd736f289ab23a3260442e1172c3f1d977f10b9cdaf5017a1083aec7a1adc082
+  checksum: c3118113db5e6e4a973321d2a5e3f08f23c6fee6670dbf788c1f1c1ecab271b23b1570fa6a317be4c4d5b44ca74ce82c4e5338e3cc1beac295f06627a40b7c80
   languageName: node
   linkType: hard
 
