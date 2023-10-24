@@ -3438,10 +3438,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/ruby-semver@npm:3.0.15":
-  version: 3.0.15
-  resolution: "@renovatebot/ruby-semver@npm:3.0.15"
-  checksum: 0f0d407bd88a4a040f0b12254255be65c5e527a6f60034fdc6b59de2094c4b0fa2fbc2ecc1999ed446f7bb8e1425855a233af76e42084ff5ae72b0dad906a9a9
+"@renovatebot/ruby-semver@npm:3.0.16":
+  version: 3.0.16
+  resolution: "@renovatebot/ruby-semver@npm:3.0.16"
+  checksum: 27cac8301097ccebc79e81b9c0de840f0416d8e9a687354ff9204f38d4db2db3e6365e20bc8e6a981cf0ad43a351c68e881050db46b06faea0c0954f25c96b19
   languageName: node
   linkType: hard
 
@@ -3647,7 +3647,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.31.6
+    renovate: 37.31.7
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -11973,9 +11973,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.31.6":
-  version: 37.31.6
-  resolution: "renovate@npm:37.31.6"
+"renovate@npm:37.31.7":
+  version: 37.31.7
+  resolution: "renovate@npm:37.31.7"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -11999,7 +11999,7 @@ __metadata:
     "@qnighy/marshal": 0.1.3
     "@renovatebot/osv-offline": 1.3.7
     "@renovatebot/pep440": 3.0.9
-    "@renovatebot/ruby-semver": 3.0.15
+    "@renovatebot/ruby-semver": 3.0.16
     "@sindresorhus/is": 4.6.0
     "@types/ms": 0.7.32
     "@types/tmp": 0.2.4
@@ -12090,7 +12090,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: b2cb692aa0fa881f9128303e156c561d34bcd05d0ba0d48ff823541d6a424047b4075d1e3bcca21eaefb18cde6f3d12bb1f40c8dbdb2824a1d475f81ac6b1307
+  checksum: 6fd75a3be61fa87a8072f86065967c2ba0395ae7924379759c6891481709b27fe609880508b7f1f9d17fc74598fdfaaf3ebd8db7029aee46fafbee57b382f9f1
   languageName: node
   linkType: hard
 
