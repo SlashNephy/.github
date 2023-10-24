@@ -52,7 +52,7 @@ on:
         default: ''
     secrets:
       registry-password:
-         required: false
+        required: false
       build-args:
         required: false
 
