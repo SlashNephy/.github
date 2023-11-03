@@ -3662,7 +3662,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.43.1
+    renovate: 37.43.3
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -8738,9 +8738,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-auth-library@npm:9.1.0":
-  version: 9.1.0
-  resolution: "google-auth-library@npm:9.1.0"
+"google-auth-library@npm:9.2.0":
+  version: 9.2.0
+  resolution: "google-auth-library@npm:9.2.0"
   dependencies:
     base64-js: ^1.3.0
     ecdsa-sig-formatter: ^1.0.11
@@ -8748,8 +8748,7 @@ __metadata:
     gcp-metadata: ^6.0.0
     gtoken: ^7.0.0
     jws: ^4.0.0
-    lru-cache: ^6.0.0
-  checksum: 8208f718f22c76e5655fa289c7aeb06a1f0be768ad0e17183a14aa2d6f2167e70921ad4c5a0497824e7277a06f8878c491f47c6b0594996e801642a53b0e69e9
+  checksum: 0da686964a769c79b5a1f7e518cb885f7c433edd50c8adf5cc310bfce607235184ebe6f9bc5290618d760c25e4ce1e273d444c9914c815353faa9d9dea37d1b3
   languageName: node
   linkType: hard
 
@@ -12102,9 +12101,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.43.1":
-  version: 37.43.1
-  resolution: "renovate@npm:37.43.1"
+"renovate@npm:37.43.3":
+  version: 37.43.3
+  resolution: "renovate@npm:37.43.3"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -12165,7 +12164,7 @@ __metadata:
     glob: 10.3.10
     global-agent: 3.0.0
     good-enough-parser: 1.1.23
-    google-auth-library: 9.1.0
+    google-auth-library: 9.2.0
     got: 11.8.6
     graph-data-structure: 3.3.0
     handlebars: 4.7.8
@@ -12219,7 +12218,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: d98b58d66346c4d93c4f32a76dcaf7f988fd7668df968e88d8a4955a1580815d6d99c5d36f7f961495b1fb9e0ffc70cf8e61575c391155a95b64cf48506f57bf
+  checksum: df94ad1de43c5cdb6312a4af7995a177b0c7c7704e9c9aa6b5d8d68f3a4abcab5db90dd06f68bdc6ae58a822fb256f6551876b50e76d12027d16238a8dc5d27b
   languageName: node
   linkType: hard
 
