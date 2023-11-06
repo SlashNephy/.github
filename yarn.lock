@@ -2599,13 +2599,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iarna/toml@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@iarna/toml@npm:3.0.0"
-  checksum: 03fb2b8d67df9631437d1bff56f0474520b3b7256cefdc129306ea3cd79910aad877637e58808e88e53104fa387c7132c337385bf5d4801b51580829d2c91041
-  languageName: node
-  linkType: hard
-
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -3671,7 +3664,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.48.0
+    renovate: 37.48.3
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -12099,9 +12092,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.48.0":
-  version: 37.48.0
-  resolution: "renovate@npm:37.48.0"
+"renovate@npm:37.48.3":
+  version: 37.48.3
+  resolution: "renovate@npm:37.48.3"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -12111,7 +12104,6 @@ __metadata:
     "@aws-sdk/credential-providers": 3.363.0
     "@breejs/later": 4.1.0
     "@cdktf/hcl2json": 0.19.0
-    "@iarna/toml": 3.0.0
     "@opentelemetry/api": 1.6.0
     "@opentelemetry/context-async-hooks": 1.17.0
     "@opentelemetry/exporter-trace-otlp-http": 0.43.0
@@ -12202,6 +12194,7 @@ __metadata:
     simple-git: 3.20.0
     slugify: 1.6.6
     source-map-support: 0.5.21
+    toml-eslint-parser: 0.6.0
     traverse: 0.6.7
     tslib: 2.6.2
     upath: 2.0.1
@@ -12216,7 +12209,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: a1267a5f32ead0991547c22695655669f0e76d6d805a0a62c6f4e5f5525f6e264a73094145c6ba5607768f8d973980165fbd279b70bb044e27bc4d9b41dccc9c
+  checksum: 6d69d3d97ddb1b85a337267b5172f00fd01614bb82fbe52011b1d1d4c0fea7d1137de907ba2025965a96e2abe3880f56a27b9af6f2a37ed56ca6f6d04d9237f6
   languageName: node
   linkType: hard
 
@@ -13814,6 +13807,15 @@ __metadata:
     regex-not: ^1.0.2
     safe-regex: ^1.1.0
   checksum: 4ed4a619059b64e204aad84e4e5f3ea82d97410988bcece7cf6cbfdbf193d11bff48cf53842d88b8bb00b1bfc0d048f61f20f0709e6f393fd8fe0122662d9db4
+  languageName: node
+  linkType: hard
+
+"toml-eslint-parser@npm:0.6.0":
+  version: 0.6.0
+  resolution: "toml-eslint-parser@npm:0.6.0"
+  dependencies:
+    eslint-visitor-keys: ^3.0.0
+  checksum: 21d9ca914a1bc256d2b79b1f08eedd7c5909be2f4bb454eee5de1382260b137e2b6a8f4fcff13628bb4f7fbd0e9aefd8d35839fb0cf13ab0cdea02b926874712
   languageName: node
   linkType: hard
 
