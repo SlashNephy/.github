@@ -3576,7 +3576,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.50.1
+    renovate: 37.50.2
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -11494,21 +11494,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.8":
-  version: 2.8.8
-  resolution: "prettier@npm:2.8.8"
-  bin:
-    prettier: bin-prettier.js
-  checksum: b49e409431bf129dd89238d64299ba80717b57ff5a6d1c1a8b1a28b590d998a34e083fa13573bc732bb8d2305becb4c9a4407f8486c81fa7d55100eb08263cf8
-  languageName: node
-  linkType: hard
-
 "prettier@npm:3.0.0":
   version: 3.0.0
   resolution: "prettier@npm:3.0.0"
   bin:
     prettier: bin/prettier.cjs
   checksum: 6a832876a1552dc58330d2467874e5a0b46b9ccbfc5d3531eb69d15684743e7f83dc9fbd202db6270446deba9c82b79d24383d09924c462b457136a759425e33
+  languageName: node
+  linkType: hard
+
+"prettier@npm:3.0.3":
+  version: 3.0.3
+  resolution: "prettier@npm:3.0.3"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: e10b9af02b281f6c617362ebd2571b1d7fc9fb8a3bd17e371754428cda992e5e8d8b7a046e8f7d3e2da1dcd21aa001e2e3c797402ebb6111b5cd19609dd228e0
   languageName: node
   linkType: hard
 
@@ -12004,9 +12004,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.50.1":
-  version: 37.50.1
-  resolution: "renovate@npm:37.50.1"
+"renovate@npm:37.50.2":
+  version: 37.50.2
+  resolution: "renovate@npm:37.50.2"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -12093,7 +12093,7 @@ __metadata:
     p-queue: 6.6.2
     p-throttle: 4.1.1
     parse-link-header: 2.0.0
-    prettier: 2.8.8
+    prettier: 3.0.3
     re2: 1.20.5
     redis: 4.6.10
     remark: 13.0.0
@@ -12121,7 +12121,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 5252c7c7b09ace7b23ce6b6f9f404db040f914d6caa5ee6e04ad7c89b8d0d348d6d88ba17f0e32e7d4ebe497bac3d0830887d0ba1410c161f42e9d84911438a1
+  checksum: 45ffc10973919da9b0b57e8886e9daddbc5baf6e0d20a62f9fb51532ec5b3390b63d3299f96b3c3c4d5074912bb055d583e18f5eca2320d0384258fe712067b0
   languageName: node
   linkType: hard
 
