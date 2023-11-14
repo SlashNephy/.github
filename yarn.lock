@@ -3562,7 +3562,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.59.2
+    renovate: 37.59.4
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -4695,10 +4695,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/tmp@npm:0.2.5":
-  version: 0.2.5
-  resolution: "@types/tmp@npm:0.2.5"
-  checksum: eb6a45814ebe039d47448c1e6adf24ba738ce771d14e39a2d2aa4c4d54a3744b184c9f04d65bdf9c5221a2d7d6fcb27ee5414299f85f737285f07402b58b6803
+"@types/tmp@npm:0.2.6":
+  version: 0.2.6
+  resolution: "@types/tmp@npm:0.2.6"
+  checksum: 0b24bb6040cc289440a609e10ec99a704978c890a5828ff151576489090b2257ce2e2570b0f320ace9c8099c3642ea6221fbdf6d8f2e22b7cd1f4fbf6e989e3e
   languageName: node
   linkType: hard
 
@@ -10058,7 +10058,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:3.4.3, luxon@npm:^3.2.1, luxon@npm:^3.4.3":
+"luxon@npm:3.4.4":
+  version: 3.4.4
+  resolution: "luxon@npm:3.4.4"
+  checksum: 36c1f99c4796ee4bfddf7dc94fa87815add43ebc44c8934c924946260a58512f0fd2743a629302885df7f35ccbd2d13f178c15df046d0e3b6eb71db178f1c60c
+  languageName: node
+  linkType: hard
+
+"luxon@npm:^3.2.1, luxon@npm:^3.4.3":
   version: 3.4.3
   resolution: "luxon@npm:3.4.3"
   checksum: 3eade81506224d038ed24035a0cd0dd4887848d7eba9361dce9ad8ef81380596a68153240be3988721f9690c624fb449fcf8fd8c3fc0681a6a8496faf48e92a3
@@ -11940,9 +11947,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.59.2":
-  version: 37.59.2
-  resolution: "renovate@npm:37.59.2"
+"renovate@npm:37.59.4":
+  version: 37.59.4
+  resolution: "renovate@npm:37.59.4"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -11968,7 +11975,7 @@ __metadata:
     "@renovatebot/ruby-semver": 3.0.18
     "@sindresorhus/is": 4.6.0
     "@types/ms": 0.7.34
-    "@types/tmp": 0.2.5
+    "@types/tmp": 0.2.6
     "@yarnpkg/core": 4.0.1
     "@yarnpkg/parsers": 3.0.0
     agentkeepalive: 4.5.0
@@ -12015,7 +12022,7 @@ __metadata:
     jsonata: 2.0.3
     klona: 2.0.6
     lru-cache: 10.0.1
-    luxon: 3.4.3
+    luxon: 3.4.4
     markdown-it: 13.0.2
     markdown-table: 2.0.0
     minimatch: 9.0.3
@@ -12057,7 +12064,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 7be0b35a8f74613205103696f83fad17dd8987ad74d9f458f755297e34952862d8a7d7be2fb8f5c4142829bb5cd1bcca8880cba571439b1b616f631e3ee53ad6
+  checksum: 2ab70cdc14688db1f25c48725f17d390324363516c4e9a741d29c8c4a31ecd99c7480237e1996c257c40462e80b4c00069dc946b3213f32d3fa039ff4f05ca2e
   languageName: node
   linkType: hard
 
