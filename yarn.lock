@@ -2442,12 +2442,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cdktf/hcl2json@npm:0.19.0":
-  version: 0.19.0
-  resolution: "@cdktf/hcl2json@npm:0.19.0"
+"@cdktf/hcl2json@npm:0.19.1":
+  version: 0.19.1
+  resolution: "@cdktf/hcl2json@npm:0.19.1"
   dependencies:
     fs-extra: ^11.1.1
-  checksum: 717bf6296f48f34deaac7737ee21930eb2d6644a4971d77e30f558ac278e4e0e724589beb0a0a42deb1b19aed4ec1795b886ac44943aa01ec2e57c9a7e3742be
+  checksum: 8ea05125f7dbcfa2b9d7d6dba8c19e94255df43bd64773b57f99ce0672c9e17208c84b75ff0891a87dc638bf2c6ec5d36e18257f297156865f075c1dc69a7cfc
   languageName: node
   linkType: hard
 
@@ -3562,7 +3562,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.59.6
+    renovate: 37.59.7
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -11947,9 +11947,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.59.6":
-  version: 37.59.6
-  resolution: "renovate@npm:37.59.6"
+"renovate@npm:37.59.7":
+  version: 37.59.7
+  resolution: "renovate@npm:37.59.7"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -11958,7 +11958,7 @@ __metadata:
     "@aws-sdk/client-s3": 3.363.0
     "@aws-sdk/credential-providers": 3.363.0
     "@breejs/later": 4.1.0
-    "@cdktf/hcl2json": 0.19.0
+    "@cdktf/hcl2json": 0.19.1
     "@opentelemetry/api": 1.6.0
     "@opentelemetry/context-async-hooks": 1.17.0
     "@opentelemetry/exporter-trace-otlp-http": 0.43.0
@@ -12064,7 +12064,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: ea06083fccf39395d797d42394184ae44f7f774c5b638016ab113b240b2beb2355065b9bbd218e9ae9b6b0ca7395f697c86e08ba51e12b8085a391c644bc6036
+  checksum: 2a59a91892596bd6cf8b99e53feb32d87df1e49da149b37b0f8148fb5854e19ae2948bbd072f5ba7e84b3c3f1e0134976ca2fa50b9473d9d583d89622073a2c5
   languageName: node
   linkType: hard
 
