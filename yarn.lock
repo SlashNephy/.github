@@ -3562,7 +3562,7 @@ __metadata:
     dotenv: 16.3.1
     eslint: 8.45.0
     prettier: 3.0.0
-    renovate: 37.59.4
+    renovate: 37.59.6
     ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
@@ -11947,9 +11947,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.59.4":
-  version: 37.59.4
-  resolution: "renovate@npm:37.59.4"
+"renovate@npm:37.59.6":
+  version: 37.59.6
+  resolution: "renovate@npm:37.59.6"
   dependencies:
     "@aws-sdk/client-codecommit": 3.363.0
     "@aws-sdk/client-ec2": 3.363.0
@@ -12049,7 +12049,7 @@ __metadata:
     simple-git: 3.20.0
     slugify: 1.6.6
     source-map-support: 0.5.21
-    toml-eslint-parser: 0.6.1
+    toml-eslint-parser: 0.9.3
     traverse: 0.6.7
     tslib: 2.6.2
     upath: 2.0.1
@@ -12064,7 +12064,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 2ab70cdc14688db1f25c48725f17d390324363516c4e9a741d29c8c4a31ecd99c7480237e1996c257c40462e80b4c00069dc946b3213f32d3fa039ff4f05ca2e
+  checksum: ea06083fccf39395d797d42394184ae44f7f774c5b638016ab113b240b2beb2355065b9bbd218e9ae9b6b0ca7395f697c86e08ba51e12b8085a391c644bc6036
   languageName: node
   linkType: hard
 
@@ -13636,12 +13636,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"toml-eslint-parser@npm:0.6.1":
-  version: 0.6.1
-  resolution: "toml-eslint-parser@npm:0.6.1"
+"toml-eslint-parser@npm:0.9.3":
+  version: 0.9.3
+  resolution: "toml-eslint-parser@npm:0.9.3"
   dependencies:
     eslint-visitor-keys: ^3.0.0
-  checksum: 6c2a6f1cda389c9b4f980654d4b18dff69a907b51699712a57a1a6eec0a75bacac8dcb2f4febddc51d7e5ffe5cbffc36356b46a808e8be52318d6fa3885f0bdc
+  checksum: 76f4e18e621a34959b6faaeb6c4c4dd6ab536b1da7c01af1ee8a9bc27674e52502657954ccc17cf2db184cbef16970eb86ad5e901012231eee34d5668a479670
   languageName: node
   linkType: hard
 
