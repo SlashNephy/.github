@@ -50,10 +50,16 @@ on:
         required: false
         type: string
         default: ''
+      dispatch-update-image-digest:
+        required: false
+        type: boolean
+        default: false
     secrets:
       registry-password:
         required: false
       build-args:
+        required: false
+      dispatch-github-token:
         required: false
 
 permissions:
@@ -96,6 +102,7 @@ jobs:
             ${{ inputs.tag-spec }}
 
       - name: Build Image & Push
+        id: build-push-action
         uses: docker/build-push-action@v4
         with:
           push: true
@@ -112,6 +119,20 @@ jobs:
             ${{ inputs.build-args }}
             ${{ secrets.build-args }}
           target: '${{ inputs.target }}'
+
+      - name: Dispatch update-image-digest
+        if: inputs.dispatch-update-image-digest
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: '${{ secrets.dispatch-github-token }}'
+          repository: 'SlashNephy/infrastructure'
+          event-type: 'update-image-digest'
+          client-payload: |-
+            {
+              "images": "${{ join(fromJSON(steps.metadata.outputs.json).tags, ',') }}",
+              "digest": "${{ steps.build-push-action.outputs.digest }}",
+              "github": ${{ toJson(github) }}
+            }
 
       - name: Scan Image
         if: inputs.scan-image
