@@ -7,5 +7,6 @@
   "private": true,
   "workspaces": [
     "env/*"
-  ]
+  ],
+  "packageManager": "yarn@4.0.2"
 }
