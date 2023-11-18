@@ -129,9 +129,9 @@ jobs:
           event-type: 'update-image-digest'
           client-payload: |-
             {
-              "images": "${{ join(fromJSON(steps.metadata.outputs.json).tags, ',') }}",
+              "images": ${{ toJSON(fromJSON(steps.metadata.outputs.json).tags) }},
               "digest": "${{ steps.build-push-action.outputs.digest }}",
-              "github": ${{ toJson(github) }}
+              "github": ${{ toJSON(github) }}
             }
 
       - name: Scan Image
