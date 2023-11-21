@@ -3500,7 +3500,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.22.5"
     "@rollup/plugin-babel": "npm:6.0.3"
     "@rollup/plugin-typescript": "npm:11.1.2"
-    "@slashnephy/eslint-config": "npm:2.0.62"
+    "@slashnephy/eslint-config": "npm:2.0.63"
     "@slashnephy/prettier-config": "npm:1.0.44"
     "@types/babel__core": "npm:7.20.1"
     "@types/babel__preset-env": "npm:7.9.2"
@@ -3512,9 +3512,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@slashnephy/eslint-config@npm:2.0.62":
-  version: 2.0.62
-  resolution: "@slashnephy/eslint-config@npm:2.0.62"
+"@slashnephy/eslint-config@npm:2.0.63":
+  version: 2.0.63
+  resolution: "@slashnephy/eslint-config@npm:2.0.63"
   dependencies:
     "@emotion/eslint-plugin": "npm:11.11.0"
     "@next/eslint-plugin-next": "npm:13.5.6"
@@ -3558,7 +3558,7 @@ __metadata:
     yaml-eslint-parser: "npm:1.2.2"
   peerDependencies:
     eslint: ^8
-  checksum: c862ed09d2cbe66a4a4a23df4f8626ed7942aa3a0fa6d19445bf1b6b1ae0b02d70c1052d17cbcd203b1393e5b8142eb6d52d4dbd24ce39a7d143ec7eebe49e0a
+  checksum: d1e3ae80c1584aafb56f161a5dba0b1e18430af7cfa63630fb83f1bd9ae6d4f600de5864ad9bc28d4ff80611ae55e6e15f65464a0612c52e87fd5fd06c6658c0
   languageName: node
   linkType: hard
 
@@ -3567,7 +3567,7 @@ __metadata:
   resolution: "@slashnephy/jest-config@workspace:env/jest"
   dependencies:
     "@jest/types": "npm:29.6.1"
-    "@slashnephy/eslint-config": "npm:2.0.62"
+    "@slashnephy/eslint-config": "npm:2.0.63"
     "@slashnephy/prettier-config": "npm:1.0.44"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
@@ -3593,7 +3593,7 @@ __metadata:
   resolution: "@slashnephy/renovate-config@workspace:env/renovate"
   dependencies:
     "@octokit/rest": "npm:20.0.1"
-    "@slashnephy/eslint-config": "npm:2.0.62"
+    "@slashnephy/eslint-config": "npm:2.0.63"
     "@slashnephy/prettier-config": "npm:1.0.44"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
@@ -3610,7 +3610,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/scrapbox@workspace:env/scrapbox"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.62"
+    "@slashnephy/eslint-config": "npm:2.0.63"
     "@slashnephy/prettier-config": "npm:1.0.44"
     concurrently: "npm:8.2.0"
     eslint: "npm:8.45.0"
@@ -3624,7 +3624,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/stylelint-config@workspace:env/stylelint"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.62"
+    "@slashnephy/eslint-config": "npm:2.0.63"
     "@slashnephy/prettier-config": "npm:1.0.44"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
@@ -3643,7 +3643,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/textlint-config@workspace:env/textlint"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.62"
+    "@slashnephy/eslint-config": "npm:2.0.63"
     "@slashnephy/prettier-config": "npm:1.0.44"
     "@textlint/types": "npm:13.4.0"
     "@types/node": "npm:20.4.5"
@@ -3665,7 +3665,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/typescript-extension@workspace:env/typescript"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.62"
+    "@slashnephy/eslint-config": "npm:2.0.63"
     "@slashnephy/prettier-config": "npm:1.0.44"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
@@ -3682,7 +3682,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/userstyle@workspace:env/userstyle"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.62"
+    "@slashnephy/eslint-config": "npm:2.0.63"
     "@slashnephy/prettier-config": "npm:1.0.44"
     "@slashnephy/stylelint-config": "npm:0.1.1"
     autoprefixer: "npm:10.4.14"
