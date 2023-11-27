@@ -3558,7 +3558,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.68.3"
+    renovate: "npm:37.68.4"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11520,9 +11520,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.68.3":
-  version: 37.68.3
-  resolution: "renovate@npm:37.68.3"
+"renovate@npm:37.68.4":
+  version: 37.68.4
+  resolution: "renovate@npm:37.68.4"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11619,7 +11619,7 @@ __metadata:
     semver-stable: "npm:3.0.0"
     semver-utils: "npm:1.1.4"
     shlex: "npm:2.1.2"
-    simple-git: "npm:3.20.0"
+    simple-git: "npm:3.21.0"
     slugify: "npm:1.6.6"
     source-map-support: "npm:0.5.21"
     toml-eslint-parser: "npm:0.9.3"
@@ -11637,7 +11637,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 43d31789ca00bd748d3527880e228d9a9be4be4ffae8f7d2cbdd295fff2bb7d0c0e8fc31a1edcb021ce60cc97b7746628b98552f8b9c7c547fbff3ca202e7f86
+  checksum: 7c11c5f870359308794701f76abb0291a9f0609890d5a18514a44fa4019ff2669cc11367d997d008da710dc7db6ee30c40c6ffd1617b10a86e95ac0d101438f0
   languageName: node
   linkType: hard
 
@@ -12142,14 +12142,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-git@npm:3.20.0":
-  version: 3.20.0
-  resolution: "simple-git@npm:3.20.0"
+"simple-git@npm:3.21.0":
+  version: 3.21.0
+  resolution: "simple-git@npm:3.21.0"
   dependencies:
     "@kwsites/file-exists": "npm:^1.1.1"
     "@kwsites/promise-deferred": "npm:^1.1.1"
     debug: "npm:^4.3.4"
-  checksum: 8e7db8919145c523ed8d08dcd23b3ffd304e681a07bbe2f14e883bec8bab06922040e30b68ed65aad28e9953ce6df998c5c73a0a567537f837b5369753ce1e69
+  checksum: b3083da7736f1bac448cfe7d359d257cfe128091041d23c3ed9a35cddab4d454abdac8d9928b33920e4eaf328d350b68d62bac18bf6fbf3f31d8ef05b6d20f02
   languageName: node
   linkType: hard
 
