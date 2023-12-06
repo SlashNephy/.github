@@ -2426,10 +2426,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@breejs/later@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@breejs/later@npm:4.1.0"
-  checksum: c75a86eadc358773dff5b03f2092d4b0ae76d601db88c3bc873b6b8038aa1ebb0d47a74221c091d5b94f84090a9359db4dc6f8aa1344827f63d8eeb62e2789e7
+"@breejs/later@npm:4.2.0":
+  version: 4.2.0
+  resolution: "@breejs/later@npm:4.2.0"
+  checksum: d79c5d35a5951f674644101bd19c93e7964333c5bd97b3eb3a2bc658ee12ca28a343b1f86221deadefbc57328eccafe421424ac5128b5f3eab30169e6b42d1f0
   languageName: node
   linkType: hard
 
@@ -3558,7 +3558,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.87.0"
+    renovate: "npm:37.87.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11638,9 +11638,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.87.0":
-  version: 37.87.0
-  resolution: "renovate@npm:37.87.0"
+"renovate@npm:37.87.2":
+  version: 37.87.2
+  resolution: "renovate@npm:37.87.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11648,7 +11648,7 @@ __metadata:
     "@aws-sdk/client-rds": "npm:3.363.0"
     "@aws-sdk/client-s3": "npm:3.363.0"
     "@aws-sdk/credential-providers": "npm:3.363.0"
-    "@breejs/later": "npm:4.1.0"
+    "@breejs/later": "npm:4.2.0"
     "@cdktf/hcl2json": "npm:0.19.1"
     "@opentelemetry/api": "npm:1.7.0"
     "@opentelemetry/context-async-hooks": "npm:1.18.1"
@@ -11755,7 +11755,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 9648a9b2b2e0482f20e4301ec3979c1346a3b46c980d827af611a6ab6c1d0a55d4f1517ddb02674ba11fb68965dde08e4b5c96f9ef3edbf38375d6eb8cf86ad8
+  checksum: cbb90867df0f1d1c3b17ab931dbc1ba75e26ed2cfdb82b738199e0767dc159634c93814527b334f416d0b197b7aa9d54ed3f265c847fe05696680ff147685ce5
   languageName: node
   linkType: hard
 
