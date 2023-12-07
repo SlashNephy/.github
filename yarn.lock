@@ -2433,12 +2433,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cdktf/hcl2json@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@cdktf/hcl2json@npm:0.19.1"
+"@cdktf/hcl2json@npm:0.19.2":
+  version: 0.19.2
+  resolution: "@cdktf/hcl2json@npm:0.19.2"
   dependencies:
     fs-extra: "npm:^11.1.1"
-  checksum: aaac1e786f2526530cd607c5de6255f6fcc5506d5024c82f435be8a458acf0778c307e196517d2795381511de6e1419a3d0c6ede51dd8f45a8b5cf8468ac68c4
+  checksum: 48bc4758d74de47cf33c621f5570feed5e41fe567602bca3b1adedf568882e2d7b2d1eaae838835d03a497bc17bf1c75c901ef33dfb125f727f588dea7b0d9c0
   languageName: node
   linkType: hard
 
@@ -3558,7 +3558,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.89.3"
+    renovate: "npm:37.89.4"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11638,9 +11638,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.89.3":
-  version: 37.89.3
-  resolution: "renovate@npm:37.89.3"
+"renovate@npm:37.89.4":
+  version: 37.89.4
+  resolution: "renovate@npm:37.89.4"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11649,7 +11649,7 @@ __metadata:
     "@aws-sdk/client-s3": "npm:3.363.0"
     "@aws-sdk/credential-providers": "npm:3.363.0"
     "@breejs/later": "npm:4.2.0"
-    "@cdktf/hcl2json": "npm:0.19.1"
+    "@cdktf/hcl2json": "npm:0.19.2"
     "@opentelemetry/api": "npm:1.7.0"
     "@opentelemetry/context-async-hooks": "npm:1.18.1"
     "@opentelemetry/exporter-trace-otlp-http": "npm:0.45.1"
@@ -11755,7 +11755,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 5c455e83c51a68212849f01b7e013178669346aeb3e3e2116a2e8abf12d4f3f7fc81f0ea16df49e0575092dc515aba5d9729fb8c171c0bb17218949ea4bb4d58
+  checksum: 5068b5e6dd30fdec3aa75491170ce3dafcf53a154f47f31d1bab2a1ad19ca23baf0118168832652f9eda3264525a33b5782113cded9dbaa289f72a1b2168a474
   languageName: node
   linkType: hard
 
