@@ -3458,7 +3458,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.22.5"
     "@rollup/plugin-babel": "npm:6.0.3"
     "@rollup/plugin-typescript": "npm:11.1.2"
-    "@slashnephy/eslint-config": "npm:2.0.76"
+    "@slashnephy/eslint-config": "npm:2.0.77"
     "@slashnephy/prettier-config": "npm:1.0.56"
     "@types/babel__core": "npm:7.20.1"
     "@types/babel__preset-env": "npm:7.9.2"
@@ -3470,9 +3470,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@slashnephy/eslint-config@npm:2.0.76":
-  version: 2.0.76
-  resolution: "@slashnephy/eslint-config@npm:2.0.76"
+"@slashnephy/eslint-config@npm:2.0.77":
+  version: 2.0.77
+  resolution: "@slashnephy/eslint-config@npm:2.0.77"
   dependencies:
     "@emotion/eslint-plugin": "npm:11.11.0"
     "@next/eslint-plugin-next": "npm:13.5.6"
@@ -3512,11 +3512,11 @@ __metadata:
     eslint-plugin-vitest: "npm:0.3.10"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:1.10.0"
-    typescript: "npm:5.3.2"
+    typescript: "npm:5.3.3"
     yaml-eslint-parser: "npm:1.2.2"
   peerDependencies:
     eslint: ^8
-  checksum: 8d4cc084d3eb0b6bf3600bf3ca379f7afff58ed17cc63f439a4f6b055bd8fc5a0cab276151232e846c459c3a423c9678389c0c98860af57ee0931611f4a2475e
+  checksum: 6172f65e5b565244b67d260b54b164c7320d5529be0c9f7cd3c78b88bce22d603fe484817841e5f4e681ce97f96f7f68df08232533e5f5bbdba012b4cd143142
   languageName: node
   linkType: hard
 
@@ -3525,7 +3525,7 @@ __metadata:
   resolution: "@slashnephy/jest-config@workspace:env/jest"
   dependencies:
     "@jest/types": "npm:29.6.1"
-    "@slashnephy/eslint-config": "npm:2.0.76"
+    "@slashnephy/eslint-config": "npm:2.0.77"
     "@slashnephy/prettier-config": "npm:1.0.56"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
@@ -3551,7 +3551,7 @@ __metadata:
   resolution: "@slashnephy/renovate-config@workspace:env/renovate"
   dependencies:
     "@octokit/rest": "npm:20.0.1"
-    "@slashnephy/eslint-config": "npm:2.0.76"
+    "@slashnephy/eslint-config": "npm:2.0.77"
     "@slashnephy/prettier-config": "npm:1.0.56"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
@@ -3568,7 +3568,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/scrapbox@workspace:env/scrapbox"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.76"
+    "@slashnephy/eslint-config": "npm:2.0.77"
     "@slashnephy/prettier-config": "npm:1.0.56"
     concurrently: "npm:8.2.0"
     eslint: "npm:8.45.0"
@@ -3582,7 +3582,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/stylelint-config@workspace:env/stylelint"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.76"
+    "@slashnephy/eslint-config": "npm:2.0.77"
     "@slashnephy/prettier-config": "npm:1.0.56"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
@@ -3601,7 +3601,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/textlint-config@workspace:env/textlint"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.76"
+    "@slashnephy/eslint-config": "npm:2.0.77"
     "@slashnephy/prettier-config": "npm:1.0.56"
     "@textlint/types": "npm:13.4.1"
     "@types/node": "npm:20.4.5"
@@ -3623,7 +3623,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/typescript-extension@workspace:env/typescript"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.76"
+    "@slashnephy/eslint-config": "npm:2.0.77"
     "@slashnephy/prettier-config": "npm:1.0.56"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
@@ -3640,7 +3640,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/userstyle@workspace:env/userstyle"
   dependencies:
-    "@slashnephy/eslint-config": "npm:2.0.76"
+    "@slashnephy/eslint-config": "npm:2.0.77"
     "@slashnephy/prettier-config": "npm:1.0.56"
     "@slashnephy/stylelint-config": "npm:0.1.1"
     autoprefixer: "npm:10.4.14"
@@ -13632,13 +13632,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.3.2":
-  version: 5.3.2
-  resolution: "typescript@npm:5.3.2"
+"typescript@npm:5.3.3":
+  version: 5.3.3
+  resolution: "typescript@npm:5.3.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: d7dbe1fbe19039e36a65468ea64b5d338c976550394ba576b7af9c68ed40c0bc5d12ecce390e4b94b287a09a71bd3229f19c2d5680611f35b7c53a3898791159
+  checksum: e33cef99d82573624fc0f854a2980322714986bc35b9cb4d1ce736ed182aeab78e2cb32b385efa493b2a976ef52c53e20d6c6918312353a91850e2b76f1ea44f
   languageName: node
   linkType: hard
 
@@ -13652,13 +13652,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>":
-  version: 5.3.2
-  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
+"typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>":
+  version: 5.3.3
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 73c8bad74e732d93211c9d77f28b03307e2f5fc6a0afc73f4b783261ab567686a16d6ae958bdaef383a00be1b0b8c8b6741dd6ca3d13af4963fa7e47456d49c7
+  checksum: 1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
   languageName: node
   linkType: hard
 
