@@ -3558,7 +3558,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.89.6"
+    renovate: "npm:37.89.7"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -6789,17 +6789,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emojibase-regex@npm:15.2.0":
-  version: 15.2.0
-  resolution: "emojibase-regex@npm:15.2.0"
-  checksum: a22ae83e5f77b1eb2ec656dff55047068d035d4609f14cfe8f6421d191d04dee5e6478e98af070bb6a23bade34c1137c554823ceb98eefd46f776c7160b4c5fd
+"emojibase-regex@npm:15.3.0":
+  version: 15.3.0
+  resolution: "emojibase-regex@npm:15.3.0"
+  checksum: 69a9c350b89aadbac792fe0064f0fd724970aebd9201e2590c1473aa5c7e4c68e13f82e2f98e15ee5b749ab7d9ea1adf470934cb28931b4141e142d57724fca9
   languageName: node
   linkType: hard
 
-"emojibase@npm:15.2.0":
-  version: 15.2.0
-  resolution: "emojibase@npm:15.2.0"
-  checksum: e418a02456153406b8b53e5226f1766a5b1c0d870d02febaee5cf852d92576f72b2a7958ebf09d44512452e8f83ce08724adc3ab07ba20588c0d6a3815f50615
+"emojibase@npm:15.3.0":
+  version: 15.3.0
+  resolution: "emojibase@npm:15.3.0"
+  checksum: b676384a4326e26700dfcf70574ddca67af1354b71c832aea5ea61f2e19d2b8cc5715746245925e3659ee5141ae6aff97e05bed1871556b4dc120aeb58beb1f5
   languageName: node
   linkType: hard
 
@@ -11638,9 +11638,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.89.6":
-  version: 37.89.6
-  resolution: "renovate@npm:37.89.6"
+"renovate@npm:37.89.7":
+  version: 37.89.7
+  resolution: "renovate@npm:37.89.7"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11689,8 +11689,8 @@ __metadata:
     editorconfig: "npm:2.0.0"
     email-addresses: "npm:5.0.0"
     emoji-regex: "npm:10.3.0"
-    emojibase: "npm:15.2.0"
-    emojibase-regex: "npm:15.2.0"
+    emojibase: "npm:15.3.0"
+    emojibase-regex: "npm:15.3.0"
     extract-zip: "npm:2.0.1"
     find-packages: "npm:10.0.4"
     find-up: "npm:5.0.0"
@@ -11755,7 +11755,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: ccec5faa51079d0a2105e30f86e7362dbe4ba4f95c8ba9e08b4607075b0f9c73cb8053d5e3c20068789b40b9e3a40629562542037ed77c87db56a21621a3a754
+  checksum: bfc2033ce4005e2434fa6023cca38fb22f65617bb85e2c0e2dd624ba0fc21b82191f365e0edf88730439c963c6e583f0ec050ecb7230dd40e50c835e4ba5ab37
   languageName: node
   linkType: hard
 
