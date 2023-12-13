@@ -3558,7 +3558,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.92.3"
+    renovate: "npm:37.92.4"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -8458,10 +8458,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graph-data-structure@npm:3.3.0":
-  version: 3.3.0
-  resolution: "graph-data-structure@npm:3.3.0"
-  checksum: 6b6b8c3e6f972c43fcc967d99cb554add0245753144041aa77ebffb01241d9b1939b801769294987a863dc765b0c8a8e1d1b576eedc3a3fa125fa798482d831a
+"graph-data-structure@npm:3.5.0":
+  version: 3.5.0
+  resolution: "graph-data-structure@npm:3.5.0"
+  checksum: 3a86e3881e260a6a955e3f4110bce795d87d4a2e1f9ae0e193f4e867538681f2d4bfc554169bdd003fa390c968467cbe86e90d47f5c9f0767d810a627475eec0
   languageName: node
   linkType: hard
 
@@ -11638,9 +11638,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.92.3":
-  version: 37.92.3
-  resolution: "renovate@npm:37.92.3"
+"renovate@npm:37.92.4":
+  version: 37.92.4
+  resolution: "renovate@npm:37.92.4"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11702,7 +11702,7 @@ __metadata:
     good-enough-parser: "npm:1.1.23"
     google-auth-library: "npm:9.4.1"
     got: "npm:11.8.6"
-    graph-data-structure: "npm:3.3.0"
+    graph-data-structure: "npm:3.5.0"
     handlebars: "npm:4.7.8"
     ignore: "npm:5.3.0"
     ini: "npm:4.1.1"
@@ -11755,7 +11755,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 778f7f0a01cc09a2c908b47e16abef846f943a13a91227c4679666302d0fcffe282a6117a5b86291bfe4d30a128d191c84254453586de55b87b1a039804cef6b
+  checksum: 5c409a079c4367e1a9505bf89a070d1fb7d6d0fa51c7b7ebce50f1dbbab0f2208152cdc187ce1d6c01fc938b1799dc9ec0992ec74c143a6ba542b72ae65278fe
   languageName: node
   linkType: hard
 
