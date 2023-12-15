@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "2.0.83",
-    "@slashnephy/prettier-config": "1.0.62",
+    "@slashnephy/prettier-config": "1.0.63",
     "@slashnephy/stylelint-config": "0.1.1",
     "autoprefixer": "10.4.14",
     "concurrently": "8.2.0",
