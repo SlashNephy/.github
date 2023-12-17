@@ -75,7 +75,7 @@ jobs:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
           workdir: '${{ inputs.working-directory }}'
-          golangci_lint_flags: '${{ inputs.golangci_lint_flags }} .'
+          golangci_lint_flags: '${{ inputs.golangci-lint-flags }} .'
 
       - name: staticcheck
         if: inputs.enable-staticcheck
