@@ -3335,10 +3335,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/pep440@npm:3.0.14":
-  version: 3.0.14
-  resolution: "@renovatebot/pep440@npm:3.0.14"
-  checksum: 3ea1746ddbcef49e9dd9e2ab5ead60556bff7e0bdb82b6dbad33145c10fa6daad984f911ab63f9fc78b24cc3e44b71f09c877da71375832a3868d6b6d871c00c
+"@renovatebot/pep440@npm:3.0.15":
+  version: 3.0.15
+  resolution: "@renovatebot/pep440@npm:3.0.15"
+  checksum: 58c4da324f6c11794780fe44653096795d89c96e55f85edfa85a7811450bd831a0e9069e2406ccc8b5e11d1b1c0325f86df20aad1f5c5b75174eff5f750fe955
   languageName: node
   linkType: hard
 
@@ -3558,7 +3558,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.102.0"
+    renovate: "npm:37.102.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11445,9 +11445,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.102.0":
-  version: 37.102.0
-  resolution: "renovate@npm:37.102.0"
+"renovate@npm:37.102.1":
+  version: 37.102.1
+  resolution: "renovate@npm:37.102.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11469,7 +11469,7 @@ __metadata:
     "@opentelemetry/semantic-conventions": "npm:1.18.1"
     "@qnighy/marshal": "npm:0.1.3"
     "@renovatebot/osv-offline": "npm:1.3.10"
-    "@renovatebot/pep440": "npm:3.0.14"
+    "@renovatebot/pep440": "npm:3.0.15"
     "@renovatebot/ruby-semver": "npm:3.0.21"
     "@sindresorhus/is": "npm:4.6.0"
     "@types/ms": "npm:0.7.34"
@@ -11562,7 +11562,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 482499409e900ee408c918ef8a203a2c24ba71f81d5848056517abbb40591dac85e83b9887aed84a05a18bdf62f93ce6ddfe1f8ee0e709fb40f24865d61e2b98
+  checksum: 551a2d1a260be0d64ebabe83b7673765109768a75a3b18854ea5f0ad2c086918857d158e5ca60cab878cff8ada449832c5044d85384e365cea738462af06e1a4
   languageName: node
   linkType: hard
 
