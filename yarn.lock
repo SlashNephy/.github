@@ -3589,7 +3589,7 @@ __metadata:
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
     stylelint: "npm:15.10.2"
-    stylelint-config-property-sort-order-smacss: "npm:9.1.0"
+    stylelint-config-property-sort-order-smacss: "npm:10.0.0"
     stylelint-config-recommended: "npm:14.0.0"
     typescript: "npm:5.1.6"
   peerDependencies:
@@ -12463,15 +12463,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-property-sort-order-smacss@npm:9.1.0":
-  version: 9.1.0
-  resolution: "stylelint-config-property-sort-order-smacss@npm:9.1.0"
+"stylelint-config-property-sort-order-smacss@npm:10.0.0":
+  version: 10.0.0
+  resolution: "stylelint-config-property-sort-order-smacss@npm:10.0.0"
   dependencies:
     css-property-sort-order-smacss: "npm:~2.2.0"
-    stylelint-order: "npm:^6.0.2"
+    stylelint-order: "npm:^6.0.4"
   peerDependencies:
-    stylelint: ^14.0.0 || ^15.0.0
-  checksum: dd3feb8f681829dd2c935a15749854b27d103e5d8cd712f74d8c4fee89850917e3f0685f55612344ca94a522cf258c0be40ae63f6cb68b44074293508a048f0f
+    stylelint: ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: eeedb0bf0d3bbdd1990f3d8e6746e73e0f3e52cb62ba2c45e705823b8fdf7cb427a76678d60ec0c8eadaf0230ede7a8dcf5db07f8fc95d7471feed34da419e97
   languageName: node
   linkType: hard
 
@@ -12484,7 +12484,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-order@npm:^6.0.2":
+"stylelint-order@npm:^6.0.4":
   version: 6.0.4
   resolution: "stylelint-order@npm:6.0.4"
   dependencies:
