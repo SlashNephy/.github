@@ -32,7 +32,7 @@
     "textlint-rule-no-todo": "2.0.1",
     "textlint-rule-preset-ja-spacing": "2.3.0",
     "textlint-rule-preset-ja-technical-writing": "8.0.0",
-    "textlint-rule-preset-jtf-style": "2.3.13"
+    "textlint-rule-preset-jtf-style": "2.3.14"
   },
   "peerDependencies": {
     "textlint": "^13"
