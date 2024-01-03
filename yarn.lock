@@ -3630,7 +3630,7 @@ __metadata:
     textlint-rule-no-todo: "npm:2.0.1"
     textlint-rule-preset-ja-spacing: "npm:2.3.0"
     textlint-rule-preset-ja-technical-writing: "npm:8.0.0"
-    textlint-rule-preset-jtf-style: "npm:2.3.13"
+    textlint-rule-preset-jtf-style: "npm:2.3.14"
     typescript: "npm:5.1.6"
   peerDependencies:
     textlint: ^13
@@ -13189,7 +13189,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-preset-jtf-style@npm:2.3.13, textlint-rule-preset-jtf-style@npm:^2.3.13":
+"textlint-rule-preset-jtf-style@npm:2.3.14":
+  version: 2.3.14
+  resolution: "textlint-rule-preset-jtf-style@npm:2.3.14"
+  dependencies:
+    analyze-desumasu-dearu: "npm:^2.1.2"
+    japanese-numerals-to-number: "npm:^1.0.2"
+    match-index: "npm:^1.0.3"
+    moji: "npm:^0.5.1"
+    regexp.prototype.flags: "npm:^1.4.3"
+    regx: "npm:^1.0.4"
+    textlint-rule-helper: "npm:^2.2.1"
+    textlint-rule-prh: "npm:^5.2.1"
+  peerDependencies:
+    textlint: ">= 5.6.0"
+  checksum: 274034b5d1cdf0cf7f81f23b38838dc3d2f1d4f3a57c2da2955f9238bd985558d4da208f8132fcb90077f11a58428beebb0d8eb719775d662942e06aaa9ff692
+  languageName: node
+  linkType: hard
+
+"textlint-rule-preset-jtf-style@npm:^2.3.13":
   version: 2.3.13
   resolution: "textlint-rule-preset-jtf-style@npm:2.3.13"
   dependencies:
