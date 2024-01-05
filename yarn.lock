@@ -3576,7 +3576,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.122.0"
+    renovate: "npm:37.123.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11680,9 +11680,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.122.0":
-  version: 37.122.0
-  resolution: "renovate@npm:37.122.0"
+"renovate@npm:37.123.1":
+  version: 37.123.1
+  resolution: "renovate@npm:37.123.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11779,7 +11779,7 @@ __metadata:
     semver-stable: "npm:3.0.0"
     semver-utils: "npm:1.1.4"
     shlex: "npm:2.1.2"
-    simple-git: "npm:3.21.0"
+    simple-git: "npm:3.22.0"
     slugify: "npm:1.6.6"
     source-map-support: "npm:0.5.21"
     toml-eslint-parser: "npm:0.9.3"
@@ -11797,7 +11797,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 169b00e828ba30cdc09559e19f9aec4d6b29ddd887e18f502f4258b86befaaaed1cc8a0cc50ab577776b04f96e36f95ea9927514a3d9351e23b87d97041b0771
+  checksum: 3cd14524d74f9a8bf0d7482f71d936e90743de28d1f81c4ae6ae796ca3099949f64704b08f7564b445edc4f92529c5d592540d8cb4e9cf62e09db3c8de0a42a2
   languageName: node
   linkType: hard
 
@@ -12302,14 +12302,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-git@npm:3.21.0":
-  version: 3.21.0
-  resolution: "simple-git@npm:3.21.0"
+"simple-git@npm:3.22.0":
+  version: 3.22.0
+  resolution: "simple-git@npm:3.22.0"
   dependencies:
     "@kwsites/file-exists": "npm:^1.1.1"
     "@kwsites/promise-deferred": "npm:^1.1.1"
     debug: "npm:^4.3.4"
-  checksum: b3083da7736f1bac448cfe7d359d257cfe128091041d23c3ed9a35cddab4d454abdac8d9928b33920e4eaf328d350b68d62bac18bf6fbf3f31d8ef05b6d20f02
+  checksum: cc12f7563e4de82a48c1b2517d5471f699b4e12ff25843d230854b6d8d567ca8ee9d6e6b40aa6aae214e956040563902c9a406e798df03b435fe863b829d0cc5
   languageName: node
   linkType: hard
 
