@@ -1,21 +1,18 @@
 {
   "name": "@slashnephy/textlint-config",
   "version": "0.1.0",
-  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/textlint"
   },
   "license": "MIT",
+  "main": "dist/index.js",
   "files": [
     "package.json",
     "dist/*.js",
     "README.md"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist/",
@@ -27,15 +24,17 @@
     "lint:prettier": "prettier --check .",
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
+  "eslintConfig": {
+    "extends": [
+      "@slashnephy/eslint-config"
+    ]
+  },
   "dependencies": {
     "textlint-filter-rule-allowlist": "4.0.0",
     "textlint-rule-no-todo": "2.0.1",
     "textlint-rule-preset-ja-spacing": "2.3.0",
     "textlint-rule-preset-ja-technical-writing": "8.0.0",
     "textlint-rule-preset-jtf-style": "2.3.14"
-  },
-  "peerDependencies": {
-    "textlint": "^13"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "2.1.1",
@@ -47,10 +46,11 @@
     "prettier": "3.0.0",
     "typescript": "5.1.6"
   },
+  "peerDependencies": {
+    "textlint": "^13"
+  },
   "packageManager": "yarn@4.0.2",
-  "eslintConfig": {
-    "extends": [
-      "@slashnephy/eslint-config"
-    ]
+  "publishConfig": {
+    "access": "public"
   }
 }
