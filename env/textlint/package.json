@@ -37,7 +37,7 @@
     "textlint-rule-preset-jtf-style": "2.3.14"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "2.1.1",
+    "@slashnephy/eslint-config": "2.1.2",
     "@slashnephy/prettier-config": "1.0.73",
     "@textlint/types": "13.4.1",
     "@types/node": "20.4.5",
