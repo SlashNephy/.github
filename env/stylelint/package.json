@@ -1,21 +1,18 @@
 {
   "name": "@slashnephy/stylelint-config",
   "version": "0.1.1",
-  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/stylelint"
   },
   "license": "MIT",
+  "main": "dist/index.js",
   "files": [
     "package.json",
     "dist/*.js",
     "README.md"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist/",
@@ -27,12 +24,14 @@
     "lint:prettier": "prettier --check .",
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
+  "eslintConfig": {
+    "extends": [
+      "@slashnephy/eslint-config"
+    ]
+  },
   "dependencies": {
     "stylelint-config-property-sort-order-smacss": "10.0.0",
     "stylelint-config-recommended": "14.0.0"
-  },
-  "peerDependencies": {
-    "stylelint": "^15"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "2.1.2",
@@ -44,10 +43,11 @@
     "stylelint": "15.10.2",
     "typescript": "5.1.6"
   },
+  "peerDependencies": {
+    "stylelint": "^15"
+  },
   "packageManager": "yarn@4.0.2",
-  "eslintConfig": {
-    "extends": [
-      "@slashnephy/eslint-config"
-    ]
+  "publishConfig": {
+    "access": "public"
   }
 }
