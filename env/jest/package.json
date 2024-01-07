@@ -1,22 +1,19 @@
 {
   "name": "@slashnephy/jest-config",
   "version": "0.1.0",
-  "main": "dist/index.js",
-  "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/SlashNephy/.github",
     "directory": "env/jest"
   },
   "license": "MIT",
+  "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
+  "main": "dist/index.js",
   "files": [
     "package.json",
     "dist/**/*.js",
     "README.md"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist/",
@@ -28,8 +25,10 @@
     "lint:prettier": "prettier --check .",
     "publish": "yarn clean && yarn build && yarn npm publish"
   },
-  "peerDependencies": {
-    "jest": "^29"
+  "eslintConfig": {
+    "extends": [
+      "@slashnephy/eslint-config"
+    ]
   },
   "devDependencies": {
     "@jest/types": "29.6.1",
@@ -41,10 +40,11 @@
     "prettier": "3.0.0",
     "typescript": "5.1.6"
   },
+  "peerDependencies": {
+    "jest": "^29"
+  },
   "packageManager": "yarn@4.0.2",
-  "eslintConfig": {
-    "extends": [
-      "@slashnephy/eslint-config"
-    ]
+  "publishConfig": {
+    "access": "public"
   }
 }
