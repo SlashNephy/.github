@@ -40,7 +40,7 @@
     {
       automerge: true,
       matchPackageNames: [
-        '@slashnephy/eslint-config',
+        // '@slashnephy/eslint-config',
         '@slashnephy/prettier-config',
         '@slashnephy/typescript-extension',
       ],
