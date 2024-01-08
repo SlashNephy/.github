@@ -2,6 +2,13 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'Support Golang',
   golang: {
-    postUpdateOptions: ['gomodTidy'],
+    postUpdateOptions: ['gomodTidy', 'gomodUpdateImportPaths'],
   },
+  packageRules: [
+    {
+      matchManagers: ['gomod'],
+      matchDepTypes: ['indirect'],
+      enabled: true,
+    },
+  ],
 }
