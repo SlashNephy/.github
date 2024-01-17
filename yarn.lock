@@ -2434,12 +2434,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cdktf/hcl2json@npm:0.19.2":
-  version: 0.19.2
-  resolution: "@cdktf/hcl2json@npm:0.19.2"
+"@cdktf/hcl2json@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@cdktf/hcl2json@npm:0.20.0"
   dependencies:
-    fs-extra: "npm:^11.1.1"
-  checksum: 48bc4758d74de47cf33c621f5570feed5e41fe567602bca3b1adedf568882e2d7b2d1eaae838835d03a497bc17bf1c75c901ef33dfb125f727f588dea7b0d9c0
+    fs-extra: "npm:11.2.0"
+  checksum: 3baf5657025851207f8bad5226645ad9ef49196bb2484cfa0272caaa525a882755990067ed4ba8233ff44f165bc4634a1be3edd1bd05e953126ede4446cdb13e
   languageName: node
   linkType: hard
 
@@ -3552,7 +3552,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.137.3"
+    renovate: "npm:37.139.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -8019,7 +8019,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:11.2.0, fs-extra@npm:^11.0.0, fs-extra@npm:^11.1.1, fs-extra@npm:^11.2.0":
+"fs-extra@npm:11.2.0, fs-extra@npm:^11.0.0, fs-extra@npm:^11.2.0":
   version: 11.2.0
   resolution: "fs-extra@npm:11.2.0"
   dependencies:
@@ -11663,9 +11663,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.137.3":
-  version: 37.137.3
-  resolution: "renovate@npm:37.137.3"
+"renovate@npm:37.139.1":
+  version: 37.139.1
+  resolution: "renovate@npm:37.139.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11674,7 +11674,7 @@ __metadata:
     "@aws-sdk/client-s3": "npm:3.363.0"
     "@aws-sdk/credential-providers": "npm:3.363.0"
     "@breejs/later": "npm:4.2.0"
-    "@cdktf/hcl2json": "npm:0.19.2"
+    "@cdktf/hcl2json": "npm:0.20.0"
     "@opentelemetry/api": "npm:1.7.0"
     "@opentelemetry/context-async-hooks": "npm:1.19.0"
     "@opentelemetry/exporter-trace-otlp-http": "npm:0.46.0"
@@ -11780,7 +11780,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: a253ce33c30641fe196a119794928cab3c86388c81cefc83170706e11bbca7e2385f3409f4e572f1dbf6dc803c78efcbbaa05ce2e09f85aa92568a83709c5d06
+  checksum: 31f31224a6ccdb8c17ab13af09b5d57b32f1a447de109be1eefd57bd6486f6b30f07ec92d33267f7764aaf8d00449d37f6f2ab269edf334766d50f4551b6a378
   languageName: node
   linkType: hard
 
