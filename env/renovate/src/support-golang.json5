@@ -4,11 +4,4 @@
   golang: {
     postUpdateOptions: ['gomodTidy', 'gomodUpdateImportPaths'],
   },
-  packageRules: [
-    {
-      matchManagers: ['gomod'],
-      matchDepTypes: ['indirect'],
-      enabled: true,
-    },
-  ],
 }
