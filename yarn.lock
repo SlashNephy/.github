@@ -3576,7 +3576,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.165.6"
+    renovate: "npm:37.165.7"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -8562,9 +8562,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-auth-library@npm:9.5.0":
-  version: 9.5.0
-  resolution: "google-auth-library@npm:9.5.0"
+"google-auth-library@npm:9.6.1":
+  version: 9.6.1
+  resolution: "google-auth-library@npm:9.6.1"
   dependencies:
     base64-js: "npm:^1.3.0"
     ecdsa-sig-formatter: "npm:^1.0.11"
@@ -8572,7 +8572,7 @@ __metadata:
     gcp-metadata: "npm:^6.1.0"
     gtoken: "npm:^7.0.0"
     jws: "npm:^4.0.0"
-  checksum: 56a112900ec1363c7abab2c6d9923722fd0563120d57de14a30cec115cb1a037e8174f1570653e0cd459a5b8ae834c55106e94655d1939dc5eb35c397cb75ad6
+  checksum: 60b422b77374d0d59131bcb29fe5ff3645968dd1d7251a553f9be76834837568160f742e99dd3af367d90f673744aeea5278985ce03bd26a1e00bd0de0ada9da
   languageName: node
   linkType: hard
 
@@ -9910,7 +9910,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:10.1.0, lru-cache@npm:^10.0.1, lru-cache@npm:^9.1.1 || ^10.0.0":
+"lru-cache@npm:10.2.0":
+  version: 10.2.0
+  resolution: "lru-cache@npm:10.2.0"
+  checksum: c9847612aa2daaef102d30542a8d6d9b2c2bb36581c1bf0dc3ebf5e5f3352c772a749e604afae2e46873b930a9e9523743faac4e5b937c576ab29196774712ee
+  languageName: node
+  linkType: hard
+
+"lru-cache@npm:^10.0.1, lru-cache@npm:^9.1.1 || ^10.0.0":
   version: 10.1.0
   resolution: "lru-cache@npm:10.1.0"
   checksum: 778bc8b2626daccd75f24c4b4d10632496e21ba064b126f526c626fbdbc5b28c472013fccd45d7646b9e1ef052444824854aed617b59cd570d01a8b7d651fc1e
@@ -11864,9 +11871,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.165.6":
-  version: 37.165.6
-  resolution: "renovate@npm:37.165.6"
+"renovate@npm:37.165.7":
+  version: 37.165.7
+  resolution: "renovate@npm:37.165.7"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11928,7 +11935,7 @@ __metadata:
     glob: "npm:10.3.10"
     global-agent: "npm:3.0.0"
     good-enough-parser: "npm:1.1.23"
-    google-auth-library: "npm:9.5.0"
+    google-auth-library: "npm:9.6.1"
     got: "npm:11.8.6"
     graph-data-structure: "npm:3.5.0"
     handlebars: "npm:4.7.8"
@@ -11940,7 +11947,7 @@ __metadata:
     json5: "npm:2.2.3"
     jsonata: "npm:2.0.3"
     klona: "npm:2.0.6"
-    lru-cache: "npm:10.1.0"
+    lru-cache: "npm:10.2.0"
     luxon: "npm:3.4.4"
     markdown-it: "npm:13.0.2"
     markdown-table: "npm:2.0.0"
@@ -11983,7 +11990,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: b20f9268cab324db0f615a6ff0c43036b483843b91fc35cebe221438b88dc98074b80e61bebdb7a7a3af536e0f702ec052b7ffbc7d53fbd2359c3ef617d76d4c
+  checksum: d815745e60efa22cf4bbad285e211cb8b3ff96d0c3c363790c4740a5ac78ef9568043813c4e4832c42d142d466b28db44c14efc063aadfc86f1b094f5a11a1f2
   languageName: node
   linkType: hard
 
