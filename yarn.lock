@@ -3576,7 +3576,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.165.5"
+    renovate: "npm:37.165.6"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -4534,12 +4534,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/better-sqlite3@npm:7.6.8":
-  version: 7.6.8
-  resolution: "@types/better-sqlite3@npm:7.6.8"
+"@types/better-sqlite3@npm:7.6.9":
+  version: 7.6.9
+  resolution: "@types/better-sqlite3@npm:7.6.9"
   dependencies:
     "@types/node": "npm:*"
-  checksum: e9fd1893af20afe0d5fc42eca8733b5a7629482e53236322227251f54e170c5788a33be02eb3706adc022782f91f445741166a8424286c376d17ed0aa833aa25
+  checksum: 7d77add3993968982374cd73586a100fc5b9c29570a167b5798a415744983041d9ae3dcbdfd83fcf807247b777e3b8dc4e045fb7dae4a3d8484c9366ab371680
   languageName: node
   linkType: hard
 
@@ -11864,9 +11864,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.165.5":
-  version: 37.165.5
-  resolution: "renovate@npm:37.165.5"
+"renovate@npm:37.165.6":
+  version: 37.165.6
+  resolution: "renovate@npm:37.165.6"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11891,7 +11891,7 @@ __metadata:
     "@renovatebot/pep440": "npm:3.0.17"
     "@renovatebot/ruby-semver": "npm:3.0.23"
     "@sindresorhus/is": "npm:4.6.0"
-    "@types/better-sqlite3": "npm:7.6.8"
+    "@types/better-sqlite3": "npm:7.6.9"
     "@types/ms": "npm:0.7.34"
     "@types/tmp": "npm:0.2.6"
     "@yarnpkg/core": "npm:4.0.2"
@@ -11983,7 +11983,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 914f7f909f644d58224c0c9f4125f29218577ca76bb9abb81e105616ec996298dced77d4eac45fd165f142b9db4c3b79c73fd7a95d7402a6a71e37ff8271d3e3
+  checksum: b20f9268cab324db0f615a6ff0c43036b483843b91fc35cebe221438b88dc98074b80e61bebdb7a7a3af536e0f702ec052b7ffbc7d53fbd2359c3ef617d76d4c
   languageName: node
   linkType: hard
 
