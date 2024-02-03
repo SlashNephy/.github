@@ -4,9 +4,8 @@ Host github.com
 Host lily.starry.blue
   User spica
 
-Host ssh.starry.blue bbc-ssh.starry.blue
+Host lily.spotted-halfmoon.ts.net bbc.spotted-halfmoon.ts.net
   User spica
-  ProxyCommand cloudflared access ssh --hostname %h
 
 Host *
   ServerAliveInterval 30
