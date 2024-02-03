@@ -17,3 +17,8 @@
 
 [credential]
   helper = wincred
+[credential "https://huggingface.co"]
+  provider = generic
+
+[http]
+  postBuffer = 157286400
