@@ -3264,14 +3264,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redis/client@npm:1.5.13":
-  version: 1.5.13
-  resolution: "@redis/client@npm:1.5.13"
+"@redis/client@npm:1.5.14":
+  version: 1.5.14
+  resolution: "@redis/client@npm:1.5.14"
   dependencies:
     cluster-key-slot: "npm:1.1.2"
     generic-pool: "npm:3.9.0"
     yallist: "npm:4.0.0"
-  checksum: f9ddc81abd4117d7d44b76d0620114422eb6dfef17e5bdce993ea79f3b7184cdc3d8ffa81dd30cfe88c683bf1d7e0d7f8ee20f03bf9a5555724bf4586217c65c
+  checksum: e8036ef1bce676891a492c198251238b3eb19eb7120ff974291f2a4e8cea97ac0f4aabbc0c59f40a923dcb43456e4e2a29b7287bd6a91535330e5e4631d9b176
   languageName: node
   linkType: hard
 
@@ -3552,7 +3552,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.184.1"
+    renovate: "npm:37.184.3"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11666,17 +11666,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redis@npm:4.6.12":
-  version: 4.6.12
-  resolution: "redis@npm:4.6.12"
+"redis@npm:4.6.13":
+  version: 4.6.13
+  resolution: "redis@npm:4.6.13"
   dependencies:
     "@redis/bloom": "npm:1.2.0"
-    "@redis/client": "npm:1.5.13"
+    "@redis/client": "npm:1.5.14"
     "@redis/graph": "npm:1.1.1"
     "@redis/json": "npm:1.0.6"
     "@redis/search": "npm:1.1.6"
     "@redis/time-series": "npm:1.0.5"
-  checksum: 5b0e865b3da218c75049ed66418f2c894733de0356c0ad331e2e8bfb55fbb84a5ba151c010dc89e9df668fb7a0e08ede6b3c64ae0b4536c2dc84e2a6da5b5be6
+  checksum: 5fbbf61fc244ca0d0eeca648e470de92d30a494f724f17fac434a7b2713425fc67be31736e17dc53798eba7d236cdfb66e330034ccced51f0faa1a3df1711d5d
   languageName: node
   linkType: hard
 
@@ -11867,9 +11867,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.184.1":
-  version: 37.184.1
-  resolution: "renovate@npm:37.184.1"
+"renovate@npm:37.184.3":
+  version: 37.184.3
+  resolution: "renovate@npm:37.184.3"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11960,7 +11960,7 @@ __metadata:
     parse-link-header: "npm:2.0.0"
     prettier: "npm:3.2.5"
     re2: "npm:1.20.9"
-    redis: "npm:4.6.12"
+    redis: "npm:4.6.13"
     remark: "npm:13.0.0"
     remark-github: "npm:10.1.0"
     safe-stable-stringify: "npm:2.4.3"
@@ -11986,7 +11986,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: c3c03ad9af066368ec4f004dfb6723fcbadf7b395129bc8f7672008d1c296963451b2a173698e7364e175feaa37552cf058897ec8a9c0e48490e0c36375dd148
+  checksum: 08667af49f3f515adda51b7487c36e92bbfef4580c74d217bf22628c26d4a3a163658371d00c3f617495e76cf2b37164ceaa74567fa70506dd3551340dc9da60
   languageName: node
   linkType: hard
 
