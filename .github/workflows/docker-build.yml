@@ -123,7 +123,7 @@ jobs:
 
       - name: Dispatch update-image-digest
         if: inputs.dispatch-update-image-digest
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: '${{ secrets.dispatch-github-token }}'
           repository: 'SlashNephy/infrastructure'
