@@ -3598,7 +3598,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.246.2"
+    renovate: "npm:37.247.0"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -5589,13 +5589,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-devops-node-api@npm:12.4.0":
-  version: 12.4.0
-  resolution: "azure-devops-node-api@npm:12.4.0"
+"azure-devops-node-api@npm:12.5.0":
+  version: 12.5.0
+  resolution: "azure-devops-node-api@npm:12.5.0"
   dependencies:
     tunnel: "npm:0.0.6"
     typed-rest-client: "npm:^1.8.4"
-  checksum: f1a1964aa2d421574d83a545d5eb01d1d5f5b0e4518d71dfa61908f4a10237b820cc1824dfa15c941adacf3eaaa7987e4b8b176e336eadb35a17b0457257a467
+  checksum: c0b9ce30456d90056aefac88239770def2430a22d37c1518a036d170612fda647cc7da17d5dca35b9632a5e486b6acb3593f8cd40d574bbebac317a2b9031159
   languageName: node
   linkType: hard
 
@@ -11815,9 +11815,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.246.2":
-  version: 37.246.2
-  resolution: "renovate@npm:37.246.2"
+"renovate@npm:37.247.0":
+  version: 37.247.0
+  resolution: "renovate@npm:37.247.0"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11851,7 +11851,7 @@ __metadata:
     aggregate-error: "npm:3.1.0"
     auth-header: "npm:1.0.0"
     aws4: "npm:1.12.0"
-    azure-devops-node-api: "npm:12.4.0"
+    azure-devops-node-api: "npm:12.5.0"
     better-sqlite3: "npm:9.4.3"
     bunyan: "npm:1.8.15"
     cacache: "npm:18.0.2"
@@ -11934,7 +11934,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: d816ed272254a555f37cbcea4b2e7ca663fa44e508e843af8765b98469942ad13ddd3817764e9551a92d482877b7ad379d63c553fac57090849986aebd2b4ef3
+  checksum: 1ae73f832024db30e6845a4014f346492c661a6a44e01383952cec5b8c9297ec1f3bf3448b2f1a2831de179fbfac96ec25114956e5c9cd7e7cda4fcac134d99a
   languageName: node
   linkType: hard
 
