@@ -3342,18 +3342,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/osv-offline@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@renovatebot/osv-offline@npm:1.5.1"
+"@renovatebot/osv-offline@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@renovatebot/osv-offline@npm:1.5.2"
   dependencies:
     "@octokit/rest": "npm:^20.0.2"
     "@renovatebot/osv-offline-db": "npm:1.6.0"
-    adm-zip: "npm:~0.5.10"
+    adm-zip: "npm:~0.5.11"
     fs-extra: "npm:^11.2.0"
     got: "npm:^11.8.6"
     luxon: "npm:^3.4.4"
     node-fetch: "npm:^2.7.0"
-  checksum: 79e8f85af90a911f71d1ea38dda5ba40be976f856c9b1233a582c3bb13956926f1fd845df3fe0f46bfac4f81d36500eb50b2fbc7924e4ea2a6a38f14ea99ea80
+  checksum: 425f802c5eb43622732d18feb0a2403b15870c0b268fa3b8e2b07b4dc7d114039c2872f7202c840a04626cc0115ac300d7faa16cbaf8b5bda98326a97a6ce85b
   languageName: node
   linkType: hard
 
@@ -3581,7 +3581,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.262.1"
+    renovate: "npm:37.262.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -5192,10 +5192,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"adm-zip@npm:~0.5.10":
-  version: 0.5.10
-  resolution: "adm-zip@npm:0.5.10"
-  checksum: 1f391a4e02940688b6ca6d4b3ea96cc82a9dbe1596671d7dbc052f9a53ed2efa6ba9ba253f032ea16e70081f22d6ddd1af2d65d6be700853cdee9c2fc925c20e
+"adm-zip@npm:~0.5.11":
+  version: 0.5.12
+  resolution: "adm-zip@npm:0.5.12"
+  checksum: fca2893b416bfcbee8b371a403f4d2e980a3c1055ce7b9b0b2ac8540c8efe6bbb27cc63ddf64ff6e6ed40c84fcb1ede7e95d230e7a567025e03f1044efbf6be0
   languageName: node
   linkType: hard
 
@@ -8496,9 +8496,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-auth-library@npm:9.6.3":
-  version: 9.6.3
-  resolution: "google-auth-library@npm:9.6.3"
+"google-auth-library@npm:9.7.0":
+  version: 9.7.0
+  resolution: "google-auth-library@npm:9.7.0"
   dependencies:
     base64-js: "npm:^1.3.0"
     ecdsa-sig-formatter: "npm:^1.0.11"
@@ -8506,7 +8506,7 @@ __metadata:
     gcp-metadata: "npm:^6.1.0"
     gtoken: "npm:^7.0.0"
     jws: "npm:^4.0.0"
-  checksum: 11b6a410811981189ccbc987d1e26cea83be6761d4a004bbc183dff693b079586988e723f41047dca70818f5794fd33220dd3194d851c6009a9fe1b31065b6d2
+  checksum: 158e00b3a177038db2b28c3f69f835278f9bbe101327742aff284afa51f98721feaa14480eb0fea2da2c365820d0dc05528bd969ad45f37f4da6e3599bf2e16c
   languageName: node
   linkType: hard
 
@@ -11798,9 +11798,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.262.1":
-  version: 37.262.1
-  resolution: "renovate@npm:37.262.1"
+"renovate@npm:37.262.2":
+  version: 37.262.2
+  resolution: "renovate@npm:37.262.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11821,7 +11821,7 @@ __metadata:
     "@opentelemetry/sdk-trace-node": "npm:1.22.0"
     "@opentelemetry/semantic-conventions": "npm:1.22.0"
     "@qnighy/marshal": "npm:0.1.3"
-    "@renovatebot/osv-offline": "npm:1.5.1"
+    "@renovatebot/osv-offline": "npm:1.5.2"
     "@renovatebot/pep440": "npm:3.0.19"
     "@renovatebot/ruby-semver": "npm:3.0.23"
     "@sindresorhus/is": "npm:4.6.0"
@@ -11862,7 +11862,7 @@ __metadata:
     glob: "npm:10.3.10"
     global-agent: "npm:3.0.0"
     good-enough-parser: "npm:1.1.23"
-    google-auth-library: "npm:9.6.3"
+    google-auth-library: "npm:9.7.0"
     got: "npm:11.8.6"
     graph-data-structure: "npm:3.5.0"
     handlebars: "npm:4.7.8"
@@ -11917,7 +11917,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: c72ba4a96f6c0b02e26e189a98703c74999f380709d5c8b8d1675ee5b5b975c9ed523aa153c11fea8d9ffdefc0fabc585e9ca25499c617338d6a7441f91a3987
+  checksum: 61693dd26d19f52c7b1861dd80c800de721e0f72d38a385f3c96523c99be4b840e24f3908a28f1a6e16c2caeddf06af4aa25aae9eb274460d7ffc08bcd2d96ab
   languageName: node
   linkType: hard
 
