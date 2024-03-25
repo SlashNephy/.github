@@ -2463,12 +2463,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cdktf/hcl2json@npm:0.20.4":
-  version: 0.20.4
-  resolution: "@cdktf/hcl2json@npm:0.20.4"
+"@cdktf/hcl2json@npm:0.20.5":
+  version: 0.20.5
+  resolution: "@cdktf/hcl2json@npm:0.20.5"
   dependencies:
     fs-extra: "npm:11.2.0"
-  checksum: 2803403406056128cc68409fd1340e9da5fae93bf834e5ab09ebdd7cd62d077d812c97db11f08862a95597c19880990ec95bec4d544e6cd14aeb229d3b5c87c9
+  checksum: 93f015b4fd3a1c2d55c1b62e2dafadae562d83b2b11ac36186e8832f1d78d5015dbe3a89c04a6add1690b6c4aedf83b7a979cf545a43a56d259648cc092d0abd
   languageName: node
   linkType: hard
 
@@ -3589,7 +3589,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.269.4"
+    renovate: "npm:37.269.5"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11898,9 +11898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.269.4":
-  version: 37.269.4
-  resolution: "renovate@npm:37.269.4"
+"renovate@npm:37.269.5":
+  version: 37.269.5
+  resolution: "renovate@npm:37.269.5"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -11909,7 +11909,7 @@ __metadata:
     "@aws-sdk/client-s3": "npm:3.363.0"
     "@aws-sdk/credential-providers": "npm:3.363.0"
     "@breejs/later": "npm:4.2.0"
-    "@cdktf/hcl2json": "npm:0.20.4"
+    "@cdktf/hcl2json": "npm:0.20.5"
     "@opentelemetry/api": "npm:1.8.0"
     "@opentelemetry/context-async-hooks": "npm:1.22.0"
     "@opentelemetry/exporter-trace-otlp-http": "npm:0.49.1"
@@ -12017,7 +12017,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 2bf7d79054b49fa78bbb9c8248eae0d7d00ad59e5ec2439a079059c3f29e0fc3b70db5bec8083239ac86e38489ea14b41fb7ceed5497c8b3d1eaf5b8bb46426e
+  checksum: d7906c880083b264ff73dee9c6409e29e965ec0c050d285973ba7c86cba6a693d9f21795b70bbdd49330d8b47072e4bf24f25af60e27155b9067dc1db95c7028
   languageName: node
   linkType: hard
 
