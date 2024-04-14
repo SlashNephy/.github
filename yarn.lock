@@ -3440,10 +3440,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/pep440@npm:3.0.19":
-  version: 3.0.19
-  resolution: "@renovatebot/pep440@npm:3.0.19"
-  checksum: a83a37f2edd85f29cf8601986bea1790f35492cd120a34b2a3fb774983e8940bfdd580ab36468adf93a2286b337ef980fb4cf7cac2600a1e7fb6b0cb46441f33
+"@renovatebot/pep440@npm:3.0.20":
+  version: 3.0.20
+  resolution: "@renovatebot/pep440@npm:3.0.20"
+  checksum: 3940b87a0d025da493e1306b1a80b3b41daa1abd33cc066af70d1f5468a64f8ac06fc1ab652f10c3a92ac123b0d32fdeffc5044f8e79b0fadf500fdf60c90229
   languageName: node
   linkType: hard
 
@@ -3664,7 +3664,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.292.0"
+    renovate: "npm:37.292.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12007,9 +12007,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.292.0":
-  version: 37.292.0
-  resolution: "renovate@npm:37.292.0"
+"renovate@npm:37.292.1":
+  version: 37.292.1
+  resolution: "renovate@npm:37.292.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -12031,7 +12031,7 @@ __metadata:
     "@opentelemetry/semantic-conventions": "npm:1.23.0"
     "@qnighy/marshal": "npm:0.1.3"
     "@renovatebot/osv-offline": "npm:1.5.4"
-    "@renovatebot/pep440": "npm:3.0.19"
+    "@renovatebot/pep440": "npm:3.0.20"
     "@renovatebot/ruby-semver": "npm:3.0.23"
     "@sindresorhus/is": "npm:4.6.0"
     "@types/better-sqlite3": "npm:7.6.9"
@@ -12126,7 +12126,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 3ed1315548e79427cccc0ca3a3c61a4b2c1b988461f49a24123fe596ec7e67b054d1397961f2fc4f1ad8910f83fc3f82a3cb6c1876c9f3cf70c54af09ce6623b
+  checksum: 1add23580c883303a5c43ca543284a0e16f4dd4907d878cea8e684fade5d6e726695bbca93940bb78c2257c8c327f75e12a92e5602dae07eda72661344699e2a
   languageName: node
   linkType: hard
 
