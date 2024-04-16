@@ -3664,7 +3664,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.300.0"
+    renovate: "npm:37.300.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12007,9 +12007,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.300.0":
-  version: 37.300.0
-  resolution: "renovate@npm:37.300.0"
+"renovate@npm:37.300.1":
+  version: 37.300.1
+  resolution: "renovate@npm:37.300.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.363.0"
     "@aws-sdk/client-ec2": "npm:3.363.0"
@@ -12112,7 +12112,7 @@ __metadata:
     slugify: "npm:1.6.6"
     source-map-support: "npm:0.5.21"
     toml-eslint-parser: "npm:0.9.3"
-    traverse: "npm:0.6.8"
+    traverse: "npm:0.6.9"
     tslib: "npm:2.6.2"
     upath: "npm:2.0.1"
     url-join: "npm:4.0.1"
@@ -12126,7 +12126,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: cdd6c8ffc5e3b0460bfde87d54ea3e37ca2d5e8ca1316ab14d7b02597c1cb863895e2af48454adf132ea3adb99af34a088d08c7d9f7be2bf08c0bef8d0001d24
+  checksum: 05ea289aaef95d582dbc303be6f1a19a396296588d7a9c172bf739b25fa2dda70f165502ab88196968b31db0db16303440428a391de15d7f8b19985971ec2acf
   languageName: node
   linkType: hard
 
@@ -13791,7 +13791,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"traverse@npm:0.6.8, traverse@npm:^0.6.7":
+"traverse@npm:0.6.9":
+  version: 0.6.9
+  resolution: "traverse@npm:0.6.9"
+  dependencies:
+    gopd: "npm:^1.0.1"
+    typedarray.prototype.slice: "npm:^1.0.3"
+    which-typed-array: "npm:^1.1.15"
+  checksum: 6809ef684b04cd6985a4470f93bf794ad417f04bb1c43a6b1166fe1c94506118c7a7a87c34545fe15918f4e1fe29ced7a5813d8455932042f4ccc5981634139d
+  languageName: node
+  linkType: hard
+
+"traverse@npm:^0.6.7":
   version: 0.6.8
   resolution: "traverse@npm:0.6.8"
   checksum: d97a71be2ca895ff6b813840db37f9b5d88e30f7c4c4bd5b22c5c68ebc22d4a10c4599e02c51414523cc7ada3432e118ea62ebd53cf6f3a4f3aa951bd45072a9
@@ -14069,6 +14080,20 @@ __metadata:
   dependencies:
     is-typedarray: "npm:^1.0.0"
   checksum: 4ac5b7a93d604edabf3ac58d3a2f7e07487e9f6e98195a080e81dbffdc4127817f470f219d794a843b87052cedef102b53ac9b539855380b8c2172054b7d5027
+  languageName: node
+  linkType: hard
+
+"typedarray.prototype.slice@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "typedarray.prototype.slice@npm:1.0.3"
+  dependencies:
+    call-bind: "npm:^1.0.7"
+    define-properties: "npm:^1.2.1"
+    es-abstract: "npm:^1.23.0"
+    es-errors: "npm:^1.3.0"
+    typed-array-buffer: "npm:^1.0.2"
+    typed-array-byte-offset: "npm:^1.0.2"
+  checksum: 6ac110a8b58a1ccb086242f09d1ce9c7ba2885924e816364a7879083b983d4096f19aab6f9aa8c0ce5ddd3d8ae3f3ba5581e10fa6838880f296a0c54c26f424b
   languageName: node
   linkType: hard
 
