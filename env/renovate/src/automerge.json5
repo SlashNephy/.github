@@ -31,7 +31,7 @@
     // 直ちにマージ
     {
       automerge: true,
-      matchPackageNames: ['@kawaiioverflow/arm', 'renovate'],
+      matchDepNames: ['@kawaiioverflow/arm', 'renovate'],
       ignoreTests: true,
       stabilityDays: 0,
       automergeSchedule: ['at any time'],
@@ -39,7 +39,7 @@
     // テスト無視
     {
       automerge: true,
-      matchPackageNames: [
+      matchDepNames: [
         // '@slashnephy/eslint-config',
         '@slashnephy/prettier-config',
         '@slashnephy/typescript-extension',
@@ -49,7 +49,7 @@
     // テスト後マージ
     {
       automerge: true,
-      matchPackageNames: ['node', 'gradle', 'yarn', 'discord-api-types'],
+      matchDepNames: ['node', 'gradle', 'yarn', 'discord-api-types'],
     },
     {
       automerge: true,
