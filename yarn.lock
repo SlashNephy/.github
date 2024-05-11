@@ -3647,7 +3647,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.354.5"
+    renovate: "npm:37.354.6"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -6007,7 +6007,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cacache@npm:18.0.2, cacache@npm:^18.0.0":
+"cacache@npm:18.0.3":
+  version: 18.0.3
+  resolution: "cacache@npm:18.0.3"
+  dependencies:
+    "@npmcli/fs": "npm:^3.1.0"
+    fs-minipass: "npm:^3.0.0"
+    glob: "npm:^10.2.2"
+    lru-cache: "npm:^10.0.1"
+    minipass: "npm:^7.0.3"
+    minipass-collect: "npm:^2.0.1"
+    minipass-flush: "npm:^1.0.5"
+    minipass-pipeline: "npm:^1.2.4"
+    p-map: "npm:^4.0.0"
+    ssri: "npm:^10.0.0"
+    tar: "npm:^6.1.11"
+    unique-filename: "npm:^3.0.0"
+  checksum: dfda92840bb371fb66b88c087c61a74544363b37a265023223a99965b16a16bbb87661fe4948718d79df6e0cc04e85e62784fbcf1832b2a5e54ff4c46fbb45b7
+  languageName: node
+  linkType: hard
+
+"cacache@npm:^18.0.0":
   version: 18.0.2
   resolution: "cacache@npm:18.0.2"
   dependencies:
@@ -12219,9 +12239,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.354.5":
-  version: 37.354.5
-  resolution: "renovate@npm:37.354.5"
+"renovate@npm:37.354.6":
+  version: 37.354.6
+  resolution: "renovate@npm:37.354.6"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.565.0"
     "@aws-sdk/client-ec2": "npm:3.565.0"
@@ -12256,7 +12276,7 @@ __metadata:
     azure-devops-node-api: "npm:13.0.0"
     better-sqlite3: "npm:9.6.0"
     bunyan: "npm:1.8.15"
-    cacache: "npm:18.0.2"
+    cacache: "npm:18.0.3"
     cacheable-lookup: "npm:5.0.4"
     chalk: "npm:4.1.2"
     changelog-filename-regex: "npm:2.0.1"
@@ -12341,7 +12361,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 03d87d2e4506148d38f9d163fa8ab1b7a7f0e7aa4d33437a4e0b4be146277b216fca847f0eb690a01aade54c61b68a7d8a5022e9a132f50da2493cd01c306c44
+  checksum: 1213d86fee20fb1cb19a513df69919a1bb1a38dac8eaeca7b0ede637f9ce41744a9f9709aab2c16f57d155277a6a87ae6192f8cdfe53a7d7fa822ec987845a0c
   languageName: node
   linkType: hard
 
