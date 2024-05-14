@@ -3647,7 +3647,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.358.1"
+    renovate: "npm:37.358.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -10931,7 +10931,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nan@npm:^2.14.0, nan@npm:^2.18.0":
+"nan@npm:^2.14.0, nan@npm:^2.19.0":
   version: 2.19.0
   resolution: "nan@npm:2.19.0"
   dependencies:
@@ -11898,14 +11898,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"re2@npm:1.20.10":
-  version: 1.20.10
-  resolution: "re2@npm:1.20.10"
+"re2@npm:1.20.11":
+  version: 1.20.11
+  resolution: "re2@npm:1.20.11"
   dependencies:
     install-artifact-from-github: "npm:^1.3.5"
-    nan: "npm:^2.18.0"
+    nan: "npm:^2.19.0"
     node-gyp: "npm:^10.0.1"
-  checksum: 36610b1d3a8774e44a79286a6c3fa931b1d4223290ec15fb33657a2f3650adb56224b1b493f8326ca5b2fb653cf07adf4d8ad7c63a51ea4a14f949e2c995b9db
+  checksum: 894b7a0676032d4b42df0613573cf18c1f42349d97392797d3e2667d43591aa029d7e2af0b660a55009348269f09cfc9e9aa5eeaa4206cf039955630f8314682
   languageName: node
   linkType: hard
 
@@ -12239,9 +12239,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.358.1":
-  version: 37.358.1
-  resolution: "renovate@npm:37.358.1"
+"renovate@npm:37.358.2":
+  version: 37.358.2
+  resolution: "renovate@npm:37.358.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.565.0"
     "@aws-sdk/client-ec2": "npm:3.565.0"
@@ -12330,7 +12330,7 @@ __metadata:
     p-throttle: "npm:4.1.1"
     parse-link-header: "npm:2.0.0"
     prettier: "npm:3.2.5"
-    re2: "npm:1.20.10"
+    re2: "npm:1.20.11"
     redis: "npm:4.6.13"
     remark: "npm:13.0.0"
     remark-github: "npm:10.1.0"
@@ -12361,7 +12361,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 9016cd69ec84d4295328f11fc7e7d83dd91fd158762ca884cffbc5cf916639e60d47e2c973e01d855ca584c4652a480571583410cd5146a97823163558b47708
+  checksum: 218174fee02a0494e5ff566b9795d8beb5ab4b86c1ac855487e836cc139d83ecd552c3e739a10a3f682fb2a7d043b8e6187679884225a755644a8d0d79400536
   languageName: node
   linkType: hard
 
