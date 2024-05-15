@@ -3672,7 +3672,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.363.3"
+    renovate: "npm:37.363.4"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12285,9 +12285,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.363.3":
-  version: 37.363.3
-  resolution: "renovate@npm:37.363.3"
+"renovate@npm:37.363.4":
+  version: 37.363.4
+  resolution: "renovate@npm:37.363.4"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.565.0"
     "@aws-sdk/client-ec2": "npm:3.565.0"
@@ -12381,7 +12381,7 @@ __metadata:
     remark: "npm:13.0.0"
     remark-github: "npm:10.1.0"
     safe-stable-stringify: "npm:2.4.3"
-    semver: "npm:7.6.1"
+    semver: "npm:7.6.2"
     semver-stable: "npm:3.0.0"
     semver-utils: "npm:1.1.4"
     shlex: "npm:2.1.2"
@@ -12407,7 +12407,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: d67a53c9a1d38c12f9a90e7272b45fbe7689f13c1160780bd0f90f6749026e7835f785c802df96c148453bd1c60abe835afb1d52c903cb9c3f522f872170b165
+  checksum: 7d7acd48af40c301962cf467351f02d6b9b4ab2093d5f49a112193dc8f47ff084bd94882d40a10b47bd9c296e5d58db166b6d8f9ac978c7dd5b4bfe0e86bf6a7
   languageName: node
   linkType: hard
 
@@ -12774,12 +12774,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.6.1":
-  version: 7.6.1
-  resolution: "semver@npm:7.6.1"
+"semver@npm:7.6.2":
+  version: 7.6.2
+  resolution: "semver@npm:7.6.2"
   bin:
     semver: bin/semver.js
-  checksum: fd28315954ffc80204df0cb5c62355160ebf54059f5ffe386e9903162ddf687ed14004c30f6e5347fa695fc77bafa242798af8d351f1d260207f007cfbeccb82
+  checksum: 97d3441e97ace8be4b1976433d1c32658f6afaff09f143e52c593bae7eef33de19e3e369c88bd985ce1042c6f441c80c6803078d1de2a9988080b66684cbb30c
   languageName: node
   linkType: hard
 
