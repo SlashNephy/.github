@@ -3672,7 +3672,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.381.8"
+    renovate: "npm:37.381.9"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -9266,10 +9266,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ini@npm:4.1.2":
-  version: 4.1.2
-  resolution: "ini@npm:4.1.2"
-  checksum: e0ffe587038e26ca1debfece6f5e52fd17f4e65be59bb481bb24b89cd2be31a71f619465918da215916b4deba7d1134c228c58fe5e0db66a71a472dee9b8f99c
+"ini@npm:4.1.3":
+  version: 4.1.3
+  resolution: "ini@npm:4.1.3"
+  checksum: 0d27eff094d5f3899dd7c00d0c04ea733ca03a8eb6f9406ce15daac1a81de022cb417d6eaff7e4342451ffa663389c565ffc68d6825eaf686bf003280b945764
   languageName: node
   linkType: hard
 
@@ -12305,9 +12305,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.381.8":
-  version: 37.381.8
-  resolution: "renovate@npm:37.381.8"
+"renovate@npm:37.381.9":
+  version: 37.381.9
+  resolution: "renovate@npm:37.381.9"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.565.0"
     "@aws-sdk/client-ec2": "npm:3.565.0"
@@ -12373,7 +12373,7 @@ __metadata:
     graph-data-structure: "npm:3.5.0"
     handlebars: "npm:4.7.8"
     ignore: "npm:5.3.1"
-    ini: "npm:4.1.2"
+    ini: "npm:4.1.3"
     js-yaml: "npm:4.1.0"
     json-dup-key-validator: "npm:1.0.3"
     json-stringify-pretty-compact: "npm:3.0.0"
@@ -12428,7 +12428,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: eccf200c0b7359e73d38eb70d0b284014cdb0cb74c5eceda13f3644ec9b3842d203767dd67241abd9078e0bc8faf6d7fee0d37ad5afeb9908a184aa67b7b316d
+  checksum: eb06093d202649138e600dfcd0412e0936695f3bf2749dd8373638eba140bc071f2837128dfa44a3f23bbbb2b99b17c92e912eed2c7be53141e67c6d1cd83ccd
   languageName: node
   linkType: hard
 
