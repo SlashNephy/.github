@@ -3807,7 +3807,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.422.0"
+    renovate: "npm:37.422.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -10964,7 +10964,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:9.0.4, minimatch@npm:^9.0.4":
+"minimatch@npm:9.0.5":
+  version: 9.0.5
+  resolution: "minimatch@npm:9.0.5"
+  dependencies:
+    brace-expansion: "npm:^2.0.1"
+  checksum: de96cf5e35bdf0eab3e2c853522f98ffbe9a36c37797778d2665231ec1f20a9447a7e567cb640901f89e4daaa95ae5d70c65a9e8aa2bb0019b6facbc3c0575ed
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^9.0.4":
   version: 9.0.4
   resolution: "minimatch@npm:9.0.4"
   dependencies:
@@ -12570,9 +12579,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.422.0":
-  version: 37.422.0
-  resolution: "renovate@npm:37.422.0"
+"renovate@npm:37.422.1":
+  version: 37.422.1
+  resolution: "renovate@npm:37.422.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.606.0"
     "@aws-sdk/client-ec2": "npm:3.606.0"
@@ -12650,7 +12659,7 @@ __metadata:
     luxon: "npm:3.4.4"
     markdown-it: "npm:14.1.0"
     markdown-table: "npm:2.0.0"
-    minimatch: "npm:9.0.4"
+    minimatch: "npm:9.0.5"
     moo: "npm:0.5.2"
     ms: "npm:2.1.3"
     nanoid: "npm:3.3.7"
@@ -12693,7 +12702,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: ea5fd9475f98de7c444bbbe14b9193986e2a9dd98f4d3aec8f97b15bad28c74ba3ece009917b00962be61d4de3c60677a6ddfb61d899d8bf923fa4f53946c677
+  checksum: 3bcb14d844bdf3f51ba0b756c0a2c1e288edcf131cdb5af97b6409c335419c0dc8b316c42f4e91a329f1b4793fa885df242d9cadc9a400b65cfb5f5b0ed200a9
   languageName: node
   linkType: hard
 
