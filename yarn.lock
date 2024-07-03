@@ -3807,7 +3807,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.422.2"
+    renovate: "npm:37.422.4"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -5922,13 +5922,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-devops-node-api@npm:13.0.0":
-  version: 13.0.0
-  resolution: "azure-devops-node-api@npm:13.0.0"
+"azure-devops-node-api@npm:14.0.1":
+  version: 14.0.1
+  resolution: "azure-devops-node-api@npm:14.0.1"
   dependencies:
     tunnel: "npm:0.0.6"
-    typed-rest-client: "npm:^1.8.4"
-  checksum: c74414e67ceb910c9e709bbd8cbe62fd99b2c0c28153d6610f705887ebecd438478b3736350b3dc59c0638ba7730c09b9b8255e8c443ab802ff53b20ccdceaea
+    typed-rest-client: "npm:^2.0.1"
+  checksum: aa273316e0da4270c8cec57f9882240047194283ff30ef7b10706f49ead5a2440674ccf0bda214f9016a96d9f8da6b4f9dcc26b204c8f1d15f114fb405ac6da8
   languageName: node
   linkType: hard
 
@@ -6010,14 +6010,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"better-sqlite3@npm:11.0.0":
-  version: 11.0.0
-  resolution: "better-sqlite3@npm:11.0.0"
+"better-sqlite3@npm:11.1.2":
+  version: 11.1.2
+  resolution: "better-sqlite3@npm:11.1.2"
   dependencies:
     bindings: "npm:^1.5.0"
     node-gyp: "npm:latest"
     prebuild-install: "npm:^7.1.1"
-  checksum: 5a55f8c171055d0fd589b88da58b9e8d9de60ae701ca189270d98a0c25cdabae01abcc27bef26cc2f0b6a8f119d86373089b0a89199df5ac06382d0193651598
+  checksum: d4f4d7e56fc854fdf794781fc99fe5c0f7f373d635769d8ad1b7b22278bd91cdcdfe03360cbc63b51ab208b86a05465281a2b4c55065d6c3e911274f6f1e07cb
   languageName: node
   linkType: hard
 
@@ -7029,6 +7029,16 @@ __metadata:
   version: 2.0.3
   resolution: "dequal@npm:2.0.3"
   checksum: f98860cdf58b64991ae10205137c0e97d384c3a4edc7f807603887b7c4b850af1224a33d88012009f150861cbee4fa2d322c4cc04b9313bee312e47f6ecaa888
+  languageName: node
+  linkType: hard
+
+"des.js@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "des.js@npm:1.1.0"
+  dependencies:
+    inherits: "npm:^2.0.1"
+    minimalistic-assert: "npm:^1.0.0"
+  checksum: 671354943ad67493e49eb4c555480ab153edd7cee3a51c658082fcde539d2690ed2a4a0b5d1f401f9cde822edf3939a6afb2585f32c091f2d3a1b1665cd45236
   languageName: node
   linkType: hard
 
@@ -10021,6 +10031,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-md4@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "js-md4@npm:0.3.2"
+  checksum: 8313e00c45f710a53bdadc199c095b48ebaf54ea7b8cdb67a3f1863c270a5e9d0f89f204436b73866002af8c7ac4cacc872fdf271fc70e26614e424c7685b577
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -12194,12 +12211,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qs@npm:^6.9.1":
-  version: 6.12.0
-  resolution: "qs@npm:6.12.0"
+"qs@npm:^6.10.3":
+  version: 6.12.2
+  resolution: "qs@npm:6.12.2"
   dependencies:
     side-channel: "npm:^1.0.6"
-  checksum: e165a77ac5f3ca60c15c5f3d51b321ddec7aa438804436b29d160117bc6fb7bf7dab94abd0c7d7c0785890d3a75ae41e1d6346e158aaf1540c6fe53a31f11675
+  checksum: d431fe6914aea026794c047b9c5ac5d29e96cc13dc14f3ca838f5f3061b0f1ed435d3f616508bc0e8a64fc29d13359f08bfe723aabc5f80f36d11057b2de6ebf
   languageName: node
   linkType: hard
 
@@ -12579,9 +12596,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.422.2":
-  version: 37.422.2
-  resolution: "renovate@npm:37.422.2"
+"renovate@npm:37.422.4":
+  version: 37.422.4
+  resolution: "renovate@npm:37.422.4"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.606.0"
     "@aws-sdk/client-ec2": "npm:3.606.0"
@@ -12613,8 +12630,8 @@ __metadata:
     aggregate-error: "npm:3.1.0"
     auth-header: "npm:1.0.0"
     aws4: "npm:1.13.0"
-    azure-devops-node-api: "npm:13.0.0"
-    better-sqlite3: "npm:11.0.0"
+    azure-devops-node-api: "npm:14.0.1"
+    better-sqlite3: "npm:11.1.2"
     bunyan: "npm:1.8.15"
     cacache: "npm:18.0.3"
     cacheable-lookup: "npm:5.0.4"
@@ -12702,7 +12719,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: c65c235662fda168ce28d28fc866c3cbd9ffc6826801e9d94f8bacdf5ea7c67231c91d03ebc6aac4176777c5e2b93af9b190ae8a1555845bb2e52082c6166a57
+  checksum: 78f86a2eef1c40b019b6d4907330fb232c29aabe10405d9cf40bac16d8e0c83d87852c526c61eabd3c4bd8d8208f224f17ee9cd0c86cd70912449e5cdc15a511
   languageName: node
   linkType: hard
 
@@ -14692,14 +14709,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typed-rest-client@npm:^1.8.4":
-  version: 1.8.11
-  resolution: "typed-rest-client@npm:1.8.11"
+"typed-rest-client@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "typed-rest-client@npm:2.0.1"
   dependencies:
-    qs: "npm:^6.9.1"
+    des.js: "npm:^1.1.0"
+    js-md4: "npm:^0.3.2"
+    qs: "npm:^6.10.3"
     tunnel: "npm:0.0.6"
     underscore: "npm:^1.12.1"
-  checksum: 423cd386256c7faa2edc4eadace31f3f79861dabcca3d59973fef583572719061610230c25944cc023d35f6d594e0053f71e4b5f5282e81c4e04203ac85cf502
+  checksum: ff49de38d1d4a25cf968beb66ddd6191c9207c160b4a0ed97cf862c1ee6a3c6e8eed12b4c5ca478b12f8bcfcc5af18a7d7db6f3220ad040db966a543be4b2ef2
   languageName: node
   linkType: hard
 
