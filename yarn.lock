@@ -3807,7 +3807,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.422.1"
+    renovate: "npm:37.422.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12579,9 +12579,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.422.1":
-  version: 37.422.1
-  resolution: "renovate@npm:37.422.1"
+"renovate@npm:37.422.2":
+  version: 37.422.2
+  resolution: "renovate@npm:37.422.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.606.0"
     "@aws-sdk/client-ec2": "npm:3.606.0"
@@ -12683,7 +12683,7 @@ __metadata:
     simple-git: "npm:3.25.0"
     slugify: "npm:1.6.6"
     source-map-support: "npm:0.5.21"
-    toml-eslint-parser: "npm:0.9.3"
+    toml-eslint-parser: "npm:0.10.0"
     traverse: "npm:0.6.9"
     tslib: "npm:2.6.3"
     upath: "npm:2.0.1"
@@ -12702,7 +12702,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 3bcb14d844bdf3f51ba0b756c0a2c1e288edcf131cdb5af97b6409c335419c0dc8b316c42f4e91a329f1b4793fa885df242d9cadc9a400b65cfb5f5b0ed200a9
+  checksum: c65c235662fda168ce28d28fc866c3cbd9ffc6826801e9d94f8bacdf5ea7c67231c91d03ebc6aac4176777c5e2b93af9b190ae8a1555845bb2e52082c6166a57
   languageName: node
   linkType: hard
 
@@ -14369,12 +14369,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"toml-eslint-parser@npm:0.9.3":
-  version: 0.9.3
-  resolution: "toml-eslint-parser@npm:0.9.3"
+"toml-eslint-parser@npm:0.10.0":
+  version: 0.10.0
+  resolution: "toml-eslint-parser@npm:0.10.0"
   dependencies:
     eslint-visitor-keys: "npm:^3.0.0"
-  checksum: 45bfe46ca5e7ca400cfcc8558cce7795bfb265912cd95cfba595c75b5e4ca0f76d5de4a08761fd7241f56a4a535e3a46059eb0470a93007b34bd7f22b30a15fa
+  checksum: 78533aa4ccfa35aa77e760c7eb603754bbb488cfb0524de633ea4aab073a50c1e6ecf86347f13bc7a8d134fb31ddd3369a3bccc7983e9ca9062c52f5a765102b
   languageName: node
   linkType: hard
 
