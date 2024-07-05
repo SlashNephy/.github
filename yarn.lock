@@ -3807,7 +3807,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.424.0"
+    renovate: "npm:37.424.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -10484,10 +10484,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:10.2.2":
-  version: 10.2.2
-  resolution: "lru-cache@npm:10.2.2"
-  checksum: 402d31094335851220d0b00985084288136136992979d0e015f0f1697e15d1c86052d7d53ae86b614e5b058425606efffc6969a31a091085d7a2b80a8a1e26d6
+"lru-cache@npm:10.3.0":
+  version: 10.3.0
+  resolution: "lru-cache@npm:10.3.0"
+  checksum: 02d57024d90672774d66e0b76328a8975483b782c68118078363be17b8e0efb4f2bee89d98ce87e72f42d68fe7cb4ad14b1205d43e4f9954f5c91e3be4eaceb8
   languageName: node
   linkType: hard
 
@@ -12596,9 +12596,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.424.0":
-  version: 37.424.0
-  resolution: "renovate@npm:37.424.0"
+"renovate@npm:37.424.1":
+  version: 37.424.1
+  resolution: "renovate@npm:37.424.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.606.0"
     "@aws-sdk/client-ec2": "npm:3.606.0"
@@ -12672,7 +12672,7 @@ __metadata:
     jsonata: "npm:2.0.5"
     jsonc-parser: "npm:3.3.1"
     klona: "npm:2.0.6"
-    lru-cache: "npm:10.2.2"
+    lru-cache: "npm:10.3.0"
     luxon: "npm:3.4.4"
     markdown-it: "npm:14.1.0"
     markdown-table: "npm:2.0.0"
@@ -12719,7 +12719,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 9e23ddece435435824c61ec4cc4383940cf3a7e0690b47598a0d1942e19de224657e63b4fb0cb6fd7c97a2fa3199a44945772faf6f65d639e922885bd142ca78
+  checksum: f87ae94dc4c01c4ce1780a663101a578b128fe45f80952c5bbad199a95f63f1679399c352a2ed987c39dfd8f71dc4ac30260c59afba14cb26d79ef000c24b529
   languageName: node
   linkType: hard
 
