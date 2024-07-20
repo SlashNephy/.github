@@ -3807,7 +3807,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.437.0"
+    renovate: "npm:37.437.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12073,12 +12073,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.3.2":
-  version: 3.3.2
-  resolution: "prettier@npm:3.3.2"
+"prettier@npm:3.3.3":
+  version: 3.3.3
+  resolution: "prettier@npm:3.3.3"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 39ed27d17f0238da6dd6571d63026566bd790d3d0edac57c285fbab525982060c8f1e01955fe38134ab10f0951a6076da37f015db8173c02f14bc7f0803a384c
+  checksum: b85828b08e7505716324e4245549b9205c0cacb25342a030ba8885aba2039a115dbcf75a0b7ca3b37bc9d101ee61fab8113fc69ca3359f2a226f1ecc07ad2e26
   languageName: node
   linkType: hard
 
@@ -12596,9 +12596,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.437.0":
-  version: 37.437.0
-  resolution: "renovate@npm:37.437.0"
+"renovate@npm:37.437.1":
+  version: 37.437.1
+  resolution: "renovate@npm:37.437.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.606.0"
     "@aws-sdk/client-ec2": "npm:3.606.0"
@@ -12687,7 +12687,7 @@ __metadata:
     p-queue: "npm:6.6.2"
     p-throttle: "npm:4.1.1"
     parse-link-header: "npm:2.0.0"
-    prettier: "npm:3.3.2"
+    prettier: "npm:3.3.3"
     re2: "npm:1.21.3"
     redis: "npm:4.6.15"
     remark: "npm:13.0.0"
@@ -12719,7 +12719,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: d722ff51c61b811b14e97793c16eba9ee8c548dfec132de940f5e212742118958ef38d7d42e02239fc1a75346c0e28d885aeb2961d28ba65551d03ac55501108
+  checksum: ce044067b7b1c62e957c80c55f3ce499c3921fa018da3c2aa524ddc914c195af3af3c2f22d9ee2ec27f28163e5ff7bb8f3d34ff9442ce57c8604389b13636d23
   languageName: node
   linkType: hard
 
