@@ -3807,7 +3807,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:37.440.7"
+    renovate: "npm:38.1.0"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -6263,7 +6263,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cacheable-lookup@npm:5.0.4, cacheable-lookup@npm:^5.0.3":
+"cacheable-lookup@npm:^5.0.3":
   version: 5.0.4
   resolution: "cacheable-lookup@npm:5.0.4"
   checksum: a6547fb4954b318aa831cbdd2f7b376824bc784fb1fa67610e4147099e3074726072d9af89f12efb69121415a0e1f2918a8ddd4aafcbcf4e91fbeef4a59cd42c
@@ -10484,13 +10484,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:10.4.3":
-  version: 10.4.3
-  resolution: "lru-cache@npm:10.4.3"
-  checksum: ebd04fbca961e6c1d6c0af3799adcc966a1babe798f685bb84e6599266599cd95d94630b10262f5424539bc4640107e8a33aa28585374abf561d30d16f4b39fb
-  languageName: node
-  linkType: hard
-
 "lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0, lru-cache@npm:^9.1.1 || ^10.0.0":
   version: 10.2.0
   resolution: "lru-cache@npm:10.2.0"
@@ -12596,9 +12589,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:37.440.7":
-  version: 37.440.7
-  resolution: "renovate@npm:37.440.7"
+"renovate@npm:38.1.0":
+  version: 38.1.0
+  resolution: "renovate@npm:38.1.0"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.606.0"
     "@aws-sdk/client-ec2": "npm:3.606.0"
@@ -12634,7 +12627,6 @@ __metadata:
     better-sqlite3: "npm:11.1.2"
     bunyan: "npm:1.8.15"
     cacache: "npm:18.0.4"
-    cacheable-lookup: "npm:5.0.4"
     chalk: "npm:4.1.2"
     changelog-filename-regex: "npm:2.0.1"
     clean-git-ref: "npm:2.0.1"
@@ -12672,7 +12664,6 @@ __metadata:
     jsonata: "npm:2.0.5"
     jsonc-parser: "npm:3.3.1"
     klona: "npm:2.0.6"
-    lru-cache: "npm:10.4.3"
     luxon: "npm:3.4.4"
     markdown-it: "npm:14.1.0"
     markdown-table: "npm:2.0.0"
@@ -12719,7 +12710,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 07fb6aacbcdbc79fe9617e0fe405a4cfc26bad78f93281ab85899e7fdb763a5d16f8685f903631cc1171fb179275e3b67e704387b1e8d5349b6f254d9e14bb89
+  checksum: 89a8da17a3ee728f525eab26a3d0f4248164b4181e635daa26ada8c46747ad633e87b9928ab347a085841bac6078cb6e8e6a7ac907e03420e727a1a0d2cf5a10
   languageName: node
   linkType: hard
 
