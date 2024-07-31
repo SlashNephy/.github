@@ -3807,7 +3807,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.14.0"
+    renovate: "npm:38.15.0"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12589,9 +12589,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.14.0":
-  version: 38.14.0
-  resolution: "renovate@npm:38.14.0"
+"renovate@npm:38.15.0":
+  version: 38.15.0
+  resolution: "renovate@npm:38.15.0"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.606.0"
     "@aws-sdk/client-ec2": "npm:3.606.0"
@@ -12710,7 +12710,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 5e9cdd7229975c2ea0b33a7042c1a5e373b4a3bc4965f83bd194bcc4ddfb7de9a6fb627648274e95e3ddb25962a305ff70636c76ba5ea6eb0560349691aaae09
+  checksum: 4fcba334d79754ad66db10e1af4c85d279e0c09be33dbfcccadebf5780a7acb3fbb59ab20337fe0a9cc86e1dcf3dd99fe5a228b4895d441a371de39a1318933d
   languageName: node
   linkType: hard
 
