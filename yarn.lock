@@ -3811,7 +3811,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.18.14"
+    renovate: "npm:38.18.15"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11310,6 +11310,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"neotraverse@npm:0.6.15":
+  version: 0.6.15
+  resolution: "neotraverse@npm:0.6.15"
+  checksum: 44a06fb80e38a4dee9de4458c0e597cdbb6db5be12f54e731c786e41be94d7332cf0ffcf5f635949c4285bf094f9c3b2fceb1cc54fcef0a575283737785d0c9c
+  languageName: node
+  linkType: hard
+
 "node-abi@npm:^3.3.0":
   version: 3.56.0
   resolution: "node-abi@npm:3.56.0"
@@ -12610,9 +12617,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.18.14":
-  version: 38.18.14
-  resolution: "renovate@npm:38.18.14"
+"renovate@npm:38.18.15":
+  version: 38.18.15
+  resolution: "renovate@npm:38.18.15"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.621.0"
     "@aws-sdk/client-ec2": "npm:3.621.0"
@@ -12693,6 +12700,7 @@ __metadata:
     moo: "npm:0.5.2"
     ms: "npm:2.1.3"
     nanoid: "npm:3.3.7"
+    neotraverse: "npm:0.6.15"
     node-html-parser: "npm:6.1.13"
     openpgp: "npm:5.11.2"
     p-all: "npm:3.0.0"
@@ -12714,7 +12722,6 @@ __metadata:
     slugify: "npm:1.6.6"
     source-map-support: "npm:0.5.21"
     toml-eslint-parser: "npm:0.10.0"
-    traverse: "npm:0.6.9"
     tslib: "npm:2.6.3"
     upath: "npm:2.0.1"
     url-join: "npm:4.0.1"
@@ -12732,7 +12739,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 7b7f91e19e07de1b53ae4600e9e085f146d96d867996238db29f9e5dc75a68a62a5d790a6841f8c2a950b083c4f7c6d4d2b45f8242004b1dca0a219d6e541b64
+  checksum: f04384ca70e7610468938cf4fc571e4972b70fe2bbd1a74f7d217bff12705b05f612d76c34c009506f08fc01ea3298a61de0dbc5609d76a9b66893b791b0821b
   languageName: node
   linkType: hard
 
@@ -14415,17 +14422,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"traverse@npm:0.6.9":
-  version: 0.6.9
-  resolution: "traverse@npm:0.6.9"
-  dependencies:
-    gopd: "npm:^1.0.1"
-    typedarray.prototype.slice: "npm:^1.0.3"
-    which-typed-array: "npm:^1.1.15"
-  checksum: 6809ef684b04cd6985a4470f93bf794ad417f04bb1c43a6b1166fe1c94506118c7a7a87c34545fe15918f4e1fe29ced7a5813d8455932042f4ccc5981634139d
-  languageName: node
-  linkType: hard
-
 "traverse@npm:^0.6.7":
   version: 0.6.8
   resolution: "traverse@npm:0.6.8"
@@ -14741,20 +14737,6 @@ __metadata:
   dependencies:
     is-typedarray: "npm:^1.0.0"
   checksum: 4ac5b7a93d604edabf3ac58d3a2f7e07487e9f6e98195a080e81dbffdc4127817f470f219d794a843b87052cedef102b53ac9b539855380b8c2172054b7d5027
-  languageName: node
-  linkType: hard
-
-"typedarray.prototype.slice@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "typedarray.prototype.slice@npm:1.0.3"
-  dependencies:
-    call-bind: "npm:^1.0.7"
-    define-properties: "npm:^1.2.1"
-    es-abstract: "npm:^1.23.0"
-    es-errors: "npm:^1.3.0"
-    typed-array-buffer: "npm:^1.0.2"
-    typed-array-byte-offset: "npm:^1.0.2"
-  checksum: 6ac110a8b58a1ccb086242f09d1ce9c7ba2885924e816364a7879083b983d4096f19aab6f9aa8c0ce5ddd3d8ae3f3ba5581e10fa6838880f296a0c54c26f424b
   languageName: node
   linkType: hard
 
