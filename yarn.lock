@@ -3811,7 +3811,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.24.1"
+    renovate: "npm:38.25.0"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -10537,17 +10537,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:3.4.4, luxon@npm:^3.2.1":
-  version: 3.4.4
-  resolution: "luxon@npm:3.4.4"
-  checksum: 02e26a0b039c11fd5b75e1d734c8f0332c95510f6a514a9a0991023e43fb233884da02d7f966823ffb230632a733fc86d4a4b1e63c3fbe00058b8ee0f8c728af
-  languageName: node
-  linkType: hard
-
-"luxon@npm:^3.5.0":
+"luxon@npm:3.5.0, luxon@npm:^3.5.0":
   version: 3.5.0
   resolution: "luxon@npm:3.5.0"
   checksum: 335789bba95077db831ef99894edadeb23023b3eb2137a1b56acd0d290082b691cf793143d69e30bc069ec95f0b49f36419f48e951c68014f19ffe12045e3494
+  languageName: node
+  linkType: hard
+
+"luxon@npm:^3.2.1":
+  version: 3.4.4
+  resolution: "luxon@npm:3.4.4"
+  checksum: 02e26a0b039c11fd5b75e1d734c8f0332c95510f6a514a9a0991023e43fb233884da02d7f966823ffb230632a733fc86d4a4b1e63c3fbe00058b8ee0f8c728af
   languageName: node
   linkType: hard
 
@@ -12615,9 +12615,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.24.1":
-  version: 38.24.1
-  resolution: "renovate@npm:38.24.1"
+"renovate@npm:38.25.0":
+  version: 38.25.0
+  resolution: "renovate@npm:38.25.0"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.621.0"
     "@aws-sdk/client-ec2": "npm:3.621.0"
@@ -12691,7 +12691,7 @@ __metadata:
     jsonata: "npm:2.0.5"
     jsonc-parser: "npm:3.3.1"
     klona: "npm:2.0.6"
-    luxon: "npm:3.4.4"
+    luxon: "npm:3.5.0"
     markdown-it: "npm:14.1.0"
     markdown-table: "npm:2.0.0"
     minimatch: "npm:10.0.1"
@@ -12737,7 +12737,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 765b5441b863db30ac95efa6b3a546b39c3281debaecfed25ef461e51374fda8185876861b2d44b56a7fd35252351dd88e4699b22ec20012414ebf9eabc84c36
+  checksum: f713643fda579d0ef07fbe93ef27952857473a4db2585d55b0a2b14f9881ca4fe3c8e1a8bf58460e8f3a2b96a048c81dab218e99a5eaff9037e06a9295aa5c78
   languageName: node
   linkType: hard
 
