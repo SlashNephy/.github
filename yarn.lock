@@ -3811,7 +3811,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.25.3"
+    renovate: "npm:38.25.4"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -5904,10 +5904,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws4@npm:1.13.0":
-  version: 1.13.0
-  resolution: "aws4@npm:1.13.0"
-  checksum: 4c71398543e432631a226cabafaa138f8070482f99790233840d84847291ec744e739cb18684a68f52125d0e73f82f16f0246d93524ec85167fadb3cf60dfa4f
+"aws4@npm:1.13.1":
+  version: 1.13.1
+  resolution: "aws4@npm:1.13.1"
+  checksum: c40a90b998853b92f9d0198e9992f4a94c81f29b02ca02b75952efaef07ff0660e756c7ebd04ff674edfa36c29406abaa8aad84f23dbc8b362d31979a631d3fe
   languageName: node
   linkType: hard
 
@@ -12615,9 +12615,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.25.3":
-  version: 38.25.3
-  resolution: "renovate@npm:38.25.3"
+"renovate@npm:38.25.4":
+  version: 38.25.4
+  resolution: "renovate@npm:38.25.4"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.621.0"
     "@aws-sdk/client-ec2": "npm:3.621.0"
@@ -12648,7 +12648,7 @@ __metadata:
     agentkeepalive: "npm:4.5.0"
     aggregate-error: "npm:3.1.0"
     auth-header: "npm:1.0.0"
-    aws4: "npm:1.13.0"
+    aws4: "npm:1.13.1"
     azure-devops-node-api: "npm:14.0.1"
     better-sqlite3: "npm:11.1.2"
     bunyan: "npm:1.8.15"
@@ -12737,7 +12737,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 7935363ed6305b0a13b11bb7960bb772a031de0df16cd8c9c13601580530954761c37c3efb5a43b6d3ea98eb25e02788ee0c9eb46246fc767b0722e57107cf96
+  checksum: added0fe507593b22fb7de8eb9cfaa7a57ce48e527ffc05b56adb4ee3fa6b361e36ad52c1792a80e4b9827765e760d2b114954f5f7370d79c4ca591914f77a93
   languageName: node
   linkType: hard
 
