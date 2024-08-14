@@ -3811,7 +3811,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.27.1"
+    renovate: "npm:38.28.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -5927,13 +5927,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-devops-node-api@npm:14.0.1":
-  version: 14.0.1
-  resolution: "azure-devops-node-api@npm:14.0.1"
+"azure-devops-node-api@npm:14.0.2":
+  version: 14.0.2
+  resolution: "azure-devops-node-api@npm:14.0.2"
   dependencies:
     tunnel: "npm:0.0.6"
     typed-rest-client: "npm:^2.0.1"
-  checksum: aa273316e0da4270c8cec57f9882240047194283ff30ef7b10706f49ead5a2440674ccf0bda214f9016a96d9f8da6b4f9dcc26b204c8f1d15f114fb405ac6da8
+  checksum: 1b48bc74a5d195b1f6bf261129efaefbcf48af262c13cb7f719f5eca8a8626be3102ed525ba704626499f4b421e8396982ac74d4d227921147f44db161724485
   languageName: node
   linkType: hard
 
@@ -12615,9 +12615,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.27.1":
-  version: 38.27.1
-  resolution: "renovate@npm:38.27.1"
+"renovate@npm:38.28.2":
+  version: 38.28.2
+  resolution: "renovate@npm:38.28.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.621.0"
     "@aws-sdk/client-ec2": "npm:3.621.0"
@@ -12649,7 +12649,7 @@ __metadata:
     aggregate-error: "npm:3.1.0"
     auth-header: "npm:1.0.0"
     aws4: "npm:1.13.1"
-    azure-devops-node-api: "npm:14.0.1"
+    azure-devops-node-api: "npm:14.0.2"
     better-sqlite3: "npm:11.1.2"
     bunyan: "npm:1.8.15"
     cacache: "npm:18.0.4"
@@ -12737,7 +12737,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 39fc1204c55b019753402c5e56d95fcc702a791ff762f7143701d2e5f746a16dfd7a75387fa8569f95575071f60d7b83597425156813fc8965c5c7cce3cc5e80
+  checksum: e9c30ba61eb49675923dff023592db52fd5d94f6caa23c959d988382bba95670a5fc5ce8cb6ab5114fd7f0d947082eeaa615ce33e516eeedb9074966dab277a4
   languageName: node
   linkType: hard
 
