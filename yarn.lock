@@ -3786,7 +3786,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.84.0"
+    renovate: "npm:38.84.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -6001,14 +6001,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"better-sqlite3@npm:11.2.1":
-  version: 11.2.1
-  resolution: "better-sqlite3@npm:11.2.1"
+"better-sqlite3@npm:11.3.0":
+  version: 11.3.0
+  resolution: "better-sqlite3@npm:11.3.0"
   dependencies:
     bindings: "npm:^1.5.0"
     node-gyp: "npm:latest"
     prebuild-install: "npm:^7.1.1"
-  checksum: bec7a28cb4053f07791f842cb9f2bd34ac694d33a61d0e1421f17a5b7c16eb6c187c5f05250e4dc1510adc096ac70bd9ce077dcb5a5c6992d424b9629c9394f7
+  checksum: 9adc99683300699581da5d7288e4a261b7d4381fd99c762fc6a0e9b1e1e226009c1333b46b10c1c453c356b20cb8be037a4616b1e717b3d1a00bd8493bec506e
   languageName: node
   linkType: hard
 
@@ -12610,9 +12610,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.84.0":
-  version: 38.84.0
-  resolution: "renovate@npm:38.84.0"
+"renovate@npm:38.84.1":
+  version: 38.84.1
+  resolution: "renovate@npm:38.84.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.637.0"
     "@aws-sdk/client-ec2": "npm:3.641.0"
@@ -12647,7 +12647,7 @@ __metadata:
     auth-header: "npm:1.0.0"
     aws4: "npm:1.13.2"
     azure-devops-node-api: "npm:14.0.2"
-    better-sqlite3: "npm:11.2.1"
+    better-sqlite3: "npm:11.3.0"
     bunyan: "npm:1.8.15"
     cacache: "npm:18.0.4"
     chalk: "npm:4.1.2"
@@ -12734,7 +12734,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 6e9d6282c3573bd7a785e374216d912238a578583a3dc84d45ae293a8b21841bd8f84460ee359272705eb14ed197247cee8abcbfcffa16def891a5e8d770e00a
+  checksum: 55dece44169bdc49bfbce180fffb676a55860b4d08177f6c5fc321816c8b984cb0f750bfbb962a6a04cb723c64ad92a66d5865e064cd53c501c6efcf70c22e4e
   languageName: node
   linkType: hard
 
