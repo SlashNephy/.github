@@ -3692,7 +3692,7 @@ __metadata:
     concurrently: "npm:8.2.0"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    rollup: "npm:3.26.3"
+    rollup: "npm:3.29.5"
     typescript: "npm:5.1.6"
   languageName: unknown
   linkType: soft
@@ -12941,9 +12941,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:3.26.3":
-  version: 3.26.3
-  resolution: "rollup@npm:3.26.3"
+"rollup@npm:3.29.5":
+  version: 3.29.5
+  resolution: "rollup@npm:3.29.5"
   dependencies:
     fsevents: "npm:~2.3.2"
   dependenciesMeta:
@@ -12951,7 +12951,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 41d02540dcb125150d2dc4a136e35776290eef489ed0735814afcdcfd3e0a8944cd30875daa872360e4fe8bf75bb4adf41090913a32e636722f43a5d2caf241e
+  checksum: a1fa26f21f0d6cf93b6d05ea284ad5854905b585f28a14c27d439b0f9b859cba13ea25f376303d86770e59b4686bedc52b4706e57442514f0414c6fd3c5b8e71
   languageName: node
   linkType: hard
 
