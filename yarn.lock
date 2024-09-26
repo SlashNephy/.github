@@ -3786,7 +3786,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.96.1"
+    renovate: "npm:38.97.0"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12601,9 +12601,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.96.1":
-  version: 38.96.1
-  resolution: "renovate@npm:38.96.1"
+"renovate@npm:38.97.0":
+  version: 38.97.0
+  resolution: "renovate@npm:38.97.0"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.637.0"
     "@aws-sdk/client-ec2": "npm:3.641.0"
@@ -12703,7 +12703,7 @@ __metadata:
     semver-stable: "npm:3.0.0"
     semver-utils: "npm:1.1.4"
     shlex: "npm:2.1.2"
-    simple-git: "npm:3.26.0"
+    simple-git: "npm:3.27.0"
     slugify: "npm:1.6.6"
     source-map-support: "npm:0.5.21"
     toml-eslint-parser: "npm:0.10.0"
@@ -12725,7 +12725,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 0b17311b3e9735bcbf73ef6124eed6f8fb2085c813fe13a119fa564b57a4002862dc60a088a0fb81d96bebe1b7f819d7d3129079dbc4b7a39c40bb765d2c779c
+  checksum: 94f77913a0a15d26270de20d63cef41c081ccbd9a38766adc6ffb4324cc4532e4d1389c377f214cca95aeb61a2952adace73b0446889d33200889aa8a24173e7
   languageName: node
   linkType: hard
 
@@ -13261,14 +13261,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-git@npm:3.26.0":
-  version: 3.26.0
-  resolution: "simple-git@npm:3.26.0"
+"simple-git@npm:3.27.0":
+  version: 3.27.0
+  resolution: "simple-git@npm:3.27.0"
   dependencies:
     "@kwsites/file-exists": "npm:^1.1.1"
     "@kwsites/promise-deferred": "npm:^1.1.1"
     debug: "npm:^4.3.5"
-  checksum: fa45c9ff26c45aa7390f69610e27c1ae474b3881977828009fe41b7ffe8ce371cc108b818b2153815299deffefed591e9148cfdad92d8ddb60ca29eaefaf5827
+  checksum: ef56cabea585377d3e0ca30e4e93447f465d91f23eaf751693cc31f366b5f7636facf52ad5bcd598bfdf295fa60732e7a394303d378995b52e2d221d92e5f9f4
   languageName: node
   linkType: hard
 
