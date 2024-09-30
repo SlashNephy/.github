@@ -2455,12 +2455,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cdktf/hcl2json@npm:0.20.8":
-  version: 0.20.8
-  resolution: "@cdktf/hcl2json@npm:0.20.8"
+"@cdktf/hcl2json@npm:0.20.9":
+  version: 0.20.9
+  resolution: "@cdktf/hcl2json@npm:0.20.9"
   dependencies:
     fs-extra: "npm:11.2.0"
-  checksum: 9706cb72652fd832e7fbc85a37b8b0503ccdd11994c7930515387cc293c48e36c74bc6b75f54875f0641660648f066cde0d3a82efd3201fcc1c47d0234152af8
+  checksum: 422f42c14275198ebb991902708e35629bd73b0042ec72d2f7710e290516cb481c4e0476f6da142533b99efa92f38b5f4200a1fdf1f020f00554a30e3e675735
   languageName: node
   linkType: hard
 
@@ -3786,7 +3786,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.103.0"
+    renovate: "npm:38.103.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12601,9 +12601,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.103.0":
-  version: 38.103.0
-  resolution: "renovate@npm:38.103.0"
+"renovate@npm:38.103.1":
+  version: 38.103.1
+  resolution: "renovate@npm:38.103.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.637.0"
     "@aws-sdk/client-ec2": "npm:3.641.0"
@@ -12612,7 +12612,7 @@ __metadata:
     "@aws-sdk/client-s3": "npm:3.637.0"
     "@aws-sdk/credential-providers": "npm:3.637.0"
     "@breejs/later": "npm:4.2.0"
-    "@cdktf/hcl2json": "npm:0.20.8"
+    "@cdktf/hcl2json": "npm:0.20.9"
     "@opentelemetry/api": "npm:1.9.0"
     "@opentelemetry/context-async-hooks": "npm:1.26.0"
     "@opentelemetry/exporter-trace-otlp-http": "npm:0.53.0"
@@ -12725,7 +12725,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: d50fc44f49255585d410b3abf50f64106faf58c087a4070621078282ecfedef19d41735c8a6da6009a59e02e0536565b7e870e60c5fe07a321b5b458dd1e408c
+  checksum: bf946127395c17c3922909ad7139bde9b8e653d66b470e7b37d267e142cdbdf6f9b2b92f4d13d03be9a81ccee5ddd6562fe42d840786ea2fcf9acce26ad60e7c
   languageName: node
   linkType: hard
 
