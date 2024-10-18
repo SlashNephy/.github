@@ -3690,7 +3690,7 @@ __metadata:
     "@slashnephy/eslint-config": "npm:2.1.3"
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@types/babel__core": "npm:7.20.1"
-    "@types/babel__preset-env": "npm:7.9.2"
+    "@types/babel__preset-env": "npm:7.9.7"
     concurrently: "npm:8.2.0"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
@@ -4862,10 +4862,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__preset-env@npm:7.9.2":
-  version: 7.9.2
-  resolution: "@types/babel__preset-env@npm:7.9.2"
-  checksum: 89d389de7fb2b4be8f43b021899b1fd8bdc85e912cc01b1b5a2504b033ada58b034d44131561c56ab6781c31913a21b769d33a05b549549bbc49bb92537e2dfb
+"@types/babel__preset-env@npm:7.9.7":
+  version: 7.9.7
+  resolution: "@types/babel__preset-env@npm:7.9.7"
+  checksum: e1da078fee75841af512c7084e66f8a2b9136d72185d72c85c6fb41697358d330d195896d7d22834fca92fad1f16a8c0fb6269e890f9e6842c9a9972313b7baa
   languageName: node
   linkType: hard
 
