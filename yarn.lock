@@ -3695,7 +3695,7 @@ __metadata:
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
     rollup: "npm:3.26.3"
-    typescript: "npm:5.1.6"
+    typescript: "npm:5.6.3"
   languageName: unknown
   linkType: soft
 
@@ -3761,7 +3761,7 @@ __metadata:
     concurrently: "npm:8.2.0"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    typescript: "npm:5.1.6"
+    typescript: "npm:5.6.3"
   peerDependencies:
     jest: ^29
   languageName: unknown
@@ -3790,7 +3790,7 @@ __metadata:
     prettier: "npm:3.0.0"
     renovate: "npm:38.127.0"
     ts-node: "npm:10.9.1"
-    typescript: "npm:5.1.6"
+    typescript: "npm:5.6.3"
   languageName: unknown
   linkType: soft
 
@@ -3804,7 +3804,7 @@ __metadata:
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
     sass: "npm:1.64.1"
-    typescript: "npm:5.1.6"
+    typescript: "npm:5.6.3"
   languageName: unknown
   linkType: soft
 
@@ -3821,7 +3821,7 @@ __metadata:
     stylelint: "npm:15.10.2"
     stylelint-config-property-sort-order-smacss: "npm:10.0.0"
     stylelint-config-recommended: "npm:14.0.1"
-    typescript: "npm:5.1.6"
+    typescript: "npm:5.6.3"
   peerDependencies:
     stylelint: ^15
   languageName: unknown
@@ -3843,7 +3843,7 @@ __metadata:
     textlint-rule-preset-ja-spacing: "npm:2.4.3"
     textlint-rule-preset-ja-technical-writing: "npm:8.0.0"
     textlint-rule-preset-jtf-style: "npm:2.3.14"
-    typescript: "npm:5.1.6"
+    typescript: "npm:5.6.3"
   peerDependencies:
     textlint: ^13
   languageName: unknown
@@ -3860,7 +3860,7 @@ __metadata:
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
     ts-node: "npm:10.9.1"
-    typescript: "npm:5.1.6"
+    typescript: "npm:5.6.3"
   peerDependencies:
     typescript: ^5
   languageName: unknown
@@ -14735,16 +14735,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.1.6":
-  version: 5.1.6
-  resolution: "typescript@npm:5.1.6"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 45ac28e2df8365fd28dac42f5d62edfe69a7203d5ec646732cadc04065331f34f9078f81f150fde42ed9754eed6fa3b06a8f3523c40b821e557b727f1992e025
-  languageName: node
-  linkType: hard
-
 "typescript@npm:5.3.3":
   version: 5.3.3
   resolution: "typescript@npm:5.3.3"
@@ -14755,13 +14745,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>":
-  version: 5.1.6
-  resolution: "typescript@patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"
+"typescript@npm:5.6.3":
+  version: 5.6.3
+  resolution: "typescript@npm:5.6.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: c2bded58ab897a8341fdbb0c1d92ea2362f498cfffebdc8a529d03e15ea2454142dfbf122dabbd9a5cb79b7123790d27def16e11844887d20636226773ed329a
+  checksum: 44f61d3fb15c35359bc60399cb8127c30bae554cd555b8e2b46d68fa79d680354b83320ad419ff1b81a0bdf324197b29affe6cc28988cd6a74d4ac60c94f9799
   languageName: node
   linkType: hard
 
@@ -14772,6 +14762,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>":
+  version: 5.6.3
+  resolution: "typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=e012d7"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: ac8307bb06bbfd08ae7137da740769b7d8c3ee5943188743bb622c621f8ad61d244767480f90fbd840277fbf152d8932aa20c33f867dea1bb5e79b187ca1a92f
   languageName: node
   linkType: hard
 
