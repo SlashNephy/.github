@@ -19,6 +19,11 @@
   # https://start.1password.com/open/i?a=DRJGM4CPEZHWLPPN46N7O5U5HM&v=irzmprmnwbyejlntq4xfqjxqzu&i=m4zibueuwvwpcvfh7gwzbtd4ly&h=my.1password.com
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIH3GPB5bgJDJOj4bRVsBIsYXWBiwqFQF/SiXwr2Pz7N
 
+[credential "https://github.com"]
+	username = SlashNephy
+[credential "https://huggingface.co"]
+  provider = generic
+
 [alias]
   current-branch-name = !git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'
   force-pull = !git fetch && git reset --hard origin/$(git current-branch)

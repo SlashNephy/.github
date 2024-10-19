@@ -2,4 +2,8 @@
 memory=8GB
 swap=0
 localhostForwarding=true
-guiApplications=true
+guiApplications=false
+dnsTunneling=true
+
+[experimental]
+autoMemoryReclaim=gradual
