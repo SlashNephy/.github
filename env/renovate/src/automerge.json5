@@ -36,16 +36,6 @@
       stabilityDays: 0,
       automergeSchedule: ['at any time'],
     },
-    // テスト無視
-    {
-      automerge: true,
-      matchDepNames: [
-        // '@slashnephy/eslint-config',
-        '@slashnephy/prettier-config',
-        '@slashnephy/typescript-extension',
-      ],
-      ignoreTests: true,
-    },
     // テスト後マージ
     {
       automerge: true,

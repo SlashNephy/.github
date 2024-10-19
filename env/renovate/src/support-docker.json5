@@ -2,12 +2,6 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'Support Docker',
   extends: ['regexManagers:dockerfileVersions'],
-  docker: {
-    pinDigests: true,
-  },
-  'docker-compose': {
-    pinDigests: true,
-  },
   hostRules: [
     {
       hostType: 'docker',
