@@ -5,10 +5,10 @@
   hostRules: [
     {
       hostType: 'docker',
-      matchHost: 'https://ghcr.io',
+      matchHost: 'ghcr.io',
       username: 'starrybluesky-bot',
       // https://developer.mend.io/github/SlashNephy/-/settings
-      token: '{{ secrets.RENOVATE_GITHUB_TOKEN }}',
+      password: '{{ secrets.RENOVATE_GITHUB_TOKEN }}',
     },
   ],
 }
