@@ -3055,16 +3055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/api-logs@npm:0.53.0, @opentelemetry/api-logs@npm:^0.53.0":
-  version: 0.53.0
-  resolution: "@opentelemetry/api-logs@npm:0.53.0"
-  dependencies:
-    "@opentelemetry/api": "npm:^1.0.0"
-  checksum: 969ad3bbb74e3de6fdfe8eb9b3ab86d3dc284ca7bffd0ca67eef64efd08c97a4305696afe0b7b03e5d356f15d0a1a67ac517e5fa7d1ddee6fdc249eef2209fcb
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/api-logs@npm:0.54.0":
+"@opentelemetry/api-logs@npm:0.54.0, @opentelemetry/api-logs@npm:^0.54.0":
   version: 0.54.0
   resolution: "@opentelemetry/api-logs@npm:0.54.0"
   dependencies:
@@ -3077,13 +3068,6 @@ __metadata:
   version: 1.9.0
   resolution: "@opentelemetry/api@npm:1.9.0"
   checksum: 9aae2fe6e8a3a3eeb6c1fdef78e1939cf05a0f37f8a4fae4d6bf2e09eb1e06f966ece85805626e01ba5fab48072b94f19b835449e58b6d26720ee19a58298add
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/api@npm:^1.0.0":
-  version: 1.8.0
-  resolution: "@opentelemetry/api@npm:1.8.0"
-  checksum: 66d5504bfbf9c19a14ea549f5fca975a73a5e1e8a1e40a6dc2d662893c942b9ba66c009262816dee2b9ffd0267acd707ec692eba20db11a09d4ee114c00dc161
   languageName: node
   linkType: hard
 
@@ -3122,16 +3106,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/instrumentation-bunyan@npm:0.41.0":
-  version: 0.41.0
-  resolution: "@opentelemetry/instrumentation-bunyan@npm:0.41.0"
+"@opentelemetry/instrumentation-bunyan@npm:0.42.0":
+  version: 0.42.0
+  resolution: "@opentelemetry/instrumentation-bunyan@npm:0.42.0"
   dependencies:
-    "@opentelemetry/api-logs": "npm:^0.53.0"
-    "@opentelemetry/instrumentation": "npm:^0.53.0"
+    "@opentelemetry/api-logs": "npm:^0.54.0"
+    "@opentelemetry/instrumentation": "npm:^0.54.0"
     "@types/bunyan": "npm:1.8.9"
   peerDependencies:
     "@opentelemetry/api": ^1.3.0
-  checksum: 5306094b76c09ea0127e5f201c00c3059f7cc76a3a200fca24eb73adf1d61a02ed0a02a1f234a8018a6525a4b2bff4ff75fc3a78dabc6f9df468b5fb035658fc
+  checksum: d1cedb416e08e561a01a481a489475396e3cc08aa825802ee88d230a01635744dc30eb0ae2eed7363ed7ea7dff9e9975437396575ee70a4be1726c99f5df2a69
   languageName: node
   linkType: hard
 
@@ -3150,7 +3134,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/instrumentation@npm:0.54.0":
+"@opentelemetry/instrumentation@npm:0.54.0, @opentelemetry/instrumentation@npm:^0.54.0":
   version: 0.54.0
   resolution: "@opentelemetry/instrumentation@npm:0.54.0"
   dependencies:
@@ -3163,22 +3147,6 @@ __metadata:
   peerDependencies:
     "@opentelemetry/api": ^1.3.0
   checksum: 3b80aac8bb64c53c91926b6b19cacea27b98ac3ababa2b36cf02451b168094d0894ef4682ddbd680117c1f748fd0104750a1e0e924f3ef4bcb9e9e1cad37a141
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/instrumentation@npm:^0.53.0":
-  version: 0.53.0
-  resolution: "@opentelemetry/instrumentation@npm:0.53.0"
-  dependencies:
-    "@opentelemetry/api-logs": "npm:0.53.0"
-    "@types/shimmer": "npm:^1.2.0"
-    import-in-the-middle: "npm:^1.8.1"
-    require-in-the-middle: "npm:^7.1.1"
-    semver: "npm:^7.5.2"
-    shimmer: "npm:^1.2.1"
-  peerDependencies:
-    "@opentelemetry/api": ^1.3.0
-  checksum: 943e289926812272cb77cda5e0a6b662bc6a92812b66420ceeca1c764f2e3a13364f6bbed7c9e84a17ad677474101ea3c598ef6a6cca982c35bfd24be6f6a25e
   languageName: node
   linkType: hard
 
@@ -3814,7 +3782,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:38.142.1"
+    renovate: "npm:38.142.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12656,9 +12624,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:38.142.1":
-  version: 38.142.1
-  resolution: "renovate@npm:38.142.1"
+"renovate@npm:38.142.2":
+  version: 38.142.2
+  resolution: "renovate@npm:38.142.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.658.1"
     "@aws-sdk/client-ec2": "npm:3.658.1"
@@ -12672,7 +12640,7 @@ __metadata:
     "@opentelemetry/context-async-hooks": "npm:1.27.0"
     "@opentelemetry/exporter-trace-otlp-http": "npm:0.54.0"
     "@opentelemetry/instrumentation": "npm:0.54.0"
-    "@opentelemetry/instrumentation-bunyan": "npm:0.41.0"
+    "@opentelemetry/instrumentation-bunyan": "npm:0.42.0"
     "@opentelemetry/instrumentation-http": "npm:0.54.0"
     "@opentelemetry/resources": "npm:1.27.0"
     "@opentelemetry/sdk-trace-base": "npm:1.27.0"
@@ -12781,7 +12749,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 4035b9c88ef573e14a0cf328f8773342a1e1496ea96ee765acdd0e4132b14f1e8ee74ca18e0de4f964b3215ea25e3772ca965a8719b927e0f52dcfa89a9ae42a
+  checksum: 8e709f7449bcf004b21ce5da2b35757dd9f53f1c827412e34e4473e1d206d31799ea4653c9350694a5e15304e6002f8a707f8ec0e46e7767e1e3509543c02c8f
   languageName: node
   linkType: hard
 
