@@ -7,3 +7,5 @@ dnsTunneling=true
 
 [experimental]
 autoMemoryReclaim=gradual
+bestEffortDnsParsing=true
+sparseVhd=true
