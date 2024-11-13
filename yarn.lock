@@ -3554,9 +3554,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/kbpgp@npm:3.0.2":
-  version: 3.0.2
-  resolution: "@renovatebot/kbpgp@npm:3.0.2"
+"@renovatebot/kbpgp@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@renovatebot/kbpgp@npm:4.0.0"
   dependencies:
     bzip-deflate: "npm:^1.0.0"
     iced-error: "npm:0.0.13"
@@ -3569,7 +3569,7 @@ __metadata:
     purepack: "npm:^1.0.6"
     triplesec: "npm:^4.0.3"
     tweetnacl: "npm:^1.0.3"
-  checksum: a0fa5ba9a32d4b79a14b6cd935fddb7a45bb0721baa6cd235e63126262a31cc5df7e62e67b8f1e973c9f2f6cea2498c8fdb38995f087f1bb969c276a24247e23
+  checksum: e836e8db47b3e3fc12dc21bd8274e1101fc415da74865fa1ffcef1e899e8c71807fa09eaff76e40c7ca95142766d2668e5bbe1b51952551d30555e0db394acb0
   languageName: node
   linkType: hard
 
@@ -3604,10 +3604,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/ruby-semver@npm:3.1.1":
-  version: 3.1.1
-  resolution: "@renovatebot/ruby-semver@npm:3.1.1"
-  checksum: cdfd9df2bff8cf3e7519296cd9c04d547c0b8a9ce1a6f1362e0793d29d9947fd0852d91f9974cd35eb41819a54bfa96ab7bf9f5d51cb925b7e29b4d7a3a37637
+"@renovatebot/ruby-semver@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@renovatebot/ruby-semver@npm:4.0.0"
+  checksum: 2cb41075578856f8688b5a977118dc5622df70116d9fcc1749613a3daf34a5b3c6cf8378845d318aff4d3397f05252892d99b46a7a9d4a6d249452919287a86d
   languageName: node
   linkType: hard
 
@@ -3821,7 +3821,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.11.5"
+    renovate: "npm:39.11.6"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12692,9 +12692,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.11.5":
-  version: 39.11.5
-  resolution: "renovate@npm:39.11.5"
+"renovate@npm:39.11.6":
+  version: 39.11.6
+  resolution: "renovate@npm:39.11.6"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.687.0"
     "@aws-sdk/client-ec2": "npm:3.687.0"
@@ -12716,10 +12716,10 @@ __metadata:
     "@opentelemetry/semantic-conventions": "npm:1.27.0"
     "@qnighy/marshal": "npm:0.1.3"
     "@renovatebot/detect-tools": "npm:1.1.0"
-    "@renovatebot/kbpgp": "npm:3.0.2"
+    "@renovatebot/kbpgp": "npm:4.0.0"
     "@renovatebot/osv-offline": "npm:1.5.10"
     "@renovatebot/pep440": "npm:3.1.0"
-    "@renovatebot/ruby-semver": "npm:3.1.1"
+    "@renovatebot/ruby-semver": "npm:4.0.0"
     "@sindresorhus/is": "npm:4.6.0"
     "@yarnpkg/core": "npm:4.1.4"
     "@yarnpkg/parsers": "npm:3.0.2"
@@ -12817,7 +12817,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 5e0a13f0bd14d649ee0abd873422124b91828f7dd014a8f9d1fda3b203a305f44a115b15ee23d09bd2f5be98410a085f75b9107d3e4929ed592ee50e5e1f49a9
+  checksum: f56c9926ea41bba8d3ab2cde7fe50c6f44c24e550073815e7a20487a5335cd5e04e17e732528456479bd5434c36792b5531a70c1113c4413011fa76dedf5ef81
   languageName: node
   linkType: hard
 
