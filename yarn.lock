@@ -3821,7 +3821,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.13.1"
+    renovate: "npm:39.15.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -5913,18 +5913,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"asn1.js@npm:^5.0.0":
-  version: 5.4.1
-  resolution: "asn1.js@npm:5.4.1"
-  dependencies:
-    bn.js: "npm:^4.0.0"
-    inherits: "npm:^2.0.1"
-    minimalistic-assert: "npm:^1.0.0"
-    safer-buffer: "npm:^2.1.0"
-  checksum: b577232fa6069cc52bb128e564002c62b2b1fe47f7137bdcd709c0b8495aa79cee0f8cc458a831b2d8675900eea0d05781b006be5e1aa4f0ae3577a73ec20324
-  languageName: node
-  linkType: hard
-
 "assign-symbols@npm:^1.0.0":
   version: 1.0.0
   resolution: "assign-symbols@npm:1.0.0"
@@ -6151,13 +6139,6 @@ __metadata:
     inherits: "npm:^2.0.4"
     readable-stream: "npm:^3.4.0"
   checksum: 02847e1d2cb089c9dc6958add42e3cdeaf07d13f575973963335ac0fdece563a50ac770ac4c8fa06492d2dd276f6cc3b7f08c7cd9c7a7ad0f8d388b2a28def5f
-  languageName: node
-  linkType: hard
-
-"bn.js@npm:^4.0.0":
-  version: 4.12.0
-  resolution: "bn.js@npm:4.12.0"
-  checksum: 9736aaa317421b6b3ed038ff3d4491935a01419ac2d83ddcfebc5717385295fcfcf0c57311d90fe49926d0abbd7a9dbefdd8861e6129939177f7e67ebc645b21
   languageName: node
   linkType: hard
 
@@ -11631,12 +11612,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"openpgp@npm:5.11.2":
-  version: 5.11.2
-  resolution: "openpgp@npm:5.11.2"
-  dependencies:
-    asn1.js: "npm:^5.0.0"
-  checksum: e16141ef507789b080e2b8c94a3081773ca27cf4782a23d4dbcf80cc6394c8ff1d4d64e072c82fd59c81eedc20c57fdbaca109974733a6e0316d869aa8d7fd27
+"openpgp@npm:6.0.0":
+  version: 6.0.0
+  resolution: "openpgp@npm:6.0.0"
+  checksum: 5fcf3417cf437e33c8263b62957f11653095c391ec3507220459c6063b9e21cec357fb58e8fbb405fa2c7cff6d03c08760242a3a6c852d4c05f9455fa266c5f2
   languageName: node
   linkType: hard
 
@@ -12692,9 +12671,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.13.1":
-  version: 39.13.1
-  resolution: "renovate@npm:39.13.1"
+"renovate@npm:39.15.1":
+  version: 39.15.1
+  resolution: "renovate@npm:39.15.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.687.0"
     "@aws-sdk/client-ec2": "npm:3.687.0"
@@ -12778,7 +12757,7 @@ __metadata:
     nanoid: "npm:3.3.7"
     neotraverse: "npm:0.6.18"
     node-html-parser: "npm:6.1.13"
-    openpgp: "npm:5.11.2"
+    openpgp: "npm:6.0.0"
     p-all: "npm:3.0.0"
     p-map: "npm:4.0.0"
     p-queue: "npm:6.6.2"
@@ -12818,7 +12797,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 3b51b8947d5be0433abca2a3f601649cc1b13a7104d27657eb4915e15612634ea72d8e5775094017c3ace4842d271eeabb79e30adc4e6d3ab20c11fab1520846
+  checksum: 88fa48c9251e7c4df8c42393af3d2e33406cfe48d86c1895db24a473771af479c47e2649af4febf83c361ea12bcaa6d4374b3aab12e4fae1636c356f183ad9fd
   languageName: node
   linkType: hard
 
@@ -13126,7 +13105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safer-buffer@npm:>= 2.1.2 < 3.0.0, safer-buffer@npm:^2.1.0":
+"safer-buffer@npm:>= 2.1.2 < 3.0.0":
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: 7e3c8b2e88a1841c9671094bbaeebd94448111dd90a81a1f606f3f67708a6ec57763b3b47f06da09fc6054193e0e6709e77325415dc8422b04497a8070fa02d4
