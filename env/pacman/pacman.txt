@@ -64,6 +64,7 @@ tree
 unhide
 which
 wol
+xdp-tools
 yay
 zplug
 zsh
