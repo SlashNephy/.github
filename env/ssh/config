@@ -1,12 +1,6 @@
 Host github.com
   User git
 
-Host lily.starry.blue
-  User spica
-
-Host lily.spotted-halfmoon.ts.net bbc.spotted-halfmoon.ts.net
-  User spica
-
 Host *
   ServerAliveInterval 30
 
