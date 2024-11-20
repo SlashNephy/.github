@@ -5,9 +5,7 @@ if [ -f "/opt/homebrew/bin/brew" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-HOMEBREW_PREFIX=$(brew --prefix)
-export HOMEBREW_PREFIX
-
+export HOMEBREW_PREFIX=$(brew --prefix)
 for script in "$ENV_DIR"/zsh/macos/**/*.zsh; do
   # shellcheck disable=SC1090
   source "$script"

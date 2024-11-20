@@ -1,2 +1,2 @@
 # brew install coreutils
-PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"

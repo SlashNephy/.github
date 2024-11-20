@@ -1,4 +1,3 @@
-ZPLUG_HOME="$HOME/.zplug"
-export ZPLUG_HOME
+export ZPLUG_HOME="$HOME/.zplug"
 
 source "/usr/share/zplug/init.zsh"

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-/opt/homebrew/bin/brew bundle dump --global --no-restart --mas --all --force --describe
+/opt/homebrew/bin/brew bundle dump --global --force --no-restart --all --describe
