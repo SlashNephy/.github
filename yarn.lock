@@ -3822,7 +3822,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.36.1"
+    renovate: "npm:39.37.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11709,10 +11709,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"openpgp@npm:6.0.0":
-  version: 6.0.0
-  resolution: "openpgp@npm:6.0.0"
-  checksum: 5fcf3417cf437e33c8263b62957f11653095c391ec3507220459c6063b9e21cec357fb58e8fbb405fa2c7cff6d03c08760242a3a6c852d4c05f9455fa266c5f2
+"openpgp@npm:6.0.1":
+  version: 6.0.1
+  resolution: "openpgp@npm:6.0.1"
+  checksum: 1de9f745a1499830c4fc6800feeb416482829981b9bbd8cfdd56fc231eef341aaa9d6b3cdea7d53a002b8b455a6f45eb970cf8d2ee5839822561573232de4564
   languageName: node
   linkType: hard
 
@@ -12786,9 +12786,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.36.1":
-  version: 39.36.1
-  resolution: "renovate@npm:39.36.1"
+"renovate@npm:39.37.1":
+  version: 39.37.1
+  resolution: "renovate@npm:39.37.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.687.0"
     "@aws-sdk/client-ec2": "npm:3.687.0"
@@ -12872,7 +12872,7 @@ __metadata:
     nanoid: "npm:3.3.7"
     neotraverse: "npm:0.6.18"
     node-html-parser: "npm:6.1.13"
-    openpgp: "npm:6.0.0"
+    openpgp: "npm:6.0.1"
     p-all: "npm:3.0.0"
     p-map: "npm:4.0.0"
     p-queue: "npm:6.6.2"
@@ -12912,7 +12912,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: c28db5b3aa6c6ee19d81e7508b72287ea4b4f6f11331e75641df138a7cb93704c569362b67e1be17fe3bed802e658e76dd743696bcb991a40efc83f53b5fc213
+  checksum: 729b9a99323ee4dc77c9315744affb70f786a9ad49b1aa8de501dc4f4fdd29d767add220322b1d0e39b976bfac7c2653bb172821ae34f9a04dfae5abddfd8968
   languageName: node
   linkType: hard
 
