@@ -66,6 +66,8 @@ brew "fb303"
 brew "edencommon"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GNU awk utility
 brew "gawk"
 # GNU compiler collection
@@ -111,7 +113,7 @@ brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
 # Generic library support script
-brew "libtool", link: false
+brew "libtool"
 # Utility to list open files
 brew "lsof"
 # Just-In-Time Compiler (JIT) for the Lua programming language
