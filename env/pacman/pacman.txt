@@ -14,6 +14,7 @@ fakeroot
 fuse2
 git
 glibc
+go
 groff
 helm
 htop
