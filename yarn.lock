@@ -3847,7 +3847,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.72.0"
+    renovate: "npm:39.72.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -7331,17 +7331,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emojibase-regex@npm:15.3.2":
-  version: 15.3.2
-  resolution: "emojibase-regex@npm:15.3.2"
-  checksum: 9500690ef4df9b6bee6039579d2bd324cca347ba55d34ffd9d1a3fc55a1dc78fe261f2282d803a0c945fd90943e32f05d6a7822e5bdeebb48b8432c370947daa
+"emojibase-regex@npm:16.0.0":
+  version: 16.0.0
+  resolution: "emojibase-regex@npm:16.0.0"
+  checksum: 8ee5ff798e51caa581434b1cb2f9737e50195093c4efa1739df21a50a5496f80517924787d865e8cf7d6a0b4c90dbedc04bdc506dcbcc582e14cdf0bb47af0f0
   languageName: node
   linkType: hard
 
-"emojibase@npm:15.3.1":
-  version: 15.3.1
-  resolution: "emojibase@npm:15.3.1"
-  checksum: 9ea27ef8f67a1797d1db4e58a5630a288dd13a015ff8d6b88f3d30ce64c95a7132a9e2c9e6b1566815968f05320facb4d023b62645a095c29a846fee6f7a15e9
+"emojibase@npm:16.0.0":
+  version: 16.0.0
+  resolution: "emojibase@npm:16.0.0"
+  checksum: ec49ca2e131d349fa1f1dbe6ee8a6bf12da6225ce2de99d488e67a3cb80ac282f27aa480f0a7062c0c069c24508684ba524418be56b475cbd937877663686c47
   languageName: node
   linkType: hard
 
@@ -12745,9 +12745,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.72.0":
-  version: 39.72.0
-  resolution: "renovate@npm:39.72.0"
+"renovate@npm:39.72.1":
+  version: 39.72.1
+  resolution: "renovate@npm:39.72.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.699.0"
     "@aws-sdk/client-ec2": "npm:3.701.0"
@@ -12799,8 +12799,8 @@ __metadata:
     editorconfig: "npm:2.0.0"
     email-addresses: "npm:5.0.0"
     emoji-regex: "npm:10.4.0"
-    emojibase: "npm:15.3.1"
-    emojibase-regex: "npm:15.3.2"
+    emojibase: "npm:16.0.0"
+    emojibase-regex: "npm:16.0.0"
     extract-zip: "npm:2.0.1"
     find-packages: "npm:10.0.4"
     find-up: "npm:5.0.0"
@@ -12860,7 +12860,7 @@ __metadata:
     vuln-vects: "npm:1.1.0"
     xmldoc: "npm:1.3.0"
     yaml: "npm:2.6.1"
-    zod: "npm:3.23.8"
+    zod: "npm:3.24.0"
   dependenciesMeta:
     better-sqlite3:
       optional: true
@@ -12871,7 +12871,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: af6b9e959db4e4657e3bc789c1556f74d32366b6fa43658608631b71d1704407f3fa9bf318d112f2ddf96844d5881593ec50c2bebc66eddc9696ec5b3d0332b5
+  checksum: e1123d50ea02840c593b012e4c5d9f6eb2cf78494edf3cb89db4909d5835f04d02c9167b43c56409fd5131b35b905139e7006f93cf23752dd7ddecb1a2ac96b2
   languageName: node
   linkType: hard
 
@@ -15693,7 +15693,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:3.23.8, zod@npm:^3.23.0":
+"zod@npm:3.24.0":
+  version: 3.24.0
+  resolution: "zod@npm:3.24.0"
+  checksum: 2f03f36fdaefbb67f5a67c1b03645096b842be4dd488de400809c75835359cf94c81a98704f48bf23685e45cf73ae799c649c44bd8e023c326bd8b9537f65d5b
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.23.0":
   version: 3.23.8
   resolution: "zod@npm:3.23.8"
   checksum: 8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69
