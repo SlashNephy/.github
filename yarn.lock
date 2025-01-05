@@ -3815,7 +3815,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.90.4"
+    renovate: "npm:39.90.5"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -5577,12 +5577,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"agentkeepalive@npm:4.5.0":
-  version: 4.5.0
-  resolution: "agentkeepalive@npm:4.5.0"
+"agentkeepalive@npm:4.6.0":
+  version: 4.6.0
+  resolution: "agentkeepalive@npm:4.6.0"
   dependencies:
     humanize-ms: "npm:^1.2.1"
-  checksum: 394ea19f9710f230722996e156607f48fdf3a345133b0b1823244b7989426c16019a428b56c82d3eabef616e938812981d9009f4792ecc66bd6a59e991c62612
+  checksum: 235c182432f75046835b05f239708107138a40103deee23b6a08caee5136873709155753b394ec212e49e60e94a378189562cb01347765515cff61b692c69187
   languageName: node
   linkType: hard
 
@@ -12713,9 +12713,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.90.4":
-  version: 39.90.4
-  resolution: "renovate@npm:39.90.4"
+"renovate@npm:39.90.5":
+  version: 39.90.5
+  resolution: "renovate@npm:39.90.5"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.716.0"
     "@aws-sdk/client-ec2": "npm:3.716.0"
@@ -12744,7 +12744,7 @@ __metadata:
     "@sindresorhus/is": "npm:4.6.0"
     "@yarnpkg/core": "npm:4.1.6"
     "@yarnpkg/parsers": "npm:3.0.2"
-    agentkeepalive: "npm:4.5.0"
+    agentkeepalive: "npm:4.6.0"
     aggregate-error: "npm:3.1.0"
     async-mutex: "npm:0.5.0"
     auth-header: "npm:1.0.0"
@@ -12839,7 +12839,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 234904ac2dee704a90d679467f098b75b60bfc99e1e1f0a082335f01d28919c5f58a6ea643b07305f212fdb0394d0c95ac567defc4dae30c46822d3584327786
+  checksum: d3467d1f613ab125a8bed87042bce35da779451d16ba6c1fb36c53101c12caa795ee957cff3c40411ffb6d7fcbcd92f7a6a6b884a9dac0d04c11e73f91db4df0
   languageName: node
   linkType: hard
 
