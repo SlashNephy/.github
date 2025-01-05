@@ -1,6 +1,6 @@
+7zip
 base
 base-devel
-bpftune-git
 clamav
 clamav-unofficial-sigs
 cni-plugins
@@ -47,7 +47,6 @@ net-tools
 networkd-dispatcher
 ookla-speedtest-bin
 openssh
-p7zip
 preload
 progress
 samba
