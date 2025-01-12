@@ -3815,7 +3815,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.104.3"
+    renovate: "npm:39.105.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11443,13 +11443,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-html-parser@npm:6.1.13":
-  version: 6.1.13
-  resolution: "node-html-parser@npm:6.1.13"
+"node-html-parser@npm:7.0.1":
+  version: 7.0.1
+  resolution: "node-html-parser@npm:7.0.1"
   dependencies:
     css-select: "npm:^5.1.0"
     he: "npm:1.2.0"
-  checksum: ca36290507da8ec0fa131a0fd67ba62e300365c3950b5a6058b0e32b71b520ff43a5661b19e98a5c9797dbe3428b08db788b602f1f8aa62f2db5bb66e1d80782
+  checksum: 70a4d6db83340e1c93be3c9d28b924e8a2d8c53e085805d9a4916132c56e76e105fedc2201682ff20e0af0468893d0f77ecaa69865b78206b02982d0b4a649a4
   languageName: node
   linkType: hard
 
@@ -12713,9 +12713,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.104.3":
-  version: 39.104.3
-  resolution: "renovate@npm:39.104.3"
+"renovate@npm:39.105.1":
+  version: 39.105.1
+  resolution: "renovate@npm:39.105.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.726.1"
     "@aws-sdk/client-ec2": "npm:3.726.1"
@@ -12798,7 +12798,7 @@ __metadata:
     ms: "npm:2.1.3"
     nanoid: "npm:3.3.8"
     neotraverse: "npm:0.6.18"
-    node-html-parser: "npm:6.1.13"
+    node-html-parser: "npm:7.0.1"
     openpgp: "npm:6.0.1"
     p-all: "npm:3.0.0"
     p-map: "npm:4.0.0"
@@ -12839,7 +12839,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 14d8ac885d418c7b9e012ab5c630b76c5d0352987dc07d64fcb183380414a3d90ad99b637f57b5a810f5c6e70da746b5226b165a6628cb853121e8e721f8616c
+  checksum: 3096774976daa54485abe5c6c730952f7244eaf639022f9902f70007d1d1633886c7d481c75f3ebbf09e58bea933a36ab9e7f8d8acb227a829e7fb97dd12634b
   languageName: node
   linkType: hard
 
