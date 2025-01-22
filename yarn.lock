@@ -3601,18 +3601,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@renovatebot/osv-offline@npm:1.5.11":
-  version: 1.5.11
-  resolution: "@renovatebot/osv-offline@npm:1.5.11"
+"@renovatebot/osv-offline@npm:1.5.12":
+  version: 1.5.12
+  resolution: "@renovatebot/osv-offline@npm:1.5.12"
   dependencies:
     "@octokit/rest": "npm:^20.1.1"
     "@renovatebot/osv-offline-db": "npm:1.7.0"
     adm-zip: "npm:~0.5.16"
-    fs-extra: "npm:^11.2.0"
+    fs-extra: "npm:^11.3.0"
     got: "npm:^11.8.6"
     luxon: "npm:^3.5.0"
     node-fetch: "npm:^2.7.0"
-  checksum: 564fcaeb40e0f182cfb6eb6f88a50f3c3d9ba6f8f366a731a7eff83b8dde0637bc20ddbdcc6120923322aae24f2f1ef6817372b5737c9bade846c92681a6d662
+  checksum: cda14c5c0d4346262d097c0f432fe9523e95ec68deceef5aaad98600f67763f79e338606e63bdd2d39bbcfa673d99b7c0e43b7bca9e30f38aea9cb3027d1747e
   languageName: node
   linkType: hard
 
@@ -3840,7 +3840,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.122.2"
+    renovate: "npm:39.122.3"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -8641,7 +8641,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:11.3.0":
+"fs-extra@npm:11.3.0, fs-extra@npm:^11.3.0":
   version: 11.3.0
   resolution: "fs-extra@npm:11.3.0"
   dependencies:
@@ -12749,9 +12749,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.122.2":
-  version: 39.122.2
-  resolution: "renovate@npm:39.122.2"
+"renovate@npm:39.122.3":
+  version: 39.122.3
+  resolution: "renovate@npm:39.122.3"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.726.1"
     "@aws-sdk/client-ec2": "npm:3.726.1"
@@ -12774,7 +12774,7 @@ __metadata:
     "@qnighy/marshal": "npm:0.1.3"
     "@renovatebot/detect-tools": "npm:1.1.0"
     "@renovatebot/kbpgp": "npm:4.0.1"
-    "@renovatebot/osv-offline": "npm:1.5.11"
+    "@renovatebot/osv-offline": "npm:1.5.12"
     "@renovatebot/pep440": "npm:4.0.1"
     "@renovatebot/ruby-semver": "npm:4.0.0"
     "@sindresorhus/is": "npm:4.6.0"
@@ -12875,7 +12875,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 2842b85bf9130881b0d0e7d44a7b6fe2577e436d63b0601fa7fb95ad9747b4b90a2012198c70fec15e1b1c03c905048defbc4121fc9317ee6fae30b0c755ba2a
+  checksum: c13bca3ae5238fb67030fe14803334767772e51ec6d9e70fd16380ccce07fcd2cac14b23b2e871293706caa615f2d6a03fc94054d4a1f318fd0bd508416a0d86
   languageName: node
   linkType: hard
 
