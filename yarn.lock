@@ -3840,7 +3840,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.122.0"
+    renovate: "npm:39.122.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -6784,12 +6784,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cronstrue@npm:2.52.0":
-  version: 2.52.0
-  resolution: "cronstrue@npm:2.52.0"
+"cronstrue@npm:2.53.0":
+  version: 2.53.0
+  resolution: "cronstrue@npm:2.53.0"
   bin:
     cronstrue: bin/cli.js
-  checksum: 96f6fe25cab01c5f945b5980a14856d189fdbdd231e4d87908b8f5c087bd678684c5de91a5a39ce800a988ead3b732b63f07a9df297ab90cdf9f213f817ba2f0
+  checksum: fcc1235b72abef6c11934bf189b1290b36d5ea4a061370c400fab517c028c9b70fbd0be256c4b9df16a3f402e92b54b9e620a0dca0ec8aac107ff8431c64f938
   languageName: node
   linkType: hard
 
@@ -8638,6 +8638,17 @@ __metadata:
     jsonfile: "npm:^6.0.1"
     universalify: "npm:^2.0.0"
   checksum: d77a9a9efe60532d2e790e938c81a02c1b24904ef7a3efb3990b835514465ba720e99a6ea56fd5e2db53b4695319b644d76d5a0e9988a2beef80aa7b1da63398
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:11.3.0":
+  version: 11.3.0
+  resolution: "fs-extra@npm:11.3.0"
+  dependencies:
+    graceful-fs: "npm:^4.2.0"
+    jsonfile: "npm:^6.0.1"
+    universalify: "npm:^2.0.0"
+  checksum: 5f95e996186ff45463059feb115a22fb048bdaf7e487ecee8a8646c78ed8fdca63630e3077d4c16ce677051f5e60d3355a06f3cd61f3ca43f48cc58822a44d0a
   languageName: node
   linkType: hard
 
@@ -12738,9 +12749,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.122.0":
-  version: 39.122.0
-  resolution: "renovate@npm:39.122.0"
+"renovate@npm:39.122.2":
+  version: 39.122.2
+  resolution: "renovate@npm:39.122.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.726.1"
     "@aws-sdk/client-ec2": "npm:3.726.1"
@@ -12784,7 +12795,7 @@ __metadata:
     commander: "npm:12.1.0"
     conventional-commits-detector: "npm:1.0.3"
     croner: "npm:9.0.0"
-    cronstrue: "npm:2.52.0"
+    cronstrue: "npm:2.53.0"
     deepmerge: "npm:4.3.1"
     dequal: "npm:2.0.3"
     detect-indent: "npm:6.1.0"
@@ -12797,7 +12808,7 @@ __metadata:
     extract-zip: "npm:2.0.1"
     find-packages: "npm:10.0.4"
     find-up: "npm:5.0.0"
-    fs-extra: "npm:11.2.0"
+    fs-extra: "npm:11.3.0"
     git-url-parse: "npm:16.0.0"
     github-url-from-git: "npm:1.5.0"
     glob: "npm:11.0.1"
@@ -12864,7 +12875,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: c81ee80aa266e0c666638d9adbb578eec8e3147a29502c022892e412cc95c70735bfcafe1e1036a49635be3f45d4a684166602ecafa3630f81269d8007b949d1
+  checksum: 2842b85bf9130881b0d0e7d44a7b6fe2577e436d63b0601fa7fb95ad9747b4b90a2012198c70fec15e1b1c03c905048defbc4121fc9317ee6fae30b0c755ba2a
   languageName: node
   linkType: hard
 
