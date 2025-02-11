@@ -55,7 +55,6 @@ socat
 sudo
 systemd-boot-pacman-hook
 systemd-resolvconf
-tailscale
 telegraf
 terminus-font
 tmux
