@@ -2898,6 +2898,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@one-ini/wasm@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@one-ini/wasm@npm:0.2.0"
+  checksum: be3b8693230a4bd4c88bbf4679bcd5c9d9e4a26816dec2cf581453ce45aeaa6011fc310a056562549a1e1eb4f5a4b169aec9b6ae3636b8659a0b39049f07b672
+  languageName: node
+  linkType: hard
+
 "@opentelemetry/api-logs@npm:0.57.0, @opentelemetry/api-logs@npm:^0.57.0":
   version: 0.57.0
   resolution: "@opentelemetry/api-logs@npm:0.57.0"
@@ -3715,7 +3722,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.181.0"
+    renovate: "npm:39.181.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -6529,7 +6536,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:13.1.0":
+"commander@npm:13.1.0, commander@npm:^13.1.0":
   version: 13.1.0
   resolution: "commander@npm:13.1.0"
   checksum: 7b8c5544bba704fbe84b7cab2e043df8586d5c114a4c5b607f83ae5060708940ed0b5bd5838cf8ce27539cde265c1cbd59ce3c8c6b017ed3eec8943e3a415164
@@ -6540,13 +6547,6 @@ __metadata:
   version: 10.0.1
   resolution: "commander@npm:10.0.1"
   checksum: 53f33d8927758a911094adadda4b2cbac111a5b377d8706700587650fd8f45b0bbe336de4b5c3fe47fd61f420a3d9bd452b6e0e6e5600a7e74d7bf0174f6efe3
-  languageName: node
-  linkType: hard
-
-"commander@npm:^11.0.0":
-  version: 11.1.0
-  resolution: "commander@npm:11.1.0"
-  checksum: 13cc6ac875e48780250f723fb81c1c1178d35c5decb1abb1b628b3177af08a8554e76b2c0f29de72d69eef7c864d12613272a71fabef8047922bc622ab75a179
   languageName: node
   linkType: hard
 
@@ -7148,17 +7148,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"editorconfig@npm:2.0.0":
-  version: 2.0.0
-  resolution: "editorconfig@npm:2.0.0"
+"editorconfig@npm:2.0.1":
+  version: 2.0.1
+  resolution: "editorconfig@npm:2.0.1"
   dependencies:
-    "@one-ini/wasm": "npm:0.1.1"
-    commander: "npm:^11.0.0"
-    minimatch: "npm:9.0.2"
-    semver: "npm:^7.5.3"
+    "@one-ini/wasm": "npm:0.2.0"
+    commander: "npm:^13.1.0"
+    minimatch: "npm:10.0.1"
+    semver: "npm:^7.7.1"
   bin:
     editorconfig: bin/editorconfig
-  checksum: a722d5dbed61c5a29f33dd2ed4730d4284358e6b286768fd2e9d35ae3595252038d7ce1e1093fdfb08fcbedc15a93a5394d6892af4fc6ca93a9618f045b653c6
+  checksum: 2dfff7f9af6368a9ffd8f94de80bd35aa9cef4173c10c8f6e16985cea0364613f6879ab609492a26290faaef1e2b6918355e42cba3a2b7157ad7bc677981ccef
   languageName: node
   linkType: hard
 
@@ -10951,15 +10951,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:9.0.2":
-  version: 9.0.2
-  resolution: "minimatch@npm:9.0.2"
-  dependencies:
-    brace-expansion: "npm:^2.0.1"
-  checksum: 39157d5fd831a7981f7c0c5b22a0e0c2ae8a987ec4a4aeaacc21d3e85da24ce812808cbf7c07cde0d63ad1cf307f73be581131a7a84eeda65f00be1f51972471
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:9.0.3, minimatch@npm:^9.0.1":
   version: 9.0.3
   resolution: "minimatch@npm:9.0.3"
@@ -12643,9 +12634,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.181.0":
-  version: 39.181.0
-  resolution: "renovate@npm:39.181.0"
+"renovate@npm:39.181.1":
+  version: 39.181.1
+  resolution: "renovate@npm:39.181.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.738.0"
     "@aws-sdk/client-ec2": "npm:3.738.0"
@@ -12695,7 +12686,7 @@ __metadata:
     dequal: "npm:2.0.3"
     detect-indent: "npm:6.1.0"
     diff: "npm:7.0.0"
-    editorconfig: "npm:2.0.0"
+    editorconfig: "npm:2.0.1"
     email-addresses: "npm:5.0.0"
     emoji-regex: "npm:10.4.0"
     emojibase: "npm:16.0.0"
@@ -12770,7 +12761,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: b8e0a5a225046bd0c9605187531e186865bd6d5a3bf9731a658e9b253ffe9fa73f86752fa0db42c015bd65a913e58ab15016ca2fa6b794f05575ef9533f9d19e
+  checksum: 9f4257bcad3f7afbdef42aaf4507eed0fd65515d618d618fcdae074ca7754d90772c8192656b859c2c522a138f9786f3931c0653183661b3acdb01883ded78d5
   languageName: node
   linkType: hard
 
@@ -13148,7 +13139,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.7.1":
+"semver@npm:7.7.1, semver@npm:^7.7.1":
   version: 7.7.1
   resolution: "semver@npm:7.7.1"
   bin:
