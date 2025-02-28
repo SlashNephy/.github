@@ -30,12 +30,6 @@
   update-timestamp = rebase origin/HEAD --autostash --exec 'git commit --amend --no-edit --date=now'
   pushf = push --force-with-lease --force-if-includes
 
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
-
 [url "https://github.com/"]
   insteadOf = git://github.com/
 
