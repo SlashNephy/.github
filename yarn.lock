@@ -3697,7 +3697,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.185.0"
+    renovate: "npm:39.185.3"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -6653,12 +6653,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cronstrue@npm:2.54.0":
-  version: 2.54.0
-  resolution: "cronstrue@npm:2.54.0"
+"cronstrue@npm:2.55.0":
+  version: 2.55.0
+  resolution: "cronstrue@npm:2.55.0"
   bin:
     cronstrue: bin/cli.js
-  checksum: 1317b64003c368098c779493d6213804794da012b97c4e82b4b932560103d4b4168994bbc8dbef8deb956b4894dae8c4508ccdbe2a4a8e8ded0d680e9c63e54a
+  checksum: 0f91ceb3b8e191e2a168bdd0610671cab041bd6123a65ddca2c210b0c98e029825a09903814f8b7f2519303048f38d87b273f526378e66bb6d02c6e2d53a8fdd
   languageName: node
   linkType: hard
 
@@ -12059,12 +12059,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.5.1":
-  version: 3.5.1
-  resolution: "prettier@npm:3.5.1"
+"prettier@npm:3.5.2":
+  version: 3.5.2
+  resolution: "prettier@npm:3.5.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 9f6f810eae455d6e4213845151a484a2338f2e0d6a8b84ee8e13a83af8a2421ef6c1e31e61e4b135671fb57b9541f6624648880cc2061ac803e243ac898c0123
+  checksum: d7b597ed33f39c32ace675896ad187f06a3e48dc8a1e80051b5c5f0dae3586d53981704b8fda5ac3b080e6c2e0e197d239131b953702674f044351621ca5e1ac
   languageName: node
   linkType: hard
 
@@ -12609,9 +12609,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.185.0":
-  version: 39.185.0
-  resolution: "renovate@npm:39.185.0"
+"renovate@npm:39.185.3":
+  version: 39.185.3
+  resolution: "renovate@npm:39.185.3"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.738.0"
     "@aws-sdk/client-ec2": "npm:3.738.0"
@@ -12656,7 +12656,7 @@ __metadata:
     commander: "npm:13.1.0"
     conventional-commits-detector: "npm:1.0.3"
     croner: "npm:9.0.0"
-    cronstrue: "npm:2.54.0"
+    cronstrue: "npm:2.55.0"
     deepmerge: "npm:4.3.1"
     dequal: "npm:2.0.3"
     detect-indent: "npm:6.1.0"
@@ -12702,7 +12702,7 @@ __metadata:
     p-queue: "npm:6.6.2"
     p-throttle: "npm:4.1.1"
     parse-link-header: "npm:2.0.0"
-    prettier: "npm:3.5.1"
+    prettier: "npm:3.5.2"
     protobufjs: "npm:7.4.0"
     punycode: "npm:2.3.1"
     re2: "npm:1.21.4"
@@ -12736,7 +12736,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 26d3c8cef640e32e2aef16cd0f97044370f97c5cd6991663f15a6b66feda807b339143e9c28385b82a0ad1c9d9f14b7127ec70d7dfef46291a644c23f9f61f38
+  checksum: 99e5efca8ec6edf371de4f512c29de1bb6ac925eb8b945f7480a799156509832e2682503dc0dba0ec5563343e2f368849ed98cb7a2cdd24381936ea9ca576856
   languageName: node
   linkType: hard
 
