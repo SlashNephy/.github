@@ -3712,7 +3712,7 @@ __metadata:
     concurrently: "npm:8.2.0"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    sass: "npm:1.64.1"
+    sass: "npm:1.64.2"
     typescript: "npm:5.1.6"
   languageName: unknown
   linkType: soft
@@ -3789,7 +3789,7 @@ __metadata:
     postcss-cli: "npm:10.1.0"
     postcss-scss: "npm:4.0.6"
     prettier: "npm:3.0.0"
-    sass: "npm:1.64.1"
+    sass: "npm:1.64.2"
     stylelint: "npm:15.10.2"
   languageName: unknown
   linkType: soft
@@ -13062,16 +13062,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.64.1":
-  version: 1.64.1
-  resolution: "sass@npm:1.64.1"
+"sass@npm:1.64.2":
+  version: 1.64.2
+  resolution: "sass@npm:1.64.2"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 47fc8cd65b24f71ac6f107b250f3f3bf5ea1ba631c70211a8f99716ad25b6f42c2dde3ea606ec2394bc156e3c7136ea4cc2539beff082a3cbee127febc41a20e
+  checksum: c773fa35d54391e66001c0340480aeff1d740bd0f764569886278764919017136d296dbc121c22cbf16dfda2714b7075178a881b412a29cbf30d65b3094bfae4
   languageName: node
   linkType: hard
 
