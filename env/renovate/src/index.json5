@@ -1,7 +1,7 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    'config:base',
+    'config:recommended',
     // PR に renovate ラベルを付ける
     ':label(renovate)',
     'github>SlashNephy/.github//env/renovate/src/schedule.json5',
