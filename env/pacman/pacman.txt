@@ -49,6 +49,7 @@ ookla-speedtest-bin
 openssh
 preload
 progress
+rclone
 samba
 smartmontools
 socat
