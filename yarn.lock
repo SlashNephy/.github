@@ -4097,7 +4097,7 @@ __metadata:
     textlint-rule-preset-jtf-style: "npm:2.3.14"
     typescript: "npm:5.1.6"
   peerDependencies:
-    textlint: ^13
+    textlint: ^13 || ^14.0.0
   languageName: unknown
   linkType: soft
 
