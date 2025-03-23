@@ -10,7 +10,7 @@ on:
       node-version:
         required: false
         type: string
-        default: '20'
+        default: '22'
       node-version-file:
         required: false
         type: string
