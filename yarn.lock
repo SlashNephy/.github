@@ -3977,7 +3977,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.216.0"
+    renovate: "npm:39.216.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -11628,16 +11628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:3.3.10":
-  version: 3.3.10
-  resolution: "nanoid@npm:3.3.10"
-  bin:
-    nanoid: bin/nanoid.cjs
-  checksum: 34eca53d4d95cb538b05a9fa07e4b2ab941906852202edb00824c8004d71d34592704e40b0ae608bf756b1ffd91ff9359d2ea59f8d92e1a7b769e0ca46368e84
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^3.3.6, nanoid@npm:^3.3.8":
+"nanoid@npm:3.3.11, nanoid@npm:^3.3.6, nanoid@npm:^3.3.8":
   version: 3.3.11
   resolution: "nanoid@npm:3.3.11"
   bin:
@@ -13042,9 +13033,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.216.0":
-  version: 39.216.0
-  resolution: "renovate@npm:39.216.0"
+"renovate@npm:39.216.1":
+  version: 39.216.1
+  resolution: "renovate@npm:39.216.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.738.0"
     "@aws-sdk/client-ec2": "npm:3.738.0"
@@ -13128,7 +13119,7 @@ __metadata:
     minimatch: "npm:10.0.1"
     moo: "npm:0.5.2"
     ms: "npm:2.1.3"
-    nanoid: "npm:3.3.10"
+    nanoid: "npm:3.3.11"
     neotraverse: "npm:0.6.18"
     node-html-parser: "npm:7.0.1"
     openpgp: "npm:6.1.0"
@@ -13171,7 +13162,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: a7ad91b3c81b67ac4ee2d30af0429ae025db025906e90c553f03590f9c6d1152ff03f4b4f087c7a4a28264b5dd0d30776885766166f26d480677dc59f7e511a8
+  checksum: a62ab9cd05a89b036d417a577c9e58f5799ad46bcb70e3cd06b7875f8b2b905c73c6e2a93217d4e93b617d16fc7409a0714f6d62019dad1274a95618c56931a9
   languageName: node
   linkType: hard
 
