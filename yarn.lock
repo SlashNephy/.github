@@ -2630,10 +2630,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@baszalmstra/rattler@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@baszalmstra/rattler@npm:0.2.0"
-  checksum: db136f2bee9975404ce7aa4565eb4209262f1532da27042427750dc912399d0177c35343ce145302e2987ae48ba793fd4d61505fb53c5ca3011c43fbe540ed5e
+"@baszalmstra/rattler@npm:0.2.1":
+  version: 0.2.1
+  resolution: "@baszalmstra/rattler@npm:0.2.1"
+  checksum: 15024f80f9bdd45a02f6006eda758d0282f5895f67aaa5d1d5a60eb27a62e5e3446225afe5dbb3638ac1191f9dbb3578f6eabd664736e66a31f3488a1ff3fe2e
   languageName: node
   linkType: hard
 
@@ -3977,7 +3977,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.219.0"
+    renovate: "npm:39.219.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -13033,9 +13033,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.219.0":
-  version: 39.219.0
-  resolution: "renovate@npm:39.219.0"
+"renovate@npm:39.219.2":
+  version: 39.219.2
+  resolution: "renovate@npm:39.219.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.738.0"
     "@aws-sdk/client-ec2": "npm:3.738.0"
@@ -13044,7 +13044,7 @@ __metadata:
     "@aws-sdk/client-rds": "npm:3.740.0"
     "@aws-sdk/client-s3": "npm:3.740.0"
     "@aws-sdk/credential-providers": "npm:3.738.0"
-    "@baszalmstra/rattler": "npm:0.2.0"
+    "@baszalmstra/rattler": "npm:0.2.1"
     "@breejs/later": "npm:4.2.0"
     "@cdktf/hcl2json": "npm:0.20.11"
     "@opentelemetry/api": "npm:1.9.0"
@@ -13162,7 +13162,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 46f3650fc4584189d25899ad40edf1ed0783bfb549b20173446392ffa6d4d4d8fed92fa17b2ce9197f888d4c2961a7be1c4feb7e09f43b6173f3e420173a5317
+  checksum: af8b8f3ddf12ea4c90abf796d27149b67a48dc15faa4e669f06410b44cce834634f6cbee730d7edc27b0bbdf116b44e39d81e98138045b320be735af43235139
   languageName: node
   linkType: hard
 
