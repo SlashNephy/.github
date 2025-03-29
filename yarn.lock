@@ -1600,7 +1600,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.20.7, @babel/parser@npm:^7.22.7, @babel/parser@npm:^7.26.10, @babel/parser@npm:^7.26.9, @babel/parser@npm:^7.7.5":
+"@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.20.7, @babel/parser@npm:^7.22.7, @babel/parser@npm:^7.23.9, @babel/parser@npm:^7.26.10, @babel/parser@npm:^7.26.9, @babel/parser@npm:^7.7.5":
   version: 7.26.10
   resolution: "@babel/parser@npm:7.26.10"
   dependencies:
@@ -4031,7 +4031,7 @@ __metadata:
     textlint-rule-no-todo: "npm:2.0.1"
     textlint-rule-preset-ja-spacing: "npm:2.4.3"
     textlint-rule-preset-ja-technical-writing: "npm:8.0.0"
-    textlint-rule-preset-jtf-style: "npm:2.3.14"
+    textlint-rule-preset-jtf-style: "npm:3.0.2"
     typescript: "npm:5.1.6"
   peerDependencies:
     textlint: ^13
@@ -14479,7 +14479,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-helper@npm:^2.0.0, textlint-rule-helper@npm:^2.1.1, textlint-rule-helper@npm:^2.2.0, textlint-rule-helper@npm:^2.2.1, textlint-rule-helper@npm:^2.2.4, textlint-rule-helper@npm:^2.3.0":
+"textlint-rule-helper@npm:^2.0.0, textlint-rule-helper@npm:^2.1.1, textlint-rule-helper@npm:^2.2.0, textlint-rule-helper@npm:^2.2.1, textlint-rule-helper@npm:^2.2.4, textlint-rule-helper@npm:^2.3.0, textlint-rule-helper@npm:^2.3.1":
   version: 2.3.1
   resolution: "textlint-rule-helper@npm:2.3.1"
   dependencies:
@@ -14831,7 +14831,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"textlint-rule-preset-jtf-style@npm:2.3.14, textlint-rule-preset-jtf-style@npm:^2.3.13":
+"textlint-rule-preset-jtf-style@npm:3.0.2":
+  version: 3.0.2
+  resolution: "textlint-rule-preset-jtf-style@npm:3.0.2"
+  dependencies:
+    analyze-desumasu-dearu: "npm:^2.1.2"
+    japanese-numerals-to-number: "npm:^1.0.2"
+    match-index: "npm:^1.0.3"
+    moji: "npm:^0.5.1"
+    regexp.prototype.flags: "npm:^1.5.3"
+    regx: "npm:^1.0.4"
+    textlint-rule-helper: "npm:^2.3.1"
+    textlint-rule-prh: "npm:^6.0.0"
+  checksum: f1cf08f9d31fc467ecc86154ad40c2d48fb8a0910b4c93254f9a20af68eef007f4d9cd2b8b48001ffcffdb67cd9a4899f51da951b364857cb0df33e206e368fc
+  languageName: node
+  linkType: hard
+
+"textlint-rule-preset-jtf-style@npm:^2.3.13":
   version: 2.3.14
   resolution: "textlint-rule-preset-jtf-style@npm:2.3.14"
   dependencies:
@@ -14858,6 +14874,17 @@ __metadata:
     textlint-rule-helper: "npm:^2.1.1"
     untildify: "npm:^3.0.3"
   checksum: 8478183723167855334a1ec4001017d3be8c186f6b3a5d0cf9cdabb2c02992f4fd08c8b01027ed2d62f9f06b9fca74456875083422e32b82f6f48c9527cc8315
+  languageName: node
+  linkType: hard
+
+"textlint-rule-prh@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "textlint-rule-prh@npm:6.0.0"
+  dependencies:
+    "@babel/parser": "npm:^7.23.9"
+    prh: "npm:^5.4.4"
+    textlint-rule-helper: "npm:^2.3.1"
+  checksum: 7fdb9a29dc8529366018af9e6215727ea4e51979b62872a6cd4ef55b15deaffc534db9a03c6a150ffd39869bed98652e5b157efb341ee5a8b6b52debb55e5a70
   languageName: node
   linkType: hard
 
