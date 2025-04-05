@@ -3604,7 +3604,7 @@ __metadata:
     "@rollup/plugin-typescript": "npm:11.1.2"
     "@slashnephy/eslint-config": "npm:2.1.3"
     "@slashnephy/prettier-config": "npm:1.0.73"
-    "@types/babel__core": "npm:7.20.1"
+    "@types/babel__core": "npm:7.20.5"
     "@types/babel__preset-env": "npm:7.9.2"
     concurrently: "npm:8.2.0"
     eslint: "npm:8.45.0"
@@ -4764,16 +4764,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__core@npm:7.20.1":
-  version: 7.20.1
-  resolution: "@types/babel__core@npm:7.20.1"
+"@types/babel__core@npm:7.20.5":
+  version: 7.20.5
+  resolution: "@types/babel__core@npm:7.20.5"
   dependencies:
     "@babel/parser": "npm:^7.20.7"
     "@babel/types": "npm:^7.20.7"
     "@types/babel__generator": "npm:*"
     "@types/babel__template": "npm:*"
     "@types/babel__traverse": "npm:*"
-  checksum: c83402fc7ef8abd1f94ffe350b8bde9a35ccb6c3624bc8e39b6a7e1a675d112f6b70ac1b05391a579ca3b126baffe66b0b94f954edef086c4482b97d293c3659
+  checksum: bdee3bb69951e833a4b811b8ee9356b69a61ed5b7a23e1a081ec9249769117fa83aaaf023bb06562a038eb5845155ff663e2d5c75dd95c1d5ccc91db012868ff
   languageName: node
   linkType: hard
 
