@@ -3735,7 +3735,7 @@ __metadata:
     prettier: "npm:3.0.0"
     stylelint: "npm:15.10.2"
     stylelint-config-property-sort-order-smacss: "npm:10.0.0"
-    stylelint-config-recommended: "npm:15.0.0"
+    stylelint-config-recommended: "npm:16.0.0"
     typescript: "npm:5.1.6"
   peerDependencies:
     stylelint: ^15
@@ -13998,12 +13998,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recommended@npm:15.0.0":
-  version: 15.0.0
-  resolution: "stylelint-config-recommended@npm:15.0.0"
+"stylelint-config-recommended@npm:16.0.0":
+  version: 16.0.0
+  resolution: "stylelint-config-recommended@npm:16.0.0"
   peerDependencies:
-    stylelint: ^16.13.0
-  checksum: de82e675e7d0cdbc486beee1f76002d5a5676247c1780fbe04f6adb617b016033f18f3361f4e99a76fc4d2115fbfc97786d9cf87ee7d90a345e146de35b04ab8
+    stylelint: ^16.16.0
+  checksum: b2b4ea2633a606a0f686521aa5e8908810c9dd21fd4525c86b34213de1e362b445fd5472b6e5ff251d46f999e2ca2c6c704f2efc1c08d5a532084427f4e1c9d8
   languageName: node
   linkType: hard
 
