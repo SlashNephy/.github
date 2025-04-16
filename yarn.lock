@@ -3761,7 +3761,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.246.0"
+    renovate: "npm:39.246.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -5452,15 +5452,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:4.3.1":
-  version: 4.3.1
-  resolution: "@yarnpkg/core@npm:4.3.1"
+"@yarnpkg/core@npm:4.4.0":
+  version: 4.4.0
+  resolution: "@yarnpkg/core@npm:4.4.0"
   dependencies:
     "@arcanis/slice-ansi": "npm:^1.1.1"
     "@types/semver": "npm:^7.1.0"
     "@types/treeify": "npm:^1.0.0"
     "@yarnpkg/fslib": "npm:^3.1.2"
-    "@yarnpkg/libzip": "npm:^3.1.1"
+    "@yarnpkg/libzip": "npm:^3.2.0"
     "@yarnpkg/parsers": "npm:^3.0.3"
     "@yarnpkg/shell": "npm:^4.1.2"
     camelcase: "npm:^5.3.1"
@@ -5482,7 +5482,7 @@ __metadata:
     treeify: "npm:^1.1.0"
     tslib: "npm:^2.4.0"
     tunnel: "npm:^0.0.6"
-  checksum: 2c926b096e7daa331e1acc92dc3dda11d945e89baebc6cbe2d969289a4b3f0b93d0ef420c5e64908586e8c1174aa2e0f1464ba4f6dccf47ea61169b025722952
+  checksum: 8d6a7f63ed342fd6aa3808044124228c9bed4e4f94af331e570f0c452da838ebb2be98b5a87d5567f3eb03ef49e26547718fd9740de3c204802b121f3ac69e13
   languageName: node
   linkType: hard
 
@@ -5495,16 +5495,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/libzip@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@yarnpkg/libzip@npm:3.1.1"
+"@yarnpkg/libzip@npm:^3.2.0":
+  version: 3.2.1
+  resolution: "@yarnpkg/libzip@npm:3.2.1"
   dependencies:
     "@types/emscripten": "npm:^1.39.6"
     "@yarnpkg/fslib": "npm:^3.1.2"
     tslib: "npm:^2.4.0"
   peerDependencies:
     "@yarnpkg/fslib": ^3.1.2
-  checksum: 819ad37fbba51f4d7f65fff02b80cd7eb94134d7f7672a8b664a0672f12e710223ff9a8adb4ca565fd6aaa3432e74e964ee71d5ed929e900657c3a9fde9a381d
+  checksum: 067b57953fe6f7f624b4ca0cabdeb117eaed351ec7c7571551e0380f5b396260fe0350812ab9d003238f01b37398c878d3d1b6b944654d39484a98aa38db3283
   languageName: node
   linkType: hard
 
@@ -12826,9 +12826,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.246.0":
-  version: 39.246.0
-  resolution: "renovate@npm:39.246.0"
+"renovate@npm:39.246.1":
+  version: 39.246.1
+  resolution: "renovate@npm:39.246.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.777.0"
     "@aws-sdk/client-ec2": "npm:3.779.0"
@@ -12862,7 +12862,7 @@ __metadata:
     "@renovatebot/pep440": "npm:4.1.0"
     "@renovatebot/ruby-semver": "npm:4.0.0"
     "@sindresorhus/is": "npm:4.6.0"
-    "@yarnpkg/core": "npm:4.3.1"
+    "@yarnpkg/core": "npm:4.4.0"
     "@yarnpkg/parsers": "npm:3.0.3"
     agentkeepalive: "npm:4.6.0"
     aggregate-error: "npm:3.1.0"
@@ -12959,7 +12959,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 49197f13d6f4baafe2405c79eb4feb16f5b0e4123fc614906544910c37e6d20cdf140c139caab9692744e63a62a73dfa39ae0c10c2efa27d51a36bf318e59104
+  checksum: 5979753ee7660e0846bc2790e8f2c3528d1a2088f21cd086cce312970fdefe68e22e726eda811eab622e2a2a5a2adf8728e1a73455d719c51cb8a6ac6eaea1e3
   languageName: node
   linkType: hard
 
