@@ -3174,14 +3174,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/semantic-conventions@npm:1.31.0":
-  version: 1.31.0
-  resolution: "@opentelemetry/semantic-conventions@npm:1.31.0"
-  checksum: a21e250d14565c86b7f53378149765425371486516485721e1c64fc24aead71659d60a25ea6796d32d23bbcb6931e760f0ac3aac14a0cae15d19e106523147f7
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/semantic-conventions@npm:^1.27.0":
+"@opentelemetry/semantic-conventions@npm:1.32.0, @opentelemetry/semantic-conventions@npm:^1.27.0":
   version: 1.32.0
   resolution: "@opentelemetry/semantic-conventions@npm:1.32.0"
   checksum: 977c93225490f2456e8bb13b90a8627861207eb5eb4771d7565c2321be883ec711c1701485451f9e10b8d2a724525496c0e4441b43190a7a550bcf7c73f681cd
@@ -3768,7 +3761,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.250.1"
+    renovate: "npm:39.250.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12833,9 +12826,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.250.1":
-  version: 39.250.1
-  resolution: "renovate@npm:39.250.1"
+"renovate@npm:39.250.2":
+  version: 39.250.2
+  resolution: "renovate@npm:39.250.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.777.0"
     "@aws-sdk/client-ec2": "npm:3.779.0"
@@ -12860,7 +12853,7 @@ __metadata:
     "@opentelemetry/resources": "npm:2.0.0"
     "@opentelemetry/sdk-trace-base": "npm:2.0.0"
     "@opentelemetry/sdk-trace-node": "npm:2.0.0"
-    "@opentelemetry/semantic-conventions": "npm:1.31.0"
+    "@opentelemetry/semantic-conventions": "npm:1.32.0"
     "@pnpm/parse-overrides": "npm:1000.0.2"
     "@qnighy/marshal": "npm:0.1.3"
     "@renovatebot/detect-tools": "npm:1.1.0"
@@ -12966,7 +12959,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 267b1e1c3a600ce982bfe19d064a79fc803e1c09602391cf812426283d0bf1b0ed5f4e2497030468fb297438b228ead5383add3d32cfd3978b4affb5898ead01
+  checksum: 7a38cad08db1b6bc8ebdaa9096ea7d918e5a6070252519b5fcfffdb2fd72ef2684909f857bd73c930896ab6c4a452362f6b599696c9100d35c8eab7bc2c46447
   languageName: node
   linkType: hard
 
