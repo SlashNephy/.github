@@ -3174,10 +3174,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/semantic-conventions@npm:1.30.0, @opentelemetry/semantic-conventions@npm:^1.29.0":
-  version: 1.30.0
-  resolution: "@opentelemetry/semantic-conventions@npm:1.30.0"
-  checksum: 0bf99552e3b4b7e8b7eb504b678d52f59c6f259df88e740a2011a0d858e523d36fee86047ae1b7f45849c77f00f970c3059ba58e0a06a7d47d6f01dbe8c455bd
+"@opentelemetry/semantic-conventions@npm:1.31.0":
+  version: 1.31.0
+  resolution: "@opentelemetry/semantic-conventions@npm:1.31.0"
+  checksum: a21e250d14565c86b7f53378149765425371486516485721e1c64fc24aead71659d60a25ea6796d32d23bbcb6931e760f0ac3aac14a0cae15d19e106523147f7
   languageName: node
   linkType: hard
 
@@ -3185,6 +3185,13 @@ __metadata:
   version: 1.32.0
   resolution: "@opentelemetry/semantic-conventions@npm:1.32.0"
   checksum: 977c93225490f2456e8bb13b90a8627861207eb5eb4771d7565c2321be883ec711c1701485451f9e10b8d2a724525496c0e4441b43190a7a550bcf7c73f681cd
+  languageName: node
+  linkType: hard
+
+"@opentelemetry/semantic-conventions@npm:^1.29.0":
+  version: 1.30.0
+  resolution: "@opentelemetry/semantic-conventions@npm:1.30.0"
+  checksum: 0bf99552e3b4b7e8b7eb504b678d52f59c6f259df88e740a2011a0d858e523d36fee86047ae1b7f45849c77f00f970c3059ba58e0a06a7d47d6f01dbe8c455bd
   languageName: node
   linkType: hard
 
@@ -3761,7 +3768,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.248.0"
+    renovate: "npm:39.248.1"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12826,9 +12833,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.248.0":
-  version: 39.248.0
-  resolution: "renovate@npm:39.248.0"
+"renovate@npm:39.248.1":
+  version: 39.248.1
+  resolution: "renovate@npm:39.248.1"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.777.0"
     "@aws-sdk/client-ec2": "npm:3.779.0"
@@ -12853,7 +12860,7 @@ __metadata:
     "@opentelemetry/resources": "npm:2.0.0"
     "@opentelemetry/sdk-trace-base": "npm:2.0.0"
     "@opentelemetry/sdk-trace-node": "npm:2.0.0"
-    "@opentelemetry/semantic-conventions": "npm:1.30.0"
+    "@opentelemetry/semantic-conventions": "npm:1.31.0"
     "@pnpm/parse-overrides": "npm:1000.0.2"
     "@qnighy/marshal": "npm:0.1.3"
     "@renovatebot/detect-tools": "npm:1.1.0"
@@ -12959,7 +12966,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: 050d82aeaf7d6f67a81a8770202643e3ad5ff6529b5ee831e87f29e4e91ed21a0a81bbab6a09e43c2e59bdc99106c0f436059c449266f94f97acbce343ccf604
+  checksum: 732eea352fe9b4621b1b00a3d2037a1d3c87a76ca14c136c13a2269db747cbfe60dee84f179592a90ba1e5385c05bcc162664b31ff18819880d70ba143e4c5a0
   languageName: node
   linkType: hard
 
