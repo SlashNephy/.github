@@ -3761,7 +3761,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:39.254.1"
+    renovate: "npm:39.254.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12373,7 +12373,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protobufjs@npm:7.4.0, protobufjs@npm:^7.3.0":
+"protobufjs@npm:7.5.0":
+  version: 7.5.0
+  resolution: "protobufjs@npm:7.5.0"
+  dependencies:
+    "@protobufjs/aspromise": "npm:^1.1.2"
+    "@protobufjs/base64": "npm:^1.1.2"
+    "@protobufjs/codegen": "npm:^2.0.4"
+    "@protobufjs/eventemitter": "npm:^1.1.0"
+    "@protobufjs/fetch": "npm:^1.1.0"
+    "@protobufjs/float": "npm:^1.0.2"
+    "@protobufjs/inquire": "npm:^1.1.0"
+    "@protobufjs/path": "npm:^1.1.2"
+    "@protobufjs/pool": "npm:^1.1.0"
+    "@protobufjs/utf8": "npm:^1.1.0"
+    "@types/node": "npm:>=13.7.0"
+    long: "npm:^5.0.0"
+  checksum: 21ae56998d04e31ef7f58f49ccf6cd307f06b6257fee8b53016418176a2a03083f781c42907762bfdf632f425b5cd9707bc3f23aa73a9a774292e1b7190e3689
+  languageName: node
+  linkType: hard
+
+"protobufjs@npm:^7.3.0":
   version: 7.4.0
   resolution: "protobufjs@npm:7.4.0"
   dependencies:
@@ -12826,9 +12846,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:39.254.1":
-  version: 39.254.1
-  resolution: "renovate@npm:39.254.1"
+"renovate@npm:39.254.2":
+  version: 39.254.2
+  resolution: "renovate@npm:39.254.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.777.0"
     "@aws-sdk/client-ec2": "npm:3.779.0"
@@ -12926,7 +12946,7 @@ __metadata:
     p-throttle: "npm:4.1.1"
     parse-link-header: "npm:2.0.0"
     prettier: "npm:3.5.3"
-    protobufjs: "npm:7.4.0"
+    protobufjs: "npm:7.5.0"
     punycode: "npm:2.3.1"
     re2: "npm:1.21.4"
     redis: "npm:4.7.0"
@@ -12959,7 +12979,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: b513e6dc58a73b91423628c1ff23c274e42e8087704b25527f055f1b0a8be776536e3597550d2b54a92b47f18c8ba0700b1a807d2428cdc4c1a1a9e3f66a4a68
+  checksum: 9ba0bdb2545989301e13d11f30251ade852e707d5f1828cac9aaae600c15dc60c9080f0368ae117a45b9e62cf54bce70021618a16caabf13802c7f8f73254b49
   languageName: node
   linkType: hard
 
