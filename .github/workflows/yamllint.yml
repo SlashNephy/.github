@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Checkout .github
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'SlashNephy/.github'
           path: '_github'
@@ -38,10 +38,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Checkout .github
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'SlashNephy/.github'
           path: '_github'
