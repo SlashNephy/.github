@@ -3775,7 +3775,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:40.12.0"
+    renovate: "npm:40.12.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12444,9 +12444,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protobufjs@npm:7.5.0":
-  version: 7.5.0
-  resolution: "protobufjs@npm:7.5.0"
+"protobufjs@npm:7.5.1":
+  version: 7.5.1
+  resolution: "protobufjs@npm:7.5.1"
   dependencies:
     "@protobufjs/aspromise": "npm:^1.1.2"
     "@protobufjs/base64": "npm:^1.1.2"
@@ -12460,7 +12460,7 @@ __metadata:
     "@protobufjs/utf8": "npm:^1.1.0"
     "@types/node": "npm:>=13.7.0"
     long: "npm:^5.0.0"
-  checksum: 21ae56998d04e31ef7f58f49ccf6cd307f06b6257fee8b53016418176a2a03083f781c42907762bfdf632f425b5cd9707bc3f23aa73a9a774292e1b7190e3689
+  checksum: c2522f183df9355cff636a4c7516ab96eeda53e71627ee7f5b347a956f7f8e176c1a5e154aad4a885e709acdfceede25851936f036a6e944a6c1a06dc9c4ea23
   languageName: node
   linkType: hard
 
@@ -12917,9 +12917,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:40.12.0":
-  version: 40.12.0
-  resolution: "renovate@npm:40.12.0"
+"renovate@npm:40.12.2":
+  version: 40.12.2
+  resolution: "renovate@npm:40.12.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.799.0"
     "@aws-sdk/client-ec2": "npm:3.800.0"
@@ -13017,7 +13017,7 @@ __metadata:
     p-throttle: "npm:4.1.1"
     parse-link-header: "npm:2.0.0"
     prettier: "npm:3.5.3"
-    protobufjs: "npm:7.5.0"
+    protobufjs: "npm:7.5.1"
     punycode: "npm:2.3.1"
     re2: "npm:1.21.4"
     redis: "npm:4.7.1"
@@ -13050,7 +13050,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: f1e0b1519f4f87b4f1940c18a6005c3a69fd44dc40d6223ade00e1ba446438c54a037edaa650016ebe11ec412e702df2d950ca92165093d731ac27820dafbbe6
+  checksum: 74e282c7bab6ae332c7922805bd222e6d5efcce516d0200cdb96539d11dc5a06c37a102645c09b1e03a0bec71e801ef62fb9c8c5b144e36e245b8878a7d9bdbc
   languageName: node
   linkType: hard
 
