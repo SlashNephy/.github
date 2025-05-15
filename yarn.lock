@@ -3436,14 +3436,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redis/client@npm:1.6.0":
-  version: 1.6.0
-  resolution: "@redis/client@npm:1.6.0"
+"@redis/client@npm:1.6.1":
+  version: 1.6.1
+  resolution: "@redis/client@npm:1.6.1"
   dependencies:
     cluster-key-slot: "npm:1.1.2"
     generic-pool: "npm:3.9.0"
     yallist: "npm:4.0.0"
-  checksum: c80a01b4f72d32284515dac6d1aefe0e9c881d08b8db33281f87b51650c1c116b18074a29ca81599d15dccb37b29eef9b26a75a5755150ae27d163e680c34bf6
+  checksum: 216c61f5aa2fef212386c2ef5b5f6d10f44244f6928682f370e190402d23338e11260377c08e87dd6d678408fa7c0a6b7bb5571ecadb830abfa3d7355b9eff1e
   languageName: node
   linkType: hard
 
@@ -3775,7 +3775,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:40.11.18"
+    renovate: "npm:40.11.19"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12704,17 +12704,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redis@npm:4.7.0":
-  version: 4.7.0
-  resolution: "redis@npm:4.7.0"
+"redis@npm:4.7.1":
+  version: 4.7.1
+  resolution: "redis@npm:4.7.1"
   dependencies:
     "@redis/bloom": "npm:1.2.0"
-    "@redis/client": "npm:1.6.0"
+    "@redis/client": "npm:1.6.1"
     "@redis/graph": "npm:1.1.1"
     "@redis/json": "npm:1.0.7"
     "@redis/search": "npm:1.2.0"
     "@redis/time-series": "npm:1.1.0"
-  checksum: a05632a58adbcaa4566238073cd6d00ed008522d2ef015a31aaef200c184a4eff4fa007c514eda91dda1e1205350b5901d0c7b58824dbfa593feb81a0087bf4d
+  checksum: 36fc11b7b305e73cafd0a32c5e7070aef72d3a33f2b34f609a1c295afb7d1a022d74eeda96e8d887ef596bbe8ce10811450d02b63175a338d2ff258ff34bd237
   languageName: node
   linkType: hard
 
@@ -12917,9 +12917,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:40.11.18":
-  version: 40.11.18
-  resolution: "renovate@npm:40.11.18"
+"renovate@npm:40.11.19":
+  version: 40.11.19
+  resolution: "renovate@npm:40.11.19"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.799.0"
     "@aws-sdk/client-ec2": "npm:3.800.0"
@@ -13020,7 +13020,7 @@ __metadata:
     protobufjs: "npm:7.5.0"
     punycode: "npm:2.3.1"
     re2: "npm:1.21.4"
-    redis: "npm:4.7.0"
+    redis: "npm:4.7.1"
     remark: "npm:13.0.0"
     remark-github: "npm:10.1.0"
     safe-stable-stringify: "npm:2.5.0"
@@ -13050,7 +13050,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: e49ad4031e2d3f17436e5447b323228f3f63f540b36c052ed98b3e8807957c66402b29891f68a73a9df9d4c59aea91733ac60fc00d02b0fbf2da5c6426604f24
+  checksum: 144f49231e29a8db652f1e3d0b8cbf74cf18ef3a8448721af937bff4645426a082c9c54a15aff91bc9f460f3807335a4a4ec7f00d9acf098719e35a563a32fae
   languageName: node
   linkType: hard
 
