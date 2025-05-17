@@ -2471,14 +2471,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint-community/regexpp@npm:^4.11.0, @eslint-community/regexpp@npm:^4.4.0, @eslint-community/regexpp@npm:^4.5.1, @eslint-community/regexpp@npm:^4.6.1":
+"@eslint-community/regexpp@npm:^4.11.0, @eslint-community/regexpp@npm:^4.5.1, @eslint-community/regexpp@npm:^4.6.1":
   version: 4.12.1
   resolution: "@eslint-community/regexpp@npm:4.12.1"
   checksum: a03d98c246bcb9109aec2c08e4d10c8d010256538dcb3f56610191607214523d4fb1b00aa81df830b6dffb74c5fa0be03642513a289c567949d3e550ca11cdf6
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^2.1.0, @eslint/eslintrc@npm:^2.1.4":
+"@eslint/eslintrc@npm:^2.1.4":
   version: 2.1.4
   resolution: "@eslint/eslintrc@npm:2.1.4"
   dependencies:
@@ -2495,13 +2495,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.44.0":
-  version: 8.44.0
-  resolution: "@eslint/js@npm:8.44.0"
-  checksum: ce7b966f8804228e4d5725d44d3c8fb7fc427176f077401323a02e082f628d207133a25704330e610ebe3254fdf1acb186f779d1242fd145a758fdcc4486a660
-  languageName: node
-  linkType: hard
-
 "@eslint/js@npm:8.57.1":
   version: 8.57.1
   resolution: "@eslint/js@npm:8.57.1"
@@ -2513,17 +2506,6 @@ __metadata:
   version: 7.0.1
   resolution: "@gwhitney/detect-indent@npm:7.0.1"
   checksum: d8dc05fe52db3a4e54745c6422ae2a29bbf703e4a08271c396055c6e1550b6696598dccf4645d7fbd3d3295c73ec9f7a354dbfa6087193e092fd8316ac5e8deb
-  languageName: node
-  linkType: hard
-
-"@humanwhocodes/config-array@npm:^0.11.10":
-  version: 0.11.14
-  resolution: "@humanwhocodes/config-array@npm:0.11.14"
-  dependencies:
-    "@humanwhocodes/object-schema": "npm:^2.0.2"
-    debug: "npm:^4.3.1"
-    minimatch: "npm:^3.0.5"
-  checksum: 66f725b4ee5fdd8322c737cb5013e19fac72d4d69c8bf4b7feb192fcb83442b035b92186f8e9497c220e58b2d51a080f28a73f7899bc1ab288c3be172c467541
   languageName: node
   linkType: hard
 
@@ -2545,7 +2527,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/object-schema@npm:^2.0.2, @humanwhocodes/object-schema@npm:^2.0.3":
+"@humanwhocodes/object-schema@npm:^2.0.3":
   version: 2.0.3
   resolution: "@humanwhocodes/object-schema@npm:2.0.3"
   checksum: 80520eabbfc2d32fe195a93557cef50dfe8c8905de447f022675aaf66abc33ae54098f5ea78548d925aa671cd4ab7c7daa5ad704fe42358c9b5e7db60f80696c
@@ -3679,7 +3661,7 @@ __metadata:
     "@types/babel__core": "npm:7.20.1"
     "@types/babel__preset-env": "npm:7.9.2"
     concurrently: "npm:8.2.0"
-    eslint: "npm:8.45.0"
+    eslint: "npm:8.57.1"
     prettier: "npm:3.0.0"
     rollup: "npm:3.26.3"
     typescript: "npm:5.1.6"
@@ -3746,7 +3728,7 @@ __metadata:
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
-    eslint: "npm:8.45.0"
+    eslint: "npm:8.57.1"
     prettier: "npm:3.0.0"
     typescript: "npm:5.1.6"
   peerDependencies:
@@ -3773,7 +3755,7 @@ __metadata:
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
     dotenv: "npm:16.3.1"
-    eslint: "npm:8.45.0"
+    eslint: "npm:8.57.1"
     prettier: "npm:3.0.0"
     renovate: "npm:40.14.3"
     ts-node: "npm:10.9.1"
@@ -3788,7 +3770,7 @@ __metadata:
     "@slashnephy/eslint-config": "npm:2.1.3"
     "@slashnephy/prettier-config": "npm:1.0.73"
     concurrently: "npm:8.2.0"
-    eslint: "npm:8.45.0"
+    eslint: "npm:8.57.1"
     prettier: "npm:3.0.0"
     sass: "npm:1.64.1"
     typescript: "npm:5.1.6"
@@ -3803,7 +3785,7 @@ __metadata:
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
-    eslint: "npm:8.45.0"
+    eslint: "npm:8.57.1"
     prettier: "npm:3.0.0"
     stylelint: "npm:15.10.2"
     stylelint-config-property-sort-order-smacss: "npm:10.0.0"
@@ -3823,7 +3805,7 @@ __metadata:
     "@textlint/types": "npm:14.7.1"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
-    eslint: "npm:8.45.0"
+    eslint: "npm:8.57.1"
     prettier: "npm:3.0.0"
     textlint-filter-rule-allowlist: "npm:4.0.0"
     textlint-rule-no-todo: "npm:2.0.1"
@@ -3844,7 +3826,7 @@ __metadata:
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@types/node": "npm:20.4.5"
     concurrently: "npm:8.2.0"
-    eslint: "npm:8.45.0"
+    eslint: "npm:8.57.1"
     prettier: "npm:3.0.0"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
@@ -3862,7 +3844,7 @@ __metadata:
     "@slashnephy/stylelint-config": "npm:0.1.1"
     autoprefixer: "npm:10.4.14"
     concurrently: "npm:8.2.0"
-    eslint: "npm:8.45.0"
+    eslint: "npm:8.57.1"
     postcss: "npm:8.4.31"
     postcss-cli: "npm:10.1.0"
     postcss-scss: "npm:4.0.6"
@@ -5633,7 +5615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^6.10.0, ajv@npm:^6.12.4, ajv@npm:~6.12.6":
+"ajv@npm:^6.12.4, ajv@npm:~6.12.6":
   version: 6.12.6
   resolution: "ajv@npm:6.12.6"
   dependencies:
@@ -8218,7 +8200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-scope@npm:^7.2.0, eslint-scope@npm:^7.2.2":
+"eslint-scope@npm:^7.2.2":
   version: 7.2.2
   resolution: "eslint-scope@npm:7.2.2"
   dependencies:
@@ -8251,54 +8233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.45.0":
-  version: 8.45.0
-  resolution: "eslint@npm:8.45.0"
-  dependencies:
-    "@eslint-community/eslint-utils": "npm:^4.2.0"
-    "@eslint-community/regexpp": "npm:^4.4.0"
-    "@eslint/eslintrc": "npm:^2.1.0"
-    "@eslint/js": "npm:8.44.0"
-    "@humanwhocodes/config-array": "npm:^0.11.10"
-    "@humanwhocodes/module-importer": "npm:^1.0.1"
-    "@nodelib/fs.walk": "npm:^1.2.8"
-    ajv: "npm:^6.10.0"
-    chalk: "npm:^4.0.0"
-    cross-spawn: "npm:^7.0.2"
-    debug: "npm:^4.3.2"
-    doctrine: "npm:^3.0.0"
-    escape-string-regexp: "npm:^4.0.0"
-    eslint-scope: "npm:^7.2.0"
-    eslint-visitor-keys: "npm:^3.4.1"
-    espree: "npm:^9.6.0"
-    esquery: "npm:^1.4.2"
-    esutils: "npm:^2.0.2"
-    fast-deep-equal: "npm:^3.1.3"
-    file-entry-cache: "npm:^6.0.1"
-    find-up: "npm:^5.0.0"
-    glob-parent: "npm:^6.0.2"
-    globals: "npm:^13.19.0"
-    graphemer: "npm:^1.4.0"
-    ignore: "npm:^5.2.0"
-    imurmurhash: "npm:^0.1.4"
-    is-glob: "npm:^4.0.0"
-    is-path-inside: "npm:^3.0.3"
-    js-yaml: "npm:^4.1.0"
-    json-stable-stringify-without-jsonify: "npm:^1.0.1"
-    levn: "npm:^0.4.1"
-    lodash.merge: "npm:^4.6.2"
-    minimatch: "npm:^3.1.2"
-    natural-compare: "npm:^1.4.0"
-    optionator: "npm:^0.9.3"
-    strip-ansi: "npm:^6.0.1"
-    text-table: "npm:^0.2.0"
-  bin:
-    eslint: bin/eslint.js
-  checksum: 2a043b8d3b9a5684e2f66bd446c3dc8522cc7afbb0982d0a5be76ea1f578d0e617598a7b289616a861ab8272b57f6056acb2b264bec6302c9b0921a1cfa66fdb
-  languageName: node
-  linkType: hard
-
-"eslint@npm:^8.40.0":
+"eslint@npm:8.57.1, eslint@npm:^8.40.0":
   version: 8.57.1
   resolution: "eslint@npm:8.57.1"
   dependencies:
