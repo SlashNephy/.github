@@ -3175,10 +3175,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/semantic-conventions@npm:1.33.1":
-  version: 1.33.1
-  resolution: "@opentelemetry/semantic-conventions@npm:1.33.1"
-  checksum: 530476cf4e78333e4f99655b0f0b5fbc7ae41de04af32ecd1b1c7235f40adbe2f1ad257569fdad36620ad62bf2480340b3aa8a7dd194b6422d4bbd797ff9a903
+"@opentelemetry/semantic-conventions@npm:1.34.0":
+  version: 1.34.0
+  resolution: "@opentelemetry/semantic-conventions@npm:1.34.0"
+  checksum: a51a32a5cf5c803bd2125a680d0abacbff632f3b255d0fe52379dac191114a0e8d72a34f9c46c5483ccfe91c4061c309f3cf61a19d11347e2a69779e82cfefd0
   languageName: node
   linkType: hard
 
@@ -3776,7 +3776,7 @@ __metadata:
     dotenv: "npm:16.3.1"
     eslint: "npm:8.45.0"
     prettier: "npm:3.0.0"
-    renovate: "npm:40.33.9"
+    renovate: "npm:40.34.2"
     ts-node: "npm:10.9.1"
     typescript: "npm:5.1.6"
   languageName: unknown
@@ -12824,9 +12824,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"renovate@npm:40.33.9":
-  version: 40.33.9
-  resolution: "renovate@npm:40.33.9"
+"renovate@npm:40.34.2":
+  version: 40.34.2
+  resolution: "renovate@npm:40.34.2"
   dependencies:
     "@aws-sdk/client-codecommit": "npm:3.799.0"
     "@aws-sdk/client-ec2": "npm:3.800.0"
@@ -12851,7 +12851,7 @@ __metadata:
     "@opentelemetry/resources": "npm:2.0.1"
     "@opentelemetry/sdk-trace-base": "npm:2.0.1"
     "@opentelemetry/sdk-trace-node": "npm:2.0.1"
-    "@opentelemetry/semantic-conventions": "npm:1.33.1"
+    "@opentelemetry/semantic-conventions": "npm:1.34.0"
     "@pnpm/parse-overrides": "npm:1001.0.0"
     "@qnighy/marshal": "npm:0.1.3"
     "@renovatebot/detect-tools": "npm:1.1.0"
@@ -12946,7 +12946,7 @@ __metadata:
     vuln-vects: "npm:1.1.0"
     xmldoc: "npm:1.3.0"
     yaml: "npm:2.8.0"
-    zod: "npm:3.25.17"
+    zod: "npm:3.25.20"
   dependenciesMeta:
     better-sqlite3:
       optional: true
@@ -12957,7 +12957,7 @@ __metadata:
   bin:
     renovate: dist/renovate.js
     renovate-config-validator: dist/config-validator.js
-  checksum: b99028358c7621ac6dc987f0209dcacb551761853b26fb9dbf17bd285488f14ef0d9bf4d7a7ca2487b983addf72cafd0f303d7a44095a95d15ac239d16b5dee2
+  checksum: cfe38137f99ae950f83b2f8bf82db7d949c802e9e73002b3b9f9b27a54789fc799ce20676fc111dd1ca5b0a84b11063c2c71e38f484c1235b93b0c2e5cef42eb
   languageName: node
   linkType: hard
 
@@ -15934,10 +15934,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:3.25.17":
-  version: 3.25.17
-  resolution: "zod@npm:3.25.17"
-  checksum: c330707d3e11c6e9ff9ab08d03b38612f8e6ee64b3fc5df003bada1c194f60f5aaffd67d727c73935c8c5507190d5de7b97c52f49b4798cd920ff7cba1a9961c
+"zod@npm:3.25.20":
+  version: 3.25.20
+  resolution: "zod@npm:3.25.20"
+  checksum: f3b3e8875e1e02ca25bbfd45332aa1010f1b252b60a619c94c15bd6de637f841d344a3975d6950b2fbee68db4160ddb534cb9571c517fac17983871739085278
   languageName: node
   linkType: hard
 
