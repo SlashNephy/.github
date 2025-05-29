@@ -33,7 +33,11 @@
     "concurrently": "8.2.0",
     "eslint": "8.45.0",
     "prettier": "3.0.0",
+<<<<<<< HEAD
     "renovate": "40.34.4",
+=======
+    "renovate": "40.35.0",
+>>>>>>> 288df40f4231f8f3208f8a633db212e473e66a97
     "ts-node": "10.9.1",
     "typescript": "5.1.6"
   },
