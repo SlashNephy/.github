@@ -63,6 +63,7 @@ terminus-font
 tmux
 traceroute
 tree
+udisks2
 unhide
 which
 wol
