@@ -12,12 +12,14 @@ dkms
 ethtool
 fakeroot
 fuse2
+fwupd
 git
 glibc
 go
 groff
 helm
 htop
+informant
 intel-media-driver
 intel-ucode
 iotop
