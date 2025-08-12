@@ -65,6 +65,7 @@ traceroute
 tree
 udisks2
 unhide
+wakeonlan
 which
 wol
 xdp-tools
