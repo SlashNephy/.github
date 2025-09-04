@@ -15,6 +15,7 @@ fuse2
 fwupd
 git
 glibc
+gnu-netcat
 go
 groff
 helm
