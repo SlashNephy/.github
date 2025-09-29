@@ -53,6 +53,7 @@ openssh
 preload
 progress
 rclone
+rtl-sdr-git
 samba
 smartmontools
 socat
@@ -66,6 +67,7 @@ traceroute
 tree
 udisks2
 unhide
+usbutils
 wakeonlan
 which
 wol
