@@ -9,6 +9,7 @@ cri-o
 crictl
 crun
 dkms
+docker
 ethtool
 fakeroot
 fuse2
