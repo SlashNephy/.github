@@ -68,6 +68,7 @@ traceroute
 tree
 udisks2
 unhide
+unzip
 usbutils
 wakeonlan
 which
