@@ -1,7 +1,7 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   description: 'Security',
-  extends: ['helpers:pinGitHubActionDigests'],
+  extends: ['helpers:pinGitHubActionDigestsToSemver'],
   vulnerabilityAlerts: {
     addLabels: ['security'],
     reviewers: ['@SlashNephy'],
