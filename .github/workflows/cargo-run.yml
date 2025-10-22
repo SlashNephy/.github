@@ -52,20 +52,20 @@ jobs:
 
       - name: Run Pre-Command
         if: inputs.pre-command != ''
-        uses: actions-rs/cargo@v1
+        uses: actions-rs/cargo@844f36862e911db73fe0815f00a4a2602c279505 # v1.0.3
         with:
           command: '${{ inputs.pre-command }}'
           args: '${{ inputs.pre-args }}'
 
       - name: Run Command
-        uses: actions-rs/cargo@v1
+        uses: actions-rs/cargo@844f36862e911db73fe0815f00a4a2602c279505 # v1.0.3
         with:
           command: '${{ inputs.command }}'
           args: '${{ inputs.args }}'
 
       - name: Run Post-Command
         if: inputs.post-command != ''
-        uses: actions-rs/cargo@v1
+        uses: actions-rs/cargo@844f36862e911db73fe0815f00a4a2602c279505 # v1.0.3
         with:
           command: '${{ inputs.post-command }}'
           args: '${{ inputs.post-args }}'
