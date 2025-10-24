@@ -95,7 +95,7 @@ jobs:
 
       - name: eslint
         if: inputs.enable-eslint && inputs.script == ''
-        uses: reviewdog/action-eslint@v1
+        uses: reviewdog/action-eslint@f9dffc54bec82af85668c1f99aa01b6d831ba400 # v1.0.1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
@@ -163,7 +163,7 @@ jobs:
 
       - name: eslint
         if: inputs.enable-eslint && inputs.script == ''
-        uses: reviewdog/action-eslint@v1
+        uses: reviewdog/action-eslint@f9dffc54bec82af85668c1f99aa01b6d831ba400 # v1.0.1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
