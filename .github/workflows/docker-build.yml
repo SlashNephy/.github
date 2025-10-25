@@ -74,15 +74,15 @@ jobs:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Setup QEMU
-        uses: docker/setup-qemu-action@v2
+        uses: docker/setup-qemu-action@2b82ce82d56a2a04d2637cd93a637ae1b359c0a7 # v2
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@885d1462b80bc1c1c7f0b00334ad271f09369c55 # v2
 
       - name: Login to Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@465a07811f14bebb1938fbed4728c6a1ff8901fc # v2
         with:
           registry: '${{ inputs.registry }}'
           username: ${{ (inputs.registry-username != '' && inputs.registry-username) || github.repository_owner }}
@@ -103,7 +103,7 @@ jobs:
 
       - name: Build Image & Push
         id: build-push-action
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@ca052bb54ab0790a636c9b5f226502c73d547a25 # v5
         with:
           push: true
           context: '${{ inputs.context }}'
@@ -123,7 +123,7 @@ jobs:
 
       - name: Dispatch update-image-digest
         if: inputs.dispatch-update-image-digest
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0 # v3
         with:
           token: '${{ secrets.dispatch-github-token }}'
           repository: 'SlashNephy/infrastructure'
@@ -137,7 +137,7 @@ jobs:
 
       - name: Scan Image
         if: inputs.scan-image
-        uses: crazy-max/ghaction-container-scan@v2
+        uses: crazy-max/ghaction-container-scan@a151298186f7e7acc9b3b7dc20a3fb54c6434f8f # v2
         # 頻繁に Too Many Requests が発生するので失敗しても無視する
         # https://github.com/crazy-max/ghaction-container-scan/issues/162
         continue-on-error: true
@@ -148,6 +148,6 @@ jobs:
 
       - name: Upload SARIF file
         if: inputs.scan-image && steps.scan.outputs.sarif != '' && github.event.repository.private == false
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@b8d3b6e8af63cde30bdc382c0bc28114f4346c88 # v2
         with:
           sarif_file: '${{ steps.scan.outputs.sarif }}'

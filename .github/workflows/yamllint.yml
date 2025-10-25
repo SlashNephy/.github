@@ -18,16 +18,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Checkout .github
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           repository: 'SlashNephy/.github'
           path: '_github'
 
       - name: yamllint
-        uses: reviewdog/action-yamllint@v1
+        uses: reviewdog/action-yamllint@f01d8a48fd8d89f89895499fca2cff09f9e9e8c0 # v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
@@ -38,16 +38,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Checkout .github
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           repository: 'SlashNephy/.github'
           path: '_github'
 
       - name: yamllint
-        uses: reviewdog/action-yamllint@v1
+        uses: reviewdog/action-yamllint@f01d8a48fd8d89f89895499fca2cff09f9e9e8c0 # v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
