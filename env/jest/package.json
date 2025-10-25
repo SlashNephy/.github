@@ -35,7 +35,7 @@
     "@slashnephy/eslint-config": "2.1.3",
     "@slashnephy/prettier-config": "1.0.73",
     "@types/node": "20.4.5",
-    "concurrently": "8.2.0",
+    "concurrently": "9.2.1",
     "eslint": "8.45.0",
     "prettier": "3.0.0",
     "typescript": "5.1.6"
