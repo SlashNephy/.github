@@ -67,18 +67,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Setup Node (via node-version-file)
         if: inputs.node-version-file != ''
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
         with:
           node-version-file: '${{ inputs.node-version-file }}'
           cache: 'yarn'
           cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
       - name: Setup Node (via node-version)
         if: inputs.node-version-file == ''
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
         with:
           node-version: '${{ inputs.node-version }}'
           cache: 'yarn'
@@ -104,7 +104,7 @@ jobs:
 
       - name: prettier
         if: inputs.enable-prettier && inputs.script == ''
-        uses: EPMatt/reviewdog-action-prettier@v1
+        uses: EPMatt/reviewdog-action-prettier@93fb51ed5da157256e1d8c998fb249837304050c # v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
@@ -135,18 +135,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Setup Node (via node-version-file)
         if: inputs.node-version-file != ''
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
         with:
           node-version-file: '${{ inputs.node-version-file }}'
           cache: 'yarn'
           cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
       - name: Setup Node (via node-version)
         if: inputs.node-version-file == ''
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
         with:
           node-version: '${{ inputs.node-version }}'
           cache: 'yarn'
@@ -172,7 +172,7 @@ jobs:
 
       - name: prettier
         if: inputs.enable-prettier && inputs.script == ''
-        uses: EPMatt/reviewdog-action-prettier@v1
+        uses: EPMatt/reviewdog-action-prettier@93fb51ed5da157256e1d8c998fb249837304050c # v1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
