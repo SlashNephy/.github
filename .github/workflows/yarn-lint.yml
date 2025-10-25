@@ -113,7 +113,7 @@ jobs:
 
       - name: stylelint
         if: inputs.enable-stylelint && inputs.script == ''
-        uses: reviewdog/action-stylelint@v1
+        uses: reviewdog/action-stylelint@74f82a6cfc625bece794fd33b62f17294282cb29 # v1.0.2
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
@@ -181,7 +181,7 @@ jobs:
 
       - name: stylelint
         if: inputs.enable-stylelint && inputs.script == ''
-        uses: reviewdog/action-stylelint@v1
+        uses: reviewdog/action-stylelint@74f82a6cfc625bece794fd33b62f17294282cb29 # v1.0.2
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
