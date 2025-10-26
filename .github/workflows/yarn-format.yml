@@ -72,14 +72,14 @@ jobs:
 
       - name: Setup Node (via node-version-file)
         if: inputs.node-version-file != ''
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
         with:
           node-version-file: '${{ inputs.node-version-file }}'
           cache: 'yarn'
           cache-dependency-path: '${{ inputs.working-directory }}/yarn.lock'
       - name: Setup Node (via node-version)
         if: inputs.node-version-file == ''
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
         with:
           node-version: '${{ inputs.node-version }}'
           cache: 'yarn'
