@@ -90,7 +90,7 @@ jobs:
 
       - name: Prepare Image Metadata
         id: metadata
-        uses: docker/metadata-action@69f6fc9d46f2f8bf0d5491e4aabe0bb8c6a4678a # v4.0.1
+        uses: docker/metadata-action@818d4b7b91585d195f67373fd9cb0332e31a7175 # v4.6.0
         with:
           images: '${{ inputs.image-name }}'
           tags: |
