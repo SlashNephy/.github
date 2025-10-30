@@ -69,7 +69,7 @@ jobs:
         run: 'yarn ${{ inputs.pre-script }}'
 
       - name: textlint
-        uses: tsuyoshicho/action-textlint@6fdc171b2e2fd3e10167b86f79f3c906d8d97751 # v3.0.2
+        uses: tsuyoshicho/action-textlint@689c87690ef3b954b5039bcb15589863c9e021a1 # v3.11.1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
@@ -113,7 +113,7 @@ jobs:
         run: 'yarn ${{ inputs.pre-script }}'
 
       - name: textlint
-        uses: tsuyoshicho/action-textlint@6fdc171b2e2fd3e10167b86f79f3c906d8d97751 # v3.0.2
+        uses: tsuyoshicho/action-textlint@689c87690ef3b954b5039bcb15589863c9e021a1 # v3.11.1
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
