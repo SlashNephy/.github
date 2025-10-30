@@ -27,7 +27,7 @@ jobs:
           path: '_github'
 
       - name: yamllint
-        uses: reviewdog/action-yamllint@v1
+        uses: reviewdog/action-yamllint@f01d8a48fd8d89f89895499fca2cff09f9e9e8c0 # v1.21.0
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: '${{ inputs.reporter }}'
@@ -47,7 +47,7 @@ jobs:
           path: '_github'
 
       - name: yamllint
-        uses: reviewdog/action-yamllint@v1
+        uses: reviewdog/action-yamllint@f01d8a48fd8d89f89895499fca2cff09f9e9e8c0 # v1.21.0
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           reporter: 'github-check'
