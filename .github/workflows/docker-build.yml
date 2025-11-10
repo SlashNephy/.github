@@ -137,7 +137,7 @@ jobs:
 
       - name: Scan Image
         if: inputs.scan-image
-        uses: crazy-max/ghaction-container-scan@a151298186f7e7acc9b3b7dc20a3fb54c6434f8f # v2.2.0
+        uses: crazy-max/ghaction-container-scan@4d8e0acba576e46016cbd65b9ecfc604e85e3990 # v3.2.0
         # 頻繁に Too Many Requests が発生するので失敗しても無視する
         # https://github.com/crazy-max/ghaction-container-scan/issues/162
         continue-on-error: true
