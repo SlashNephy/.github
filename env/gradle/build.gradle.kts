@@ -3,7 +3,7 @@ plugins {
 
     `java-gradle-plugin`
     `maven-publish`
-    id("com.gradle.plugin-publish") version "1.3.1"
+    id("com.gradle.plugin-publish") version "2.0.0"
 }
 
 group = "blue.starry"
