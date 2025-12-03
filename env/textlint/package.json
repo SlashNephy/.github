@@ -34,7 +34,7 @@
     "textlint-rule-no-todo": "2.0.1",
     "textlint-rule-preset-ja-spacing": "2.4.3",
     "textlint-rule-preset-ja-technical-writing": "8.0.0",
-    "textlint-rule-preset-jtf-style": "2.3.14"
+    "textlint-rule-preset-jtf-style": "3.0.3"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "2.1.3",
