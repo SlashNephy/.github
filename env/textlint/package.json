@@ -47,7 +47,7 @@
     "typescript": "5.1.6"
   },
   "peerDependencies": {
-    "textlint": "^13"
+    "textlint": "^13 || ^15.0.0"
   },
   "packageManager": "yarn@4.0.2",
   "publishConfig": {
