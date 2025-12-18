@@ -52,7 +52,7 @@ jobs:
         run: 'echo "${{ inputs.env }}" > .env'
 
       - name: Setup Go
-        uses: actions/setup-go@7b8cf10d4e4a01d4992d18a89f4d7dc5a3e6d6f4 # v4.3.0
+        uses: actions/setup-go@4dc6199c7b1a012772edbd06daecab0f50c9053c # v6.1.0
         with:
           go-version-file: '${{ inputs.working-directory }}/go.mod'
           cache: true
